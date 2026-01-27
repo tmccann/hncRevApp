@@ -1,0 +1,171 @@
+[
+  {
+    "id": 1,
+    "text": "Which command can be used on a Windows host to display the routing table?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "netstat -s" },
+      { "id": "b", "text": "show ip route" },
+      { "id": "c", "text": "netstat -r" },
+      { "id": "d", "text": "tracert" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The netstat -r command displays the routing table of a Windows host. It is equivalent to 'route print'. Note that 'show ip route' is a Cisco IOS command, not a Windows command."
+  },
+  {
+    "id": 2,
+    "text": "What information is added during encapsulation at OSI Layer 3?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Source and destination MAC" },
+      { "id": "b", "text": "Source and destination application protocol" },
+      { "id": "c", "text": "Source and destination port number" },
+      { "id": "d", "text": "Source and destination IP address" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Encapsulation at Layer 3 (Network Layer) adds the IP header, which includes the source and destination logical IP addresses necessary for routing packets across networks."
+  },
+  {
+    "id": 3,
+    "text": "How does the network layer use the MTU value?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The network layer depends on the higher level layers to determine the MTU." },
+      { "id": "b", "text": "The network layer depends on the data link layer to set the MTU, and adjusts the speed of transmission to accommodate it." },
+      { "id": "c", "text": "The MTU is passed to the network layer by the data link layer." },
+      { "id": "d", "text": "To increase speed of delivery, the network layer ignores the MTU." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Maximum Transmission Unit (MTU) is determined by the data link layer (Layer 2). This value is passed up to the network layer so it can ensure packets do not exceed the size limit of the physical medium, fragmenting them if necessary."
+  },
+  {
+    "id": 4,
+    "text": "Which characteristic describes an IPv6 enhancement over IPv4?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "IPv6 addresses are based on 128-bit flat addressing as opposed to IPv4 which is based on 32-bit hierarchical addressing." },
+      { "id": "b", "text": "The IPv6 header is simpler than the IPv4 header is, which improves packet handling." },
+      { "id": "c", "text": "Both IPv4 and IPv6 support authentication, but only IPv6 supports privacy capabilities." },
+      { "id": "d", "text": "The IPv6 address space is four times bigger than the IPv4 address space." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The IPv6 header is simplified with fewer fields and a fixed length. This allows routers to process packets more efficiently compared to the variable-length and more complex IPv4 header."
+  },
+  {
+    "id": 5,
+    "text": "Which statement accurately describes a characteristic of IPv4?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "All IPv4 addresses are assignable to hosts." },
+      { "id": "b", "text": "IPv4 has a 32-bit address space." },
+      { "id": "c", "text": "An IPv4 header has fewer fields than an IPv6 header has." },
+      { "id": "d", "text": "IPv4 natively supports IPsec." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "IPv4 uses a 32-bit address space, providing approximately 4.3 billion addresses. Unlike IPv6, it does not natively support IPsec (it was added later) and its header is more complex."
+  },
+  {
+    "id": 6,
+    "text": "When a router receives a packet, what information must be examined in order for the packet to be forwarded to a remote destination?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Destination MAC address" },
+      { "id": "b", "text": "Source IP address" },
+      { "id": "c", "text": "Destination IP address" },
+      { "id": "d", "text": "Source MAC address" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Routers make forwarding decisions based on the destination IP address. They look this address up in their routing table to find the best path to the remote network."
+  },
+  {
+    "id": 7,
+    "text": "A computer has to send a packet to a destination host in the same LAN. How will the packet be sent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The packet will be sent to the default gateway first." },
+      { "id": "b", "text": "The packet will be sent directly to the destination host." },
+      { "id": "c", "text": "The packet will first be sent to the default gateway, then forwarded back." },
+      { "id": "d", "text": "The packet will be sent only to the default gateway." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "If the destination is on the same local network (LAN), the host uses ARP to find the destination MAC address and sends the frame directly to that host without involving a router or gateway."
+  },
+  {
+    "id": 8,
+    "text": "Which IPv4 address can a host use to ping the loopback interface?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "126.0.0.1" },
+      { "id": "b", "text": "127.0.0.0" },
+      { "id": "c", "text": "126.0.0.0" },
+      { "id": "d", "text": "127.0.0.1" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The address 127.0.0.1 is the standard loopback address for IPv4. Pinging this address tests if the local TCP/IP stack is functioning correctly."
+  },
+  {
+    "id": 9,
+    "text": "When a connectionless protocol is in use at Layer 3, how is missing data detected and retransmitted?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Connectionless acknowledgements are used to request retransmission." },
+      { "id": "b", "text": "Upper-layer connection-oriented protocols keep track of data and request retransmission." },
+      { "id": "c", "text": "Network layer IP protocols manage the communication sessions." },
+      { "id": "d", "text": "The best-effort delivery process guarantees that all packets are received." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "IP is a connectionless, best-effort protocol and does not track data. If reliability is needed, upper-layer protocols like TCP must handle the tracking, sequencing, and retransmission of data."
+  },
+  {
+    "id": 10,
+    "text": "What was the reason for the creation and implementation of IPv6?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To make reading a 32-bit address easier" },
+      { "id": "b", "text": "To relieve IPv4 address depletion" },
+      { "id": "c", "text": "To provide more address space in the Internet Names Registry" },
+      { "id": "d", "text": "To allow NAT support for private addressing" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The primary driver for IPv6 was the exhaustion of the 32-bit IPv4 address space. IPv6's 128-bit address space provides a virtually unlimited number of addresses."
+  },
+  {
+    "id": 11,
+    "text": "Which information is used by routers to forward a data packet toward its destination?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Source IP address" },
+      { "id": "b", "text": "Destination IP address" },
+      { "id": "c", "text": "Source data-link address" },
+      { "id": "d", "text": "Destination data-link address" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Routers are Layer 3 devices; they specifically examine the destination IP address to determine the network path required to reach the destination."
+  },
+  {
+    "id": 12,
+    "text": "Which field in an IPv4 packet header will typically stay the same during its transmission?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Flag" },
+      { "id": "b", "text": "Time-to-Live" },
+      { "id": "c", "text": "Packet Length" },
+      { "id": "d", "text": "Destination Address" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The destination address remains constant from the source to the final destination. The TTL field, however, is decremented by every router that processes the packet."
+  },
+  {
+    "id": 13,
+    "text": "Which field in an IPv6 packet is used by the router to determine if a packet has expired and should be dropped?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "TTL" },
+      { "id": "b", "text": "Hop Limit" },
+      { "id": "c", "text": "Address Unreachable" },
+      { "id": "d", "text": "No Route to Destination" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "In IPv6, the 'Hop Limit' field performs the same function as the IPv4 TTL field. Each router decrements this value by 1; if it reaches zero, the packet is discarded to prevent infinite loops."
+  }
+]

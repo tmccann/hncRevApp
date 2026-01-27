@@ -1,0 +1,51 @@
+{
+  "number": 14,
+  "title": "Transport Layer",
+  "description": "Understanding TCP, UDP, and transport layer protocols",
+  "keyConcepts": [
+    {
+      "title": "Transport Layer Functions",
+      "description": "Provides end-to-end communication, error recovery, flow control, and multiplexing through port numbers."
+    },
+    {
+      "title": "TCP (Transmission Control Protocol)",
+      "description": "Connection-oriented, reliable protocol with 3-way handshake, sequencing, acknowledgments, and flow control."
+    },
+    {
+      "title": "UDP (User Datagram Protocol)",
+      "description": "Connectionless, best-effort delivery protocol. Fast but unreliable - no handshake, no acknowledgments."
+    },
+    {
+      "title": "Port Numbers",
+      "description": "Identify specific applications. Well-known (0-1023), Registered (1024-49151), Dynamic (49152-65535)."
+    },
+    {
+      "title": "Socket",
+      "description": "Combination of IP address and port number that uniquely identifies a communication endpoint."
+    }
+  ],
+  "importantPoints": [
+    "TCP uses a 3-way handshake: SYN, SYN-ACK, ACK",
+    "TCP termination uses a 4-way handshake: FIN , ACK, FIN, ACK",
+    "UDP header is 8 bytes (Source Port, Dest Port, Length, Checksum)",
+    "TCP provides flow control through window sizing",
+    "Sequence numbers allow TCP to reassemble segments in correct order",
+    "Well-known ports: HTTP=80, HTTPS=443, FTP=21, SSH=22, Telnet=23, DNS=53, DHCP=67/68",
+    "TCP is used when reliability is required (HTTP, FTP, SMTP)",
+    "UDP is used when speed is priority (DNS, DHCP, TFTP, streaming)"
+  ],
+  "quickReference": [
+    { "label": "HTTP", "value": "TCP Port 80" },
+    { "label": "HTTPS", "value": "TCP Port 443" },
+    { "label": "FTP", "value": "TCP Port 21" },
+    { "label": "SSH", "value": "TCP Port 22" },
+    { "label": "Telnet", "value": "TCP Port 23" },
+    { "label": "SMTP", "value": "TCP Port 25" },
+    { "label": "DNS", "value": "UDP Port 53" },
+    { "label": "DHCP Server", "value": "UDP Port 67" },
+    { "label": "DHCP Client", "value": "UDP Port 68" },
+    { "label": "TFTP", "value": "UDP Port 69" },
+    { "label": "POP3", "value": "TCP Port 110" },
+    { "label": "SNMP", "value": "UDP Port 161" }
+  ]
+}

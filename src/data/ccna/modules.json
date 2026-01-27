@@ -1,0 +1,90 @@
+[
+  {
+    "id": "module-8",
+    "number": 8,
+    "title": "Network Layer",
+    "description": "IP addressing, routing, and network layer protocols",
+    "topics": ["IPv4", "IPv6", "Routing", "IP Headers", "MTU"],
+    "hasSummary": true,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-blue-500 to-cyan-600"
+  },
+  {
+    "id": "module-9",
+    "number": 9,
+    "title": "Address Resolution",
+    "description": "ARP, MAC address tables, and address resolution protocols",
+    "topics": ["ARP", "ARP Cache", "NDP", "MAC Tables", "Switch Flooding"],
+    "hasSummary": true,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-blue-500 to-cyan-600"
+  },
+  {
+    "id": "module-10",
+    "number": 10,
+    "title": "Basic Router Configuration",
+    "description": "Router configuration modes, commands, and basic device setup",
+    "topics": ["CLI Modes", "Passwords", "Interfaces", "Configuration Files", "Boot Process"],
+    "hasSummary": true,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-blue-500 to-cyan-600"
+  },
+  {
+    "id": "module-11",
+    "number": 11,
+    "title": "IPv4 Addressing",
+    "description": "Subnetting, subnet masks, CIDR notation, and IP address structure",
+    "topics": ["Subnetting", "CIDR", "Subnet Masks", "VLSM", "ANDing"],
+    "hasSummary": true,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-blue-500 to-cyan-600"
+  },
+  {
+    "id": "module-12",
+    "number": 12,
+    "title": "IPv6 Addressing",
+    "description": "IPv6 address structure, types, compression, and configuration",
+    "topics": ["IPv6 Format", "Compression", "Link-Local", "Global Unicast", "Loopback"],
+    "hasSummary": true,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-blue-500 to-cyan-600"
+  },
+  {
+    "id": "module-13",
+    "number": 13,
+    "title": "ICMP",
+    "description": "Internet Control Message Protocol, ping, traceroute, and diagnostics",
+    "topics": ["Ping", "Traceroute", "Echo Request/Reply", "Time Exceeded", "Error Messages"],
+    "hasSummary": true,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-blue-500 to-cyan-600"
+  },
+  {
+    "id": "module-14",
+    "number": 14,
+    "title": "Transport Layer",
+    "description": "TCP, UDP, port numbers, and transport protocols",
+    "topics": ["TCP", "UDP", "Port Numbers", "Flow Control"],
+    "hasSummary": true,
+    "hasQuiz": true,
+    "checkpoints": ["checkpoint-14-15"],
+    "color": "from-blue-500 to-cyan-600"
+  },
+  {
+    "id": "module-15",
+    "number": 15,
+    "title": "Application Layer",
+    "description": "Application protocols and services",
+    "topics": ["HTTP", "DNS", "DHCP", "FTP"],
+    "hasSummary": false,
+    "hasQuiz": false,
+    "checkpoints": ["checkpoint-14-15"],
+    "color": "from-blue-500 to-cyan-600"
+  }
+]

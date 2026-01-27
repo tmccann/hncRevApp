@@ -1,0 +1,61 @@
+{
+  "number": 8,
+  "title": "Network Layer",
+  "description": "Understanding IP addressing, routing, and network layer protocols",
+  "keyConcepts": [
+    {
+      "title": "Network Layer Functions",
+      "description": "Layer 3 provides logical addressing (IP addresses), routing between networks, and path determination. It encapsulates transport layer segments into packets."
+    },
+    {
+      "title": "IPv4 Addressing",
+      "description": "32-bit hierarchical addressing system providing ~4.3 billion addresses. Format: xxx.xxx.xxx.xxx (dotted decimal notation)."
+    },
+    {
+      "title": "IPv6 Addressing",
+      "description": "128-bit addressing system created to solve IPv4 address exhaustion. Provides simplified header, improved efficiency, and virtually unlimited addresses."
+    },
+    {
+      "title": "Routing Process",
+      "description": "Routers examine the destination IP address in packet headers and use routing tables to determine the best path to forward packets toward their destination."
+    },
+    {
+      "title": "MTU (Maximum Transmission Unit)",
+      "description": "The data link layer passes the MTU value up to the network layer. IP uses this to ensure packets don't exceed the physical medium's size limits, fragmenting if necessary."
+    },
+    {
+      "title": "Connectionless Protocol",
+      "description": "IP is connectionless and provides best-effort delivery with no guarantees. Upper-layer protocols (like TCP) handle reliability, tracking, and retransmission."
+    }
+  ],
+  "importantPoints": [
+    "Layer 3 encapsulation adds source and destination IP addresses",
+    "Routers forward packets based on destination IP address only",
+    "IPv4 uses 32-bit addresses; IPv6 uses 128-bit addresses",
+    "IPv6 header is simpler and more efficient than IPv4 header",
+    "The loopback address is 127.0.0.1 (used to test local TCP/IP stack)",
+    "Packets on the same LAN are sent directly without using the default gateway",
+    "Packets to remote networks are sent to the default gateway first",
+    "TTL (IPv4) or Hop Limit (IPv6) prevents packets from looping forever",
+    "Each router decrements TTL/Hop Limit by 1; packet dropped if it reaches 0",
+    "Destination IP address stays the same during transmission; TTL changes",
+    "The MTU is determined by Layer 2 and passed to Layer 3",
+    "IP is connectionless; reliability must be handled by upper layers (TCP)",
+    "netstat -r (Windows) displays the routing table",
+    "show ip route is a Cisco IOS command, not a Windows command"
+  ],
+  "quickReference": [
+    { "label": "IPv4 Address Length", "value": "32 bits" },
+    { "label": "IPv6 Address Length", "value": "128 bits" },
+    { "label": "Loopback Address", "value": "127.0.0.1" },
+    { "label": "Loopback Network", "value": "127.0.0.0/8" },
+    { "label": "Layer 3 Encapsulation", "value": "Adds source & destination IP" },
+    { "label": "Routing Decision Based On", "value": "Destination IP address" },
+    { "label": "IPv4 TTL Function", "value": "Prevents infinite loops" },
+    { "label": "IPv6 Hop Limit", "value": "Same as IPv4 TTL" },
+    { "label": "Windows Routing Table", "value": "netstat -r or route print" },
+    { "label": "IP Protocol Type", "value": "Connectionless, best-effort" },
+    { "label": "Same LAN Delivery", "value": "Direct (no gateway needed)" },
+    { "label": "Remote Network Delivery", "value": "Via default gateway" }
+  ]
+}

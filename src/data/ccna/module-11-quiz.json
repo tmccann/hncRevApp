@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "text": "What is the prefix length notation for the subnet mask 255.255.255.224?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "/25" },
+      { "id": "b", "text": "/26" },
+      { "id": "c", "text": "/27" },
+      { "id": "d", "text": "/28" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The subnet mask 255.255.255.224 converts to binary as 11111111.11111111.11111111.11100000. This shows that 27 bits are set to 1, which in CIDR notation is represented as /27."
+  },
+  {
+    "id": 2,
+    "text": "How many valid host addresses are available on an IPv4 subnet that is configured with a /26 mask?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "254" },
+      { "id": "b", "text": "190" },
+      { "id": "c", "text": "192" },
+      { "id": "d", "text": "62" },
+      { "id": "e", "text": "64" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "A /26 prefix leaves 6 bits for hosts (32 - 26 = 6). 2^6 = 64 total addresses. After subtracting the network and broadcast addresses, 62 usable host addresses remain."
+  },
+  {
+    "id": 3,
+    "text": "Which subnet mask would be used if 5 host bits are available?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "255.255.255.0" },
+      { "id": "b", "text": "255.255.255.128" },
+      { "id": "c", "text": "255.255.255.224" },
+      { "id": "d", "text": "255.255.255.240" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "With 5 host bits, the network portion uses 27 bits (32 - 5 = 27). A /27 mask in decimal is 255.255.255.224 (11100000 in the last octet)."
+  },
+  {
+    "id": 4,
+    "text": "A network administrator subnets the 192.168.10.0/24 network into subnets with /26 masks. How many equal-sized subnets are created?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "1" },
+      { "id": "b", "text": "2" },
+      { "id": "c", "text": "4" },
+      { "id": "d", "text": "8" },
+      { "id": "e", "text": "16" },
+      { "id": "f", "text": "64" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "To go from /24 to /26, 2 bits are borrowed (26 - 24 = 2). 2^2 = 4 subnets are created."
+  },
+  {
+    "id": 5,
+    "text": "What subnet mask is represented by the slash notation /20?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "255.255.255.248" },
+      { "id": "b", "text": "255.255.224.0" },
+      { "id": "c", "text": "255.255.240.0" },
+      { "id": "d", "text": "255.255.255.0" },
+      { "id": "e", "text": "255.255.255.192" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "A /20 prefix means 20 bits are for the network. The first two octets are 255.255 (16 bits). The third octet has 4 bits (11110000), which is 240. Thus, 255.255.240.0."
+  },
+  {
+    "id": 6,
+    "text": "Which statement is true about variable-length subnet masking (VLSM)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Each subnet is the same size." },
+      { "id": "b", "text": "The size of each subnet may be different, depending on requirements." },
+      { "id": "c", "text": "Subnets may only be subnetted one additional time." },
+      { "id": "d", "text": "Bits are returned, rather than borrowed, to create additional subnets." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "VLSM allows an organization to use different masks for different subnets, enabling efficient IP allocation by tailoring the subnet size to the number of hosts required."
+  },
+  {
+    "id": 7,
+    "text": "Why does a Layer 3 device perform the ANDing process on a destination IP address and subnet mask?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To identify the broadcast address of the destination network" },
+      { "id": "b", "text": "To identify the host address of the destination host" },
+      { "id": "c", "text": "To identify faulty frames" },
+      { "id": "d", "text": "To identify the network address of the destination network" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "ANDing is the bitwise comparison of an IP address and a subnet mask. The result is the network address, which routers use to determine the correct path in the routing table."
+  },
+  {
+    "id": 8,
+    "text": "How many usable IP addresses are available on the 192.168.1.0/27 network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "256" },
+      { "id": "b", "text": "254" },
+      { "id": "c", "text": "62" },
+      { "id": "d", "text": "30" },
+      { "id": "e", "text": "16" },
+      { "id": "f", "text": "32" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "A /27 subnet provides 32 total addresses (2^5 = 32). Subtracting the network and broadcast addresses leaves 30 usable host IPs."
+  },
+  {
+    "id": 9,
+    "text": "Which subnet mask would be used if exactly 4 host bits are available?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "255.255.255.224" },
+      { "id": "b", "text": "255.255.255.128" },
+      { "id": "c", "text": "255.255.255.240" },
+      { "id": "d", "text": "255.255.255.248" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "If 4 bits are for the host, 28 bits are for the network (32 - 4 = 28). A /28 mask in decimal is 255.255.255.240."
+  },
+  {
+    "id": 10,
+    "text": "Which two parts are components of an IPv4 address? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Subnet portion" },
+      { "id": "b", "text": "Network portion" },
+      { "id": "c", "text": "Logical portion" },
+      { "id": "d", "text": "Host portion" },
+      { "id": "e", "text": "Physical portion" },
+      { "id": "f", "text": "Broadcast portion" }
+    ],
+    "correctAnswer": ["b", "d"],
+    "explanation": "Every IPv4 address consists of a network portion (identifying the subnet) and a host portion (identifying the specific device)."
+  },
+  {
+    "id": 11,
+    "text": "If a network device has a mask of /26, how many IP addresses are available for hosts on this network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "64" },
+      { "id": "b", "text": "30" },
+      { "id": "c", "text": "62" },
+      { "id": "d", "text": "32" },
+      { "id": "e", "text": "16" },
+      { "id": "f", "text": "14" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "A /26 mask has 6 host bits. 2^6 = 64. 64 - 2 = 62 usable addresses."
+  },
+  {
+    "id": 12,
+    "text": "What does the IP address 172.17.4.250/24 represent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Network address" },
+      { "id": "b", "text": "Multicast address" },
+      { "id": "c", "text": "Host address" },
+      { "id": "d", "text": "Broadcast address" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "In a /24 network, the last octet identifies the host. Since .250 is between .1 and .254, it is a valid host address."
+  },
+  {
+    "id": 13,
+    "text": "If a network device has a mask of /28, how many IP addresses are available for hosts on this network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "256" },
+      { "id": "b", "text": "254" },
+      { "id": "c", "text": "62" },
+      { "id": "d", "text": "32" },
+      { "id": "e", "text": "16" },
+      { "id": "f", "text": "14" }
+    ],
+    "correctAnswer": ["f"],
+    "explanation": "A /28 mask has 4 host bits. 2^4 = 16. 16 - 2 = 14 usable addresses."
+  },
+  {
+    "id": 14,
+    "text": "What is the purpose of the subnet mask in conjunction with an IP address?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To uniquely identify a host on a network" },
+      { "id": "b", "text": "To identify whether the address is public or private" },
+      { "id": "c", "text": "To determine the subnet to which the host belongs" },
+      { "id": "d", "text": "To mask the IP address to outsiders" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The subnet mask is used by devices to distinguish the network portion of the address from the host portion, allowing the device to determine if a destination is local or remote."
+  },
+  {
+    "id": 15,
+    "text": "A network administrator is variably subnetting a network. The smallest subnet has a mask of 255.255.255.224. How many usable host addresses will this provide?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2" },
+      { "id": "b", "text": "6" },
+      { "id": "c", "text": "14" },
+      { "id": "d", "text": "30" },
+      { "id": "e", "text": "62" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "255.255.255.224 is a /27 mask, leaving 5 host bits. 2^5 = 32. 32 - 2 = 30 usable addresses."
+  }
+]

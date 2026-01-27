@@ -1,0 +1,68 @@
+{
+  "number": 11,
+  "title": "IPv4 Addressing",
+  "description": "Understanding subnetting, subnet masks, CIDR notation, and IP address structure",
+  "keyConcepts": [
+    {
+      "title": "IPv4 Address Structure",
+      "description": "Every IPv4 address consists of two parts: the network portion (identifies the subnet) and the host portion (identifies the specific device within that subnet)."
+    },
+    {
+      "title": "Subnet Mask",
+      "description": "A 32-bit value that determines which portion of an IP address is the network and which is the host. Written in dotted decimal (e.g., 255.255.255.0) or CIDR notation (e.g., /24)."
+    },
+    {
+      "title": "CIDR Notation",
+      "description": "Classless Inter-Domain Routing notation uses a slash followed by the number of network bits (e.g., /24, /27, /30). Makes subnet masks easier to read and write."
+    },
+    {
+      "title": "Subnetting",
+      "description": "The process of borrowing host bits to create additional networks. Increases the number of subnets but reduces the number of hosts per subnet."
+    },
+    {
+      "title": "VLSM (Variable Length Subnet Masking)",
+      "description": "Allows different subnet masks within the same network, enabling efficient IP address allocation by tailoring subnet sizes to specific requirements."
+    },
+    {
+      "title": "ANDing Process",
+      "description": "Layer 3 devices perform bitwise AND operation between IP address and subnet mask to determine the network address, which is used for routing decisions."
+    }
+  ],
+  "importantPoints": [
+    "IPv4 addresses have two components: network portion and host portion",
+    "Subnet mask determines the boundary between network and host bits",
+    "CIDR /24 = 255.255.255.0 (24 network bits, 8 host bits)",
+    "Formula: Usable hosts = 2^(host bits) - 2",
+    "Network address: all host bits = 0 (not assignable to hosts)",
+    "Broadcast address: all host bits = 1 (not assignable to hosts)",
+    "Total addresses - 2 (network + broadcast) = usable host addresses",
+    "Borrowing bits creates subnets: 2^(borrowed bits) = number of subnets",
+    "More borrowed bits = more subnets but fewer hosts per subnet",
+    "ANDing determines if destination is local or remote",
+    "VLSM allows different-sized subnets in the same network",
+    "/26 = 62 usable hosts (6 host bits: 64 - 2)",
+    "/27 = 30 usable hosts (5 host bits: 32 - 2)",
+    "/28 = 14 usable hosts (4 host bits: 16 - 2)",
+    "/29 = 6 usable hosts (3 host bits: 8 - 2)",
+    "/30 = 2 usable hosts (2 host bits: 4 - 2) - used for point-to-point links"
+  ],
+  "quickReference": [
+    { "label": "/24 Mask", "value": "255.255.255.0 (254 hosts)" },
+    { "label": "/25 Mask", "value": "255.255.255.128 (126 hosts)" },
+    { "label": "/26 Mask", "value": "255.255.255.192 (62 hosts)" },
+    { "label": "/27 Mask", "value": "255.255.255.224 (30 hosts)" },
+    { "label": "/28 Mask", "value": "255.255.255.240 (14 hosts)" },
+    { "label": "/29 Mask", "value": "255.255.255.248 (6 hosts)" },
+    { "label": "/30 Mask", "value": "255.255.255.252 (2 hosts)" },
+    { "label": "/20 Mask", "value": "255.255.240.0" },
+    { "label": "Usable Hosts Formula", "value": "2^(host bits) - 2" },
+    { "label": "Number of Subnets", "value": "2^(borrowed bits)" },
+    { "label": "Network Address", "value": "All host bits = 0" },
+    { "label": "Broadcast Address", "value": "All host bits = 1" },
+    { "label": "ANDing Purpose", "value": "Find network address" },
+    { "label": "VLSM Benefit", "value": "Different subnet sizes in same network" },
+    { "label": "4 Host Bits", "value": "/28 = 255.255.255.240" },
+    { "label": "5 Host Bits", "value": "/27 = 255.255.255.224" },
+    { "label": "6 Host Bits", "value": "/26 = 255.255.255.192" }
+  ]
+}

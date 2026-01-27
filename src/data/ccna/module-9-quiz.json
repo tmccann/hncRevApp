@@ -1,0 +1,186 @@
+[
+  {
+    "id": 1,
+    "text": "Which router component holds the routing table, ARP cache, and running configuration file?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "RAM" },
+      { "id": "b", "text": "Flash" },
+      { "id": "c", "text": "NVRAM" },
+      { "id": "d", "text": "ROM" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "RAM (Random Access Memory) is volatile memory used by routers to store temporary operational data like the routing table, ARP cache, and the running configuration. This data is lost if the router reboots."
+  },
+  {
+    "id": 2,
+    "text": "What type of information is contained in an ARP table?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Switch ports associated with destination MAC addresses" },
+      { "id": "b", "text": "Domain name to IPv4 address mappings" },
+      { "id": "c", "text": "Routes to reach destination networks" },
+      { "id": "d", "text": "IPv4 address to MAC address mappings" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The ARP table (or ARP cache) maintains the mapping between Layer 3 IPv4 addresses and Layer 2 MAC addresses to facilitate the encapsulation of frames on a local network."
+  },
+  {
+    "id": 3,
+    "text": "A network administrator issues 'arp -a' and sees an entry: 192.168.1.255 ff-ff-ff-ff-ff-ff. Which statement describes this entry?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "This is a static map entry." },
+      { "id": "b", "text": "This is a dynamic map entry." },
+      { "id": "c", "text": "This entry refers to the PC itself." },
+      { "id": "d", "text": "This entry maps to the default gateway." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "192.168.1.255 is the broadcast address for that subnet, and ff-ff-ff-ff-ff-ff is the broadcast MAC. These are predefined, permanent mappings in the stack and are considered static entries."
+  },
+  {
+    "id": 4,
+    "text": "Which command should an analyst use to view the MAC address a host is using to reach the default gateway to check for spoofing?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ipconfig /all" },
+      { "id": "b", "text": "route print" },
+      { "id": "c", "text": "netstat -r" },
+      { "id": "d", "text": "arp -a" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The 'arp -a' command displays the ARP table, allowing the analyst to verify if the IP of the default gateway is mapped to the correct, legitimate MAC address or an attacker's MAC address."
+  },
+  {
+    "id": 5,
+    "text": "What will a Layer 2 switch do when the destination MAC address of a received frame is not in its MAC table?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It initiates an ARP request." },
+      { "id": "b", "text": "It broadcasts the frame out of all ports on the switch." },
+      { "id": "c", "text": "It notifies the sending host that the frame cannot be delivered." },
+      { "id": "d", "text": "It forwards the frame out of all ports except the ingress port." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "When the destination MAC is unknown (an Unknown Unicast), the switch 'floods' the frame out all ports except the one where it arrived. This is a Layer 2 function, whereas ARP is a Layer 3-to-2 mapping function."
+  },
+  {
+    "id": 6,
+    "text": "Which two ICMPv6 messages are used during the Ethernet MAC address resolution process? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Router solicitation" },
+      { "id": "b", "text": "Router advertisement" },
+      { "id": "c", "text": "Neighbor solicitation" },
+      { "id": "d", "text": "Neighbor advertisement" },
+      { "id": "e", "text": "Echo request" }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "IPv6 uses Neighbor Discovery Protocol (NDP). A Neighbor Solicitation is sent to find a MAC, and the target responds with a Neighbor Advertisement. This replaces the ARP Request/Reply process used in IPv4."
+  },
+  {
+    "id": 7,
+    "text": "How does the ARP process use an IPv4 address?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To determine the MAC address of the remote destination host" },
+      { "id": "b", "text": "To determine the MAC address of a device on the same network" },
+      { "id": "c", "text": "To determine the amount of time a packet takes" },
+      { "id": "d", "text": "To determine the network number" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "ARP is used to resolve the Layer 2 MAC address for a known Layer 3 IPv4 address, but only for devices on the same local subnet/link."
+  },
+  {
+    "id": 8,
+    "text": "What is one function of the ARP protocol?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Obtaining an IPv4 address automatically" },
+      { "id": "b", "text": "Mapping a domain name to its IP address" },
+      { "id": "c", "text": "Resolving an IPv4 address to a MAC address" },
+      { "id": "d", "text": "Maintaining a table of domain names" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The primary function of Address Resolution Protocol is to provide the hardware (MAC) address required to encapsulate an IP packet into an Ethernet frame."
+  },
+  {
+    "id": 9,
+    "text": "Which action is taken by a Layer 2 switch when it receives a Layer 2 broadcast frame?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It drops the frame." },
+      { "id": "b", "text": "It sends the frame to all ports except the port on which it received the frame." },
+      { "id": "c", "text": "It sends the frame to all ports that are registered to forward broadcasts." },
+      { "id": "d", "text": "It sends the frame to all ports." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A switch floods broadcast frames (destination FF:FF:FF:FF:FF:FF) out all ports except the incoming port to ensure all nodes in the broadcast domain receive the message."
+  },
+  {
+    "id": 10,
+    "text": "What addresses are mapped by ARP?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "IPv4 address to a destination MAC address" },
+      { "id": "b", "text": "Destination IPv4 address to the source MAC address" },
+      { "id": "c", "text": "Destination IPv4 address to the destination host name" },
+      { "id": "d", "text": "Destination MAC address to the source IPv4 address" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "ARP maps a specific Layer 3 IPv4 address to its corresponding Layer 2 destination MAC address."
+  },
+  {
+    "id": 11,
+    "text": "When an IPv4 packet is sent to a host on a remote network, what information is provided by ARP?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The IPv4 address of the destination host" },
+      { "id": "b", "text": "The IPv4 address of the default gateway" },
+      { "id": "c", "text": "The MAC address of the router interface closest to the sending host" },
+      { "id": "d", "text": "The MAC address of the switch port that connects to the sending host" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "If the destination is remote, the host sends the packet to its default gateway. ARP is used to resolve the MAC address of the local router interface (the gateway)."
+  },
+  {
+    "id": 12,
+    "text": "The ARP table in a switch maps which two types of address together?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Layer 3 address to a Layer 2 address" },
+      { "id": "b", "text": "Layer 3 address to a Layer 4 address" },
+      { "id": "c", "text": "Layer 4 address to a Layer 2 address" },
+      { "id": "d", "text": "Layer 2 address to a Layer 4 address" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "ARP is the bridge between the Network Layer (Layer 3 IP) and the Data Link Layer (Layer 2 MAC)."
+  },
+  {
+    "id": 13,
+    "text": "What is the purpose of ARP in an IPv4 network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To forward data onward based on the destination IP address" },
+      { "id": "b", "text": "To obtain a specific MAC address when an IP address is known" },
+      { "id": "c", "text": "To forward data onward based on the destination MAC address" },
+      { "id": "d", "text": "To build the MAC address table in a switch" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "ARP's purpose is to discover the physical address (MAC) of a target host when only its logical address (IP) is known."
+  },
+  {
+    "id": 14,
+    "text": "Which destination address is used in an ARP request frame?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "0.0.0.0" },
+      { "id": "b", "text": "255.255.255.255" },
+      { "id": "c", "text": "FFFF.FFFF.FFFF" },
+      { "id": "d", "text": "127.0.0.1" },
+      { "id": "e", "text": "01-00-5E-00-AA-23" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "ARP requests are encapsulated in an Ethernet broadcast frame with a destination MAC of FF:FF:FF:FF:FF:FF so that all devices on the segment receive it."
+  }
+]

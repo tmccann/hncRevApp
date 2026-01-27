@@ -1,0 +1,185 @@
+[
+  {
+    "id": 1,
+    "text": "A technician suspects a defective node in the network path is dropping packets. What command can be used to identify the specific faulty node?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "tracert" },
+      { "id": "b", "text": "ping" },
+      { "id": "c", "text": "ipconfig /flushdns" },
+      { "id": "d", "text": "ipconfig /displaydns" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The tracert (or traceroute) command identifies each hop along a path by collecting ICMP Time Exceeded messages. This allows a technician to see exactly where a packet is dropped, unlike ping, which only tests end-to-end connectivity."
+  },
+  {
+    "id": 2,
+    "text": "A technician asks a user to ping the default gateway. What is the primary purpose of this test?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To obtain a dynamic IP address from the server" },
+      { "id": "b", "text": "To request that gateway forward the connection request" },
+      { "id": "c", "text": "To test that the host has the capability to reach hosts on other networks" },
+      { "id": "d", "text": "To resolve the domain name of the file server" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Pinging the default gateway verifies that the local host can communicate with its first-hop router. Successful communication with the gateway is a prerequisite for reaching any remote network."
+  },
+  {
+    "id": 3,
+    "text": "What is a function of the tracert command that differs from the ping command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The tracert command reaches the destination faster." },
+      { "id": "b", "text": "The tracert command shows the information of routers in the path." },
+      { "id": "c", "text": "The tracert command sends one ICMP message to each hop in the path." },
+      { "id": "d", "text": "The tracert command is used to test connectivity between two devices." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "While both test connectivity, tracert provides a list of every intermediate router (hop) between the source and destination, including their IP addresses and response times."
+  },
+  {
+    "id": 4,
+    "text": "Which ICMP message is used by the traceroute utility to find the path between two hosts?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Redirect" },
+      { "id": "b", "text": "Ping" },
+      { "id": "c", "text": "Time exceeded" },
+      { "id": "d", "text": "Destination unreachable" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Traceroute sends packets with increasing TTL values. Each router that receives a packet with a TTL of 1 will drop it and return an ICMP 'Time Exceeded' message, allowing the utility to identify that specific hop."
+  },
+  {
+    "id": 5,
+    "text": "Which utility uses the Internet Control Messaging Protocol (ICMP)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "RIP" },
+      { "id": "b", "text": "DNS" },
+      { "id": "c", "text": "Ping" },
+      { "id": "d", "text": "NTP" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The ping utility is built directly on ICMP. It uses ICMP Echo Request and Echo Reply messages to test host reachability and round-trip time."
+  },
+  {
+    "id": 6,
+    "text": "Which protocol is used by both IPv4 and IPv6 to provide error messaging?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ICMP" },
+      { "id": "b", "text": "NDP" },
+      { "id": "c", "text": "ARP" },
+      { "id": "d", "text": "DHCP" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "ICMP (v4 and v6) is the primary protocol used to provide feedback regarding errors in packet delivery or to provide diagnostic information about the network."
+  },
+  {
+    "id": 7,
+    "text": "On a Cisco router, which symbol indicates that a time expired during the wait for an ICMP echo reply?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "!" },
+      { "id": "b", "text": "." },
+      { "id": "c", "text": "U" },
+      { "id": "d", "text": "$" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "In Cisco IOS ping output, a dot (.) indicates a timeout (no response), an exclamation point (!) indicates a successful reply, and 'U' indicates a destination unreachable message was received."
+  },
+  {
+    "id": 8,
+    "text": "Which two things can be determined by using the ping command? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "The number of routers between devices" },
+      { "id": "b", "text": "The IP address of the router nearest the destination" },
+      { "id": "c", "text": "The average round-trip time for a packet" },
+      { "id": "d", "text": "The destination device is reachable through the network" },
+      { "id": "e", "text": "The average time each router in the path takes to respond" }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "Ping determines if a host is reachable and calculates the round-trip time (latency). It does not provide details about intermediate routers or the specific path taken."
+  },
+  {
+    "id": 9,
+    "text": "A user gets four positive replies when pinging 127.0.0.1. What does this indicate?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The PC can access the network." },
+      { "id": "b", "text": "The DHCP IP address is correct." },
+      { "id": "c", "text": "The PC can access the internet." },
+      { "id": "d", "text": "The TCP/IP implementation is functional." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "127.0.0.1 is the loopback address. A successful ping to this address only confirms that the network stack (TCP/IP) is correctly installed and running on the local host."
+  },
+  {
+    "id": 10,
+    "text": "Which command tests connectivity using echo request and echo reply messages?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "netstat" },
+      { "id": "b", "text": "ipconfig" },
+      { "id": "c", "text": "ICMP" },
+      { "id": "d", "text": "ping" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The ping command specifically uses the ICMP Echo Request and Echo Reply mechanisms to determine if a destination host is active."
+  },
+  {
+    "id": 11,
+    "text": "What field content is used by ICMPv6 to determine that a packet has expired?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "TTL field" },
+      { "id": "b", "text": "CRC field" },
+      { "id": "c", "text": "Hop Limit field" },
+      { "id": "d", "text": "Time Exceeded field" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "In IPv6, the Hop Limit field replaces the IPv4 TTL field. It is used to limit the lifetime of a packet; when it reaches zero, the packet is discarded and an ICMPv6 error is sent."
+  },
+  {
+    "id": 12,
+    "text": "Which protocol provides feedback about errors in packet delivery to the source host?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ARP" },
+      { "id": "b", "text": "BOOTP" },
+      { "id": "c", "text": "DNS" },
+      { "id": "d", "text": "ICMP" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "ICMP (Internet Control Message Protocol) is the standard feedback mechanism in the IP suite, reporting unreachable destinations, expired packets, and other transmission errors."
+  },
+  {
+    "id": 13,
+    "text": "A tech can ping www.cisco.com but not a specific remote server. Which tool helps identify the specific router where the packet is lost?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ipconfig" },
+      { "id": "b", "text": "netstat" },
+      { "id": "c", "text": "telnet" },
+      { "id": "d", "text": "traceroute" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Traceroute (tracert) allows the administrator to see the specific path and each hop. If a packet is lost, the last responding hop indicates where the problem likely begins."
+  },
+  {
+    "id": 14,
+    "text": "Which message is sent by an IPv6 host to check for address uniqueness (Duplicate Address Detection)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Neighbor solicitation" },
+      { "id": "b", "text": "ARP request" },
+      { "id": "c", "text": "Echo request" },
+      { "id": "d", "text": "Router solicitation" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Duplicate Address Detection (DAD) in IPv6 uses a Neighbor Solicitation message. The host queries its own intended address; if a Neighbor Advertisement is received in response, the address is a duplicate."
+  }
+]

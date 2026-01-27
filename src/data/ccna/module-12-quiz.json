@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "text": "What is the valid most compressed format possible of the IPv6 address 2001:0DB8:0000:AB00:0000:0000:0000:1234?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001:DB8:0:AB00::1234" },
+      { "id": "b", "text": "2001:DB8:0:AB::1234" },
+      { "id": "c", "text": "2001:DB8::AB00::1234" },
+      { "id": "d", "text": "2001:DB8:0:AB:0:1234" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "IPv6 compression involves removing leading zeros in each hextet and replacing the longest single contiguous sequence of zero hextets with '::'. For 2001:0DB8:0000:AB00:0000:0000:0000:1234, we drop leading zeros and compress the final four zero blocks into '::'. Note that '::' can only be used once."
+  },
+  {
+    "id": 2,
+    "text": "What is the prefix associated with the IPv6 address 2001:DB8:D15:EA:CC44::1/64?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001::/64" },
+      { "id": "b", "text": "2001:DB8::/64" },
+      { "id": "c", "text": "2001:DB8:D15:EA::/64" },
+      { "id": "d", "text": "2001:DB8:D15:EA:CC44::/64" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "A /64 prefix indicates that the first 64 bits (the first four hextets) represent the network. For 2001:DB8:D15:EA:CC44::1, the first four hextets are 2001:DB8:D15:EA, making the network prefix 2001:DB8:D15:EA::/64."
+  },
+  {
+    "id": 3,
+    "text": "What type of address is automatically assigned to an interface when IPv6 is enabled on that interface?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Global unicast" },
+      { "id": "b", "text": "Link-local" },
+      { "id": "c", "text": "Loopback" },
+      { "id": "d", "text": "Unique local" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Enabling IPv6 on an interface triggers the automatic generation of a link-local address (prefix FE80::/10). These are required for local network communication like Neighbor Discovery Protocol (NDP) and are not routable."
+  },
+  {
+    "id": 4,
+    "text": "Which IPv6 network prefix is only intended for local links and can not be routed?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001::/3" },
+      { "id": "b", "text": "FC00::/7" },
+      { "id": "c", "text": "FE80::/10" },
+      { "id": "d", "text": "FF00::/12" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "FE80::/10 is reserved for link-local addresses. These are non-routable and exist only within a single local segment or broadcast domain."
+  },
+  {
+    "id": 5,
+    "text": "What is the purpose of the command ping ::1?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It tests the internal configuration of an IPv6 host." },
+      { "id": "b", "text": "It tests the broadcast capability of all hosts on the subnet." },
+      { "id": "c", "text": "It tests the multicast connectivity to all hosts on the subnet." },
+      { "id": "d", "text": "It tests the reachability of the default gateway for the network." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The address ::1 is the IPv6 loopback address (equivalent to 127.0.0.1 in IPv4). Pinging it verifies that the host's own TCP/IP stack is properly installed and functioning."
+  },
+  {
+    "id": 6,
+    "text": "What is the interface ID of the IPv6 address 2001:DB8::1000:A9CD:47FF:FE57:FE94/64?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "FE94" },
+      { "id": "b", "text": "FE57:FE94" },
+      { "id": "c", "text": "47FF:FE57:FE94" },
+      { "id": "d", "text": "A9CD:47FF:FE57:FE94" },
+      { "id": "e", "text": "1000:A9CD:47FF:FE57:FE94" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "In a /64 address, the last 64 bits (the last four hextets) are the interface ID. Expanding the address shows the last four hextets are A9CD:47FF:FE57:FE94. Note that '1000' is part of the fourth hextet and thus the network portion in this specific compressed string."
+  },
+  {
+    "id": 7,
+    "text": "What is the network address for the IPv6 address 2001:DB8:AA04:B5::1/64?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001::/64" },
+      { "id": "b", "text": "2001:DB8::/64" },
+      { "id": "c", "text": "2001:DB8:AA04::/64" },
+      { "id": "d", "text": "2001:DB8:AA04:B5::/64" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Under a /64 prefix, the first four hextets constitute the network. For 2001:DB8:AA04:B5::1/64, those hextets are 2001:DB8:AA04:B5, making the network address 2001:DB8:AA04:B5::/64."
+  },
+  {
+    "id": 8,
+    "text": "Which address type is not supported in IPv6?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Private" },
+      { "id": "b", "text": "Multicast" },
+      { "id": "c", "text": "Unicast" },
+      { "id": "d", "text": "Broadcast" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "IPv6 does not use broadcast. Instead, it uses multicast for 'one-to-many' and anycast for 'one-to-nearest' delivery, which is more efficient and reduces network noise."
+  },
+  {
+    "id": 9,
+    "text": "What is indicated by a successful ping to the ::1 IPv6 address?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The host is cabled properly." },
+      { "id": "b", "text": "The default gateway address is correctly configured." },
+      { "id": "c", "text": "All hosts on the local link are available." },
+      { "id": "d", "text": "The link-local address is correctly configured." },
+      { "id": "e", "text": "IP is properly installed on the host." }
+    ],
+    "correctAnswer": ["e"],
+    "explanation": "Pinging the loopback address (::1) is an internal test. It confirms that the IPv6 protocol stack is active and operational on the local machine without testing external network hardware."
+  },
+  {
+    "id": 10,
+    "text": "What is the most compressed representation of the IPv6 address 2001:0db8:0000:abcd:0000:0000:0000:0001?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001:0db8:abcd::1" },
+      { "id": "b", "text": "2001:db8:0:abcd::1" },
+      { "id": "c", "text": "2001:0db8:abcd::0001" },
+      { "id": "d", "text": "2001:0db8:0000:abcd::1" },
+      { "id": "e", "text": "2001:db8::abcd:0:1" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Compressing 2001:0db8:0000:abcd:0000:0000:0000:0001: 1) Drop leading zeros (db8, 0, abcd, 0, 0, 0, 1). 2) Use '::' for the longest sequence of zeros. This yields 2001:db8:0:abcd::1."
+  },
+  {
+    "id": 11,
+    "text": "What is the minimum configuration for a router interface that is enabled for IPv6?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To have a link-local IPv6 address" },
+      { "id": "b", "text": "To have both an IPv4 and an IPv6 address" },
+      { "id": "c", "text": "To have a self-generated loopback address" },
+      { "id": "d", "text": "To have both a link-local and a global unicast IPv6 address" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "At a minimum, an IPv6-enabled interface must have a link-local address. This allows for basic local communication and functions like router advertisements even without a global address."
+  },
+  {
+    "id": 12,
+    "text": "At a minimum, which address is required on IPv6-enabled interfaces?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Link-local" },
+      { "id": "b", "text": "Unique local" },
+      { "id": "c", "text": "Site local" },
+      { "id": "d", "text": "Global unicast" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Every IPv6 interface requires a link-local address (FE80::/10). It is essential for link-layer operations and neighbor discovery protocols."
+  },
+  {
+    "id": 13,
+    "text": "What are three parts of an IPv6 global unicast address? (Choose three.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "An interface ID that is used to identify the local network for a particular host" },
+      { "id": "b", "text": "A global routing prefix provided by an ISP" },
+      { "id": "c", "text": "A subnet ID used to identify networks inside the local site" },
+      { "id": "d", "text": "A global routing prefix provided by a local administrator" },
+      { "id": "e", "text": "An interface ID used to identify the local host on the network" }
+    ],
+    "correctAnswer": ["b", "c", "e"],
+    "explanation": "The global unicast address structure consists of: 1) Global Routing Prefix (from ISP), 2) Subnet ID (internal organization), and 3) Interface ID (specific host)."
+  },
+  {
+    "id": 14,
+    "text": "Given a /48 prefix, how many bits are available to create /64 subnetworks?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "8" },
+      { "id": "b", "text": "16" },
+      { "id": "c", "text": "80" },
+      { "id": "d", "text": "128" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The difference between a /48 prefix and the standard /64 subnet boundary is 16 bits (64 - 48 = 16), allowing for 65,536 unique subnets."
+  },
+  {
+    "id": 15,
+    "text": "Which type of IPv6 address is not routable and used only for communication on a single subnet?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Global unicast address" },
+      { "id": "b", "text": "Link-local address" },
+      { "id": "c", "text": "Loopback address" },
+      { "id": "d", "text": "Unique local address" },
+      { "id": "e", "text": "Unspecified address" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Link-local addresses (FE80::/10) are used specifically for communication within a local subnet. Routers do not forward these addresses to other networks."
+  }
+]

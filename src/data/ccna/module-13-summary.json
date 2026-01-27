@@ -1,0 +1,71 @@
+{
+  "number": 13,
+  "title": "ICMP",
+  "description": "Understanding Internet Control Message Protocol, ping, traceroute, and network diagnostics",
+  "keyConcepts": [
+    {
+      "title": "ICMP Purpose",
+      "description": "Internet Control Message Protocol provides feedback about errors in packet delivery and diagnostic information. It is a supporting protocol in the IP suite used by both IPv4 (ICMPv4) and IPv6 (ICMPv6)."
+    },
+    {
+      "title": "Ping Utility",
+      "description": "Uses ICMP Echo Request and Echo Reply messages to test host reachability and measure round-trip time (latency). Confirms end-to-end connectivity but doesn't show the path taken."
+    },
+    {
+      "title": "Traceroute Utility",
+      "description": "Identifies each hop (router) along the path to a destination. Uses packets with incrementing TTL values to trigger ICMP Time Exceeded messages from each router, revealing the complete path."
+    },
+    {
+      "title": "ICMP Error Messages",
+      "description": "Reports delivery problems: Destination Unreachable, Time Exceeded (TTL/Hop Limit expired), Redirect, Parameter Problem. Helps diagnose network issues without establishing connections."
+    },
+    {
+      "title": "Loopback Testing",
+      "description": "Pinging 127.0.0.1 (IPv4) or ::1 (IPv6) tests if TCP/IP is properly installed and functioning on the local host. This is an internal test that doesn't use the network."
+    },
+    {
+      "title": "IPv6 ICMPv6",
+      "description": "ICMPv6 includes additional functionality beyond ICMPv4, including Neighbor Discovery Protocol (NDP) functions like Duplicate Address Detection (DAD), Router Solicitation/Advertisement, and Neighbor Solicitation/Advertisement."
+    }
+  ],
+  "importantPoints": [
+    "ICMP is used by both IPv4 and IPv6 for error messaging",
+    "Ping uses ICMP Echo Request and Echo Reply",
+    "Ping confirms reachability and measures round-trip time",
+    "Ping does NOT show the path or intermediate routers",
+    "Traceroute (tracert) shows each hop along the path",
+    "Traceroute uses ICMP Time Exceeded messages",
+    "Traceroute sends packets with increasing TTL/Hop Limit values",
+    "Each router decrements TTL; when TTL=0, router sends Time Exceeded",
+    "Ping 127.0.0.1 or ::1 tests local TCP/IP stack installation",
+    "Pinging default gateway tests ability to reach other networks",
+    "Cisco ping output: '!' = success, '.' = timeout, 'U' = unreachable",
+    "ICMP doesn't guarantee delivery - it just reports problems",
+    "IPv4 uses TTL field; IPv6 uses Hop Limit field",
+    "ICMPv6 Time Exceeded uses Hop Limit field",
+    "ICMPv6 Neighbor Solicitation used for Duplicate Address Detection (DAD)",
+    "Traceroute identifies the specific faulty node where packets are dropped",
+    "ICMP is Layer 3 protocol (Network Layer)",
+    "ICMP messages are encapsulated in IP packets"
+  ],
+  "quickReference": [
+    { "label": "ICMP Purpose", "value": "Error reporting & diagnostics" },
+    { "label": "Ping Uses", "value": "Echo Request + Echo Reply" },
+    { "label": "Ping Tests", "value": "Reachability + round-trip time" },
+    { "label": "Traceroute Uses", "value": "ICMP Time Exceeded" },
+    { "label": "Traceroute Shows", "value": "Each hop in the path" },
+    { "label": "Loopback IPv4", "value": "127.0.0.1" },
+    { "label": "Loopback IPv6", "value": "::1" },
+    { "label": "Loopback Tests", "value": "Local TCP/IP stack" },
+    { "label": "Gateway Ping Tests", "value": "Ability to reach remote networks" },
+    { "label": "Cisco '!' Symbol", "value": "Successful reply" },
+    { "label": "Cisco '.' Symbol", "value": "Timeout (no response)" },
+    { "label": "Cisco 'U' Symbol", "value": "Destination unreachable" },
+    { "label": "IPv4 Expiry Field", "value": "TTL (Time To Live)" },
+    { "label": "IPv6 Expiry Field", "value": "Hop Limit" },
+    { "label": "IPv6 DAD Uses", "value": "Neighbor Solicitation" },
+    { "label": "Identify Faulty Node", "value": "Use traceroute/tracert" },
+    { "label": "ICMP Layer", "value": "Layer 3 (Network Layer)" },
+    { "label": "Both IPv4 & IPv6", "value": "ICMP (ICMPv4 & ICMPv6)" }
+  ]
+}

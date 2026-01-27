@@ -1,0 +1,68 @@
+{
+  "number": 12,
+  "title": "IPv6 Addressing",
+  "description": "Understanding IPv6 address structure, types, compression, and configuration",
+  "keyConcepts": [
+    {
+      "title": "IPv6 Address Format",
+      "description": "128-bit addresses written as eight 16-bit hexadecimal hextets separated by colons (e.g., 2001:0DB8:0000:0001:0000:0000:0000:0001). Much larger address space than IPv4."
+    },
+    {
+      "title": "IPv6 Compression Rules",
+      "description": "Leading zeros in each hextet can be omitted. The longest contiguous sequence of all-zero hextets can be replaced with '::' (but only once per address). Example: 2001:0DB8:0000:0000:0000:0000:0000:0001 becomes 2001:DB8::1"
+    },
+    {
+      "title": "Global Unicast Address Structure",
+      "description": "Three parts: (1) Global Routing Prefix (assigned by ISP), (2) Subnet ID (internal organization), (3) Interface ID (identifies specific host). Standard is /64 prefix."
+    },
+    {
+      "title": "Link-Local Addresses",
+      "description": "Automatically assigned to every IPv6 interface. Prefix FE80::/10. Non-routable, used only for local subnet communication. Required for IPv6 operation and Neighbor Discovery Protocol."
+    },
+    {
+      "title": "IPv6 Address Types",
+      "description": "Unicast (one-to-one), Multicast (one-to-many), Anycast (one-to-nearest). No broadcast in IPv6 - replaced by multicast."
+    },
+    {
+      "title": "Loopback Address",
+      "description": "::1 is the IPv6 loopback address (equivalent to 127.0.0.1 in IPv4). Used to test that IPv6 is properly installed on the local host."
+    }
+  ],
+  "importantPoints": [
+    "IPv6 uses 128-bit addresses (vs IPv4's 32-bit)",
+    "Written as 8 hextets of 16 bits each, separated by colons",
+    "Leading zeros in hextets can be dropped: 0DB8 → DB8",
+    "One contiguous group of all-zero hextets can become '::' (only once)",
+    "Standard IPv6 prefix length is /64 (64-bit network, 64-bit interface ID)",
+    "Link-local addresses: FE80::/10 (required, auto-generated, non-routable)",
+    "Global unicast addresses: 2000::/3 (routable on the internet)",
+    "Unique local addresses: FC00::/7 (private, like RFC 1918 in IPv4)",
+    "Loopback: ::1 (tests local TCP/IP stack)",
+    "Unspecified address: :: (all zeros, used before address is assigned)",
+    "IPv6 does NOT use broadcast - uses multicast instead",
+    "Minimum requirement for IPv6 interface: link-local address",
+    "IPv6 enables automatic address configuration (SLAAC)",
+    "/48 to /64 provides 16 bits for subnetting (65,536 subnets)",
+    "Interface ID is last 64 bits in a /64 address",
+    "First 64 bits (4 hextets) are the network prefix in /64"
+  ],
+  "quickReference": [
+    { "label": "IPv6 Address Length", "value": "128 bits" },
+    { "label": "IPv6 Format", "value": "8 hextets (x:x:x:x:x:x:x:x)" },
+    { "label": "Compression Rule", "value": "Drop leading zeros, use :: once" },
+    { "label": "Standard Prefix", "value": "/64" },
+    { "label": "Loopback Address", "value": "::1" },
+    { "label": "Unspecified Address", "value": "::" },
+    { "label": "Link-Local Range", "value": "FE80::/10 (non-routable)" },
+    { "label": "Global Unicast Range", "value": "2000::/3 (routable)" },
+    { "label": "Unique Local Range", "value": "FC00::/7 (private)" },
+    { "label": "Multicast Range", "value": "FF00::/8" },
+    { "label": "No Broadcast", "value": "Uses multicast instead" },
+    { "label": "Minimum Interface Config", "value": "Link-local address" },
+    { "label": "/64 Network Portion", "value": "First 64 bits (4 hextets)" },
+    { "label": "/64 Interface ID", "value": "Last 64 bits (4 hextets)" },
+    { "label": "/48 to /64 Subnets", "value": "16 bits = 65,536 subnets" },
+    { "label": "Auto-Assignment", "value": "Link-local always auto-generated" },
+    { "label": "Test Local Stack", "value": "ping ::1" }
+  ]
+}

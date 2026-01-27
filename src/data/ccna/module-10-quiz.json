@@ -1,0 +1,171 @@
+[
+  {
+    "id": 1,
+    "text": "A router boots and enters setup mode. What is the reason for this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The IOS image is corrupt." },
+      { "id": "b", "text": "Cisco IOS is missing from flash memory." },
+      { "id": "c", "text": "The configuration file is missing from NVRAM." },
+      { "id": "d", "text": "The POST process has detected hardware failure." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "When a router cannot find a valid startup-config file in NVRAM during the boot process, it defaults to setup mode—a guided CLI wizard to help the administrator perform an initial configuration."
+  },
+  {
+    "id": 2,
+    "text": "Which command is used to encrypt all passwords in a router configuration file?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Router_A(config)# enable secret <password>" },
+      { "id": "b", "text": "Router_A(config)# service password-encryption" },
+      { "id": "c", "text": "Router_A(config)# enable password <password>" },
+      { "id": "d", "text": "Router_A(config)# encrypt password" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The 'service password-encryption' command applies a weak (Type 7) encryption to all current and future clear-text passwords in the configuration file, preventing them from being read by casual observers."
+  },
+  {
+    "id": 3,
+    "text": "Which router command achieves the goal of providing the highest level of security for privileged EXEC access?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "secret password trustknow1" },
+      { "id": "b", "text": "enable password trustknow1" },
+      { "id": "c", "text": "service password-encryption" },
+      { "id": "d", "text": "enable secret trustknow1" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The 'enable secret' command uses a strong MD5 hashing algorithm to protect the privileged EXEC mode password. It is much more secure than 'enable password' and overrides it if both are configured."
+  },
+  {
+    "id": 4,
+    "text": "What will be the response from the router after the command 'router(config)# hostname portsmouth' is entered?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "portsmouth#" },
+      { "id": "b", "text": "portsmouth(config)#" },
+      { "id": "c", "text": "invalid input detected" },
+      { "id": "d", "text": "router(config-host)#" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The hostname command immediately changes the prompt to reflect the new name. Since the command was entered in global configuration mode, the prompt becomes 'portsmouth(config)#'."
+  },
+  {
+    "id": 5,
+    "text": "Which set of commands will allow out-of-band management access using a console password of 'cisco'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Router(config)# line vty 0 4, Router(config-line)# password manage, Router(config-line)# exit" },
+      { "id": "b", "text": "Router(config)# enable password cisco" },
+      { "id": "c", "text": "Router(config)# line console 0, Router(config-line)# password cisco, Router(config-line)# login" },
+      { "id": "d", "text": "Router(config)# line console 0, Router(config-line)# password cisco, Router(config-line)# exit" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Out-of-band management refers to the console port. To secure it, you must enter 'line console 0' mode, specify the 'password', and use the 'login' command to tell the router to prompt for that password."
+  },
+  {
+    "id": 6,
+    "text": "Which command displays all interfaces, their IPv4 addresses, and current operational status?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "show ip interface brief" },
+      { "id": "b", "text": "ping" },
+      { "id": "c", "text": "show ip route" },
+      { "id": "d", "text": "show interface fa0/1" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The 'show ip interface brief' command is one of the most useful troubleshooting commands, providing a concise summary of all interfaces, their IP addresses, and their 'Status' and 'Protocol' states."
+  },
+  {
+    "id": 7,
+    "text": "Which CLI mode allows users to access all device commands, including configuration and troubleshooting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "User EXEC mode" },
+      { "id": "b", "text": "Privileged EXEC mode" },
+      { "id": "c", "text": "Global configuration mode" },
+      { "id": "d", "text": "Interface configuration mode" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Privileged EXEC mode (the '#' prompt) is the gateway to all other modes. It allows full access to the device settings, diagnostics, and management commands."
+  },
+  {
+    "id": 8,
+    "text": "What is the purpose of the startup configuration file on a Cisco router?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To facilitate basic hardware operations" },
+      { "id": "b", "text": "To contain the commands used to initially configure a router on startup" },
+      { "id": "c", "text": "To contain the commands the IOS is currently using in RAM" },
+      { "id": "d", "text": "To provide a backup version of the IOS" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The startup-config file is stored in NVRAM. It contains the saved commands that the router loads into RAM when it boots or restarts."
+  },
+  {
+    "id": 9,
+    "text": "Which characteristic describes the default gateway of a host computer?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The logical address of the router interface on the same network as the host" },
+      { "id": "b", "text": "The physical address of the switch interface connected to the host" },
+      { "id": "c", "text": "The physical address of the router interface on the same network" },
+      { "id": "d", "text": "The logical address assigned to the switch interface" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The default gateway is the IP address (logical address) of the router's local interface. Hosts use this address to send traffic to destination networks outside of their own subnet."
+  },
+  {
+    "id": 10,
+    "text": "What is the purpose of the banner motd command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To identify printed documents" },
+      { "id": "b", "text": "To communicate link status between routers" },
+      { "id": "c", "text": "To communicate with users on the LAN" },
+      { "id": "d", "text": "To provide a way to make announcements to those who log in" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The 'banner motd' (Message of the Day) command is used to display a text message to anyone who connects to the device, often used for legal warnings or administrative announcements."
+  },
+  {
+    "id": 11,
+    "text": "A technician wants to type the 'login' command for all management access lines. Which mode must be entered?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "User executive mode" },
+      { "id": "b", "text": "Global configuration mode" },
+      { "id": "c", "text": "Any line configuration mode" },
+      { "id": "d", "text": "Privileged EXEC mode" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The 'login' command is specifically used within 'line' configuration modes (like 'line console 0' or 'line vty 0 15') to tell the router to require authentication for those access methods."
+  },
+  {
+    "id": 12,
+    "text": "What is stored in the NVRAM of a Cisco router?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The Cisco IOS" },
+      { "id": "b", "text": "The running configuration" },
+      { "id": "c", "text": "The bootup instructions" },
+      { "id": "d", "text": "The startup configuration" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "NVRAM (Non-Volatile RAM) is used to permanently store the startup-config file so that settings are not lost when the router is powered down."
+  },
+  {
+    "id": 13,
+    "text": "Which statement regarding the service password-encryption command is true?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is configured in privileged EXEC mode." },
+      { "id": "b", "text": "It encrypts only line mode passwords." },
+      { "id": "c", "text": "Entering it encrypts all existing plain text passwords immediately." },
+      { "id": "d", "text": "The 'no' version of the command reverses the encryption to plain text." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Once the command is entered in global configuration mode, any existing plain-text passwords (like console or VTY passwords) are immediately obscured in the configuration file. Note that disabling the command does not reverse existing encryption."
+  }
+]

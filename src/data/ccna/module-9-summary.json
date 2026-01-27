@@ -1,0 +1,64 @@
+{
+  "number": 9,
+  "title": "Address Resolution",
+  "description": "Understanding ARP, MAC address tables, and address resolution protocols",
+  "keyConcepts": [
+    {
+      "title": "ARP (Address Resolution Protocol)",
+      "description": "Protocol that maps a known Layer 3 IPv4 address to an unknown Layer 2 MAC address on the same local network. Essential for frame encapsulation."
+    },
+    {
+      "title": "ARP Process",
+      "description": "Host broadcasts an ARP Request (destination MAC: FF:FF:FF:FF:FF:FF) asking 'Who has IP x.x.x.x?'. The target responds with an ARP Reply containing its MAC address."
+    },
+    {
+      "title": "ARP Table/Cache",
+      "description": "Stores IPv4-to-MAC address mappings in RAM. Contains both dynamic entries (learned via ARP) and static entries (permanent mappings like broadcast addresses)."
+    },
+    {
+      "title": "IPv6 Neighbor Discovery (NDP)",
+      "description": "IPv6 replacement for ARP. Uses ICMPv6 Neighbor Solicitation and Neighbor Advertisement messages instead of ARP Request/Reply."
+    },
+    {
+      "title": "Switch MAC Address Table",
+      "description": "Layer 2 switches learn source MAC addresses and their associated ports. When destination MAC is unknown, the switch floods the frame out all ports except the ingress port."
+    },
+    {
+      "title": "Router Components",
+      "description": "RAM stores running config, routing table, and ARP cache (volatile). NVRAM stores startup config (non-volatile). Flash stores IOS. ROM stores bootstrap and basic diagnostics."
+    }
+  ],
+  "importantPoints": [
+    "ARP maps Layer 3 IPv4 addresses to Layer 2 MAC addresses",
+    "ARP only works on the same local network/subnet",
+    "ARP Request uses broadcast MAC address: FF:FF:FF:FF:FF:FF",
+    "ARP Reply is unicast directly to the requesting host",
+    "ARP table is stored in RAM (volatile memory)",
+    "Command 'arp -a' displays the ARP cache on Windows/Linux",
+    "Static ARP entries include broadcast addresses (e.g., 192.168.1.255 → FF:FF:FF:FF:FF:FF)",
+    "For remote destinations, ARP resolves the MAC of the default gateway/router",
+    "IPv6 uses Neighbor Solicitation/Advertisement (NDP) instead of ARP",
+    "Switches flood unknown unicast frames out all ports except the ingress port",
+    "Switches flood broadcast frames out all ports except the ingress port",
+    "RAM holds: routing table, ARP cache, running-config",
+    "NVRAM holds: startup-config (persistent)",
+    "Flash holds: Cisco IOS image",
+    "ROM holds: bootstrap program and POST diagnostics"
+  ],
+  "quickReference": [
+    { "label": "ARP Purpose", "value": "Resolve IP → MAC address" },
+    { "label": "ARP Scope", "value": "Local network only" },
+    { "label": "ARP Request MAC", "value": "FF:FF:FF:FF:FF:FF (broadcast)" },
+    { "label": "ARP Reply Type", "value": "Unicast" },
+    { "label": "View ARP Cache", "value": "arp -a" },
+    { "label": "ARP Table Location", "value": "RAM (volatile)" },
+    { "label": "IPv6 ARP Equivalent", "value": "Neighbor Discovery Protocol (NDP)" },
+    { "label": "NDP Messages", "value": "Neighbor Solicitation + Advertisement" },
+    { "label": "Router RAM Contents", "value": "Routing table, ARP cache, running-config" },
+    { "label": "Router NVRAM Contents", "value": "Startup-config" },
+    { "label": "Router Flash Contents", "value": "Cisco IOS image" },
+    { "label": "Unknown Unicast Action", "value": "Flood all ports except ingress" },
+    { "label": "Broadcast Frame Action", "value": "Flood all ports except ingress" },
+    { "label": "Remote Dest ARP", "value": "Resolves default gateway MAC" }
+  ]
+}

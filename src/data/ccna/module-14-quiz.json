@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "text": "Which transport layer feature is used to establish a connection-oriented session?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "UDP ACK flag" },
+      { "id": "b", "text": "TCP 3-way handshake" },
+      { "id": "c", "text": "UDP sequence number" },
+      { "id": "d", "text": "TCP port number" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The TCP 3-way handshake is used to establish a connection-oriented session between two devices. The process includes three steps: SYN, SYN-ACK, and ACK. This ensures both ends are ready and synchronizes sequence numbers."
+  },
+  {
+    "id": 2,
+    "text": "What is the complete range of TCP and UDP well-known ports?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "0 to 255" },
+      { "id": "b", "text": "0 to 1023" },
+      { "id": "c", "text": "256 – 1023" },
+      { "id": "d", "text": "1024 – 49151" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Well-known ports range from 0 to 1023 and are assigned by IANA for common protocols and services like HTTP (80) or FTP (21). Registered ports are 1024–49151, and dynamic/private ports are 49152–65535."
+  },
+  {
+    "id": 3,
+    "text": "What is a socket?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The combination of the source and destination IP address and source and destination Ethernet address" },
+      { "id": "b", "text": "The combination of a source IP address and port number or a destination IP address and port number" },
+      { "id": "c", "text": "The combination of the source and destination sequence and acknowledgment numbers" },
+      { "id": "d", "text": "The combination of the source and destination sequence numbers and port numbers" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A socket is the combination of an IP address and port number (e.g., 192.168.1.5:80). It identifies a single endpoint in a network communication, allowing multiple connections to different applications on the same device."
+  },
+  {
+    "id": 4,
+    "text": "How does a networked server manage requests from multiple clients for different services?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The server sends all requests through a default gateway." },
+      { "id": "b", "text": "Each request has a combination of source and destination port numbers, coming from a unique IP address." },
+      { "id": "c", "text": "The server uses IP addresses to identify different services." },
+      { "id": "d", "text": "Each request is tracked through the physical address of the client." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Servers use a combination of IP addresses and port numbers to distinguish requests. Each service listens on a specific destination port, and each client uses a unique source port and IP to ensure responses return to the right place."
+  },
+  {
+    "id": 5,
+    "text": "What happens if part of an FTP message is not delivered to the destination?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The message is lost because FTP does not use a reliable delivery method." },
+      { "id": "b", "text": "The FTP source host sends a query to the destination host." },
+      { "id": "c", "text": "The part of the FTP message that was lost is re-sent." },
+      { "id": "d", "text": "The entire FTP message is re-sent." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "FTP uses TCP, which is reliable. If a segment is lost (not acknowledged), TCP retransmits only that specific missing segment using sequence numbers to identify the gap."
+  },
+  {
+    "id": 6,
+    "text": "What type of applications are best suited for using UDP?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Applications that are sensitive to delay" },
+      { "id": "b", "text": "Applications that need reliable delivery" },
+      { "id": "c", "text": "Applications that require retransmission of lost segments" },
+      { "id": "d", "text": "Applications that are sensitive to packet loss" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "UDP is ideal for delay-sensitive applications like VoIP or video streaming. It lacks the overhead of retransmissions and handshakes, prioritizing speed and real-time delivery over 100% reliability."
+  },
+  {
+    "id": 7,
+    "text": "Network congestion results in the source learning of the loss of TCP segments. How does TCP address this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The source decreases the amount of data that it transmits before it receives an acknowledgement." },
+      { "id": "b", "text": "The source decreases the window size to decrease the rate of transmission from the destination." },
+      { "id": "c", "text": "The destination decreases the window size." },
+      { "id": "d", "text": "The destination sends fewer acknowledgement messages in order to conserve bandwidth." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "When TCP detects congestion (via lost segments), the source reduces its effective window size, meaning it sends less data before requiring an ACK. This throttles the transmission rate to alleviate network pressure."
+  },
+  {
+    "id": 8,
+    "text": "Which two operations are provided by TCP but not by UDP? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Identifying the applications" },
+      { "id": "b", "text": "Acknowledging received data" },
+      { "id": "c", "text": "Identifying individual conversations" },
+      { "id": "d", "text": "Retransmitting any unacknowledged data" },
+      { "id": "e", "text": "Reconstructing data in the order received" }
+    ],
+    "correctAnswer": ["b", "d"],
+    "explanation": "TCP provides reliability through acknowledgments (ACKs) and retransmitting lost data. While both protocols use ports to identify apps and conversations, UDP does not confirm receipt or resend lost packets."
+  },
+  {
+    "id": 9,
+    "text": "What is the purpose of using a source port number in a TCP communication?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To notify the remote device that the conversation is over" },
+      { "id": "b", "text": "To assemble the segments that arrived out of order" },
+      { "id": "c", "text": "To keep track of multiple conversations between devices" },
+      { "id": "d", "text": "To inquire for a nonreceived segment" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The source port allows a client to manage multiple simultaneous sessions (e.g., several browser tabs open to the same server). It acts as a unique ID to map incoming responses back to the correct internal process."
+  },
+  {
+    "id": 10,
+    "text": "Which two flags in the TCP header are used in a TCP three-way handshake? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "ACK" },
+      { "id": "b", "text": "FIN" },
+      { "id": "c", "text": "PSH" },
+      { "id": "d", "text": "RST" },
+      { "id": "e", "text": "SYN" },
+      { "id": "f", "text": "URG" }
+      
+    ],
+    "correctAnswer": ["a", "e"],
+    "explanation": "The three-way handshake utilizes SYN (Synchronize) to initiate the connection and ACK (Acknowledge) to confirm receipt. The sequence is: SYN -> SYN-ACK -> ACK."
+  },
+  {
+    "id": 11,
+    "text": "Which TCP mechanism allows a device to send a steady stream of segments as long as it receives necessary acknowledgements?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Three-way handshake" },
+      { "id": "b", "text": "Socket pair" },
+      { "id": "c", "text": "Two-way handshake" },
+      { "id": "d", "text": "Sliding window" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The sliding window mechanism allows a sender to transmit multiple segments before needing an acknowledgment. As ACKs arrive, the window 'slides' forward, enabling a continuous stream of data based on the receiver's buffer capacity."
+  },
+  {
+    "id": 12,
+    "text": "Which action is performed by a client when establishing communication via UDP?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The client sets the window size for the session." },
+      { "id": "b", "text": "The client sends an ISN to the server to start the 3-way handshake." },
+      { "id": "c", "text": "The client randomly selects a source port number." },
+      { "id": "d", "text": "The client sends a synchronization segment to begin the session." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Because UDP is connectionless, there is no handshake or windowing. The client simply selects an ephemeral (random) source port and begins sending datagrams immediately."
+  },
+  {
+    "id": 13,
+    "text": "Which two services or protocols use the preferred UDP protocol for fast transmission? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "FTP" },
+      { "id": "b", "text": "DNS" },
+      { "id": "c", "text": "HTTP" },
+      { "id": "d", "text": "POP3" },
+      { "id": "e", "text": "VoIP" }
+    ],
+    "correctAnswer": ["b", "e"],
+    "explanation": "DNS and VoIP prefer UDP. DNS requires low-overhead for quick queries, and VoIP needs real-time delivery where retransmission delays would cause audible jitter or lag."
+  },
+  {
+    "id": 14,
+    "text": "Which number or set of numbers represents a socket?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "01-23-45-67-89-AB" },
+      { "id": "b", "text": "21" },
+      { "id": "c", "text": "192.168.1.1:80" },
+      { "id": "d", "text": "10.1.1.15" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "A socket is the numerical representation of an endpoint, combining an IP address and a port number (IP:Port), uniquely identifying a service on a host."
+  },
+  {
+    "id": 15,
+    "text": "What is a responsibility of transport layer protocols?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Providing network access" },
+      { "id": "b", "text": "Tracking individual conversations" },
+      { "id": "c", "text": "Determining the best path to forward a packet" },
+      { "id": "d", "text": "Translating private IP addresses to public IP addresses" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The transport layer tracks individual conversations between source and destination applications, segments data, and manages multiplexing via port numbers."
+  }
+]

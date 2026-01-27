@@ -1,0 +1,78 @@
+{
+  "number": 10,
+  "title": "Basic Router Configuration",
+  "description": "Understanding router configuration modes, commands, and basic device setup",
+  "keyConcepts": [
+    {
+      "title": "Router Boot Process",
+      "description": "Router performs POST, loads bootstrap from ROM, locates and loads IOS from Flash, then loads startup-config from NVRAM into RAM as running-config. If no startup-config exists, router enters setup mode."
+    },
+    {
+      "title": "CLI Access Modes",
+      "description": "User EXEC mode (>) provides limited monitoring. Privileged EXEC mode (#) provides full access to all commands. Global configuration mode (config)# allows device-wide settings. Specific config modes (line, interface) configure particular features."
+    },
+    {
+      "title": "Password Security",
+      "description": "Console and VTY lines use 'password' + 'login' commands. Enable password provides basic protection. Enable secret uses MD5 hashing for stronger security and overrides enable password. Service password-encryption obscures plain-text passwords with Type 7 encryption."
+    },
+    {
+      "title": "Configuration Files",
+      "description": "Running-config is active configuration stored in RAM (volatile). Startup-config is saved configuration stored in NVRAM (non-volatile). Use 'copy running-config startup-config' to save changes permanently."
+    },
+    {
+      "title": "Interface Configuration",
+      "description": "Interfaces must be configured with IP addresses and enabled with 'no shutdown'. Use 'show ip interface brief' to verify interface status and IP configuration."
+    },
+    {
+      "title": "Default Gateway",
+      "description": "The logical IP address of the router's local interface. Hosts use this address to send packets destined for remote networks."
+    }
+  ],
+  "importantPoints": [
+    "Router enters setup mode when startup-config is missing from NVRAM",
+    "User EXEC mode prompt: Router>",
+    "Privileged EXEC mode prompt: Router#",
+    "Global config mode prompt: Router(config)#",
+    "Line config mode prompt: Router(config-line)#",
+    "Interface config mode prompt: Router(config-if)#",
+    "Command 'enable' enters privileged EXEC mode",
+    "Command 'configure terminal' enters global configuration mode",
+    "Command 'hostname <name>' changes the device name",
+    "Console access = out-of-band management (physical connection)",
+    "VTY access = in-band management (Telnet/SSH over network)",
+    "'enable secret' is more secure than 'enable password' (uses MD5)",
+    "'service password-encryption' encrypts all plain-text passwords with Type 7",
+    "Type 7 encryption is weak and reversible (not secure)",
+    "'banner motd' displays message to all users who connect",
+    "'show ip interface brief' shows all interfaces with IP and status",
+    "RAM stores: running-config, routing table, ARP cache",
+    "NVRAM stores: startup-config (persistent)",
+    "Flash stores: Cisco IOS image",
+    "ROM stores: bootstrap program and POST",
+    "'copy running-config startup-config' saves configuration",
+    "Default gateway is the IP address of the local router interface",
+    "'login' command must be used in line mode to prompt for password",
+    "Interfaces are administratively down by default - use 'no shutdown'"
+  ],
+  "quickReference": [
+    { "label": "Enter Privileged Mode", "value": "enable" },
+    { "label": "Enter Global Config", "value": "configure terminal" },
+    { "label": "Set Hostname", "value": "hostname <name>" },
+    { "label": "Set Enable Secret", "value": "enable secret <password>" },
+    { "label": "Encrypt Passwords", "value": "service password-encryption" },
+    { "label": "Console Password", "value": "line console 0 → password <pwd> → login" },
+    { "label": "VTY Password", "value": "line vty 0 4 → password <pwd> → login" },
+    { "label": "Set Banner", "value": "banner motd # <message> #" },
+    { "label": "Configure Interface", "value": "interface <type><number>" },
+    { "label": "Assign IP Address", "value": "ip address <ip> <mask>" },
+    { "label": "Enable Interface", "value": "no shutdown" },
+    { "label": "Save Config", "value": "copy running-config startup-config" },
+    { "label": "View Interface Summary", "value": "show ip interface brief" },
+    { "label": "View Running Config", "value": "show running-config" },
+    { "label": "View Startup Config", "value": "show startup-config" },
+    { "label": "Setup Mode Trigger", "value": "No startup-config in NVRAM" },
+    { "label": "Most Secure Password", "value": "enable secret (MD5)" },
+    { "label": "Out-of-Band Access", "value": "Console port (line console 0)" },
+    { "label": "In-Band Access", "value": "VTY lines (Telnet/SSH)" }
+  ]
+}
