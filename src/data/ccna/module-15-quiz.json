@@ -1,0 +1,199 @@
+[
+  {
+    "id": 1,
+    "text": "On a home network, which device is most likely to provide dynamic IPv4 addressing to clients?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A dedicated file server" },
+      { "id": "b", "text": "A home router" },
+      { "id": "c", "text": "An ISP DHCP server" },
+      { "id": "d", "text": "A DNS server" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "On a typical home network, the home router acts as the DHCP server. While the ISP assigns an IP to the router's outside interface, the router itself distributes private IPv4 addresses to internal devices like phones and laptops."
+  },
+  {
+    "id": 2,
+    "text": "What part of the URL, http://www.cisco.com/index.html, represents the top-level DNS domain?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": ".com" },
+      { "id": "b", "text": "Www" },
+      { "id": "c", "text": "Http" },
+      { "id": "d", "text": "Index" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "In the DNS hierarchy, the top-level domain (TLD) is the last part of the domain name. Examples include .com, .net, .org, and .edu."
+  },
+  {
+    "id": 3,
+    "text": "What are two characteristics of the application layer of the TCP/IP model? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Responsibility for logical addressing" },
+      { "id": "b", "text": "Responsibility for physical addressing" },
+      { "id": "c", "text": "The creation and maintenance of dialogue between source and destination applications" },
+      { "id": "d", "text": "Closest to the end user" }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "The Application layer is the top layer of the TCP/IP model. It is closest to the end user and provides the interface for software (like browsers) to access network services."
+  },
+  {
+    "id": 4,
+    "text": "What message type is used by an HTTP client to request data from a web server?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "GET" },
+      { "id": "b", "text": "POST" },
+      { "id": "c", "text": "PUT" },
+      { "id": "d", "text": "ACK" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The HTTP GET command is the standard request used by a client (browser) to retrieve content from a web server. POST is used to send data, and PUT is used to upload/replace files."
+  },
+  {
+    "id": 5,
+    "text": "Which protocol can be used to transfer messages from an email server to an email client?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SMTP" },
+      { "id": "b", "text": "POP3" },
+      { "id": "c", "text": "SNMP" },
+      { "id": "d", "text": "HTTP" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "POP3 (or IMAP) is used to download or retrieve email from a server to a client. SMTP, by contrast, is used primarily to send email."
+  },
+  {
+    "id": 6,
+    "text": "Which application layer protocol is used to provide file-sharing and print services to Microsoft applications?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "HTTP" },
+      { "id": "b", "text": "SMTP" },
+      { "id": "c", "text": "DHCP" },
+      { "id": "d", "text": "SMB" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Server Message Block (SMB) is the standard protocol for file and printer sharing in Windows environments. It allows remote resources to appear as if they are local to the user's computer."
+  },
+  {
+    "id": 7,
+    "text": "Which three protocols or standards are used at the application layer of the TCP/IP model? (Choose three.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "TCP" },
+      { "id": "b", "text": "HTTP" },
+      { "id": "c", "text": "MPEG" },
+      { "id": "d", "text": "GIF" },
+      { "id": "e", "text": "IP" },
+      { "id": "f", "text": "UDP" }
+    ],
+    "correctAnswer": ["b", "c", "d"],
+    "explanation": "HTTP (Web), MPEG (Video standard), and GIF (Image standard) all operate at the Application layer. TCP and UDP are Transport layer, while IP is Internet layer."
+  },
+  {
+    "id": 8,
+    "text": "Why is DHCP for IPv4 preferred for use on large networks?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Large networks send more DNS requests." },
+      { "id": "b", "text": "DHCP uses a reliable transport layer protocol." },
+      { "id": "c", "text": "It prevents sharing of copyrighted files." },
+      { "id": "d", "text": "It is a more efficient way to manage IPv4 addresses than static assignment." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "DHCP automates the IP assignment process. On large networks, manually configuring static IPs on hundreds or thousands of devices would be nearly impossible to manage without errors."
+  },
+  {
+    "id": 9,
+    "text": "An author uploads a document from a PC to a publisher's file server. What role is the PC assuming?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Client" },
+      { "id": "b", "text": "Master" },
+      { "id": "c", "text": "Server" },
+      { "id": "d", "text": "Slave" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "In the client/server model, the device that initiates the request for a service (in this case, the service of storing a file) is the client."
+  },
+  {
+    "id": 10,
+    "text": "Which statement is true about FTP?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The client chooses one or two connections." },
+      { "id": "b", "text": "The client can download data from or upload data to the server." },
+      { "id": "c", "text": "FTP is a peer-to-peer application." },
+      { "id": "d", "text": "FTP does not provide reliability." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "FTP is a client/server protocol that supports both 'GET' (download) and 'PUT' (upload) operations. It uses two separate TCP connections to ensure reliability: one for control and one for data."
+  },
+  {
+    "id": 11,
+    "text": "A wireless host needs to request an IPv4 address. What protocol is used?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "FTP" },
+      { "id": "b", "text": "HTTP" },
+      { "id": "c", "text": "DHCP" },
+      { "id": "d", "text": "ICMP" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "DHCP is the protocol specifically designed to automate the assignment of IP addresses, subnet masks, and other network parameters to hosts."
+  },
+  {
+    "id": 12,
+    "text": "Which TCP/IP model layer is closest to the end user?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Application" },
+      { "id": "b", "text": "Internet" },
+      { "id": "c", "text": "Network access" },
+      { "id": "d", "text": "Transport" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The Application layer is Layer 4 of the TCP/IP model (corresponding to Layers 5-7 of the OSI model). It provides the network services directly to user applications."
+  },
+  {
+    "id": 13,
+    "text": "Which email protocol allows for centralized storage and synchronization across multiple devices?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "IMAP" },
+      { "id": "b", "text": "POP" },
+      { "id": "c", "text": "SMTP" },
+      { "id": "d", "text": "HTTPS" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "IMAP (Internet Message Access Protocol) stores emails on the server, allowing multiple clients (phone, PC, web) to stay synchronized. POP typically downloads and removes them from the server."
+  },
+  {
+    "id": 14,
+    "text": "Which protocol uses encryption?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "DHCP" },
+      { "id": "b", "text": "DNS" },
+      { "id": "c", "text": "FTP" },
+      { "id": "d", "text": "HTTPS" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "HTTPS uses SSL/TLS to encrypt the communication between the browser and the web server, ensuring data privacy and integrity."
+  },
+  {
+    "id": 15,
+    "text": "Which two tasks can be performed by a local DNS server? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Providing IP addresses to local hosts" },
+      { "id": "b", "text": "Allowing data transfer between devices" },
+      { "id": "c", "text": "Mapping name-to-IP addresses for internal hosts" },
+      { "id": "d", "text": "Forwarding name resolution requests between servers" }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "DNS servers maintain a database of name-to-IP mappings and forward requests they cannot resolve locally to upstream root or TLD servers."
+  }
+]

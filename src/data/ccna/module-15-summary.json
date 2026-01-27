@@ -1,0 +1,71 @@
+{
+  "number": 15,
+  "title": "Application Layer",
+  "description": "Understanding application layer protocols, services, and client-server architecture",
+  "keyConcepts": [
+    {
+      "title": "Application Layer Position",
+      "description": "Top layer of TCP/IP model (Layer 4), closest to the end user. Provides network services directly to applications like web browsers, email clients, and file transfer programs."
+    },
+    {
+      "title": "Client-Server Model",
+      "description": "Client initiates requests for services; server provides those services. Examples: web browser (client) requests pages from web server, email client retrieves mail from email server."
+    },
+    {
+      "title": "DNS (Domain Name System)",
+      "description": "Resolves human-readable domain names (www.cisco.com) to IP addresses. Uses hierarchical structure: root servers, TLD (.com, .org), authoritative name servers."
+    },
+    {
+      "title": "DHCP (Dynamic Host Configuration Protocol)",
+      "description": "Automates IP address assignment to network devices. Provides IP address, subnet mask, default gateway, and DNS server information. Essential for large networks."
+    },
+    {
+      "title": "HTTP/HTTPS",
+      "description": "HTTP transfers web content using GET (retrieve), POST (submit data), PUT (upload). HTTPS adds SSL/TLS encryption for secure communication."
+    },
+    {
+      "title": "Email Protocols",
+      "description": "SMTP sends email from client to server or between servers. POP3 downloads email to client (usually deletes from server). IMAP keeps email on server with synchronization across devices."
+    }
+  ],
+  "importantPoints": [
+    "Application layer is closest to the end user",
+    "Provides interface between applications and network",
+    "DNS top-level domain is the last part (.com, .org, .edu)",
+    "DNS hierarchy: root → TLD → authoritative name servers",
+    "Local DNS servers can map internal hosts and forward external queries",
+    "DHCP automates IP address management on large networks",
+    "Home routers typically act as DHCP servers for local devices",
+    "HTTP GET retrieves data from web servers",
+    "HTTP POST sends data to web servers",
+    "HTTPS uses SSL/TLS encryption for security",
+    "SMTP is used to SEND email",
+    "POP3 downloads email (typically removes from server)",
+    "IMAP keeps email on server (syncs across devices)",
+    "FTP supports both upload (PUT) and download (GET)",
+    "FTP uses two TCP connections: control and data",
+    "SMB (Server Message Block) provides file/print sharing in Windows",
+    "Application layer protocols: HTTP, DNS, DHCP, FTP, SMTP, POP3, IMAP, SMB",
+    "Client initiates requests; server provides services"
+  ],
+  "quickReference": [
+    { "label": "Layer Position", "value": "TCP/IP Layer 4 (top)" },
+    { "label": "Closest To", "value": "End user" },
+    { "label": "DNS Purpose", "value": "Resolve names to IP addresses" },
+    { "label": "DNS TLD Examples", "value": ".com, .org, .edu, .net" },
+    { "label": "DHCP Purpose", "value": "Automate IP address assignment" },
+    { "label": "Home DHCP Server", "value": "Home router" },
+    { "label": "HTTP GET", "value": "Retrieve data from server" },
+    { "label": "HTTP POST", "value": "Send data to server" },
+    { "label": "HTTP PUT", "value": "Upload/replace files" },
+    { "label": "HTTPS Security", "value": "SSL/TLS encryption" },
+    { "label": "SMTP Function", "value": "Send email" },
+    { "label": "POP3 Function", "value": "Download email (remove from server)" },
+    { "label": "IMAP Function", "value": "Access email (keep on server, sync)" },
+    { "label": "FTP Capability", "value": "Upload and download files" },
+    { "label": "FTP Connections", "value": "Two TCP: control + data" },
+    { "label": "SMB Purpose", "value": "Windows file/print sharing" },
+    { "label": "Client Role", "value": "Initiates requests" },
+    { "label": "Server Role", "value": "Provides services" }
+  ]
+}
