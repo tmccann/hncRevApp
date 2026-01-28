@@ -87,16 +87,26 @@
     "checkpoints": ["checkpoint-14-15"],
     "color": "from-blue-500 to-cyan-600"
   },
+  {
+    "id": "module-16",
+    "number": 16,
+    "title": "Network Security Fundamentals",
+    "description": "Security threats, attacks, and network protection methods",
+    "topics": ["Threats", "Attacks", "Firewalls", "VPN", "AAA"],
+    "hasSummary": true,
+    "hasQuiz": true,
+    "checkpoints": ["checkpoint-16-17"],
+    "color": "from-blue-500 to-cyan-600"
+  },
 {
-  "id": "module-16",
-  "number": 16,
-  "title": "Network Security Fundamentals",
-  "description": "Security threats, attacks, and network protection methods",
-  "topics": ["Threats", "Attacks", "Firewalls", "VPN", "AAA"],
-  "hasSummary": false,
-  "hasQuiz": false,
-  "checkpoints": [],
+  "id": "module-17",
+  "number": 17,
+  "title": "Building a Small Network",
+  "description": "Network design, device selection, scalability, and best practices",
+  "topics": ["Network Design", "Redundancy", "Modularity", "QoS", "Baseline", "Troubleshooting"],
+  "hasSummary": true,
+  "hasQuiz": true,
+  "checkpoints": ["checkpoint-16-17"],
   "color": "from-blue-500 to-cyan-600"
 }
-
 ]

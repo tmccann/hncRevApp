@@ -1,0 +1,876 @@
+[
+  {
+    "id": 1,
+    "text": "Which example of malicious code would be classified as a Trojan horse?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "malware that was written to look like a video game" },
+      { "id": "b", "text": "malware that requires manual user intervention to spread between systems" },
+      { "id": "c", "text": "malware that attaches itself to a legitimate program and spreads to other programs when launched" },
+      { "id": "d", "text": "malware that can automatically spread from one system to another by exploiting a vulnerability in the target" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "A Trojan horse is malicious code written specifically to look like a legitimate program. Unlike a virus, it doesn't attach to actual programs, and unlike a worm, it doesn't self-replicate automatically."
+  },
+  {
+    "id": 2,
+    "text": "What is the difference between a virus and a worm?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Viruses self-replicate but worms do not." },
+      { "id": "b", "text": "Worms self-replicate but viruses do not." },
+      { "id": "c", "text": "Worms require a host file but viruses do not." },
+      { "id": "d", "text": "Viruses hide in legitimate programs but worms do not." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Worms are able to self-replicate and exploit vulnerabilities on computer networks without user participation."
+  },
+  {
+    "id": 3,
+    "text": "Which attack involves a compromise of data that occurs between two end points?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "denial-of-service" },
+      { "id": "b", "text": "man-in-the-middle attack" },
+      { "id": "c", "text": "extraction of security parameters" },
+      { "id": "d", "text": "username enumeration" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "In a Man-In-the-middle attack (MITM), the threat actor gets between devices in the system and intercepts all data being transmitted."
+  },
+  {
+    "id": 4,
+    "text": "Which type of attack involves an adversary attempting to gather information about a network to identify vulnerabilities?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "reconnaissance" },
+      { "id": "b", "text": "DoS" },
+      { "id": "c", "text": "dictionary" },
+      { "id": "d", "text": "man-in-the-middle" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Reconnaissance is a type of attack where the intruder looks for network vulnerabilities."
+  },
+  {
+    "id": 5,
+    "text": "Match each weakness with an example. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "technological weakness" },
+      { "id": "a2", "text": "configuration weakness" },
+      { "id": "a3", "text": "security policy weakness" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "An employee is trying to guess the password of another user." },
+      { "id": "b2", "text": "When implementing an access list on a router, a network engineer did not filter a type of malicious traffic." },
+      { "id": "b3", "text": "A network engineer is examining the operating system of a network device for vulnerabilities." },
+      { "id": "b4", "text": "The network administrator did not fully consider the implications of unauthorized users accessing the network." }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b4" }
+    ],
+    "explanation": "Technological weaknesses involve OS or hardware vulnerabilities; configuration weaknesses involve poor implementation (like faulty ACLs); security policy weaknesses involve lack of planning."
+  },
+  {
+    "id": 6,
+    "text": "Match the type of information security threat to the scenario. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "information theft" },
+      { "id": "a2", "text": "identity theft" },
+      { "id": "a3", "text": "data loss" },
+      { "id": "a4", "text": "disruption of service" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "installing virus code to destroy surveillance recordings for certain days" },
+      { "id": "b2", "text": "pretending to be someone else by using stolen personal information to apply for a credit card" },
+      { "id": "b3", "text": "preventing users from accessing a website by sending a large number of link requests in a short period" },
+      { "id": "b4", "text": "obtaining trade secret documents illegally" },
+      { "id": "b5", "text": "cracking the password of an administrator account on a server" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b1" },
+      { "a": "a4", "b": "b3" }
+    ],
+    "explanation": "Threats include information theft (stealing secrets), identity theft (stolen info for credit), data loss/manipulation (destroying logs), and disruption of service (DoS)."
+  },
+  {
+    "id": 7,
+    "text": "Match the description to the type of firewall filtering. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "stateful packet inspection" },
+      { "id": "a2", "text": "URL filtering" },
+      { "id": "a3", "text": "application filtering" },
+      { "id": "a4", "text": "packet filtering" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "prevents or allows access based on the operating system of the source or destination device" },
+      { "id": "b2", "text": "prevents or allows access based on the port numbers used in the request" },
+      { "id": "b3", "text": "prevents or allows access based on whether the traffic is in response to requests from internal hosts" },
+      { "id": "b4", "text": "prevents or allows access based on web addresses or keywords" },
+      { "id": "b5", "text": "prevents or allows access based on the IP or MAC addresses of the source and destination" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b5" }
+    ],
+    "explanation": "Stateful inspection tracks internal requests; URL filtering uses keywords; Application filtering uses ports; Packet filtering uses IP/MAC addresses."
+  },
+  {
+    "id": 8,
+    "text": "What is the purpose of the network security authentication function?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to require users to prove who they are" },
+      { "id": "b", "text": "to determine which resources a user can access" },
+      { "id": "c", "text": "to keep track of the actions of a user" },
+      { "id": "d", "text": "to provide challenge and response questions" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Authentication requires users to prove who they are. Authorization determines resource access, and Accounting tracks actions."
+  },
+  {
+    "id": 9,
+    "text": "Which firewall feature is used to ensure that packets coming into a network are legitimate responses to requests initiated from internal hosts?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "stateful packet inspection" },
+      { "id": "b", "text": "URL filtering" },
+      { "id": "c", "text": "application filtering" },
+      { "id": "d", "text": "packet filtering" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Stateful packet inspection checks that incoming packets are legitimate responses to internal requests."
+  },
+  {
+    "id": 10,
+    "text": "When applied to a router, which command would help mitigate brute-force password attacks against the router?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "exec-timeout 30" },
+      { "id": "b", "text": "service password-encryption" },
+      { "id": "c", "text": "banner motd $Max failed logins = 5$" },
+      { "id": "d", "text": "login block-for 60 attempts 5 within 60" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The login block-for command sets a limit on failed attempts within a set time, significantly increasing the time required to crack a password."
+  },
+  {
+    "id": 11,
+    "text": "Identify the steps needed to configure a switch for SSH. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Create a local user." },
+      { "id": "a2", "text": "Generate RSA keys." },
+      { "id": "a3", "text": "Use the login command." },
+      { "id": "a4", "text": "Configure a domain name." },
+      { "id": "a5", "text": "Use the login local command." },
+      { "id": "a6", "text": "Use the password cisco command." },
+      { "id": "a7", "text": "Use the transport input ssh command." }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "SSH configuration step" },
+      { "id": "b2", "text": "SSH configuration step" },
+      { "id": "b3", "text": "SSH configuration step" },
+      { "id": "b4", "text": "SSH configuration step" },
+      { "id": "b5", "text": "SSH configuration step" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a4", "b": "b3" },
+      { "a": "a5", "b": "b4" },
+      { "a": "a7", "b": "b5" }
+    ],
+    "explanation": "SSH requires a local user, RSA keys, a domain name, 'login local', and the 'transport input ssh' command."
+  },
+  {
+    "id": 12,
+    "text": "What feature of SSH makes it more secure than Telnet for a device management connection?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "confidentiality with IPsec" },
+      { "id": "b", "text": "stronger password requirement" },
+      { "id": "c", "text": "random one-time port connection" },
+      { "id": "d", "text": "login information and data encryption" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "SSH provides security by encrypting both authentication information and the transmitted data."
+  },
+  {
+    "id": 13,
+    "text": "What is the advantage of using SSH over Telnet?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SSH is easier to use." },
+      { "id": "b", "text": "SSH operates faster than Telnet." },
+      { "id": "c", "text": "SSH provides secure communications to access hosts." },
+      { "id": "d", "text": "SSH supports authentication for a connection request." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "SSH provides a secure method for remote access by encrypting network traffic between the client and the remote host."
+  },
+  {
+    "id": 14,
+    "text": "What is the role of an IPS?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "detecting and blocking of attacks in real time" },
+      { "id": "b", "text": "connecting global threat information to Cisco devices" },
+      { "id": "c", "text": "authenticating and validating traffic" },
+      { "id": "d", "text": "filtering of nefarious websites" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "An intrusion prevention system (IPS) provides real-time detection and blocking of attacks."
+  },
+  {
+    "id": 15,
+    "text": "A user deploys different defenses at various points (ISP connection, company network boundary, internal IPS). What approach is this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "attack based" },
+      { "id": "b", "text": "risk based" },
+      { "id": "c", "text": "structured" },
+      { "id": "d", "text": "layered" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Using different defenses at various points of the network creates a layered approach."
+  },
+  {
+    "id": 16,
+    "text": "What is an accurate description of redundancy?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "configuring a router with a complete MAC address database" },
+      { "id": "b", "text": "configuring a switch with proper security filtering" },
+      { "id": "c", "text": "designing a network to use multiple virtual devices" },
+      { "id": "d", "text": "designing a network to use multiple paths between switches to ensure there is no single point of failure" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Redundancy attempts to remove single points of failure by using multiple physically cabled paths."
+  },
+  {
+    "id": 17,
+    "text": "Which two network services are considered real-time applications sensitive to delay? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "voice" },
+      { "id": "b", "text": "video" },
+      { "id": "c", "text": "instant messaging" },
+      { "id": "d", "text": "FTP" },
+      { "id": "e", "text": "SNMP" }
+    ],
+    "correctAnswer": ["a", "b"],
+    "explanation": "Streaming media, such as video, and voice traffic are examples of real-time traffic."
+  },
+  {
+    "id": 18,
+    "text": "What is the purpose of using a protocol analyzer utility during network upgrade planning?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to identify source and destination of local traffic" },
+      { "id": "b", "text": "to capture bandwidth requirements" },
+      { "id": "c", "text": "to document and analyze network traffic requirements on each segment" },
+      { "id": "d", "text": "to establish a baseline for security analysis" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Protocol analyzers document and analyze network traffic patterns for each segment to determine needs for network growth."
+  },
+  {
+    "id": 19,
+    "text": "In a ping output, what does the letter 'U' indicate?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Connectivity was successful." },
+      { "id": "b", "text": "A router along the path did not have a route to the destination." },
+      { "id": "c", "text": "A ping packet is being blocked by a security device." },
+      { "id": "d", "text": "The connection timed out waiting for a reply." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The letter 'U' indicates that a router along the path sent an ICMP destination unreachable message back to the source."
+  },
+  {
+    "id": 20,
+    "text": "Which method is used to send a ping message specifying the source address?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Issue the ping command from interface configuration mode." },
+      { "id": "b", "text": "Issue the ping command without specifying a destination IP in privileged EXEC mode." },
+      { "id": "c", "text": "Issue the ping command without extended commands." },
+      { "id": "d", "text": "Issue the ping command after shutting down interfaces." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Issuing the ping command without a destination IP address in privileged EXEC mode enters extended ping mode, allowing the use of source addresses."
+  },
+  {
+    "id": 21,
+    "text": "Which situation would depict a possible latency issue in a network baseline report?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "a change in bandwidth on show interfaces" },
+      { "id": "b", "text": "a next-hop timeout from a traceroute" },
+      { "id": "c", "text": "an increase in host-to-host ping response times" },
+      { "id": "d", "text": "a change in RAM amount on show version" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Administrators compare host-to-host timers from ping commands to depict potential latency issues."
+  },
+  {
+    "id": 22,
+    "text": "Which statement is true about Cisco IOS ping indicators?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "'!' indicates unsuccessful ping." },
+      { "id": "b", "text": "'U' may indicate a router lacked a route and the ping was unsuccessful." },
+      { "id": "c", "text": "'.' indicates a successful ping with long response time." },
+      { "id": "d", "text": "'.' and '!' means a router lacked a route and sent ICMP unreachable." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "'!' means success; '.' means timeout; 'U' means destination unreachable via a router."
+  },
+  {
+    "id": 23,
+    "text": "A user machine fails to ping other computers and the default gateway. What can be determined for sure?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The NIC is bad." },
+      { "id": "b", "text": "TCP/IP is not enabled." },
+      { "id": "c", "text": "The router attached to the network is down." },
+      { "id": "d", "text": "Nothing can be determined for sure at this point." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "A failed ping could mean the destination is blocking ICMP; further investigation is required."
+  },
+  {
+    "id": 24,
+    "text": "What is the purpose of the '-6' option in the Windows command 'tracert -6 www.cisco.com'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It forces the trace to use IPv6." },
+      { "id": "b", "text": "It limits the trace to only 6 hops." },
+      { "id": "c", "text": "It sets a 6ms timeout." },
+      { "id": "d", "text": "It sends 6 probes within each TTL period." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The '-6' option is used to force the trace to use IPv6."
+  },
+  {
+    "id": 25,
+    "text": "Why would a network administrator use the tracert utility?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to determine active TCP connections" },
+      { "id": "b", "text": "to check DNS name information" },
+      { "id": "c", "text": "to identify where a packet was lost or delayed" },
+      { "id": "d", "text": "to display IP and gateway details" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The tracert utility is used to identify the path a packet takes from source to destination."
+  },
+  {
+    "id": 26,
+    "text": "If a ping fails between two routers, why would an administrator use 'show cdp neighbors'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To check for a virus." },
+      { "id": "b", "text": "To verify Layer 2 connectivity." },
+      { "id": "c", "text": "To verify the IP address of R2." },
+      { "id": "d", "text": "To test connectivity from a non-direct network." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The show cdp neighbors command proves that Layer 1 and Layer 2 connectivity exists between devices."
+  },
+  {
+    "id": 27,
+    "text": "Which command finds IP address, hostname, and IOS version of neighboring network devices?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "show version" },
+      { "id": "b", "text": "show ip route" },
+      { "id": "c", "text": "show interfaces" },
+      { "id": "d", "text": "show cdp neighbors detail" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The show cdp neighbors detail command reveals IP address, hostname, and IOS version of neighbors."
+  },
+  {
+    "id": 28,
+    "text": "What information can be verified using the 'show version' command on a router?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Routing protocol version" },
+      { "id": "b", "text": "Value of the configuration register" },
+      { "id": "c", "text": "Operational status of serial interfaces" },
+      { "id": "d", "text": "Administrative distance" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The value of the configuration register can be verified with show version."
+  },
+  {
+    "id": 29,
+    "text": "Which command allows log messages to be displayed on remote Telnet or SSH sessions?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "debug all" },
+      { "id": "b", "text": "logging synchronous" },
+      { "id": "c", "text": "show running-config" },
+      { "id": "d", "text": "terminal monitor" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The terminal monitor command allows log messages to appear on remote sessions."
+  },
+  {
+    "id": 30,
+    "text": "Which command sends debug messages to the vty lines?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "terminal monitor" },
+      { "id": "b", "text": "logging console" },
+      { "id": "c", "text": "logging buffered" },
+      { "id": "d", "text": "logging synchronous" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Sending debug messages to terminal lines requires the terminal monitor command."
+  },
+  {
+    "id": 31,
+    "text": "After identifying a network issue via user conversation, what is the next step in a structured approach?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Verify functionality." },
+      { "id": "b", "text": "Test the theory." },
+      { "id": "c", "text": "Establish a theory of probable causes." },
+      { "id": "d", "text": "Establish a plan of action." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The steps are: Identify problem -> Establish theory of causes -> Test theory -> Establish plan -> Verify functionality -> Document."
+  },
+  {
+    "id": 32,
+    "text": "A user can ping an IP but not browse via domain name. Which tool verifies if domain-to-IP resolution works?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "netstat" },
+      { "id": "b", "text": "tracert" },
+      { "id": "c", "text": "nslookup" },
+      { "id": "d", "text": "ipconfig" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "nslookup looks up information about a DNS name in the server."
+  },
+  {
+    "id": 33,
+    "text": "A PC shows an IP of 169.254.10.3. Which two conclusions can be drawn? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "The PC cannot contact a DHCP server." },
+      { "id": "b", "text": "DNS is misconfigured." },
+      { "id": "c", "text": "Gateway is not configured." },
+      { "id": "d", "text": "PC is configured to obtain IP automatically." },
+      { "id": "e", "text": "Dynamic routing is misconfigured." }
+    ],
+    "correctAnswer": ["a", "d"],
+    "explanation": "169.254.0.0/16 is assigned when a DHCP-configured PC cannot contact a server."
+  },
+  {
+    "id": 34,
+    "text": "What tool on R2 proves communication exists to H1 from the interface H3 uses, without relying on H3's workstation status?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "traceroute" },
+      { "id": "b", "text": "show cdp neighbors" },
+      { "id": "c", "text": "Telnet" },
+      { "id": "d", "text": "an extended ping" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Extended ping allows specifying a source address (like an interface on R2)."
+  },
+  {
+    "id": 35,
+    "text": "Baseline stats were 36/97/132ms; today they are 1458/2390/6066ms. What does this indicate?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Connectivity is fine." },
+      { "id": "b", "text": "H3 is improperly connected." },
+      { "id": "c", "text": "Interference between H1 and R1." },
+      { "id": "d", "text": "Within expected parameters." },
+      { "id": "e", "text": "Something is causing a time delay." }
+    ],
+    "correctAnswer": ["e"],
+    "explanation": "Significantly larger round trip times indicate a time delay between networks."
+  },
+  {
+    "id": 36,
+    "text": "Which network service automatically assigns IP addresses?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "DHCP" },
+      { "id": "b", "text": "Telnet" },
+      { "id": "c", "text": "DNS" },
+      { "id": "d", "text": "traceroute" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "DHCP allows devices to automatically configure IP information."
+  },
+  {
+    "id": 37,
+    "text": "Which command determines the interface a router uses to reach remote networks?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "show arp" },
+      { "id": "b", "text": "show interfaces" },
+      { "id": "c", "text": "show ip route" },
+      { "id": "d", "text": "show protocols" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The show ip route command displays the routing table with known networks and egress interfaces."
+  },
+  {
+    "id": 38,
+    "text": "On which two interfaces can security be improved by executive timeouts? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Fast Ethernet" },
+      { "id": "b", "text": "console ports" },
+      { "id": "c", "text": "serial interfaces" },
+      { "id": "d", "text": "vty ports" },
+      { "id": "e", "text": "loopback interfaces" }
+    ],
+    "correctAnswer": ["b", "d"],
+    "explanation": "Executive timeouts disconnect users from console, vty, and aux ports after idle time."
+  },
+  {
+    "id": 39,
+    "text": "Besides 'login local' and 'transport input ssh', which three steps complete SSH configuration? (Choose three.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Set privilege levels." },
+      { "id": "b", "text": "Generate RSA keys." },
+      { "id": "c", "text": "Configure domain name." },
+      { "id": "d", "text": "Configure role-based CLI." },
+      { "id": "e", "text": "Create local user/pass database." },
+      { "id": "f", "text": "Manually enable SSH." }
+    ],
+    "correctAnswer": ["b", "c", "e"],
+    "explanation": "SSH requires a domain name, RSA keys, and a local user database."
+  },
+  {
+    "id": 40,
+    "text": "What is the most effective way to mitigate a worm attack?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Change passwords monthly." },
+      { "id": "b", "text": "Update virus definitions." },
+      { "id": "c", "text": "Configure AAA." },
+      { "id": "d", "text": "Patch vulnerable systems." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Since worms exploit system vulnerabilities, patching systems with security updates is the most effective mitigation."
+  },
+  {
+    "id": 41,
+    "text": "Which statement describes ping and tracert commands?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Tracert shows each hop; ping shows only destination reply." },
+      { "id": "b", "text": "Tracert uses IP; ping doesn't." },
+      { "id": "c", "text": "Both show graphical results." },
+      { "id": "d", "text": "Ping shows success; tracert doesn't." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Ping checks end-to-end connectivity; tracert traces the route hop-by-hop."
+  },
+  {
+    "id": 42,
+    "text": "Which protocol is best for securely accessing network devices in off-site buildings?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "FTP" },
+      { "id": "b", "text": "HTTP" },
+      { "id": "c", "text": "SSH" },
+      { "id": "d", "text": "Telnet" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "SSH encrypts its data, making it more secure than clear-text Telnet for remote configuration."
+  },
+  {
+    "id": 43,
+    "text": "In a PT Activity, which command completes the SSH configuration?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "service password-encryption" },
+      { "id": "b", "text": "transport input ssh" },
+      { "id": "c", "text": "enable secret class" },
+      { "id": "d", "text": "ip domain-name cisco.com" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The missing command for SSH is transport input ssh in vty mode."
+  },
+  {
+    "id": 44,
+    "text": "What statement applies to the password 'WhatAreyouwaiting4'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is strong because it uses a passphrase." },
+      { "id": "b", "text": "Weak (default)." },
+      { "id": "c", "text": "Weak (personal info)." },
+      { "id": "d", "text": "Weak (dictionary word)." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Strong passwords should be at least 8 characters and use combinations of characters; passphrases are considered strong."
+  },
+  {
+    "id": 45,
+    "text": "What statement applies to 'pR3s!d7n&0'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Strong (min 10 complex characters)." },
+      { "id": "b", "text": "Weak (default)." },
+      { "id": "c", "text": "Weak (personal info)." },
+      { "id": "d", "text": "Weak (dictionary word)." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Strong passwords use complex combinations of characters and avoid simple dictionary words."
+  },
+  {
+    "id": 46,
+    "text": "What applies to '5$7*4#033!'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Strong (contains 10 numbers/symbols)." },
+      { "id": "b", "text": "Weak." },
+      { "id": "c", "text": "Weak." },
+      { "id": "d", "text": "Strong (min 10 complex chars)." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Passowrds with 10+ characters and complex combinations are considered strong."
+  },
+  {
+    "id": 47,
+    "text": "What applies to 'pR3s!d7n&0' (Option 2)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Strong (min 10 complex chars)." },
+      { "id": "b", "text": "Weak." },
+      { "id": "c", "text": "Strong (passphrase)." },
+      { "id": "d", "text": "Strong (10 nums/symbols)." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Complex combinations of character types meet strong password criteria."
+  },
+  {
+    "id": 48,
+    "text": "What applies to '12345678!'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Weak (series of numbers)." },
+      { "id": "b", "text": "Strong." },
+      { "id": "c", "text": "Weak." },
+      { "id": "d", "text": "Strong." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Rules for strong passwords include avoiding number or letter sequences."
+  },
+  {
+    "id": 49,
+    "text": "What applies to 'admin'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Weak (common default)." },
+      { "id": "b", "text": "Strong." },
+      { "id": "c", "text": "Strong." },
+      { "id": "d", "text": "Strong." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Weak passwords include common default passwords found on devices."
+  },
+  {
+    "id": 50,
+    "text": "What applies to 'Feb121978'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Weak (personal information)." },
+      { "id": "b", "text": "Strong." },
+      { "id": "c", "text": "Weak." },
+      { "id": "d", "text": "Strong." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Strong passwords avoid birthdates or personal identification."
+  },
+  {
+    "id": 51,
+    "text": "What applies to 'password'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Weak (commonly used)." },
+      { "id": "b", "text": "Weak (dictionary)." },
+      { "id": "c", "text": "Strong." },
+      { "id": "d", "text": "Strong." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Commonly used passwords or simple dictionary words are considered weak."
+  },
+  {
+    "id": 52,
+    "text": "What applies to 'RobErT'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Weak (personal information/names)." },
+      { "id": "b", "text": "Strong." },
+      { "id": "c", "text": "Strong." },
+      { "id": "d", "text": "Strong." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Passwords using names of relatives or identifying personal information are weak."
+  },
+  {
+    "id": 53,
+    "text": "What applies to 'Elizabeth'?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Weak (personal names)." },
+      { "id": "b", "text": "Strong." },
+      { "id": "c", "text": "Weak (dictionary)." },
+      { "id": "d", "text": "Strong." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Names are weak as they are easily identified personal information."
+  },
+  {
+    "id": 54,
+    "text": "What is the best command to verify IP addresses and status (up/down) of all interfaces on a router?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "show ip interface brief" },
+      { "id": "b", "text": "nslookup" },
+      { "id": "c", "text": "ipconfig getifaddr en0" },
+      { "id": "d", "text": "show ip route" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "This command provides a concise summary of interfaces, IP addresses, and operational status."
+  },
+  {
+    "id": 55,
+    "text": "Which command on a switch provides duplex setting, speed, and error details for interfaces?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "show interfaces" },
+      { "id": "b", "text": "ipconfig getifaddr en0" },
+      { "id": "c", "text": "copy running-config startup-config" },
+      { "id": "d", "text": "show ip nat translations" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The show interfaces command provides detailed physical layer information like duplex and speed."
+  },
+  {
+    "id": 56,
+    "text": "What is the best command to find the IP address of a Windows PC?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ipconfig" },
+      { "id": "b", "text": "copy running-config startup-config" },
+      { "id": "c", "text": "show interfaces" },
+      { "id": "d", "text": "show ip nat translations" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "ipconfig displays network information for a Windows PC."
+  },
+  {
+    "id": 57,
+    "text": "What command saves a router's running configuration to NVRAM?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "copy running-config startup-config" },
+      { "id": "b", "text": "show interfaces" },
+      { "id": "c", "text": "show ip nat translations" },
+      { "id": "d", "text": "show ip route" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "This command copies active RAM configuration to non-volatile memory for persistence."
+  },
+  {
+    "id": 58,
+    "text": "What command displays the IP address assigned to a wireless interface on a Mac?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ipconfig getifaddr en1" },
+      { "id": "b", "text": "copy running-config startup-config" },
+      { "id": "c", "text": "show interfaces" },
+      { "id": "d", "text": "show ip nat translations" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "On a Mac, ipconfig getifaddr [interface] is used in Terminal to find IP details."
+  },
+  {
+    "id": 59,
+    "text": "Which command verifies all IPv6 interface addresses on a router?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "show ipv6 interface" },
+      { "id": "b", "text": "show interfaces" },
+      { "id": "c", "text": "show ip nat translations" },
+      { "id": "d", "text": "show ip route" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "This command specifically lists comprehensive IPv6 configuration details for interfaces."
+  },
+  {
+    "id": 60,
+    "text": "A teacher wants to verify the default gateway on a Windows PC. Which command is used?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ipconfig" },
+      { "id": "b", "text": "copy running-config startup-config" },
+      { "id": "c", "text": "show interfaces" },
+      { "id": "d", "text": "show ip nat translations" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "ipconfig (or ipconfig /all) shows the IP, mask, and default gateway for Windows network interfaces."
+  },
+  {
+    "id": 61,
+    "text": "Which command verifies if 'ipv6 unicast-routing' is present in the current device configuration?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "show running-config" },
+      { "id": "b", "text": "show interfaces" },
+      { "id": "c", "text": "copy running-config startup-config" },
+      { "id": "d", "text": "show ip nat translations" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The active configuration file shows whether specific global settings like IPv6 routing are enabled."
+  },
+  {
+    "id": 62,
+    "text": "Which command resolves a domain name to its IPv4 or IPv6 address?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "nslookup" },
+      { "id": "b", "text": "show ipv6 route" },
+      { "id": "c", "text": "show ipv6 interface" },
+      { "id": "d", "text": "copy startup-config running-config" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "nslookup queries DNS servers to find IP addresses associated with a domain name."
+  },
+  {
+    "id": 63,
+    "text": "What is the best command to verify that IPv6 routing has been enabled (Option 2)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "show running-config" },
+      { "id": "b", "text": "show ipv6 route" },
+      { "id": "c", "text": "show ipv6 interface" },
+      { "id": "d", "text": "copy startup-config running-config" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The running-config confirms if the global 'ipv6 unicast-routing' command has been executed."
+  }
+]

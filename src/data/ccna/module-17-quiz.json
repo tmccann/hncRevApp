@@ -1,0 +1,198 @@
+[
+  {
+    "id": 1,
+    "text": "Which network design consideration would be more important to a large corporation than to a small business?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Internet router" },
+      { "id": "b", "text": "Firewall" },
+      { "id": "c", "text": "Low port density switch" },
+      { "id": "d", "text": "Redundancy" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Large corporations prioritize high availability. Redundancy—duplicating routers, links, and power supplies—ensures business continuity if a component fails. Small businesses often avoid this extra expense due to lower complexity and tighter budgets."
+  },
+  {
+    "id": 2,
+    "text": "Which primary factor should a technician be concerned with when choosing new devices for a small business with a large growth forecast?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Devices with a fixed number and type of interfaces" },
+      { "id": "b", "text": "Devices that have support for network monitoring" },
+      { "id": "c", "text": "Redundant devices" },
+      { "id": "d", "text": "Devices with support for modularity" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Modularity allows devices to be upgraded with expansion modules for more ports or features as the business grows, protecting the initial investment. Fixed-interface devices are less flexible and can become bottlenecks in a growing infrastructure."
+  },
+  {
+    "id": 3,
+    "text": "What type of traffic would most likely have the highest priority through the network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "FTP" },
+      { "id": "b", "text": "Instant messaging" },
+      { "id": "c", "text": "Voice" },
+      { "id": "d", "text": "SNMP" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Voice traffic (VoIP) is highly sensitive to latency and jitter. If delayed, call quality drops significantly. Protocols like FTP or IM are not real-time and can tolerate more delay."
+  },
+  {
+    "id": 4,
+    "text": "Which command, when issued on a Windows PC, will display the path to the remote host 10.1.1.5?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "trace 10.1.1.5" },
+      { "id": "b", "text": "traceroute 10.1.1.5" },
+      { "id": "c", "text": "tracert 10.1.1.5" },
+      { "id": "d", "text": "ping 10.1.1.5" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "In Windows, 'tracert' is used to identify the specific routers (hops) along a path. 'traceroute' is the Unix/Linux equivalent, and 'ping' only tests reachability."
+  },
+  {
+    "id": 5,
+    "text": "A user can reach a site via its IP (72.163.4.161) but not its URL (http://www.cisco.com). What is the likely issue?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Default gateway" },
+      { "id": "b", "text": "DHCP" },
+      { "id": "c", "text": "DNS" },
+      { "id": "d", "text": "TCP/IP protocol stack" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "If the IP works but the name does not, the Domain Name System (DNS) is likely misconfigured. DNS is responsible for translating human-readable domain names into machine-readable IP addresses."
+  },
+  {
+    "id": 6,
+    "text": "Where are Cisco IOS debug output messages sent by default?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Memory buffers" },
+      { "id": "b", "text": "Vty lines" },
+      { "id": "c", "text": "Syslog server" },
+      { "id": "d", "text": "Console line" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "By default, Cisco IOS sends debug output to the console line. Remote users (VTY) must use the 'terminal monitor' command to view these messages."
+  },
+  {
+    "id": 7,
+    "text": "Which element of scaling a network involves identifying the physical and logical topologies?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Traffic analysis" },
+      { "id": "b", "text": "Network documentation" },
+      { "id": "c", "text": "Device inventory" },
+      { "id": "d", "text": "Cost analysis" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Network documentation includes creating physical and logical topology diagrams. This is vital for planning expansions and troubleshooting existing connections."
+  },
+  {
+    "id": 8,
+    "text": "What mechanism helps minimize network latency for real-time applications in a small network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "QoS" },
+      { "id": "b", "text": "PoE" },
+      { "id": "c", "text": "AAA" },
+      { "id": "d", "text": "ICMP" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Quality of Service (QoS) prioritizes sensitive traffic like voice and video over data traffic, managing bandwidth and reducing jitter during congestion."
+  },
+  {
+    "id": 9,
+    "text": "Which process failed if a computer receives an IP address of 169.254.142.5?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "IP" },
+      { "id": "b", "text": "DNS" },
+      { "id": "c", "text": "DHCP" },
+      { "id": "d", "text": "HTTP" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The 169.254.x.x range represents APIPA (Automatic Private IP Addressing). This occurs when a device is configured for DHCP but cannot communicate with a DHCP server."
+  },
+  {
+    "id": 10,
+    "text": "A small company has only one router. How can they maintain connectivity if that router or ISP link fails?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Activate another router interface connected to the ISP" },
+      { "id": "b", "text": "Have a second router connected to another ISP" },
+      { "id": "c", "text": "Purchase a second link from another ISP to connect to this router" },
+      { "id": "d", "text": "Add more interfaces to the router" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "True redundancy requires a second router and a second ISP. This ensures that if the primary router hardware fails or the first ISP goes down, traffic can still flow."
+  },
+  {
+    "id": 11,
+    "text": "When should an administrator establish a network baseline?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "When traffic is at its peak" },
+      { "id": "b", "text": "When there is a sudden drop in traffic" },
+      { "id": "c", "text": "At the lowest point of traffic" },
+      { "id": "d", "text": "At regular intervals over a period of time" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Baselines should be established over time at regular intervals to capture a complete picture of normal network performance during various loads."
+  },
+  {
+    "id": 12,
+    "text": "Which two traffic types require delay sensitive delivery? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Email" },
+      { "id": "b", "text": "Web" },
+      { "id": "c", "text": "FTP" },
+      { "id": "d", "text": "Voice" },
+      { "id": "e", "text": "Video" }
+    ],
+    "correctAnswer": ["d", "e"],
+    "explanation": "Voice and Video are real-time streams where delays cause noticeable quality issues. Email and Web browsing can tolerate significant delay without impacting user experience."
+  },
+  {
+    "id": 13,
+    "text": "Which command displays detailed Layer 1 and Layer 2 status, including speed and duplex settings?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "show interfaces" },
+      { "id": "b", "text": "show running-config" },
+      { "id": "c", "text": "show ip interface brief" },
+      { "id": "d", "text": "show mac-address-table" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The 'show interfaces' command provides deep details on physical status, duplex, speed, and error counters, which is essential for diagnosing mismatch issues."
+  },
+  {
+    "id": 14,
+    "text": "Which statement is true about CDP on a Cisco device?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Detail command only works with Layer 3 connectivity" },
+      { "id": "b", "text": "Must be disabled globally using 'no cdp enable'" },
+      { "id": "c", "text": "Can be disabled globally or on a specific interface" },
+      { "id": "d", "text": "Can only be implemented in switches" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Cisco Discovery Protocol (CDP) can be turned off for the entire device with 'no cdp run' or for a single port with 'no cdp enable'. It operates at Layer 2."
+  },
+  {
+    "id": 15,
+    "text": "What factor is typically most constrained when choosing devices for a small network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Cost of devices" },
+      { "id": "b", "text": "Redundancy" },
+      { "id": "c", "text": "Traffic analysis" },
+      { "id": "d", "text": "ISP" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Small network designs are often heavily influenced by budget constraints. Balancing affordability with necessary features like modularity is a core planning challenge."
+  }
+]

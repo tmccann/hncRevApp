@@ -1,0 +1,78 @@
+{
+  "number": 17,
+  "title": "Building a Small Network",
+  "description": "Network design, device selection, scalability, and best practices for small business networks",
+  "keyConcepts": [
+    {
+      "title": "Network Design Considerations",
+      "description": "Small networks require careful balancing of cost, functionality, and future growth. Key factors include device modularity, redundancy planning, and selecting appropriate port density."
+    },
+    {
+      "title": "Redundancy",
+      "description": "Critical for large corporations but often too expensive for small businesses. Involves duplicate routers, ISP links, and power supplies to eliminate single points of failure and ensure business continuity."
+    },
+    {
+      "title": "Modularity",
+      "description": "Selecting devices that support expansion modules allows networks to grow without replacing core equipment. Essential for businesses with growth forecasts to protect initial investment."
+    },
+    {
+      "title": "Quality of Service (QoS)",
+      "description": "Mechanism to prioritize delay-sensitive traffic like voice and video over data traffic. Manages bandwidth allocation and reduces latency during network congestion."
+    },
+    {
+      "title": "Network Baseline",
+      "description": "Should be established at regular intervals over time to capture normal performance under various load conditions. Used for capacity planning and identifying performance degradation."
+    },
+    {
+      "title": "Network Documentation",
+      "description": "Essential element of scaling networks. Includes physical and logical topology diagrams, IP addressing schemes, device inventory, and configuration backups."
+    }
+  ],
+  "importantPoints": [
+    "Cost is typically the most constrained factor in small network design",
+    "Redundancy is more important to large corporations than small businesses",
+    "Modularity protects investment by allowing future expansion",
+    "Voice and video traffic require delay-sensitive delivery (QoS)",
+    "Voice traffic typically has highest priority through network",
+    "QoS minimizes latency for real-time applications",
+    "Network baseline should be established at regular intervals over time",
+    "True redundancy requires second router AND second ISP",
+    "Network documentation identifies physical and logical topologies",
+    "169.254.x.x indicates DHCP failure (APIPA)",
+    "DNS failure: can reach site by IP but not by URL",
+    "Debug output sent to console line by default",
+    "Use 'terminal monitor' to see debug on VTY lines",
+    "tracert (Windows) / traceroute (Linux) shows path to destination",
+    "show interfaces displays speed, duplex, and Layer 1/2 status",
+    "show ip interface brief shows IP addresses and up/down status",
+    "CDP can be disabled globally or per-interface",
+    "CDP operates at Layer 2, doesn't require Layer 3 connectivity",
+    "Fixed-interface devices less flexible for growing networks",
+    "Port density should match current and projected needs"
+  ],
+  "quickReference": [
+    { "label": "Small Network Priority", "value": "Cost constraints" },
+    { "label": "Large Network Priority", "value": "Redundancy" },
+    { "label": "Growth Planning", "value": "Modularity" },
+    { "label": "Highest Priority Traffic", "value": "Voice (VoIP)" },
+    { "label": "Delay-Sensitive Traffic", "value": "Voice and Video" },
+    { "label": "QoS Purpose", "value": "Prioritize real-time traffic" },
+    { "label": "Baseline Timing", "value": "Regular intervals over time" },
+    { "label": "True Redundancy", "value": "Second router + second ISP" },
+    { "label": "APIPA Range", "value": "169.254.0.0/16" },
+    { "label": "APIPA Cause", "value": "DHCP server unreachable" },
+    { "label": "IP Works, Name Doesn't", "value": "DNS issue" },
+    { "label": "Debug Default Output", "value": "Console line" },
+    { "label": "Debug on VTY", "value": "terminal monitor" },
+    { "label": "Windows Path Trace", "value": "tracert" },
+    { "label": "Linux Path Trace", "value": "traceroute" },
+    { "label": "Detailed Interface Info", "value": "show interfaces" },
+    { "label": "Interface Summary", "value": "show ip interface brief" },
+    { "label": "CDP Disable Global", "value": "no cdp run" },
+    { "label": "CDP Disable Interface", "value": "no cdp enable" },
+    { "label": "CDP Layer", "value": "Layer 2 (no IP needed)" },
+    { "label": "Network Docs Include", "value": "Physical/logical topologies" },
+    { "label": "Real-Time Apps", "value": "Voice, Video" },
+    { "label": "Tolerant Apps", "value": "Email, FTP, Web" }
+  ]
+}
