@@ -127,7 +127,7 @@
     "id": 8,
     "text": "What is the purpose of the network security authentication function?",
     "type": "single",
-     "image": "/images/checkpoint-16-17-quiz/q8.png",
+    "image": "/images/checkpoint-16-17-quiz/q8.png",
 
     "options": [
       { "id": "a", "text": "to require users to prove who they are" },
@@ -289,6 +289,7 @@
     "id": 19,
     "text": "In a ping output, what does the letter 'U' indicate?",
     "type": "single",
+    "image": "/images/checkpoint-16-17-quiz/q19.png",
     "options": [
       { "id": "a", "text": "Connectivity was successful." },
       { "id": "b", "text": "A router along the path did not have a route to the destination." },
@@ -485,6 +486,7 @@
     "id": 34,
     "text": "What tool on R2 proves communication exists to H1 from the interface H3 uses, without relying on H3's workstation status?",
     "type": "single",
+    "image":"/images/checkpoint-16-17-quiz/q34-35.png",
     "options": [
       { "id": "a", "text": "traceroute" },
       { "id": "b", "text": "show cdp neighbors" },
@@ -498,6 +500,7 @@
     "id": 35,
     "text": "Baseline stats were 36/97/132ms; today they are 1458/2390/6066ms. What does this indicate?",
     "type": "single",
+    "image":"/images/checkpoint-16-17-quiz/q34-35.png",
     "options": [
       { "id": "a", "text": "Connectivity is fine." },
       { "id": "b", "text": "H3 is improperly connected." },
