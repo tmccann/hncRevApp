@@ -1,81 +1,94 @@
 {
   "number": 16,
   "title": "Building and Securing a Small Network",
-  "description": "Network design principles, redundancy, troubleshooting, and baseline establishment",
+  "description": "Network troubleshooting, baseline establishment, and diagnostic tools",
   "keyConcepts": [
     {
-      "title": "Network Redundancy",
-      "description": "Designing networks with multiple paths between devices to eliminate single points of failure. Uses physically separate cabled paths to ensure continued operation if one link or device fails."
+      "title": "Network Troubleshooting Tools",
+      "description": "Essential utilities for diagnosing network issues: ping (tests connectivity), tracert/traceroute (shows path), show commands (displays configuration and status), CDP (discovers neighbors), nslookup (DNS resolution)."
     },
     {
       "title": "Network Baseline",
-      "description": "Documentation of expected network performance under normal conditions. Includes bandwidth usage, response times, and traffic patterns. Used to identify performance degradation and capacity planning."
+      "description": "Documentation of normal network performance established at regular intervals over time. Used to identify latency issues by comparing current ping response times against historical data."
     },
     {
       "title": "Protocol Analyzer",
-      "description": "Tool used to capture and analyze network traffic. Documents traffic requirements on each segment to determine needs for network growth and identify performance issues."
+      "description": "Tool that captures and analyzes network traffic patterns on each segment. Used during upgrade planning to document traffic requirements and determine capacity needs."
     },
     {
-      "title": "Real-Time Applications",
-      "description": "Services like voice and video that are sensitive to delay and require Quality of Service (QoS) considerations. Cannot tolerate high latency or packet loss."
+      "title": "Structured Troubleshooting Methodology",
+      "description": "Systematic approach: (1) Identify problem, (2) Establish theory of probable causes, (3) Test theory, (4) Establish plan of action, (5) Implement solution, (6) Verify functionality, (7) Document."
     },
     {
-      "title": "Structured Troubleshooting Approach",
-      "description": "Systematic method: (1) Identify the problem, (2) Establish theory of probable causes, (3) Test the theory, (4) Establish plan of action, (5) Implement solution, (6) Verify functionality, (7) Document."
+      "title": "Cisco IOS Show Commands",
+      "description": "Essential diagnostic commands: show ip interface brief (IP summary), show interfaces (detailed Layer 1/2 info), show ip route (routing table), show cdp neighbors (Layer 2 discovery), show running-config (active config)."
     },
     {
-      "title": "Network Documentation",
-      "description": "Essential for maintaining and troubleshooting networks. Includes topology diagrams, IP addressing schemes, baseline performance data, and configuration backups."
+      "title": "Extended Ping",
+      "description": "Advanced ping mode accessed by issuing ping without destination in privileged EXEC mode. Allows specifying source interface for testing specific network paths."
     }
   ],
   "importantPoints": [
-    "Redundancy eliminates single points of failure using multiple paths",
-    "Baseline establishes normal network performance metrics",
-    "Protocol analyzers document traffic patterns for capacity planning",
-    "Voice and video are real-time applications sensitive to delay",
+    "Network baseline should be established at regular intervals over time",
     "Increased ping response times indicate latency issues",
-    "DHCP automatically assigns IP addresses on networks",
-    "show ip route displays routing table and exit interfaces",
-    "show ip interface brief shows interface IPs and up/down status",
-    "show interfaces provides detailed duplex, speed, and error info",
-    "show running-config displays active device configuration",
-    "show cdp neighbors detail reveals neighbor IP, hostname, IOS version",
-    "show cdp neighbors verifies Layer 2 connectivity between devices",
-    "ping tests end-to-end connectivity and measures round-trip time",
-    "tracert/traceroute identifies each hop and where packets are lost",
-    "Extended ping allows specifying source interface",
+    "Protocol analyzers document traffic for capacity planning",
+    "Voice and video are real-time, delay-sensitive applications",
+    "Redundancy eliminates single points of failure (multiple paths)",
+    "True redundancy requires second router AND second ISP",
+    "APIPA range 169.254.0.0/16 indicates DHCP server unreachable",
+    "Can reach by IP but not name = DNS issue",
+    "Debug output sent to console line by default",
+    "Use 'terminal monitor' to see debug on VTY/Telnet sessions",
     "Ping symbols: ! = success, . = timeout, U = unreachable",
-    "169.254.x.x indicates PC cannot reach DHCP server (APIPA)",
-    "nslookup verifies DNS name resolution",
-    "terminal monitor enables debug messages on remote sessions",
-    "ipconfig displays Windows PC network information",
-    "ipconfig getifaddr [interface] shows Mac interface IP",
-    "Structured approach starts with identifying problem, ends with documentation"
+    "tracert (Windows) / traceroute (Linux) shows each hop",
+    "tracert -6 forces IPv6 trace",
+    "show ip interface brief: IP addresses and up/down status",
+    "show interfaces: duplex, speed, error details (Layer 1/2)",
+    "show ip route: routing table and exit interfaces",
+    "show cdp neighbors: verifies Layer 2 connectivity",
+    "show cdp neighbors detail: IP, hostname, IOS version",
+    "show version: configuration register value",
+    "show running-config: active device configuration",
+    "CDP can be disabled globally or per-interface",
+    "CDP operates at Layer 2 (no Layer 3 required)",
+    "Extended ping: issue ping with no destination in priv EXEC",
+    "nslookup: DNS name resolution testing",
+    "ipconfig: Windows PC network info",
+    "ipconfig getifaddr [interface]: Mac IP info",
+    "show ipv6 interface: IPv6 interface details",
+    "Failed ping doesn't guarantee problem - could be ICMP blocked",
+    "Structured approach ends with documentation"
   ],
   "quickReference": [
-    { "label": "Redundancy Purpose", "value": "Eliminate single points of failure" },
-    { "label": "Baseline Purpose", "value": "Document normal network performance" },
-    { "label": "Protocol Analyzer Use", "value": "Capture and analyze traffic patterns" },
-    { "label": "Real-Time Apps", "value": "Voice and video (delay-sensitive)" },
-    { "label": "DHCP Function", "value": "Automatic IP address assignment" },
-    { "label": "Ping Success Symbol", "value": "!" },
-    { "label": "Ping Timeout Symbol", "value": "." },
-    { "label": "Ping Unreachable Symbol", "value": "U" },
+    { "label": "Baseline Timing", "value": "Regular intervals over time" },
+    { "label": "Latency Indicator", "value": "Increased ping response times" },
+    { "label": "Protocol Analyzer Use", "value": "Document traffic for planning" },
+    { "label": "Real-Time Apps", "value": "Voice and video" },
+    { "label": "Redundancy Definition", "value": "Multiple paths, no single failure point" },
     { "label": "APIPA Range", "value": "169.254.0.0/16" },
-    { "label": "Show Routing Table", "value": "show ip route" },
-    { "label": "Show Interface Summary", "value": "show ip interface brief" },
-    { "label": "Show Detailed Interface", "value": "show interfaces" },
-    { "label": "Show Active Config", "value": "show running-config" },
-    { "label": "Show CDP Neighbors", "value": "show cdp neighbors detail" },
+    { "label": "APIPA Cause", "value": "DHCP server unreachable" },
+    { "label": "IP Works, Name Doesn't", "value": "DNS issue" },
+    { "label": "Debug Default", "value": "Console line" },
+    { "label": "Debug on Remote", "value": "terminal monitor" },
+    { "label": "Ping Success", "value": "!" },
+    { "label": "Ping Timeout", "value": "." },
+    { "label": "Ping Unreachable", "value": "U" },
+    { "label": "Windows Trace", "value": "tracert" },
+    { "label": "Linux Trace", "value": "traceroute" },
+    { "label": "Force IPv6 Trace", "value": "tracert -6" },
+    { "label": "Interface Summary", "value": "show ip interface brief" },
+    { "label": "Interface Details", "value": "show interfaces" },
+    { "label": "Routing Table", "value": "show ip route" },
+    { "label": "CDP Neighbors", "value": "show cdp neighbors detail" },
     { "label": "Verify Layer 2", "value": "show cdp neighbors" },
-    { "label": "DNS Lookup", "value": "nslookup" },
-    { "label": "Windows IP Info", "value": "ipconfig" },
-    { "label": "Mac IP Info", "value": "ipconfig getifaddr [interface]" },
-    { "label": "Save Config", "value": "copy running-config startup-config" },
-    { "label": "Remote Debug Messages", "value": "terminal monitor" },
+    { "label": "Active Config", "value": "show running-config" },
+    { "label": "Config Register", "value": "show version" },
+    { "label": "Save Config", "value": "copy run start" },
     { "label": "Extended Ping", "value": "ping (no dest) in priv EXEC" },
+    { "label": "DNS Lookup", "value": "nslookup" },
+    { "label": "Windows IP", "value": "ipconfig" },
+    { "label": "Mac IP", "value": "ipconfig getifaddr [if]" },
     { "label": "IPv6 Interfaces", "value": "show ipv6 interface" },
-    { "label": "IPv6 Routing Table", "value": "show ipv6 route" },
-    { "label": "Latency Indicator", "value": "Increased ping response times" }
+    { "label": "Troubleshooting Steps", "value": "7 steps: Identify → Document" }
   ]
 }
