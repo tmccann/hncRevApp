@@ -1,0 +1,525 @@
+[
+  {
+    "id": 1,
+    "text": "What are two types of computer user interface? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "CLI" },
+      { "id": "b", "text": "PnP" },
+      { "id": "c", "text": "GUI" },
+      { "id": "d", "text": "OpenGL" },
+      { "id": "e", "text": "API" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "CLI (Command-Line Interface) allows users to enter text commands, while GUI (Graphical User Interface) allows interaction through icons and menus. PnP is a hardware assignment process, and the others are APIs."
+  },
+  {
+    "id": 2,
+    "text": "What are two default account types provided by Windows 10? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Guest" },
+      { "id": "b", "text": "Users" },
+      { "id": "c", "text": "Administrator" },
+      { "id": "d", "text": "Standard User" },
+      { "id": "e", "text": "DefaultAccount" }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "Windows 10 provides Administrator and Standard User accounts. Guest is a built-in account, DefaultAccount is system-managed, and Users is a group."
+  },
+  {
+    "id": 3,
+    "text": "Which term best describes the process of breaking a program into smaller parts that can be loaded as needed by the operating system?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "multithreading" },
+      { "id": "b", "text": "multiprocessing" },
+      { "id": "c", "text": "multiuser" },
+      { "id": "d", "text": "multitasking" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "A thread is a small piece of a program in execution. Multiprocessing involves multiple CPUs, multiuser supports multiple users, and multitasking runs multiple apps simultaneously."
+  },
+  {
+    "id": 4,
+    "text": "A computer fails to boot after a user installs a new sound card driver. Which quick fix can return it to a working state?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Boot to Emergency Recovery State." },
+      { "id": "b", "text": "Boot to Last Known Good Configuration." },
+      { "id": "c", "text": "Boot to Recovery Console." },
+      { "id": "d", "text": "Boot to Start Windows Normally." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Last Known Good Configuration uses the registry copy saved at the last successful login. It is useful for fixing issues caused by faulty drivers."
+  },
+  {
+    "id": 5,
+    "text": "What feature of an operating system allows it to support two or more CPUs?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "multiprocessing" },
+      { "id": "b", "text": "multitasking" },
+      { "id": "c", "text": "multiuser support" },
+      { "id": "d", "text": "multithreading" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Multiprocessing allows the OS to use multiple CPUs. Multitasking runs multiple apps, multithreading runs parts of the same program, and multiuser supports multiple users."
+  },
+  {
+    "id": 6,
+    "text": "What term is used to describe a logical drive that can be formatted to store data?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "volume" },
+      { "id": "b", "text": "track" },
+      { "id": "c", "text": "sector" },
+      { "id": "d", "text": "cluster" },
+      { "id": "e", "text": "partition" }
+    ],
+    "correctAnswer": ["e"],
+    "explanation": "Partitions are logical portions of the disk that can be formatted. They consist of physical/logical structures like tracks, sectors, and clusters."
+  },
+  {
+    "id": 7,
+    "text": "Which key allows a user to start Windows in safe mode during the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "F8" },
+      { "id": "b", "text": "F1" },
+      { "id": "c", "text": "Esc" },
+      { "id": "d", "text": "Windows" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Pressing the F8 key during bootup provides options such as Safe Mode."
+  },
+  {
+    "id": 8,
+    "text": "Which file system is used to access files over a network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "NFS" },
+      { "id": "b", "text": "NTFS" },
+      { "id": "c", "text": "FAT" },
+      { "id": "d", "text": "CDFS" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "NFS (Network File System) is designed for network file access. NTFS, FAT, and CDFS are typically for local storage."
+  },
+  {
+    "id": 9,
+    "text": "Which component of a CPU architecture allows the CPU immediate access to data?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "registers" },
+      { "id": "b", "text": "cache" },
+      { "id": "c", "text": "RAM" },
+      { "id": "d", "text": "CMOS" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Registers are memory locations within the CPU architecture providing storage for logical functions."
+  },
+  {
+    "id": 10,
+    "text": "When would the PXE option be used when repairing a PC?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The display cannot be seen clearly." },
+      { "id": "b", "text": "There is no response from the mouse or keyboard." },
+      { "id": "c", "text": "The computer needs a replacement operating system." },
+      { "id": "d", "text": "A newly installed application caused erratic performance." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Preboot eXecution Environment (PXE) is used to install an OS from a remote network location."
+  },
+  {
+    "id": 11,
+    "text": "Which statement accurately describes the GUID partition table (GPT)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is 512 bytes long and contains the boot loader." },
+      { "id": "b", "text": "It cannot be used in a multiboot environment." },
+      { "id": "c", "text": "It is commonly used in computers with UEFI firmware." },
+      { "id": "d", "text": "It is not supported by Windows 10 Home edition." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "GPT expands on MBR limits and is the standard for UEFI firmware systems."
+  },
+  {
+    "id": 12,
+    "text": "Which statement describes dynamic disks in Windows 10 Pro?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "They have the ability to create volumes that span across more than one disk." },
+      { "id": "b", "text": "Free space can only be added from the same disk to extend the volume." },
+      { "id": "c", "text": "A partition can be shrunk without deleting it first." },
+      { "id": "d", "text": "More space can be added only if it is contiguous unallocated space." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Dynamic disks can create spanned volumes across multiple disks. Partitions can be extended into noncontiguous space."
+  },
+  {
+    "id": 13,
+    "text": "A technician wants to deploy a Windows 10 upgrade and ensure user state migrates successfully. Which tool should they use?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "User State Migration" },
+      { "id": "b", "text": "Windows Easy Transfer" },
+      { "id": "c", "text": "PCmover Express" },
+      { "id": "d", "text": "Windows 10 Update Assistant" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "USMT (User State Migration Tool) simplifies migration during large OS deployments."
+  },
+  {
+    "id": 14,
+    "text": "Which command line utility allows users to transfer files and settings during a Windows 10 upgrade?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "PCmover Express" },
+      { "id": "b", "text": "Windows Easy Transfer" },
+      { "id": "c", "text": "User State Migration Tool" },
+      { "id": "d", "text": "Windows Upgrade Assistant" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "USMT is a command-line tool developed by Microsoft for this purpose. Windows Easy Transfer is not available in Windows 10."
+  },
+  {
+    "id": 15,
+    "text": "Which operation in Windows 10 is limited to users with Administrator privileges only?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Run applications." },
+      { "id": "b", "text": "Modify user settings." },
+      { "id": "c", "text": "Change system settings." },
+      { "id": "d", "text": "Install software programs." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Administrator accounts have full control, including software installation, while Standard users are limited in actions that affect other users."
+  },
+  {
+    "id": 16,
+    "text": "Select the Windows 10 version that best meets the described use.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Windows 10 Enterprise" },
+      { "id": "a2", "text": "Windows 10 Home" },
+      { "id": "a3", "text": "Windows 10 Education" },
+      { "id": "a4", "text": "Windows 10 Pro" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Used for personal computing and gaming with built-in features like family safety and parental control." },
+      { "id": "b2", "text": "Used in an academic environment with volume licensing options." },
+      { "id": "b3", "text": "Used in small business environments with built-in security, productivity, and management features." },
+      { "id": "b4", "text": "Used in large to mid-size business environments requiring advanced security and management features." }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b3" }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Match the file system with the respective description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "FAT32" },
+      { "id": "a2", "text": "NTFS" },
+      { "id": "a3", "text": "ExFAT" },
+      { "id": "a4", "text": "CDFS" },
+      { "id": "a5", "text": "NFS" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Supports partition sizes up to 16 exabytes and incorporates file system security features and extended attributes." },
+      { "id": "b2", "text": "Usually used on flash drives as it can support files larger than 4GB." },
+      { "id": "b3", "text": "Supports partition sizes up to 2TB or 2,048GB." },
+      { "id": "b4", "text": "Created specifically for optical disk media." },
+      { "id": "b5", "text": "A network-based file system that allows file access over the network." }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b4" },
+      { "a": "a5", "b": "b5" }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Match the steps that will lead to the loading of bootmgr.exe in a 32 bit Windows 10 environment.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Step 1" },
+      { "id": "a2", "text": "Step 2" },
+      { "id": "a3", "text": "Step 3" },
+      { "id": "a4", "text": "Step 4" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "CMOS configuration settings loaded" },
+      { "id": "b2", "text": "MBR" },
+      { "id": "b3", "text": "VBR" },
+      { "id": "b4", "text": "POST executed" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b3" }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Which statement describes a primary partition?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is a physical section of a hard disk that can contain an OS and cannot be subdivided." },
+      { "id": "b", "text": "It is a section of an extended partition on an MBR." },
+      { "id": "c", "text": "It is a type of disk spanning multiple disks." },
+      { "id": "d", "text": "It is used to subdivide data into 23 logical sections." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "A primary partition is a physical section that can host an OS and cannot be subdivided."
+  },
+  {
+    "id": 20,
+    "text": "Which statement describes formatting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is a process to create a file system in a partition or volume for file storage." },
+      { "id": "b", "text": "It subdivides data into as many as 23 logical sections." },
+      { "id": "c", "text": "It separates information for administrative purposes." },
+      { "id": "d", "text": "It is used to boot an operating system by default." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Formatting creates a file system on a partition for storage purposes."
+  },
+  {
+    "id": 21,
+    "text": "Which statement describes the active partition?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is used to boot an operating system by default." },
+      { "id": "b", "text": "It separates information for administrative purposes." },
+      { "id": "c", "text": "It allows spanning volumes across multiple disks." },
+      { "id": "d", "text": "It subdivides data into 23 logical sections." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The active partition is the one used by the BIOS to boot the operating system."
+  },
+  {
+    "id": 22,
+    "text": "Which statement describes a recovery partition?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It contains an image used to restore the computer to its original configuration." },
+      { "id": "b", "text": "It creates a file system for file storage." },
+      { "id": "c", "text": "It allows spanning across multiple disks." },
+      { "id": "d", "text": "It separates information for administrative purposes." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Recovery partitions are usually inaccessible to the user and contain factory restoration images."
+  },
+  {
+    "id": 23,
+    "text": "Which statement describes an extended partition?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It can be subdivided into as many as 23 logical sections." },
+      { "id": "b", "text": "It contains a restoration image." },
+      { "id": "c", "text": "It creates a file system for storage." },
+      { "id": "d", "text": "It allows spanning across more than one disk." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "On MBR disks, an extended partition allows the creation of multiple logical drives."
+  },
+  {
+    "id": 24,
+    "text": "Which statement describes the master boot record (MBR)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It takes the first 512 bytes on the disk and contains the boot loader." },
+      { "id": "b", "text": "It contains a restoration image." },
+      { "id": "c", "text": "It creates a file system for storage." },
+      { "id": "d", "text": "It spans across more than one disk." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The MBR is the first 512 bytes of the drive containing the boot loader executable."
+  },
+  {
+    "id": 25,
+    "text": "Which statement describes a logical drive?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is a section of an extended partition on an MBR used for administrative separation." },
+      { "id": "b", "text": "It contains a restoration image." },
+      { "id": "c", "text": "It creates a file system for storage." },
+      { "id": "d", "text": "It spans multiple physical disks." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Logical drives are subdivisions of an extended partition used for data organization."
+  },
+  {
+    "id": 26,
+    "text": "A technician wants to transfer selected files and profiles to a new Windows 10 PC. What is the best choice?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "PCmover Express" },
+      { "id": "b", "text": "Upgrade Assistant" },
+      { "id": "c", "text": "User State Migration Tool" },
+      { "id": "d", "text": "Windows Task Manager" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "PCmover Express is recommended for moving selected files and applications between PCs."
+  },
+  {
+    "id": 27,
+    "text": "A manager needs help with the setup process for a direct Windows 10 installation. What utility is best?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Upgrade Assistant" },
+      { "id": "b", "text": "User State Migration Tool" },
+      { "id": "c", "text": "Windows Easy Transfer" },
+      { "id": "d", "text": "Windows Boot Manager" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Upgrade Assistant helps guide the user through the setup and installation process."
+  },
+  {
+    "id": 28,
+    "text": "A technician needs to capture accounts and OS settings for migration. What utility is best?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "User State Migration Tool" },
+      { "id": "b", "text": "Upgrade Assistant" },
+      { "id": "c", "text": "Windows Easy Transfer" },
+      { "id": "d", "text": "WinLoad" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "USMT is specifically designed to capture accounts, files, and settings for migration."
+  },
+  {
+    "id": 29,
+    "text": "A technician wants to check system compatibility before upgrading to Windows 10. What utility is best?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Get Windows 10 app" },
+      { "id": "b", "text": "Upgrade Assistant" },
+      { "id": "c", "text": "User State Migration Tool" },
+      { "id": "d", "text": "Cortana Virtual Assistant" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Upgrade Assistant checks hardware and software compatibility before the upgrade."
+  },
+  {
+    "id": 30,
+    "text": "True or False? Smartphones require an operating system before they can be operated.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "True" },
+      { "id": "b", "text": "False" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "All smartphones require an OS (like Android or iOS) to manage hardware and run apps."
+  },
+  {
+    "id": 31,
+    "text": "True or False? Modern operating systems support only one user, task, or CPU.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "False" },
+      { "id": "b", "text": "True" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Modern OSs are multiuser, multitasking, and multiprocessing."
+  },
+  {
+    "id": 32,
+    "text": "True or False? The OS needs a device driver to access and use installed hardware.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "True" },
+      { "id": "b", "text": "False" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Device drivers act as translators between the hardware and the OS."
+  },
+  {
+    "id": 33,
+    "text": "True or False? There is no difference between local and network file access in a network file system.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "True" },
+      { "id": "b", "text": "False" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "A network file system aims to make remote files appear and act as if they are stored locally."
+  },
+  {
+    "id": 34,
+    "text": "True or False? Windows 10 64-bit version can be installed on as little as 1GB of hard drive space.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "False" },
+      { "id": "b", "text": "True" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Windows 10 requires significantly more space (typically 20GB+ for 64-bit) for installation."
+  },
+  {
+    "id": 35,
+    "text": "True or False? DirectX is a collection of APIs related to multimedia tasks for Microsoft Windows.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "True" },
+      { "id": "b", "text": "False" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "DirectX provides APIs for graphics, audio, and gaming performance."
+  },
+  {
+    "id": 36,
+    "text": "True or False? The registry database only contains information about device drivers.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "False" },
+      { "id": "b", "text": "True" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The registry contains settings for hardware, software, users, and OS preferences."
+  },
+  {
+    "id": 37,
+    "text": "True or False? Multitasking describes an OS capable of running multiple applications at once.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "True" },
+      { "id": "b", "text": "False" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Multitasking manages resource allocation to allow multiple programs to appear to run simultaneously."
+  },
+  {
+    "id": 38,
+    "text": "True or False? Multithreading describes an operating system that can support two or more CPUs.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "False" },
+      { "id": "b", "text": "True" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Multiprocessing supports multiple CPUs; multithreading breaks a single program into smaller executable parts."
+  },
+  {
+    "id": 39,
+    "text": "True or False? A 32-bit operating system can address up to a maximum of 4 GB of RAM.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "True" },
+      { "id": "b", "text": "False" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The 4GB limit is a direct result of the 32-bit architecture's addressing capabilities."
+  }
+]

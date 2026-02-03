@@ -1,0 +1,13 @@
+[
+  {
+    "id": "module-10",
+    "number": 1,
+    "title": "Introduction to the Personal Computer",
+    "description": "PC components, peripherals, and system units",
+    "topics": ["Hardware", "Components", "Peripherals"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-green-500 to-teal-600"
+  }
+]
