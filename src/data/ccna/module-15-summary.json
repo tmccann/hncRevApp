@@ -1,71 +1,418 @@
 {
   "number": 15,
   "title": "Application Layer",
-  "description": "Understanding application layer protocols, services, and client-server architecture",
-  "keyConcepts": [
+  "description": "Protocols, services, and network applications",
+  "glance": [
+    { "number": "3", "label": "OSI layers", "detail": "Application, Presentation, Session" },
+    { "number": "2", "label": "Network models", "detail": "Client-Server and Peer-to-Peer" },
+    { "number": "8", "label": "Key protocols", "detail": "HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP" },
+    { "number": "4", "label": "DHCP steps", "detail": "Discover, Offer, Request, Acknowledge" }
+  ],
+  "sections": [
     {
-      "title": "Application Layer Position",
-      "description": "Top layer of TCP/IP model (Layer 4), closest to the end user. Provides network services directly to applications like web browsers, email clients, and file transfer programs."
+      "id": "osi-layers",
+      "icon": "📚",
+      "title": "Application, Presentation, and Session Layers",
+      "color": "blue",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "The OSI model divides the top three layers — Application, Presentation, and Session — into distinct functions. In the TCP/IP model, these three layers are often combined into a single Application layer. Understanding the distinction helps clarify what each layer does."
+        },
+        {
+          "type": "table",
+          "headers": ["OSI Layer", "Number", "Function", "Examples"],
+          "rows": [
+            ["Application", "7", "Provides the interface between applications and the network. Contains protocols that applications use to exchange data.", "HTTP, FTP, SMTP, DNS, DHCP, Telnet, SSH"],
+            ["Presentation", "6", "Handles data formatting, encryption, and compression. Ensures data from the application layer can be read by the destination system.", "SSL/TLS encryption, JPEG, GIF, MPEG, ASCII, EBCDIC"],
+            ["Session", "5", "Manages sessions (dialogues) between applications. Establishes, maintains, and terminates connections between local and remote applications.", "NetBIOS, PPTP, RPC, SQL"]
+          ]
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Application Layer (L7): What the user sees and interacts with. Web browsers, email clients, file transfer programs.",
+            "Presentation Layer (L6): Behind-the-scenes data translation. Converts data into a format both sides understand. Handles encryption (SSL/TLS) so lower layers don't have to.",
+            "Session Layer (L5): Manages the conversation. Keeps track of which data belongs to which application. Handles session establishment, maintenance, and termination.",
+            "In TCP/IP, these three layers are simplified into a single 'Application Layer' because modern applications often handle presentation and session functions internally."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 OSI vs TCP/IP Models",
+          "content": "OSI has 7 layers (Application, Presentation, Session, Transport, Network, Data Link, Physical). TCP/IP has 4 layers (Application, Transport, Internet, Network Access). The TCP/IP Application layer maps to OSI layers 5, 6, and 7 combined. Both models are valid — OSI is more theoretical, TCP/IP is what's actually used on the internet.",
+          "color": "blue"
+        }
+      ]
     },
     {
-      "title": "Client-Server Model",
-      "description": "Client initiates requests for services; server provides those services. Examples: web browser (client) requests pages from web server, email client retrieves mail from email server."
+      "id": "network-models",
+      "icon": "🔀",
+      "title": "Client-Server vs. Peer-to-Peer",
+      "color": "indigo",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Network applications use two primary models for communication: client-server (centralized) and peer-to-peer (distributed). Each has advantages and trade-offs depending on the use case."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "Client-Server Model",
+            "content": "Centralized architecture. Server provides resources (web pages, files, databases). Clients request and consume those resources. Server is always on, always available. Clients initiate requests, servers respond. Examples: Web browsing (client = browser, server = web server), email (client = Outlook, server = mail server), streaming (client = Netflix app, server = Netflix data center)."
+          },
+          "right": {
+            "label": "Peer-to-Peer (P2P) Model",
+            "content": "Decentralized architecture. Every device can act as both client and server. Resources are shared directly between peers without a central authority. No dedicated server required. Examples: File sharing (BitTorrent), small office networks (shared printers/files), collaborative applications (video conferencing, multiplayer gaming)."
+          },
+          "note": "Hybrid models exist — Skype uses P2P for calls but client-server for login and directory services."
+        },
+        {
+          "type": "subheading",
+          "content": "Client-Server Characteristics"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "cardColor": "indigo",
+          "items": [
+            {
+              "title": "Advantages",
+              "description": "Centralized management — easy to update, backup, and secure. Consistent availability — server is always running. Scalable — add more servers to handle more clients. Better performance for many simultaneous users.",
+              "badge": "Pros"
+            },
+            {
+              "title": "Disadvantages",
+              "description": "Single point of failure — if the server goes down, all clients are affected. Higher cost — requires dedicated server hardware and maintenance. Requires IT expertise to set up and maintain.",
+              "badge": "Cons"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Peer-to-Peer Characteristics"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "cardColor": "purple",
+          "items": [
+            {
+              "title": "Advantages",
+              "description": "No dedicated server required — reduces cost and complexity. Decentralized — no single point of failure. Easy to set up for small networks. Good for resource sharing in small offices/homes.",
+              "badge": "Pros"
+            },
+            {
+              "title": "Disadvantages",
+              "description": "No centralized management — harder to secure and maintain. Performance degrades as network grows. Each peer must be running to share its resources. Security risks — every peer is responsible for its own security.",
+              "badge": "Cons"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "label": "Upload vs Download (Client-Server)",
+          "content": "Upload: Data sent FROM the client TO the server (e.g., uploading a photo to Instagram, sending an email, posting a comment). Download: Data sent FROM the server TO the client (e.g., loading a web page, streaming a video, receiving an email)."
+        }
+      ]
     },
     {
-      "title": "DNS (Domain Name System)",
-      "description": "Resolves human-readable domain names (www.cisco.com) to IP addresses. Uses hierarchical structure: root servers, TLD (.com, .org), authoritative name servers."
+      "id": "web-protocols",
+      "icon": "🌐",
+      "title": "Web and Email Protocols",
+      "color": "emerald",
+      "blocks": [
+        {
+          "type": "subheading",
+          "content": "HTTP and HTTPS"
+        },
+        {
+          "type": "definition",
+          "label": "HTTP (Hypertext Transfer Protocol)",
+          "content": "The protocol used to request and deliver web pages. Client (browser) sends an HTTP request to the server. Server responds with the requested resource (HTML, images, etc.). HTTP is stateless — each request is independent. Port 80/TCP."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "HTTP (Port 80)",
+            "content": "Unencrypted. Data sent in plaintext — anyone monitoring the network can read it. Fast and simple. Should NEVER be used for sensitive data (passwords, credit cards, personal info). Browser shows 'Not Secure' warning."
+          },
+          "right": {
+            "label": "HTTPS (Port 443)",
+            "content": "HTTP + SSL/TLS encryption. All data is encrypted in transit — eavesdroppers see gibberish. Verifies server identity with digital certificates. Essential for login pages, banking, shopping, anything sensitive. Browser shows padlock icon."
+          },
+          "note": "HTTPS is now the standard. Most major sites use HTTPS by default. HTTP should only be used for public, non-sensitive content."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "HTTP methods: GET (retrieve data), POST (submit data), PUT (update data), DELETE (remove data).",
+            "HTTP response codes: 200 (OK), 301/302 (Redirect), 404 (Not Found), 403 (Forbidden), 500 (Server Error).",
+            "HTTPS adds encryption at the presentation layer (SSL/TLS) without changing the HTTP protocol itself.",
+            "Certificates issued by Certificate Authorities (CAs) verify that a website is who it claims to be."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Email Protocols: SMTP, POP3, IMAP"
+        },
+        {
+          "type": "definition",
+          "label": "SMTP (Simple Mail Transfer Protocol)",
+          "content": "Used to SEND email from a client to a mail server and between mail servers. When you hit 'Send' in your email client, it uses SMTP. Port 25/TCP (server-to-server) or 587/TCP (client-to-server with authentication)."
+        },
+        {
+          "type": "text",
+          "content": "Once email is sent via SMTP to the destination server, it sits in the recipient's mailbox waiting to be retrieved. Two protocols handle retrieval: POP3 and IMAP."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "POP3 (Port 110)",
+            "content": "Post Office Protocol version 3. Downloads email from the server to the client and typically DELETES it from the server. Email is stored locally on the client. Works well if you only check email from one device. Simple and fast."
+          },
+          "right": {
+            "label": "IMAP (Port 143)",
+            "content": "Internet Message Access Protocol. Synchronizes email between the server and client. Email stays on the server. Changes made on one device (read, delete, move to folder) sync to all devices. Essential for multiple devices (phone, laptop, tablet)."
+          },
+          "note": "IMAP is the modern standard. POP3 is older and less flexible. Most people use IMAP without realizing it."
+        },
+        {
+          "type": "table",
+          "headers": ["Protocol", "Port", "Purpose", "Direction"],
+          "rows": [
+            ["SMTP", "25/587 TCP", "Send email from client to server, or server to server", "Outgoing mail"],
+            ["POP3", "110 TCP", "Download email from server (and usually delete)", "Incoming mail"],
+            ["IMAP", "143 TCP", "Synchronize email between server and client", "Incoming mail"]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Email Flow Example",
+          "content": "You send an email: Your client uses SMTP (port 587) to send it to your mail server. Your server uses SMTP (port 25) to forward it to the recipient's mail server. Recipient retrieves it: Their client uses IMAP (port 143) to sync the email from their server to their device. All devices see the same email because IMAP keeps it on the server.",
+          "color": "emerald"
+        }
+      ]
     },
     {
-      "title": "DHCP (Dynamic Host Configuration Protocol)",
-      "description": "Automates IP address assignment to network devices. Provides IP address, subnet mask, default gateway, and DNS server information. Essential for large networks."
+      "id": "ip-services",
+      "icon": "🔍",
+      "title": "IP Addressing Services: DNS and DHCP",
+      "color": "sky",
+      "blocks": [
+        {
+          "type": "subheading",
+          "content": "DNS (Domain Name System)"
+        },
+        {
+          "type": "definition",
+          "label": "DNS",
+          "content": "Resolves human-friendly domain names (www.cisco.com) into machine-readable IP addresses (72.163.4.185). Without DNS, you'd have to memorize IP addresses for every website. DNS is the 'phone book of the internet'. Port 53/UDP (or TCP for large responses)."
+        },
+        {
+          "type": "text",
+          "content": "DNS uses a hierarchical distributed database system. No single server knows every domain name. Instead, DNS servers are organized in a tree structure that distributes the workload."
+        },
+        {
+          "type": "subheading",
+          "content": "DNS Hierarchy"
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "description": "Root Level: The top of the DNS hierarchy. Represented by a dot (.) at the end of domain names (usually omitted). Root servers know where to find Top-Level Domain (TLD) servers."
+            },
+            {
+              "description": "Top-Level Domain (TLD): Generic TLDs like .com, .org, .net, .edu, or country-code TLDs like .uk, .ca, .au. TLD servers know where to find authoritative name servers for second-level domains."
+            },
+            {
+              "description": "Second-Level Domain: The domain you register — cisco.com, google.com, github.com. Managed by the domain owner's authoritative name servers."
+            },
+            {
+              "description": "Subdomains: Optional additional levels like www.cisco.com, mail.cisco.com, ftp.cisco.com. Controlled by the second-level domain owner."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "DNS Resolution Process"
+        },
+        {
+          "type": "text",
+          "content": "When you type www.cisco.com in your browser:"
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "description": "Your device checks its local DNS cache — have I looked this up recently? If yes, use the cached IP and skip the rest."
+            },
+            {
+              "description": "If not cached, your device queries its configured DNS server (usually your ISP's DNS or a public DNS like 8.8.8.8)."
+            },
+            {
+              "description": "If the DNS server doesn't know the answer, it queries a root server: 'Where can I find .com domains?'"
+            },
+            {
+              "description": "Root server replies: 'Ask the .com TLD servers at these addresses.'"
+            },
+            {
+              "description": "DNS server queries .com TLD server: 'Where can I find cisco.com?'"
+            },
+            {
+              "description": "TLD server replies: 'Ask cisco.com's authoritative name server at this address.'"
+            },
+            {
+              "description": "DNS server queries cisco.com name server: 'What's the IP for www.cisco.com?'"
+            },
+            {
+              "description": "Authoritative server replies: '72.163.4.185'. DNS server caches this answer and sends it back to your device."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 DNS Caching",
+          "content": "DNS responses are cached at multiple levels — your browser, your OS, your local DNS server. This dramatically reduces lookup time and network traffic. Cache entries have a TTL (Time To Live) — typically minutes to hours — before they expire and must be refreshed.",
+          "color": "sky"
+        },
+        {
+          "type": "subheading",
+          "content": "DHCP (Dynamic Host Configuration Protocol)"
+        },
+        {
+          "type": "definition",
+          "label": "DHCP",
+          "content": "Automatically assigns IP addresses, subnet masks, default gateways, and DNS server addresses to devices when they join a network. Eliminates manual configuration and prevents IP address conflicts. Port 67/UDP (server) and 68/UDP (client)."
+        },
+        {
+          "type": "text",
+          "content": "When a device boots up or connects to a network without a static IP, it uses DHCP to obtain configuration automatically. The process is called DORA: Discover, Offer, Request, Acknowledge."
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "command": "1. DISCOVER",
+              "description": "Client broadcasts 'Is there a DHCP server out there?' (destination 255.255.255.255). Source IP is 0.0.0.0 because the client doesn't have an IP yet."
+            },
+            {
+              "command": "2. OFFER",
+              "description": "DHCP server(s) respond with 'Yes, I can give you an IP address. Here's an offer: 192.168.1.100 with subnet mask 255.255.255.0, gateway 192.168.1.1, DNS 8.8.8.8.'"
+            },
+            {
+              "command": "3. REQUEST",
+              "description": "Client broadcasts 'I accept the offer from server X. Please give me that IP address.' (Broadcast so other servers know their offers were declined.)"
+            },
+            {
+              "command": "4. ACKNOWLEDGE",
+              "description": "Server replies 'ACK. The IP is yours. Your lease expires in 24 hours. Renew before then or request again.' Client configures its interface with the provided settings."
+            }
+          ]
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "DHCP leases have an expiration time (typically hours or days). Clients must renew before the lease expires or they lose the IP.",
+            "DHCP servers track which IPs are assigned to which MAC addresses to prevent conflicts.",
+            "Routers can act as DHCP servers for small networks, or a dedicated DHCP server can handle large networks.",
+            "DHCP relay agents allow DHCP messages to cross router boundaries — routers normally block broadcasts, but relay agents forward DHCP requests to a server on another subnet.",
+            "Static IPs are still used for servers, routers, printers — anything that other devices need to find reliably."
+          ]
+        }
+      ]
     },
     {
-      "title": "HTTP/HTTPS",
-      "description": "HTTP transfers web content using GET (retrieve), POST (submit data), PUT (upload). HTTPS adds SSL/TLS encryption for secure communication."
-    },
-    {
-      "title": "Email Protocols",
-      "description": "SMTP sends email from client to server or between servers. POP3 downloads email to client (usually deletes from server). IMAP keeps email on server with synchronization across devices."
+      "id": "file-sharing",
+      "icon": "📁",
+      "title": "File Sharing Protocols",
+      "color": "purple",
+      "blocks": [
+        {
+          "type": "subheading",
+          "content": "FTP (File Transfer Protocol)"
+        },
+        {
+          "type": "definition",
+          "label": "FTP",
+          "content": "A protocol for transferring files between a client and server. Requires authentication (username/password). Uses TWO separate TCP connections: one for control commands (Port 21) and one for actual data transfer (Port 20). Port 20-21/TCP."
+        },
+        {
+          "type": "text",
+          "content": "FTP operates in two modes: active and passive. The difference is in who initiates the data connection."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "Active FTP",
+            "content": "Client opens a random high-numbered port and tells the server 'I'm listening on port X for data'. Server initiates the data connection from port 20 to the client's port X. Problem: Firewalls and NAT often block incoming connections to the client."
+          },
+          "right": {
+            "label": "Passive FTP",
+            "content": "Client opens the control connection on port 21. Server opens a random high-numbered port and tells the client 'I'm listening on port Y for data'. Client initiates the data connection to the server's port Y. Better for firewalls and NAT."
+          },
+          "note": "Passive mode is more common today because it works better with firewalls and NAT."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "FTP sends usernames and passwords in plaintext — anyone sniffing the network can capture credentials.",
+            "FTPS (FTP Secure) adds SSL/TLS encryption. SFTP (SSH File Transfer Protocol) uses SSH for encryption and authentication.",
+            "Anonymous FTP allows public access without authentication — often used for public file downloads.",
+            "FTP clients: FileZilla, WinSCP, Cyberduck. Command-line: ftp command on Windows/Linux/Mac."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "TFTP (Trivial File Transfer Protocol)"
+        },
+        {
+          "type": "definition",
+          "label": "TFTP",
+          "content": "A simplified version of FTP that uses UDP instead of TCP. No authentication, no directory browsing, no encryption. Used for transferring configuration files and firmware to network devices (routers, switches). Port 69/UDP."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "TFTP is much simpler than FTP — smaller code footprint, useful for embedded devices.",
+            "No reliability built into UDP, but TFTP adds its own acknowledgement system.",
+            "Commonly used to load IOS images and config files to Cisco devices during boot.",
+            "Rarely used for general file transfers — FTP or SFTP are better choices."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "SMB (Server Message Block)"
+        },
+        {
+          "type": "definition",
+          "label": "SMB",
+          "content": "A client-server request-response protocol used for sharing files, printers, serial ports, and other resources on a network. Native to Windows environments but also supported on Linux (via Samba) and macOS. Port 445/TCP (modern) or 137-139/TCP (older NetBIOS)."
+        },
+        {
+          "type": "text",
+          "content": "When you map a network drive in Windows (e.g., \\\\FileServer\\SharedFolder), you're using SMB. When you connect to a network printer, that's also SMB."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "SMB is tightly integrated with Windows Active Directory for authentication and permissions.",
+            "Modern versions (SMB3) include encryption and improved performance.",
+            "Linux uses Samba to implement SMB — allows Linux servers to share files with Windows clients.",
+            "Security concern: Older SMB versions (SMBv1) are vulnerable to exploits like WannaCry ransomware. Always use SMBv2 or SMBv3."
+          ]
+        },
+        {
+          "type": "table",
+          "headers": ["Protocol", "Ports", "Authentication", "Encryption", "Primary Use"],
+          "rows": [
+            ["FTP", "20-21/TCP", "Yes (plaintext)", "No (use FTPS/SFTP)", "General file transfers"],
+            ["TFTP", "69/UDP", "No", "No", "Network device configs/firmware"],
+            ["SMB", "445/TCP", "Yes (integrated with Windows)", "Yes (SMBv3)", "Windows file/printer sharing"]
+          ]
+        }
+      ]
     }
-  ],
-  "importantPoints": [
-    "Application layer is closest to the end user",
-    "Provides interface between applications and network",
-    "DNS top-level domain is the last part (.com, .org, .edu)",
-    "DNS hierarchy: root → TLD → authoritative name servers",
-    "Local DNS servers can map internal hosts and forward external queries",
-    "DHCP automates IP address management on large networks",
-    "Home routers typically act as DHCP servers for local devices",
-    "HTTP GET retrieves data from web servers",
-    "HTTP POST sends data to web servers",
-    "HTTPS uses SSL/TLS encryption for security",
-    "SMTP is used to SEND email",
-    "POP3 downloads email (typically removes from server)",
-    "IMAP keeps email on server (syncs across devices)",
-    "FTP supports both upload (PUT) and download (GET)",
-    "FTP uses two TCP connections: control and data",
-    "SMB (Server Message Block) provides file/print sharing in Windows",
-    "Application layer protocols: HTTP, DNS, DHCP, FTP, SMTP, POP3, IMAP, SMB",
-    "Client initiates requests; server provides services"
-  ],
-  "quickReference": [
-    { "label": "Layer Position", "value": "TCP/IP Layer 4 (top)" },
-    { "label": "Closest To", "value": "End user" },
-    { "label": "DNS Purpose", "value": "Resolve names to IP addresses" },
-    { "label": "DNS TLD Examples", "value": ".com, .org, .edu, .net" },
-    { "label": "DHCP Purpose", "value": "Automate IP address assignment" },
-    { "label": "Home DHCP Server", "value": "Home router" },
-    { "label": "HTTP GET", "value": "Retrieve data from server" },
-    { "label": "HTTP POST", "value": "Send data to server" },
-    { "label": "HTTP PUT", "value": "Upload/replace files" },
-    { "label": "HTTPS Security", "value": "SSL/TLS encryption" },
-    { "label": "SMTP Function", "value": "Send email" },
-    { "label": "POP3 Function", "value": "Download email (remove from server)" },
-    { "label": "IMAP Function", "value": "Access email (keep on server, sync)" },
-    { "label": "FTP Capability", "value": "Upload and download files" },
-    { "label": "FTP Connections", "value": "Two TCP: control + data" },
-    { "label": "SMB Purpose", "value": "Windows file/print sharing" },
-    { "label": "Client Role", "value": "Initiates requests" },
-    { "label": "Server Role", "value": "Provides services" }
   ]
 }

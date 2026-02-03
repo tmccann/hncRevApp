@@ -1,0 +1,843 @@
+[
+  {
+    "id": 1,
+    "text": "What is the prefix length notation for the subnet mask 255.255.255.224?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "/25" },
+      { "id": "b", "text": "/26" },
+      { "id": "c", "text": "/27" },
+      { "id": "d", "text": "/28" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The binary format for 255.255.255.224 is 11111111.11111111.11111111.11100000. The prefix length is the number of consecutive 1s in the subnet mask. Therefore, the prefix length is /27."
+  },
+  {
+    "id": 2,
+    "text": "How many valid host addresses are available on an IPv4 subnet that is configured with a /26 mask?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "254" },
+      { "id": "b", "text": "190" },
+      { "id": "c", "text": "192" },
+      { "id": "d", "text": "62" },
+      { "id": "e", "text": "64" }
+    ],
+    "correctAnswer": ["d"]
+  },
+  {
+    "id": 3,
+    "text": "Which subnet mask would be used if 5 host bits are available?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "255.255.255.0" },
+      { "id": "b", "text": "255.255.255.128" },
+      { "id": "c", "text": "255.255.255.224" },
+      { "id": "d", "text": "255.255.255.240" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 4,
+    "text": "A network administrator subnets the 192.168.10.0/24 network into subnets with /26 masks. How many equal-sized subnets are created?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "1" },
+      { "id": "b", "text": "2" },
+      { "id": "c", "text": "4" },
+      { "id": "d", "text": "8" },
+      { "id": "e", "text": "16" },
+      { "id": "f", "text": "64" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 5,
+    "text": "Match the subnetwork to a host address that would be included within the subnetwork. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "192.168.1.32/27" },
+      { "id": "a2", "text": "192.168.1.64/27" },
+      { "id": "a3", "text": "192.168.1.96/27" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "192.168.1.63" },
+      { "id": "b2", "text": "192.168.1.68" },
+      { "id": "b3", "text": "192.168.1.128" },
+      { "id": "b4", "text": "192.168.1.48" },
+      { "id": "b5", "text": "192.168.1.121" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b5" }
+    ],
+    "explanation": "Subnet 192.168.1.32/27 range is .33-.62. Subnet 192.168.1.64/27 range is .65-.94. Subnet 192.168.1.96/27 range is .97-.126."
+  },
+  {
+    "id": 6,
+    "text": "An administrator wants to create four subnetworks from 192.168.1.0/24. What is the network address and mask of the second useable subnet?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "subnetwork 192.168.1.64, mask 255.255.255.192" },
+      { "id": "b", "text": "subnetwork 192.168.1.32, mask 255.255.255.240" },
+      { "id": "c", "text": "subnetwork 192.168.1.128, mask 255.255.255.192" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The subnets created are .0, .64, .128, and .192. The second subnet is .64 with a /26 (255.255.255.192) mask."
+  },
+  {
+    "id": 7,
+    "text": "How many bits must be borrowed from the host portion to accommodate a router with five connected networks?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "two" },
+      { "id": "b", "text": "three" },
+      { "id": "c", "text": "four" },
+      { "id": "d", "text": "five" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Three bits ($2^3$) provides 8 subnets, which covers the requirement for five networks."
+  },
+  {
+    "id": 8,
+    "text": "How many host addresses are available on the 192.168.10.128/26 network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "30" },
+      { "id": "b", "text": "32" },
+      { "id": "c", "text": "60" },
+      { "id": "d", "text": "62" },
+      { "id": "e", "text": "64" }
+    ],
+    "correctAnswer": ["d"]
+  },
+  {
+    "id": 9,
+    "text": "How many host addresses are available on the network 172.16.128.0 with a subnet mask of 255.255.252.0?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "510" },
+      { "id": "b", "text": "512" },
+      { "id": "c", "text": "1022" },
+      { "id": "d", "text": "1024" },
+      { "id": "e", "text": "2046" },
+      { "id": "f", "text": "2048" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 10,
+    "text": "Match each IPv4 address to the appropriate address category. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "192.168.100.161/25" },
+      { "id": "a2", "text": "192.168.1.191/26" },
+      { "id": "a3", "text": "10.10.10.128/25" },
+      { "id": "a4", "text": "224.10.0.254/24" },
+      { "id": "a5", "text": "203.0.113.100/24" },
+      { "id": "a6", "text": "172.110.12.64/28" },
+      { "id": "a7", "text": "10.0.0.159/27" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "host address" },
+      { "id": "b2", "text": "network address" },
+      { "id": "b3", "text": "broadcast address" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a5", "b": "b1" },
+      { "a": "a6", "b": "b2" },
+      { "a": "a7", "b": "b3" }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "What three blocks of addresses are defined by RFC 1918 for private network use? (Choose three.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "10.0.0.0/8" },
+      { "id": "b", "text": "172.16.0.0/12" },
+      { "id": "c", "text": "192.168.0.0/16" },
+      { "id": "d", "text": "100.64.0.0/14" },
+      { "id": "e", "text": "169.254.0.0/16" },
+      { "id": "f", "text": "239.0.0.0/8" }
+    ],
+    "correctAnswer": ["a", "b", "c"]
+  },
+  {
+    "id": 12,
+    "text": "Refer to the exhibit. What is the broadcast address for network 172.16.16.0/22?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "172.16.16.255" },
+      { "id": "b", "text": "172.16.20.255" },
+      { "id": "c", "text": "172.16.19.255" },
+      { "id": "d", "text": "172.16.23.255" },
+      { "id": "e", "text": "172.16.255.255" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 13,
+    "text": "Which subnet mask contains the required number of host bits to accommodate 126 hosts?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "255.255.255.0" },
+      { "id": "b", "text": "255.255.255.128" },
+      { "id": "c", "text": "255.255.255.224" },
+      { "id": "d", "text": "255.255.255.240" }
+    ],
+    "correctAnswer": ["b"]
+  },
+  {
+    "id": 14,
+    "text": "Within the 10.16.10.0/24 range, which subnet address could be assigned to a network containing 25 hosts?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "10.16.10.160/26" },
+      { "id": "b", "text": "10.16.10.128/28" },
+      { "id": "c", "text": "10.16.10.64/27" },
+      { "id": "d", "text": "10.16.10.224/26" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 15,
+    "text": "What is the usable number of host IP addresses on a network that has a /26 mask?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "256" },
+      { "id": "b", "text": "254" },
+      { "id": "c", "text": "64" },
+      { "id": "d", "text": "62" },
+      { "id": "e", "text": "32" },
+      { "id": "f", "text": "16" }
+    ],
+    "correctAnswer": ["d"]
+  },
+  {
+    "id": 16,
+    "text": "Which address prefix range is reserved for IPv4 multicast?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "240.0.0.0 – 254.255.255.255" },
+      { "id": "b", "text": "224.0.0.0 – 239.255.255.255" },
+      { "id": "c", "text": "169.254.0.0 – 169.254.255.255" },
+      { "id": "d", "text": "127.0.0.0 – 127.255.255.255" }
+    ],
+    "correctAnswer": ["b"]
+  },
+  {
+    "id": 17,
+    "text": "Refer to the exhibit. Match the network with the correct IP address and prefix.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Network A (100 hosts)" },
+      { "id": "a2", "text": "Network B (50 hosts)" },
+      { "id": "a3", "text": "Network C (25 hosts)" },
+      { "id": "a4", "text": "Network D (2 hosts)" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "192.168.0.128 /25" },
+      { "id": "b2", "text": "192.168.0.0 /26" },
+      { "id": "b3", "text": "192.168.0.96 /27" },
+      { "id": "b4", "text": "192.168.0.80 /30" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "School A uses IP 209.165.201.10. School B uses 192.168.25.10. Why will this videoconference not work through the Internet?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "This is a loopback address." },
+      { "id": "b", "text": "This is a link-local address." },
+      { "id": "c", "text": "This is a private IP address." },
+      { "id": "d", "text": "There is an IP address conflict." }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 19,
+    "text": "Which three addresses are valid public addresses? (Choose three.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "198.133.219.17" },
+      { "id": "b", "text": "192.168.1.245" },
+      { "id": "c", "text": "10.15.250.5" },
+      { "id": "d", "text": "128.107.12.117" },
+      { "id": "e", "text": "172.31.1.25" },
+      { "id": "f", "text": "64.104.78.227" }
+    ],
+    "correctAnswer": ["a", "d", "f"]
+  },
+  {
+    "id": 20,
+    "text": "A message is sent to all hosts on a remote network. Which type of message is it?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "limited broadcast" },
+      { "id": "b", "text": "multicast" },
+      { "id": "c", "text": "directed broadcast" },
+      { "id": "d", "text": "unicast" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 21,
+    "text": "Which two subnetworks achievement 10 and 18 hosts respectively for network 192.168.1.64/26? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "192.168.1.16/28" },
+      { "id": "b", "text": "192.168.1.64/27" },
+      { "id": "c", "text": "192.168.1.128/27" },
+      { "id": "d", "text": "192.168.1.96/28" }
+    ],
+    "correctAnswer": ["b", "d"]
+  },
+  {
+    "id": 22,
+    "text": "Which address is a valid IPv6 link-local unicast address?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "FEC8:1::FFFF" },
+      { "id": "b", "text": "FD80::1:1234" },
+      { "id": "c", "text": "FE80::1:4545:6578:ABC1" },
+      { "id": "d", "text": "FC90:5678:4251:FFFF" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 23,
+    "text": "Which is the shortest abbreviation for 3FFE:1044:0000:0000:00AB:0000:0000:0057?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "3FFE:1044::AB::57" },
+      { "id": "b", "text": "3FFE:1044:0:0:AB::57" },
+      { "id": "c", "text": "3FFE:1044:0000:0000:00AB::57" }
+    ],
+    "correctAnswer": ["b"]
+  },
+  {
+    "id": 24,
+    "text": "How many subnets can be created from a /48 prefix without subnetting into the interface ID portion?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "16" },
+      { "id": "b", "text": "256" },
+      { "id": "c", "text": "4096" },
+      { "id": "d", "text": "65536" }
+    ],
+    "correctAnswer": ["d"]
+  },
+  {
+    "id": 25,
+    "text": "Given 2001:db8::/48, what is the last subnet created if changed to /52?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001:db8:0:f00::/52" },
+      { "id": "b", "text": "2001:db8:0:8000::/52" },
+      { "id": "c", "text": "2001:db8:0:f::/52" },
+      { "id": "d", "text": "2001:db8:0:f000::/52" }
+    ],
+    "correctAnswer": ["d"]
+  },
+  {
+    "id": 26,
+    "text": "What is the prefix for the host address 2001:DB8:BC15:A:12AB::1/64?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001:DB8:BC15" },
+       { "id": "b", "text": "2001:DB8:BC15:A" },
+      { "id": "c", "text": "2001:DB8:BC15:A:1" },
+      { "id": "d", "text": "2001:DB8:BC15:A:12" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The network portion, or prefix, of an IPv6 address is identified through the prefix length. A /64 prefix length indicates that the first 64 bits of the IPv6 address is the network portion. Hence the prefix is 2001:DB8:BC15:A."
+  },
+  {
+    "id": 27,
+    "text": "What type of IPv6 address is FE80::1?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "loopback" },
+      { "id": "b", "text": "link-local" },
+      { "id": "c", "text": "multicast" },
+      { "id": "d", "text": "global unicast" }
+    ],
+    "correctAnswer": ["b"]
+  },
+  {
+    "id": 28,
+    "text": "What is the maximum number of subnets achieved per sub-site in the described hierarchical design?",
+    "type": "single",
+    "image":"/images/checkpoint-11-13-quiz/q28.png",
+    "options": [
+      { "id": "a", "text": "0" },
+      { "id": "b", "text": "4" },
+      { "id": "c", "text": "16" },
+      { "id": "d", "text": "256" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 29,
+    "text": "What is used in the EUI-64 process to create an interface ID?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "the MAC address of the interface" },
+      { "id": "b", "text": "a randomly generated address" },
+      { "id": "c", "text": "an IPv6 address from DHCPv6" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 30,
+    "text": "What is the prefix for 2001:DB8:BC15:A:12AB::1/64?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001:DB8:BC15" },
+      { "id": "b", "text": "2001:DB8:BC15:A" },
+      { "id": "c", "text": "2001:DB8:BC15:A:1" }
+    ],
+    "correctAnswer": ["b"]
+  },
+  {
+    "id": 31,
+    "text": "An IPv6 packet is sent to FF02::1. What is the target?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "all devices on the local link" },
+      { "id": "b", "text": "only DHCP servers" },
+      { "id": "c", "text": "only routers" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 32,
+    "text": "Match the IPv6 address with the IPv6 address type. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "::1" },
+      { "id": "a2", "text": "FF02::1" },
+      { "id": "a3", "text": "FF02::1:FFAE:F85F" },
+      { "id": "a4", "text": "2001:DB8::BAF:3F57:FE94" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "loopback" },
+      { "id": "b2", "text": "all node multicast" },
+      { "id": "b3", "text": "solicited node multicast" },
+      { "id": "b4", "text": "global unicast" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Which IPv6 prefix is reserved for communication between devices on the same link?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "FC00::/7" },
+      { "id": "b", "text": "2001::/32" },
+      { "id": "c", "text": "FE80::/10" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 34,
+    "text": "Which type of IPv6 address refers to any unicast address assigned to multiple hosts?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "unique local" },
+      { "id": "b", "text": "global unicast" },
+      { "id": "c", "text": "anycast" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 35,
+    "text": "What are two types of IPv6 unicast addresses? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "multicast" },
+      { "id": "b", "text": "loopback" },
+      { "id": "c", "text": "link-local" },
+      { "id": "d", "text": "anycast" }
+    ],
+    "correctAnswer": ["b", "c"]
+  },
+  {
+    "id": 36,
+    "text": "Which service provides dynamic global IPv6 addresses without a server record?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "stateful DHCPv6" },
+      { "id": "b", "text": "SLAAC" }
+    ],
+    "correctAnswer": ["b"]
+  },
+  {
+    "id": 37,
+    "text": "Which protocol supports SLAAC for dynamic IPv6 assignment?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ARPv6" },
+      { "id": "b", "text": "DHCPv6" },
+      { "id": "c", "text": "ICMPv6" }
+    ],
+    "correctAnswer": ["c"]
+  },
+  {
+    "id": 38,
+    "text": "Three methods allow IPv6 and IPv4 to co-exist. Match each method with its description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "The IPv4 packets and IPv6 packets coexist in the same network." },
+      { "id": "a2", "text": "The IPv6 packet is transported inside an IPv4 packet." },
+      { "id": "a3", "text": "IPv6 packets are converted into IPv4 packets, and vice versa." }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "dual-stack" },
+      { "id": "b2", "text": "tunneling" },
+      { "id": "b3", "text": "translation" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "A technician pings 127.0.0.1. What is being tested?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "the TCP/IP stack on a host" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 40,
+    "text": "Refer to exhibit. Tracert only shows success at the first gateway R1. Where to begin troubleshooting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "PC2" },
+      { "id": "b", "text": "R1" },
+      { "id": "c", "text": "SW2" }
+    ],
+    "correctAnswer": ["b"]
+  },
+  {
+    "id": 41,
+    "text": "Which protocol is used by traceroute for echo-requests?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SNMP" },
+      { "id": "b", "text": "ICMP" },
+      { "id": "c", "text": "Telnet" }
+    ],
+    "correctAnswer": ["b"]
+  },
+  {
+    "id": 42,
+    "text": "Which ICMPv6 message is sent when the hop limit field is decremented to zero?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "network unreachable" },
+      { "id": "b", "text": "time exceeded" }
+    ],
+    "correctAnswer": ["b"]
+  },
+  {
+    "id": 43,
+    "text": "A traceroute over IPv6 is dropped by a router. At what point does this happen?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Hop limit reaches zero" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 44,
+    "text": "What is the purpose of ICMP messages?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "provide feedback of IP packet transmissions" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 45,
+    "text": "What source IP does a router use by default when traceroute is issued?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "IP of the outbound interface" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 46,
+    "text": "Match each description with an appropriate IP address. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "a link-local address" },
+      { "id": "a2", "text": "a TEST-NET address" },
+      { "id": "a3", "text": "an experimental address" },
+      { "id": "a4", "text": "a private address" },
+      { "id": "a5", "text": "a loopback address" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "169.254.1.5" },
+      { "id": "b2", "text": "192.0.2.123" },
+      { "id": "b3", "text": "240.2.6.255" },
+      { "id": "b4", "text": "172.19.20.5" },
+      { "id": "b5", "text": "127.0.0.1" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" },
+      { "a": "a5", "b": "b5" }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "A ping response includes a code of 1. What does this represent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "host unreachable" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 48,
+    "text": "Which subnet would include 192.168.1.96 as a usable host address?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "192.168.1.64/26" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 49,
+    "text": "What are the three IPv6 addresses displayed when the route from PC1 to PC2 is traced?",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "2001:DB8:1:1::1" },
+      { "id": "b", "text": "2001:DB8:1:2::1" },
+      { "id": "c", "text": "2001:DB8:1:3::2" }
+    ],
+    "correctAnswer": ["a", "b", "c"]
+  },
+  {
+    "id": 50,
+    "text": "A host transmits a broadcast. Who receives it?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "all hosts in the same subnet" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 51,
+    "text": "A host transmits a unicast. Who receives it?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "one specific host" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 52,
+    "text": "A ping to 2001:db8:FACE:39::10 receives a response with code 3. What does this represent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "address unreachable" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 53,
+    "text": "A host transmits a multicast. Who receives it?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "a specially defined group of hosts" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 60,
+    "text": "Which is the compressed format of 2001:0db8:0000:0000:0000:a0b0:0008:0001?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001:db8::a0b0:8:1" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 61,
+    "text": "Which is the compressed format of fe80:09ea:0000:2200:0000:0000:0fe0:0290?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "fe80:9ea:0:2200::fe0:290" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 62,
+    "text": "Which is the compressed format of 2002:0042:0010:c400:0000:0000:0000:0909?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2002:42:10:c400::909" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 63,
+    "text": "Which is the compressed format of 2001:0db8:0000:0000:0ab8:0001:0000:1000?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001:db8::ab8:1:0:1000" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 64,
+    "text": "Which is the compressed format of 2002:0420:00c4:1008:0025:0190:0000:0990?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2002:420:c4:1008:25:190::990" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 65,
+    "text": "Which is the compressed format of 2001:0db8:0000:0000:0000:a0b0:0008:0001?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001:db8::a0b0:8:1" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 66,
+    "text": "Which is the compressed format of fe80:0000:0000:0000:0220:0b3f:f0e0:0029?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "fe80::220:b3f:f0e0:29" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 67,
+    "text": "Which is the compressed format of 2001:0db8:0000:0000:0000:a0b0:0008:0001?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2001:db8::a0b0:8:1" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 68,
+    "text": "Which is the compressed format of 2002:0042:0010:c400:0000:0000:0000:0909?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "2002:42:10:c400::909" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 69,
+    "text": "Which is the compressed format of fe80:09ea:0000:2200:0000:0000:0fe0:0290?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "fe80:9ea:0:2200::fe0:290" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 70,
+    "text": "A ping response includes a code of 2. What does this represent in IPv6?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "beyond scope of the source address" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 71,
+    "text": "A ping response includes a code of 1. What does this represent in IPv4?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "host unreachable" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 72,
+    "text": "A ping response to fe80:65ab:dcc1::100 includes a code of 3. What does this represent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "address unreachable" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 73,
+    "text": "A ping to 10.10.14.67 receives a code of 0. What does this represent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "network unreachable" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 74,
+    "text": "A ping response to fe80:65ab:dcc1::100 includes a code of 4. What does this represent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "port unreachable" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 75,
+    "text": "A ping to 198.133.219.8 receives a code of 0. What does this represent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "network unreachable" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 76,
+    "text": "A ping to 2001:db8:3040:114::88 receives a code of 4. What does this represent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "port unreachable" }
+    ],
+    "correctAnswer": ["a"]
+  },
+  {
+    "id": 77,
+    "text": "A ping to 2001:db8:FACE:39::10 receives a code of 2. What does this represent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "beyond scope of the source address" }
+    ],
+    "correctAnswer": ["a"]
+  }
+]

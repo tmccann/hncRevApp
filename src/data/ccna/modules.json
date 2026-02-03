@@ -40,7 +40,7 @@
     "topics": ["Subnetting", "CIDR", "Subnet Masks", "VLSM", "ANDing"],
     "hasSummary": true,
     "hasQuiz": true,
-    "checkpoints": [],
+     "checkpoints": ["checkpoint-11-13"],
     "color": "from-blue-500 to-cyan-600"
   },
   {
@@ -51,7 +51,7 @@
     "topics": ["IPv6 Format", "Compression", "Link-Local", "Global Unicast", "Loopback"],
     "hasSummary": true,
     "hasQuiz": true,
-    "checkpoints": [],
+    "checkpoints": ["checkpoint-11-13"],
     "color": "from-blue-500 to-cyan-600"
   },
   {
@@ -62,7 +62,7 @@
     "topics": ["Ping", "Traceroute", "Echo Request/Reply", "Time Exceeded", "Error Messages"],
     "hasSummary": true,
     "hasQuiz": true,
-    "checkpoints": [],
+     "checkpoints": ["checkpoint-11-13"],
     "color": "from-blue-500 to-cyan-600"
   },
   {

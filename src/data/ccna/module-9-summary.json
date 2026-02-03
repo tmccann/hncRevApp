@@ -1,64 +1,370 @@
 {
   "number": 9,
   "title": "Address Resolution",
-  "description": "Understanding ARP, MAC address tables, and address resolution protocols",
-  "keyConcepts": [
+  "description": "ARP for IPv4 and Neighbor Discovery for IPv6",
+  "glance": [
+    { "number": "2", "label": "Address types", "detail": "MAC (physical) and IP (logical)" },
+    { "number": "2", "label": "ARP messages", "detail": "Request (broadcast) and Reply (unicast)" },
+    { "number": "4", "label": "ND message types", "detail": "NS, NA, RS, RA" },
+    { "number": "1", "label": "Broadcast MAC", "detail": "FF-FF-FF-FF-FF-FF" }
+  ],
+  "sections": [
     {
-      "title": "ARP (Address Resolution Protocol)",
-      "description": "Protocol that maps a known Layer 3 IPv4 address to an unknown Layer 2 MAC address on the same local network. Essential for frame encapsulation."
+      "id": "mac-vs-ip",
+      "icon": "🔍",
+      "title": "The Roles of MAC and IP Addresses",
+      "color": "blue",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Network communication requires both MAC addresses (Layer 2) and IP addresses (Layer 3) working together. Each serves a different purpose in the delivery process."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "MAC Address (Physical)",
+            "content": "48-bit hardware address burned into the NIC. Format: 12 hex digits (e.g., 00-1A-2B-3C-4D-5E). Used for local delivery on a single Ethernet segment. Source and destination MACs change at every router hop. Assigned by manufacturer (first 24 bits = vendor OUI)."
+          },
+          "right": {
+            "label": "IP Address (Logical)",
+            "content": "32-bit (IPv4) or 128-bit (IPv6) logical address assigned by admin or DHCP. Used for end-to-end delivery across multiple networks. Source and destination IPs remain the same throughout the entire path. Hierarchical structure enables routing."
+          },
+          "note": "Analogy: IP address = street address (where you're going). MAC address = apartment number (which door to knock on once you get there)."
+        },
+        {
+          "type": "subheading",
+          "content": "Local vs Remote Destination"
+        },
+        {
+          "type": "text",
+          "content": "When a device needs to send a packet, it must determine the destination MAC address. The choice depends on whether the destination IP is on the local network or a remote network."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "Same Network (Local)",
+            "content": "Destination IP is in the same subnet as the source. Device uses ARP (or ND) to find the destination device's MAC address. Frame is sent directly to the destination device. Example: PC1 (192.168.1.10) sending to PC2 (192.168.1.20) on the same /24 network."
+          },
+          "right": {
+            "label": "Different Network (Remote)",
+            "content": "Destination IP is in a different subnet. Device uses ARP (or ND) to find the DEFAULT GATEWAY's MAC address. Frame is sent to the router, which forwards it toward the destination. Example: PC1 (192.168.1.10) sending to web server (8.8.8.8)."
+          },
+          "note": "The destination IP in the packet never changes. The destination MAC in the frame changes at every router hop."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Hosts use ANDing (IP address AND subnet mask) to determine if the destination is local or remote.",
+            "If local: ARP for the destination device's MAC. If remote: ARP for the default gateway's MAC.",
+            "The IP packet is encapsulated in an Ethernet frame. The frame's destination MAC tells the switch where to forward it next.",
+            "Routers strip off the old frame, make routing decisions based on the IP destination, and create a new frame for the next hop.",
+            "This is why MAC addresses are 'local' — they're only valid for a single network segment."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Why Two Addresses?",
+          "content": "MAC addresses identify devices on a local link. IP addresses identify devices globally. You need both because switches use MAC addresses to forward frames locally, while routers use IP addresses to route packets across networks. One handles local delivery, the other handles end-to-end delivery.",
+          "color": "blue"
+        }
+      ]
     },
     {
-      "title": "ARP Process",
-      "description": "Host broadcasts an ARP Request (destination MAC: FF:FF:FF:FF:FF:FF) asking 'Who has IP x.x.x.x?'. The target responds with an ARP Reply containing its MAC address."
+      "id": "arp",
+      "icon": "📢",
+      "title": "Address Resolution Protocol (ARP) for IPv4",
+      "color": "emerald",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "ARP (Address Resolution Protocol)",
+          "content": "A protocol used in IPv4 networks to map a known IP address to an unknown MAC address. When a device needs to send a frame but only knows the destination IP, it uses ARP to discover the corresponding MAC address."
+        },
+        {
+          "type": "subheading",
+          "content": "How ARP Works"
+        },
+        {
+          "type": "text",
+          "content": "When a device needs to communicate with another device on the local network, it checks its ARP cache first. If the MAC address is not cached, it initiates an ARP request."
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "description": "Host checks its ARP cache (RAM) for an existing IP-to-MAC mapping. If found, use the cached MAC address and send the frame. Done."
+            },
+            {
+              "description": "If NOT in cache, host creates an ARP Request asking: 'Who has IP address 192.168.1.20? Tell 192.168.1.10 (my IP).' Source MAC: Host's MAC. Destination MAC: FF-FF-FF-FF-FF-FF (broadcast)."
+            },
+            {
+              "description": "ARP Request is broadcast to all devices on the local network. Every device receives it and checks: 'Is this IP mine?' If no, the device discards the request."
+            },
+            {
+              "description": "The device with the target IP (192.168.1.20) sends an ARP Reply: 'Yes, 192.168.1.20 is at MAC address 00-1A-2B-3C-4D-5E.' This is sent as a UNICAST frame directly back to the requesting device."
+            },
+            {
+              "description": "Requesting host receives the ARP Reply, adds the IP-to-MAC mapping to its ARP cache, and can now send the data frame to the correct MAC address."
+            }
+          ]
+        },
+        {
+          "type": "codeblock",
+          "code": "ARP Request (Broadcast):\nSender: 192.168.1.10 (MAC: AA-AA-AA-AA-AA-AA)\nTarget: 192.168.1.20 (MAC: ??-??-??-??-??-??)\nDestination MAC: FF-FF-FF-FF-FF-FF\n\nARP Reply (Unicast):\nSender: 192.168.1.20 (MAC: BB-BB-BB-BB-BB-BB)\nTarget: 192.168.1.10 (MAC: AA-AA-AA-AA-AA-AA)\nDestination MAC: AA-AA-AA-AA-AA-AA"
+        },
+        {
+          "type": "subheading",
+          "content": "ARP Cache Maintenance"
+        },
+        {
+          "type": "definition",
+          "label": "ARP Cache",
+          "content": "A table stored in RAM that maps IP addresses to MAC addresses. Cached entries reduce network traffic by eliminating the need for repeated ARP requests for frequently accessed hosts."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Cache entries have a timeout (TTL). Windows: 15-45 seconds for unused entries, 10 minutes for used entries. Cisco: 4 hours (14,400 seconds) by default.",
+            "Entries are removed if not used within the timeout period. Prevents stale mappings when devices change MAC addresses (e.g., NIC replacement).",
+            "When a device receives an ARP Reply, it caches the mapping even if it didn't request it. This is called gratuitous ARP learning.",
+            "Static ARP entries can be manually configured for critical devices (like the default gateway) to prevent ARP-related issues.",
+            "View the ARP cache: arp -a (Windows/Linux), show ip arp (Cisco IOS)."
+          ]
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "Platform", "Output"],
+          "codeColumn": 0,
+          "rows": [
+            ["arp -a", "Windows / Linux", "Displays the ARP cache showing IP address, MAC address, and entry type (dynamic or static)."],
+            ["arp -d", "Windows / Linux", "Deletes all entries from the ARP cache (or a specific entry if an IP is specified)."],
+            ["show ip arp", "Cisco IOS", "Displays the ARP table with IP, MAC, age (time since learned), and interface."],
+            ["clear ip arp", "Cisco IOS", "Clears the ARP cache (or specific entries)."]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚡ Broadcast Impact",
+          "content": "ARP Requests are broadcasts — every device on the local network must process them. In large networks or during mass power-on events (e.g., all PCs booting after a power outage), hundreds of simultaneous ARP broadcasts can briefly degrade performance. This is one reason VLANs are used to segment broadcast domains.",
+          "color": "amber"
+        }
+      ]
     },
     {
-      "title": "ARP Table/Cache",
-      "description": "Stores IPv4-to-MAC address mappings in RAM. Contains both dynamic entries (learned via ARP) and static entries (permanent mappings like broadcast addresses)."
+      "id": "ipv6-nd",
+      "icon": "🔷",
+      "title": "IPv6 Neighbor Discovery (ND)",
+      "color": "indigo",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "IPv6 does not use ARP. Instead, it uses Neighbor Discovery (ND), which is part of ICMPv6. ND provides the same address resolution functionality as ARP but with additional features and improved efficiency."
+        },
+        {
+          "type": "definition",
+          "label": "Neighbor Discovery (ND)",
+          "content": "An ICMPv6 protocol that provides address resolution (like ARP), router discovery, prefix discovery, duplicate address detection, and more. Uses multicast instead of broadcast for better efficiency."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "IPv4 ARP",
+            "content": "Uses broadcast (FF-FF-FF-FF-FF-FF) — all devices must process every ARP Request. Separate protocol from ICMP. Only resolves IP to MAC. No built-in duplicate address detection."
+          },
+          "right": {
+            "label": "IPv6 Neighbor Discovery",
+            "content": "Uses multicast (solicited-node addresses) — only the target device processes the message. Part of ICMPv6 (integrated). Resolves IP to MAC AND provides router/prefix discovery. Includes Duplicate Address Detection (DAD)."
+          },
+          "note": "ND is more efficient because multicast targets specific devices instead of broadcasting to everyone."
+        },
+        {
+          "type": "subheading",
+          "content": "ND Message Types for Address Resolution"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "cardColor": "indigo",
+          "items": [
+            {
+              "title": "Neighbor Solicitation (NS)",
+              "badge": "Replaces ARP Request",
+              "description": "Sent to a solicited-node multicast address asking: 'Who has IPv6 address X? Please send me your MAC.' Multicast means only the target device (and devices listening to that multicast group) process it.",
+              "note": "ICMPv6 Type 135"
+            },
+            {
+              "title": "Neighbor Advertisement (NA)",
+              "badge": "Replaces ARP Reply",
+              "description": "Sent as a unicast reply to the requesting device: 'I have IPv6 address X, and my MAC address is Y.' Contains the target's link-layer (MAC) address.",
+              "note": "ICMPv6 Type 136"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "How IPv6 Address Resolution Works"
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "description": "Host checks its Neighbor Cache (equivalent to ARP cache) for an existing IPv6-to-MAC mapping. If found, use it. Done."
+            },
+            {
+              "description": "If NOT in cache, host sends a Neighbor Solicitation (NS) to the solicited-node multicast address derived from the target IPv6 address. Example: Target 2001:db8::1 → Solicited-node multicast ff02::1:ff00:1."
+            },
+            {
+              "description": "Only the device with the target IPv6 address listens to that specific multicast group. It receives the NS and processes it. All other devices ignore it."
+            },
+            {
+              "description": "Target device sends a Neighbor Advertisement (NA) back to the requesting host (unicast) with its MAC address."
+            },
+            {
+              "description": "Requesting host receives the NA, caches the IPv6-to-MAC mapping in its Neighbor Cache, and sends the data frame."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Additional ND Functions"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "title": "Router Solicitation (RS)",
+              "description": "Sent by hosts to discover routers on the local link. 'Are there any routers here?' Sent to the all-routers multicast address (ff02::2).",
+              "badge": "ICMPv6 Type 133"
+            },
+            {
+              "title": "Router Advertisement (RA)",
+              "description": "Sent by routers (periodically or in response to RS) to advertise their presence, network prefixes, and configuration info for SLAAC.",
+              "badge": "ICMPv6 Type 134"
+            },
+            {
+              "title": "Duplicate Address Detection (DAD)",
+              "description": "Before using a new IPv6 address, a device sends an NS for that address with source :: (unspecified). If no one responds, the address is unique.",
+              "badge": "Prevents conflicts"
+            },
+            {
+              "title": "Neighbor Unreachability Detection",
+              "description": "ND monitors whether neighbors are still reachable. If a neighbor stops responding, the entry is marked as unreachable and removed from the cache.",
+              "badge": "Automatic cleanup"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Multicast Efficiency",
+          "content": "IPv6's use of multicast instead of broadcast is a major efficiency improvement. In a network with 100 devices, an ARP broadcast forces all 100 to process the request. An IPv6 NS only reaches the one device listening to that specific solicited-node multicast — the other 99 devices don't even see it.",
+          "color": "indigo"
+        }
+      ]
     },
     {
-      "title": "IPv6 Neighbor Discovery (NDP)",
-      "description": "IPv6 replacement for ARP. Uses ICMPv6 Neighbor Solicitation and Neighbor Advertisement messages instead of ARP Request/Reply."
-    },
-    {
-      "title": "Switch MAC Address Table",
-      "description": "Layer 2 switches learn source MAC addresses and their associated ports. When destination MAC is unknown, the switch floods the frame out all ports except the ingress port."
-    },
-    {
-      "title": "Router Components",
-      "description": "RAM stores running config, routing table, and ARP cache (volatile). NVRAM stores startup config (non-volatile). Flash stores IOS. ROM stores bootstrap and basic diagnostics."
+      "id": "security",
+      "icon": "🔒",
+      "title": "Security and Troubleshooting",
+      "color": "red",
+      "blocks": [
+        {
+          "type": "subheading",
+          "content": "ARP Spoofing / ARP Poisoning Attack"
+        },
+        {
+          "type": "definition",
+          "label": "ARP Spoofing (ARP Poisoning)",
+          "content": "A man-in-the-middle attack where a threat actor sends fake ARP replies to associate their own MAC address with a legitimate IP address (often the default gateway). This redirects traffic intended for the legitimate device through the attacker's machine."
+        },
+        {
+          "type": "text",
+          "content": "Attack scenario: Attacker sends unsolicited ARP Replies claiming 'The default gateway (192.168.1.1) is at MAC address [attacker's MAC]'. Victims cache this false mapping and start sending all internet-bound traffic to the attacker instead of the real gateway. Attacker can intercept, modify, or drop traffic."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "ARP has no authentication — devices trust any ARP Reply they receive, even unsolicited ones.",
+            "Attacker can intercept sensitive data: passwords, session cookies, emails, file transfers.",
+            "Attacker can modify traffic in transit: inject malicious code, redirect to phishing sites.",
+            "Denial of Service: Attacker can associate a non-existent MAC with critical IPs, breaking connectivity.",
+            "Detection: Sudden changes in MAC addresses for known IPs, duplicate IP notifications, unexplained network slowdowns."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Mitigation Techniques"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "cardColor": "red",
+          "items": [
+            {
+              "title": "Static ARP Entries",
+              "description": "Manually configure permanent ARP entries for critical devices (gateway, servers). Prevents spoofed entries from overwriting them. Downside: Manual management, doesn't scale well.",
+              "badge": "Manual protection"
+            },
+            {
+              "title": "Dynamic ARP Inspection (DAI)",
+              "description": "Cisco switch feature that validates ARP packets against a trusted database (DHCP snooping binding table). Drops invalid ARP replies. Highly effective but requires proper configuration.",
+              "badge": "Automated protection"
+            },
+            {
+              "title": "Port Security",
+              "description": "Limits which MAC addresses can send traffic on a switch port. Prevents unauthorized devices from injecting ARP spoofing attacks.",
+              "badge": "Access control"
+            },
+            {
+              "title": "Network Monitoring",
+              "description": "Use IDS/IPS systems to detect ARP anomalies: multiple MACs claiming the same IP, excessive ARP traffic, unsolicited ARP replies.",
+              "badge": "Detection"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚠️ IPv6 is Not Immune",
+          "content": "IPv6 Neighbor Discovery can also be attacked. Rogue Router Advertisements can redirect traffic. Neighbor Solicitation/Advertisement spoofing is possible. ND attacks are harder to execute than ARP attacks but still exist. Mitigations: RA Guard, ND Inspection, SEcure Neighbor Discovery (SEND).",
+          "color": "orange"
+        },
+        {
+          "type": "subheading",
+          "content": "Troubleshooting Commands"
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "Platform", "Purpose"],
+          "codeColumn": 0,
+          "rows": [
+            ["arp -a", "Windows / Linux", "Display the ARP cache. Check for unexpected MAC addresses or duplicate IPs."],
+            ["arp -d *", "Windows", "Clear the entire ARP cache. Forces fresh ARP requests. Useful after suspected spoofing."],
+            ["show ip arp", "Cisco IOS", "Display the router's ARP table with IP, MAC, age, and interface."],
+            ["show ipv6 neighbors", "Cisco IOS", "Display the IPv6 Neighbor Cache (equivalent to ARP table for IPv6)."],
+            ["clear ip arp", "Cisco IOS", "Clear ARP cache entries."],
+            ["debug arp", "Cisco IOS", "Show real-time ARP activity. Use cautiously — can generate massive output."]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Performance Impact"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "ARP broadcasts are normal and necessary. Small amounts of ARP traffic are expected and have negligible impact.",
+            "Mass ARP events: When many devices power on simultaneously (after an outage), hundreds of ARP broadcasts flood the network. Performance can degrade for 30-60 seconds until caches are populated.",
+            "Misconfigured devices sending continuous ARP requests can saturate the network. Check for devices with wrong IP configs, duplicate IPs, or misbehaving applications.",
+            "Use network monitoring to establish a baseline for normal ARP traffic volume. Spikes above baseline indicate issues."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Quick ARP Troubleshooting",
+          "content": "Can't reach a device on the local network? Check the ARP cache (arp -a). If there's no entry for the destination IP, try pinging it to trigger an ARP request. If the entry shows an unexpected MAC address, you may have an IP conflict or ARP spoofing. If the entry is correct but ping still fails, the problem is at Layer 3 or above.",
+          "color": "red"
+        }
+      ]
     }
-  ],
-  "importantPoints": [
-    "ARP maps Layer 3 IPv4 addresses to Layer 2 MAC addresses",
-    "ARP only works on the same local network/subnet",
-    "ARP Request uses broadcast MAC address: FF:FF:FF:FF:FF:FF",
-    "ARP Reply is unicast directly to the requesting host",
-    "ARP table is stored in RAM (volatile memory)",
-    "Command 'arp -a' displays the ARP cache on Windows/Linux",
-    "Static ARP entries include broadcast addresses (e.g., 192.168.1.255 → FF:FF:FF:FF:FF:FF)",
-    "For remote destinations, ARP resolves the MAC of the default gateway/router",
-    "IPv6 uses Neighbor Solicitation/Advertisement (NDP) instead of ARP",
-    "Switches flood unknown unicast frames out all ports except the ingress port",
-    "Switches flood broadcast frames out all ports except the ingress port",
-    "RAM holds: routing table, ARP cache, running-config",
-    "NVRAM holds: startup-config (persistent)",
-    "Flash holds: Cisco IOS image",
-    "ROM holds: bootstrap program and POST diagnostics"
-  ],
-  "quickReference": [
-    { "label": "ARP Purpose", "value": "Resolve IP → MAC address" },
-    { "label": "ARP Scope", "value": "Local network only" },
-    { "label": "ARP Request MAC", "value": "FF:FF:FF:FF:FF:FF (broadcast)" },
-    { "label": "ARP Reply Type", "value": "Unicast" },
-    { "label": "View ARP Cache", "value": "arp -a" },
-    { "label": "ARP Table Location", "value": "RAM (volatile)" },
-    { "label": "IPv6 ARP Equivalent", "value": "Neighbor Discovery Protocol (NDP)" },
-    { "label": "NDP Messages", "value": "Neighbor Solicitation + Advertisement" },
-    { "label": "Router RAM Contents", "value": "Routing table, ARP cache, running-config" },
-    { "label": "Router NVRAM Contents", "value": "Startup-config" },
-    { "label": "Router Flash Contents", "value": "Cisco IOS image" },
-    { "label": "Unknown Unicast Action", "value": "Flood all ports except ingress" },
-    { "label": "Broadcast Frame Action", "value": "Flood all ports except ingress" },
-    { "label": "Remote Dest ARP", "value": "Resolves default gateway MAC" }
   ]
 }
