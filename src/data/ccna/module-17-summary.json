@@ -1,78 +1,538 @@
 {
   "number": 17,
-  "title": "Building a Small Network",
-  "description": "Network design, device selection, scalability, and best practices for small business networks",
-  "keyConcepts": [
+  "title": "Build and Secure a Small Network",
+  "description": "Design, deployment, verification, and troubleshooting",
+  "glance": [
+    { "number": "5", "label": "Design factors", "detail": "Cost, ports, expandability, OS features, redundancy" },
+    { "number": "6", "label": "Troubleshooting steps", "detail": "Identify, Theory, Test, Plan, Verify, Document" },
+    { "number": "4", "label": "Common issues", "detail": "Duplex, IP addressing, Gateway, DNS" },
+    { "number": "2", "label": "Verification tools", "detail": "Ping and Traceroute" }
+  ],
+  "sections": [
     {
-      "title": "Network Design Considerations",
-      "description": "Small networks require careful balancing of cost, functionality, and future growth. Key factors include device modularity, redundancy planning, and selecting appropriate port density."
+      "id": "device-selection",
+      "icon": "🛠️",
+      "title": "Device Selection and Design",
+      "color": "blue",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Choosing the right network devices requires balancing cost, performance, features, and future growth. Small networks need devices that are affordable yet capable of supporting current and anticipated needs."
+        },
+        {
+          "type": "subheading",
+          "content": "Selection Criteria for Routers and Switches"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "💰",
+              "title": "Cost",
+              "description": "Budget based on port count, speed, and features. Small office switches start around $50-200. Entry routers $100-500. Enterprise-grade equipment costs significantly more but offers better performance and features.",
+              "badge": "Budget constraints"
+            },
+            {
+              "icon": "🔌",
+              "title": "Port Speed and Type",
+              "description": "10/100 Mbps (Fast Ethernet) — older, still functional for small offices. 10/100/1000 Mbps (Gigabit) — modern standard. Copper (RJ-45) for short distances. Fiber (SFP/SFP+) for long distances or high interference environments. PoE (Power over Ethernet) to power phones, cameras, APs.",
+              "badge": "Interface requirements"
+            },
+            {
+              "icon": "📦",
+              "title": "Expandability",
+              "description": "Fixed configuration: Port count cannot be changed. Lower cost, simpler. Good for small networks with predictable growth. Modular: Additional modules can be added for more ports or different interface types. Higher cost but more flexible.",
+              "badge": "Growth planning"
+            },
+            {
+              "icon": "⚙️",
+              "title": "Operating System Features",
+              "description": "Security: ACLs, port security, DHCP snooping. QoS: Traffic prioritization for VoIP and video. VoIP support: VLAN configuration, PoE. Layer 3 switching: Inter-VLAN routing without a separate router. Stacking: Multiple switches managed as one unit.",
+              "badge": "Feature set"
+            },
+            {
+              "icon": "🔄",
+              "title": "Redundancy",
+              "description": "Dual power supplies for critical devices. Multiple uplinks between switches. Backup internet connections. Hot-swappable components. Even small networks should eliminate single points of failure for critical infrastructure.",
+              "badge": "Reliability"
+            },
+            {
+              "icon": "📊",
+              "title": "Management Capabilities",
+              "description": "CLI access (Telnet/SSH) for configuration. Web GUI for easier management. SNMP for monitoring. Syslog for centralized logging. RMON for traffic analysis. Choose based on staff expertise and monitoring needs.",
+              "badge": "Administration"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "IP Addressing Scheme Design"
+        },
+        {
+          "type": "definition",
+          "label": "IP Addressing Scheme",
+          "content": "A structured plan for assigning IP addresses to devices on the network. Good schemes are consistent, predictable, and documented. Poor schemes lead to conflicts, confusion, and troubleshooting nightmares."
+        },
+        {
+          "type": "text",
+          "content": "Categorize devices into logical groups and assign each group a specific IP range within each subnet:"
+        },
+        {
+          "type": "table",
+          "headers": ["Device Type", "Recommended Range", "Assignment Method", "Example"],
+          "rows": [
+            ["Routers / Gateways", "First or last usable address", "Static", ".1 or .254"],
+            ["Servers", "Low range (10-50)", "Static", ".10 - .50"],
+            ["Printers / Peripherals", "Mid-low range (51-99)", "Static", ".51 - .99"],
+            ["Network Infrastructure", "Mid range (100-149)", "Static", ".100 - .149 (switches, APs, cameras)"],
+            ["DHCP Pool (End Users)", "High range (150-253)", "Dynamic", ".150 - .253"],
+            ["Reserved / Future", "As needed", "Unassigned", "Document for future growth"]
+          ]
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Always use the same scheme across all subnets for consistency — gateway at .1, servers at .10-.50, etc.",
+            "Leave gaps in your numbering for future expansion — don't assign every available address immediately.",
+            "Document the scheme in a spreadsheet: subnet address, mask, VLAN, purpose, gateway, DHCP range, notes.",
+            "Use meaningful VLAN numbers that correspond to subnet numbers: VLAN 10 = 192.168.10.0/24, VLAN 20 = 192.168.20.0/24.",
+            "Avoid overlapping DHCP pools with static assignments — causes IP conflicts."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Redundancy in Small Networks",
+          "content": "Even small networks benefit from basic redundancy. Connect critical switches to two uplink ports on different switches. Use dual power supplies if available. Consider a backup internet connection (even a cellular failover). The cost of an hour of downtime usually exceeds the cost of basic redundancy.",
+          "color": "blue"
+        }
+      ]
     },
     {
-      "title": "Redundancy",
-      "description": "Critical for large corporations but often too expensive for small businesses. Involves duplicate routers, ISP links, and power supplies to eliminate single points of failure and ensure business continuity."
+      "id": "applications",
+      "icon": "📱",
+      "title": "Small Network Applications and Protocols",
+      "color": "emerald",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Small networks use the same protocols as large enterprise networks. The scale is smaller, but the functionality is identical. Understanding which protocols are running helps with troubleshooting and security."
+        },
+        {
+          "type": "subheading",
+          "content": "Common Protocols in Small Networks"
+        },
+        {
+          "type": "table",
+          "headers": ["Protocol", "Purpose", "Port(s)", "Critical?"],
+          "rows": [
+            ["DNS", "Resolves domain names to IP addresses", "53/UDP", "Yes — no name resolution without it"],
+            ["DHCP", "Assigns IP addresses automatically to clients", "67-68/UDP", "Yes — manual IP config otherwise"],
+            ["HTTP/HTTPS", "Web browsing and web-based applications", "80/443 TCP", "High — most business apps are web-based"],
+            ["FTP/SFTP", "File transfers between systems", "20-21/22 TCP", "Medium — depends on workflows"],
+            ["SMB", "Windows file and printer sharing", "445/TCP", "High — essential for Windows networks"],
+            ["SMTP", "Sending email", "25/587 TCP", "High — business communication"],
+            ["POP3/IMAP", "Retrieving email", "110/143 TCP", "High — business communication"],
+            ["SSH", "Secure remote management of devices", "22/TCP", "High — for IT administration"],
+            ["RDP", "Windows remote desktop access", "3389/TCP", "Medium — remote work and support"]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Quality of Service (QoS) for Real-Time Traffic"
+        },
+        {
+          "type": "definition",
+          "label": "QoS (Quality of Service)",
+          "content": "A set of technologies that prioritize certain types of traffic over others to ensure consistent performance for delay-sensitive applications. Essential for VoIP (voice) and video conferencing where even small delays or packet loss cause poor call quality."
+        },
+        {
+          "type": "text",
+          "content": "Without QoS, all traffic is treated equally (best-effort). A large file download can starve a VoIP call of bandwidth, causing choppy audio or dropped calls. QoS marks and prioritizes real-time traffic ahead of bulk data."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "Delay-Sensitive Traffic",
+            "content": "VoIP (voice calls), Video conferencing, Interactive gaming. Requires: Low latency (<150ms), Low jitter (<30ms), Low packet loss (<1%). Cannot tolerate delays — a 2-second delay in a phone call is unusable."
+          },
+          "right": {
+            "label": "Delay-Tolerant Traffic",
+            "content": "Email, File transfers, Web browsing, Database backups. Can tolerate: Higher latency (seconds), Variable delays, Occasional retransmissions. A 2-second delay downloading a file is barely noticeable."
+          },
+          "note": "QoS puts VoIP and video in the fast lane. Email and downloads wait their turn."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "QoS classification: Mark packets based on type (voice, video, data) using DSCP or CoS values.",
+            "Queuing: Separate queues for different traffic types. Voice gets the priority queue with guaranteed bandwidth.",
+            "Bandwidth allocation: Reserve a percentage of bandwidth for critical traffic (e.g., 30% for voice, 20% for video).",
+            "Congestion management: Drop lower-priority packets first when links are saturated.",
+            "QoS must be configured on ALL network devices in the path — routers, switches, and endpoints."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 QoS is Essential for VoIP",
+          "content": "If you're deploying IP phones or video conferencing, QoS is not optional. Without it, voice quality will be poor during periods of network congestion. Users will complain about choppy audio, echo, or dropped calls. Configure QoS before deploying VoIP, not after users start complaining.",
+          "color": "orange"
+        }
+      ]
     },
     {
-      "title": "Modularity",
-      "description": "Selecting devices that support expansion modules allows networks to grow without replacing core equipment. Essential for businesses with growth forecasts to protect initial investment."
+      "id": "scaling",
+      "icon": "📈",
+      "title": "Scaling to Larger Networks",
+      "color": "indigo",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Small networks grow into medium and large networks. Planning for growth from the beginning makes scaling easier and cheaper. Four key areas require attention when scaling: documentation, inventory, budgeting, and traffic analysis."
+        },
+        {
+          "type": "subheading",
+          "content": "Network Documentation"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "cardColor": "indigo",
+          "items": [
+            {
+              "title": "Physical Topology",
+              "description": "Shows physical devices, cabling, rack locations, patch panel connections. Includes: Device models, serial numbers, physical locations, cable types and lengths, port connections. Essential for: Cabling troubleshooting, hardware replacement, physical security audits.",
+              "badge": "Wiring & hardware"
+            },
+            {
+              "title": "Logical Topology",
+              "description": "Shows IP addressing, VLANs, routing, and logical relationships between devices. Includes: IP subnets, VLAN assignments, routing protocols, network services (DNS, DHCP). Essential for: Troubleshooting connectivity, planning changes, security analysis.",
+              "badge": "Addressing & config"
+            }
+          ]
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Network diagrams: Use tools like Microsoft Visio, Draw.io, Lucidchart. Update after every change.",
+            "IP address spreadsheet: Subnet, mask, VLAN, gateway, DHCP range, DNS, assigned devices, notes.",
+            "Configuration backups: Automated weekly backups of all device configs. Store offsite or in version control.",
+            "Change log: Document every change — what was changed, why, when, by whom, and what the result was.",
+            "Runbooks: Step-by-step procedures for common tasks (add VLAN, configure DHCP scope, replace switch)."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Device Inventory and Budgeting"
+        },
+        {
+          "type": "text",
+          "content": "Maintain a complete inventory of all network hardware: routers, switches, firewalls, access points, servers. Include: Make, model, serial number, purchase date, warranty expiration, location, and purpose."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Track device age — plan replacements before warranty expires or hardware fails.",
+            "Budget for lifecycle replacement — network equipment typically lasts 5-7 years before becoming obsolete.",
+            "Spare parts: Keep spare switches, power supplies, and cables for critical components.",
+            "Vendor support contracts: For enterprise equipment, annual support contracts provide firmware updates and hardware replacement."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Traffic Analysis"
+        },
+        {
+          "type": "definition",
+          "label": "Traffic Analysis",
+          "content": "The process of monitoring network traffic to understand bandwidth usage, identify bottlenecks, detect anomalies, and plan capacity upgrades. Use protocol analyzers and monitoring tools to capture traffic patterns during peak usage times."
+        },
+        {
+          "type": "text",
+          "content": "Tools for traffic analysis: Wireshark (packet capture and analysis), SNMP monitoring tools (PRTG, SolarWinds), NetFlow/sFlow collectors, Switch port mirroring (SPAN) to capture traffic for analysis."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Monitor during peak hours (8-10 AM, 1-3 PM) to understand maximum load.",
+            "Look for patterns: High bandwidth at specific times, unexpected protocols, top talkers (devices using the most bandwidth).",
+            "Plan for growth: If links are consistently above 70% utilization, upgrade before performance degrades.",
+            "Security monitoring: Traffic analysis can detect port scans, DDoS attacks, malware communication, unauthorized devices."
+          ]
+        }
+      ]
     },
     {
-      "title": "Quality of Service (QoS)",
-      "description": "Mechanism to prioritize delay-sensitive traffic like voice and video over data traffic. Manages bandwidth allocation and reduces latency during network congestion."
+      "id": "verification",
+      "icon": "✅",
+      "title": "Verifying Connectivity",
+      "color": "sky",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "After configuring network devices, verification is essential. The two primary tools are ping (tests reachability) and traceroute (maps the path and identifies where failures occur)."
+        },
+        {
+          "type": "subheading",
+          "content": "Ping — Layer 3 Connectivity Test"
+        },
+        {
+          "type": "definition",
+          "label": "Ping",
+          "content": "Uses ICMP Echo Request and Echo Reply to test if a destination is reachable and measure round-trip time. Simple, fast, and available on every OS. Tests Layer 3 (IP) connectivity only — does not test application-layer functionality."
+        },
+        {
+          "type": "text",
+          "content": "Basic ping syntax: ping <IP or hostname>. Common options: -c <count> (Linux/Mac: send N packets), -n <count> (Windows: send N packets), -t (Windows: ping continuously until stopped), -i <interval> (change time between pings)."
+        },
+        {
+          "type": "subheading",
+          "content": "Extended Ping (Cisco IOS)"
+        },
+        {
+          "type": "definition",
+          "label": "Extended Ping",
+          "content": "Available on Cisco IOS devices. Allows specifying: Source IP address (test from a specific interface), Packet size (test MTU issues), Timeout value (how long to wait for replies), Number of packets (default is 5). Entered by typing ping with no arguments in privileged EXEC mode."
+        },
+        {
+          "type": "codeblock",
+          "code": "Router# ping\nProtocol [ip]: \nTarget IP address: 192.168.1.1\nRepeat count [5]: 10\nDatagram size [100]: 1500\nTimeout in seconds [2]: 5\nExtended commands [n]: y\nSource address or interface: 10.1.1.1\nType of service [0]: \nSet DF bit in IP header? [no]: \nValidate reply data? [no]: \nData pattern [0xABCD]: \nSweep range of sizes [n]: \n!!!!!!!!!! \nSuccess rate is 100 percent (10/10)"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Extended ping is critical for testing specific paths — you can force the ping to originate from a particular interface.",
+            "Testing MTU: Send large packets (1500 bytes) with the DF (Don't Fragment) bit set to detect MTU issues on the path.",
+            "Interpreting ping output: ! = success, . = timeout, U = destination unreachable, Q = source quench (congestion), M = could not fragment."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Traceroute — Path Discovery"
+        },
+        {
+          "type": "text",
+          "content": "Traceroute reveals the path packets take to reach a destination by listing every router (hop) along the way and measuring the round-trip time to each."
+        },
+        {
+          "type": "table",
+          "headers": ["Platform", "Command", "Protocol Used", "Notes"],
+          "codeColumn": 1,
+          "rows": [
+            ["Windows", "tracert <destination>", "ICMP Echo Request", "Same protocol as ping"],
+            ["Linux / Mac", "traceroute <destination>", "UDP to high port numbers", "More likely to be blocked by firewalls"],
+            ["Cisco IOS", "traceroute <destination>", "UDP to high port numbers", "Same as Linux/Mac"]
+          ]
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Each line shows: hop number, IP address (and hostname if resolved), three RTT measurements.",
+            "Asterisks (* * *) indicate no response from that hop — could be blocking ICMP/UDP or heavily loaded.",
+            "Traceroute identifies exactly WHERE packets are being dropped — critical for isolating routing problems.",
+            "High latency at a specific hop indicates congestion or a long-distance link at that point."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚡ Ping vs Traceroute",
+          "content": "Ping answers: 'Can I reach the destination?' Traceroute answers: 'What path am I taking and where does it fail?' Use ping for quick reachability tests. Use traceroute when you need to identify the exact point of failure along the path.",
+          "color": "sky"
+        }
+      ]
     },
     {
-      "title": "Network Baseline",
-      "description": "Should be established at regular intervals over time to capture normal performance under various load conditions. Used for capacity planning and identifying performance degradation."
+      "id": "troubleshooting",
+      "icon": "🔧",
+      "title": "Troubleshooting Methodology",
+      "color": "orange",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Network troubleshooting requires a systematic approach. Random guessing wastes time and can make problems worse. Follow a structured methodology to identify and resolve issues efficiently."
+        },
+        {
+          "type": "definition",
+          "label": "Troubleshooting Methodology",
+          "content": "A systematic, step-by-step process for diagnosing and resolving network problems. Prevents jumping to conclusions, ensures nothing is overlooked, and provides documentation for future reference. Follows six steps from problem identification to documentation."
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "command": "Step 1: Identify the Problem",
+              "description": "Gather information from users, error messages, and system logs. Ask: What changed? When did it start? Who is affected? Can you reproduce it? Define the problem clearly — 'the internet is down' vs 'users in VLAN 20 cannot reach the mail server'."
+            },
+            {
+              "command": "Step 2: Establish a Theory of Probable Cause",
+              "description": "Based on the symptoms, list possible causes in order of likelihood. Consider: Recent changes, common failure points, similar past issues. Use the OSI model to narrow down — is it physical (Layer 1), switching (Layer 2), routing (Layer 3), or application (Layer 7)?"
+            },
+            {
+              "command": "Step 3: Test the Theory to Determine Cause",
+              "description": "Test the most likely cause first. Use diagnostic tools: ping, traceroute, show commands, cable testers. If the theory is confirmed, move to step 4. If not, return to step 2 and test the next theory. Don't make changes yet — just verify the cause."
+            },
+            {
+              "command": "Step 4: Establish a Plan of Action and Implement",
+              "description": "Develop a solution that addresses the root cause. Consider: Impact of the change, rollback plan if it fails, required downtime. Get approval if needed. Implement during a maintenance window if possible. Document what you're doing before you do it."
+            },
+            {
+              "command": "Step 5: Verify Full System Functionality",
+              "description": "Test that the problem is resolved AND that the fix didn't break anything else. Have the user verify the issue is gone. Test related systems. Monitor for a period to ensure the problem doesn't recur."
+            },
+            {
+              "command": "Step 6: Document Findings, Actions, and Outcomes",
+              "description": "Record: Problem description, symptoms observed, root cause identified, solution implemented, verification results, lessons learned. Documentation helps with: Future troubleshooting, training new staff, post-incident reviews, trend analysis."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚠️ Never Skip Documentation",
+          "content": "Step 6 is often skipped because 'the problem is fixed and I'm busy.' Don't skip it. Six months from now when a similar problem occurs, you won't remember the details. Documenting saves time in the long run and helps identify recurring issues that need permanent fixes.",
+          "color": "red"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Use the OSI model as a troubleshooting framework — start at Layer 1 (physical) and work up, or start at Layer 7 (application) and work down.",
+            "Divide and conquer — test at the midpoint to eliminate half the possible failure points at once.",
+            "Question the obvious — 'Is it plugged in?' and 'Is the cable good?' solve more problems than complex theories.",
+            "One change at a time — if you change multiple things simultaneously and it works, you don't know which change fixed it.",
+            "Avoid cargo-cult fixes — understand WHY a solution works, not just THAT it works. Otherwise the problem will recur."
+          ]
+        }
+      ]
     },
     {
-      "title": "Network Documentation",
-      "description": "Essential element of scaling networks. Includes physical and logical topology diagrams, IP addressing schemes, device inventory, and configuration backups."
+      "id": "common-issues",
+      "icon": "🚨",
+      "title": "Common Troubleshooting Scenarios",
+      "color": "red",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Certain problems occur repeatedly in small networks. Recognizing common symptoms and their typical causes speeds up troubleshooting significantly."
+        },
+        {
+          "type": "subheading",
+          "content": "Duplex Mismatch"
+        },
+        {
+          "type": "definition",
+          "label": "Duplex Mismatch",
+          "content": "Occurs when one end of a link is configured for full-duplex and the other is half-duplex. Result: Poor performance, packet loss, collisions, slow speeds. The link works but performs terribly."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "Symptoms",
+            "content": "Slow file transfers, intermittent connectivity, high error rates on the interface, late collisions in show interface output. Speed is correct (1000 Mbps) but throughput is terrible."
+          },
+          "right": {
+            "label": "Solution",
+            "content": "Use autonegotiation on BOTH sides (recommended). OR manually set BOTH sides to the same duplex (both full or both half). Never mix auto on one side and manual on the other — guaranteed mismatch."
+          }
+        },
+        {
+          "type": "codeblock",
+          "code": "Switch# show interface g0/1\nGigabitEthernet0/1 is up, line protocol is up\n  Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX\n  ...\n  5 minute input rate 100000 bits/sec, 150 packets/sec\n  5 minute output rate 95000 bits/sec, 140 packets/sec\n     0 runts, 0 giants, 0 throttles\n     847 input errors, 0 CRC, 0 frame, 0 overrun, 847 ignored\n     0 output errors, 0 collisions, 3 interface resets"
+        },
+        {
+          "type": "callout",
+          "title": "⚡ Always Use Autonegotiation",
+          "content": "Modern devices handle autonegotiation correctly. Manual duplex/speed configuration should only be used when connecting to legacy equipment or troubleshooting. If you manually configure one side, you MUST manually configure the other side to match.",
+          "color": "red"
+        },
+        {
+          "type": "subheading",
+          "content": "IP Addressing Issues"
+        },
+        {
+          "type": "text",
+          "content": "IP addressing problems are the most common cause of connectivity failures. Symptoms vary but always result in inability to communicate."
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "cardColor": "red",
+          "items": [
+            {
+              "title": "Incorrect IP Address or Subnet Mask",
+              "description": "Device has wrong IP or mask. Result: Cannot communicate with other devices on the same subnet. Ping to gateway fails. Check: ipconfig (Windows), ifconfig/ip addr (Linux), show ip interface brief (Cisco).",
+              "badge": "Layer 3 config error"
+            },
+            {
+              "title": "IP Address Conflict",
+              "description": "Two devices have the same IP. Result: Intermittent connectivity for both. Windows shows 'IP address conflict' error. Check: DHCP logs for duplicate assignments, static IP spreadsheet for conflicts. Fix: Change one device's IP.",
+              "badge": "Duplicate address"
+            },
+            {
+              "title": "DHCP Pool Exhausted",
+              "description": "DHCP server has no available addresses to assign. Result: New devices cannot join the network. Receive 169.254.x.x (APIPA) address. Check: DHCP server logs, number of active leases vs pool size. Fix: Expand pool or reduce lease time.",
+              "badge": "Address shortage"
+            },
+            {
+              "title": "Wrong Subnet",
+              "description": "Device IP is in a different subnet than intended. Result: Can communicate with some devices but not others. Routing is broken. Check: Verify device IP matches the VLAN/subnet it's connected to.",
+              "badge": "Topology error"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Default Gateway Misconfiguration"
+        },
+        {
+          "type": "text",
+          "content": "Classic symptom: Device can ping local hosts but not remote hosts. The default gateway setting is wrong or missing."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Symptom: ping 192.168.1.10 (local) succeeds, ping 8.8.8.8 (remote) fails.",
+            "Cause 1: Default gateway not configured — device doesn't know where to send packets for remote networks.",
+            "Cause 2: Default gateway IP is wrong — points to a non-existent or unreachable router.",
+            "Cause 3: Default gateway is on a different subnet — must be on the same subnet as the device's IP.",
+            "Verification: Check default gateway setting (ipconfig on Windows, ip route on Linux, show ip route on Cisco).",
+            "Fix: Configure the correct gateway IP — typically the router interface IP on the local subnet."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "DNS Resolution Failure"
+        },
+        {
+          "type": "text",
+          "content": "Classic symptom: Can ping IP addresses (8.8.8.8) but not hostnames (www.google.com). DNS is broken but routing works."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "Symptoms",
+            "content": "ping 8.8.8.8 succeeds. ping www.google.com fails with 'could not find host'. Web browsers show 'DNS server not responding' or 'server not found'. Email clients cannot connect to mail servers by name."
+          },
+          "right": {
+            "label": "Common Causes",
+            "content": "DNS server IP not configured on the client. DNS server IP is wrong or unreachable. DNS server is down. Firewall blocking DNS traffic (port 53/UDP). ISP DNS servers are experiencing issues."
+          }
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Test DNS manually: nslookup www.google.com (Windows/Linux). Should return IP address(es).",
+            "If nslookup fails, DNS is definitely the problem. If nslookup succeeds but browser fails, issue is application-specific.",
+            "Check DNS server configuration: ipconfig /all (Windows) shows 'DNS Servers' line. Should match your network's DNS (often the router or a public DNS like 8.8.8.8).",
+            "Quick fix: Temporarily use public DNS — 8.8.8.8 (Google), 1.1.1.1 (Cloudflare), 9.9.9.9 (Quad9). If this works, your internal DNS is broken.",
+            "Flush DNS cache: ipconfig /flushdns (Windows), systemd-resolve --flush-caches (Linux). Clears stale entries."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 The 8.8.8.8 Test",
+          "content": "Keep this troubleshooting trick in mind: ping 8.8.8.8 (Google's public DNS). If this succeeds, you have internet connectivity and routing works — the problem is DNS or application-layer. If this fails, the problem is at Layer 3 (routing) or below (physical, switching).",
+          "color": "orange"
+        }
+      ]
     }
-  ],
-  "importantPoints": [
-    "Cost is typically the most constrained factor in small network design",
-    "Redundancy is more important to large corporations than small businesses",
-    "Modularity protects investment by allowing future expansion",
-    "Voice and video traffic require delay-sensitive delivery (QoS)",
-    "Voice traffic typically has highest priority through network",
-    "QoS minimizes latency for real-time applications",
-    "Network baseline should be established at regular intervals over time",
-    "True redundancy requires second router AND second ISP",
-    "Network documentation identifies physical and logical topologies",
-    "169.254.x.x indicates DHCP failure (APIPA)",
-    "DNS failure: can reach site by IP but not by URL",
-    "Debug output sent to console line by default",
-    "Use 'terminal monitor' to see debug on VTY lines",
-    "tracert (Windows) / traceroute (Linux) shows path to destination",
-    "show interfaces displays speed, duplex, and Layer 1/2 status",
-    "show ip interface brief shows IP addresses and up/down status",
-    "CDP can be disabled globally or per-interface",
-    "CDP operates at Layer 2, doesn't require Layer 3 connectivity",
-    "Fixed-interface devices less flexible for growing networks",
-    "Port density should match current and projected needs"
-  ],
-  "quickReference": [
-    { "label": "Small Network Priority", "value": "Cost constraints" },
-    { "label": "Large Network Priority", "value": "Redundancy" },
-    { "label": "Growth Planning", "value": "Modularity" },
-    { "label": "Highest Priority Traffic", "value": "Voice (VoIP)" },
-    { "label": "Delay-Sensitive Traffic", "value": "Voice and Video" },
-    { "label": "QoS Purpose", "value": "Prioritize real-time traffic" },
-    { "label": "Baseline Timing", "value": "Regular intervals over time" },
-    { "label": "True Redundancy", "value": "Second router + second ISP" },
-    { "label": "APIPA Range", "value": "169.254.0.0/16" },
-    { "label": "APIPA Cause", "value": "DHCP server unreachable" },
-    { "label": "IP Works, Name Doesn't", "value": "DNS issue" },
-    { "label": "Debug Default Output", "value": "Console line" },
-    { "label": "Debug on VTY", "value": "terminal monitor" },
-    { "label": "Windows Path Trace", "value": "tracert" },
-    { "label": "Linux Path Trace", "value": "traceroute" },
-    { "label": "Detailed Interface Info", "value": "show interfaces" },
-    { "label": "Interface Summary", "value": "show ip interface brief" },
-    { "label": "CDP Disable Global", "value": "no cdp run" },
-    { "label": "CDP Disable Interface", "value": "no cdp enable" },
-    { "label": "CDP Layer", "value": "Layer 2 (no IP needed)" },
-    { "label": "Network Docs Include", "value": "Physical/logical topologies" },
-    { "label": "Real-Time Apps", "value": "Voice, Video" },
-    { "label": "Tolerant Apps", "value": "Email, FTP, Web" }
   ]
 }

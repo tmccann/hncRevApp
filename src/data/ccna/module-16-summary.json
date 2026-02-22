@@ -1,94 +1,397 @@
 {
   "number": 16,
-  "title": "Building and Securing a Small Network",
-  "description": "Network troubleshooting, baseline establishment, and diagnostic tools",
-  "keyConcepts": [
+  "title": "Network Security Fundamentals",
+  "description": "Threats, attacks, mitigations, and Cisco device hardening",
+  "glance": [
+    { "number": "4", "label": "Threat types",          "detail": "Info theft, Data loss, ID theft, Disruption" },
+    { "number": "3", "label": "Vulnerability types",   "detail": "Technological, Configuration, Policy" },
+    { "number": "3", "label": "Attack categories",     "detail": "Reconnaissance, Access, Denial of Service" },
+    { "number": "6", "label": "SSH setup steps",       "detail": "Host → Domain → Key → User → Login → Transport" }
+  ],
+  "sections": [
     {
-      "title": "Network Troubleshooting Tools",
-      "description": "Essential utilities for diagnosing network issues: ping (tests connectivity), tracert/traceroute (shows path), show commands (displays configuration and status), CDP (discovers neighbors), nslookup (DNS resolution)."
+      "id": "threats",
+      "icon": "⚠️",
+      "title": "Threats & Vulnerabilities",
+      "color": "red",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Intruders who gain access by modifying software or exploiting vulnerabilities are called threat actors. Once inside, four types of threat can occur:"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            { "title": "Information Theft",          "description": "Breaking into a computer to obtain confidential information. Can be sold or misused — e.g. stealing R&D data." },
+            { "title": "Data Loss & Manipulation",   "description": "Altering or destroying data on the network, making it unreliable or unusable." },
+            { "title": "Identity Theft",             "description": "Using stolen credentials to impersonate a legitimate user and gain unauthorised access." },
+            { "title": "Disruption of Service",      "description": "Taking network services offline so legitimate users cannot access them." }
+          ]
+        },
+        {
+          "type": "definition",
+          "label": "Vulnerability",
+          "content": "The degree of weakness in a network or device. Some vulnerability is inherent in all devices — routers, switches, servers, even security devices. Endpoints like servers and desktops are most commonly targeted."
+        },
+        {
+          "type": "subheading",
+          "content": "3 Types of Vulnerability"
+        },
+        {
+          "type": "table",
+          "headers": ["Type", "Description", "Examples"],
+          "rows": [
+            ["Technological", "Weaknesses built into protocols and operating systems", "HTTP, FTP, ICMP, SNMP, SMTP are all inherently insecure. OS weaknesses documented by CERT."],
+            ["Configuration", "Devices left with insecure defaults or incorrectly set up", "Missing passwords, open firewall rules, default usernames still in place."],
+            ["Security Policy", "No policy exists, or staff are not following it", "No written security rules, or people ignoring the ones that are there."]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "4 Classes of Physical Threat"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "cardColor": "orange",
+          "items": [
+            { "title": "Hardware",      "description": "Physical damage to servers, routers, switches, cabling, and workstations." },
+            { "title": "Environmental", "description": "Temperature extremes (too hot or cold) or humidity extremes (too wet or dry)." },
+            { "title": "Electrical",    "description": "Voltage spikes, brownouts (insufficient voltage), unconditioned power, or total power loss." },
+            { "title": "Maintenance",   "description": "ESD damage from poor handling, lack of spare parts, poor cabling, or poor labelling." }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Physical Security Plan",
+          "content": "Step 1: Lock up equipment — prevent access via doors, ceiling, raised floor, windows, ducts, vents. Step 2: Monitor and control entry with electronic logs. Step 3: Use security cameras.",
+          "color": "amber"
+        }
+      ]
     },
     {
-      "title": "Network Baseline",
-      "description": "Documentation of normal network performance established at regular intervals over time. Used to identify latency issues by comparing current ping response times against historical data."
+      "id": "malware",
+      "icon": "🦠",
+      "title": "Types of Malware",
+      "color": "pink",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "Malware",
+          "content": "Short for malicious software. Code or software specifically designed to damage, disrupt, steal, or inflict bad action on data, hosts, or networks. Three main types: Virus, Worm, Trojan Horse."
+        },
+        {
+          "type": "grid",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🧬",
+              "title": "Virus",
+              "badge": "Needs a host file",
+              "description": "Inserts a copy of itself into another program. Spreads when that file is transferred — email attachments, file sharing, network. Won't activate until you open the infected file.",
+              "note": "Host program usually keeps running after infection, but some viruses overwrite it entirely"
+            },
+            {
+              "icon": "🪱",
+              "title": "Worm",
+              "badge": "Standalone",
+              "description": "Similar damage to a virus but completely independent — no host program needed. Exploits system vulnerabilities to travel through the network automatically with no human help.",
+              "note": "Key difference from virus: does not need to attach to a program to spread"
+            },
+            {
+              "icon": "🐴",
+              "title": "Trojan Horse",
+              "badge": "Disguised as legit",
+              "description": "Looks legitimate — tricks you into installing it via email attachment or download. Once active: pop-ups, file deletion, data theft, spreads other malware, creates back doors.",
+              "note": "Does NOT self-replicate by infecting other files — must spread through user interaction"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚡ Quick Comparison",
+          "content": "Virus = needs a host file to run. Worm = standalone, spreads itself. Trojan = tricks you into running it. All three are malware but they spread and operate differently — exam will test this distinction.",
+          "color": "pink"
+        }
+      ]
     },
     {
-      "title": "Protocol Analyzer",
-      "description": "Tool that captures and analyzes network traffic patterns on each segment. Used during upgrade planning to document traffic requirements and determine capacity needs."
+      "id": "attacks",
+      "icon": "⚔️",
+      "title": "Network Attack Types",
+      "color": "orange",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Beyond malware, networks face three major categories of attack. Threat actors often run reconnaissance first to gather information before launching access or denial of service attacks."
+        },
+        {
+          "type": "subheading",
+          "content": "🔍 Reconnaissance Attacks — Scouting the Target"
+        },
+        {
+          "type": "definition",
+          "label": "Reconnaissance Attack",
+          "content": "The discovery and mapping of systems, services, or vulnerabilities. The threat actor is gathering information before doing anything else — finding out what's there and where the weak points are."
+        },
+        {
+          "type": "grid",
+          "columns": 3,
+          "items": [
+            { "title": "Internet Queries", "description": "Using tools like Google, whois, and nslookup to find the target's IP address space and organisational information.", "note": "The starting point — free information gathering" },
+            { "title": "Ping Sweeps",      "description": "Tools like fping or gping systematically ping every address in a subnet to find which hosts are active.", "note": "Like calling every number in a phone book to see who answers" },
+            { "title": "Port Scans",       "description": "Probing which ports are open on target devices to identify what services are running and where.", "note": "Tells the attacker exactly what to target next" }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "🔐 Access Attacks — Breaking In"
+        },
+        {
+          "type": "definition",
+          "label": "Access Attack",
+          "content": "The unauthorized manipulation of data, system access, or user privileges. Goal is to get into systems and access information you have no right to view."
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            { "title": "Password Attacks",     "description": "Three methods: brute-force (automated guessing), Trojan horse (capture passwords), packet sniffers (read credentials off the wire)." },
+            { "title": "Trust Exploitation",   "description": "Abusing trusted relationships between devices or user accounts to gain access that should not be possible." },
+            { "title": "Port Redirection",     "description": "Redirecting traffic meant for one host through a compromised host — the attacker intercepts it on the way." },
+            { "title": "Man-in-the-Middle",    "description": "Sitting between two communicating parties and reading or modifying the traffic without either side knowing." }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "💥 Denial of Service — Flooding"
+        },
+        {
+          "type": "definition",
+          "label": "Denial of Service (DoS)",
+          "content": "Disabling or corrupting networks, systems, or services by consuming all system resources with traffic. Prevents legitimate users from using the service. Most publicised form of attack and among the most difficult to eliminate."
+        },
+        {
+          "type": "comparison",
+          "left":  { "label": "DoS",  "content": "Single source floods the target. Relatively simple to run — even unskilled threat actors can do it. Interrupts communication and causes significant loss of time and money." },
+          "right": { "label": "DDoS", "content": "Multiple coordinated sources. Uses a botnet — a network of infected hosts called zombies. A command and control (CnC) program instructs the zombies to attack." },
+          "note": "Both prevent legitimate access. DDoS is much harder to stop because the traffic comes from everywhere."
+        }
+      ]
     },
     {
-      "title": "Structured Troubleshooting Methodology",
-      "description": "Systematic approach: (1) Identify problem, (2) Establish theory of probable causes, (3) Test theory, (4) Establish plan of action, (5) Implement solution, (6) Verify functionality, (7) Document."
+      "id": "mitigations",
+      "icon": "🛡️",
+      "title": "Mitigations & Defence",
+      "color": "emerald",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "Defense-in-Depth",
+          "content": "Also called a layered approach. A combination of networking devices and services working together to protect the network. No single point of failure — if one layer is breached, others still protect you."
+        },
+        {
+          "type": "subheading",
+          "content": "Security Devices & Services"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            { "title": "VPN",            "description": "Provides secure encrypted tunnels for remote access and connections between corporate sites." },
+            { "title": "ASA Firewall",   "description": "Dedicated stateful firewall. Internal traffic can go out and come back — external traffic cannot initiate connections to inside hosts." },
+            { "title": "IPS",            "description": "Intrusion Prevention System. Monitors incoming and outgoing traffic looking for malware and attack signatures. Stops threats in real time." },
+            { "title": "ESA / WSA",      "description": "Email Security Appliance filters spam and suspicious emails. Web Security Appliance filters known and suspicious malware sites." },
+            { "title": "AAA Server",     "description": "Secure database of who is authorised to access and manage network devices. Devices authenticate admin users against this." },
+            { "title": "DMZ",            "description": "Demilitarized Zone — a special network for servers that need to be reachable from outside (web servers, DNS, etc)." }
+          ]
+        },
+        {
+          "type": "definition",
+          "label": "AAA (Triple-A)",
+          "content": "Authentication, Authorization, and Accounting. Controls: WHO is permitted to access the network (authenticate), WHAT actions they can perform (authorize), and keeps a record of WHAT was done (accounting). Think of it like a credit card — it identifies you, sets your spending limit, and logs every transaction."
+        },
+        {
+          "type": "subheading",
+          "content": "Firewalls — How They Filter Traffic"
+        },
+        {
+          "type": "table",
+          "headers": ["Firewall Type", "How it works"],
+          "rows": [
+            ["Packet Filtering",                "Allows or denies traffic based on IP or MAC addresses."],
+            ["Application Filtering",           "Allows or denies access by specific application types based on port numbers."],
+            ["URL Filtering",                   "Allows or denies access to websites based on specific URLs or keywords."],
+            ["Stateful Packet Inspection (SPI)", "Incoming packets must be legitimate responses to requests from internal hosts. Unsolicited packets are blocked. Can also detect DoS attacks."]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 DMZ in Practice",
+          "content": "Servers accessible to outside users (web servers, email, DNS) sit in the DMZ. The firewall allows controlled access to the DMZ from the internet, but the internal network stays protected behind it. The firewall applies specific policies to hosts in the DMZ.",
+          "color": "emerald"
+        },
+        {
+          "type": "subheading",
+          "content": "Backups — 4 Key Considerations"
+        },
+        {
+          "type": "table",
+          "headers": ["Consideration", "What to do"],
+          "rows": [
+            ["Frequency",   "Regular schedule per security policy. Full backups monthly or weekly — frequent partial backups of changed files in between."],
+            ["Storage",     "Always validate backups to ensure data integrity. Test the restoration procedures — make sure you can actually restore from them."],
+            ["Security",    "Transport backups to an approved offsite location on a daily, weekly, or monthly rotation as the security policy requires."],
+            ["Validation",  "Protect backups with strong passwords. The password is required to restore the data — without it the backup is useless."]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Upgrades, Updates & Patches"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Most effective way to stop a worm attack: download security updates from the OS vendor and patch all vulnerable systems.",
+            "Create a standard software image (approved OS + applications) deployed on new or upgraded systems.",
+            "Already-deployed systems may still need updated security patches — don't assume they're current.",
+            "Best practice: enable automatic updates so security patches download and install without user intervention."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Endpoint Security"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Endpoints (laptops, desktops, servers, phones, tablets) are one of the hardest areas to secure because of human behaviour.",
+            "Companies must have well-documented policies — and employees must actually be aware of them.",
+            "Standard measures: antivirus software and host intrusion prevention on every endpoint.",
+            "More comprehensive solutions rely on network access control (NAC) to check devices before they join the network."
+          ]
+        }
+      ]
     },
     {
-      "title": "Cisco IOS Show Commands",
-      "description": "Essential diagnostic commands: show ip interface brief (IP summary), show interfaces (detailed Layer 1/2 info), show ip route (routing table), show cdp neighbors (Layer 2 discovery), show running-config (active config)."
-    },
-    {
-      "title": "Extended Ping",
-      "description": "Advanced ping mode accessed by issuing ping without destination in privileged EXEC mode. Allows specifying source interface for testing specific network paths."
+      "id": "device-security",
+      "icon": "🔧",
+      "title": "Device Hardening",
+      "color": "sky",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Default security settings on new devices are almost always inadequate. These are the steps and commands to harden Cisco routers and switches before they go into production."
+        },
+        {
+          "type": "subheading",
+          "content": "First Steps — Any Device, Any OS"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Change default usernames and passwords immediately — they are well known and the first thing attackers try.",
+            "Restrict access to system resources to only the people who are authorised to use them.",
+            "Turn off and uninstall any unnecessary services and applications.",
+            "Devices from the manufacturer may have been in a warehouse for months — update software and install all security patches before connecting to the network."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Cisco AutoSecure"
+        },
+        {
+          "type": "codeblock",
+          "code": "Router# auto secure                  ← single command, automatically hardens the router"
+        },
+        {
+          "type": "subheading",
+          "content": "Strong Passwords — The Rules"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Minimum 8 characters — 10+ is better. Longer is always more secure.",
+            "Mix uppercase, lowercase, numbers, symbols, and spaces (if allowed).",
+            "Avoid dictionary words, personal info (birthdate, pet name), or repeated patterns.",
+            "Deliberately misspell words — e.g. Security → 5ecur1ty.",
+            "Change passwords regularly to limit the window if one is compromised.",
+            "Never write passwords down and leave them somewhere obvious."
+          ]
+        },
+        {
+          "type": "comparison",
+          "left":  { "label": "WEAK passwords",   "content": "secret — dictionary word. smith — mother's maiden name. toyota — make of car. bob1967 — name + birthday. Blueleaf23 — simple word + numbers." },
+          "right": { "label": "STRONG passwords", "content": "b67n42d39c — alphanumeric mix. 12^h u4@1p7 — alphanumeric + symbols + space. Use passphrases: multiple words with spaces are long and memorable." },
+          "note": "On Cisco routers, leading spaces are ignored but spaces after the first character count — use this to build strong passphrases."
+        },
+        {
+          "type": "subheading",
+          "content": "Password Hardening Commands"
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "What it does"],
+          "codeColumn": 0,
+          "rows": [
+            ["service password-encryption",                        "Encrypts all plaintext passwords in the running config so they can't be read if someone views it."],
+            ["security password min-length 8",                     "Enforces a minimum password length of 8 characters — any shorter and it won't be accepted."],
+            ["login block-for 120 attempts 3 within 60",           "Blocks all login attempts for 120 seconds if there are 3 failed attempts within 60 seconds. Stops brute-force attacks."],
+            ["exec-timeout 5 30",                                  "Auto-logs out an inactive session after 5 minutes and 30 seconds. Default is 10 minutes — always reduce this."]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Where exec-timeout applies",
+          "content": "This is a line configuration command — applies to console, auxiliary, and vty lines individually. Default Cisco timeout is 10 minutes of inactivity. An admin who walks away from an open privileged EXEC session is a major security risk.",
+          "color": "amber"
+        },
+        {
+          "type": "subheading",
+          "content": "SSH Setup — 6 Steps in Order"
+        },
+        {
+          "type": "text",
+          "content": "Telnet sends everything unencrypted — never use it on production devices. SSH encrypts all traffic. These 6 steps must be done in this order:"
+        },
+        {
+          "type": "steps",
+          "steps": [
+            { "command": "hostname R1",                                          "description": "Configure a unique hostname. Must not be the factory default." },
+            { "command": "ip domain-name span.com",                              "description": "Set the IP domain name. Combined with the hostname, this is used to generate the encryption key." },
+            { "command": "crypto key generate rsa general-keys modulus 1024",    "description": "Generate the RSA encryption key. Range is 360–2048 bits. Minimum recommended is 1024. Larger = more secure but slower to encrypt/decrypt." },
+            { "command": "username Bob secret cisco",                            "description": "Create a local database user. The 'secret' keyword encrypts the password using MD5." },
+            { "command": "login local",                                          "description": "Tell the vty lines to authenticate against the local user database we just created." },
+            { "command": "transport input ssh",                                  "description": "Only allow SSH sessions in on the vty lines. This blocks Telnet. By default no input sessions are allowed — this enables SSH." }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Disable Unused Services"
+        },
+        {
+          "type": "text",
+          "content": "Routers and switches start with services active that you may not need. Every open service is an attack surface. Check what's open, then shut anything you don't use."
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "What it does"],
+          "codeColumn": 0,
+          "rows": [
+            ["show ip ports all",                    "IOS-XE: lists all open ports on the device. IOS-XE typically only has HTTPS (443) and DHCP (67) open by default."],
+            ["show control-plane host open-ports",   "Older IOS versions: same job as above. You may see this on older gear — older IOS often leaves HTTP (80) and Telnet (23) open."],
+            ["no ip http server",                    "Disables the insecure HTTP server (port 80). Use HTTPS only."],
+            ["transport input ssh",                  "On the vty lines — disables Telnet (port 23), allows SSH only."]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Key Takeaways",
+          "content": "Telnet = unencrypted = never use on production. SSH = encrypted = always use. service password-encryption on every device. Default timeout is 10 minutes — reduce it. IOS-XE defaults are safer than older IOS — but always verify with show ip ports all. AutoSecure does most of this in one command if you need a quick start.",
+          "color": "sky"
+        }
+      ]
     }
-  ],
-  "importantPoints": [
-    "Network baseline should be established at regular intervals over time",
-    "Increased ping response times indicate latency issues",
-    "Protocol analyzers document traffic for capacity planning",
-    "Voice and video are real-time, delay-sensitive applications",
-    "Redundancy eliminates single points of failure (multiple paths)",
-    "True redundancy requires second router AND second ISP",
-    "APIPA range 169.254.0.0/16 indicates DHCP server unreachable",
-    "Can reach by IP but not name = DNS issue",
-    "Debug output sent to console line by default",
-    "Use 'terminal monitor' to see debug on VTY/Telnet sessions",
-    "Ping symbols: ! = success, . = timeout, U = unreachable",
-    "tracert (Windows) / traceroute (Linux) shows each hop",
-    "tracert -6 forces IPv6 trace",
-    "show ip interface brief: IP addresses and up/down status",
-    "show interfaces: duplex, speed, error details (Layer 1/2)",
-    "show ip route: routing table and exit interfaces",
-    "show cdp neighbors: verifies Layer 2 connectivity",
-    "show cdp neighbors detail: IP, hostname, IOS version",
-    "show version: configuration register value",
-    "show running-config: active device configuration",
-    "CDP can be disabled globally or per-interface",
-    "CDP operates at Layer 2 (no Layer 3 required)",
-    "Extended ping: issue ping with no destination in priv EXEC",
-    "nslookup: DNS name resolution testing",
-    "ipconfig: Windows PC network info",
-    "ipconfig getifaddr [interface]: Mac IP info",
-    "show ipv6 interface: IPv6 interface details",
-    "Failed ping doesn't guarantee problem - could be ICMP blocked",
-    "Structured approach ends with documentation"
-  ],
-  "quickReference": [
-    { "label": "Baseline Timing", "value": "Regular intervals over time" },
-    { "label": "Latency Indicator", "value": "Increased ping response times" },
-    { "label": "Protocol Analyzer Use", "value": "Document traffic for planning" },
-    { "label": "Real-Time Apps", "value": "Voice and video" },
-    { "label": "Redundancy Definition", "value": "Multiple paths, no single failure point" },
-    { "label": "APIPA Range", "value": "169.254.0.0/16" },
-    { "label": "APIPA Cause", "value": "DHCP server unreachable" },
-    { "label": "IP Works, Name Doesn't", "value": "DNS issue" },
-    { "label": "Debug Default", "value": "Console line" },
-    { "label": "Debug on Remote", "value": "terminal monitor" },
-    { "label": "Ping Success", "value": "!" },
-    { "label": "Ping Timeout", "value": "." },
-    { "label": "Ping Unreachable", "value": "U" },
-    { "label": "Windows Trace", "value": "tracert" },
-    { "label": "Linux Trace", "value": "traceroute" },
-    { "label": "Force IPv6 Trace", "value": "tracert -6" },
-    { "label": "Interface Summary", "value": "show ip interface brief" },
-    { "label": "Interface Details", "value": "show interfaces" },
-    { "label": "Routing Table", "value": "show ip route" },
-    { "label": "CDP Neighbors", "value": "show cdp neighbors detail" },
-    { "label": "Verify Layer 2", "value": "show cdp neighbors" },
-    { "label": "Active Config", "value": "show running-config" },
-    { "label": "Config Register", "value": "show version" },
-    { "label": "Save Config", "value": "copy run start" },
-    { "label": "Extended Ping", "value": "ping (no dest) in priv EXEC" },
-    { "label": "DNS Lookup", "value": "nslookup" },
-    { "label": "Windows IP", "value": "ipconfig" },
-    { "label": "Mac IP", "value": "ipconfig getifaddr [if]" },
-    { "label": "IPv6 Interfaces", "value": "show ipv6 interface" },
-    { "label": "Troubleshooting Steps", "value": "7 steps: Identify → Document" }
   ]
 }

@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "text": "What is the role of the MAR (Memory Address Register)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Holds the data currently being transferred to or from memory" },
+      { "id": "b", "text": "Holds the address of the memory location being accessed" },
+      { "id": "c", "text": "Holds the instruction currently being decoded" },
+      { "id": "d", "text": "Holds the address of the next instruction to fetch" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The MAR (Memory Address Register) holds the memory address that the CPU wants to read from or write to. Its contents are placed onto the Address Bus so the correct memory location can be accessed."
+  },
+  {
+    "id": 2,
+    "text": "What is the role of the MDR (Memory Data Register)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Holds the address of the memory location being read" },
+      { "id": "b", "text": "Holds the result of the last ALU calculation" },
+      { "id": "c", "text": "Holds data being transferred to or from memory" },
+      { "id": "d", "text": "Counts how many instructions have been executed" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The MDR (Memory Data Register) is a buffer that holds data travelling between the CPU and memory. When reading, it receives data from RAM via the Data Bus. When writing, it holds the data to be sent out to RAM."
+  },
+  {
+    "id": 3,
+    "text": "What does the Program Counter (PC) store?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The result of the most recent arithmetic operation" },
+      { "id": "b", "text": "The instruction currently being executed" },
+      { "id": "c", "text": "The address of the next instruction to be fetched" },
+      { "id": "d", "text": "The total number of instructions executed since boot" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Program Counter (PC) always contains the memory address of the next instruction to be fetched. After each fetch, the PC is automatically incremented to point to the following instruction, keeping the program moving forward."
+  },
+  {
+    "id": 4,
+    "text": "What is the CIR (Current Instruction Register) used for?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Stores the address of the current instruction in memory" },
+      { "id": "b", "text": "Holds the instruction that has just been fetched and is being decoded/executed" },
+      { "id": "c", "text": "Holds the data being sent to the ALU for calculation" },
+      { "id": "d", "text": "Keeps track of how many clock cycles have passed" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The CIR (Current Instruction Register) holds the instruction that was just fetched from memory. The Control Unit then decodes what is in the CIR to determine what operation needs to be carried out."
+  },
+  {
+    "id": 5,
+    "text": "What is the function of the ALU (Arithmetic Logic Unit)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Controls the flow of data between registers and memory" },
+      { "id": "b", "text": "Fetches instructions from memory" },
+      { "id": "c", "text": "Performs all arithmetic and logic operations" },
+      { "id": "d", "text": "Stores the results of calculations permanently" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The ALU performs all arithmetic operations (add, subtract, multiply) and logic operations (AND, OR, NOT, XOR, comparisons). It receives inputs from registers and sends results back to the Accumulator."
+  },
+  {
+    "id": 6,
+    "text": "What does the Accumulator do?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Accumulates memory addresses for the MAR" },
+      { "id": "b", "text": "Holds the result of ALU calculations" },
+      { "id": "c", "text": "Counts the number of fetch-decode-execute cycles" },
+      { "id": "d", "text": "Holds the next instruction to be fetched" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Accumulator is a register that holds the result of ALU operations. For example, after adding two numbers the result is stored in the Accumulator before being used further or written back to memory."
+  },
+  {
+    "id": 7,
+    "text": "What is the role of the Control Unit?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Performs all arithmetic and logical operations" },
+      { "id": "b", "text": "Stores frequently used data for fast access" },
+      { "id": "c", "text": "Directs and coordinates all operations inside the CPU" },
+      { "id": "d", "text": "Manages data transfer between RAM and the hard drive" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Control Unit is the manager of the CPU — it does not process data itself, but it sends control signals to the ALU, registers, and buses to coordinate every operation. It decodes instructions from the CIR and tells each part of the CPU what to do."
+  },
+  {
+    "id": 8,
+    "text": "Put the Fetch-Decode-Execute cycle in the correct order.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Step 1" },
+      { "id": "a2", "text": "Step 2" },
+      { "id": "a3", "text": "Step 3" },
+      { "id": "a4", "text": "Step 4" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "PC sends address to MAR → instruction fetched into MDR → copied to CIR → PC increments" },
+      { "id": "b2", "text": "Control Unit decodes the instruction in the CIR" },
+      { "id": "b3", "text": "ALU or relevant unit carries out the instruction" },
+      { "id": "b4", "text": "Result stored in Accumulator or written back to memory" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" }
+    ],
+    "explanation": "The cycle is: Fetch (get the instruction from memory using PC → MAR → MDR → CIR), Decode (Control Unit works out what the instruction means), Execute (carry out the instruction), then the result is stored. The PC has already incremented so the next fetch begins immediately."
+  },
+  {
+    "id": 9,
+    "text": "During the fetch stage, which bus does the MAR use to communicate with memory?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Data Bus" },
+      { "id": "b", "text": "Control Bus" },
+      { "id": "c", "text": "Address Bus" },
+      { "id": "d", "text": "System Bus" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The MAR places the memory address onto the Address Bus so the memory system knows which location to access. The Address Bus is unidirectional — it only carries addresses from the CPU outward to memory and I/O devices."
+  },
+  {
+    "id": 10,
+    "text": "Which two registers are directly connected to the external buses? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "MAR — connected to the Address Bus" },
+      { "id": "b", "text": "CIR — connected to the Data Bus" },
+      { "id": "c", "text": "MDR — connected to the Data Bus" },
+      { "id": "d", "text": "PC — connected to the Address Bus" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "The MAR feeds its contents onto the Address Bus to specify which memory location to access. The MDR sits on the Data Bus to receive or send the actual data. The PC and CIR are internal registers — they don't connect directly to external buses."
+  },
+  {
+    "id": 11,
+    "text": "Match each CPU component to its correct description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "MAR" },
+      { "id": "a2", "text": "MDR" },
+      { "id": "a3", "text": "PC" },
+      { "id": "a4", "text": "CIR" },
+      { "id": "a5", "text": "ALU" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Holds the address of the memory location being accessed" },
+      { "id": "b2", "text": "Holds data being transferred to or from memory" },
+      { "id": "b3", "text": "Holds the address of the next instruction" },
+      { "id": "b4", "text": "Holds the instruction currently being decoded" },
+      { "id": "b5", "text": "Performs arithmetic and logic operations" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" },
+      { "a": "a5", "b": "b5" }
+    ],
+    "explanation": "Each component has a distinct role: MAR holds addresses, MDR holds data in transit, PC tracks the next instruction, CIR holds the current instruction being worked on, and the ALU does all the maths and logic."
+  }
+]

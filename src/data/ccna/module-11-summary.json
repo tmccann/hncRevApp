@@ -1,68 +1,442 @@
 {
   "number": 11,
   "title": "IPv4 Addressing",
-  "description": "Understanding subnetting, subnet masks, CIDR notation, and IP address structure",
-  "keyConcepts": [
+  "description": "Structure, subnetting, VLSM, and address assignment",
+  "glance": [
+    { "number": "32", "label": "Bits in IPv4", "detail": "Network portion + Host portion" },
+    { "number": "3", "label": "Private ranges", "detail": "10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16" },
+    { "number": "2ⁿ-2", "label": "Usable hosts", "detail": "Where n = host bits remaining" },
+    { "number": "4", "label": "Steps to subnet", "detail": "Determine needs, borrow bits, list, assign" }
+  ],
+  "sections": [
     {
+      "id": "ipv4-structure",
+      "icon": "🔢",
       "title": "IPv4 Address Structure",
-      "description": "Every IPv4 address consists of two parts: the network portion (identifies the subnet) and the host portion (identifies the specific device within that subnet)."
+      "color": "blue",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "IPv4 Address",
+          "content": "A 32-bit hierarchical address consisting of a network portion and a host portion. Written in dotted-decimal notation as four octets (e.g., 192.168.10.1). Each octet represents 8 bits, ranging from 0 to 255."
+        },
+        {
+          "type": "text",
+          "content": "The network portion identifies which network the device belongs to, while the host portion identifies the specific device on that network. Devices use the subnet mask to determine where the dividing line is."
+        },
+        {
+          "type": "subheading",
+          "content": "Subnet Mask and Prefix Length"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "title": "Dotted-Decimal Notation",
+              "description": "Subnet mask written as four octets: 255.255.255.0. Each 255 represents 8 network bits. The 0s represent host bits.",
+              "badge": "Traditional format",
+              "note": "Example: 255.255.255.0 = first 24 bits are network"
+            },
+            {
+              "title": "Prefix Length (CIDR)",
+              "description": "A slash followed by the number of network bits: /24. More concise and commonly used in modern networking.",
+              "badge": "Modern format",
+              "note": "Example: /24 = 255.255.255.0 (24 ones, 8 zeros)"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": ["Prefix", "Subnet Mask", "Network Bits", "Host Bits"],
+          "rows": [
+            ["/8", "255.0.0.0", "8", "24"],
+            ["/16", "255.255.0.0", "16", "16"],
+            ["/24", "255.255.255.0", "24", "8"],
+            ["/25", "255.255.255.128", "25", "7"],
+            ["/26", "255.255.255.192", "26", "6"],
+            ["/27", "255.255.255.224", "27", "5"],
+            ["/28", "255.255.255.240", "28", "4"],
+            ["/30", "255.255.255.252", "30", "2"]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Logical ANDing Process"
+        },
+        {
+          "type": "definition",
+          "label": "ANDing",
+          "content": "A bitwise operation devices use to determine their network address by comparing their IP address to their subnet mask, bit by bit. If both bits are 1, the result is 1. Otherwise, the result is 0."
+        },
+        {
+          "type": "table",
+          "headers": ["Bit 1", "Bit 2", "Result"],
+          "rows": [
+            ["1", "1", "1"],
+            ["1", "0", "0"],
+            ["0", "1", "0"],
+            ["0", "0", "0"]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 ANDing in Practice",
+          "content": "Host IP: 192.168.10.10 (/24). Subnet mask: 255.255.255.0. AND them together bit-by-bit → Network address: 192.168.10.0. The host knows it belongs to the 192.168.10.0/24 network. Any destination with a different network address requires the default gateway.",
+          "color": "blue"
+        }
+      ]
     },
     {
-      "title": "Subnet Mask",
-      "description": "A 32-bit value that determines which portion of an IP address is the network and which is the host. Written in dotted decimal (e.g., 255.255.255.0) or CIDR notation (e.g., /24)."
+      "id": "communication-types",
+      "icon": "📡",
+      "title": "Types of IPv4 Communication",
+      "color": "indigo",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "IPv4 supports three types of communication: unicast (one-to-one), broadcast (one-to-all), and multicast (one-to-a-group). Each serves different purposes and uses different addressing ranges."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "Unicast",
+            "content": "One-to-one communication. A packet is sent from one source to one specific destination. This is the most common type — normal web browsing, email, file transfers all use unicast."
+          },
+          "right": {
+            "label": "Broadcast",
+            "content": "One-to-all communication within a local network. A packet is sent to every device on the subnet. Used for DHCP requests, ARP requests. Does NOT cross routers — limited to the local broadcast domain."
+          },
+          "note": "Unicast uses normal host addresses. Broadcast uses the all-1s address in the host portion (e.g., 192.168.10.255 for 192.168.10.0/24)."
+        },
+        {
+          "type": "definition",
+          "label": "Multicast",
+          "content": "One-to-a-selected-group communication. A single packet is sent to a multicast group address (224.0.0.0 to 239.255.255.255). Only devices that have joined that multicast group receive the packet. Used for streaming video, routing protocol updates, and other efficient one-to-many applications."
+        }
+      ]
     },
     {
-      "title": "CIDR Notation",
-      "description": "Classless Inter-Domain Routing notation uses a slash followed by the number of network bits (e.g., /24, /27, /30). Makes subnet masks easier to read and write."
+      "id": "address-types",
+      "icon": "🏷️",
+      "title": "Special Address Ranges",
+      "color": "purple",
+      "blocks": [
+        {
+          "type": "subheading",
+          "content": "Private Addresses (RFC 1918)"
+        },
+        {
+          "type": "definition",
+          "label": "Private IPv4 Addresses",
+          "content": "Address ranges reserved for use on internal networks. These addresses are NOT routable on the public internet — they must be translated via NAT to reach external networks. Any organization can use these ranges internally without coordination."
+        },
+        {
+          "type": "table",
+          "headers": ["Range", "Prefix", "Number of Addresses", "Typical Use"],
+          "rows": [
+            ["10.0.0.0 – 10.255.255.255", "/8", "16,777,216", "Large enterprises, ISPs"],
+            ["172.16.0.0 – 172.31.255.255", "/12", "1,048,576", "Medium enterprises"],
+            ["192.168.0.0 – 192.168.255.255", "/16", "65,536", "Home networks, small businesses"]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Loopback Addresses"
+        },
+        {
+          "type": "grid",
+          "columns": 1,
+          "items": [
+            {
+              "title": "127.0.0.0/8 — Loopback Range",
+              "description": "The entire 127.0.0.0 to 127.255.255.255 range is reserved for loopback. Most commonly, 127.0.0.1 is used. Traffic sent to a loopback address stays internal to the host — it never leaves the device.",
+              "badge": "Testing & diagnostics",
+              "note": "Example: ping 127.0.0.1 tests the TCP/IP stack on your own computer without sending anything on the wire."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Link-Local Addresses (APIPA)"
+        },
+        {
+          "type": "grid",
+          "columns": 1,
+          "items": [
+            {
+              "title": "169.254.0.0/16 — Automatic Private IP Addressing",
+              "description": "If a host is configured for DHCP but cannot reach a DHCP server, it self-assigns an address in the 169.254.0.0/16 range. This allows local communication only — no internet access or routing.",
+              "badge": "Fallback addressing",
+              "cardColor": "orange",
+              "note": "Seeing a 169.254.x.x address on a Windows machine? DHCP failed. Check network cable, DHCP server, or switch config."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Legacy Classful Addressing"
+        },
+        {
+          "type": "table",
+          "headers": ["Class", "First Octet Range", "Default Mask", "Purpose"],
+          "rows": [
+            ["Class A", "1 – 126", "/8 (255.0.0.0)", "Very large networks (deprecated)"],
+            ["Class B", "128 – 191", "/16 (255.255.0.0)", "Medium networks (deprecated)"],
+            ["Class C", "192 – 223", "/24 (255.255.255.0)", "Small networks (deprecated)"]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚠️ Classful Addressing is Obsolete",
+          "content": "Classful addressing was replaced by CIDR (Classless Inter-Domain Routing) in the mid-1990s because it wasted addresses. Modern networks use variable-length subnet masks (/25, /26, /27, etc.) to allocate addresses more efficiently. You'll still see references to 'Class A/B/C' in older materials, but it's no longer used in practice.",
+          "color": "red"
+        }
+      ]
     },
     {
-      "title": "Subnetting",
-      "description": "The process of borrowing host bits to create additional networks. Increases the number of subnets but reduces the number of hosts per subnet."
+      "id": "subnetting",
+      "icon": "🔪",
+      "title": "Network Segmentation (Subnetting)",
+      "color": "emerald",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "Subnetting",
+          "content": "The process of dividing a larger network into smaller subnetworks (subnets) by borrowing bits from the host portion and treating them as additional network bits. This creates multiple smaller broadcast domains instead of one large one."
+        },
+        {
+          "type": "subheading",
+          "content": "Why Subnet?"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Reduces broadcast domain size — fewer devices per subnet means less broadcast traffic and better performance.",
+            "Improves security — different subnets can have different security policies and access controls.",
+            "Simplifies troubleshooting — smaller networks are easier to monitor and diagnose.",
+            "Allows network growth — you can add new subnets as the organization expands.",
+            "Required for routing — routers separate broadcast domains and forward packets between subnets."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "How Subnetting Works: Borrowing Bits"
+        },
+        {
+          "type": "text",
+          "content": "To create subnets, you 'borrow' bits from the host portion and add them to the network portion. The more bits you borrow, the more subnets you can create — but each subnet will have fewer usable host addresses."
+        },
+        {
+          "type": "table",
+          "headers": ["Bits Borrowed", "Number of Subnets", "Subnet Bits Value", "New Mask (from /24)"],
+          "rows": [
+            ["1", "2 (2¹)", "128", "/25 (255.255.255.128)"],
+            ["2", "4 (2²)", "192", "/26 (255.255.255.192)"],
+            ["3", "8 (2³)", "224", "/27 (255.255.255.224)"],
+            ["4", "16 (2⁴)", "240", "/28 (255.255.255.240)"],
+            ["5", "32 (2⁵)", "248", "/29 (255.255.255.248)"],
+            ["6", "64 (2⁶)", "252", "/30 (255.255.255.252)"]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "📐 The Usable Host Formula",
+          "content": "Usable hosts per subnet = 2ⁿ - 2, where n = number of host bits remaining. The '-2' accounts for the network address (all 0s in host portion) and the broadcast address (all 1s in host portion). Example: /27 has 5 host bits → 2⁵ - 2 = 32 - 2 = 30 usable hosts per subnet.",
+          "color": "emerald"
+        },
+        {
+          "type": "subheading",
+          "content": "Subnetting Example: /24 Network"
+        },
+        {
+          "type": "text",
+          "content": "Given network: 192.168.1.0/24. Requirement: Create 4 subnets. How many bits to borrow? 2 bits (because 2² = 4 subnets). New mask: /26 (24 + 2 = 26). Usable hosts per subnet: 2⁶ - 2 = 62."
+        },
+        {
+          "type": "table",
+          "headers": ["Subnet", "Network Address", "First Usable Host", "Last Usable Host", "Broadcast Address"],
+          "codeColumn": 1,
+          "rows": [
+            ["Subnet 0", "192.168.1.0/26", "192.168.1.1", "192.168.1.62", "192.168.1.63"],
+            ["Subnet 1", "192.168.1.64/26", "192.168.1.65", "192.168.1.126", "192.168.1.127"],
+            ["Subnet 2", "192.168.1.128/26", "192.168.1.129", "192.168.1.190", "192.168.1.191"],
+            ["Subnet 3", "192.168.1.192/26", "192.168.1.193", "192.168.1.254", "192.168.1.255"]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Subnet Zero",
+          "content": "In the past, Subnet 0 (the first subnet) was considered unusable. Modern Cisco devices allow its use by default. The command ip subnet-zero enables it, but it's on by default in current IOS versions.",
+          "color": "amber"
+        }
+      ]
     },
     {
-      "title": "VLSM (Variable Length Subnet Masking)",
-      "description": "Allows different subnet masks within the same network, enabling efficient IP address allocation by tailoring subnet sizes to specific requirements."
+      "id": "vlsm",
+      "icon": "📊",
+      "title": "Variable Length Subnet Masking (VLSM)",
+      "color": "sky",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "VLSM",
+          "content": "Variable Length Subnet Masking allows a network to be divided into subnets of different sizes by subnetting a subnet. This creates unequal-sized subnets that match specific host requirements, dramatically reducing wasted IP addresses."
+        },
+        {
+          "type": "text",
+          "content": "Traditional subnetting creates equal-sized subnets, which wastes addresses. For example, a /24 network split into 4 subnets gives you four /26 subnets with 62 hosts each — even if you only need 10 hosts on some segments. VLSM solves this by allowing different mask lengths for different subnets."
+        },
+        {
+          "type": "subheading",
+          "content": "Why Use VLSM?"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "cardColor": "sky",
+          "items": [
+            {
+              "title": "Efficient Address Use",
+              "description": "Point-to-point WAN links only need 2 usable addresses. Using a /30 (4 addresses, 2 usable) instead of /24 (256 addresses) saves 252 addresses per link.",
+              "badge": "Prevents waste"
+            },
+            {
+              "title": "Matches Real Requirements",
+              "description": "LAN segments might need 50 hosts, while server subnets might need 10, and WAN links need 2. VLSM lets you size each subnet appropriately.",
+              "badge": "Flexible design"
+            },
+            {
+              "title": "Maximizes Available Space",
+              "description": "By using the exact mask needed for each subnet, you can fit more subnets into the same address block.",
+              "badge": "More subnets"
+            },
+            {
+              "title": "Supports Growth",
+              "description": "Large subnets for user networks, medium for servers, small for infrastructure. Room to expand where needed without redesigning.",
+              "badge": "Scalable"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "VLSM Planning Rule"
+        },
+        {
+          "type": "callout",
+          "title": "⚡ Start with the Largest",
+          "content": "CRITICAL RULE: When designing with VLSM, always satisfy the host requirements of the LARGEST subnet first, then work your way down to the smallest. If you start with small subnets, you may not have enough contiguous address space left for the large ones.",
+          "color": "orange"
+        },
+        {
+          "type": "subheading",
+          "content": "VLSM Example"
+        },
+        {
+          "type": "text",
+          "content": "Given: 192.168.1.0/24. Requirements: LAN A needs 100 hosts, LAN B needs 50 hosts, WAN link needs 2 hosts."
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "description": "Largest first: LAN A needs 100 hosts. Need 7 host bits (2⁷ - 2 = 126 usable). Use /25 → 192.168.1.0/25 (192.168.1.0 – 192.168.1.127)."
+            },
+            {
+              "description": "Next largest: LAN B needs 50 hosts. Need 6 host bits (2⁶ - 2 = 62 usable). Use /26 → 192.168.1.128/26 (192.168.1.128 – 192.168.1.191)."
+            },
+            {
+              "description": "Smallest: WAN link needs 2 hosts. Need 2 host bits (2² - 2 = 2 usable). Use /30 → 192.168.1.192/30 (192.168.1.192 – 192.168.1.195)."
+            },
+            {
+              "description": "Remaining addresses: 192.168.1.196 – 192.168.1.255 available for future growth."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 VLSM on Point-to-Point Links",
+          "content": "Point-to-point WAN links (router-to-router) are THE classic use case for /30 subnets. You only need 2 usable IPs (one for each router interface). Using /30 gives you exactly that: 4 total addresses (network, 2 usable, broadcast). Anything larger is wasteful.",
+          "color": "sky"
+        }
+      ]
     },
     {
-      "title": "ANDing Process",
-      "description": "Layer 3 devices perform bitwise AND operation between IP address and subnet mask to determine the network address, which is used for routing decisions."
+      "id": "structured-design",
+      "icon": "🗂️",
+      "title": "Structured Design and Assignment",
+      "color": "amber",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "A consistent, well-planned IP addressing scheme makes network management easier, troubleshooting faster, and documentation clearer. Random address assignment leads to chaos."
+        },
+        {
+          "type": "subheading",
+          "content": "Address Assignment Best Practices"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "title": "End-User Devices",
+              "description": "Assign dynamically via DHCP. Users don't need fixed addresses, and DHCP prevents IP conflicts and simplifies management.",
+              "badge": "Dynamic (DHCP)",
+              "cardColor": "emerald"
+            },
+            {
+              "title": "Servers & Printers",
+              "description": "Assign static addresses in a predictable range (e.g., .10 – .50). Makes it easy to find and remember critical infrastructure.",
+              "badge": "Static (predictable)",
+              "cardColor": "blue"
+            },
+            {
+              "title": "Routers & Gateways",
+              "description": "Typically use the first (.1) or last (.254) usable address in the subnet. Consistent across all subnets.",
+              "badge": "Static (first or last)",
+              "cardColor": "indigo"
+            },
+            {
+              "title": "Management Devices",
+              "description": "Switches, APs, security cameras — assign static addresses in a separate range (e.g., .100 – .150) for easy identification.",
+              "badge": "Static (dedicated range)",
+              "cardColor": "purple"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Subnet Numbering Patterns"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Use meaningful subnet numbers that map to locations or departments: VLAN 10 = Admin (192.168.10.0/24), VLAN 20 = Sales (192.168.20.0/24), VLAN 30 = Engineering (192.168.30.0/24).",
+            "Keep point-to-point WAN links in a separate range: 192.168.255.0/24 subdivided into /30s for each link.",
+            "Reserve address space for future growth — don't use every available subnet immediately.",
+            "Document everything in a spreadsheet or network diagram. Update it when changes are made.",
+            "Use consistent gateway addresses — if .1 is the gateway on one subnet, use .1 on all subnets."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "📋 Documentation is Critical",
+          "content": "The best IP addressing scheme is worthless without documentation. Create a spreadsheet showing: subnet address, mask, purpose, VLAN ID, gateway address, usable range, and notes. Update it religiously. Six months from now, you won't remember why you used .10 – .20 for printers.",
+          "color": "amber"
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "Bad Practice",
+            "content": "Random assignment: server at .47, printer at .203, gateway at .184. DHCP pool overlaps with static assignments. No documentation. Different gateway addresses on different subnets (.1 here, .254 there). Result: IP conflicts, confusion, troubleshooting nightmares."
+          },
+          "right": {
+            "label": "Good Practice",
+            "content": "Structured assignment: gateways always .1, servers .10–.50, printers .51–.70, DHCP pool .100–.200, management .201–.220. Documented in a spreadsheet. Consistent across all subnets. Result: Easy to troubleshoot, no conflicts, clear what each address is for."
+          }
+        }
+      ]
     }
-  ],
-  "importantPoints": [
-    "IPv4 addresses have two components: network portion and host portion",
-    "Subnet mask determines the boundary between network and host bits",
-    "CIDR /24 = 255.255.255.0 (24 network bits, 8 host bits)",
-    "Formula: Usable hosts = 2^(host bits) - 2",
-    "Network address: all host bits = 0 (not assignable to hosts)",
-    "Broadcast address: all host bits = 1 (not assignable to hosts)",
-    "Total addresses - 2 (network + broadcast) = usable host addresses",
-    "Borrowing bits creates subnets: 2^(borrowed bits) = number of subnets",
-    "More borrowed bits = more subnets but fewer hosts per subnet",
-    "ANDing determines if destination is local or remote",
-    "VLSM allows different-sized subnets in the same network",
-    "/26 = 62 usable hosts (6 host bits: 64 - 2)",
-    "/27 = 30 usable hosts (5 host bits: 32 - 2)",
-    "/28 = 14 usable hosts (4 host bits: 16 - 2)",
-    "/29 = 6 usable hosts (3 host bits: 8 - 2)",
-    "/30 = 2 usable hosts (2 host bits: 4 - 2) - used for point-to-point links"
-  ],
-  "quickReference": [
-    { "label": "/24 Mask", "value": "255.255.255.0 (254 hosts)" },
-    { "label": "/25 Mask", "value": "255.255.255.128 (126 hosts)" },
-    { "label": "/26 Mask", "value": "255.255.255.192 (62 hosts)" },
-    { "label": "/27 Mask", "value": "255.255.255.224 (30 hosts)" },
-    { "label": "/28 Mask", "value": "255.255.255.240 (14 hosts)" },
-    { "label": "/29 Mask", "value": "255.255.255.248 (6 hosts)" },
-    { "label": "/30 Mask", "value": "255.255.255.252 (2 hosts)" },
-    { "label": "/20 Mask", "value": "255.255.240.0" },
-    { "label": "Usable Hosts Formula", "value": "2^(host bits) - 2" },
-    { "label": "Number of Subnets", "value": "2^(borrowed bits)" },
-    { "label": "Network Address", "value": "All host bits = 0" },
-    { "label": "Broadcast Address", "value": "All host bits = 1" },
-    { "label": "ANDing Purpose", "value": "Find network address" },
-    { "label": "VLSM Benefit", "value": "Different subnet sizes in same network" },
-    { "label": "4 Host Bits", "value": "/28 = 255.255.255.240" },
-    { "label": "5 Host Bits", "value": "/27 = 255.255.255.224" },
-    { "label": "6 Host Bits", "value": "/26 = 255.255.255.192" }
   ]
 }

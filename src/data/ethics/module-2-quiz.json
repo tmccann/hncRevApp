@@ -1,0 +1,284 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: A website collects users' email addresses for a newsletter, then sells them to a marketing company without telling users. Which law does this breach?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Computer Misuse Act" },
+      { "id": "b", "text": "Data Protection Act / GDPR" },
+      { "id": "c", "text": "Copyright, Designs and Patents Act" },
+      { "id": "d", "text": "Consumer Rights Act" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "GDPR requires that personal data is only used for the specific purpose it was collected for. Collecting emails for a newsletter then selling them to a third party without consent violates this principle — known as purpose limitation."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: A company suffers a data breach and customer passwords stored in plain text are exposed online. Which law requires the company to take action?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Computer Misuse Act — someone hacked the system" },
+      { "id": "b", "text": "Copyright, Designs and Patents Act — the data is protected" },
+      { "id": "c", "text": "Data Protection Act / GDPR — personal data must be kept secure" },
+      { "id": "d", "text": "Health and Safety at Work Act" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "GDPR requires organisations to keep personal data secure using appropriate technical measures. Storing passwords in plain text (rather than hashed) is itself a violation. GDPR also requires the breach to be reported to the ICO within 72 hours."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: A user asks a company to show them all the personal data it holds about them. What is this request called under GDPR?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A Freedom of Information request" },
+      { "id": "b", "text": "A Data Erasure Request" },
+      { "id": "c", "text": "A Subject Access Request (SAR)" },
+      { "id": "d", "text": "A Data Portability Claim" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Under GDPR, individuals have the right to access the personal data an organisation holds about them by making a Subject Access Request (SAR). The organisation must respond within one month and provide a copy of the data free of charge."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: A user wants a company to permanently delete all data it holds about them. Which GDPR right covers this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Right to Rectification" },
+      { "id": "b", "text": "Right to Data Portability" },
+      { "id": "c", "text": "Right to Restriction" },
+      { "id": "d", "text": "Right to Erasure — the right to be forgotten" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The Right to Erasure (also called the right to be forgotten) allows individuals to request that an organisation deletes their personal data. It applies in certain circumstances — for example when the data is no longer needed for its original purpose, or consent has been withdrawn."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: A company keeps customer purchase records for 15 years even though they only need them for 2 years for accounting purposes. Which GDPR principle does this breach?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Data Minimisation" },
+      { "id": "b", "text": "Purpose Limitation" },
+      { "id": "c", "text": "Storage Limitation — data should not be kept longer than necessary" },
+      { "id": "d", "text": "Integrity and Confidentiality" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "GDPR's Storage Limitation principle states that personal data should not be kept longer than is necessary for the purpose it was collected. Keeping records for 15 years when 2 years suffices is a clear violation. Organisations should have a data retention policy that defines and enforces deletion schedules."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: An app asks users to tick a pre-ticked box to opt out of marketing emails rather than asking them to actively opt in. Why does this breach GDPR?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It doesn't breach GDPR — opt-out is an acceptable form of consent" },
+      { "id": "b", "text": "Because GDPR requires consent to be freely given, specific, informed, and unambiguous — a pre-ticked box is not valid consent" },
+      { "id": "c", "text": "Because marketing emails are banned under GDPR" },
+      { "id": "d", "text": "Because the box should be on paper, not digital" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "GDPR requires consent to be freely given, specific, informed, and unambiguous. A pre-ticked box assumes consent — the user hasn't actively agreed to anything. Valid consent must be a clear affirmative action, like ticking an empty box yourself."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: A hospital shares patient medical records with a pharmaceutical company for research without patient consent. Which law is breached, and why is this particularly serious?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Computer Misuse Act — the records were accessed without authorisation" },
+      { "id": "b", "text": "Data Protection Act / GDPR — medical data is special category data requiring explicit consent" },
+      { "id": "c", "text": "Copyright, Designs and Patents Act — medical records are protected documents" },
+      { "id": "d", "text": "No law is breached if the research is for public benefit" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Medical records are 'special category data' under GDPR — a higher protection category that includes health data, biometrics, and racial or ethnic origin. Special category data requires explicit consent for processing. Sharing it without consent is a serious GDPR breach, carrying higher potential fines."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: Which two of the following are individual rights under GDPR? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Right to access data held about you (Subject Access Request)" },
+      { "id": "b", "text": "Right to demand a company never processes any data about you at all" },
+      { "id": "c", "text": "Right to have inaccurate data corrected (Right to Rectification)" },
+      { "id": "d", "text": "Right to read data the company holds about other customers" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "GDPR gives individuals several rights: access (SAR), erasure, rectification, portability, restriction, and the right to object. The right to have inaccurate data corrected — rectification — is particularly important as incorrect data can cause real harm (e.g. wrong medical records or credit history)."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: How long does an organisation have to report a personal data breach to the ICO (Information Commissioner's Office) under GDPR?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "24 hours" },
+      { "id": "b", "text": "7 days" },
+      { "id": "c", "text": "72 hours" },
+      { "id": "d", "text": "30 days" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Under GDPR, organisations must notify the ICO of a personal data breach within 72 hours of becoming aware of it — unless the breach is unlikely to result in risk to individuals. If notification is not made within 72 hours, a reason for the delay must be provided."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: A company collects names, addresses, and ages from customers. Under GDPR, which of the following must they do? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Tell customers what the data will be used for" },
+      { "id": "b", "text": "Store the data on servers located only in the UK" },
+      { "id": "c", "text": "Only collect data that is necessary for their stated purpose" },
+      { "id": "d", "text": "Publish all collected data annually in a public report" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "GDPR requires transparency (telling individuals what data is collected and why — the purpose limitation principle) and data minimisation (only collecting what is strictly necessary). Data doesn't have to be stored in the UK, and collected data must never be made public."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why does GDPR require organisations to only collect data that is strictly necessary?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To reduce server storage costs for companies" },
+      { "id": "b", "text": "Because the government monitors how much data companies hold" },
+      { "id": "c", "text": "Because unnecessary data increases the potential harm to individuals if a breach occurs — less data means less risk" },
+      { "id": "d", "text": "Because data minimisation makes databases faster" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "This is the data minimisation principle — ethically, you should only hold what you actually need. The more unnecessary data you hold, the greater the potential harm to individuals if it is breached, leaked, or misused. It also limits the scope of damage in a worst-case scenario."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: Why does GDPR give individuals the right to know what data is held about them?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "So they can sell their own data to competitors" },
+      { "id": "b", "text": "Because individuals have a fundamental right to privacy and control over their own personal information" },
+      { "id": "c", "text": "So they can check the company is storing data efficiently" },
+      { "id": "d", "text": "Because all personal data is technically owned by the government" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Privacy is a fundamental ethical and legal right. Your personal data — name, address, health information, browsing habits — is an extension of who you are. People should have control over how it is used, who sees it, and the ability to correct it if it's wrong. GDPR turns this ethical principle into enforceable law."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: A company argues that collecting extra customer data 'might be useful one day.' Why does GDPR reject this approach?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because data must be collected for a specific, stated purpose — vague future use is not valid justification" },
+      { "id": "b", "text": "Because companies are not allowed to store data for more than one year" },
+      { "id": "c", "text": "Because collecting data for future use requires a special GDPR licence" },
+      { "id": "d", "text": "GDPR does not reject this — speculative data collection is permitted with a notice" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "GDPR's purpose limitation principle requires a clear, specific, and legitimate reason for collecting data at the time of collection. 'Might be useful one day' is not a valid purpose. This protects individuals from having their data harvested speculatively and potentially misused later."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: Why is it ethically important that consent under GDPR must be freely given — meaning someone cannot be forced to consent as a condition of using a service?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because forced consent increases server load" },
+      { "id": "b", "text": "Because if consent is not genuinely free, it is not real consent — it is coercion, and coerced consent violates individual autonomy" },
+      { "id": "c", "text": "Because companies would collect too much data if consent was mandatory" },
+      { "id": "d", "text": "It is not ethically important — mandatory consent is acceptable if the service is free" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "If someone must give consent to use a service they need — like a healthcare portal — they have no real choice. That is coercion, not consent. Ethically, consent only has meaning when the person has a genuine alternative. GDPR reflects this by requiring consent to be freely given and withdrawable at any time."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: A data breach exposes 10,000 customers' names and email addresses. Why might the company still face significant GDPR consequences even if no financial data was leaked?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "They won't — GDPR fines only apply to financial data breaches" },
+      { "id": "b", "text": "Because any personal data breach that poses risk to individuals must be reported and may result in ICO investigation and fines" },
+      { "id": "c", "text": "Because email addresses are classified as special category data" },
+      { "id": "d", "text": "Only if the customers personally complain to the ICO" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "GDPR applies to all personal data — not just financial information. Names and email addresses are personal data. A breach of 10,000 records is a significant incident that must be reported to the ICO. The ICO can investigate, issue fines up to £17.5 million or 4% of global turnover, and require changes to data handling practices."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 2 — REASONING: Why is the 72-hour breach notification requirement ethically important — not just legally?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because 72 hours gives the company time to fix the breach before telling anyone" },
+      { "id": "b", "text": "Because individuals whose data was exposed have a right to know quickly so they can protect themselves — for example by changing passwords" },
+      { "id": "c", "text": "Because the ICO needs 72 hours to prepare its investigation team" },
+      { "id": "d", "text": "It is only a legal requirement, there is no ethical dimension" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The ethical reason behind rapid notification is that affected individuals need to be able to protect themselves. If your email and password were leaked, you need to know as soon as possible so you can change credentials. Delays in notification leave people exposed and vulnerable — which is why GDPR makes it a legal obligation."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each part of a strong 15-mark answer to the scenario: 'A company lost customer data due to poor security — passwords were stored in plain text.' Note — content is deliberately out of order.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Part 1: Name the law" },
+      { "id": "a2", "text": "Part 2: What the law covers" },
+      { "id": "a3", "text": "Part 3: Apply it to the scenario" },
+      { "id": "a4", "text": "Part 4: How it protects individuals" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Affected individuals can make a Subject Access Request, request deletion of their data, and may be entitled to compensation. The ICO can fine the company up to £17.5 million or 4% of global turnover" },
+      { "id": "b2", "text": "Requires organisations to process personal data lawfully, keep it secure, only use it for its stated purpose, and report breaches to the ICO within 72 hours" },
+      { "id": "b3", "text": "Storing passwords in plain text is a failure to apply appropriate technical security measures — a direct breach of GDPR's integrity and confidentiality principle" },
+      { "id": "b4", "text": "The Data Protection Act 2018 / GDPR" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Same four-part structure: Name → Covers → Apply → Protects. Notice Part 4 mentions specific rights (SAR, deletion, compensation) and specific consequences (ICO fines). That level of detail is what separates a good answer from a great one."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: A student writes: 'GDPR means companies must keep data safe.' What is missing from this answer? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "It doesn't apply the law to a specific scenario" },
+      { "id": "b", "text": "It doesn't explain individual rights such as Subject Access Requests or the right to erasure" },
+      { "id": "c", "text": "It uses the wrong name — it should say Data Protection Act" },
+      { "id": "d", "text": "It is correct and complete — no marks are missing" }
+    ],
+    "correctAnswer": ["a", "b"],
+    "explanation": "That answer only scratches the surface. A full answer would explain what GDPR requires (purpose limitation, data minimisation, security, breach reporting), apply it to the specific scenario, and explain what protection individuals have — their rights to access, erasure, rectification, and the ICO's enforcement powers."
+  },
+  {
+    "id": 19,
+    "text": "LAYER 3 — BUILD THE ANSWER: Which two statements would most strengthen a written exam answer about GDPR protecting a company's customers? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Individuals can make a Subject Access Request to see all data held about them" },
+      { "id": "b", "text": "GDPR stands for General Data Protection Regulation" },
+      { "id": "c", "text": "The ICO can issue fines up to £17.5 million or 4% of global annual turnover for serious breaches" },
+      { "id": "d", "text": "GDPR was introduced in 2018" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Naming individual rights (SAR, erasure, rectification) and enforcement consequences (ICO fines, investigation powers) demonstrates real understanding of how the law protects people. Stating what the acronym stands for or the year it was introduced is background knowledge that won't score marks on its own."
+  },
+  {
+    "id": 20,
+    "text": "LAYER 3 — BUILD THE ANSWER: A scenario question asks how GDPR protects employees whose HR records were leaked. Match the GDPR principle to the protection it provides in this situation.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Integrity & Confidentiality principle" },
+      { "id": "a2", "text": "72-hour breach notification" },
+      { "id": "a3", "text": "Right to Erasure" },
+      { "id": "a4", "text": "Right to Rectification" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Employees can request their HR records are deleted when they leave the company" },
+      { "id": "b2", "text": "Requires the company to use appropriate security — the breach itself may be evidence of a GDPR violation" },
+      { "id": "b3", "text": "Employees can request incorrect information in their HR records be corrected" },
+      { "id": "b4", "text": "Employees must be informed quickly so they can take protective action" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b1" },
+      { "a": "a4", "b": "b3" }
+    ],
+    "explanation": "This question tests whether you can connect GDPR principles to real outcomes for individuals. In an exam scenario you should always link the principle to what it actually means for the person affected — not just state the principle name."
+  }
+]

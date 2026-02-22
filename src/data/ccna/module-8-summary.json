@@ -1,61 +1,385 @@
 {
   "number": 8,
   "title": "Network Layer",
-  "description": "Understanding IP addressing, routing, and network layer protocols",
-  "keyConcepts": [
+  "description": "IP characteristics, routing, and packet forwarding",
+  "glance": [
+    { "number": "4", "label": "Basic operations", "detail": "Addressing, Encapsulation, Routing, De-encapsulation" },
+    { "number": "3", "label": "IP characteristics", "detail": "Connectionless, Best-effort, Media-independent" },
+    { "number": "3", "label": "Route types", "detail": "Directly connected, Remote, Default" },
+    { "number": "128", "label": "IPv6 address bits", "detail": "vs 32 bits in IPv4" }
+  ],
+  "sections": [
     {
-      "title": "Network Layer Functions",
-      "description": "Layer 3 provides logical addressing (IP addresses), routing between networks, and path determination. It encapsulates transport layer segments into packets."
+      "id": "network-layer-ops",
+      "icon": "⚙️",
+      "title": "Network Layer Characteristics",
+      "color": "blue",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "The network layer (Layer 3) enables end-to-end connectivity across multiple networks. It performs four basic operations to move packets from source to destination, even when they're on different networks separated by multiple routers."
+        },
+        {
+          "type": "subheading",
+          "content": "Four Basic Operations"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "🏷️",
+              "title": "1. Addressing End Devices",
+              "description": "Every device must have a unique IP address for identification. The network layer uses these addresses to identify the source and destination of each packet. Without unique addresses, routing is impossible.",
+              "badge": "Identification"
+            },
+            {
+              "icon": "📦",
+              "title": "2. Encapsulation",
+              "description": "The network layer receives the transport layer PDU (segment) and adds an IP header containing source IP, destination IP, and other control information. This creates a packet. The packet is then passed to the data link layer for framing.",
+              "badge": "Header added"
+            },
+            {
+              "icon": "🗺️",
+              "title": "3. Routing",
+              "description": "Routers examine the destination IP in the packet header and consult their routing tables to select the best path. Each router makes an independent forwarding decision, passing the packet to the next hop until it reaches the destination network.",
+              "badge": "Path selection"
+            },
+            {
+              "icon": "📭",
+              "title": "4. De-encapsulation",
+              "description": "When the packet reaches the destination host, the network layer checks the destination IP. If it matches, the IP header is removed and the transport layer PDU is passed up to Layer 4 for further processing.",
+              "badge": "Header removed"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Key IP Characteristics"
+        },
+        {
+          "type": "definition",
+          "label": "Connectionless",
+          "content": "IP does not establish a dedicated end-to-end connection before sending data. No handshake, no setup, no teardown. Each packet is treated independently — packets from the same data stream can take different paths and arrive out of order."
+        },
+        {
+          "type": "definition",
+          "label": "Best Effort (Unreliable)",
+          "content": "IP provides no guarantees. Packets may be lost, duplicated, corrupted, delayed, or delivered out of sequence. IP has no mechanism to detect or recover from these issues — reliability is delegated to upper layers (TCP at Layer 4)."
+        },
+        {
+          "type": "definition",
+          "label": "Media Independent",
+          "content": "IP operates independently of the physical medium. The same IP packet can travel over Ethernet, fiber, Wi-Fi, or cellular without modification. The data link layer handles the specifics of each medium. IP doesn't care how bits are transmitted — it just cares about moving packets."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Connectionless nature means less overhead — no connection setup or state tracking. Packets are sent immediately.",
+            "Best-effort delivery keeps IP simple and fast. Complexity is pushed to the edges (end devices using TCP) rather than the core (routers).",
+            "Media independence allows IP to work over any physical network. You can mix Ethernet, fiber, and wireless in the same path.",
+            "IP's simplicity is its strength — routers can process millions of packets per second because there's minimal per-packet work.",
+            "Upper layers (TCP) add reliability, ordering, and error recovery. UDP skips this for speed. Applications choose based on their needs."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Why 'Best Effort' is Good Enough",
+          "content": "IP's lack of reliability might seem bad, but it's actually a design feature. By keeping the network layer simple and fast, we can build reliable protocols (like TCP) on top of it when needed, or skip reliability entirely (like UDP) for real-time applications. This flexibility is why the internet scales so well.",
+          "color": "blue"
+        }
+      ]
     },
     {
-      "title": "IPv4 Addressing",
-      "description": "32-bit hierarchical addressing system providing ~4.3 billion addresses. Format: xxx.xxx.xxx.xxx (dotted decimal notation)."
+      "id": "ipv4-vs-ipv6",
+      "icon": "🔄",
+      "title": "IPv4 vs. IPv6 Packets",
+      "color": "indigo",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "IPv4 was designed in the 1970s when the internet was small and address space seemed infinite. By the 2000s, addresses were running out. IPv6 was developed to solve this with a vastly larger address space and a more efficient header design."
+        },
+        {
+          "type": "subheading",
+          "content": "IPv4 Limitations"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Address depletion: Only 4.3 billion addresses (2³²). Exhausted in 2011. NAT extends life but adds complexity.",
+            "Header complexity: Optional fields and variable-length headers slow down router processing.",
+            "No built-in security: IPsec is optional. No native encryption or authentication.",
+            "Fragmentation: Routers can fragment packets, adding overhead and complexity.",
+            "Limited QoS support: Quality of Service is possible but not well integrated into the protocol."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "IPv6 Improvements"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Massive address space: 340 undecillion addresses (2¹²⁸). Enough for billions of addresses per person on Earth.",
+            "Simplified header: Fixed-length 40-byte header with no options. Faster router processing.",
+            "Built-in security: IPsec is mandatory. Encryption and authentication are native features.",
+            "No fragmentation by routers: Only the source can fragment. Routers drop oversized packets and send ICMP messages.",
+            "Better QoS: Flow Label field allows easier traffic classification and prioritization.",
+            "Efficient routing: Hierarchical addressing and simplified headers reduce routing table size and lookup time."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Header Comparison"
+        },
+        {
+          "type": "table",
+          "headers": ["Field", "IPv4", "IPv6", "Purpose"],
+          "rows": [
+            ["Version", "4 bits (0100)", "4 bits (0110)", "Identifies packet as IPv4 or IPv6"],
+            ["Priority/QoS", "Differentiated Services (DS)", "Traffic Class", "Marks packets for Quality of Service handling"],
+            ["Lifetime", "Time to Live (TTL)", "Hop Limit", "Prevents infinite routing loops (decremented by each router)"],
+            ["Payload Type", "Protocol (8 bits)", "Next Header (8 bits)", "Identifies upper-layer protocol (TCP=6, UDP=17, ICMPv6=58)"],
+            ["Addressing", "Source & Dest (32 bits each)", "Source & Dest (128 bits each)", "Identifies sender and receiver"],
+            ["Header Length", "Variable (20-60 bytes)", "Fixed (40 bytes)", "IPv6 is simpler — no options in main header"],
+            ["Checksum", "Header checksum (required)", "No checksum", "IPv6 relies on lower/upper layers for error detection"],
+            ["Fragmentation", "Flags and Fragment Offset", "No fragmentation fields", "IPv6 routers do not fragment packets"]
+          ]
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "IPv4 Header",
+            "content": "20-60 bytes (variable length). Includes header checksum. Supports router fragmentation. Optional fields increase complexity. Routers must process variable-length headers and checksums. Result: Slower processing, more overhead."
+          },
+          "right": {
+            "label": "IPv6 Header",
+            "content": "40 bytes (fixed length). No header checksum. No fragmentation by routers. Extension headers instead of options. Routers process a simple, predictable header. Result: Faster processing, lower overhead."
+          },
+          "note": "IPv6's simplified header means routers can forward packets faster, improving overall network performance."
+        },
+        {
+          "type": "callout",
+          "title": "💡 IPv6 is Not 'IPv4 with More Addresses'",
+          "content": "IPv6 is a complete redesign, not just an address expansion. The simplified header, mandatory security, and removal of NAT (no longer needed) make it fundamentally different. Many enterprise networks now run dual-stack (both IPv4 and IPv6) during the long transition period.",
+          "color": "indigo"
+        }
+      ]
     },
     {
-      "title": "IPv6 Addressing",
-      "description": "128-bit addressing system created to solve IPv4 address exhaustion. Provides simplified header, improved efficiency, and virtually unlimited addresses."
+      "id": "host-routing",
+      "icon": "💻",
+      "title": "How Hosts Route",
+      "color": "emerald",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Before a packet ever reaches a router, the sending host must make a forwarding decision: send to the destination directly, or send to the default gateway? This decision is based on whether the destination is on the local network or a remote network."
+        },
+        {
+          "type": "subheading",
+          "content": "Host Forwarding Decisions"
+        },
+        {
+          "type": "grid",
+          "columns": 3,
+          "cardColor": "emerald",
+          "items": [
+            {
+              "title": "To Self",
+              "badge": "Loopback",
+              "description": "Destination is the loopback address (127.0.0.1 for IPv4, ::1 for IPv6). Traffic never leaves the host. Used for testing the local TCP/IP stack.",
+              "note": "Entire 127.0.0.0/8 range is loopback in IPv4"
+            },
+            {
+              "title": "To Local Host",
+              "badge": "Same network",
+              "description": "Destination IP is on the same subnet as the source. Host uses ARP (IPv4) or Neighbor Discovery (IPv6) to find the destination's MAC address and sends the frame directly.",
+              "note": "ANDing the destination IP with the subnet mask determines if it's local"
+            },
+            {
+              "title": "To Remote Host",
+              "badge": "Different network",
+              "description": "Destination IP is on a different subnet. Host uses ARP/ND to find the DEFAULT GATEWAY's MAC address and sends the frame to the router. The router forwards it toward the destination.",
+              "note": "Without a configured default gateway, the host cannot reach remote networks"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Default Gateway"
+        },
+        {
+          "type": "definition",
+          "label": "Default Gateway",
+          "content": "The IP address of the local router interface that provides access to other networks. Acts as the 'doorway' out of the local network. Every host that needs internet access must have a default gateway configured."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "The default gateway must be on the same subnet as the host. If not, the host cannot reach it.",
+            "Configured manually (static IP) or automatically (DHCP). DHCP Option 3 provides the default gateway.",
+            "All traffic destined for remote networks goes through the default gateway — it's the only way out.",
+            "If the default gateway is down or misconfigured, the host can communicate locally but not with the internet or other subnets.",
+            "Check default gateway: ipconfig (Windows), ip route (Linux), netstat -rn (Mac/Unix)."
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Host Routing Table"
+        },
+        {
+          "type": "text",
+          "content": "Hosts maintain a simple routing table in RAM that contains directly connected networks and the default route. You can view it with route print (Windows) or netstat -r (Linux/Mac)."
+        },
+        {
+          "type": "codeblock",
+          "code": "C:\\> route print\n\nIPv4 Route Table\n===========================================================================\nActive Routes:\nNetwork Destination    Netmask          Gateway       Interface  Metric\n          0.0.0.0          0.0.0.0    192.168.1.1   192.168.1.10       25  ← Default route\n        127.0.0.0        255.0.0.0         On-link       127.0.0.1      331  ← Loopback\n      192.168.1.0    255.255.255.0         On-link   192.168.1.10      281  ← Local network\n===========================================================================\n\nDefault route (0.0.0.0/0) points to the default gateway (192.168.1.1).\nLocal network (192.168.1.0/24) is directly connected via the host's interface."
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "0.0.0.0/0 (IPv4) or ::/0 (IPv6) is the default route — matches any destination not covered by a more specific route.",
+            "On-link means the network is directly reachable without going through a router.",
+            "Metric indicates preference when multiple routes exist to the same destination. Lower metric = preferred.",
+            "Host routing tables are much simpler than router routing tables — hosts typically have 3-5 entries, routers have thousands."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Troubleshooting Tip",
+          "content": "If a host can ping devices on the local network but not the internet, check the default gateway configuration first. Use ipconfig or ip route to verify the gateway is set correctly and matches the router interface IP. Then ping the gateway itself to confirm it's reachable.",
+          "color": "emerald"
+        }
+      ]
     },
     {
-      "title": "Routing Process",
-      "description": "Routers examine the destination IP address in packet headers and use routing tables to determine the best path to forward packets toward their destination."
-    },
-    {
-      "title": "MTU (Maximum Transmission Unit)",
-      "description": "The data link layer passes the MTU value up to the network layer. IP uses this to ensure packets don't exceed the physical medium's size limits, fragmenting if necessary."
-    },
-    {
-      "title": "Connectionless Protocol",
-      "description": "IP is connectionless and provides best-effort delivery with no guarantees. Upper-layer protocols (like TCP) handle reliability, tracking, and retransmission."
+      "id": "router-routing",
+      "icon": "🗺️",
+      "title": "Router Routing Tables",
+      "color": "sky",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Routers maintain routing tables with entries for every known network. When a packet arrives, the router examines the destination IP, searches the routing table for the best match, and forwards the packet out the appropriate interface toward the destination."
+        },
+        {
+          "type": "subheading",
+          "content": "Three Types of Route Entries"
+        },
+        {
+          "type": "grid",
+          "columns": 3,
+          "cardColor": "sky",
+          "items": [
+            {
+              "title": "Directly Connected",
+              "badge": "Code: C",
+              "description": "Networks directly attached to the router's active interfaces. Added automatically when an interface is configured with an IP address and brought up with no shutdown.",
+              "note": "Code L = local interface address (/32 or /128 host route)"
+            },
+            {
+              "title": "Remote Networks",
+              "badge": "Code: S, O, R, etc.",
+              "description": "Networks not directly attached. Learned via static routes (manually configured) or dynamic routing protocols (OSPF, EIGRP, RIP). Multiple routes to the same destination may exist with different administrative distances.",
+              "note": "S = static, O = OSPF, R = RIP, D = EIGRP"
+            },
+            {
+              "title": "Default Route",
+              "badge": "Code: S*",
+              "description": "The 'gateway of last resort' — matches any destination not covered by a more specific route. Typically points toward the ISP or internet edge router. Configured as 0.0.0.0/0 (IPv4) or ::/0 (IPv6).",
+              "note": "Used when no other route matches"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Viewing the Routing Table"
+        },
+        {
+          "type": "codeblock",
+          "code": "Router# show ip route\n\nCodes: L - local, C - connected, S - static, R - RIP, O - OSPF\n       D - EIGRP, EX - EIGRP external, * - candidate default\n\nGateway of last resort is 209.165.200.226 to network 0.0.0.0\n\nS*   0.0.0.0/0 [1/0] via 209.165.200.226                    ← Default route\n     10.0.0.0/8 is variably subnetted, 5 subnets, 2 masks\nC       10.1.1.0/24 is directly connected, GigabitEthernet0/0/0\nL       10.1.1.1/32 is directly connected, GigabitEthernet0/0/0\nO       10.2.2.0/24 [110/2] via 10.1.1.2, 00:15:23, GigabitEthernet0/0/0\nC       10.3.3.0/24 is directly connected, GigabitEthernet0/0/1\nL       10.3.3.1/32 is directly connected, GigabitEthernet0/0/1"
+        },
+        {
+          "type": "table",
+          "headers": ["Route Code", "Meaning", "How Learned"],
+          "rows": [
+            ["L", "Local interface address", "Automatically added when interface is configured (host route)"],
+            ["C", "Connected network", "Automatically added when interface is active"],
+            ["S", "Static route", "Manually configured by administrator"],
+            ["S*", "Static default route", "Manually configured as 0.0.0.0/0 or ::/0"],
+            ["O", "OSPF route", "Learned via OSPF dynamic routing protocol"],
+            ["R", "RIP route", "Learned via RIP dynamic routing protocol"],
+            ["D", "EIGRP route", "Learned via EIGRP dynamic routing protocol"]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Route Lookup Process"
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "description": "Router receives a packet on an inbound interface."
+            },
+            {
+              "description": "Router examines the destination IP address in the packet header."
+            },
+            {
+              "description": "Router searches the routing table for the LONGEST (most specific) matching prefix. Example: 192.168.1.10 matches both 192.168.1.0/24 and 0.0.0.0/0, but /24 is more specific, so it's used."
+            },
+            {
+              "description": "If a match is found, router forwards the packet out the associated exit interface toward the next hop."
+            },
+            {
+              "description": "If NO match is found and a default route exists, use the default route."
+            },
+            {
+              "description": "If NO match and NO default route, router drops the packet and sends an ICMP Destination Unreachable message back to the source."
+            }
+          ]
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Longest prefix match: More specific routes (longer subnet masks) always win over less specific routes.",
+            "Example: 10.1.1.0/24 is more specific than 10.0.0.0/8, which is more specific than 0.0.0.0/0 (default route).",
+            "Administrative Distance (AD) is used when multiple routes to the same destination exist from different sources. Lower AD = more trustworthy.",
+            "AD values: Directly connected = 0, Static = 1, OSPF = 110, RIP = 120. Static routes override dynamic routes by default.",
+            "Metric (cost) is used when multiple routes to the same destination exist from the SAME source. Lower metric = preferred path.",
+            "show ip route summary shows high-level statistics — total routes, protocol breakdown, memory usage."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Default Route as Safety Net",
+          "content": "A default route is essential for internet-connected routers. Without it, any destination not explicitly in the routing table would be unreachable. The default route catches everything and forwards it toward the ISP, which has more complete routing information. Think of it as 'when in doubt, send it upstream.'",
+          "color": "sky"
+        },
+        {
+          "type": "subheading",
+          "content": "IPv6 Routing Table"
+        },
+        {
+          "type": "text",
+          "content": "IPv6 routing works identically to IPv4 — same concepts, different command."
+        },
+        {
+          "type": "codeblock",
+          "code": "Router# show ipv6 route\n\nCodes: C - Connected, L - Local, S - Static, O - OSPF\n\nS   ::/0 [1/0]\n     via 2001:DB8:ACAD:4::2                                ← IPv6 default route\nC   2001:DB8:ACAD:1::/64 [0/0]\n     via GigabitEthernet0/0/0, directly connected\nL   2001:DB8:ACAD:1::1/128 [0/0]\n     via GigabitEthernet0/0/0, receive"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Same route codes as IPv4: C, L, S, O, etc.",
+            "Default route is ::/0 instead of 0.0.0.0/0.",
+            "Link-local addresses (fe80::/10) are NOT in the routing table — they're only valid on the local link.",
+            "show ipv6 route displays the IPv6 routing table. show ip route shows IPv4. They are separate tables."
+          ]
+        }
+      ]
     }
-  ],
-  "importantPoints": [
-    "Layer 3 encapsulation adds source and destination IP addresses",
-    "Routers forward packets based on destination IP address only",
-    "IPv4 uses 32-bit addresses; IPv6 uses 128-bit addresses",
-    "IPv6 header is simpler and more efficient than IPv4 header",
-    "The loopback address is 127.0.0.1 (used to test local TCP/IP stack)",
-    "Packets on the same LAN are sent directly without using the default gateway",
-    "Packets to remote networks are sent to the default gateway first",
-    "TTL (IPv4) or Hop Limit (IPv6) prevents packets from looping forever",
-    "Each router decrements TTL/Hop Limit by 1; packet dropped if it reaches 0",
-    "Destination IP address stays the same during transmission; TTL changes",
-    "The MTU is determined by Layer 2 and passed to Layer 3",
-    "IP is connectionless; reliability must be handled by upper layers (TCP)",
-    "netstat -r (Windows) displays the routing table",
-    "show ip route is a Cisco IOS command, not a Windows command"
-  ],
-  "quickReference": [
-    { "label": "IPv4 Address Length", "value": "32 bits" },
-    { "label": "IPv6 Address Length", "value": "128 bits" },
-    { "label": "Loopback Address", "value": "127.0.0.1" },
-    { "label": "Loopback Network", "value": "127.0.0.0/8" },
-    { "label": "Layer 3 Encapsulation", "value": "Adds source & destination IP" },
-    { "label": "Routing Decision Based On", "value": "Destination IP address" },
-    { "label": "IPv4 TTL Function", "value": "Prevents infinite loops" },
-    { "label": "IPv6 Hop Limit", "value": "Same as IPv4 TTL" },
-    { "label": "Windows Routing Table", "value": "netstat -r or route print" },
-    { "label": "IP Protocol Type", "value": "Connectionless, best-effort" },
-    { "label": "Same LAN Delivery", "value": "Direct (no gateway needed)" },
-    { "label": "Remote Network Delivery", "value": "Via default gateway" }
   ]
 }

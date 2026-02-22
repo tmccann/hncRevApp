@@ -1,47 +1,41 @@
 import { Link } from "react-router-dom";
-import modulesData from "../data/ccna/modules.json";
-
-const CCNAModules = () => {
+import modulesData from "../data/it-essentials/modules.json";
+const ITEssentialsModules = () => {
   const modules = modulesData;
-
   // Extract checkpoints from modules
   const checkpointIds = [
     ...new Set(modules.flatMap((m) => m.checkpoints || [])),
   ];
-
   const checkpoints = checkpointIds.map((id) => {
     const moduleNums = id.replace("checkpoint-", "").split("-").map(Number);
     const relatedModules = modules.filter((m) => moduleNums.includes(m.number));
-
     return {
       id: id,
       title: `Checkpoint: Modules ${moduleNums.join("-")}`,
       description:
         relatedModules.map((m) => m.title).join(" & ") + " combined assessment",
       modules: moduleNums,
-      color: "from-purple-500 to-pink-600",
+      color: "from-blue-600 to-indigo-700",
     };
   });
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8">
           <Link
             to="/"
-            className="text-indigo-600 hover:text-indigo-700 font-medium mb-4 inline-block"
+            className="text-blue-600 hover:text-blue-700 font-medium mb-4 inline-block"
           >
             ← Back to Courses
           </Link>
-          <h1 className="text-4xl font-bold text-indigo-600 mb-2">
-            CCNA: Introduction to Networks
+          <h1 className="text-4xl font-bold text-blue-600 mb-2">
+            IT Essentials 8
           </h1>
           <p className="text-gray-600">
             Select a module to view summary or take quiz
           </p>
         </div>
-
         {/* Modules Grid */}
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Modules</h2>
@@ -60,35 +54,31 @@ const CCNAModules = () => {
                   </div>
                   <h3 className="text-xl font-bold">{module.title}</h3>
                 </div>
-
-                {/* Module Body - Flex grow to push buttons down */}
+                {/* Module Body */}
                 <div className="p-4 flex flex-col flex-grow">
                   <p className="text-sm text-gray-600 mb-4">
                     {module.description}
                   </p>
-
                   {/* Topics */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-2">
                       {module.topics.map((topic, index) => (
                         <span
                           key={index}
-                          className="px-2 py-1 bg-indigo-50 text-indigo-600 rounded text-xs font-medium"
+                          className="px-2 py-1 bg-blue-50 text-blue-600 rounded text-xs font-medium"
                         >
                           {topic}
                         </span>
                       ))}
                     </div>
                   </div>
-
-                  {/* Spacer to push buttons to bottom */}
+                  {/* Spacer */}
                   <div className="flex-grow"></div>
-
-                  {/* Actions - Always at bottom */}
+                  {/* Actions */}
                   <div className="space-y-2 mt-auto">
                     {module.hasSummary ? (
                       <Link
-                        to={`/ccna/${module.id}/summary`}
+                        to={`/it-essentials/${module.id}/summary`}
                         className="block w-full bg-gray-100 text-gray-700 text-center py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors text-sm"
                       >
                         📝 View Summary
@@ -101,11 +91,10 @@ const CCNAModules = () => {
                         📝 Summary Coming Soon
                       </button>
                     )}
-
                     {module.hasQuiz ? (
                       <Link
-                        to={`/ccna/${module.id}/quiz`}
-                        className="block w-full bg-indigo-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-sm"
+                        to={`/it-essentials/${module.id}/quiz`}
+                        className="block w-full bg-blue-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm"
                       >
                         📊 Take Quiz
                       </Link>
@@ -121,7 +110,6 @@ const CCNAModules = () => {
                 </div>
               </div>
             ))}
-
             {/* Coming Soon Card */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden opacity-60">
               <div className="bg-gradient-to-r from-gray-400 to-gray-500 p-4 text-white">
@@ -142,54 +130,52 @@ const CCNAModules = () => {
             </div>
           </div>
         </div>
-
         {/* Checkpoint Quizzes */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Checkpoint Quizzes
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {checkpoints.map((checkpoint) => (
-              <div
-                key={checkpoint.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-              >
+        {checkpoints.length > 0 && (
+          <div>
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+              Checkpoint Quizzes
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {checkpoints.map((checkpoint) => (
                 <div
-                  className={`bg-gradient-to-r ${checkpoint.color} p-6 text-white`}
+                  key={checkpoint.id}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl">✅</span>
-                    <h3 className="text-2xl font-bold">{checkpoint.title}</h3>
-                  </div>
-                  <p className="text-purple-100 text-sm">
-                    {checkpoint.description}
-                  </p>
-                </div>
-
-                <div className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-600">
-                        {checkpoint.modules.length}
-                      </div>
-                      <div className="text-xs text-gray-600">Modules</div>
-                    </div>
-                  </div>
-
-                  <Link
-                    to={`/ccna/${checkpoint.id}/quiz`}
-                    className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                  <div
+                    className={`bg-gradient-to-r ${checkpoint.color} p-6 text-white`}
                   >
-                    Start Checkpoint Quiz →
-                  </Link>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">✅</span>
+                      <h3 className="text-2xl font-bold">{checkpoint.title}</h3>
+                    </div>
+                    <p className="text-blue-100 text-sm">
+                      {checkpoint.description}
+                    </p>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-blue-600">
+                          {checkpoint.modules.length}
+                        </div>
+                        <div className="text-xs text-gray-600">Modules</div>
+                      </div>
+                    </div>
+                    <Link
+                      to={`/it-essentials/${checkpoint.id}/quiz`}
+                      className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                    >
+                      Start Checkpoint Quiz →
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
 };
-
-export default CCNAModules;
+export default ITEssentialsModules;

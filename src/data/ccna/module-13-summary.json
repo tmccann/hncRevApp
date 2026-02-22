@@ -1,71 +1,403 @@
 {
   "number": 13,
   "title": "ICMP",
-  "description": "Understanding Internet Control Message Protocol, ping, traceroute, and network diagnostics",
-  "keyConcepts": [
+  "description": "Internet Control Message Protocol for diagnostics and error reporting",
+  "glance": [
+    { "number": "3", "label": "Common messages", "detail": "Echo, Unreachable, Time Exceeded" },
+    { "number": "5", "label": "NDP message types", "detail": "RS, RA, NS, NA, Redirect" },
+    { "number": "3", "label": "Ping test types", "detail": "Loopback, Gateway, Remote" },
+    { "number": "1", "label": "Traceroute starts at", "detail": "TTL = 1, increments each hop" }
+  ],
+  "sections": [
     {
-      "title": "ICMP Purpose",
-      "description": "Internet Control Message Protocol provides feedback about errors in packet delivery and diagnostic information. It is a supporting protocol in the IP suite used by both IPv4 (ICMPv4) and IPv6 (ICMPv6)."
+      "id": "icmp-overview",
+      "icon": "📬",
+      "title": "ICMP Messages (General)",
+      "color": "blue",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "ICMP (Internet Control Message Protocol)",
+          "content": "A network layer protocol that provides feedback about issues related to the processing of IP packets. ICMP does not carry user data — it reports on the status and reachability of network destinations. Used by diagnostic tools like ping and traceroute."
+        },
+        {
+          "type": "text",
+          "content": "ICMP is encapsulated within IP packets just like TCP or UDP, but serves a completely different purpose — it's the network's messenger service for error reporting and diagnostics."
+        },
+        {
+          "type": "subheading",
+          "content": "Common ICMP Message Types"
+        },
+        {
+          "type": "table",
+          "headers": ["Message Type", "Purpose", "Example Use"],
+          "rows": [
+            ["Echo Request (Type 8)", "Test if a host is reachable and responding.", "Sent by the ping command."],
+            ["Echo Reply (Type 0)", "Response to an Echo Request confirming the host is active.", "Sent back by the target host to confirm reachability."],
+            ["Destination Unreachable (Type 3)", "Notifies sender that a destination cannot be reached. Includes specific codes for why.", "Network unreachable, host unreachable, port unreachable, protocol unreachable."],
+            ["Time Exceeded (Type 11)", "Sent by a router when a packet's TTL reaches zero.", "Prevents routing loops. Used by traceroute to map paths."],
+            ["Redirect (Type 5)", "Router informs a host that a better route exists for a destination.", "Optimize routing paths on multi-router networks."]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Destination Unreachable Codes"
+        },
+        {
+          "type": "table",
+          "headers": ["Code", "Meaning", "Common Cause"],
+          "rows": [
+            ["0", "Network Unreachable", "No route to the destination network exists in the routing table."],
+            ["1", "Host Unreachable", "Destination network is reachable, but the specific host is not responding (often no ARP reply)."],
+            ["2", "Protocol Unreachable", "The destination host does not support the specified protocol."],
+            ["3", "Port Unreachable", "The destination host received the packet but the port is not listening (no application bound to it)."],
+            ["4", "Fragmentation Needed but DF Set", "Packet is too large and cannot be fragmented because the Don't Fragment flag is set."]
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 ICMP is for Control, Not Data",
+          "content": "ICMP does not carry user application data. It only reports on network conditions. When ping succeeds, you're not transferring files or browsing the web — you're just confirming that the network path exists and the destination is responding.",
+          "color": "blue"
+        }
+      ]
     },
     {
-      "title": "Ping Utility",
-      "description": "Uses ICMP Echo Request and Echo Reply messages to test host reachability and measure round-trip time (latency). Confirms end-to-end connectivity but doesn't show the path taken."
+      "id": "icmpv6",
+      "icon": "🔷",
+      "title": "ICMPv6 Features",
+      "color": "indigo",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "ICMPv6 includes all the functionality of ICMPv4 plus several new features. Most importantly, it incorporates the Neighbor Discovery Protocol (NDP), which replaces ARP and adds additional capabilities for IPv6 networks."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "ICMPv4",
+            "content": "Error reporting and diagnostics only. ARP is a separate protocol for address resolution. No built-in mechanism for router discovery or address autoconfiguration."
+          },
+          "right": {
+            "label": "ICMPv6",
+            "content": "Error reporting, diagnostics, AND Neighbor Discovery Protocol (NDP). Replaces ARP, adds router discovery, SLAAC, duplicate address detection, and more. All-in-one solution."
+          },
+          "note": "ICMPv6 is mandatory — IPv6 cannot function without it. ICMPv4 is helpful but not strictly required."
+        },
+        {
+          "type": "subheading",
+          "content": "Neighbor Discovery Protocol (NDP)"
+        },
+        {
+          "type": "definition",
+          "label": "NDP (Neighbor Discovery Protocol)",
+          "content": "A key component of ICMPv6 that handles address resolution (replacing ARP), router discovery, prefix discovery, address autoconfiguration, and more. Uses five ICMPv6 message types to accomplish these functions."
+        },
+        {
+          "type": "table",
+          "headers": ["Message Type", "Abbreviation", "Purpose"],
+          "rows": [
+            ["Router Solicitation", "RS", "Sent by hosts to request Router Advertisement messages from routers. 'I just booted up, any routers out there?'"],
+            ["Router Advertisement", "RA", "Sent by routers (periodically or in response to RS) to advertise network prefixes, default gateway, and configuration info for SLAAC."],
+            ["Neighbor Solicitation", "NS", "Replaces ARP Request. Asks 'Who has IPv6 address X? Please send me your MAC address.' Also used for Duplicate Address Detection (DAD)."],
+            ["Neighbor Advertisement", "NA", "Replaces ARP Reply. Responds to NS with 'I have IPv6 address X, and my MAC address is Y.'"],
+            ["Redirect", "Redirect", "Sent by a router to inform a host of a better first-hop router for a specific destination."]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Address Resolution: NS and NA"
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "description": "Host needs to send a packet to 2001:db8::1 but doesn't know the MAC address. It sends a Neighbor Solicitation (NS) to the solicited-node multicast address."
+            },
+            {
+              "description": "The solicited-node multicast address is derived from the target IPv6 address. Only the target device listens to this multicast group, so only it receives the NS."
+            },
+            {
+              "description": "The target device responds with a Neighbor Advertisement (NA) containing its MAC address."
+            },
+            {
+              "description": "The requesting host now has the MAC address and can send the frame. This mapping is cached in the neighbor cache (similar to ARP cache)."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Duplicate Address Detection (DAD)"
+        },
+        {
+          "type": "text",
+          "content": "Before a device can use a newly assigned IPv6 address (whether from SLAAC, DHCPv6, or static config), it must verify the address is not already in use on the network. This is called Duplicate Address Detection (DAD)."
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "description": "Device generates or receives a new IPv6 address (e.g., 2001:db8::10) but marks it as 'tentative' — not yet usable."
+            },
+            {
+              "description": "Device sends a Neighbor Solicitation (NS) for that address to the solicited-node multicast group. The source address of the NS is :: (unspecified address)."
+            },
+            {
+              "description": "If another device on the network already has that address, it will respond with a Neighbor Advertisement (NA). This means the address is a duplicate."
+            },
+            {
+              "description": "If no NA is received after a timeout, the address is considered unique. The device marks it as 'preferred' and starts using it."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 No ARP in IPv6",
+          "content": "IPv6 does NOT use ARP. Address resolution is handled by ICMPv6 Neighbor Solicitation and Neighbor Advertisement messages. This is more efficient because it uses multicast instead of broadcast, reducing network noise.",
+          "color": "indigo"
+        }
+      ]
     },
     {
-      "title": "Traceroute Utility",
-      "description": "Identifies each hop (router) along the path to a destination. Uses packets with incrementing TTL values to trigger ICMP Time Exceeded messages from each router, revealing the complete path."
+      "id": "ping",
+      "icon": "🏓",
+      "title": "Diagnostic Tool: Ping",
+      "color": "emerald",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "Ping",
+          "content": "A network diagnostic tool that uses ICMP Echo Request and Echo Reply messages to test connectivity to a specific IP address. Ping tells you if a destination is reachable and measures round-trip time (RTT). Available on virtually every operating system."
+        },
+        {
+          "type": "codeblock",
+          "code": "# Ping IPv4 host\nC:\\> ping 192.168.1.1\n\n# Ping IPv6 host\nC:\\> ping 2001:db8::1\n\n# Ping hostname (DNS resolution)\nC:\\> ping www.google.com"
+        },
+        {
+          "type": "subheading",
+          "content": "How Ping Works"
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "description": "Ping command sends an ICMP Echo Request (Type 8) to the target IP address."
+            },
+            {
+              "description": "If the destination is reachable and operational, it responds with an ICMP Echo Reply (Type 0)."
+            },
+            {
+              "description": "The ping utility measures the time between sending the request and receiving the reply — this is the Round Trip Time (RTT)."
+            },
+            {
+              "description": "Ping repeats this process (typically 4 times on Windows, continuously on Linux/Mac) and displays statistics."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Three Types of Ping Tests"
+        },
+        {
+          "type": "grid",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🔄",
+              "title": "Loopback Test",
+              "badge": "127.0.0.1 or ::1",
+              "description": "Ping the loopback address to verify the TCP/IP stack on your own device is working. Traffic never leaves the host — it's entirely internal.",
+              "note": "If this fails, your TCP/IP stack is broken or disabled."
+            },
+            {
+              "icon": "🚪",
+              "title": "Default Gateway Test",
+              "badge": "Router interface",
+              "description": "Ping your default gateway (local router) to verify Layer 2 and Layer 3 connectivity to the router. Confirms you can reach the exit point of your local network.",
+              "note": "If this fails, check cable, switch config, or gateway IP."
+            },
+            {
+              "icon": "🌐",
+              "title": "Remote Host Test",
+              "badge": "Internet destination",
+              "description": "Ping a host on a remote network (e.g., 8.8.8.8, www.google.com) to verify end-to-end connectivity through your gateway to the internet.",
+              "note": "If this fails but gateway succeeds, issue is beyond your router."
+            }
+          ]
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Always test in order: loopback → gateway → remote. This isolates the problem systematically.",
+            "Ping success means bidirectional Layer 3 connectivity exists. Both request and reply got through.",
+            "Ping failure doesn't always mean the host is down — firewalls often block ICMP Echo Requests for security.",
+            "RTT (round-trip time) indicates network latency. <1ms is local network, 10-50ms is typical internet, 100ms+ may indicate congestion.",
+            "IPv6 ping uses ICMPv6 Echo Request/Reply (Type 128/129), not ICMPv4 (Type 8/0), but the concept is identical."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚠️ Ping Doesn't Test Applications",
+          "content": "Successful ping only confirms Layer 3 (IP) connectivity. It does NOT test higher layers. A host can respond to ping but still have web server issues, DNS failures, or firewall rules blocking application traffic. Ping is a starting point, not a complete diagnostic.",
+          "color": "amber"
+        }
+      ]
     },
     {
-      "title": "ICMP Error Messages",
-      "description": "Reports delivery problems: Destination Unreachable, Time Exceeded (TTL/Hop Limit expired), Redirect, Parameter Problem. Helps diagnose network issues without establishing connections."
+      "id": "traceroute",
+      "icon": "🗺️",
+      "title": "Diagnostic Tool: Traceroute",
+      "color": "purple",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "Traceroute (tracert on Windows)",
+          "content": "A diagnostic tool that maps the path packets take to a destination by revealing every router (hop) along the way. Shows which routers are successfully reached and measures the round-trip time (RTT) to each hop."
+        },
+        {
+          "type": "codeblock",
+          "code": "# Windows\nC:\\> tracert 8.8.8.8\n\n# Linux / Mac\n$ traceroute 8.8.8.8\n\n# IPv6\n$ traceroute6 2001:4860:4860::8888"
+        },
+        {
+          "type": "subheading",
+          "content": "How Traceroute Works: The TTL Trick"
+        },
+        {
+          "type": "definition",
+          "label": "TTL (Time To Live)",
+          "content": "A field in the IP header that prevents packets from looping forever. Every router that forwards a packet decrements the TTL by 1. If TTL reaches 0, the router drops the packet and sends an ICMP Time Exceeded message back to the source."
+        },
+        {
+          "type": "text",
+          "content": "Traceroute exploits the TTL mechanism to discover routers along the path. It sends packets with increasing TTL values, forcing each successive router to identify itself."
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "command": "TTL = 1",
+              "description": "Traceroute sends a packet with TTL=1 toward the destination. The first router receives it, decrements TTL to 0, drops the packet, and sends 'Time Exceeded' back to the source. This identifies the first hop."
+            },
+            {
+              "command": "TTL = 2",
+              "description": "Next packet has TTL=2. First router decrements to 1 and forwards. Second router decrements to 0, drops it, and sends 'Time Exceeded' back. This identifies the second hop."
+            },
+            {
+              "command": "TTL = 3",
+              "description": "Packet with TTL=3 makes it through two routers before the third router sends 'Time Exceeded' back. This identifies the third hop."
+            },
+            {
+              "description": "Process continues, incrementing TTL, until the packet reaches the destination. The destination responds with ICMP Echo Reply (or Port Unreachable if using UDP). Traceroute now has the complete path."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Interpreting Traceroute Output"
+        },
+        {
+          "type": "table",
+          "headers": ["Column", "Meaning"],
+          "rows": [
+            ["Hop Number", "Distance from source in router hops. Hop 1 is your default gateway."],
+            ["RTT (3 values)", "Round-trip time for three probe packets sent to that hop. Measured in milliseconds."],
+            ["IP Address / Hostname", "The router at that hop. May show hostname if reverse DNS is configured."],
+            ["* * * (asterisks)", "Indicates the router did not respond within the timeout. Could be blocking ICMP or heavily loaded."]
+          ]
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Traceroute reveals the entire path, not just the destination. Shows every router that touched your packets.",
+            "Useful for identifying where packets are being dropped. If hop 5 responds but hop 6 times out, the problem is between them.",
+            "RTT increases as you get farther from the source — this is normal. Look for sudden jumps (10ms → 200ms) indicating congestion or long-distance links.",
+            "Windows uses ICMP Echo Requests by default. Linux/Mac use UDP packets to high-numbered ports by default. Both methods work.",
+            "Some routers de-prioritize ICMP responses, so timeouts don't always mean the router is down — just that it's not responding to traceroute.",
+            "Private IP addresses (10.x, 172.16.x, 192.168.x) in traceroute output indicate the path crosses internal networks."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Traceroute for Troubleshooting",
+          "content": "When a remote host is unreachable, traceroute tells you WHERE the failure is. If traceroute stops at hop 8, you know the problem is at or beyond that router. If it reaches the destination but applications don't work, the issue is likely a firewall or application-layer problem, not routing.",
+          "color": "purple"
+        }
+      ]
     },
     {
-      "title": "Loopback Testing",
-      "description": "Pinging 127.0.0.1 (IPv4) or ::1 (IPv6) tests if TCP/IP is properly installed and functioning on the local host. This is an internal test that doesn't use the network."
-    },
-    {
-      "title": "IPv6 ICMPv6",
-      "description": "ICMPv6 includes additional functionality beyond ICMPv4, including Neighbor Discovery Protocol (NDP) functions like Duplicate Address Detection (DAD), Router Solicitation/Advertisement, and Neighbor Solicitation/Advertisement."
+      "id": "security",
+      "icon": "🔒",
+      "title": "ICMP Security Considerations",
+      "color": "red",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "ICMP is a powerful diagnostic tool, but it can also be exploited by attackers. Many network administrators block or limit ICMP traffic at the network perimeter to prevent reconnaissance and certain attacks."
+        },
+        {
+          "type": "subheading",
+          "content": "Why Block ICMP?"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "cardColor": "red",
+          "items": [
+            {
+              "title": "Network Mapping",
+              "description": "Attackers use ping sweeps to discover active hosts on a network. By pinging every address in a subnet, they build a map of which IPs are in use.",
+              "badge": "Reconnaissance"
+            },
+            {
+              "title": "OS Fingerprinting",
+              "description": "Subtle differences in ICMP responses (TTL values, message formats) can reveal what operating system a device is running, helping attackers tailor exploits.",
+              "badge": "Information gathering"
+            },
+            {
+              "title": "Denial of Service (DoS)",
+              "description": "ICMP flood attacks (ping floods) overwhelm a target with ICMP Echo Requests, consuming bandwidth and processing power. ICMP can also be used in amplification attacks.",
+              "badge": "Resource exhaustion"
+            },
+            {
+              "title": "Covert Channels",
+              "description": "ICMP tunneling can hide data or command-and-control traffic inside ICMP packets, bypassing some firewall rules that allow ICMP.",
+              "badge": "Data exfiltration"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Common ICMP Filtering Practices"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Block inbound ICMP Echo Requests at the perimeter firewall — prevents external users from pinging internal hosts.",
+            "Allow outbound ICMP Echo Requests and inbound Echo Replies — lets internal users ping external hosts for diagnostics.",
+            "Allow Destination Unreachable and Time Exceeded messages — needed for proper TCP/UDP operation and Path MTU Discovery.",
+            "Rate-limit ICMP traffic — prevents flood attacks while still allowing legitimate diagnostic use.",
+            "Block ICMPv6 Router Advertisement messages from untrusted sources — prevents rogue router attacks on IPv6 networks.",
+            "Allow ICMPv6 Neighbor Discovery internally — required for IPv6 operation, but block it at the perimeter."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚠️ Don't Block All ICMP",
+          "content": "Blocking ALL ICMP breaks critical network functions. Destination Unreachable messages are needed for TCP to work properly. Time Exceeded is required for traceroute. Path MTU Discovery relies on ICMP. ICMPv6 Neighbor Discovery is mandatory for IPv6. Selective blocking is better than blanket blocking.",
+          "color": "orange"
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "Over-Blocking ICMP",
+            "content": "Blocks all ICMP at the firewall. Result: Ping and traceroute don't work. TCP connections may hang or fail mysteriously. Path MTU Discovery breaks, causing fragmentation issues. IPv6 doesn't work at all."
+          },
+          "right": {
+            "label": "Balanced ICMP Filtering",
+            "content": "Blocks inbound Echo Requests but allows Echo Replies. Allows Unreachable and Time Exceeded messages. Allows ICMPv6 ND internally. Result: Diagnostics work, network functions properly, attack surface is reduced."
+          }
+        }
+      ]
     }
-  ],
-  "importantPoints": [
-    "ICMP is used by both IPv4 and IPv6 for error messaging",
-    "Ping uses ICMP Echo Request and Echo Reply",
-    "Ping confirms reachability and measures round-trip time",
-    "Ping does NOT show the path or intermediate routers",
-    "Traceroute (tracert) shows each hop along the path",
-    "Traceroute uses ICMP Time Exceeded messages",
-    "Traceroute sends packets with increasing TTL/Hop Limit values",
-    "Each router decrements TTL; when TTL=0, router sends Time Exceeded",
-    "Ping 127.0.0.1 or ::1 tests local TCP/IP stack installation",
-    "Pinging default gateway tests ability to reach other networks",
-    "Cisco ping output: '!' = success, '.' = timeout, 'U' = unreachable",
-    "ICMP doesn't guarantee delivery - it just reports problems",
-    "IPv4 uses TTL field; IPv6 uses Hop Limit field",
-    "ICMPv6 Time Exceeded uses Hop Limit field",
-    "ICMPv6 Neighbor Solicitation used for Duplicate Address Detection (DAD)",
-    "Traceroute identifies the specific faulty node where packets are dropped",
-    "ICMP is Layer 3 protocol (Network Layer)",
-    "ICMP messages are encapsulated in IP packets"
-  ],
-  "quickReference": [
-    { "label": "ICMP Purpose", "value": "Error reporting & diagnostics" },
-    { "label": "Ping Uses", "value": "Echo Request + Echo Reply" },
-    { "label": "Ping Tests", "value": "Reachability + round-trip time" },
-    { "label": "Traceroute Uses", "value": "ICMP Time Exceeded" },
-    { "label": "Traceroute Shows", "value": "Each hop in the path" },
-    { "label": "Loopback IPv4", "value": "127.0.0.1" },
-    { "label": "Loopback IPv6", "value": "::1" },
-    { "label": "Loopback Tests", "value": "Local TCP/IP stack" },
-    { "label": "Gateway Ping Tests", "value": "Ability to reach remote networks" },
-    { "label": "Cisco '!' Symbol", "value": "Successful reply" },
-    { "label": "Cisco '.' Symbol", "value": "Timeout (no response)" },
-    { "label": "Cisco 'U' Symbol", "value": "Destination unreachable" },
-    { "label": "IPv4 Expiry Field", "value": "TTL (Time To Live)" },
-    { "label": "IPv6 Expiry Field", "value": "Hop Limit" },
-    { "label": "IPv6 DAD Uses", "value": "Neighbor Solicitation" },
-    { "label": "Identify Faulty Node", "value": "Use traceroute/tracert" },
-    { "label": "ICMP Layer", "value": "Layer 3 (Network Layer)" },
-    { "label": "Both IPv4 & IPv6", "value": "ICMP (ICMPv4 & ICMPv6)" }
   ]
 }

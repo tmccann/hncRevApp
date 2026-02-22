@@ -1,0 +1,298 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: Match each BCS Code of Conduct element to its correct meaning.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Public Interest" },
+      { "id": "a2", "text": "Integrity" },
+      { "id": "a3", "text": "Confidentiality" },
+      { "id": "a4", "text": "Competence" },
+      { "id": "a5", "text": "Accountability" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Act honestly and avoid conflicts of interest" },
+      { "id": "b2", "text": "Only take on work you have the skills to do" },
+      { "id": "b3", "text": "Protect sensitive information you are trusted with" },
+      { "id": "b4", "text": "Consider the wider impact of your work on society" },
+      { "id": "b5", "text": "Take responsibility for your own actions and decisions" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b2" },
+      { "a": "a5", "b": "b5" }
+    ],
+    "explanation": "BCS Code of Conduct stands for Public Interest, Integrity, Confidentiality, Competence, and Accountability. These are the five core elements of the BCS Code of Conduct. Each one covers a different professional duty — knowing all five and being able to apply them to scenarios is essential."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: A developer builds a system knowing it has a serious security flaw but doesn't tell the client because they want to finish on time. Which BCS Code of Conduct element are they breaching?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Confidentiality" },
+      { "id": "b", "text": "Accountability" },
+      { "id": "c", "text": "Integrity" },
+      { "id": "d", "text": "Competence" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Integrity requires IT professionals to be honest with clients even when it is inconvenient. Knowingly delivering a flawed system without disclosure is dishonest — it puts the client at risk and prioritises the developer's convenience over their professional duty to be truthful."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: An IT consultant is asked to advise a client on software. They recommend an expensive product made by a company they own shares in, without telling the client. Which BCS Code of Conduct element does this breach?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Public Interest" },
+      { "id": "b", "text": "Competence" },
+      { "id": "c", "text": "Accountability" },
+      { "id": "d", "text": "Integrity — they have a conflict of interest they didn't disclose" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Integrity requires IT professionals to avoid conflicts of interest and to declare them when they exist. Recommending a product you financially benefit from without telling the client is a clear conflict of interest. The client deserves unbiased advice — integrity demands transparency."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: A support technician accesses a client's private files while fixing a hardware issue, out of curiosity. Which BCS Code of Conduct element is breached?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Competence" },
+      { "id": "b", "text": "Confidentiality" },
+      { "id": "c", "text": "Public Interest" },
+      { "id": "d", "text": "Accountability" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Confidentiality requires IT professionals to respect and protect information they encounter in the course of their work. Being given access to a system to fix hardware does not authorise browsing through personal files. Accessing data beyond what the task requires breaches the client's trust and the Confidentiality element of BCS Code of Conduct."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: A junior developer accepts a project to build a complex machine learning system despite having no experience in that area. Which BCS Code of Conduct element does this breach?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Integrity" },
+      { "id": "b", "text": "Accountability" },
+      { "id": "c", "text": "Confidentiality" },
+      { "id": "d", "text": "Competence" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Competence requires IT professionals to only take on work they are capable of doing to an adequate standard. Accepting a project beyond your skill level puts the client at risk of receiving poor work. The professional duty is to be honest about your capabilities and either decline or seek appropriate support."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: A software engineer discovers their company's product is being used to illegally monitor employees without their knowledge. They raise concerns with management. Which BCS Code of Conduct element drives this action?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Confidentiality" },
+      { "id": "b", "text": "Public Interest" },
+      { "id": "c", "text": "Competence" },
+      { "id": "d", "text": "Accountability" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Public Interest requires IT professionals to consider the wider impact of their work on society and to act in the public good — even if this conflicts with their employer's wishes. Raising concerns about illegal surveillance is an act of professional responsibility under the Public Interest element of BCS Code of Conduct."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: After a system failure causes data loss, a developer blames a colleague rather than admitting they wrote the faulty code. Which BCS Code of Conduct element are they breaching?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Competence" },
+      { "id": "b", "text": "Public Interest" },
+      { "id": "c", "text": "Accountability" },
+      { "id": "d", "text": "Confidentiality" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Accountability requires IT professionals to take responsibility for their own work and decisions. Blaming others for your own mistakes is a direct breach of this element. Accountability also means being transparent when things go wrong so they can be properly investigated and fixed."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: An IT professional working for a healthcare company discusses a patient's medical records at a dinner party. Which BCS Code of Conduct element does this breach?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Integrity" },
+      { "id": "b", "text": "Accountability" },
+      { "id": "c", "text": "Competence" },
+      { "id": "d", "text": "Confidentiality" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Confidentiality applies beyond the workplace. Information encountered in a professional role must be protected at all times. Discussing a patient's records socially — even without sharing documents — is a breach of confidentiality that could also violate GDPR. The duty of confidentiality does not switch off when you leave the office."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: A systems analyst recommends a technically inferior solution to a client because it is cheaper for the analyst to implement. Which two BCS Code of Conduct elements are breached? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Integrity — they are prioritising their own benefit over the client's" },
+      { "id": "b", "text": "Confidentiality — they are sharing client budget information" },
+      { "id": "c", "text": "Public Interest — the inferior system could affect end users" },
+      { "id": "d", "text": "Competence — they clearly don't know what a good solution looks like" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Integrity is breached because the analyst is putting their own interests ahead of the client's. Public Interest is breached because a technically inferior system could negatively impact the end users of that system — possibly members of the public. A professional must give honest, unbiased advice even when it is not in their personal interest."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: A network engineer is asked to implement a system that would allow their employer to secretly intercept all employee communications. They refuse. Which BCS Code of Conduct element most drives this refusal?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Competence — they don't know how to do it" },
+      { "id": "b", "text": "Accountability — they don't want to be blamed later" },
+      { "id": "c", "text": "Public Interest — secret surveillance harms individuals and society" },
+      { "id": "d", "text": "Confidentiality — the request itself is confidential" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Public Interest requires IT professionals to consider the impact of their work on people beyond just the employer. Implementing secret surveillance harms employees, likely violates GDPR and RIPA, and conflicts with the public good. A professional has a duty to refuse tasks that cause unjustified harm to others even if instructed by their employer."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why does BCS Code of Conduct require IT professionals to only take on work within their competence, rather than just trying their best?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because the BCS wants to limit competition in the industry" },
+      { "id": "b", "text": "Because IT systems affect real people — incompetent work can cause financial loss, data breaches, or even physical harm" },
+      { "id": "c", "text": "Because clients will always find out if work is below standard" },
+      { "id": "d", "text": "Because trying your best is sufficient — outcomes don't matter" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "IT systems underpin healthcare, finance, transport, and critical infrastructure. Poor work in these areas can cause serious real-world harm — a faulty medical system could affect patient care, a security vulnerability could expose thousands of people's data. Competence isn't just professional pride — it is a duty of care to the people who depend on the systems you build."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: Why is confidentiality particularly important for IT professionals compared to many other professions?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because IT professionals are paid more so are held to higher standards" },
+      { "id": "b", "text": "Because IT professionals often have privileged access to sensitive systems and data that most employees never see" },
+      { "id": "c", "text": "Because all professions have the same confidentiality obligations" },
+      { "id": "d", "text": "Because IT professionals are more likely to talk about their work socially" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "IT professionals — sysadmins, developers, support technicians — routinely have access to databases, email servers, financial systems, and personal records that other employees never touch. This privileged access creates a heightened duty of confidentiality. The more access you have, the greater your responsibility to protect what you can see."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: Why does the Public Interest element of BCS Code of Conduct sometimes put IT professionals in a difficult position with their employer?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because Public Interest always overrides everything including employment law" },
+      { "id": "b", "text": "Because what benefits the employer financially may sometimes conflict with what is good for society or end users" },
+      { "id": "c", "text": "Because IT professionals are required to report their employer to the BCS every year" },
+      { "id": "d", "text": "It doesn't — employers always act in the public interest" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Public Interest can create genuine conflict — for example, an employer may want to cut corners on security to save money, but this puts users at risk. BCS Code of Conduct asks IT professionals to consider the wider impact of their work, even when this means pushing back on their employer. This is why whistleblowing protections exist in law."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: A developer makes a mistake that causes a system outage. Why does accountability require them to admit this rather than stay silent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because staying silent is only acceptable if no one was affected" },
+      { "id": "b", "text": "Because admitting mistakes allows the problem to be fixed quickly, prevents others from being wrongly blamed, and builds professional trust" },
+      { "id": "c", "text": "Because the BCS monitors all system outages" },
+      { "id": "d", "text": "Because silence is acceptable if they fix the issue themselves" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Accountability is about more than just owning up — it enables faster fixes, prevents innocent colleagues being blamed, and allows organisations to learn from failures and prevent them recurring. A culture of accountability makes systems safer. A culture of blame-shifting hides problems until they become much worse."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: Why does integrity require IT professionals to declare conflicts of interest rather than simply trying to act fairly despite them?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because the client has a right to make informed decisions knowing all relevant facts about the advice they are receiving" },
+      { "id": "b", "text": "Because undeclared conflicts always result in bad advice" },
+      { "id": "c", "text": "Because conflicts of interest are automatically illegal under UK law" },
+      { "id": "d", "text": "Because trying to be fair despite a conflict is always sufficient" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Even if you believe you can be fair despite a conflict of interest, the client doesn't know that — they are making decisions based on advice without knowing the full picture. Integrity demands transparency so the client can decide for themselves whether to trust the advice or seek a second opinion. It is not for you to decide on their behalf that your conflict doesn't matter."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 2 — REASONING: How does BCS Code of Conduct relate to legal obligations like the Computer Misuse Act and GDPR?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "BCS Code of Conduct replaces legal obligations for BCS members" },
+      { "id": "b", "text": "BCS Code of Conduct and the law are completely separate and unrelated" },
+      { "id": "c", "text": "BCS Code of Conduct often goes further than the law — it requires ethical behaviour even in situations the law doesn't specifically cover" },
+      { "id": "d", "text": "Following BCS Code of Conduct automatically means you comply with all relevant laws" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The law sets a minimum standard — BCS Code of Conduct sets a professional standard that often goes further. For example, the law might not specifically prohibit an action, but BCS Code of Conduct's integrity or public interest principles might still make it professionally unacceptable. Being a professional means going beyond just staying out of legal trouble."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: A scenario asks: 'An IT consultant recommended expensive software they had a financial interest in without telling the client. Which element of BCS Code of Conduct applies and why?' Match each part of a strong answer to its content — deliberately out of order.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Name the BCS Code of Conduct element" },
+      { "id": "a2", "text": "What this element requires" },
+      { "id": "a3", "text": "Apply it to the scenario" },
+      { "id": "a4", "text": "Why it matters professionally" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "The consultant had a financial interest in the recommended product and did not disclose it — this is an undeclared conflict of interest" },
+      { "id": "b2", "text": "Clients depend on unbiased professional advice — undisclosed conflicts undermine trust in IT professionals and can cause real financial harm to clients" },
+      { "id": "b3", "text": "Integrity" },
+      { "id": "b4", "text": "IT professionals must be honest, avoid conflicts of interest, and declare any financial or personal interests that could influence their advice" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b1" },
+      { "a": "a4", "b": "b2" }
+    ],
+    "explanation": "For BCS Code of Conduct exam questions use the same four-part structure: Name the element → What it requires → Apply to the scenario → Why it matters. This works for any BCS Code of Conduct element — just swap in the relevant definition and scenario details."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: Given a scenario, identify the correct BCS Code of Conduct element. A penetration tester finds sensitive personal data on a client's server during a test. They copy it to show the client as evidence. Which BCS Code of Conduct element is most at risk if they handle this carelessly?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Competence — they should know how to do a pen test properly" },
+      { "id": "b", "text": "Accountability — they need to report their findings" },
+      { "id": "c", "text": "Confidentiality — they now hold sensitive data they must handle carefully and not retain beyond the engagement" },
+      { "id": "d", "text": "Public Interest — the data could affect the public" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Confidentiality is the primary concern here. A penetration tester who copies sensitive data must handle it with extreme care — only sharing it with the authorised client contact, not retaining copies, and securing it during the engagement. The fact they accessed it as part of their job doesn't reduce their confidentiality obligations."
+  },
+  {
+    "id": 19,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each scenario to the BCS Code of Conduct element it primarily breaches.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "A developer accepts a project they have no experience in to avoid disappointing a client" },
+      { "id": "a2", "text": "An IT manager blames their team for a project failure they personally caused" },
+      { "id": "a3", "text": "A sysadmin tells their friends details about a client's internal systems" },
+      { "id": "a4", "text": "An engineer builds a surveillance tool knowing it will be used to monitor people without consent" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Accountability" },
+      { "id": "b2", "text": "Public Interest" },
+      { "id": "b3", "text": "Competence" },
+      { "id": "b4", "text": "Confidentiality" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b4" },
+      { "a": "a4", "b": "b2" }
+    ],
+    "explanation": "Taking on work beyond your skills = Competence. Blaming others for your mistakes = Accountability. Sharing client information = Confidentiality. Building tools that harm people without consent = Public Interest. Being able to quickly match scenario to element is exactly what exam questions test."
+  },
+  {
+    "id": 20,
+    "text": "LAYER 3 — BUILD THE ANSWER: A classmate says 'BCS Code of Conduct is just common sense — you don't need to study it.' Which two responses best argue why they are wrong? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "BCS Code of Conduct gives specific named principles that can be applied and tested in professional and legal contexts — 'common sense' is vague and unenforceable" },
+      { "id": "b", "text": "Because the BCS will fine you if you don't memorise BCS Code of Conduct" },
+      { "id": "c", "text": "BCS Code of Conduct helps resolve genuinely difficult situations where common sense alone gives no clear answer — for example when Public Interest conflicts with employer instructions" },
+      { "id": "d", "text": "Because BCS Code of Conduct is only relevant to senior IT professionals, not students" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "BCS Code of Conduct provides a structured, named framework that can be consistently applied, taught, examined, and used in professional conduct hearings. 'Common sense' varies between individuals and cultures. BCS Code of Conduct also addresses genuinely hard ethical dilemmas — like when your employer asks you to do something legal but harmful — where common sense alone doesn't give a clear professional answer."
+  }
+]

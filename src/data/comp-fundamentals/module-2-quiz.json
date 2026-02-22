@@ -1,0 +1,143 @@
+[
+  {
+    "id": 1,
+    "text": "What does ROM stand for?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Random Output Memory" },
+      { "id": "b", "text": "Read-Only Memory" },
+      { "id": "c", "text": "Rewritable Optical Memory" },
+      { "id": "d", "text": "Rapid Operating Memory" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "ROM stands for Read-Only Memory. Data can be read from it but cannot normally be written to during regular operation. It is used to store firmware that the system needs at startup."
+  },
+  {
+    "id": 2,
+    "text": "What is the key difference between ROM and RAM?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ROM is faster than RAM" },
+      { "id": "b", "text": "ROM is non-volatile — retains data without power; RAM is volatile and loses data when powered off" },
+      { "id": "c", "text": "ROM can be written to freely; RAM cannot" },
+      { "id": "d", "text": "ROM is used for temporary storage; RAM is used for permanent storage" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The critical difference is volatility. ROM is non-volatile — its contents survive when the power is switched off. RAM (DRAM/SRAM) is volatile — all data is lost the moment power is removed. This is why the BIOS is stored on ROM, not RAM."
+  },
+  {
+    "id": 3,
+    "text": "What is ROM typically used to store in a computer?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The user's documents and files" },
+      { "id": "b", "text": "The operating system while it is running" },
+      { "id": "c", "text": "Firmware such as the BIOS/UEFI — the startup instructions" },
+      { "id": "d", "text": "Temporary data that the CPU is currently processing" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "ROM stores firmware — the low-level instructions the computer needs before the OS loads. The BIOS (Basic Input/Output System) or UEFI is stored on a ROM chip on the motherboard. It runs hardware checks (POST) and locates the OS at startup."
+  },
+  {
+    "id": 4,
+    "text": "What does PROM stand for, and what makes it different from standard ROM?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Programmable ROM — can be written to once by the user, then becomes permanent" },
+      { "id": "b", "text": "Protected ROM — has a hardware write-protect switch" },
+      { "id": "c", "text": "Portable ROM — can be removed and used in other systems" },
+      { "id": "d", "text": "Parallel ROM — reads multiple bits simultaneously for speed" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "PROM (Programmable ROM) comes blank from the factory and can be programmed once by the user using a special PROM programmer device. Once written, the data is permanent and cannot be changed or erased — unlike EPROM or EEPROM."
+  },
+  {
+    "id": 5,
+    "text": "How is data erased from an EPROM?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "By applying a high voltage electrical pulse" },
+      { "id": "b", "text": "By exposing it to ultraviolet (UV) light through a quartz window" },
+      { "id": "c", "text": "By running a software erase command from the OS" },
+      { "id": "d", "text": "By removing power for an extended period" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "EPROM (Erasable Programmable ROM) has a small quartz window on the chip. Exposing it to UV light for around 15-20 minutes erases all stored data, after which it can be reprogrammed. The window is usually covered with a sticker to prevent accidental erasure from sunlight."
+  },
+  {
+    "id": 6,
+    "text": "What makes EEPROM more practical than EPROM for modern use?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "EEPROM is faster to read than EPROM" },
+      { "id": "b", "text": "EEPROM can be erased and rewritten electrically without removing it from the circuit" },
+      { "id": "c", "text": "EEPROM does not require power to retain data" },
+      { "id": "d", "text": "EEPROM has higher storage capacity than EPROM" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "EEPROM (Electrically Erasable Programmable ROM) can be erased and reprogrammed using electrical signals while still installed in the circuit — no UV lamp, no chip removal needed. This is why modern BIOS/UEFI chips use EEPROM, allowing firmware updates to be applied in software."
+  },
+  {
+    "id": 7,
+    "text": "Which two statements correctly describe non-volatile memory? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Data is retained when power is removed" },
+      { "id": "b", "text": "Data is lost when the computer is switched off" },
+      { "id": "c", "text": "ROM is an example of non-volatile memory" },
+      { "id": "d", "text": "DRAM is an example of non-volatile memory" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Non-volatile memory retains its data without power — ROM, SSDs, and hard drives are all non-volatile. DRAM is volatile (data lost on power off). Non-volatile is essential for anything that needs to survive a reboot, like firmware and stored files."
+  },
+  {
+    "id": 8,
+    "text": "Match each ROM type to its correct description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "ROM" },
+      { "id": "a2", "text": "PROM" },
+      { "id": "a3", "text": "EPROM" },
+      { "id": "a4", "text": "EEPROM" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Factory programmed, cannot be changed at all" },
+      { "id": "b2", "text": "Blank from factory, programmed once by user — then permanent" },
+      { "id": "b3", "text": "Erasable using UV light through a quartz window, then reprogrammable" },
+      { "id": "b4", "text": "Erased and rewritten electrically — used for modern BIOS/UEFI chips" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" }
+    ],
+    "explanation": "The ROM family goes from least to most flexible: ROM (fixed forever) → PROM (written once) → EPROM (UV erasable) → EEPROM (electrically erasable). Each generation solved a limitation of the previous one. Modern BIOS chips are EEPROM, allowing firmware updates without replacing the chip."
+  },
+  {
+    "id": 9,
+    "text": "A technician updates the BIOS firmware using a software utility downloaded from the manufacturer. Which type of memory is the BIOS chip most likely?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "DRAM" },
+      { "id": "b", "text": "PROM" },
+      { "id": "c", "text": "EPROM" },
+      { "id": "d", "text": "EEPROM" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Because the update is done in software without removing the chip or using UV light, it must be EEPROM — which can be erased and rewritten electrically while still installed. PROM can only be written once, and EPROM requires UV light erasure."
+  },
+  {
+    "id": 10,
+    "text": "Which of the following correctly summarises the volatile vs non-volatile distinction?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Volatile = keeps data without power; Non-volatile = loses data without power" },
+      { "id": "b", "text": "Volatile = loses data without power; Non-volatile = keeps data without power" },
+      { "id": "c", "text": "Both types lose data without power but at different rates" },
+      { "id": "d", "text": "Volatile memory is always faster; non-volatile is always slower" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Volatile memory (DRAM, SRAM) loses all data the moment power is cut. Non-volatile memory (ROM, SSD, HDD) retains data indefinitely without power. This is a fundamental distinction and a very common exam question."
+  }
+]

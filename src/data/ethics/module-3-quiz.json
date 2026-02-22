@@ -1,0 +1,284 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: A software company discovers a competitor copied large sections of their code and sold it in their own product without permission. Which law protects the original company?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Computer Misuse Act" },
+      { "id": "b", "text": "Data Protection Act" },
+      { "id": "c", "text": "Health and Safety at Work Act" },
+      { "id": "d", "text": "Copyright, Designs and Patents Act" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The Copyright, Designs and Patents Act 1988 protects original creative works including software code. Copying code without permission is copyright infringement. The Act gives the creator exclusive rights over how their work is copied, distributed, or modified."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: A student copies images from Google and pastes them into a college assignment without crediting the source. Which law could they be breaching?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Computer Misuse Act — accessing images without permission" },
+      { "id": "b", "text": "Copyright, Designs and Patents Act — images are protected creative works" },
+      { "id": "c", "text": "Data Protection Act — images may contain personal data" },
+      { "id": "d", "text": "No law — anything on the internet is free to use" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Images are protected by copyright the moment they are created. Appearing on the internet does not make them free to use. Using an image without permission or appropriate credit could infringe the Copyright, Designs and Patents Act 1988 — even in an academic context."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: Which of the following are types of Intellectual Property protected in law? (Choose three)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Patents" },
+      { "id": "b", "text": "Organisational structures" },
+      { "id": "c", "text": "Trademarks" },
+      { "id": "d", "text": "Industrial Designs" }
+    ],
+    "correctAnswer": ["a", "c", "d"],
+    "explanation": "Intellectual Property types include patents (protecting inventions), trademarks (protecting brand names and logos), copyright (protecting creative works like software and music), and industrial designs (protecting the visual appearance of a product). Organisational structures are not a form of IP."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: A company registers a unique logo so that competitors cannot use it. What type of Intellectual Property protection is this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Patent" },
+      { "id": "b", "text": "Trademark" },
+      { "id": "c", "text": "Industrial Design" },
+      { "id": "d", "text": "Copyright" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A trademark protects brand identifiers — logos, names, slogans, and symbols — that distinguish a company's goods or services. Registering a trademark gives the owner exclusive rights to use it and the ability to take legal action against anyone who uses it without permission."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: A tech company invents a new type of battery and registers legal protection so no other company can manufacture it without a licence. What type of IP protection is this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Copyright" },
+      { "id": "b", "text": "Trademark" },
+      { "id": "c", "text": "Patent" },
+      { "id": "d", "text": "Industrial Design" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "A patent protects inventions — new processes, products, or technical solutions. It grants the inventor exclusive rights to manufacture, use, or sell the invention for a set period (typically 20 years). Others can only use it with a licence from the patent holder."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: A set of formalised rules describing what a company expects of its employees in terms of professional behaviour is called a?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Procedure" },
+      { "id": "b", "text": "Moral Philosophy" },
+      { "id": "c", "text": "Code of Ethics" },
+      { "id": "d", "text": "Guideline" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "A Code of Ethics is a formalised set of rules and standards defining expected professional behaviour. For IT professionals, the BCS (British Computer Society) provides a Code of Conduct that members are expected to uphold — covering integrity, competence, and duty to the public."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: Which of the following is NOT a characteristic of a professional body like the BCS?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Requires members to follow a code of ethics" },
+      { "id": "b", "text": "Requires members to undertake Continuous Professional Development (CPD)" },
+      { "id": "c", "text": "Has legal powers to dismiss a member from their place of employment" },
+      { "id": "d", "text": "Provides support and resources to members" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Professional bodies like the BCS can remove someone's membership and professional status, but they cannot dismiss someone from their job — that is an employment matter between the individual and their employer. This is a classic past paper question — know this distinction."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: A developer uses someone else's open-source code in a commercial product but does not check the licence terms. Why is this a potential legal issue?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is not — open-source code is always free to use commercially" },
+      { "id": "b", "text": "Open-source licences often have conditions — such as requiring attribution or prohibiting commercial use — and ignoring them can infringe copyright" },
+      { "id": "c", "text": "Because all software requires a patent to be used commercially" },
+      { "id": "d", "text": "Only a legal issue if the original developer complains" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Open-source does not mean free-for-all. Licences like GPL require that derivative works also be open-source. Others like MIT allow commercial use but require attribution. Ignoring licence terms is a breach of the Copyright, Designs and Patents Act — the code is still the intellectual property of its creator."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: A music streaming service allows users to upload and share songs without checking for copyright. Which law are they potentially breaching?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Computer Misuse Act — users are modifying files" },
+      { "id": "b", "text": "Data Protection Act — music contains personal data" },
+      { "id": "c", "text": "Copyright, Designs and Patents Act — music is a protected creative work" },
+      { "id": "d", "text": "No law — the users are responsible, not the platform" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Music is protected by copyright from the moment it is created. Allowing users to upload and distribute copyrighted music without authorisation infringes the Copyright, Designs and Patents Act. Platforms can be held liable if they knowingly facilitate infringement — which is why legitimate services have content ID systems."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: A developer writes code during working hours on company equipment for a company project. Who owns the copyright to that code?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The developer — they wrote it" },
+      { "id": "b", "text": "The company — work created in the course of employment belongs to the employer" },
+      { "id": "c", "text": "It is shared 50/50 between the developer and the company" },
+      { "id": "d", "text": "Nobody — software written for commercial use is automatically in the public domain" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Under the Copyright, Designs and Patents Act, work created by an employee in the course of their employment belongs to the employer, not the employee. This is an important principle for IT professionals — side projects done in your own time on your own equipment are yours, but work done for your employer belongs to them."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why does copyright law apply to software code automatically, without the developer needing to register it?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because software companies pay a registration fee to protect their code" },
+      { "id": "b", "text": "Because software is a creative work and copyright applies automatically to original creative works the moment they are created" },
+      { "id": "c", "text": "Because code is actually covered under patent law, not copyright" },
+      { "id": "d", "text": "Because all digital content is government property" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Copyright protection applies automatically to original creative works the moment they are created and expressed in a fixed form — no registration needed. Software code qualifies as a creative work under the Copyright, Designs and Patents Act 1988. The code you write today is yours from the moment you write it."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: From an ethical standpoint, why should people be able to protect their inventions and creative works through IP law?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "So large companies can prevent small developers from competing with them" },
+      { "id": "b", "text": "So the government can collect more tax revenue from creative industries" },
+      { "id": "c", "text": "Because people deserve recognition and financial reward for their effort, creativity, and investment" },
+      { "id": "d", "text": "Because creative works depreciate in value over time like physical assets" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "IP law is grounded in the ethical principle that people should benefit from what they create. If anyone could freely copy your invention or software the moment you released it, there would be little incentive to invest time, money, and effort into creating new things. IP law balances the creator's rights with the public interest."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: A developer copies open-source code into a commercial product without checking the licence. Why is this potentially unethical — even if no law is technically broken?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because open-source code is always illegal to use commercially" },
+      { "id": "b", "text": "It is not unethical — if no law is broken there is no problem" },
+      { "id": "c", "text": "Because it may violate the spirit of the original creator's intentions and the trust of the open-source community" },
+      { "id": "d", "text": "Because the company will eventually have to pay a fee" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Ethics goes beyond what is strictly legal. Open-source contributors share their work in good faith, often with specific conditions about how it is used. Using their work in a way that violates their intent — even technically legally — breaks the professional trust of the community. As an IT professional, integrity means respecting the spirit of agreements, not just the letter of the law."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: Why does the BCS Code of Conduct require members to act with integrity — for example, not exaggerating their skills to clients?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because overstating skills could lead to poor work, client harm, and damage to the profession's reputation" },
+      { "id": "b", "text": "Because the BCS monitors all job applications by its members" },
+      { "id": "c", "text": "Because exaggerating skills is covered under the Computer Misuse Act" },
+      { "id": "d", "text": "Only because it could embarrass the BCS publicly" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Integrity is central to professional ethics. If an IT professional overstates their skills and takes on work beyond their competence, the client may suffer real harm — financial loss, security vulnerabilities, failed systems. The BCS Code of Conduct requires honesty about competence to protect clients and maintain public trust in the profession."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: Why do professional bodies like the BCS require Continuous Professional Development (CPD)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To generate income for the professional body through training fees" },
+      { "id": "b", "text": "Because IT evolves rapidly — professionals have an ethical duty to stay current so their advice and work remain competent and safe" },
+      { "id": "c", "text": "Because CPD is a legal requirement under UK employment law" },
+      { "id": "d", "text": "Only to help members earn more money" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Technology changes faster than almost any other field. An IT professional giving advice based on outdated knowledge could cause serious harm — recommending insecure software, using deprecated practices, or missing new legal requirements. CPD is an ethical obligation to remain competent, not just a box-ticking exercise."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 2 — REASONING: A freelance developer builds a website for a client but retains the source code and refuses to hand it over unless paid more money. Why is this both an ethical and a legal issue?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Ethically it is fine — the developer created the code so it is theirs" },
+      { "id": "b", "text": "Ethically it breaches professional integrity; legally the copyright ownership depends on the contract — if the client commissioned the work, they may own it" },
+      { "id": "c", "text": "It is only a legal issue if the client paid in full upfront" },
+      { "id": "d", "text": "The developer always owns code they write, regardless of who commissioned it" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Unlike employment (where work belongs to the employer), freelance copyright ownership depends on the contract. If there is no clear agreement, the developer may retain copyright — but using that as leverage to demand more money breaches professional ethics and could constitute breach of contract. Always clarify IP ownership in writing before starting freelance work."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each part of a strong 15-mark answer to the scenario: 'A competitor copied a software company's code and sold it in their own product.' Note — content is deliberately out of order.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Part 1: Name the law" },
+      { "id": "a2", "text": "Part 2: What the law covers" },
+      { "id": "a3", "text": "Part 3: Apply it to the scenario" },
+      { "id": "a4", "text": "Part 4: How it protects the company" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "The company can take legal action, seek financial damages, and demand the infringing product is withdrawn from sale — the Act deters copying and protects investment in development" },
+      { "id": "b2", "text": "The competitor copied and distributed the software without authorisation — this is copyright infringement under the Act" },
+      { "id": "b3", "text": "The Copyright, Designs and Patents Act 1988" },
+      { "id": "b4", "text": "Protects original creative works including software — gives creators exclusive rights over copying, distribution, and modification of their work" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Name → Covers → Apply → Protects. If you can do this matching exercise for all three laws (Computer Misuse Act, Data Protection Act, Copyright Act) you are well prepared for any legislation scenario in Section 2."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: A question asks you to explain how the Copyright, Designs and Patents Act protects software developers. Which two points would score the most marks? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Copyright applies automatically the moment code is written — no registration is needed" },
+      { "id": "b", "text": "The Copyright, Designs and Patents Act was passed in 1988" },
+      { "id": "c", "text": "Developers can take legal action against infringers and claim financial damages for lost revenue" },
+      { "id": "d", "text": "Copyright is one of several types of Intellectual Property" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "The most valuable exam points come from explaining the practical impact: automatic protection (no registration needed) and the legal remedies available (injunctions, damages, withdrawal of infringing products). Stating when the Act was passed or that copyright is a type of IP won't score marks on their own."
+  },
+  {
+    "id": 19,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each IP type to the correct real-world example.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Patent" },
+      { "id": "a2", "text": "Trademark" },
+      { "id": "a3", "text": "Copyright" },
+      { "id": "a4", "text": "Industrial Design" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "The shape and appearance of a smartphone's unique curved screen edge" },
+      { "id": "b2", "text": "The source code of a software application" },
+      { "id": "b3", "text": "Apple's bitten apple logo" },
+      { "id": "b4", "text": "A new algorithm for compressing video files more efficiently" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Patents protect inventions (new technical processes or products). Trademarks protect brand identifiers (logos, names). Copyright protects creative works (code, music, images). Industrial designs protect the visual appearance of products. Each type of IP covers a different category of creative or inventive output."
+  },
+  {
+    "id": 20,
+    "text": "LAYER 3 — BUILD THE ANSWER: A classmate writes: 'The Copyright Act means you cannot copy things.' What three elements are missing from this answer for a high-mark exam response? (Choose three)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "The full name of the Act and the year it was passed" },
+      { "id": "b", "text": "Application to the specific scenario given in the question" },
+      { "id": "c", "text": "The word count is too low" },
+      { "id": "d", "text": "What remedies or protections it gives the affected party — damages, injunctions, legal action" }
+    ],
+    "correctAnswer": ["a", "b", "d"],
+    "explanation": "A weak answer like that would score 1-2 marks out of 10. A strong answer names the full Act (Copyright, Designs and Patents Act 1988), applies it specifically to the scenario in the question, and explains the real-world protections — the right to take legal action, seek financial damages, and have infringing material removed. Word count alone is never the issue."
+  }
+]

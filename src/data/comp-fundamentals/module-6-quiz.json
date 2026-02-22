@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "text": "Which of the following is an example of Operating System software?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Microsoft Word" },
+      { "id": "b", "text": "Ubuntu Linux" },
+      { "id": "c", "text": "VLC Media Player" },
+      { "id": "d", "text": "CCleaner" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Ubuntu Linux is an operating system — it manages hardware resources and provides a platform for other software to run. Word and VLC are application software; CCleaner is utility software."
+  },
+  {
+    "id": 2,
+    "text": "What is the primary purpose of application software?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To manage hardware resources on behalf of other programs" },
+      { "id": "b", "text": "To perform user tasks like word processing, browsing, or editing" },
+      { "id": "c", "text": "To maintain and optimise the system" },
+      { "id": "d", "text": "To provide an interface between hardware and device drivers" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Application software is designed to help the user carry out specific tasks — word processing, web browsing, video editing, gaming, etc. It runs on top of the OS and uses OS services to interact with hardware."
+  },
+  {
+    "id": 3,
+    "text": "Which two of the following are examples of utility software? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Antivirus software" },
+      { "id": "b", "text": "A web browser" },
+      { "id": "c", "text": "Disk cleanup tool" },
+      { "id": "d", "text": "A spreadsheet application" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Utility software performs system maintenance tasks. Antivirus software protects the system from malware, and disk cleanup tools remove unnecessary files to free up space. Web browsers and spreadsheet apps are application software used for user tasks."
+  },
+  {
+    "id": 4,
+    "text": "What does a file extension tell the operating system?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The size of the file in bytes" },
+      { "id": "b", "text": "The date the file was created" },
+      { "id": "c", "text": "The type of file and which application should open it" },
+      { "id": "d", "text": "Whether the file has been backed up" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "A file extension (the suffix after the dot, e.g. .txt, .exe, .jpg) tells the OS what type of file it is and which application to use to open it. For example, .exe tells the OS it is an executable program; .docx tells it to open with Word."
+  },
+  {
+    "id": 5,
+    "text": "Match each software type to its correct example.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Operating System Software" },
+      { "id": "a2", "text": "Application Software" },
+      { "id": "a3", "text": "Utility Software" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Windows 11 — manages hardware and provides a platform for programs" },
+      { "id": "b2", "text": "Google Chrome — lets the user browse the web" },
+      { "id": "b3", "text": "Disk Defragmenter — optimises file storage on the hard drive" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" }
+    ],
+    "explanation": "OS software manages the system (Windows, Linux, macOS). Application software helps users complete tasks (browsers, word processors, games). Utility software maintains and optimises the system (antivirus, disk tools, backup software)."
+  },
+  {
+    "id": 6,
+    "text": "A technician installs software that scans for malware, removes temporary files, and defragments the hard drive. What type of software is this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Application Software" },
+      { "id": "b", "text": "Operating System Software" },
+      { "id": "c", "text": "Utility Software" },
+      { "id": "d", "text": "Firmware" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Software that performs system maintenance — scanning for malware, cleaning files, defragmenting storage — is utility software. Its purpose is to keep the system running efficiently rather than to help the user complete a work task."
+  },
+  {
+    "id": 7,
+    "text": "Which file extension indicates an executable program on Windows?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": ".txt" },
+      { "id": "b", "text": ".jpg" },
+      { "id": "c", "text": ".exe" },
+      { "id": "d", "text": ".docx" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The .exe extension (short for executable) tells Windows that the file is a program that can be run. The OS uses this extension to identify the file type and handle it appropriately. Double-clicking an .exe launches the program."
+  }
+]

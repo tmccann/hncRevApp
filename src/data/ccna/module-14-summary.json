@@ -1,51 +1,338 @@
 {
   "number": 14,
   "title": "Transport Layer",
-  "description": "Understanding TCP, UDP, and transport layer protocols",
-  "keyConcepts": [
+  "description": "TCP, UDP, port numbers, and reliable communication",
+  "glance": [
+    { "number": "2", "label": "Transport protocols", "detail": "TCP (reliable) and UDP (fast)" },
+    { "number": "65,536", "label": "Total ports", "detail": "0-65535 for each protocol" },
+    { "number": "3", "label": "Handshake steps", "detail": "SYN, SYN-ACK, ACK" },
+    { "number": "2", "label": "Key mechanisms", "detail": "Sequence numbers and ACKs" }
+  ],
+  "sections": [
     {
-      "title": "Transport Layer Functions",
-      "description": "Provides end-to-end communication, error recovery, flow control, and multiplexing through port numbers."
+      "id": "transport-role",
+      "icon": "🚚",
+      "title": "Role of the Transport Layer",
+      "color": "blue",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "Transport Layer (Layer 4)",
+          "content": "Responsible for logical, end-to-end communication between applications running on different hosts. Sits between the network layer (IP addressing) and the application layer (user data). Provides services like segmentation, multiplexing, and optional reliability."
+        },
+        {
+          "type": "text",
+          "content": "The network layer (Layer 3) gets packets from one host to another. The transport layer (Layer 4) gets data from one application to the correct application on the destination host — even when multiple applications are running simultaneously."
+        },
+        {
+          "type": "subheading",
+          "content": "Five Key Functions"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "🎯",
+              "title": "Tracking Conversations",
+              "description": "Identifies and manages individual data flows (sessions) between applications. Each conversation is tracked separately so your web browser and email client don't mix up their data.",
+              "badge": "Session management"
+            },
+            {
+              "icon": "✂️",
+              "title": "Segmentation and Reassembly",
+              "description": "Breaks large application messages into smaller segments that fit in IP packets. At the destination, reassembles segments back into the original message.",
+              "badge": "Data chunking"
+            },
+            {
+              "icon": "🔀",
+              "title": "Multiplexing",
+              "description": "Uses port numbers to allow multiple applications to share the same network connection. Email, web, chat, and gaming can all run simultaneously on one IP address.",
+              "badge": "Port numbers"
+            },
+            {
+              "icon": "✅",
+              "title": "Error Detection",
+              "description": "Checksums verify that segments arrived without corruption. Corrupted segments are detected and (in TCP) retransmitted.",
+              "badge": "Data integrity"
+            },
+            {
+              "icon": "🔄",
+              "title": "Optional Reliability",
+              "description": "TCP provides guaranteed delivery with acknowledgements and retransmissions. UDP skips this for speed. Applications choose which protocol fits their needs.",
+              "badge": "TCP vs UDP"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Layer 3 vs Layer 4",
+          "content": "Network Layer (IP): Gets packets from host A to host B based on IP addresses. Transport Layer (TCP/UDP): Gets data from App X on host A to App Y on host B based on port numbers. IP handles the 'where', transport handles the 'which application'.",
+          "color": "blue"
+        }
+      ]
     },
     {
-      "title": "TCP (Transmission Control Protocol)",
-      "description": "Connection-oriented, reliable protocol with 3-way handshake, sequencing, acknowledgments, and flow control."
+      "id": "tcp-vs-udp",
+      "icon": "⚖️",
+      "title": "TCP vs. UDP: The Big Comparison",
+      "color": "indigo",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "The transport layer uses two protocols: TCP (Transmission Control Protocol) and UDP (User Datagram Protocol). They serve different purposes and applications choose between them based on their needs."
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "TCP — Reliable & Ordered",
+            "content": "Connection-oriented: establishes a connection before sending data (three-way handshake). Guarantees delivery: tracks all segments, detects loss, and retransmits missing data. Ordered delivery: segments arrive in sequence or are reordered. Flow control: prevents overwhelming the receiver. Higher overhead: larger headers (20 bytes minimum), more processing, slower."
+          },
+          "right": {
+            "label": "UDP — Fast & Simple",
+            "content": "Connectionless: no setup, just send. Best-effort delivery: no guarantee data arrives or arrives intact. Unordered: segments can arrive in any sequence. No flow control: sender doesn't care about receiver's capacity. Lower overhead: small header (8 bytes), minimal processing, fast."
+          },
+          "note": "TCP is like registered mail (tracked, guaranteed). UDP is like dropping a postcard in the mail (fast, but no guarantee)."
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "TCP", "UDP"],
+          "rows": [
+            ["Reliability", "Guaranteed delivery with retransmissions", "Best-effort, no retransmissions"],
+            ["Connection", "Connection-oriented (setup required)", "Connectionless (no setup)"],
+            ["Ordering", "Delivers segments in order", "No ordering guarantee"],
+            ["Overhead", "High (20-byte header + management)", "Low (8-byte header)"],
+            ["Speed", "Slower due to acknowledgements", "Faster, no waiting for ACKs"],
+            ["Error Checking", "Yes, with checksum", "Optional checksum"],
+            ["Flow Control", "Yes, via window size", "None"],
+            ["Use Cases", "HTTP, HTTPS, FTP, SMTP, SSH", "DNS, DHCP, TFTP, VoIP, streaming video"]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "When to Use TCP vs UDP"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Use TCP when: Data accuracy is critical, delivery must be guaranteed, order matters. Examples: file transfers, web pages, email, database transactions.",
+            "Use UDP when: Speed is more important than reliability, real-time delivery matters more than perfection, occasional data loss is acceptable. Examples: live video, VoIP, online gaming, DNS lookups.",
+            "TCP is better for 'must arrive' data. UDP is better for 'must arrive quickly' data.",
+            "Some applications use both: DNS uses UDP for fast queries but falls back to TCP for large responses. Voice/video chat uses UDP for streams but TCP for control signaling."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚡ UDP Doesn't Mean Unreliable Applications",
+          "content": "UDP has no built-in reliability, but applications can implement their own. For example, TFTP (Trivial FTP) uses UDP but adds its own acknowledgements and retransmissions at the application layer. This gives control over exactly how reliability works without TCP's overhead.",
+          "color": "indigo"
+        }
+      ]
     },
     {
-      "title": "UDP (User Datagram Protocol)",
-      "description": "Connectionless, best-effort delivery protocol. Fast but unreliable - no handshake, no acknowledgments."
-    },
-    {
+      "id": "port-numbers",
+      "icon": "🔢",
       "title": "Port Numbers",
-      "description": "Identify specific applications. Well-known (0-1023), Registered (1024-49151), Dynamic (49152-65535)."
+      "color": "emerald",
+      "blocks": [
+        {
+          "type": "definition",
+          "label": "Port Number",
+          "content": "A 16-bit number (0-65535) that identifies a specific application or service on a host. Combined with an IP address, a port number creates a socket — a unique identifier for a network conversation. Format: IP:port (e.g., 192.168.1.10:80)."
+        },
+        {
+          "type": "text",
+          "content": "Port numbers allow multiple applications to run on the same device simultaneously. Your computer can browse the web (port 80), send email (port 25), and play an online game (port 3074) all at the same time because each uses a different port."
+        },
+        {
+          "type": "subheading",
+          "content": "Port Number Ranges"
+        },
+        {
+          "type": "table",
+          "headers": ["Range", "Name", "Purpose", "Examples"],
+          "rows": [
+            ["0 – 1,023", "Well-Known Ports", "Reserved for common system services and protocols. Controlled by IANA.", "HTTP (80), HTTPS (443), FTP (20/21), SSH (22), Telnet (23), SMTP (25), DNS (53)"],
+            ["1,024 – 49,151", "Registered Ports", "Assigned by IANA to user processes or specific applications upon request.", "Microsoft SQL (1433), Oracle (1521), MySQL (3306), Remote Desktop (3389)"],
+            ["49,152 – 65,535", "Dynamic/Private Ports", "Ephemeral ports assigned by the client OS as the source port when initiating a connection.", "Randomly assigned when you open a web browser, email client, etc."]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Common Well-Known Ports"
+        },
+        {
+          "type": "grid",
+          "columns": 4,
+          "cardColor": "emerald",
+          "items": [
+            { "title": "HTTP", "description": "Hypertext Transfer Protocol — Unencrypted web traffic", "badge": "80/TCP" },
+            { "title": "HTTPS", "description": "Hypertext Transfer Protocol Secure — Encrypted web traffic (SSL/TLS)", "badge": "443/TCP" },
+            { "title": "FTP", "description": "File Transfer Protocol — File transfers with authentication", "badge": "20-21/TCP" },
+            { "title": "SSH", "description": "Secure Shell — Encrypted remote access and secure tunneling", "badge": "22/TCP" },
+            { "title": "Telnet", "description": "Teletype Network — Unencrypted remote access (insecure, avoid)", "badge": "23/TCP" },
+            { "title": "SMTP", "description": "Simple Mail Transfer Protocol — Email sending/relay", "badge": "25/TCP" },
+            { "title": "DNS", "description": "Domain Name System — Resolves domain names to IP addresses", "badge": "53/UDP" },
+            { "title": "DHCP", "description": "Dynamic Host Configuration Protocol — Automatic IP addressing", "badge": "67-68/UDP" },
+            { "title": "TFTP", "description": "Trivial File Transfer Protocol — Simple file transfer (no authentication)", "badge": "69/UDP" },
+            { "title": "POP3", "description": "Post Office Protocol version 3 — Email retrieval (downloads and deletes)", "badge": "110/TCP" },
+            { "title": "IMAP", "description": "Internet Message Access Protocol — Email retrieval (leaves on server)", "badge": "143/TCP" },
+            { "title": "RDP", "description": "Remote Desktop Protocol — Windows remote desktop access", "badge": "3389/TCP" }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Source vs Destination Port",
+          "content": "Destination port identifies the service (e.g., 80 for web server). Source port is usually a random high-numbered port (ephemeral) chosen by the client. Example: Your browser uses source port 52,341 to connect to destination port 443 on www.google.com. The reply comes back to 52,341.",
+          "color": "emerald"
+        },
+        {
+          "type": "definition",
+          "label": "Socket",
+          "content": "The combination of IP address, transport protocol, and port number. Format: protocol://IP:port. Example: TCP/192.168.1.10:443 is a complete socket. Sockets uniquely identify both ends of a connection."
+        }
+      ]
     },
     {
-      "title": "Socket",
-      "description": "Combination of IP address and port number that uniquely identifies a communication endpoint."
+      "id": "tcp-handshake",
+      "icon": "🤝",
+      "title": "TCP Three-Way Handshake",
+      "color": "purple",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "TCP is connection-oriented, meaning it establishes a formal connection before transmitting data. The three-way handshake is the process TCP uses to establish this connection. Both sides synchronize sequence numbers and agree on parameters before any application data is sent."
+        },
+        {
+          "type": "definition",
+          "label": "Three-Way Handshake",
+          "content": "A three-step process that establishes a TCP connection between a client and server. Uses SYN (synchronize) and ACK (acknowledge) flags in the TCP header to coordinate the connection setup. Ensures both sides are ready to send and receive data."
+        },
+        {
+          "type": "steps",
+          "steps": [
+            {
+              "command": "Step 1: SYN",
+              "description": "Client sends a segment with the SYN flag set to the server. This includes the client's initial sequence number (ISN). Translation: 'I want to connect. I'll start counting my segments from sequence number X.'"
+            },
+            {
+              "command": "Step 2: SYN-ACK",
+              "description": "Server responds with a segment that has BOTH the SYN and ACK flags set. This acknowledges the client's SYN (ACK flag) and sends the server's own initial sequence number (SYN flag). Translation: 'I got your request, and I'm ready. I'll start counting my segments from sequence number Y.'"
+            },
+            {
+              "command": "Step 3: ACK",
+              "description": "Client sends a segment with the ACK flag set, acknowledging the server's SYN. The connection is now established and both sides can send data. Translation: 'I got your response. Let's start transferring data.'"
+            }
+          ]
+        },
+        {
+          "type": "codeblock",
+          "code": "Client                           Server\n  │                                 │\n  │──────── SYN (seq=100) ─────────>│  Step 1: Client requests connection\n  │                                 │\n  │<───── SYN-ACK (seq=300, ack=101)│  Step 2: Server agrees and acknowledges\n  │                                 │\n  │──────── ACK (ack=301) ─────────>│  Step 3: Client acknowledges server\n  │                                 │\n  │═══════ Connection Established ══│\n  │                                 │\n  │<──────── DATA ─────────────────>│  Data transfer begins"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "The handshake happens before any application data is sent — it's pure overhead, but necessary for reliable communication.",
+            "Each side chooses a random initial sequence number (ISN) to prevent session hijacking and predict sequence numbers.",
+            "After the handshake, data transfer is bidirectional — both client and server can send and receive.",
+            "Connection termination also uses a handshake — typically a four-way process (FIN, ACK, FIN, ACK) to gracefully close the connection.",
+            "If the server doesn't respond to the SYN, the client retries a few times before giving up (connection timeout)."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚠️ SYN Flood Attack",
+          "content": "Attackers exploit the three-way handshake by sending thousands of SYN packets with fake source addresses. The server responds with SYN-ACK and waits for the final ACK that never comes, exhausting server resources. Defense: SYN cookies, rate limiting, and firewall rules.",
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "flow-control",
+      "icon": "🎛️",
+      "title": "Flow Control and Reliability",
+      "color": "sky",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "TCP ensures reliable data delivery using three mechanisms: sequence numbers (to track segments and detect loss), acknowledgements (to confirm receipt), and window size (to control the flow of data and prevent overwhelming the receiver)."
+        },
+        {
+          "type": "subheading",
+          "content": "Sequence Numbers and Acknowledgements"
+        },
+        {
+          "type": "definition",
+          "label": "Sequence Number",
+          "content": "A 32-bit number in the TCP header that identifies the position of the segment's data in the overall byte stream. The receiver uses sequence numbers to reassemble segments in the correct order and detect missing segments."
+        },
+        {
+          "type": "definition",
+          "label": "Acknowledgement (ACK)",
+          "content": "A message from the receiver back to the sender confirming receipt of data. The ACK number tells the sender the sequence number of the next byte the receiver expects. Example: ACK 5001 means 'I received everything up to byte 5000. Send 5001 next.'"
+        },
+        {
+          "type": "text",
+          "content": "Sender transmits segments with sequence numbers: 1-1000, 1001-2000, 2001-3000. Receiver sends back ACKs: 'Got 1-1000, send 1001 next', 'Got 1001-2000, send 2001 next'. If a segment is lost, the receiver keeps ACKing the last correctly received sequence number. After three duplicate ACKs, the sender retransmits the missing segment (fast retransmit)."
+        },
+        {
+          "type": "subheading",
+          "content": "Window Size (Flow Control)"
+        },
+        {
+          "type": "definition",
+          "label": "Window Size",
+          "content": "The amount of data (in bytes) the sender can transmit before waiting for an acknowledgement. Advertised by the receiver in every TCP segment. Acts as flow control to prevent the sender from overwhelming the receiver's buffer."
+        },
+        {
+          "type": "text",
+          "content": "The receiver tells the sender: 'My buffer has 8192 bytes free. Don't send more than that before I ACK.' The sender transmits up to 8192 bytes. As the receiver processes data and frees up buffer space, it increases the window size in the next ACK. If the buffer is full, the receiver sets window size to 0, telling the sender to stop temporarily."
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "cardColor": "sky",
+          "items": [
+            {
+              "title": "Small Window Size",
+              "description": "Receiver has limited buffer space or slow processing. Sender must wait for ACKs frequently. Result: Slower data transfer, more back-and-forth messages.",
+              "badge": "Controlled flow"
+            },
+            {
+              "title": "Large Window Size",
+              "description": "Receiver has plenty of buffer space. Sender can transmit many segments before waiting for ACKs. Result: Faster data transfer, more efficient use of bandwidth.",
+              "badge": "High throughput"
+            }
+          ]
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Sequence numbers and ACKs ensure no data is lost or duplicated. Every byte is accounted for.",
+            "If the sender doesn't receive an ACK within a timeout period, it assumes the segment was lost and retransmits it.",
+            "The window size dynamically adjusts based on network conditions and receiver capacity.",
+            "TCP's reliability and flow control add overhead — more processing, larger headers, and more network traffic. This is why UDP is faster for applications that can tolerate loss.",
+            "Congestion control is related but separate — it prevents the sender from overwhelming the network (not just the receiver). Uses algorithms like Slow Start and Congestion Avoidance."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "💡 Positive Acknowledgement with Retransmission (PAR)",
+          "content": "TCP uses PAR: every segment must be positively acknowledged. If no ACK arrives within the timeout, the sender assumes loss and retransmits. This simple mechanism provides reliable delivery over unreliable networks.",
+          "color": "sky"
+        },
+        {
+          "type": "comparison",
+          "left": {
+            "label": "Without Flow Control",
+            "content": "Sender blasts data as fast as possible. Receiver's buffer overflows because it can't process data fast enough. Result: Data is dropped, must be retransmitted, performance degrades."
+          },
+          "right": {
+            "label": "With Flow Control (Window Size)",
+            "content": "Receiver tells sender how much buffer space is available. Sender respects the limit and waits for ACKs before sending more. Result: No buffer overflow, smooth data transfer, optimal throughput."
+          }
+        }
+      ]
     }
-  ],
-  "importantPoints": [
-    "TCP uses a 3-way handshake: SYN, SYN-ACK, ACK",
-    "TCP termination uses a 4-way handshake: FIN , ACK, FIN, ACK",
-    "UDP header is 8 bytes (Source Port, Dest Port, Length, Checksum)",
-    "TCP provides flow control through window sizing",
-    "Sequence numbers allow TCP to reassemble segments in correct order",
-    "Well-known ports: HTTP=80, HTTPS=443, FTP=21, SSH=22, Telnet=23, DNS=53, DHCP=67/68",
-    "TCP is used when reliability is required (HTTP, FTP, SMTP)",
-    "UDP is used when speed is priority (DNS, DHCP, TFTP, streaming)"
-  ],
-  "quickReference": [
-    { "label": "HTTP", "value": "TCP Port 80" },
-    { "label": "HTTPS", "value": "TCP Port 443" },
-    { "label": "FTP", "value": "TCP Port 21" },
-    { "label": "SSH", "value": "TCP Port 22" },
-    { "label": "Telnet", "value": "TCP Port 23" },
-    { "label": "SMTP", "value": "TCP Port 25" },
-    { "label": "DNS", "value": "UDP Port 53" },
-    { "label": "DHCP Server", "value": "UDP Port 67" },
-    { "label": "DHCP Client", "value": "UDP Port 68" },
-    { "label": "TFTP", "value": "UDP Port 69" },
-    { "label": "POP3", "value": "TCP Port 110" },
-    { "label": "SNMP", "value": "UDP Port 161" }
   ]
 }

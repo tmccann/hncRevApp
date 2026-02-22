@@ -1,0 +1,153 @@
+[
+  {
+    "id": 1,
+    "text": "What does the Address Bus carry?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Actual data being transferred between CPU and memory" },
+      { "id": "b", "text": "Memory addresses from the CPU to memory or I/O devices" },
+      { "id": "c", "text": "Control signals like read, write, and clock" },
+      { "id": "d", "text": "Power supply signals to components" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Address Bus carries memory addresses from the CPU (specifically from the MAR) to memory and I/O devices. It tells the rest of the system which location is being accessed."
+  },
+  {
+    "id": 2,
+    "text": "The Address Bus is unidirectional. What does this mean?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It can only carry one bit at a time" },
+      { "id": "b", "text": "Data flows in one direction only — from CPU outward" },
+      { "id": "c", "text": "It is only used during write operations" },
+      { "id": "d", "text": "It alternates direction every clock cycle" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Address Bus is unidirectional — addresses only travel from the CPU outward to memory and peripherals. The CPU decides which address to access; nothing sends addresses back to the CPU on this bus."
+  },
+  {
+    "id": 3,
+    "text": "A system has a 16-bit address bus. How many unique memory addresses can it access?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "16" },
+      { "id": "b", "text": "32,768" },
+      { "id": "c", "text": "65,536" },
+      { "id": "d", "text": "131,072" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The formula is 2^n addresses, where n is the bus width. 2^16 = 65,536 unique addresses. Each additional bit doubles the addressable memory — so a 17-bit bus would give 131,072."
+  },
+  {
+    "id": 4,
+    "text": "What is the Data Bus used for, and in which direction does it operate?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Carries addresses; unidirectional" },
+      { "id": "b", "text": "Carries actual data between CPU, memory and I/O; bidirectional" },
+      { "id": "c", "text": "Carries control signals; bidirectional" },
+      { "id": "d", "text": "Carries clock signals; unidirectional" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Data Bus carries the actual data (not addresses) between the CPU, memory, and I/O devices. It is bidirectional — data can flow in both directions depending on whether the CPU is reading or writing."
+  },
+  {
+    "id": 5,
+    "text": "If a data bus is upgraded from 32-bit to 64-bit, what is the effect?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The system can address twice as much memory" },
+      { "id": "b", "text": "Twice as much data can be transferred per clock cycle" },
+      { "id": "c", "text": "The CPU runs at double the clock speed" },
+      { "id": "d", "text": "The number of addressable memory locations doubles" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Doubling the Data Bus width doubles how much data can be transferred in a single cycle — this improves performance. It does NOT increase the addressable memory space (that's the Address Bus's job)."
+  },
+  {
+    "id": 6,
+    "text": "Which two signals are carried by the Control Bus? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Read / Write signals" },
+      { "id": "b", "text": "Memory addresses" },
+      { "id": "c", "text": "Interrupt Request (IRQ)" },
+      { "id": "d", "text": "Actual data values" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "The Control Bus carries control signals that manage operations — including Read/Write (telling memory whether data is going in or out), Clock, Interrupt Requests (IRQ), Reset, and Memory Enable. Addresses go on the Address Bus, data goes on the Data Bus."
+  },
+  {
+    "id": 7,
+    "text": "What is an interrupt?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A method of transferring data directly between a device and RAM" },
+      { "id": "b", "text": "A signal that pauses the CPU to handle an event from a device" },
+      { "id": "c", "text": "A technique for extending RAM using disk space" },
+      { "id": "d", "text": "A type of address bus communication" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "An interrupt is a signal sent to the CPU by a hardware device (keyboard, mouse, disk) to request attention. The CPU finishes its current instruction, saves its state, then jumps to the ISR (Interrupt Service Routine) to handle the event."
+  },
+  {
+    "id": 8,
+    "text": "Why are interrupts more efficient than polling?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Interrupts are faster because they use the Data Bus directly" },
+      { "id": "b", "text": "Polling is faster but interrupts use less memory" },
+      { "id": "c", "text": "With interrupts the CPU only responds when a device needs it, rather than constantly checking" },
+      { "id": "d", "text": "Interrupts allow two devices to communicate without the CPU" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Polling means the CPU constantly checks every device to see if it needs attention — wasting CPU time. With interrupts, the CPU gets on with other work and only responds when a device signals it has something to do. This significantly improves efficiency."
+  },
+  {
+    "id": 9,
+    "text": "What does DMA (Direct Memory Access) allow?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The CPU to access cache memory directly without the MDR" },
+      { "id": "b", "text": "Devices to transfer data directly to RAM without constant CPU involvement" },
+      { "id": "c", "text": "The OS to bypass the file system when writing to disk" },
+      { "id": "d", "text": "Two CPUs to share the same memory address space" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "DMA allows hardware devices (e.g. disk, network card) to transfer data directly into RAM without the CPU handling every byte. The CPU sets up the transfer then is free to do other work — only being interrupted when the transfer is complete."
+  },
+  {
+    "id": 10,
+    "text": "What is the difference between memory-mapped I/O and isolated I/O?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Memory-mapped uses a separate address space; isolated shares with RAM" },
+      { "id": "b", "text": "Memory-mapped shares the memory address space with RAM; isolated uses a separate I/O address space" },
+      { "id": "c", "text": "They are the same thing with different names" },
+      { "id": "d", "text": "Memory-mapped is for output only; isolated is for input only" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "With memory-mapped I/O, devices are assigned addresses within the normal memory address space — the CPU talks to them using standard memory instructions. With isolated (port-mapped) I/O, devices have a completely separate address space and require special IN/OUT instructions."
+  },
+  {
+    "id": 11,
+    "text": "Match each bus to its correct description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Address Bus" },
+      { "id": "a2", "text": "Data Bus" },
+      { "id": "a3", "text": "Control Bus" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Carries memory locations — unidirectional, CPU outward only" },
+      { "id": "b2", "text": "Carries actual data — bidirectional, read and write" },
+      { "id": "b3", "text": "Carries control signals like Read, Write, Clock, IRQ" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" }
+    ],
+    "explanation": "The three buses have distinct roles: the Address Bus specifies where, the Data Bus carries what, and the Control Bus manages how and when. Together they form the system bus connecting the CPU to memory and I/O."
+  }
+]

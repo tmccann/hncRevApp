@@ -1,0 +1,90 @@
+[
+  {
+    "id": "module-1",
+    "number": 1,
+    "title": "RAM Types: DRAM & SRAM",
+    "description": "How DRAM and SRAM work, their differences, speed, cost and where each is used",
+    "topics": ["DRAM", "SRAM", "Volatile Memory", "Capacitors", "Flip-flops", "CPU Cache"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-emerald-500 to-teal-600"
+  },
+  {
+    "id": "module-2",
+    "number": 2,
+    "title": "ROM Types",
+    "description": "Read-only memory, non-volatile storage, and ROM variants — PROM, EPROM, EEPROM",
+    "topics": ["ROM", "PROM", "EPROM", "EEPROM", "Non-volatile", "Firmware", "BIOS"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-emerald-500 to-teal-600"
+  },
+  {
+    "id": "module-3",
+    "number": 3,
+    "title": "CPU Architecture",
+    "description": "Registers, ALU, Control Unit, and the Fetch-Decode-Execute cycle",
+    "topics": ["MAR", "MDR", "PC", "CIR", "ALU", "Control Unit", "Fetch-Decode-Execute"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-emerald-500 to-teal-600"
+  },
+  {
+    "id": "module-4",
+    "number": 4,
+    "title": "Buses & I/O",
+    "description": "Address, data and control buses, I/O addressing, interrupts, IRQ and DMA",
+    "topics": ["Address Bus", "Data Bus", "Control Bus", "Interrupts", "IRQ", "DMA"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-emerald-500 to-teal-600"
+  },
+  {
+    "id": "module-5",
+    "number": 5,
+    "title": "Operating Systems",
+    "description": "OS layers, virtual memory, paging, thrashing, multitasking and APIs",
+    "topics": ["Onion Model", "Virtual Memory", "Paging", "Thrashing", "Multitasking", "API"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-emerald-500 to-teal-600"
+  },
+  {
+    "id": "module-6",
+    "number": 6,
+    "title": "Software Types",
+    "description": "Operating system, application and utility software — definitions and examples",
+    "topics": ["OS Software", "Application Software", "Utility Software", "File Extensions"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-emerald-500 to-teal-600"
+  },
+  {
+    "id": "module-7",
+    "number": 7,
+    "title": "Number Systems",
+    "description": "Binary, decimal and hex conversions, arithmetic, and 2's complement",
+    "topics": ["Binary", "Hexadecimal", "Decimal", "Conversion", "2's Complement", "Arithmetic"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-emerald-500 to-teal-600"
+  },
+  {
+    "id": "module-8",
+    "number": 8,
+    "title": "Logic Gates",
+    "description": "AND, OR, NOT, and XOR gates — rules, truth tables and worked examples",
+    "topics": ["AND", "OR", "NOT", "XOR", "Truth Tables", "Logic Operations"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-emerald-500 to-teal-600"
+  }
+]
