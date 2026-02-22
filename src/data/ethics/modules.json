@@ -7,7 +7,7 @@
     "topics": ["Unauthorised Access", "Unauthorised Modification", "Intent", "Backdoors", "Penetration Testing", "Ethical Hacking"],
     "hasSummary": false,
     "hasQuiz": true,
-    "checkpoints": ["checkpoint-1-2"],
+    "checkpoints": [],
     "color": "from-violet-500 to-purple-600"
   },
   {
@@ -18,7 +18,7 @@
     "topics": ["GDPR", "Subject Access Request", "Right to Erasure", "Consent", "Data Breach", "ICO", "Special Category Data"],
     "hasSummary": false,
     "hasQuiz": true,
-    "checkpoints": ["checkpoint-1-2"],
+    "checkpoints": [],
     "color": "from-violet-500 to-purple-600"
   },
   {
@@ -29,7 +29,7 @@
     "topics": ["Copyright", "Patents", "Trademarks", "Industrial Designs", "BCS", "Code of Ethics", "CPD", "Professional Integrity"],
     "hasSummary": false,
     "hasQuiz": true,
-    "checkpoints": ["checkpoint-3-4"],
+    "checkpoints": [],
     "color": "from-violet-500 to-purple-600"
   },
   {
@@ -40,7 +40,7 @@
     "topics": ["Public Interest", "Integrity", "Confidentiality", "Competence", "Accountability", "BCS", "Professional Conduct"],
     "hasSummary": false,
     "hasQuiz": true,
-    "checkpoints": ["checkpoint-3-4"],
+    "checkpoints": [],
     "color": "from-violet-500 to-purple-600"
   }
 ]

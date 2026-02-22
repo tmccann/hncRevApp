@@ -93,14 +93,7 @@ const CompFundamentals = () => {
                       >
                         📝 View Summary
                       </Link>
-                    ) : (
-                      <button
-                        disabled
-                        className="block w-full bg-gray-200 text-gray-400 text-center py-2 rounded-lg font-semibold cursor-not-allowed text-sm"
-                      >
-                        📝 Summary Coming Soon
-                      </button>
-                    )}
+                    ) : null}
 
                     {module.hasQuiz ? (
                       <Link
@@ -123,7 +116,7 @@ const CompFundamentals = () => {
             ))}
 
             {/* Coming Soon Card */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden opacity-60">
+            {/* <div className="bg-white rounded-xl shadow-lg overflow-hidden opacity-60">
               <div className="bg-gradient-to-r from-gray-400 to-gray-500 p-4 text-white">
                 <div className="text-sm font-semibold mb-1">More Modules</div>
                 <h3 className="text-xl font-bold">Coming Soon</h3>
@@ -139,7 +132,7 @@ const CompFundamentals = () => {
                   Coming Soon
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

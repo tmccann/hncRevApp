@@ -50,7 +50,9 @@ const EthicsModules = () => {
                 key={module.id}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
               >
-                <div className={`bg-gradient-to-r ${module.color} p-4 text-white`}>
+                <div
+                  className={`bg-gradient-to-r ${module.color} p-4 text-white`}
+                >
                   <div className="text-sm font-semibold mb-1">
                     Module {module.number}
                   </div>
@@ -85,14 +87,7 @@ const EthicsModules = () => {
                       >
                         📝 View Summary
                       </Link>
-                    ) : (
-                      <button
-                        disabled
-                        className="block w-full bg-gray-200 text-gray-400 text-center py-2 rounded-lg font-semibold cursor-not-allowed text-sm"
-                      >
-                        📝 Summary Coming Soon
-                      </button>
-                    )}
+                    ) : null}
 
                     {module.hasQuiz ? (
                       <Link
@@ -128,12 +123,16 @@ const EthicsModules = () => {
                   key={checkpoint.id}
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  <div className={`bg-gradient-to-r ${checkpoint.color} p-6 text-white`}>
+                  <div
+                    className={`bg-gradient-to-r ${checkpoint.color} p-6 text-white`}
+                  >
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-2xl">✅</span>
                       <h3 className="text-2xl font-bold">{checkpoint.title}</h3>
                     </div>
-                    <p className="text-violet-100 text-sm">{checkpoint.description}</p>
+                    <p className="text-violet-100 text-sm">
+                      {checkpoint.description}
+                    </p>
                   </div>
                   <div className="p-6">
                     <Link
