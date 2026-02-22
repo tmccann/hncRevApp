@@ -8,12 +8,16 @@ import {
 import CourseHome from "./pages/CourseHome";
 import CCNAModules from "./pages/CCNAModules";
 import ITEssentialsModules from "./pages/ITEssentialsModules";
+import CompFundamentals from "./pages/CompFundamentals";
+import EthicsModules from "./pages/EthicsModules";
 import ModuleSummary from "./components/ModuleSummary";
 import Quiz from "./components/Quiz";
 
 // Import metadata
 import ccnaModulesData from "./data/ccna/modules.json";
 import itEssentialsModulesData from "./data/it-essentials/modules.json";
+import compModulesData from "./data/comp-fundamentals/modules.json";
+import ethicsModulesData from "./data/ethics/modules.json";
 
 // CCNA Vite glob imports
 const ccnaSummaryFiles = import.meta.glob("./data/ccna/*-summary.json", {
@@ -34,16 +38,33 @@ const iteQuizFiles = import.meta.glob("./data/it-essentials/*-quiz.json", {
   eager: true,
 });
 
+// Computer Fundamentals Vite glob imports
+const compSummaryFiles = import.meta.glob(
+  "./data/comp-fundamentals/*-summary.json",
+  {
+    eager: true,
+  },
+);
+const compQuizFiles = import.meta.glob("./data/comp-fundamentals/*-quiz.json", {
+  eager: true,
+});
+
+// Ethics Vite glob imports
+const ethicsSummaryFiles = import.meta.glob("./data/ethics/*-summary.json", {
+  eager: true,
+});
+const ethicsQuizFiles = import.meta.glob("./data/ethics/*-quiz.json", {
+  eager: true,
+});
+
 // Convert CCNA glob results to lookup maps
 const ccnaSummaryMap = {};
 const ccnaQuizMap = {};
-
 Object.keys(ccnaSummaryFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
   ccnaSummaryMap[filename.replace("-summary", "")] =
     ccnaSummaryFiles[path].default;
 });
-
 Object.keys(ccnaQuizFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
   ccnaQuizMap[filename.replace("-quiz", "")] = ccnaQuizFiles[path].default;
@@ -52,23 +73,46 @@ Object.keys(ccnaQuizFiles).forEach((path) => {
 // Convert IT Essentials glob results to lookup maps
 const iteSummaryMap = {};
 const iteQuizMap = {};
-
 Object.keys(iteSummaryFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
   iteSummaryMap[filename.replace("-summary", "")] =
     iteSummaryFiles[path].default;
 });
-
 Object.keys(iteQuizFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
   iteQuizMap[filename.replace("-quiz", "")] = iteQuizFiles[path].default;
+});
+
+// Convert Computer Fundamentals glob results to lookup maps
+const compSummaryMap = {};
+const compQuizMap = {};
+Object.keys(compSummaryFiles).forEach((path) => {
+  const filename = path.split("/").pop().replace(".json", "");
+  compSummaryMap[filename.replace("-summary", "")] =
+    compSummaryFiles[path].default;
+});
+Object.keys(compQuizFiles).forEach((path) => {
+  const filename = path.split("/").pop().replace(".json", "");
+  compQuizMap[filename.replace("-quiz", "")] = compQuizFiles[path].default;
+});
+
+// Convert Ethics glob results to lookup maps
+const ethicsSummaryMap = {};
+const ethicsQuizMap = {};
+Object.keys(ethicsSummaryFiles).forEach((path) => {
+  const filename = path.split("/").pop().replace(".json", "");
+  ethicsSummaryMap[filename.replace("-summary", "")] =
+    ethicsSummaryFiles[path].default;
+});
+Object.keys(ethicsQuizFiles).forEach((path) => {
+  const filename = path.split("/").pop().replace(".json", "");
+  ethicsQuizMap[filename.replace("-quiz", "")] = ethicsQuizFiles[path].default;
 });
 
 // Dynamic CCNA Module Summary Loader
 const DynamicCCNAModuleSummary = () => {
   const { moduleId } = useParams();
   const summaryData = ccnaSummaryMap[moduleId];
-
   if (!summaryData) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center">
@@ -89,7 +133,6 @@ const DynamicCCNAModuleSummary = () => {
       </div>
     );
   }
-
   return <ModuleSummary data={summaryData} backLink="/ccna" />;
 };
 
@@ -98,7 +141,6 @@ const DynamicCCNAModuleQuiz = () => {
   const { moduleId } = useParams();
   const quizData = ccnaQuizMap[moduleId];
   const moduleInfo = ccnaModulesData.find((m) => m.id === moduleId);
-
   if (!quizData) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center">
@@ -119,7 +161,6 @@ const DynamicCCNAModuleQuiz = () => {
       </div>
     );
   }
-
   return (
     <Quiz
       questions={quizData}
@@ -137,7 +178,6 @@ const DynamicCCNACheckpointQuiz = () => {
     .replace("checkpoint-", "")
     .split("-")
     .map(Number);
-
   if (!quizData) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center">
@@ -158,7 +198,6 @@ const DynamicCCNACheckpointQuiz = () => {
       </div>
     );
   }
-
   return (
     <Quiz
       questions={quizData}
@@ -172,7 +211,6 @@ const DynamicCCNACheckpointQuiz = () => {
 const DynamicITEModuleSummary = () => {
   const { moduleId } = useParams();
   const summaryData = iteSummaryMap[moduleId];
-
   if (!summaryData) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center">
@@ -193,7 +231,6 @@ const DynamicITEModuleSummary = () => {
       </div>
     );
   }
-
   return <ModuleSummary data={summaryData} backLink="/it-essentials" />;
 };
 
@@ -202,7 +239,6 @@ const DynamicITEModuleQuiz = () => {
   const { moduleId } = useParams();
   const quizData = iteQuizMap[moduleId];
   const moduleInfo = itEssentialsModulesData.find((m) => m.id === moduleId);
-
   if (!quizData) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center">
@@ -223,7 +259,6 @@ const DynamicITEModuleQuiz = () => {
       </div>
     );
   }
-
   return (
     <Quiz
       questions={quizData}
@@ -241,7 +276,6 @@ const DynamicITECheckpointQuiz = () => {
     .replace("checkpoint-", "")
     .split("-")
     .map(Number);
-
   if (!quizData) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center">
@@ -262,7 +296,202 @@ const DynamicITECheckpointQuiz = () => {
       </div>
     );
   }
+  return (
+    <Quiz
+      questions={quizData}
+      title={`Checkpoint: Modules ${moduleNums.join("-")}`}
+      description="Combined assessment"
+    />
+  );
+};
 
+// Dynamic Computer Fundamentals Module Summary Loader
+const DynamicCompModuleSummary = () => {
+  const { moduleId } = useParams();
+  const summaryData = compSummaryMap[moduleId];
+  if (!summaryData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Summary Not Found
+          </h1>
+          <p className="text-gray-600 mb-8">
+            This module summary hasn't been created yet.
+          </p>
+          <Link
+            to="/comp-fundamentals"
+            className="text-emerald-600 hover:text-emerald-700 font-semibold"
+          >
+            ← Back to Modules
+          </Link>
+        </div>
+      </div>
+    );
+  }
+  return <ModuleSummary data={summaryData} backLink="/comp-fundamentals" />;
+};
+
+// Dynamic Computer Fundamentals Module Quiz Loader
+const DynamicCompModuleQuiz = () => {
+  const { moduleId } = useParams();
+  const quizData = compQuizMap[moduleId];
+  const moduleInfo = compModulesData.find((m) => m.id === moduleId);
+  if (!quizData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Quiz Not Found
+          </h1>
+          <p className="text-gray-600 mb-8">
+            This module quiz hasn't been created yet.
+          </p>
+          <Link
+            to="/comp-fundamentals"
+            className="text-emerald-600 hover:text-emerald-700 font-semibold"
+          >
+            ← Back to Modules
+          </Link>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <Quiz
+      questions={quizData}
+      title={`Module ${moduleInfo?.number}: ${moduleInfo?.title} Quiz`}
+      description={moduleInfo?.description || ""}
+    />
+  );
+};
+
+// Dynamic Computer Fundamentals Checkpoint Quiz Loader
+const DynamicCompCheckpointQuiz = () => {
+  const { checkpointId } = useParams();
+  const quizData = compQuizMap[checkpointId];
+  const moduleNums = checkpointId
+    .replace("checkpoint-", "")
+    .split("-")
+    .map(Number);
+  if (!quizData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Checkpoint Quiz Not Found
+          </h1>
+          <p className="text-gray-600 mb-8">
+            This checkpoint quiz hasn't been created yet.
+          </p>
+          <Link
+            to="/comp-fundamentals"
+            className="text-emerald-600 hover:text-emerald-700 font-semibold"
+          >
+            ← Back to Modules
+          </Link>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <Quiz
+      questions={quizData}
+      title={`Checkpoint: Modules ${moduleNums.join("-")}`}
+      description="Combined assessment"
+    />
+  );
+};
+
+// Dynamic Ethics Module Summary Loader
+const DynamicEthicsModuleSummary = () => {
+  const { moduleId } = useParams();
+  const summaryData = ethicsSummaryMap[moduleId];
+  if (!summaryData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-violet-50 to-purple-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Summary Not Found
+          </h1>
+          <p className="text-gray-600 mb-8">
+            This module summary hasn't been created yet.
+          </p>
+          <Link
+            to="/ethics"
+            className="text-violet-600 hover:text-violet-700 font-semibold"
+          >
+            ← Back to Modules
+          </Link>
+        </div>
+      </div>
+    );
+  }
+  return <ModuleSummary data={summaryData} backLink="/ethics" />;
+};
+
+// Dynamic Ethics Module Quiz Loader
+const DynamicEthicsModuleQuiz = () => {
+  const { moduleId } = useParams();
+  const quizData = ethicsQuizMap[moduleId];
+  const moduleInfo = ethicsModulesData.find((m) => m.id === moduleId);
+  if (!quizData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-violet-50 to-purple-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Quiz Not Found
+          </h1>
+          <p className="text-gray-600 mb-8">
+            This module quiz hasn't been created yet.
+          </p>
+          <Link
+            to="/ethics"
+            className="text-violet-600 hover:text-violet-700 font-semibold"
+          >
+            ← Back to Modules
+          </Link>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <Quiz
+      questions={quizData}
+      title={`Module ${moduleInfo?.number}: ${moduleInfo?.title} Quiz`}
+      description={moduleInfo?.description || ""}
+    />
+  );
+};
+
+// Dynamic Ethics Checkpoint Quiz Loader
+const DynamicEthicsCheckpointQuiz = () => {
+  const { checkpointId } = useParams();
+  const quizData = ethicsQuizMap[checkpointId];
+  const moduleNums = checkpointId
+    .replace("checkpoint-", "")
+    .split("-")
+    .map(Number);
+  if (!quizData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-violet-50 to-purple-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Checkpoint Quiz Not Found
+          </h1>
+          <p className="text-gray-600 mb-8">
+            This checkpoint quiz hasn't been created yet.
+          </p>
+          <Link
+            to="/ethics"
+            className="text-violet-600 hover:text-violet-700 font-semibold"
+          >
+            ← Back to Modules
+          </Link>
+        </div>
+      </div>
+    );
+  }
   return (
     <Quiz
       questions={quizData}
@@ -307,6 +536,36 @@ function App() {
         <Route
           path="/it-essentials/:checkpointId/quiz"
           element={<DynamicITECheckpointQuiz />}
+        />
+
+        {/* Computer Fundamentals Course */}
+        <Route path="/comp-fundamentals" element={<CompFundamentals />} />
+        <Route
+          path="/comp-fundamentals/:moduleId/summary"
+          element={<DynamicCompModuleSummary />}
+        />
+        <Route
+          path="/comp-fundamentals/:moduleId/quiz"
+          element={<DynamicCompModuleQuiz />}
+        />
+        <Route
+          path="/comp-fundamentals/:checkpointId/quiz"
+          element={<DynamicCompCheckpointQuiz />}
+        />
+
+        {/* Ethics Course */}
+        <Route path="/ethics" element={<EthicsModules />} />
+        <Route
+          path="/ethics/:moduleId/summary"
+          element={<DynamicEthicsModuleSummary />}
+        />
+        <Route
+          path="/ethics/:moduleId/quiz"
+          element={<DynamicEthicsModuleQuiz />}
+        />
+        <Route
+          path="/ethics/:checkpointId/quiz"
+          element={<DynamicEthicsCheckpointQuiz />}
         />
       </Routes>
     </BrowserRouter>

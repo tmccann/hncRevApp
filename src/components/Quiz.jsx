@@ -18,11 +18,13 @@ const Quiz = ({ questions, title, description }) => {
 
     if (currentQuestion.type === "matching") {
       if (!selected) return false;
-      // Check if all Column A items have been matched (not all Column B - some may be unused)
-      const matches = Object.values(selected).filter(
-        (match) => match?.a,
+      // Check if user has made at least the required number of matches
+      // (They might match ALL items including unused ones - let validation handle correctness)
+      // Exclude 'selectedA' from the count - it's not a match, just a temporary selection
+      const matches = Object.entries(selected).filter(
+        ([key, match]) => key !== "selectedA" && match?.a,
       ).length;
-      return matches === currentQuestion.columnA.length;
+      return matches >= currentQuestion.correctMatches.length;
     }
 
     if (!selected || selected.length === 0) return false;
@@ -71,7 +73,6 @@ const Quiz = ({ questions, title, description }) => {
   //
   const handleSubmit = () => {
     const selected = selectedAnswers[currentQuestion.id];
-
     // Handle matching questions
     if (currentQuestion.type === "matching") {
       if (!selected) return;
@@ -79,10 +80,23 @@ const Quiz = ({ questions, title, description }) => {
       const correctMatches = currentQuestion.correctMatches;
       const userMatches = selected;
 
-      // Check if all matches are correct
-      const isCorrect = correctMatches.every(
-        (match) => userMatches[match.b]?.a === match.a,
-      );
+      // Check if all matches are correct by comparing text content
+      const isCorrect = correctMatches.every((match) => {
+        const userMatchedBId = userMatches[match.a]?.b;
+        if (!userMatchedBId) return false;
+
+        // Get the text of the correct answer
+        const correctBText = currentQuestion.columnB.find(
+          (b) => b.id === match.b,
+        )?.text;
+        // Get the text of what the user selected
+        const userBText = currentQuestion.columnB.find(
+          (b) => b.id === userMatchedBId,
+        )?.text;
+
+        // Match is correct if texts are the same
+        return correctBText === userBText;
+      });
 
       setSubmittedAnswers({
         ...submittedAnswers,
@@ -97,7 +111,6 @@ const Quiz = ({ questions, title, description }) => {
       }
       return;
     }
-
     // Handle single/multiple choice questions
     if (!selected || selected.length === 0) return;
 
@@ -374,28 +387,36 @@ const Quiz = ({ questions, title, description }) => {
                         selectedAnswers[currentQuestion.id]?.selectedA ===
                         item.id;
                       const isMatched =
-                        selectedAnswers[currentQuestion.id] &&
-                        Object.values(selectedAnswers[currentQuestion.id]).some(
-                          (match) => match?.a === item.id,
-                        );
+                        selectedAnswers[currentQuestion.id]?.[item.id];
 
                       let borderColor = "border-gray-300";
                       let bgColor = "bg-white";
                       let cursorStyle =
-                        "cursor-pointer hover:border-indigo-400";
+                        "cursor-pointer hover:border-indigo-400 active:border-indigo-600 active:bg-indigo-50 transition-all";
 
                       if (isSubmitted) {
                         cursorStyle = "cursor-not-allowed";
                         const matchedPair = Object.entries(
                           selectedAnswers[currentQuestion.id] || {},
-                        ).find(([, match]) => match?.a === item.id);
+                        ).find(
+                          ([key, match]) =>
+                            key !== "selectedA" && match?.a === item.id,
+                        );
                         if (matchedPair) {
-                          const [bId] = matchedPair;
+                          const [, matchValue] = matchedPair;
+                          const bId = matchValue.b;
                           const correctMatch =
                             currentQuestion.correctMatches.find(
                               (m) => m.a === item.id,
                             );
-                          const isCorrect = correctMatch?.b === bId;
+                          // Compare by text, not exact b-id
+                          const correctBText = currentQuestion.columnB.find(
+                            (b) => b.id === correctMatch?.b,
+                          )?.text;
+                          const userBText = currentQuestion.columnB.find(
+                            (b) => b.id === bId,
+                          )?.text;
+                          const isCorrect = correctBText === userBText;
                           borderColor = isCorrect
                             ? "border-green-500"
                             : "border-red-500";
@@ -410,7 +431,6 @@ const Quiz = ({ questions, title, description }) => {
                           bgColor = "bg-green-50";
                         }
                       }
-
                       return (
                         <div
                           key={item.id}
@@ -441,8 +461,12 @@ const Quiz = ({ questions, title, description }) => {
                   <h3 className="font-semibold text-gray-700 mb-3">Column B</h3>
                   <div className="space-y-2">
                     {currentQuestion.columnB.map((item) => {
-                      const matchedTo =
-                        selectedAnswers[currentQuestion.id]?.[item.id];
+                      const matchedTo = Object.entries(
+                        selectedAnswers[currentQuestion.id] || {},
+                      )
+                        .filter(([key]) => key !== "selectedA")
+                        .map(([, value]) => value)
+                        .find((match) => match?.b === item.id);
 
                       let borderColor = "border-gray-300";
                       let bgColor = "bg-white";
@@ -454,9 +478,16 @@ const Quiz = ({ questions, title, description }) => {
                         if (matchedTo) {
                           const correctMatch =
                             currentQuestion.correctMatches.find(
-                              (m) => m.b === item.id,
+                              (m) => m.a === matchedTo.a,
                             );
-                          const isCorrect = correctMatch?.a === matchedTo.a;
+                          // Compare by text, not exact b-id
+                          const correctBText = currentQuestion.columnB.find(
+                            (b) => b.id === correctMatch?.b,
+                          )?.text;
+                          const userBText = currentQuestion.columnB.find(
+                            (b) => b.id === item.id,
+                          )?.text;
+                          const isCorrect = correctBText === userBText;
                           borderColor = isCorrect
                             ? "border-green-500"
                             : "border-red-500";
@@ -484,7 +515,7 @@ const Quiz = ({ questions, title, description }) => {
                               ...selectedAnswers,
                               [currentQuestion.id]: {
                                 ...current,
-                                [item.id]: { a: selectedA, b: item.id },
+                                [selectedA]: { a: selectedA, b: item.id },
                                 selectedA: null,
                               },
                             });
@@ -506,11 +537,21 @@ const Quiz = ({ questions, title, description }) => {
                                 {isSubmitted && (
                                   <span className="text-lg">
                                     {(() => {
+                                      // Find the correct answer for this Column A item
                                       const correctMatch =
                                         currentQuestion.correctMatches.find(
-                                          (m) => m.b === item.id,
+                                          (m) => m.a === matchedTo.a,
                                         );
-                                      return correctMatch?.a === matchedTo.a
+                                      // Compare by text, not exact b-id
+                                      const correctBText =
+                                        currentQuestion.columnB.find(
+                                          (b) => b.id === correctMatch?.b,
+                                        )?.text;
+                                      const userBText =
+                                        currentQuestion.columnB.find(
+                                          (b) => b.id === item.id,
+                                        )?.text;
+                                      return correctBText === userBText
                                         ? "✓"
                                         : "✗";
                                     })()}
@@ -611,12 +652,14 @@ const Quiz = ({ questions, title, description }) => {
                 Submit Answer
               </button>
             ) : (
-              <button
-                onClick={handleTryAgain}
-                className="flex-1 bg-yellow-500 text-white py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
-              >
-                Try Again
-              </button>
+              !submittedAnswers[currentQuestion.id].isCorrect && (
+                <button
+                  onClick={handleTryAgain}
+                  className="flex-1 bg-yellow-500 text-white py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
+                >
+                  Try Again
+                </button>
+              )
             )}
           </div>
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 const CourseHome = () => {
   const courses = [
     {
@@ -10,9 +9,31 @@ const CourseHome = () => {
         "Cisco Certified Network Associate certification preparation",
       modules: 17,
       quizzes: 45,
-      progress: 5, // You can track this later
+      progress: 0,
       color: "from-blue-500 to-cyan-600",
       icon: "🌐",
+    },
+    {
+      id: "comp-fundamentals",
+      title: "Computer Fundamentals",
+      description:
+        "Core computing concepts — hardware, software, OS, networking, and security",
+      modules: 8,
+      quizzes: 12,
+      progress: 0,
+      color: "from-emerald-500 to-teal-600",
+      icon: "🖥️",
+    },
+    {
+      id: "ethics",
+      title: "Professional Ethics & Law",
+      description:
+        "UK legislation, professional bodies, codes of ethics and intellectual property",
+      modules: 4,
+      quizzes: 4,
+      progress: 0,
+      color: "from-violet-500 to-purple-600",
+      icon: "⚖️",
     },
     {
       id: "it-essentials",
@@ -21,11 +42,10 @@ const CourseHome = () => {
       modules: 14,
       quizzes: 38,
       progress: 0,
-      color: "from-purple-500 to-pink-600",
+      color: "from-blue-600 to-indigo-700",
       icon: "💻",
     },
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -38,7 +58,6 @@ const CourseHome = () => {
             Choose your course to begin studying
           </p>
         </div>
-
         {/* Course Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {courses.map((course) => (
@@ -47,24 +66,20 @@ const CourseHome = () => {
               to={`/${course.id}`}
               className="block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              {/* Card Header */}
               <div
                 className={`bg-gradient-to-r ${course.color} p-8 text-white`}
               >
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-6xl">{course.icon}</span>
                   <div>
-                    <h2 className="text-3xl font-bold">{course.title}</h2>
-                    <p className="text-indigo-100 text-sm mt-1">
+                    <h2 className="text-2xl font-bold">{course.title}</h2>
+                    <p className="text-white/80 text-sm mt-1">
                       {course.description}
                     </p>
                   </div>
                 </div>
               </div>
-
-              {/* Card Body */}
               <div className="p-6">
-                {/* Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
                     <div className="text-3xl font-bold text-indigo-600">
@@ -79,8 +94,6 @@ const CourseHome = () => {
                     <div className="text-sm text-gray-600">Quizzes</div>
                   </div>
                 </div>
-
-                {/* Progress Bar */}
                 <div className="mb-4">
                   <div className="flex justify-between text-sm text-gray-600 mb-2">
                     <span>Progress</span>
@@ -93,8 +106,6 @@ const CourseHome = () => {
                     ></div>
                   </div>
                 </div>
-
-                {/* Enter Button */}
                 <div className="text-center py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
                   Enter Course →
                 </div>
@@ -102,7 +113,6 @@ const CourseHome = () => {
             </Link>
           ))}
         </div>
-
         {/* Info Section */}
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center">
@@ -116,7 +126,6 @@ const CourseHome = () => {
               Summaries and quizzes for every module
             </p>
           </div>
-
           <div className="text-center">
             <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl">✅</span>
@@ -128,7 +137,6 @@ const CourseHome = () => {
               Combined assessments across modules
             </p>
           </div>
-
           <div className="text-center">
             <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl">📊</span>
@@ -145,5 +153,4 @@ const CourseHome = () => {
     </div>
   );
 };
-
 export default CourseHome;

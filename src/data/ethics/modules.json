@@ -1,0 +1,46 @@
+[
+  {
+    "id": "module-1",
+    "number": 1,
+    "title": "Computer Misuse Act",
+    "description": "Unauthorised access, modification, and intent — the three offences, real scenarios, and how the Act protects organisations",
+    "topics": ["Unauthorised Access", "Unauthorised Modification", "Intent", "Backdoors", "Penetration Testing", "Ethical Hacking"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": ["checkpoint-1-2"],
+    "color": "from-violet-500 to-purple-600"
+  },
+  {
+    "id": "module-2",
+    "number": 2,
+    "title": "Data Protection & GDPR",
+    "description": "Individual rights, consent, data minimisation, breach reporting, and how GDPR protects personal data",
+    "topics": ["GDPR", "Subject Access Request", "Right to Erasure", "Consent", "Data Breach", "ICO", "Special Category Data"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": ["checkpoint-1-2"],
+    "color": "from-violet-500 to-purple-600"
+  },
+  {
+    "id": "module-3",
+    "number": 3,
+    "title": "Copyright, IP & Professional Ethics",
+    "description": "Copyright law, IP types, the BCS code of conduct, professional bodies, and ethical responsibilities of IT professionals",
+    "topics": ["Copyright", "Patents", "Trademarks", "Industrial Designs", "BCS", "Code of Ethics", "CPD", "Professional Integrity"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": ["checkpoint-3-4"],
+    "color": "from-violet-500 to-purple-600"
+  },
+  {
+    "id": "module-4",
+    "number": 4,
+    "title": "BCS Code of Conduct — Code of Conduct",
+    "description": "The five elements of BCS Code of Conduct: Public Interest, Integrity, Confidentiality, Competence, and Accountability — applied to real IT scenarios",
+    "topics": ["Public Interest", "Integrity", "Confidentiality", "Competence", "Accountability", "BCS", "Professional Conduct"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": ["checkpoint-3-4"],
+    "color": "from-violet-500 to-purple-600"
+  }
+]

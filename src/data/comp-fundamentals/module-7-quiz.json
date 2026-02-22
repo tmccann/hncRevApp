@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "text": "Convert the binary number 101101 to decimal.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "43" },
+      { "id": "b", "text": "45" },
+      { "id": "c", "text": "47" },
+      { "id": "d", "text": "53" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Work right to left with powers of 2: (1×32) + (0×16) + (1×8) + (1×4) + (0×2) + (1×1) = 32 + 8 + 4 + 1 = 45. Remember: bit positions are 32, 16, 8, 4, 2, 1 for a 6-bit number."
+  },
+  {
+    "id": 2,
+    "text": "Convert the decimal number 25 to binary.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "10011" },
+      { "id": "b", "text": "11001" },
+      { "id": "c", "text": "10110" },
+      { "id": "d", "text": "11010" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Divide repeatedly by 2: 25÷2=12r1, 12÷2=6r0, 6÷2=3r0, 3÷2=1r1, 1÷2=0r1. Read remainders bottom to top: 11001. Tip: odd numbers give remainder 1, even give 0."
+  },
+  {
+    "id": 3,
+    "text": "Convert the binary number 110101101 to hexadecimal.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "0x1AB" },
+      { "id": "b", "text": "0x1AC" },
+      { "id": "c", "text": "0x1AD" },
+      { "id": "d", "text": "0x2AD" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Group into 4-bit groups from the right, padding with zeros: 0001 1010 1101. Convert each: 0001=1, 1010=A, 1101=D. Answer: 0x1AD."
+  },
+  {
+    "id": 4,
+    "text": "Convert hex 3A7 to binary.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "001110100110" },
+      { "id": "b", "text": "001110100111" },
+      { "id": "c", "text": "001110110111" },
+      { "id": "d", "text": "011110100111" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Replace each hex digit with its 4-bit binary: 3=0011, A=1010, 7=0111. Combine: 001110100111."
+  },
+  {
+    "id": 5,
+    "text": "Convert the decimal number 254 to hexadecimal.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "EF" },
+      { "id": "b", "text": "FD" },
+      { "id": "c", "text": "FE" },
+      { "id": "d", "text": "EE" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Divide by 16: 254÷16=15 remainder 14 (E). Then 15÷16=0 remainder 15 (F). Read bottom to top: FE. Remember hex digits above 9: A=10, B=11, C=12, D=13, E=14, F=15."
+  },
+  {
+    "id": 6,
+    "text": "What is the result of the binary addition 1011 + 0110?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "10001" },
+      { "id": "b", "text": "10010" },
+      { "id": "c", "text": "1111" },
+      { "id": "d", "text": "10100" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Binary addition rules: 0+0=0, 0+1=1, 1+1=0 carry 1, 1+1+1=1 carry 1. Working right to left: 1+0=1, 1+1=0c1, 0+1+1=0c1, 1+0+1=0c1. Result: 10001."
+  },
+  {
+    "id": 7,
+    "text": "What is 2F + 19 in hexadecimal?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "47" },
+      { "id": "b", "text": "48" },
+      { "id": "c", "text": "49" },
+      { "id": "d", "text": "4A" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "F(15) + 9 = 24. 24 in hex: 24-16=8 with a carry of 1, so right digit is 8. Left column: 2 + 1 + carry 1 = 4. Answer: 48."
+  },
+  {
+    "id": 8,
+    "text": "What is 4A - 2F in hexadecimal?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "1A" },
+      { "id": "b", "text": "1B" },
+      { "id": "c", "text": "1C" },
+      { "id": "d", "text": "2B" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A(10) - F(15): can't do it, so borrow 1 from the next column. 10+16=26, 26-15=11=B. Left column: 4-1(borrowed)-2=1. Answer: 1B."
+  },
+  {
+    "id": 9,
+    "text": "What is the first step in 2's complement subtraction?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Add 1 to the original number" },
+      { "id": "b", "text": "Invert all the bits of the number to be subtracted (flip 1s to 0s and 0s to 1s)" },
+      { "id": "c", "text": "Convert both numbers to hexadecimal first" },
+      { "id": "d", "text": "Subtract the smaller number from the larger one directly" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "2's complement subtraction: Step 1 — invert all bits of the number being subtracted (1s complement). Step 2 — add 1 to get the 2's complement. Step 3 — add this to the first number using normal binary addition. Any overflow carry is discarded."
+  },
+  {
+    "id": 10,
+    "text": "Using 2's complement, subtract 01011101 from 10111001. What is the 2's complement of 01011101?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "10100010" },
+      { "id": "b", "text": "10100011" },
+      { "id": "c", "text": "10100001" },
+      { "id": "d", "text": "11100010" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Invert 01011101 → 10100010 (1's complement). Then add 1 → 10100011. This is the 2's complement. You then add 10111001 + 10100011 using normal binary addition to get the result."
+  },
+  {
+    "id": 11,
+    "text": "Match each number system conversion method to its correct description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Decimal → Binary" },
+      { "id": "a2", "text": "Binary → Hex" },
+      { "id": "a3", "text": "Decimal → Hex" },
+      { "id": "a4", "text": "Hex → Binary" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Divide by 2 repeatedly, read remainders bottom to top" },
+      { "id": "b2", "text": "Group into 4-bit chunks from the right, convert each group" },
+      { "id": "b3", "text": "Divide by 16 repeatedly, read remainders bottom to top" },
+      { "id": "b4", "text": "Replace each hex digit with its 4-bit binary equivalent" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" }
+    ],
+    "explanation": "Each conversion has a reliable method: decimal→binary uses repeated division by 2; binary→hex groups bits in fours; decimal→hex uses repeated division by 16; hex→binary replaces each digit with 4 bits. Master the method and the numbers follow."
+  }
+]

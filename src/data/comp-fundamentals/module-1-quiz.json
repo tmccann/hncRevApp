@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "text": "What technology does DRAM use to store each bit of data?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Flip-flops" },
+      { "id": "b", "text": "Capacitors and transistors" },
+      { "id": "c", "text": "Magnetic platters" },
+      { "id": "d", "text": "NAND flash cells" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "DRAM stores each bit using a capacitor and transistor. Because capacitors slowly discharge, DRAM must be constantly refreshed to retain its data — this is what makes it 'dynamic'."
+  },
+  {
+    "id": 2,
+    "text": "Why does DRAM need to be constantly refreshed?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because it uses flip-flops that reset automatically" },
+      { "id": "b", "text": "Because capacitors slowly lose their charge and data fades" },
+      { "id": "c", "text": "Because the OS clears it every clock cycle" },
+      { "id": "d", "text": "Because it shares the data bus with the CPU" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The capacitors in DRAM slowly discharge over time, causing stored data to fade. The memory controller must periodically refresh (recharge) every cell to prevent data loss — this refresh overhead is one reason DRAM is slower than SRAM."
+  },
+  {
+    "id": 3,
+    "text": "What technology does SRAM use to store data?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Capacitors" },
+      { "id": "b", "text": "Magnetic cores" },
+      { "id": "c", "text": "Flip-flops" },
+      { "id": "d", "text": "Floating gate transistors" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "SRAM uses flip-flop circuits (typically 4–6 transistors per bit) to store data. As long as power is supplied, the flip-flop holds its state without needing to be refreshed — that's what makes it 'static'."
+  },
+  {
+    "id": 4,
+    "text": "Which two statements correctly describe SRAM compared to DRAM? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "SRAM is faster than DRAM" },
+      { "id": "b", "text": "SRAM is cheaper per bit than DRAM" },
+      { "id": "c", "text": "SRAM does not need refreshing while powered" },
+      { "id": "d", "text": "SRAM has higher density than DRAM" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "SRAM is faster because it uses flip-flops with no refresh overhead. It also holds data without refreshing as long as power is applied. However, SRAM is more expensive per bit and has lower density than DRAM because each bit requires more transistors."
+  },
+  {
+    "id": 5,
+    "text": "Where is SRAM most commonly used in a modern computer?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Main system memory (the RAM sticks in the motherboard)" },
+      { "id": "b", "text": "Hard drive buffer" },
+      { "id": "c", "text": "CPU cache (L1, L2, L3)" },
+      { "id": "d", "text": "GPU video memory" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "SRAM's speed makes it ideal for CPU cache (L1, L2, L3). Cache sits between the CPU and main memory, holding frequently used data so the CPU doesn't have to wait for the slower DRAM in the memory slots."
+  },
+  {
+    "id": 6,
+    "text": "Where is DRAM most commonly used in a modern computer?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "CPU L1 cache" },
+      { "id": "b", "text": "Main system memory (RAM)" },
+      { "id": "c", "text": "CPU registers" },
+      { "id": "d", "text": "ROM BIOS chip" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "DRAM is used for main system memory (the RAM modules you install in a motherboard). Its high density and lower cost make it practical for gigabytes of main memory, despite being slower than SRAM."
+  },
+  {
+    "id": 7,
+    "text": "Both DRAM and SRAM are volatile. What does volatile mean?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Data can be written and erased repeatedly" },
+      { "id": "b", "text": "Data is lost when power is removed" },
+      { "id": "c", "text": "Data transfer speed changes under load" },
+      { "id": "d", "text": "The memory requires cooling to operate" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Volatile memory loses all stored data the moment power is removed. Both DRAM and SRAM are volatile — when you switch off your PC, everything in RAM and CPU cache is gone. Non-volatile storage like SSDs and HDDs retain data without power."
+  },
+  {
+    "id": 8,
+    "text": "Match each memory type to its correct characteristic.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "DRAM" },
+      { "id": "a2", "text": "SRAM" },
+      { "id": "a3", "text": "L1/L2/L3 Cache" },
+      { "id": "a4", "text": "Main system RAM" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Uses capacitors, needs refreshing" },
+      { "id": "b2", "text": "Uses flip-flops, no refresh needed" },
+      { "id": "b3", "text": "Built into the CPU, uses SRAM" },
+      { "id": "b4", "text": "The modules plugged into the motherboard, uses DRAM" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" }
+    ],
+    "explanation": "DRAM uses capacitors and needs constant refreshing — it's used for main system RAM. SRAM uses flip-flops and needs no refresh — it's used for CPU cache (L1/L2/L3) where speed is critical."
+  },
+  {
+    "id": 9,
+    "text": "Which is the correct comparison between DRAM and SRAM?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "DRAM is faster and more expensive; SRAM is slower and cheaper" },
+      { "id": "b", "text": "DRAM is slower and cheaper; SRAM is faster and more expensive" },
+      { "id": "c", "text": "Both are the same speed but differ only in how data is stored" },
+      { "id": "d", "text": "SRAM is used for main memory because it is cheaper" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The key trade-off is: DRAM is slower and cheaper (used for large main memory), SRAM is faster and more expensive (used for small but critical cache memory close to the CPU)."
+  }
+]

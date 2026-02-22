@@ -1,0 +1,284 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: A hacker breaks into a company network and reads confidential files without changing anything. Which law have they broken?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Data Protection Act" },
+      { "id": "b", "text": "Health and Safety at Work Act" },
+      { "id": "c", "text": "Computer Misuse Act" },
+      { "id": "d", "text": "Copyright, Designs and Patents Act" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Computer Misuse Act 1990 covers any unauthorised access to computer systems — even just reading files without permission is an offence. You don't need to steal or damage anything for the law to apply."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: A disgruntled employee deliberately deletes the company database on their last day. Which law covers this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Computer Misuse Act" },
+      { "id": "b", "text": "Employment Rights Act" },
+      { "id": "c", "text": "Copyright, Designs and Patents Act" },
+      { "id": "d", "text": "Data Protection Act" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Deliberately deleting or altering computer data without authorisation is 'unauthorised modification of computer material' under the Computer Misuse Act 1990. This applies even if the person had legitimate access while employed — once they're acting without authorisation, the Act kicks in."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: A student guesses a classmate's password and logs into their college account to check their grades. Which law applies?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Data Protection Act — personal data was accessed" },
+      { "id": "b", "text": "No law applies — no damage was done" },
+      { "id": "c", "text": "Copyright, Designs and Patents Act — academic work is protected" },
+      { "id": "d", "text": "Computer Misuse Act — unauthorised access to a computer system" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Accessing a system without authorisation is an offence under the Computer Misuse Act regardless of whether any damage is done or data is stolen. Logging in with someone else's credentials without their permission is enough to break the law."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: A cybercriminal deploys ransomware that encrypts a victim's files and demands payment to restore them. Which offence under the Computer Misuse Act does this fall under?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Unauthorised access to computer material" },
+      { "id": "b", "text": "Unauthorised access with intent to commit fraud" },
+      { "id": "c", "text": "This is fraud law only, not the Computer Misuse Act" },
+      { "id": "d", "text": "Unauthorised modification of computer material" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Encrypting someone's files with ransomware is unauthorised modification of computer material — the data is altered without permission. The ransom demand may also involve fraud law, but deploying the malware itself falls squarely under the Computer Misuse Act's modification offence."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: What are the three offences defined under the Computer Misuse Act 1990? (Choose three)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Unauthorised access to computer material" },
+      { "id": "b", "text": "Failing to encrypt personal data on a company system" },
+      { "id": "c", "text": "Unauthorised access with intent to commit or facilitate further offences" },
+      { "id": "d", "text": "Unauthorised modification of computer material" }
+    ],
+    "correctAnswer": ["a", "c", "d"],
+    "explanation": "The Computer Misuse Act 1990 defines three offences: (1) unauthorised access — e.g. hacking in, (2) unauthorised access with intent to commit further offences — e.g. hacking in to commit fraud, (3) unauthorised modification — e.g. installing malware, deleting files, or planting a backdoor."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: A programmer plants a backdoor into a company system before leaving so they can log in remotely after their employment ends. Which two Computer Misuse Act offences apply? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Unauthorised modification — installing the backdoor alters the system" },
+      { "id": "b", "text": "No offence — they were authorised to access the system at the time of installation" },
+      { "id": "c", "text": "Unauthorised access — logging in via the backdoor after leaving" },
+      { "id": "d", "text": "Data Protection Act — customer data may have been at risk" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Two offences: installing the backdoor is unauthorised modification of computer material, and using it later to log in is unauthorised access. The fact they were authorised while employed doesn't cover actions taken after their employment ended."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: A script kiddie downloads a pre-made hacking tool from the internet and uses it to scan a company's servers for vulnerabilities — they don't gain access. Have they broken the Computer Misuse Act?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "No — they didn't actually access anything" },
+      { "id": "b", "text": "No — using scanning tools is legal if no data is taken" },
+      { "id": "c", "text": "Yes — unauthorised access with intent to commit further offences" },
+      { "id": "d", "text": "Yes — but only if the company reports it to the police" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Scanning a system without permission shows intent to gain unauthorised access, which falls under the second offence — unauthorised access with intent to commit further offences. You don't need to succeed; the intent and the attempt are enough."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: An IT employee at a hospital accesses patient records out of curiosity — not for any work reason. Which law most directly applies?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Health and Safety at Work Act" },
+      { "id": "b", "text": "Computer Misuse Act — accessing beyond their authorised scope" },
+      { "id": "c", "text": "Freedom of Information Act" },
+      { "id": "d", "text": "No law applies — they are an authorised employee" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Even authorised users can commit a Computer Misuse Act offence if they access data outside the scope of their authorisation. Being authorised to use a system doesn't mean you're authorised to access every file on it — accessing patient records without a valid work reason goes beyond their permitted access."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: A company pays a security firm to attempt to break into their systems to find weaknesses. The security firm successfully gains access. Have they broken the Computer Misuse Act?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Yes — gaining access to any system without being an employee is always illegal" },
+      { "id": "b", "text": "Yes — even with permission the Act still applies to third parties" },
+      { "id": "c", "text": "No — they have written authorisation so the access is not unauthorised" },
+      { "id": "d", "text": "No — security firms are automatically exempt from the Computer Misuse Act" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The key word in the Computer Misuse Act is 'unauthorised'. A penetration tester with a written contract giving explicit permission is not acting without authorisation — so no offence is committed. Always get authorisation in writing before testing any system that isn't your own."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: A developer discovers a security vulnerability in a banking app and reports it to the bank without exploiting it. Which of the following is true?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "They have broken the Computer Misuse Act by finding the vulnerability" },
+      { "id": "b", "text": "Responsible disclosure like this is ethically correct and does not break the Computer Misuse Act" },
+      { "id": "c", "text": "They must report it to the police, not the bank" },
+      { "id": "d", "text": "They are legally required to publish the vulnerability publicly within 30 days" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Responsible disclosure — finding a vulnerability and reporting it to the affected organisation without exploiting it — is considered ethically correct behaviour in the IT profession. As long as they didn't access systems without permission to find it, no Computer Misuse Act offence is committed."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why does the Computer Misuse Act make unauthorised access a crime even when no damage or theft occurs?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because the Act was written before data theft was possible" },
+      { "id": "b", "text": "Because all computer use is monitored and logged automatically" },
+      { "id": "c", "text": "Because the right to control access to your own system is a fundamental principle — the violation occurs at the point of entry, not after" },
+      { "id": "d", "text": "Because it only applies when financial loss can be proven in court" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The ethical principle is that organisations and individuals have a right to control who accesses their systems. That right is violated the moment someone enters without permission — just as trespass is wrong regardless of whether anything is stolen. The law reflects this principle."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: Why is it important that IT professionals understand the Computer Misuse Act, even if they never intend to hack anything?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because IT professionals are personally liable for all breaches on systems they manage" },
+      { "id": "b", "text": "So they can recognise when their own actions — like routine maintenance — might accidentally cross a legal boundary" },
+      { "id": "c", "text": "Because IT professionals are required by law to report all security incidents" },
+      { "id": "d", "text": "It is not important — the law only applies to deliberate criminals" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "IT professionals sometimes access systems on behalf of clients or employers. Without understanding the Computer Misuse Act they could inadvertently access systems beyond their authorised scope, or carry out tasks without proper written permission. Understanding the law protects them professionally."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: A company's own employee accessed a colleague's private emails on the company server out of personal curiosity. Ethically, why is this wrong even though both people work for the same company?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is not wrong — the company owns all data on its servers" },
+      { "id": "b", "text": "Because the colleague has a reasonable expectation of privacy even within a workplace context" },
+      { "id": "c", "text": "Because emails are covered by copyright law" },
+      { "id": "d", "text": "Only wrong if the emails contained confidential business information" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "People retain a reasonable expectation of privacy even at work. Accessing a colleague's private communications without their consent or a legitimate work reason violates their privacy and trust. Ethically it breaks the professional duty to treat colleagues with respect and integrity — and legally it goes beyond authorised access under the Computer Misuse Act."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: The Computer Misuse Act was passed in 1990. Why does it still apply to modern cybercrime like ransomware, phishing, and DDoS attacks?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It doesn't — newer laws replaced it entirely" },
+      { "id": "b", "text": "Because the 1990 Act was written with broad enough language to cover new types of attack, and has been updated by subsequent legislation" },
+      { "id": "c", "text": "Because all digital crime falls under the same law regardless of method" },
+      { "id": "d", "text": "Because the government updates the law every year to include new attack types" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Computer Misuse Act used broad terms like 'unauthorised access' and 'modification' that naturally cover new attack methods. It has also been strengthened by subsequent acts — the Police and Justice Act 2006 and Serious Crime Act 2015 extended it to cover things like DDoS attacks and creating hacking tools."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: From an ethical standpoint, why should organisations invest in cybersecurity even though the Computer Misuse Act criminalises attacks?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because the law does not actually deter determined attackers — prevention is better than prosecution" },
+      { "id": "b", "text": "Because cybersecurity spending reduces tax liability" },
+      { "id": "c", "text": "Because organisations are legally required to spend a fixed percentage of revenue on security" },
+      { "id": "d", "text": "There is no ethical reason — the law provides sufficient protection on its own" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "The law criminalises attacks but cannot prevent them. Ethically, organisations have a duty of care to protect their users' data and their own systems. Relying solely on the law is irresponsible — a determined attacker may never be caught, and by then the damage is done. Prevention is always preferable to prosecution."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 2 — REASONING: Why is intent important in determining which Computer Misuse Act offence has been committed?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Intent is not relevant — only the outcome matters" },
+      { "id": "b", "text": "Intent determines the severity — access alone is offence 1, but access intended to commit further crimes is the more serious offence 2" },
+      { "id": "c", "text": "Intent only matters if the accused is under 18" },
+      { "id": "d", "text": "All three offences carry the same penalty regardless of intent" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The three offences are tiered by seriousness. Simple unauthorised access (offence 1) carries a lighter penalty than unauthorised access with intent to commit further offences (offence 2) — for example, hacking in to commit fraud. Intent escalates the offence and the potential sentence."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each part of a strong 15-mark answer to the scenario: 'A former employee logged into company systems after leaving and stole client data.' Note — the content is deliberately out of order.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Part 1: Name the law" },
+      { "id": "a2", "text": "Part 2: What the law covers" },
+      { "id": "a3", "text": "Part 3: Apply it to the scenario" },
+      { "id": "a4", "text": "Part 4: How it protects the company" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "The company can report the crime to police and pursue prosecution — the Act deters future misuse by making it a criminal offence carrying a prison sentence" },
+      { "id": "b2", "text": "The former employee had no authorisation to access the system after leaving — accessing it and taking data is both unauthorised access and, combined with the theft intent, the more serious second offence" },
+      { "id": "b3", "text": "Makes unauthorised access and unauthorised modification of computer systems a criminal offence, with three tiers of offence based on intent and outcome" },
+      { "id": "b4", "text": "The Computer Misuse Act 1990" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Strong exam answers always follow: Name → Covers → Apply → Protects. Part 4 is where the marks are — examiners want real-world consequences, not just 'a law was broken'. Mention prosecution, deterrence, and the right of the company to take legal action."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: A question asks you to explain how the Computer Misuse Act protects a business. Which two points would score the most marks? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "It criminalises unauthorised access and modification, giving the business legal grounds to pursue prosecution" },
+      { "id": "b", "text": "It was passed in 1990 by the UK Parliament" },
+      { "id": "c", "text": "It acts as a deterrent — knowing the activity is criminal discourages potential attackers" },
+      { "id": "d", "text": "It requires all businesses to install antivirus software" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "In a written answer, marks come from explaining the practical impact of the law — it gives businesses legal recourse to prosecute attackers, and its existence acts as a deterrent. Stating when the Act was passed or what it requires of businesses (it doesn't require antivirus) won't score marks on their own."
+  },
+  {
+    "id": 19,
+    "text": "LAYER 3 — BUILD THE ANSWER: A classmate writes this in their exam: 'The Computer Misuse Act means hacking is illegal.' What is wrong with this answer?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Nothing — it is a perfectly complete answer" },
+      { "id": "b", "text": "It is factually wrong — hacking is not always illegal" },
+      { "id": "c", "text": "It names the law but fails to explain what it covers, apply it to a scenario, or explain how it protects anyone — far too thin for exam marks" },
+      { "id": "d", "text": "The word 'hacking' should not be used in formal answers" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "That answer would score maybe 1 out of 10 marks. A strong answer names the law, explains its three offences, applies it to the specific scenario given, and explains the real-world protection it provides — prosecution rights, deterrence, and legal recourse. Always use the four-part structure."
+  },
+  {
+    "id": 20,
+    "text": "LAYER 3 — BUILD THE ANSWER: Put the four parts of a legislation exam answer in the correct order.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "First" },
+      { "id": "a2", "text": "Second" },
+      { "id": "a3", "text": "Third" },
+      { "id": "a4", "text": "Fourth — highest marks here" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Apply the law directly to the specific scenario in the question" },
+      { "id": "b2", "text": "Name the legislation" },
+      { "id": "b3", "text": "Explain the real-world protection it gives — prosecution, deterrence, legal recourse" },
+      { "id": "b4", "text": "Explain what the law covers in general terms" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b1" },
+      { "a": "a4", "b": "b3" }
+    ],
+    "explanation": "Name → Covers → Apply → Protects. This structure works for any legislation question in any exam. The final part — how the law actually protects people — is where the most marks sit, because it shows you understand the purpose of the law, not just its name."
+  }
+]

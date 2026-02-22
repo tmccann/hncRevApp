@@ -1,0 +1,143 @@
+[
+  {
+    "id": 1,
+    "text": "Which layer sits at the centre of the OS onion model?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Device Drivers" },
+      { "id": "b", "text": "Hardware" },
+      { "id": "c", "text": "Kernel" },
+      { "id": "d", "text": "User Interface" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Hardware (CPU, memory, devices) sits at the very centre of the onion model. The Kernel wraps around it, then Device Drivers, System Services, User Interface, and finally Applications at the outermost layer."
+  },
+  {
+    "id": 2,
+    "text": "What is the role of the Kernel in an operating system?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Provides the graphical desktop the user sees" },
+      { "id": "b", "text": "The core of the OS — manages processes, memory, and device control" },
+      { "id": "c", "text": "Translates user commands into assembly language" },
+      { "id": "d", "text": "Acts as the interface between applications and the network" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Kernel is the core of the operating system. It manages critical operations: process scheduling, memory management, and communicating with hardware via device drivers. It sits directly above the hardware layer in the onion model."
+  },
+  {
+    "id": 3,
+    "text": "What does virtual memory allow a system to do?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Run multiple CPUs simultaneously" },
+      { "id": "b", "text": "Use disk space to extend the available RAM" },
+      { "id": "c", "text": "Access ROM as if it were RAM" },
+      { "id": "d", "text": "Share RAM between multiple users on a network" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Virtual memory uses a portion of the hard drive or SSD as an extension of RAM. This gives the illusion of more memory than physically exists, allowing larger programs to run — though it is significantly slower than actual RAM."
+  },
+  {
+    "id": 4,
+    "text": "What is paging in the context of virtual memory?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The OS sending notifications to the user" },
+      { "id": "b", "text": "Memory divided into fixed-size blocks that are swapped between RAM and disk as needed" },
+      { "id": "c", "text": "Splitting a program into separate executable files" },
+      { "id": "d", "text": "The process of allocating memory to a new application at startup" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Paging divides memory into fixed-size blocks called pages. When RAM is full, pages not currently needed are swapped out to disk, and pages that are needed are swapped back in. This is what makes virtual memory work."
+  },
+  {
+    "id": 5,
+    "text": "What is thrashing?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "When the CPU overheats and throttles its clock speed" },
+      { "id": "b", "text": "When the system spends more time swapping pages than actually executing programs" },
+      { "id": "c", "text": "When two processes try to access the same memory address simultaneously" },
+      { "id": "d", "text": "When a hard drive is fragmented and reads slowly" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Thrashing occurs when the system is so short of RAM that it is constantly swapping pages in and out of disk. The system grinds to a near-halt because it spends all its time on page swapping rather than executing useful instructions."
+  },
+  {
+    "id": 6,
+    "text": "Which two actions would help prevent thrashing? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Add more physical RAM" },
+      { "id": "b", "text": "Increase the size of the address bus" },
+      { "id": "c", "text": "Reduce the number of running processes" },
+      { "id": "d", "text": "Increase the CPU clock speed" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Thrashing is caused by insufficient RAM. The two direct solutions are: add more physical RAM so less paging is needed, or reduce the number of running processes to lower overall memory demand. Clock speed and bus width don't address the root cause."
+  },
+  {
+    "id": 7,
+    "text": "What is the key difference between pre-emptive and co-operative multitasking?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Pre-emptive only works on multi-core CPUs; co-operative works on single-core" },
+      { "id": "b", "text": "In pre-emptive the OS forces task switching; in co-operative programs voluntarily give up control" },
+      { "id": "c", "text": "Pre-emptive runs one task at a time; co-operative runs all tasks simultaneously" },
+      { "id": "d", "text": "Co-operative is used in modern operating systems; pre-emptive is outdated" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Pre-emptive multitasking (used by modern OS like Windows and Linux) means the OS can forcibly interrupt any program and switch to another using time slices. Co-operative multitasking relies on each program voluntarily yielding control — one unresponsive program can freeze the entire system."
+  },
+  {
+    "id": 8,
+    "text": "What is an API (Application Programming Interface)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A hardware component that manages application memory" },
+      { "id": "b", "text": "A set of rules and functions that allows software to communicate with the OS or other software" },
+      { "id": "c", "text": "The graphical layer between the user and the kernel" },
+      { "id": "d", "text": "A protocol for transferring files between applications" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "An API is a defined set of functions and rules that allows applications to use OS services or communicate with other software safely. It hides the complexity of the hardware — a program calls the API rather than interacting with hardware directly."
+  },
+  {
+    "id": 9,
+    "text": "Match each OS onion model layer to its correct description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Hardware" },
+      { "id": "a2", "text": "Kernel" },
+      { "id": "a3", "text": "Device Drivers" },
+      { "id": "a4", "text": "User Interface" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "CPU, memory, and physical devices — innermost layer" },
+      { "id": "b2", "text": "Core OS — manages processes, memory, and device control" },
+      { "id": "b3", "text": "Software that communicates between the OS and specific hardware" },
+      { "id": "b4", "text": "GUI or CLI — the layer the user interacts with" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" }
+    ],
+    "explanation": "The OS onion model shows layers from inner to outer: Hardware → Kernel → Device Drivers → System Services → User Interface → Applications. Each layer only communicates with the layers directly adjacent to it."
+  },
+  {
+    "id": 10,
+    "text": "A hierarchical file system organises files in what structure?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A flat list with no folders" },
+      { "id": "b", "text": "A circular linked list" },
+      { "id": "c", "text": "A tree structure using directories and subdirectories" },
+      { "id": "d", "text": "A database table with rows and columns" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "A hierarchical file system organises files in a tree structure starting from a root directory (C:\\ on Windows, / on Linux). Directories (folders) can contain files and other subdirectories, branching outward like a tree."
+  }
+]
