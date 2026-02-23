@@ -1,143 +1,522 @@
 [
   {
     "id": 1,
-    "text": "Which layer sits at the centre of the OS onion model?",
     "type": "single",
+    "text": "What is an Operating System?",
     "options": [
-      { "id": "a", "text": "Device Drivers" },
-      { "id": "b", "text": "Hardware" },
-      { "id": "c", "text": "Kernel" },
-      { "id": "d", "text": "User Interface" }
+      { "id": "a", "text": "A type of hardware that controls the CPU" },
+      { "id": "b", "text": "A program or set of programs that drives the hardware and provides an interface between the user and the computer" },
+      { "id": "c", "text": "A network protocol for sharing files" },
+      { "id": "d", "text": "A program used only for file management" }
     ],
     "correctAnswer": ["b"],
-    "explanation": "Hardware (CPU, memory, devices) sits at the very centre of the onion model. The Kernel wraps around it, then Device Drivers, System Services, User Interface, and finally Applications at the outermost layer."
+    "explanation": "An OS is a program, or set of programs, that drives the hardware and provides an interface between the user and the computer."
   },
   {
     "id": 2,
-    "text": "What is the role of the Kernel in an operating system?",
     "type": "single",
+    "text": "Why is the Operating System kept separate from other files and data on a computer?",
     "options": [
-      { "id": "a", "text": "Provides the graphical desktop the user sees" },
-      { "id": "b", "text": "The core of the OS — manages processes, memory, and device control" },
-      { "id": "c", "text": "Translates user commands into assembly language" },
-      { "id": "d", "text": "Acts as the interface between applications and the network" }
+      { "id": "a", "text": "To make it run faster" },
+      { "id": "b", "text": "To protect it from being corrupted or deleted, which would stop the computer working" },
+      { "id": "c", "text": "To allow multiple users to access it" },
+      { "id": "d", "text": "Because it is too large to store with other files" }
     ],
     "correctAnswer": ["b"],
-    "explanation": "The Kernel is the core of the operating system. It manages critical operations: process scheduling, memory management, and communicating with hardware via device drivers. It sits directly above the hardware layer in the onion model."
+    "explanation": "The OS is kept separate to protect it. In early computers it wasn't separated, making it vulnerable to corruption or deletion by other files or users."
   },
   {
     "id": 3,
-    "text": "What does virtual memory allow a system to do?",
     "type": "single",
+    "text": "What are the TWO main types of Operating System?",
     "options": [
-      { "id": "a", "text": "Run multiple CPUs simultaneously" },
-      { "id": "b", "text": "Use disk space to extend the available RAM" },
-      { "id": "c", "text": "Access ROM as if it were RAM" },
-      { "id": "d", "text": "Share RAM between multiple users on a network" }
+      { "id": "a", "text": "Batch and Real-Time" },
+      { "id": "b", "text": "CLI and GUI" },
+      { "id": "c", "text": "Single User and Multi User" },
+      { "id": "d", "text": "FAT and NTFS" }
     ],
-    "correctAnswer": ["b"],
-    "explanation": "Virtual memory uses a portion of the hard drive or SSD as an extension of RAM. This gives the illusion of more memory than physically exists, allowing larger programs to run — though it is significantly slower than actual RAM."
+    "correctAnswer": ["c"],
+    "explanation": "The two main types of OS are Single User and Multi User."
   },
   {
     "id": 4,
-    "text": "What is paging in the context of virtual memory?",
     "type": "single",
+    "text": "What is a Single User Operating System also known as?",
     "options": [
-      { "id": "a", "text": "The OS sending notifications to the user" },
-      { "id": "b", "text": "Memory divided into fixed-size blocks that are swapped between RAM and disk as needed" },
-      { "id": "c", "text": "Splitting a program into separate executable files" },
-      { "id": "d", "text": "The process of allocating memory to a new application at startup" }
+      { "id": "a", "text": "A Network System" },
+      { "id": "b", "text": "A Batch System" },
+      { "id": "c", "text": "A Stand-alone System" },
+      { "id": "d", "text": "A Real-Time System" }
     ],
-    "correctAnswer": ["b"],
-    "explanation": "Paging divides memory into fixed-size blocks called pages. When RAM is full, pages not currently needed are swapped out to disk, and pages that are needed are swapped back in. This is what makes virtual memory work."
+    "correctAnswer": ["c"],
+    "explanation": "Single User operating systems allow only one user at a time and are sometimes called Stand-alone Systems."
   },
   {
     "id": 5,
-    "text": "What is thrashing?",
     "type": "single",
+    "text": "How does a Single Processor system give the impression of doing many things at once?",
     "options": [
-      { "id": "a", "text": "When the CPU overheats and throttles its clock speed" },
-      { "id": "b", "text": "When the system spends more time swapping pages than actually executing programs" },
-      { "id": "c", "text": "When two processes try to access the same memory address simultaneously" },
-      { "id": "d", "text": "When a hard drive is fragmented and reads slowly" }
+      { "id": "a", "text": "It uses multiple CPUs working in parallel" },
+      { "id": "b", "text": "It allocates a tiny amount of processor time to each user or task in turn — called time-slicing" },
+      { "id": "c", "text": "It stores tasks in RAM and processes them all together" },
+      { "id": "d", "text": "It uses the GPU to handle extra tasks" }
     ],
     "correctAnswer": ["b"],
-    "explanation": "Thrashing occurs when the system is so short of RAM that it is constantly swapping pages in and out of disk. The system grinds to a near-halt because it spends all its time on page swapping rather than executing useful instructions."
+    "explanation": "Time-slicing splits processor time between tasks by allocating tiny amounts to each in turn, giving the impression of simultaneous processing."
   },
   {
     "id": 6,
-    "text": "Which two actions would help prevent thrashing? (Choose two)",
-    "type": "multiple",
+    "type": "single",
+    "text": "Why doesn't doubling the number of CPU cores double the processing speed?",
     "options": [
-      { "id": "a", "text": "Add more physical RAM" },
-      { "id": "b", "text": "Increase the size of the address bus" },
-      { "id": "c", "text": "Reduce the number of running processes" },
-      { "id": "d", "text": "Increase the CPU clock speed" }
+      { "id": "a", "text": "Cores share the same RAM so slow each other down" },
+      { "id": "b", "text": "Communication between cores is needed and uses some of the extra processing speed" },
+      { "id": "c", "text": "The OS can only use one core at a time" },
+      { "id": "d", "text": "Extra cores increase power consumption which throttles performance" }
     ],
-    "correctAnswer": ["a", "c"],
-    "explanation": "Thrashing is caused by insufficient RAM. The two direct solutions are: add more physical RAM so less paging is needed, or reduce the number of running processes to lower overall memory demand. Clock speed and bus width don't address the root cause."
+    "correctAnswer": ["b"],
+    "explanation": "Doubling cores doesn't double speed because cores need to communicate with each other, and that overhead uses up some of the extra speed gained."
   },
   {
     "id": 7,
-    "text": "What is the key difference between pre-emptive and co-operative multitasking?",
     "type": "single",
+    "text": "What are the two main types of multi-tasking strategy?",
     "options": [
-      { "id": "a", "text": "Pre-emptive only works on multi-core CPUs; co-operative works on single-core" },
-      { "id": "b", "text": "In pre-emptive the OS forces task switching; in co-operative programs voluntarily give up control" },
-      { "id": "c", "text": "Pre-emptive runs one task at a time; co-operative runs all tasks simultaneously" },
-      { "id": "d", "text": "Co-operative is used in modern operating systems; pre-emptive is outdated" }
+      { "id": "a", "text": "Active and Passive multi-tasking" },
+      { "id": "b", "text": "Pre-emptive and Co-operative multi-tasking" },
+      { "id": "c", "text": "Sequential and Parallel multi-tasking" },
+      { "id": "d", "text": "Single and Multi-threaded tasking" }
     ],
     "correctAnswer": ["b"],
-    "explanation": "Pre-emptive multitasking (used by modern OS like Windows and Linux) means the OS can forcibly interrupt any program and switch to another using time slices. Co-operative multitasking relies on each program voluntarily yielding control — one unresponsive program can freeze the entire system."
+    "explanation": "Pre-emptive multi-tasking is where the OS handles switching between tasks. Co-operative multi-tasking is where each task relinquishes control at an appropriate stage."
   },
   {
     "id": 8,
-    "text": "What is an API (Application Programming Interface)?",
     "type": "single",
+    "text": "In pre-emptive multi-tasking, who is responsible for switching resources between tasks?",
     "options": [
-      { "id": "a", "text": "A hardware component that manages application memory" },
-      { "id": "b", "text": "A set of rules and functions that allows software to communicate with the OS or other software" },
-      { "id": "c", "text": "The graphical layer between the user and the kernel" },
-      { "id": "d", "text": "A protocol for transferring files between applications" }
+      { "id": "a", "text": "The user" },
+      { "id": "b", "text": "Each individual application" },
+      { "id": "c", "text": "The Operating System" },
+      { "id": "d", "text": "The CPU hardware directly" }
     ],
-    "correctAnswer": ["b"],
-    "explanation": "An API is a defined set of functions and rules that allows applications to use OS services or communicate with other software safely. It hides the complexity of the hardware — a program calls the API rather than interacting with hardware directly."
+    "correctAnswer": ["c"],
+    "explanation": "In pre-emptive multi-tasking the OS handles all switching of resources between tasks — the applications have no control over this."
   },
   {
     "id": 9,
-    "text": "Match each OS onion model layer to its correct description.",
-    "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "Hardware" },
-      { "id": "a2", "text": "Kernel" },
-      { "id": "a3", "text": "Device Drivers" },
-      { "id": "a4", "text": "User Interface" }
+    "type": "single",
+    "text": "In co-operative multi-tasking, how does task switching work?",
+    "options": [
+      { "id": "a", "text": "The OS forces tasks to stop at set intervals" },
+      { "id": "b", "text": "Each task relinquishes control at an appropriate stage" },
+      { "id": "c", "text": "The CPU automatically switches between tasks" },
+      { "id": "d", "text": "Tasks are queued and processed one at a time" }
     ],
-    "columnB": [
-      { "id": "b1", "text": "CPU, memory, and physical devices — innermost layer" },
-      { "id": "b2", "text": "Core OS — manages processes, memory, and device control" },
-      { "id": "b3", "text": "Software that communicates between the OS and specific hardware" },
-      { "id": "b4", "text": "GUI or CLI — the layer the user interacts with" }
-    ],
-    "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" },
-      { "a": "a4", "b": "b4" }
-    ],
-    "explanation": "The OS onion model shows layers from inner to outer: Hardware → Kernel → Device Drivers → System Services → User Interface → Applications. Each layer only communicates with the layers directly adjacent to it."
+    "correctAnswer": ["b"],
+    "explanation": "In co-operative multi-tasking, each task decides when to give up control — the OS does not force it."
   },
   {
     "id": 10,
-    "text": "A hierarchical file system organises files in what structure?",
     "type": "single",
+    "text": "What is a Real-Time Operating System (RTOS) used for?",
     "options": [
-      { "id": "a", "text": "A flat list with no folders" },
-      { "id": "b", "text": "A circular linked list" },
-      { "id": "c", "text": "A tree structure using directories and subdirectories" },
-      { "id": "d", "text": "A database table with rows and columns" }
+      { "id": "a", "text": "Running large overnight batch operations" },
+      { "id": "b", "text": "Direct control over electromechanical equipment, reacting to situations instantaneously" },
+      { "id": "c", "text": "Allowing multiple users to share a single processor" },
+      { "id": "d", "text": "Managing file storage on a network" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RTOS is used for direct control over electromechanical equipment, reacting to changing situations in real time."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "What are Batch Systems typically used for?",
+    "options": [
+      { "id": "a", "text": "Interactive gaming and real-time graphics" },
+      { "id": "b", "text": "Running large operations overnight or as background processes" },
+      { "id": "c", "text": "Controlling hardware devices in real time" },
+      { "id": "d", "text": "Providing a GUI for end users" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Batch Systems run large batch operations, often overnight or as background processes where immediate interaction isn't needed."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "How many layers does a modern layered Operating System have?",
+    "options": [
+      { "id": "a", "text": "3" },
+      { "id": "b", "text": "4" },
+      { "id": "c", "text": "5" },
+      { "id": "d", "text": "7" }
     ],
     "correctAnswer": ["c"],
-    "explanation": "A hierarchical file system organises files in a tree structure starting from a root directory (C:\\ on Windows, / on Linux). Directories (folders) can contain files and other subdirectories, branching outward like a tree."
+    "explanation": "A layered OS has 5 layers: Kernel, Memory Management, Input/Output, File Management System, and User Interface."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Starting from the most protected, what is the correct order of the 5 OS layers?",
+    "options": [
+      { "id": "a", "text": "User Interface → File Management → I/O → Memory Management → Kernel" },
+      { "id": "b", "text": "Kernel → Memory Management → Input/Output → File Management → User Interface" },
+      { "id": "c", "text": "Kernel → User Interface → File Management → I/O → Memory Management" },
+      { "id": "d", "text": "Memory Management → Kernel → I/O → File Management → User Interface" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "From most protected to least: Kernel → Memory Management → Input/Output → File Management System → User Interface."
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Which layer of the OS has the GREATEST level of protection?",
+    "options": [
+      { "id": "a", "text": "User Interface" },
+      { "id": "b", "text": "File Management System" },
+      { "id": "c", "text": "Input/Output" },
+      { "id": "d", "text": "Kernel" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The Kernel has the greatest level of protection as it is the core of the OS. The User Interface has the least."
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Which layer of the OS has the LEAST level of protection?",
+    "options": [
+      { "id": "a", "text": "Kernel" },
+      { "id": "b", "text": "Memory Management" },
+      { "id": "c", "text": "User Interface" },
+      { "id": "d", "text": "File Management System" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The User Interface has the least protection — it is the outermost layer that users interact with directly."
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "What is the role of the User Interface layer in the OS?",
+    "options": [
+      { "id": "a", "text": "To manage how files are stored on disk" },
+      { "id": "b", "text": "To allow the user to interact directly with the operating system" },
+      { "id": "c", "text": "To control input and output devices at a hardware level" },
+      { "id": "d", "text": "To protect the Kernel from corruption" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The User Interface layer allows the user to interact directly with the OS — loading programs, modifying settings and requesting information."
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "What is the role of the File Management layer of the OS?",
+    "options": [
+      { "id": "a", "text": "To provide the graphical interface for the user" },
+      { "id": "b", "text": "To organise and manage the storage of data on permanent media" },
+      { "id": "c", "text": "To handle communication between CPU cores" },
+      { "id": "d", "text": "To manage how RAM is allocated to running programs" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The File Management layer is responsible for organising and managing storage of data on permanent media such as hard drives and removable storage."
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "What does the Memory Management layer of the OS do?",
+    "options": [
+      { "id": "a", "text": "Manages how files are saved to disk" },
+      { "id": "b", "text": "Handles the graphical display of windows and icons" },
+      { "id": "c", "text": "Controls how RAM is allocated and managed between running programs" },
+      { "id": "d", "text": "Controls the boot sequence when the computer starts" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Memory Management layer controls how RAM is allocated and managed between running programs, ensuring each gets the memory it needs without interfering with others."
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Which OS layer sits directly above the Kernel?",
+    "options": [
+      { "id": "a", "text": "User Interface" },
+      { "id": "b", "text": "File Management" },
+      { "id": "c", "text": "Input/Output" },
+      { "id": "d", "text": "Memory Management" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The layer order from most to least protected is: Kernel → Memory Management → Input/Output → File Management → User Interface. Memory Management sits directly above the Kernel."
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Which OS layer sits directly below the User Interface?",
+    "options": [
+      { "id": "a", "text": "Kernel" },
+      { "id": "b", "text": "Memory Management" },
+      { "id": "c", "text": "Input/Output" },
+      { "id": "d", "text": "File Management System" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The order from most to least protected is: Kernel → Memory Management → I/O → File Management → User Interface. File Management sits directly below the User Interface."
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "What does CLI stand for?",
+    "options": [
+      { "id": "a", "text": "Computer Language Interface" },
+      { "id": "b", "text": "Command Line Interface" },
+      { "id": "c", "text": "Core Logic Input" },
+      { "id": "d", "text": "Common Link Integration" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "CLI stands for Command Line Interface — where the user types commands at a prompt on screen, such as the C:> prompt in MS-DOS."
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "Which operating systems still use CLI heavily?",
+    "options": [
+      { "id": "a", "text": "Windows 10 and macOS" },
+      { "id": "b", "text": "UNIX and Linux" },
+      { "id": "c", "text": "Android and iOS" },
+      { "id": "d", "text": "Windows 95 and Windows XP only" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "UNIX and Linux still use CLI heavily. Windows has a CLI available via Command Prompt but is primarily GUI-based."
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "text": "What is a 'switch' in a CLI command?",
+    "options": [
+      { "id": "a", "text": "A network device used to connect computers" },
+      { "id": "b", "text": "A modifier added to a command to change how it executes or displays output" },
+      { "id": "c", "text": "A key pressed to switch between open programs" },
+      { "id": "d", "text": "A way to switch between CLI and GUI mode" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A switch modifies how a command executes or displays output. For example 'dir windows /p' lists files but pauses when the screen is full."
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "text": "What does WIMP stand for in relation to GUI interfaces?",
+    "options": [
+      { "id": "a", "text": "Windows, Interface, Memory, Processor" },
+      { "id": "b", "text": "Write, Input, Manage, Print" },
+      { "id": "c", "text": "Windows, Icons, Menus, Pointers" },
+      { "id": "d", "text": "Wireless, Integrated, Modular, Platform" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "WIMP stands for Windows, Icons, Menus, Pointers — the key elements of a Graphical User Interface."
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "What is the primary hard drive typically assigned as in Windows?",
+    "options": [
+      { "id": "a", "text": "A:" },
+      { "id": "b", "text": "B:" },
+      { "id": "c", "text": "C:" },
+      { "id": "d", "text": "D:" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "C: is the primary hard drive in Windows. A: and B: were traditionally floppy drives. D: is typically the DVD drive."
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "What is the Master Boot Record (MBR)?",
+    "options": [
+      { "id": "a", "text": "A file that stores user passwords" },
+      { "id": "b", "text": "The first sectors of a drive containing boot instructions and partition table information" },
+      { "id": "c", "text": "A table that tracks file locations on a FAT volume" },
+      { "id": "d", "text": "A backup copy of the OS stored in ROM" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The MBR is in the first sectors of the drive. The BIOS loads and runs it to start the OS. It holds partition table information for up to 4 primary partitions."
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "What is the boot sequence?",
+    "options": [
+      { "id": "a", "text": "The order of layers in the OS" },
+      { "id": "b", "text": "The order in which the computer searches drives for an OS to boot from" },
+      { "id": "c", "text": "The startup checklist run by the file management layer" },
+      { "id": "d", "text": "The sequence of steps to defragment a drive" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The boot sequence is the order in which the BIOS searches drives for an OS to boot from. It can be changed in BIOS settings."
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "What are the circular storage bands on a hard disk platter called?",
+    "options": [
+      { "id": "a", "text": "Clusters" },
+      { "id": "b", "text": "Blocks" },
+      { "id": "c", "text": "Tracks" },
+      { "id": "d", "text": "Sectors" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Each platter is divided into thin concentric bands called tracks. Tracks are further subdivided into sectors, each 512 bytes in size."
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "What is the standard size of a sector on a traditional hard disk?",
+    "options": [
+      { "id": "a", "text": "256 bytes" },
+      { "id": "b", "text": "512 bytes" },
+      { "id": "c", "text": "1024 bytes" },
+      { "id": "d", "text": "4096 bytes" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Sectors are 512 bytes on traditional hard disks. Newer drives use 4KB sectors to allow larger TB-scale capacities."
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "text": "What is a cylinder on a hard disk?",
+    "options": [
+      { "id": "a", "text": "A single track on one platter" },
+      { "id": "b", "text": "A group of tracks with the same track number across different platters" },
+      { "id": "c", "text": "The spindle that the platters are mounted on" },
+      { "id": "d", "text": "A cluster of sectors on a single platter" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A cylinder is a group of tracks that share the same track number but are on different platters — essentially a vertical column through the disk stack."
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "text": "What are clusters in the context of file storage?",
+    "options": [
+      { "id": "a", "text": "Groups of servers connected in a network" },
+      { "id": "b", "text": "Groups of sectors combined into larger units that the file system uses to store files" },
+      { "id": "c", "text": "The read/write heads on a hard disk platter" },
+      { "id": "d", "text": "Backup copies of the file allocation table" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The File Management Layer groups sectors into clusters. Files are stored in units of clusters rather than individual sectors."
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "text": "Why is disk defragmentation needed?",
+    "options": [
+      { "id": "a", "text": "To remove viruses from the hard disk" },
+      { "id": "b", "text": "Because deleting and writing files scatters fragments across the disk, slowing read/write speeds" },
+      { "id": "c", "text": "To increase the size of sectors on the disk" },
+      { "id": "d", "text": "To reformat the disk and remove old file systems" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "When files are deleted and new ones written, fragments get scattered. The read heads must seek out non-contiguous clusters, slowing performance. Defragmentation reorganises them."
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "text": "What does FAT stand for?",
+    "options": [
+      { "id": "a", "text": "File Access Tool" },
+      { "id": "b", "text": "Fixed Allocation Table" },
+      { "id": "c", "text": "File Allocation Table" },
+      { "id": "d", "text": "Formatted Address Table" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "FAT stands for File Allocation Table. Versions include FAT12, FAT16 and FAT32."
+  },
+  {
+    "id": 34,
+    "type": "single",
+    "text": "What are the four file attributes that can be set on a FAT file?",
+    "options": [
+      { "id": "a", "text": "Archive, System, Hidden, Read-only" },
+      { "id": "b", "text": "Encrypted, Compressed, Hidden, Locked" },
+      { "id": "c", "text": "Read, Write, Execute, Delete" },
+      { "id": "d", "text": "Public, Private, Protected, Restricted" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "A FAT file has four attribute bits: Archive, System, Hidden and Read-only."
+  },
+  {
+    "id": 35,
+    "type": "single",
+    "text": "What minimum drive size does FAT32 support compared to earlier FAT versions?",
+    "options": [
+      { "id": "a", "text": "Over 512MB" },
+      { "id": "b", "text": "Over 1GB" },
+      { "id": "c", "text": "Over 2GB" },
+      { "id": "d", "text": "Over 4GB" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "FAT32 supports drives with over 2GB of storage, which earlier FAT versions could not handle."
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "text": "What is the key advantage of NTFS over FAT32?",
+    "options": [
+      { "id": "a", "text": "FAT32 supports larger files than NTFS" },
+      { "id": "b", "text": "NTFS is more secure and reliable, supporting encryption, compression and access control" },
+      { "id": "c", "text": "NTFS is an older, simpler system" },
+      { "id": "d", "text": "FAT32 uses a Master File Table while NTFS uses a File Allocation Table" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "NTFS is more secure and reliable than FAT. It supports data access control, ownership privileges, file compression and encryption."
+  },
+  {
+    "id": 37,
+    "type": "single",
+    "text": "What does NTFS use to track files on a volume?",
+    "options": [
+      { "id": "a", "text": "A Partition Boot Table" },
+      { "id": "b", "text": "A Master File Table (MFT)" },
+      { "id": "c", "text": "A Root Directory Index" },
+      { "id": "d", "text": "A Cluster Allocation Map" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "NTFS uses a Master File Table (MFT) which holds records of all files on the volume. NTFS file access is very fast compared to FAT."
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "text": "What is file locking and why is it needed?",
+    "options": [
+      { "id": "a", "text": "Encrypting a file so only the owner can read it" },
+      { "id": "b", "text": "Preventing two users from amending the same file simultaneously, which could cause data corruption" },
+      { "id": "c", "text": "Setting a file as read-only permanently" },
+      { "id": "d", "text": "Compressing a file to save disk space" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "In a multi-user system two users might try to access the same file simultaneously. File locking prevents simultaneous amendments that could corrupt data. A second user can still open a read-only copy."
+  },
+  {
+    "id": 39,
+    "type": "single",
+    "text": "What is record locking?",
+    "options": [
+      { "id": "a", "text": "Locking an entire file so no one else can open it" },
+      { "id": "b", "text": "Splitting a large file into sections so only parts of it are locked at a time" },
+      { "id": "c", "text": "Storing records in encrypted format on disk" },
+      { "id": "d", "text": "A method of defragmenting database files" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Record locking splits large files into sections so only the part in use is locked, keeping the rest available to other users."
+  },
+  {
+    "id": 40,
+    "type": "single",
+    "text": "Which company created Network File System (NFS) and in what year?",
+    "options": [
+      { "id": "a", "text": "Microsoft in 1990" },
+      { "id": "b", "text": "IBM in 1975" },
+      { "id": "c", "text": "Sun Microsystems in 1985" },
+      { "id": "d", "text": "Apple in 1984" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Sun Microsystems created NFS in 1985, making it the first widely used network file system."
   }
 ]
