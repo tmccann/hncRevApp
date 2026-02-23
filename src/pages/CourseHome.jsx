@@ -45,6 +45,17 @@ const CourseHome = () => {
       color: "from-blue-600 to-indigo-700",
       icon: "💻",
     },
+    {
+      id: "troubleshooting",
+      title: "Troubleshooting Computer Problems",
+      description:
+        "Process, approaches, tools, testing and documentation for fault finding",
+      modules: 6,
+      quizzes: 6,
+      progress: 0,
+      color: "from-orange-500 to-red-600",
+      icon: "🔧",
+    },
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">

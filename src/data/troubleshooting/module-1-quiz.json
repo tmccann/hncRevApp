@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "How many steps are in the standard troubleshooting model covered in this module?",
+    "options": [
+      { "id": "a", "text": "5" },
+      { "id": "b", "text": "6" },
+      { "id": "c", "text": "8" },
+      { "id": "d", "text": "10" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The standard model has 8 steps, though some versions group the first four into one step, giving 5 or 6 steps."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What is the FIRST step in the 8-step troubleshooting model?",
+    "options": [
+      { "id": "a", "text": "Identify the area affected" },
+      { "id": "b", "text": "Implement the solution" },
+      { "id": "c", "text": "Identify the symptoms of the problem" },
+      { "id": "d", "text": "Document everything" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Step 1 is to identify the symptoms. You must understand what the problem looks like before you can investigate further."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "At what point in the troubleshooting process should documentation take place?",
+    "options": [
+      { "id": "a", "text": "Only at the end once the problem is solved" },
+      { "id": "b", "text": "Only when the solution fails" },
+      { "id": "c", "text": "Throughout the entire process" },
+      { "id": "d", "text": "Before you start only" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Documentation must happen throughout the process, not just at the end. Step 8 of the model specifically covers documenting everything."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Which step comes immediately AFTER implementing the solution?",
+    "options": [
+      { "id": "a", "text": "Identify the most likely source" },
+      { "id": "b", "text": "Test the solution" },
+      { "id": "c", "text": "Document everything" },
+      { "id": "d", "text": "Identify recently-applied changes" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Step 5 is implement, Step 6 is test. You must always verify the solution actually works before closing the fault."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "What are the four high-level stages of the troubleshooting process?",
+    "options": [
+      { "id": "a", "text": "Plan, Build, Test, Deploy" },
+      { "id": "b", "text": "Investigate, Plan & Implement, Document, Review & Evaluate" },
+      { "id": "c", "text": "Identify, Fix, Test, Close" },
+      { "id": "d", "text": "Report, Diagnose, Repair, Sign Off" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "At a high level the process breaks into: investigate the problem, plan and implement a solution, document the steps taken, then review and evaluate."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Why is documentation especially important when multiple technicians work on the same system?",
+    "options": [
+      { "id": "a", "text": "It is a legal requirement" },
+      { "id": "b", "text": "Without it, a technician would have to trace everything from scratch" },
+      { "id": "c", "text": "It speeds up the hardware repair" },
+      { "id": "d", "text": "It replaces the need for testing" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Without documentation, even an experienced technician on an unfamiliar system would have no starting point and would need to trace everything point-by-point from scratch."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Which step involves checking what has recently changed on the system?",
+    "options": [
+      { "id": "a", "text": "Step 1" },
+      { "id": "b", "text": "Step 2" },
+      { "id": "c", "text": "Step 3" },
+      { "id": "d", "text": "Step 5" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Step 3 is 'Identify any recently-applied changes'. Recent changes are often the cause of new faults."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "What does Step 7 of the 8-step model involve?",
+    "options": [
+      { "id": "a", "text": "Testing the solution" },
+      { "id": "b", "text": "Documenting the fault" },
+      { "id": "c", "text": "Analysing the possible effects of the solution" },
+      { "id": "d", "text": "Identifying the area affected" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Step 7 is to analyse the possible effects of the solution — making sure your fix hasn't introduced new problems elsewhere."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Why might some versions of the troubleshooting model show only 5 or 6 steps?",
+    "options": [
+      { "id": "a", "text": "They skip the testing step" },
+      { "id": "b", "text": "They leave out documentation" },
+      { "id": "c", "text": "They group steps 1-4 together as 'Identify the problem'" },
+      { "id": "d", "text": "They combine implementation and testing" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Some versions group steps 1-4 together as simply 'Identify the problem'. The core idea is the same regardless of how the steps are grouped."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Which of the following best describes Step 4 of the 8-step model?",
+    "options": [
+      { "id": "a", "text": "Test the solution" },
+      { "id": "b", "text": "Identify the most likely source of the problem" },
+      { "id": "c", "text": "Implement the fix" },
+      { "id": "d", "text": "Identify the area affected" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Step 4 is 'Identify the most likely source of the problem' — using the information gathered in steps 1-3 to form a diagnosis."
+  }
+]

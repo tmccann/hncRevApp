@@ -1,0 +1,74 @@
+[
+  {
+    "id": "module-1",
+    "number": 1,
+    "title": "The Troubleshooting Process",
+    "description": "The 8-step model, documentation and why process matters",
+    "icon": "🔁",
+    "color": "from-orange-500 to-red-600",
+    "topics": ["8-Step Model", "Documentation", "Fault Investigation"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": []
+  },
+  {
+    "id": "module-2",
+    "number": 2,
+    "title": "Troubleshooting Approaches",
+    "description": "Linear vs Half-Split — when and why to use each",
+    "icon": "🔀",
+    "color": "from-orange-500 to-red-600",
+    "topics": ["Linear Approach", "Half-Split Approach", "Choosing an Approach"],
+    "hasSummary": false,
+    "hasQuiz": false,
+    "checkpoints": []
+  },
+  {
+    "id": "module-3",
+    "number": 3,
+    "title": "Minimising Disruption",
+    "description": "Replacements, backups and systematic working to reduce downtime",
+    "icon": "🛡️",
+    "color": "from-orange-500 to-red-600",
+    "topics": ["Replacements", "Backups", "Systematic Approach"],
+    "hasSummary": false,
+    "hasQuiz": false,
+    "checkpoints": []
+  },
+  {
+    "id": "module-4",
+    "number": 4,
+    "title": "Diagnostic Tools & Methods",
+    "description": "Tools and resources available to diagnose and resolve faults",
+    "icon": "🧰",
+    "color": "from-orange-500 to-red-600",
+    "topics": ["Flowcharts", "Helpdesks", "Diagnostic Tools", "Knowledge Bases"],
+    "hasSummary": false,
+    "hasQuiz": false,
+    "checkpoints": []
+  },
+  {
+    "id": "module-5",
+    "number": 5,
+    "title": "Documentation & Fault Logging",
+    "description": "Fault logs, logging databases and troubleshooting guides",
+    "icon": "📝",
+    "color": "from-orange-500 to-red-600",
+    "topics": ["Fault Logs", "Fault Log Database", "Troubleshooting Guides"],
+    "hasSummary": false,
+    "hasQuiz": false,
+    "checkpoints": []
+  },
+  {
+    "id": "module-6",
+    "number": 6,
+    "title": "Test Strategies",
+    "description": "Black Box and White Box testing — what they are and when to use them",
+    "icon": "🧪",
+    "color": "from-orange-500 to-red-600",
+    "topics": ["Black Box Testing", "White Box Testing", "Test Comparison"],
+    "hasSummary": false,
+    "hasQuiz": false,
+    "checkpoints": []
+  }
+]

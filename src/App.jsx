@@ -10,6 +10,7 @@ import CCNAModules from "./pages/CCNAModules";
 import ITEssentialsModules from "./pages/ITEssentialsModules";
 import CompFundamentals from "./pages/CompFundamentals";
 import EthicsModules from "./pages/EthicsModules";
+import TroubleshootingModules from "./pages/TroubleshootingModules";
 import ModuleSummary from "./components/ModuleSummary";
 import Quiz from "./components/Quiz";
 
@@ -18,6 +19,7 @@ import ccnaModulesData from "./data/ccna/modules.json";
 import itEssentialsModulesData from "./data/it-essentials/modules.json";
 import compModulesData from "./data/comp-fundamentals/modules.json";
 import ethicsModulesData from "./data/ethics/modules.json";
+import troubleshootingModulesData from "./data/troubleshooting/modules.json";
 
 // CCNA Vite glob imports
 const ccnaSummaryFiles = import.meta.glob("./data/ccna/*-summary.json", {
@@ -30,9 +32,7 @@ const ccnaQuizFiles = import.meta.glob("./data/ccna/*-quiz.json", {
 // IT Essentials Vite glob imports
 const iteSummaryFiles = import.meta.glob(
   "./data/it-essentials/*-summary.json",
-  {
-    eager: true,
-  },
+  { eager: true }
 );
 const iteQuizFiles = import.meta.glob("./data/it-essentials/*-quiz.json", {
   eager: true,
@@ -41,9 +41,7 @@ const iteQuizFiles = import.meta.glob("./data/it-essentials/*-quiz.json", {
 // Computer Fundamentals Vite glob imports
 const compSummaryFiles = import.meta.glob(
   "./data/comp-fundamentals/*-summary.json",
-  {
-    eager: true,
-  },
+  { eager: true }
 );
 const compQuizFiles = import.meta.glob("./data/comp-fundamentals/*-quiz.json", {
   eager: true,
@@ -57,13 +55,22 @@ const ethicsQuizFiles = import.meta.glob("./data/ethics/*-quiz.json", {
   eager: true,
 });
 
+// Troubleshooting Vite glob imports
+const troubleshootingSummaryFiles = import.meta.glob(
+  "./data/troubleshooting/*-summary.json",
+  { eager: true }
+);
+const troubleshootingQuizFiles = import.meta.glob(
+  "./data/troubleshooting/*-quiz.json",
+  { eager: true }
+);
+
 // Convert CCNA glob results to lookup maps
 const ccnaSummaryMap = {};
 const ccnaQuizMap = {};
 Object.keys(ccnaSummaryFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
-  ccnaSummaryMap[filename.replace("-summary", "")] =
-    ccnaSummaryFiles[path].default;
+  ccnaSummaryMap[filename.replace("-summary", "")] = ccnaSummaryFiles[path].default;
 });
 Object.keys(ccnaQuizFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
@@ -75,8 +82,7 @@ const iteSummaryMap = {};
 const iteQuizMap = {};
 Object.keys(iteSummaryFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
-  iteSummaryMap[filename.replace("-summary", "")] =
-    iteSummaryFiles[path].default;
+  iteSummaryMap[filename.replace("-summary", "")] = iteSummaryFiles[path].default;
 });
 Object.keys(iteQuizFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
@@ -88,8 +94,7 @@ const compSummaryMap = {};
 const compQuizMap = {};
 Object.keys(compSummaryFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
-  compSummaryMap[filename.replace("-summary", "")] =
-    compSummaryFiles[path].default;
+  compSummaryMap[filename.replace("-summary", "")] = compSummaryFiles[path].default;
 });
 Object.keys(compQuizFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
@@ -101,12 +106,23 @@ const ethicsSummaryMap = {};
 const ethicsQuizMap = {};
 Object.keys(ethicsSummaryFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
-  ethicsSummaryMap[filename.replace("-summary", "")] =
-    ethicsSummaryFiles[path].default;
+  ethicsSummaryMap[filename.replace("-summary", "")] = ethicsSummaryFiles[path].default;
 });
 Object.keys(ethicsQuizFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
   ethicsQuizMap[filename.replace("-quiz", "")] = ethicsQuizFiles[path].default;
+});
+
+// Convert Troubleshooting glob results to lookup maps
+const troubleshootingSummaryMap = {};
+const troubleshootingQuizMap = {};
+Object.keys(troubleshootingSummaryFiles).forEach((path) => {
+  const filename = path.split("/").pop().replace(".json", "");
+  troubleshootingSummaryMap[filename.replace("-summary", "")] = troubleshootingSummaryFiles[path].default;
+});
+Object.keys(troubleshootingQuizFiles).forEach((path) => {
+  const filename = path.split("/").pop().replace(".json", "");
+  troubleshootingQuizMap[filename.replace("-quiz", "")] = troubleshootingQuizFiles[path].default;
 });
 
 // Dynamic CCNA Module Summary Loader
@@ -117,18 +133,9 @@ const DynamicCCNAModuleSummary = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Summary Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This module summary hasn't been created yet.
-          </p>
-          <Link
-            to="/ccna"
-            className="text-indigo-600 hover:text-indigo-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Summary Not Found</h1>
+          <p className="text-gray-600 mb-8">This module summary hasn't been created yet.</p>
+          <Link to="/ccna" className="text-indigo-600 hover:text-indigo-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -145,18 +152,9 @@ const DynamicCCNAModuleQuiz = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Quiz Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This module quiz hasn't been created yet.
-          </p>
-          <Link
-            to="/ccna"
-            className="text-indigo-600 hover:text-indigo-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This module quiz hasn't been created yet.</p>
+          <Link to="/ccna" className="text-indigo-600 hover:text-indigo-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -174,26 +172,14 @@ const DynamicCCNAModuleQuiz = () => {
 const DynamicCCNACheckpointQuiz = () => {
   const { checkpointId } = useParams();
   const quizData = ccnaQuizMap[checkpointId];
-  const moduleNums = checkpointId
-    .replace("checkpoint-", "")
-    .split("-")
-    .map(Number);
+  const moduleNums = checkpointId.replace("checkpoint-", "").split("-").map(Number);
   if (!quizData) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Checkpoint Quiz Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This checkpoint quiz hasn't been created yet.
-          </p>
-          <Link
-            to="/ccna"
-            className="text-indigo-600 hover:text-indigo-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Checkpoint Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This checkpoint quiz hasn't been created yet.</p>
+          <Link to="/ccna" className="text-indigo-600 hover:text-indigo-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -215,18 +201,9 @@ const DynamicITEModuleSummary = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Summary Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This module summary hasn't been created yet.
-          </p>
-          <Link
-            to="/it-essentials"
-            className="text-green-600 hover:text-green-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Summary Not Found</h1>
+          <p className="text-gray-600 mb-8">This module summary hasn't been created yet.</p>
+          <Link to="/it-essentials" className="text-green-600 hover:text-green-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -243,18 +220,9 @@ const DynamicITEModuleQuiz = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Quiz Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This module quiz hasn't been created yet.
-          </p>
-          <Link
-            to="/it-essentials"
-            className="text-green-600 hover:text-green-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This module quiz hasn't been created yet.</p>
+          <Link to="/it-essentials" className="text-green-600 hover:text-green-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -272,26 +240,14 @@ const DynamicITEModuleQuiz = () => {
 const DynamicITECheckpointQuiz = () => {
   const { checkpointId } = useParams();
   const quizData = iteQuizMap[checkpointId];
-  const moduleNums = checkpointId
-    .replace("checkpoint-", "")
-    .split("-")
-    .map(Number);
+  const moduleNums = checkpointId.replace("checkpoint-", "").split("-").map(Number);
   if (!quizData) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Checkpoint Quiz Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This checkpoint quiz hasn't been created yet.
-          </p>
-          <Link
-            to="/it-essentials"
-            className="text-green-600 hover:text-green-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Checkpoint Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This checkpoint quiz hasn't been created yet.</p>
+          <Link to="/it-essentials" className="text-green-600 hover:text-green-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -313,18 +269,9 @@ const DynamicCompModuleSummary = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Summary Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This module summary hasn't been created yet.
-          </p>
-          <Link
-            to="/comp-fundamentals"
-            className="text-emerald-600 hover:text-emerald-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Summary Not Found</h1>
+          <p className="text-gray-600 mb-8">This module summary hasn't been created yet.</p>
+          <Link to="/comp-fundamentals" className="text-emerald-600 hover:text-emerald-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -341,18 +288,9 @@ const DynamicCompModuleQuiz = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Quiz Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This module quiz hasn't been created yet.
-          </p>
-          <Link
-            to="/comp-fundamentals"
-            className="text-emerald-600 hover:text-emerald-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This module quiz hasn't been created yet.</p>
+          <Link to="/comp-fundamentals" className="text-emerald-600 hover:text-emerald-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -370,26 +308,14 @@ const DynamicCompModuleQuiz = () => {
 const DynamicCompCheckpointQuiz = () => {
   const { checkpointId } = useParams();
   const quizData = compQuizMap[checkpointId];
-  const moduleNums = checkpointId
-    .replace("checkpoint-", "")
-    .split("-")
-    .map(Number);
+  const moduleNums = checkpointId.replace("checkpoint-", "").split("-").map(Number);
   if (!quizData) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Checkpoint Quiz Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This checkpoint quiz hasn't been created yet.
-          </p>
-          <Link
-            to="/comp-fundamentals"
-            className="text-emerald-600 hover:text-emerald-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Checkpoint Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This checkpoint quiz hasn't been created yet.</p>
+          <Link to="/comp-fundamentals" className="text-emerald-600 hover:text-emerald-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -411,18 +337,9 @@ const DynamicEthicsModuleSummary = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-violet-50 to-purple-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Summary Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This module summary hasn't been created yet.
-          </p>
-          <Link
-            to="/ethics"
-            className="text-violet-600 hover:text-violet-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Summary Not Found</h1>
+          <p className="text-gray-600 mb-8">This module summary hasn't been created yet.</p>
+          <Link to="/ethics" className="text-violet-600 hover:text-violet-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -439,18 +356,9 @@ const DynamicEthicsModuleQuiz = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-violet-50 to-purple-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Quiz Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This module quiz hasn't been created yet.
-          </p>
-          <Link
-            to="/ethics"
-            className="text-violet-600 hover:text-violet-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This module quiz hasn't been created yet.</p>
+          <Link to="/ethics" className="text-violet-600 hover:text-violet-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -468,26 +376,14 @@ const DynamicEthicsModuleQuiz = () => {
 const DynamicEthicsCheckpointQuiz = () => {
   const { checkpointId } = useParams();
   const quizData = ethicsQuizMap[checkpointId];
-  const moduleNums = checkpointId
-    .replace("checkpoint-", "")
-    .split("-")
-    .map(Number);
+  const moduleNums = checkpointId.replace("checkpoint-", "").split("-").map(Number);
   if (!quizData) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-violet-50 to-purple-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Checkpoint Quiz Not Found
-          </h1>
-          <p className="text-gray-600 mb-8">
-            This checkpoint quiz hasn't been created yet.
-          </p>
-          <Link
-            to="/ethics"
-            className="text-violet-600 hover:text-violet-700 font-semibold"
-          >
-            ← Back to Modules
-          </Link>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Checkpoint Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This checkpoint quiz hasn't been created yet.</p>
+          <Link to="/ethics" className="text-violet-600 hover:text-violet-700 font-semibold">← Back to Modules</Link>
         </div>
       </div>
     );
@@ -501,6 +397,49 @@ const DynamicEthicsCheckpointQuiz = () => {
   );
 };
 
+// Dynamic Troubleshooting Module Summary Loader
+const DynamicTroubleshootingModuleSummary = () => {
+  const { moduleId } = useParams();
+  const summaryData = troubleshootingSummaryMap[moduleId];
+  if (!summaryData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Summary Not Found</h1>
+          <p className="text-gray-600 mb-8">This module summary hasn't been created yet.</p>
+          <Link to="/troubleshooting" className="text-orange-600 hover:text-orange-700 font-semibold">← Back to Modules</Link>
+        </div>
+      </div>
+    );
+  }
+  return <ModuleSummary data={summaryData} backLink="/troubleshooting" />;
+};
+
+// Dynamic Troubleshooting Module Quiz Loader
+const DynamicTroubleshootingModuleQuiz = () => {
+  const { moduleId } = useParams();
+  const quizData = troubleshootingQuizMap[moduleId];
+  const moduleInfo = troubleshootingModulesData.find((m) => m.id === moduleId);
+  if (!quizData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This module quiz hasn't been created yet.</p>
+          <Link to="/troubleshooting" className="text-orange-600 hover:text-orange-700 font-semibold">← Back to Modules</Link>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <Quiz
+      questions={quizData}
+      title={`Module ${moduleInfo?.number}: ${moduleInfo?.title} Quiz`}
+      description={moduleInfo?.description || ""}
+    />
+  );
+};
+
 function App() {
   return (
     <BrowserRouter>
@@ -510,63 +449,32 @@ function App() {
 
         {/* CCNA Course */}
         <Route path="/ccna" element={<CCNAModules />} />
-        <Route
-          path="/ccna/:moduleId/summary"
-          element={<DynamicCCNAModuleSummary />}
-        />
-        <Route
-          path="/ccna/:moduleId/quiz"
-          element={<DynamicCCNAModuleQuiz />}
-        />
-        <Route
-          path="/ccna/:checkpointId/quiz"
-          element={<DynamicCCNACheckpointQuiz />}
-        />
+        <Route path="/ccna/:moduleId/summary" element={<DynamicCCNAModuleSummary />} />
+        <Route path="/ccna/:moduleId/quiz" element={<DynamicCCNAModuleQuiz />} />
+        <Route path="/ccna/:checkpointId/quiz" element={<DynamicCCNACheckpointQuiz />} />
 
         {/* IT Essentials Course */}
         <Route path="/it-essentials" element={<ITEssentialsModules />} />
-        <Route
-          path="/it-essentials/:moduleId/summary"
-          element={<DynamicITEModuleSummary />}
-        />
-        <Route
-          path="/it-essentials/:moduleId/quiz"
-          element={<DynamicITEModuleQuiz />}
-        />
-        <Route
-          path="/it-essentials/:checkpointId/quiz"
-          element={<DynamicITECheckpointQuiz />}
-        />
+        <Route path="/it-essentials/:moduleId/summary" element={<DynamicITEModuleSummary />} />
+        <Route path="/it-essentials/:moduleId/quiz" element={<DynamicITEModuleQuiz />} />
+        <Route path="/it-essentials/:checkpointId/quiz" element={<DynamicITECheckpointQuiz />} />
 
         {/* Computer Fundamentals Course */}
         <Route path="/comp-fundamentals" element={<CompFundamentals />} />
-        <Route
-          path="/comp-fundamentals/:moduleId/summary"
-          element={<DynamicCompModuleSummary />}
-        />
-        <Route
-          path="/comp-fundamentals/:moduleId/quiz"
-          element={<DynamicCompModuleQuiz />}
-        />
-        <Route
-          path="/comp-fundamentals/:checkpointId/quiz"
-          element={<DynamicCompCheckpointQuiz />}
-        />
+        <Route path="/comp-fundamentals/:moduleId/summary" element={<DynamicCompModuleSummary />} />
+        <Route path="/comp-fundamentals/:moduleId/quiz" element={<DynamicCompModuleQuiz />} />
+        <Route path="/comp-fundamentals/:checkpointId/quiz" element={<DynamicCompCheckpointQuiz />} />
 
         {/* Ethics Course */}
         <Route path="/ethics" element={<EthicsModules />} />
-        <Route
-          path="/ethics/:moduleId/summary"
-          element={<DynamicEthicsModuleSummary />}
-        />
-        <Route
-          path="/ethics/:moduleId/quiz"
-          element={<DynamicEthicsModuleQuiz />}
-        />
-        <Route
-          path="/ethics/:checkpointId/quiz"
-          element={<DynamicEthicsCheckpointQuiz />}
-        />
+        <Route path="/ethics/:moduleId/summary" element={<DynamicEthicsModuleSummary />} />
+        <Route path="/ethics/:moduleId/quiz" element={<DynamicEthicsModuleQuiz />} />
+        <Route path="/ethics/:checkpointId/quiz" element={<DynamicEthicsCheckpointQuiz />} />
+
+        {/* Troubleshooting Course */}
+        <Route path="/troubleshooting" element={<TroubleshootingModules />} />
+        <Route path="/troubleshooting/:moduleId/summary" element={<DynamicTroubleshootingModuleSummary />} />
+        <Route path="/troubleshooting/:moduleId/quiz" element={<DynamicTroubleshootingModuleQuiz />} />
       </Routes>
     </BrowserRouter>
   );
