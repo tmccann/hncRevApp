@@ -44,7 +44,7 @@
     "color": "from-orange-500 to-red-600",
     "topics": ["Flowcharts", "Helpdesks", "Diagnostic Tools", "Knowledge Bases"],
     "hasSummary": false,
-    "hasQuiz": false,
+    "hasQuiz": true,
     "checkpoints": []
   },
   {
@@ -56,7 +56,7 @@
     "color": "from-orange-500 to-red-600",
     "topics": ["Fault Logs", "Fault Log Database", "Troubleshooting Guides"],
     "hasSummary": false,
-    "hasQuiz": false,
+    "hasQuiz": true,
     "checkpoints": []
   },
   {
@@ -68,7 +68,7 @@
     "color": "from-orange-500 to-red-600",
     "topics": ["Black Box Testing", "White Box Testing", "Test Comparison"],
     "hasSummary": false,
-    "hasQuiz": false,
+    "hasQuiz": true,
     "checkpoints": []
   }
 ]
