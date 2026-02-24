@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "What are flowcharts used for in troubleshooting?",
+    "options": [
+      { "id": "a", "text": "Recording faults in a database for future reference" },
+      { "id": "b", "text": "Visual yes/no decision diagrams that guide you to a fault" },
+      { "id": "c", "text": "Software tools that test hardware components automatically" },
+      { "id": "d", "text": "Step-by-step written instructions for solving known problems" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Flowcharts are visual yes/no decision diagrams that guide a technician to a fault. They are great for common, repeatable problems."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "When are flowcharts most useful?",
+    "options": [
+      { "id": "a", "text": "For complex, unique faults never seen before" },
+      { "id": "b", "text": "For common, repeatable problems" },
+      { "id": "c", "text": "Only when other tools have failed" },
+      { "id": "d", "text": "For testing hardware at a code level" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Flowcharts are great for common, repeatable problems where the decision tree can be mapped out in advance."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "What is a helpdesk used for in troubleshooting?",
+    "options": [
+      { "id": "a", "text": "Automatically diagnosing hardware faults" },
+      { "id": "b", "text": "A support team or service to contact when stuck — often the first point of contact for users reporting problems" },
+      { "id": "c", "text": "A searchable database of past faults and solutions" },
+      { "id": "d", "text": "Official manuals for hardware and software" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A helpdesk is a support team or service to contact when stuck. It is often the first point of contact for users reporting problems."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "What are diagnostic and debugging tools used for?",
+    "options": [
+      { "id": "a", "text": "Providing yes/no decision trees for common faults" },
+      { "id": "b", "text": "Software tools that test hardware or code to identify exactly where a fault lies" },
+      { "id": "c", "text": "Storing records of previous faults and how they were fixed" },
+      { "id": "d", "text": "Official product support from the manufacturer" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Diagnostic and debugging tools are software tools that test hardware or code to identify exactly where a fault lies. They are especially useful for larger programmes."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "What are troubleshooting guides?",
+    "options": [
+      { "id": "a", "text": "Visual flowcharts showing yes/no decisions" },
+      { "id": "b", "text": "Step-by-step written instructions for solving known problems" },
+      { "id": "c", "text": "Software that automatically repairs faults" },
+      { "id": "d", "text": "Databases of manufacturer warranty information" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Troubleshooting guides are step-by-step written instructions for solving known problems. They are quick to follow and good for common faults."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "What is a knowledge base in the context of troubleshooting?",
+    "options": [
+      { "id": "a", "text": "A visual diagram showing how components connect" },
+      { "id": "b", "text": "A searchable database of known faults and solutions built up over time" },
+      { "id": "c", "text": "The operating manual supplied with a device" },
+      { "id": "d", "text": "A live chat service provided by the manufacturer" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A knowledge base is a searchable database of known faults and solutions built up over time — either by colleagues with specialist knowledge or through accumulated experience."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "What are handbooks used for in troubleshooting?",
+    "options": [
+      { "id": "a", "text": "Logging faults as they are discovered" },
+      { "id": "b", "text": "Official manuals for hardware or software containing technical specs and fault-finding procedures" },
+      { "id": "c", "text": "Providing remote access to fix faults" },
+      { "id": "d", "text": "Visual decision trees for common faults" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Handbooks are official manuals for hardware or software containing technical specifications and fault-finding procedures."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "What is the value of internet resources when troubleshooting?",
+    "options": [
+      { "id": "a", "text": "They provide legally binding repair instructions" },
+      { "id": "b", "text": "Forums, articles and community sites where others may have already solved the same problem" },
+      { "id": "c", "text": "They automatically diagnose the fault remotely" },
+      { "id": "d", "text": "They replace the need for manufacturer support" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Internet resources such as forums, articles and community sites are valuable because others may have already encountered and solved the same problem."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Why are manufacturer websites and support considered one of the most reliable sources?",
+    "options": [
+      { "id": "a", "text": "They are free to access and always available" },
+      { "id": "b", "text": "They provide official support direct from the maker of the hardware or software" },
+      { "id": "c", "text": "They contain community-contributed solutions from experienced users" },
+      { "id": "d", "text": "They automatically update your device firmware" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Manufacturer websites and support are often the most reliable source for specific product issues because they come directly from the people who made the hardware or software."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "What are fault log databases used for?",
+    "options": [
+      { "id": "a", "text": "Diagnosing hardware faults automatically" },
+      { "id": "b", "text": "Records of previous faults and how they were fixed — invaluable for spotting patterns or recurring issues" },
+      { "id": "c", "text": "Providing step-by-step guides for common problems" },
+      { "id": "d", "text": "Connecting to manufacturer support services" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Fault log databases are records of previous faults and how they were fixed. They are invaluable for spotting patterns or recurring issues and for speeding up future repairs."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "How many diagnostic tools and methods are covered in this module?",
+    "options": [
+      { "id": "a", "text": "6" },
+      { "id": "b", "text": "7" },
+      { "id": "c", "text": "8" },
+      { "id": "d", "text": "9" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "There are 9 tools: Flowcharts, Helpdesks, Diagnostics & Debugging Tools, Troubleshooting Guides, Experts & Knowledge Bases, Handbooks, Internet Resources, Manufacturer Websites & Support, and Fault Log Databases."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "What factor should influence which diagnostic tool or resource you use?",
+    "options": [
+      { "id": "a", "text": "Always use the internet first as it is the fastest" },
+      { "id": "b", "text": "The type of problem and your company's policies" },
+      { "id": "c", "text": "Always contact the manufacturer regardless of the fault" },
+      { "id": "d", "text": "Use fault logs only — they contain all known solutions" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The right tool depends on the type of problem and your company's policies. No single tool is always best — different situations call for different resources."
+  },
+  {
+    "id": 13,
+    "type": "matching",
+    "text": "Match each diagnostic tool to its correct description.",
+    "columnA": [
+      { "id": "1", "text": "Flowchart" },
+      { "id": "2", "text": "Fault Log Database" },
+      { "id": "3", "text": "Handbook" },
+      { "id": "4", "text": "Helpdesk" }
+    ],
+    "columnB": [
+      { "id": "a", "text": "Official manual with technical specs and fault-finding procedures" },
+      { "id": "b", "text": "Visual yes/no decision diagram guiding you to a fault" },
+      { "id": "c", "text": "Records of past faults and fixes, useful for spotting recurring issues" },
+      { "id": "d", "text": "Support team — often the first point of contact for users reporting problems" }
+    ],
+    "correctMatches": {
+      "1": "b",
+      "2": "c",
+      "3": "a",
+      "4": "d"
+    },
+    "explanation": "Flowchart = visual yes/no diagram. Fault Log Database = records of past faults. Handbook = official manual. Helpdesk = first point of contact support."
+  }
+]

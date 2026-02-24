@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "What are the three key strategies for minimising disruption when troubleshooting?",
+    "options": [
+      { "id": "a", "text": "Reboot, Replace, Report" },
+      { "id": "b", "text": "Replacements, Backups, Systematic Approach" },
+      { "id": "c", "text": "Diagnose, Fix, Document" },
+      { "id": "d", "text": "Linear, Half-Split, Documentation" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The three key strategies for minimising disruption are: Replacements, Backups, and using a Systematic Approach."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What is the replacement strategy in troubleshooting?",
+    "options": [
+      { "id": "a", "text": "Spend as long as needed diagnosing the faulty component before touching anything" },
+      { "id": "b", "text": "Swap out the faulty component for a known working replacement to restore the system quickly, then investigate the fault separately" },
+      { "id": "c", "text": "Replace the entire system rather than individual components" },
+      { "id": "d", "text": "Order a replacement part and wait until it arrives before starting work" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The replacement strategy means swapping the faulty component for a known working one to get the system back up quickly. The faulty part is then investigated separately without causing further downtime."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "What is the key principle behind using replacements to minimise disruption?",
+    "options": [
+      { "id": "a", "text": "Investigate first, restore later" },
+      { "id": "b", "text": "Restore first, investigate later" },
+      { "id": "c", "text": "Replace everything and see what works" },
+      { "id": "d", "text": "Only replace if the fault cannot be diagnosed" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The principle is 'Restore first, investigate later' — get the user or system back up and running quickly, then diagnose the faulty component separately."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Why are backups important before starting troubleshooting work?",
+    "options": [
+      { "id": "a", "text": "They speed up the diagnostic process" },
+      { "id": "b", "text": "If something goes wrong during troubleshooting — such as data loss — you can restore to a working state quickly" },
+      { "id": "c", "text": "They are required by law before any technical work" },
+      { "id": "d", "text": "They allow you to skip the documentation step" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Having up-to-date backups means that if something goes wrong during troubleshooting — such as data loss or system instability — you can restore to a working state quickly."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "What should you always confirm before starting work on a system?",
+    "options": [
+      { "id": "a", "text": "That the user has logged out" },
+      { "id": "b", "text": "That a backup exists" },
+      { "id": "c", "text": "That the fault has been reproduced three times" },
+      { "id": "d", "text": "That all cables are unplugged" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The key principle for backups is 'Verify before you start' — never begin work on a system without confirming a backup exists."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "What is the systematic approach to minimising disruption?",
+    "options": [
+      { "id": "a", "text": "Try random fixes quickly until something works" },
+      { "id": "b", "text": "Follow a structured, methodical process such as the 8-step model and record everything" },
+      { "id": "c", "text": "Fix the most obvious problem first without planning" },
+      { "id": "d", "text": "Ask the user to describe the fault, then immediately replace the most likely component" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The systematic approach means following a structured process like the 8-step model. Random guesswork without recording what you've done is one of the most common causes of extended downtime."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "What is one of the most common causes of extended downtime during troubleshooting?",
+    "options": [
+      { "id": "a", "text": "Using the Half-Split approach on a simple system" },
+      { "id": "b", "text": "Random guesswork without recording what has been done" },
+      { "id": "c", "text": "Having too many replacement parts available" },
+      { "id": "d", "text": "Starting work before the user has reported the fault" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Random guesswork without recording what you have done is one of the most common causes of extended downtime and can create new problems."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "What is the key principle that applies across ALL three disruption minimisation strategies?",
+    "options": [
+      { "id": "a", "text": "Fix quickly regardless of process" },
+      { "id": "b", "text": "Plan before you act" },
+      { "id": "c", "text": "Always replace rather than repair" },
+      { "id": "d", "text": "Document only at the end" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The key principle across all three strategies is 'Plan before you act'. Rushing in without preparation tends to make things worse, not better."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "What can happen if you rush into troubleshooting without preparation?",
+    "options": [
+      { "id": "a", "text": "The fault is usually found faster" },
+      { "id": "b", "text": "Things tend to get worse, not better" },
+      { "id": "c", "text": "The backup is automatically triggered" },
+      { "id": "d", "text": "The systematic approach kicks in automatically" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Rushing in without preparation tends to make things worse, not better. Planning before acting is essential across all three disruption minimisation strategies."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "A server has crashed and users cannot work. What is the best first step to minimise disruption?",
+    "options": [
+      { "id": "a", "text": "Spend several hours fully diagnosing the root cause before making any changes" },
+      { "id": "b", "text": "Swap in a known working replacement to restore service, then investigate the faulty component separately" },
+      { "id": "c", "text": "Delete all recent changes to return the system to its original state" },
+      { "id": "d", "text": "Wait for the manufacturer to provide a fix" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The replacement strategy says restore first, investigate later. Swapping in a working replacement gets users back up quickly while the fault is diagnosed separately without further downtime."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "A technician is about to apply a software patch to fix a fault. What should they verify first?",
+    "options": [
+      { "id": "a", "text": "That the patch was released within the last 30 days" },
+      { "id": "b", "text": "That a backup exists before starting work" },
+      { "id": "c", "text": "That all users are logged off the system" },
+      { "id": "d", "text": "That the fault has been reported in writing" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The key backup principle is 'Verify before you start'. Never begin work on a system without confirming a backup exists — the patch could cause data loss or instability."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Which badge summarises the systematic approach strategy?",
+    "options": [
+      { "id": "a", "text": "Restore first, investigate later" },
+      { "id": "b", "text": "Verify before you start" },
+      { "id": "c", "text": "Plan before you act" },
+      { "id": "d", "text": "Test before you deploy" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "'Plan before you act' is the principle for the systematic approach. 'Restore first, investigate later' applies to replacements, and 'Verify before you start' applies to backups."
+  }
+]

@@ -1,0 +1,193 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "What are the two main testing strategies covered in this module?",
+    "options": [
+      { "id": "a", "text": "Linear and Half-Split testing" },
+      { "id": "b", "text": "Black Box and White Box testing" },
+      { "id": "c", "text": "Unit and System testing" },
+      { "id": "d", "text": "Manual and Automated testing" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The two main testing strategies are Black Box testing (no internal knowledge) and White Box testing (full internal knowledge)."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What defines Black Box testing?",
+    "options": [
+      { "id": "a", "text": "The tester has full knowledge of the internal code and system structure" },
+      { "id": "b", "text": "The tester has no knowledge of how the system works internally — testing is done purely from the outside" },
+      { "id": "c", "text": "Testing is carried out only by developers" },
+      { "id": "d", "text": "Testing focuses on examining code branches and logical paths" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "In Black Box testing the tester has NO knowledge of how the system works internally. Testing is done purely from the outside, looking at inputs and outputs — just like an end user would."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "What defines White Box testing?",
+    "options": [
+      { "id": "a", "text": "The tester has no knowledge of the internal system and tests from the outside only" },
+      { "id": "b", "text": "The tester has full knowledge of the internal code and system structure" },
+      { "id": "c", "text": "Testing is done by end users who are unfamiliar with the system" },
+      { "id": "d", "text": "Testing focuses only on the user interface" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "In White Box testing the tester has FULL knowledge of the internal code and system structure. Testing is based on examining code statements, branches, paths and conditions."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Who typically carries out Black Box testing?",
+    "options": [
+      { "id": "a", "text": "Developers and technical experts only" },
+      { "id": "b", "text": "End users or testers with no internal system knowledge" },
+      { "id": "c", "text": "Network administrators" },
+      { "id": "d", "text": "Hardware engineers" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Black Box testing is carried out by end users or testers — people who interact with the system from the outside without needing to know how it is built."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Who typically carries out White Box testing?",
+    "options": [
+      { "id": "a", "text": "End users with no technical knowledge" },
+      { "id": "b", "text": "Developers or technical experts with knowledge of the internal code" },
+      { "id": "c", "text": "Helpdesk staff" },
+      { "id": "d", "text": "The manufacturer's sales team" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "White Box testing is carried out by developers or technical experts who have full knowledge of the internal code and system structure."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "What is the focus of Black Box testing?",
+    "options": [
+      { "id": "a", "text": "Examining code statements, branches and logical paths" },
+      { "id": "b", "text": "Whether the software behaves correctly — looking at inputs and outputs" },
+      { "id": "c", "text": "Checking memory allocation and CPU usage" },
+      { "id": "d", "text": "Verifying that all code comments are accurate" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Black Box testing focuses on whether the software behaves correctly — it looks at inputs and outputs rather than how the system is built underneath."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "What is the focus of White Box testing?",
+    "options": [
+      { "id": "a", "text": "Whether the system looks correct to an end user" },
+      { "id": "b", "text": "Code structure and logic — examining statements, branches, paths and conditions" },
+      { "id": "c", "text": "Testing network connectivity" },
+      { "id": "d", "text": "Checking that the user interface matches the design" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "White Box testing focuses on the internal code structure — examining statements, branches, paths and conditions to ensure the logic is correct."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "What level of testing is Black Box?",
+    "options": [
+      { "id": "a", "text": "Low-level" },
+      { "id": "b", "text": "Mid-level" },
+      { "id": "c", "text": "High-level" },
+      { "id": "d", "text": "It has no defined level" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Black Box testing is high-level testing — it tests the system from the outside without any knowledge of the internal workings."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "What level of testing is White Box?",
+    "options": [
+      { "id": "a", "text": "High-level" },
+      { "id": "b", "text": "Mid-level" },
+      { "id": "c", "text": "Low-level" },
+      { "id": "d", "text": "It has no defined level" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "White Box testing is low-level testing — it digs into the internal code structure, examining statements, branches, paths and conditions."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "What other names is White Box testing known by?",
+    "options": [
+      { "id": "a", "text": "Open Box, Visible Box, Clear Box" },
+      { "id": "b", "text": "Glass Box, Transparent Box, Clear Box" },
+      { "id": "c", "text": "Internal Box, Logic Box, Code Box" },
+      { "id": "d", "text": "Developer Box, Expert Box, System Box" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "White Box testing is also called glass box, transparent box or clear box testing — all referring to the fact that the tester can 'see inside' the system."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Should a thorough test strategy use Black Box, White Box, or both?",
+    "options": [
+      { "id": "a", "text": "Black Box only — end user perspective is all that matters" },
+      { "id": "b", "text": "White Box only — code correctness is all that matters" },
+      { "id": "c", "text": "Both — Black Box checks user behaviour, White Box checks code correctness" },
+      { "id": "d", "text": "Neither — automated tools handle all testing" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "A thorough test strategy uses both. Black Box checks that the system does what the user expects. White Box checks that the code underneath is correct and covers all logical paths."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "A tester is checking whether a login form accepts correct credentials and rejects incorrect ones — with no knowledge of the underlying code. Which type of testing is this?",
+    "options": [
+      { "id": "a", "text": "White Box testing" },
+      { "id": "b", "text": "Black Box testing" },
+      { "id": "c", "text": "Unit testing" },
+      { "id": "d", "text": "Regression testing" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "This is Black Box testing — the tester is checking inputs and outputs (credentials accepted/rejected) with no knowledge of how the login code works internally."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "A developer is checking every branch and condition in their authentication code to make sure all logical paths are covered. Which type of testing is this?",
+    "options": [
+      { "id": "a", "text": "Black Box testing" },
+      { "id": "b", "text": "White Box testing" },
+      { "id": "c", "text": "Acceptance testing" },
+      { "id": "d", "text": "System testing" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "This is White Box testing — the developer is examining the internal code structure, checking branches and conditions, which requires full knowledge of the code."
+  },
+  {
+    "id": 14,
+    "type": "matching",
+    "text": "Match each characteristic to the correct testing type.",
+    "columnA": [
+      { "id": "1", "text": "No knowledge of internals" },
+      { "id": "2", "text": "Full knowledge of internals" },
+      { "id": "3", "text": "Carried out by end users or testers" },
+      { "id": "4", "text": "Carried out by developers or experts" }
+    ],
+    "columnB": [
+      { "id": "a", "text": "White Box testing" },
+      { "id": "b", "text": "Black Box testing" }
+    ],
+    "correctMatches": {
+      "1": "b",
+      "2": "a",
+      "3": "b",
+      "4": "a"
+    },
+    "explanation": "Black Box = no internal knowledge, done by end users/testers. White Box = full internal knowledge, done by developers/experts."
+  }
+]

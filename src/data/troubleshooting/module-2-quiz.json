@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "What are the two main troubleshooting approaches?",
+    "options": [
+      { "id": "a", "text": "Top-Down and Bottom-Up" },
+      { "id": "b", "text": "Linear and Half-Split" },
+      { "id": "c", "text": "Sequential and Random" },
+      { "id": "d", "text": "Fast and Slow" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The two main approaches are Linear (step by step from one end to the other) and Half-Split (test the midpoint first, then narrow down)."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "How does the Linear troubleshooting approach work?",
+    "options": [
+      { "id": "a", "text": "Test the midpoint of the system first, then split the remaining half" },
+      { "id": "b", "text": "Work through the system from one end to the other, checking each component in sequence" },
+      { "id": "c", "text": "Replace all components simultaneously to find the fault quickly" },
+      { "id": "d", "text": "Start at the most likely fault point and work outwards" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Linear approach works through the system from one end to the other, checking each component or stage in sequence until the fault is found."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "How does the Half-Split troubleshooting approach work?",
+    "options": [
+      { "id": "a", "text": "Check every component one by one from start to finish" },
+      { "id": "b", "text": "Split the system in half, test the midpoint, then split the remaining half again to narrow down the fault" },
+      { "id": "c", "text": "Replace the most expensive component first" },
+      { "id": "d", "text": "Test the last component changed and work backwards" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Half-Split splits the system in half and tests the midpoint first. Based on the result, the remaining half is split again — eliminating half the possible causes with each test."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "What is the key advantage of the Half-Split approach over the Linear approach?",
+    "options": [
+      { "id": "a", "text": "It is simpler and easier to follow" },
+      { "id": "b", "text": "It eliminates half the possible causes with each test, saving significant time on large systems" },
+      { "id": "c", "text": "It doesn't require any documentation" },
+      { "id": "d", "text": "It always finds the fault in exactly two tests" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Half-Split is much faster for larger systems because each test eliminates half the remaining possible fault points, rapidly narrowing down the search area."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "When is the Linear approach the better choice?",
+    "options": [
+      { "id": "a", "text": "When the system is large and complex with many fault points" },
+      { "id": "b", "text": "When the system is short and simple, or every component needs to be checked anyway" },
+      { "id": "c", "text": "When you need to find the fault as fast as possible" },
+      { "id": "d", "text": "When there are more than 10 possible fault points" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Linear is best when the system is short and simple, or when you have no idea where the fault is and the system has few stages — making checking every component practical."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "When is the Half-Split approach the better choice?",
+    "options": [
+      { "id": "a", "text": "When the system has only a few components" },
+      { "id": "b", "text": "When every component must be inspected regardless" },
+      { "id": "c", "text": "When the system is large or complex with many possible fault points" },
+      { "id": "d", "text": "When you already know which component has failed" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Half-Split is most effective on large or complex systems with many possible fault points, where checking every component one by one would take too long."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "A technician is troubleshooting a 'no power' fault. Using Half-Split, what would they test first?",
+    "options": [
+      { "id": "a", "text": "Every component from the plug socket inward one by one" },
+      { "id": "b", "text": "Whether the issue is the power supply or the cable, splitting the possible causes in half" },
+      { "id": "c", "text": "The last component that was changed on the system" },
+      { "id": "d", "text": "The most expensive component first" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "For a 'no power' fault, Half-Split would first check whether the issue is the power supply or the cable — splitting the possible causes in half rather than checking every component one by one."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "What is a potential weakness of the Linear approach?",
+    "options": [
+      { "id": "a", "text": "It is too complicated for simple faults" },
+      { "id": "b", "text": "It can be slow if the fault is near the end of a long system" },
+      { "id": "c", "text": "It skips components that might be faulty" },
+      { "id": "d", "text": "It requires specialist tools at every stage" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Linear is straightforward but can be slow if the problem happens to be near the end of the chain — you have to check every component before reaching it."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Does the need for documentation change depending on which approach you use?",
+    "options": [
+      { "id": "a", "text": "Yes — Linear requires documentation but Half-Split does not" },
+      { "id": "b", "text": "Yes — Half-Split requires documentation but Linear does not" },
+      { "id": "c", "text": "No — good documentation is important regardless of which approach is used" },
+      { "id": "d", "text": "No — documentation is only needed when the fault cannot be found" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Good documentation supports both approaches. Without it, even an experienced technician has no real starting point on an unfamiliar system."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "What factor should determine which approach you use?",
+    "options": [
+      { "id": "a", "text": "The technician's personal preference" },
+      { "id": "b", "text": "The size and complexity of the system" },
+      { "id": "c", "text": "The time of day the fault occurred" },
+      { "id": "d", "text": "The age of the equipment being tested" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The right approach depends on the size and complexity of the system. Simple systems suit Linear; large complex systems suit Half-Split."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "In a Half-Split test, a technician tests the midpoint of a system and finds everything is working correctly up to that point. What should they do next?",
+    "options": [
+      { "id": "a", "text": "Start again from the beginning using the Linear approach" },
+      { "id": "b", "text": "Split the remaining half of the system and test its midpoint" },
+      { "id": "c", "text": "Replace all components in the second half" },
+      { "id": "d", "text": "Document the fault as unsolvable" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "If the midpoint test passes, the fault must be in the second half. You then split that half and test its midpoint — continuing to narrow down until the fault is found."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Which statement best describes why Half-Split is faster than Linear on large systems?",
+    "options": [
+      { "id": "a", "text": "It skips components that are unlikely to fail" },
+      { "id": "b", "text": "Each test eliminates half the remaining possibilities, reducing the search area rapidly" },
+      { "id": "c", "text": "It only tests the most recently changed components" },
+      { "id": "d", "text": "It uses automated tools to test multiple components at once" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Half-Split is faster because each test eliminates half the remaining possible fault points. On a large system this dramatically reduces the number of tests needed."
+  }
+]

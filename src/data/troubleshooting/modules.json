@@ -20,7 +20,7 @@
     "color": "from-orange-500 to-red-600",
     "topics": ["Linear Approach", "Half-Split Approach", "Choosing an Approach"],
     "hasSummary": false,
-    "hasQuiz": false,
+    "hasQuiz": true,
     "checkpoints": []
   },
   {
@@ -32,7 +32,7 @@
     "color": "from-orange-500 to-red-600",
     "topics": ["Replacements", "Backups", "Systematic Approach"],
     "hasSummary": false,
-    "hasQuiz": false,
+    "hasQuiz": true,
     "checkpoints": []
   },
   {
