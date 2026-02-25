@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "In what year was the Equality Act passed?",
+    "options": [
+      { "id": "a", "text": "2005" },
+      { "id": "b", "text": "2008" },
+      { "id": "c", "text": "2010" },
+      { "id": "d", "text": "2012" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Equality Act was passed in 2010, consolidating and replacing a wide range of previous anti-discrimination legislation into a single Act."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What did the Equality Act 2010 do to previous anti-discrimination laws?",
+    "options": [
+      { "id": "a", "text": "It added to them without changing anything" },
+      { "id": "b", "text": "It consolidated and replaced a range of previous legislation — such as the Race Relations Act and Sex Discrimination Act — into one single Act" },
+      { "id": "c", "text": "It only applied to public sector organisations" },
+      { "id": "d", "text": "It transferred discrimination law to the EU" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Equality Act 2010 consolidated multiple previous anti-discrimination laws — including the Race Relations Act, Sex Discrimination Act and Disability Discrimination Act — into a single, simpler piece of legislation."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "How many protected characteristics does the Equality Act cover?",
+    "options": [
+      { "id": "a", "text": "5" },
+      { "id": "b", "text": "7" },
+      { "id": "c", "text": "9" },
+      { "id": "d", "text": "11" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Equality Act covers 9 protected characteristics: age, disability, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, sex, and sexual orientation."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Which of the following is NOT one of the 9 protected characteristics under the Equality Act?",
+    "options": [
+      { "id": "a", "text": "Age" },
+      { "id": "b", "text": "Disability" },
+      { "id": "c", "text": "Wealth" },
+      { "id": "d", "text": "Race" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Wealth is not a protected characteristic. The 9 protected characteristics are: age, disability, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, sex, and sexual orientation."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "What is direct discrimination under the Equality Act?",
+    "options": [
+      { "id": "a", "text": "Treating someone less favourably because of a protected characteristic" },
+      { "id": "b", "text": "A policy that applies to everyone but disadvantages people with a protected characteristic" },
+      { "id": "c", "text": "Failing to make reasonable adjustments for a disabled person" },
+      { "id": "d", "text": "Making offensive comments about someone's religion" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Direct discrimination is treating someone less favourably than others because of a protected characteristic — for example refusing to hire someone because of their age."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "What is indirect discrimination under the Equality Act?",
+    "options": [
+      { "id": "a", "text": "Treating someone worse because of who they are" },
+      { "id": "b", "text": "A policy or practice that applies to everyone but puts people with a protected characteristic at a disadvantage" },
+      { "id": "c", "text": "Refusing to make adjustments for a disabled employee" },
+      { "id": "d", "text": "Verbal abuse directed at a colleague" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Indirect discrimination occurs when a policy or practice applies to everyone but puts people with a protected characteristic at a particular disadvantage — for example requiring all staff to work Sundays may indirectly discriminate against some religious groups."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "What is the duty to make reasonable adjustments under the Equality Act?",
+    "options": [
+      { "id": "a", "text": "Employers must rebuild their workplace to accommodate any disability" },
+      { "id": "b", "text": "Employers must make changes to remove disadvantages faced by disabled people — such as providing specialist equipment or adjusting working arrangements" },
+      { "id": "c", "text": "All staff must complete diversity training annually" },
+      { "id": "d", "text": "Employers must employ a minimum percentage of disabled workers" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The duty to make reasonable adjustments requires employers to take steps to remove disadvantages faced by disabled people — such as providing adapted equipment, adjusting hours, or modifying duties."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "How does the Equality Act apply to IT and software development?",
+    "options": [
+      { "id": "a", "text": "It does not apply to the technology sector" },
+      { "id": "b", "text": "IT systems and software must be accessible — discriminatory or inaccessible design could breach the Act" },
+      { "id": "c", "text": "Only the recruitment process in IT companies is covered" },
+      { "id": "d", "text": "Only hardware must comply, not software" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "IT systems and websites must be accessible to people with disabilities. Designing inaccessible systems or software that excludes people due to a protected characteristic could constitute a breach of the Equality Act."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "What is harassment under the Equality Act?",
+    "options": [
+      { "id": "a", "text": "Any form of criticism in the workplace" },
+      { "id": "b", "text": "Unwanted conduct related to a protected characteristic that has the purpose or effect of violating dignity or creating an intimidating, hostile or offensive environment" },
+      { "id": "c", "text": "Being passed over for promotion" },
+      { "id": "d", "text": "Being asked to work overtime" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Harassment is unwanted conduct related to a protected characteristic that violates a person's dignity or creates an intimidating, hostile, degrading, humiliating or offensive environment."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "What is victimisation under the Equality Act?",
+    "options": [
+      { "id": "a", "text": "Being bullied by a manager" },
+      { "id": "b", "text": "Being treated badly because you made or supported a complaint about discrimination" },
+      { "id": "c", "text": "Being overlooked for a pay rise" },
+      { "id": "d", "text": "Receiving a disciplinary warning" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Victimisation means being treated badly because you made, or helped someone else make, a complaint about discrimination — protecting people from retaliation for raising equality concerns."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Which body enforces the Equality Act in Great Britain?",
+    "options": [
+      { "id": "a", "text": "The Information Commissioner's Office" },
+      { "id": "b", "text": "The Equality and Human Rights Commission (EHRC)" },
+      { "id": "c", "text": "The Health and Safety Executive" },
+      { "id": "d", "text": "The Department for Work and Pensions" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Equality and Human Rights Commission (EHRC) enforces the Equality Act in Great Britain — it can conduct investigations and take legal action against organisations that breach equality law."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "What is the public sector equality duty under the Equality Act?",
+    "options": [
+      { "id": "a", "text": "Public sector organisations must employ equal numbers of men and women" },
+      { "id": "b", "text": "Public bodies must have due regard to eliminating discrimination, advancing equality and fostering good relations between different groups" },
+      { "id": "c", "text": "All public sector websites must be free to use" },
+      { "id": "d", "text": "Public sector IT systems must be open source" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The public sector equality duty requires public bodies to have due regard to: eliminating unlawful discrimination, advancing equality of opportunity, and fostering good relations between people with different protected characteristics."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "A company's new HR software only works with a mouse and has no keyboard navigation. Why might this breach the Equality Act?",
+    "options": [
+      { "id": "a", "text": "It doesn't — software is exempt from equality law" },
+      { "id": "b", "text": "It may indirectly discriminate against employees with physical disabilities who cannot use a mouse" },
+      { "id": "c", "text": "Only if the company employs more than 250 people" },
+      { "id": "d", "text": "Only if the software was made by an overseas company" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Software that is not accessible to people with physical disabilities may indirectly discriminate against them — the employer may also be failing in their duty to make reasonable adjustments."
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Does the Equality Act cover job applicants as well as existing employees?",
+    "options": [
+      { "id": "a", "text": "No — it only applies once someone is employed" },
+      { "id": "b", "text": "Yes — discrimination in recruitment, selection and the terms offered is unlawful" },
+      { "id": "c", "text": "Only for public sector roles" },
+      { "id": "d", "text": "Only if the applicant has been shortlisted" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Equality Act covers the entire employment relationship including recruitment — discriminating against an applicant because of a protected characteristic during the hiring process is unlawful."
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "What is positive action under the Equality Act?",
+    "options": [
+      { "id": "a", "text": "Mandatory quotas requiring a set percentage of women or minorities to be hired" },
+      { "id": "b", "text": "Voluntary steps an employer can take to help people with protected characteristics who are disadvantaged or underrepresented" },
+      { "id": "c", "text": "A legal requirement to promote people from minority groups first" },
+      { "id": "d", "text": "Providing bonuses to employees from protected groups" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Positive action allows employers to voluntarily take steps to help people with protected characteristics who are at a disadvantage or underrepresented — such as targeted training programmes. It is different from positive discrimination which is generally unlawful."
+  }
+]

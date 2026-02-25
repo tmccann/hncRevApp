@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "What does WEEE stand for?",
+    "options": [
+      { "id": "a", "text": "Wireless and Electronic Equipment Emissions" },
+      { "id": "b", "text": "Waste Electrical and Electronic Equipment" },
+      { "id": "c", "text": "Work Environment and Energy Efficiency" },
+      { "id": "d", "text": "Waste Energy and Environmental Exemptions" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "WEEE stands for Waste Electrical and Electronic Equipment — the regulations governing how old electrical and electronic devices must be disposed of."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What year were the WEEE Regulations introduced in the UK?",
+    "options": [
+      { "id": "a", "text": "2000" },
+      { "id": "b", "text": "2002" },
+      { "id": "c", "text": "2004" },
+      { "id": "d", "text": "2006" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The WEEE (Producer Responsibility) Regulations were introduced in 2004, implementing the EU WEEE Directive into UK law."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "What is the primary purpose of the WEEE Regulations?",
+    "options": [
+      { "id": "a", "text": "To regulate the energy consumption of new electronic devices" },
+      { "id": "b", "text": "To reduce electrical and electronic waste going to landfill and encourage recycling" },
+      { "id": "c", "text": "To control the importation of electronic goods" },
+      { "id": "d", "text": "To set standards for the manufacture of electronic products" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The WEEE Regulations aim to reduce the amount of electrical and electronic waste going to landfill by making producers responsible for collection, treatment and recycling of their products."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Who has primary responsibility under the WEEE Regulations?",
+    "options": [
+      { "id": "a", "text": "The end consumer who buys the product" },
+      { "id": "b", "text": "Producers and manufacturers of electrical and electronic equipment" },
+      { "id": "c", "text": "Local councils" },
+      { "id": "d", "text": "Retailers only" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Under WEEE, producers and manufacturers have primary responsibility — they must finance the collection, treatment, recovery and recycling of their products at end of life."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "What symbol on a product indicates it must not be thrown in regular household waste?",
+    "options": [
+      { "id": "a", "text": "A recycling triangle with a number inside" },
+      { "id": "b", "text": "A crossed-out wheelie bin" },
+      { "id": "c", "text": "A green leaf symbol" },
+      { "id": "d", "text": "A yellow hazard triangle" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The crossed-out wheelie bin symbol indicates the product must not go in regular household waste and should be taken to an appropriate recycling or collection point."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Why is it harmful to dispose of electronic equipment in regular landfill?",
+    "options": [
+      { "id": "a", "text": "It takes up too much space" },
+      { "id": "b", "text": "Electronic equipment contains hazardous materials such as lead, mercury and cadmium that can contaminate soil and water" },
+      { "id": "c", "text": "It causes electronic equipment to become obsolete faster" },
+      { "id": "d", "text": "It reduces the resale value of old equipment" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Electronic equipment contains hazardous materials including lead, mercury and cadmium. In landfill these can leach into soil and water, causing environmental and health damage."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Which of the following are examples of equipment covered by WEEE?",
+    "options": [
+      { "id": "a", "text": "Paper, cardboard and plastic packaging" },
+      { "id": "b", "text": "Computers, mobile phones, televisions, fridges and washing machines" },
+      { "id": "c", "text": "Furniture and office supplies" },
+      { "id": "d", "text": "Vehicles and machinery" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "WEEE covers a wide range of electrical and electronic equipment including computers, mobile phones, televisions, fridges and washing machines."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "What obligation do retailers have under WEEE?",
+    "options": [
+      { "id": "a", "text": "No obligation — only producers are responsible" },
+      { "id": "b", "text": "They must offer customers a way to return old equipment when buying a new equivalent item" },
+      { "id": "c", "text": "They must repair all returned equipment" },
+      { "id": "d", "text": "They must manufacture their own recycling facilities" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Retailers must offer customers a take-back scheme — allowing them to return old equipment when purchasing a new equivalent item, ensuring proper disposal."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Where can members of the public take WEEE for proper disposal?",
+    "options": [
+      { "id": "a", "text": "Regular household wheelie bins" },
+      { "id": "b", "text": "Designated collection points such as council recycling centres or retailer take-back schemes" },
+      { "id": "c", "text": "Post offices" },
+      { "id": "d", "text": "Any public bin" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "WEEE should be taken to designated collection points such as council Household Waste Recycling Centres or via retailer take-back schemes."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "What does 'producer responsibility' mean under WEEE?",
+    "options": [
+      { "id": "a", "text": "Producers must guarantee their products for life" },
+      { "id": "b", "text": "Producers must fund the collection, treatment and recycling of their products when they become waste" },
+      { "id": "c", "text": "Producers must only use recyclable materials in new products" },
+      { "id": "d", "text": "Producers must report energy usage of all products" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Producer responsibility means manufacturers must fund the collection, treatment, recovery and recycling of their products at end of life — rather than the cost falling on consumers or the public."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Which hazardous materials can be found in electronic equipment?",
+    "options": [
+      { "id": "a", "text": "Nitrogen and oxygen" },
+      { "id": "b", "text": "Lead, mercury and cadmium" },
+      { "id": "c", "text": "Sodium and potassium" },
+      { "id": "d", "text": "Carbon dioxide and methane" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Electronic equipment can contain lead (in solder and screens), mercury (in backlights) and cadmium (in batteries) — all harmful if they reach the environment."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "The WEEE Regulations implemented which EU directive into UK law?",
+    "options": [
+      { "id": "a", "text": "The General Data Protection Regulation (GDPR)" },
+      { "id": "b", "text": "The EU WEEE Directive" },
+      { "id": "c", "text": "The EU Digital Single Market Directive" },
+      { "id": "d", "text": "The EU Environmental Impact Directive" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The 2004 UK WEEE Regulations implemented the EU WEEE Directive into UK law, setting targets for collection, recovery and recycling of electronic waste."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "What environmental problem do the WEEE Regulations specifically aim to tackle?",
+    "options": [
+      { "id": "a", "text": "Air pollution from manufacturing plants" },
+      { "id": "b", "text": "The growing problem of electrical and electronic waste in landfill" },
+      { "id": "c", "text": "Carbon emissions from delivery vehicles" },
+      { "id": "d", "text": "Energy consumption of data centres" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The WEEE Regulations specifically tackle the growing problem of electrical and electronic waste in landfill — one of the fastest growing waste streams containing hazardous materials."
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "What is the consequence for a business that fails to comply with WEEE Regulations?",
+    "options": [
+      { "id": "a", "text": "A formal warning on the first offence only" },
+      { "id": "b", "text": "Financial penalties and potential legal action" },
+      { "id": "c", "text": "They must publish a public apology" },
+      { "id": "d", "text": "Their products are removed from sale for 30 days" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Businesses that fail to comply with WEEE Regulations can face financial penalties and potential legal action from the Environment Agency."
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Which government body enforces the WEEE Regulations in England?",
+    "options": [
+      { "id": "a", "text": "The Information Commissioner's Office (ICO)" },
+      { "id": "b", "text": "The Environment Agency" },
+      { "id": "c", "text": "The Health and Safety Executive (HSE)" },
+      { "id": "d", "text": "Ofcom" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Environment Agency is responsible for enforcing the WEEE Regulations in England, ensuring producers and retailers meet their legal obligations."
+  }
+]

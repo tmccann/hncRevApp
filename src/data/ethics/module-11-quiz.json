@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "In what year was the Anti-Terrorism, Crime and Security Act passed?",
+    "options": [
+      { "id": "a", "text": "1998" },
+      { "id": "b", "text": "2000" },
+      { "id": "c", "text": "2001" },
+      { "id": "d", "text": "2003" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Anti-Terrorism, Crime and Security Act was passed in 2001, rushed through Parliament in the aftermath of the 9/11 attacks in the United States."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What event directly prompted the passing of the Anti-Terrorism, Crime and Security Act 2001?",
+    "options": [
+      { "id": "a", "text": "The 7/7 London bombings" },
+      { "id": "b", "text": "The 9/11 terrorist attacks in the United States" },
+      { "id": "c", "text": "The IRA ceasefire breakdown" },
+      { "id": "d", "text": "The 2001 UK foot and mouth crisis" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act was rushed through Parliament in late 2001 in direct response to the September 11 terrorist attacks in the United States."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "What did the Anti-Terrorism, Crime and Security Act 2001 require of communications providers?",
+    "options": [
+      { "id": "a", "text": "To provide free internet access to government agencies" },
+      { "id": "b", "text": "To retain communications data for extended periods so it could be accessed by law enforcement" },
+      { "id": "c", "text": "To block access to terrorist websites automatically" },
+      { "id": "d", "text": "To share all customer data with GCHQ" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A key provision required communications providers to retain communications data — such as records of calls, emails and internet use — for extended periods so it could be accessed by law enforcement and security services."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "What is communications data in the context of the Anti-Terrorism, Crime and Security Act?",
+    "options": [
+      { "id": "a", "text": "The actual content of phone calls and emails" },
+      { "id": "b", "text": "Data about communications — such as who contacted whom, when and for how long — rather than the content itself" },
+      { "id": "c", "text": "Encrypted government communications" },
+      { "id": "d", "text": "Social media posts and public messages" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Communications data refers to metadata about communications — who contacted whom, when, for how long and from where — rather than the actual content of messages or calls."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Why was the Anti-Terrorism, Crime and Security Act 2001 controversial?",
+    "options": [
+      { "id": "a", "text": "It increased taxes on electronic goods" },
+      { "id": "b", "text": "It was seen as giving security services sweeping powers that threatened civil liberties and privacy" },
+      { "id": "c", "text": "It required all internet traffic to be encrypted" },
+      { "id": "d", "text": "It banned the use of encryption by private citizens" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act was highly controversial — critics argued it gave sweeping powers to security services that threatened civil liberties, privacy rights and were disproportionate to the terrorist threat."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Which part of the Anti-Terrorism, Crime and Security Act 2001 was later ruled incompatible with human rights law?",
+    "options": [
+      { "id": "a", "text": "The communications data retention provisions" },
+      { "id": "b", "text": "Part 4 — which allowed indefinite detention without trial of foreign terror suspects" },
+      { "id": "c", "text": "The provisions on financial asset freezing" },
+      { "id": "d", "text": "The section on nuclear security" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Part 4 of the Act, which allowed indefinite detention without trial of foreign nationals suspected of terrorism, was ruled incompatible with the Human Rights Act by the House of Lords in 2004."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "What is the relevance of the Anti-Terrorism, Crime and Security Act 2001 to IT professionals?",
+    "options": [
+      { "id": "a", "text": "IT professionals must report all software bugs to GCHQ" },
+      { "id": "b", "text": "ISPs and telecoms companies are required to retain data, affecting how organisations store and manage communications records" },
+      { "id": "c", "text": "All software must include a government backdoor" },
+      { "id": "d", "text": "IT professionals working in security are exempt from the Act" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act's data retention requirements directly affect ISPs and telecoms companies — IT professionals working in these sectors must understand and comply with obligations to retain communications data."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "What tension does the Anti-Terrorism, Crime and Security Act 2001 create?",
+    "options": [
+      { "id": "a", "text": "Between national security and the free market" },
+      { "id": "b", "text": "Between national security and individual privacy rights" },
+      { "id": "c", "text": "Between government and private business interests" },
+      { "id": "d", "text": "Between UK law and EU regulations" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act highlights the fundamental tension between national security — requiring access to communications data — and individual privacy rights protected by the Human Rights Act and GDPR."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Which later Act strengthened and replaced many of the data retention provisions originally in the 2001 Act?",
+    "options": [
+      { "id": "a", "text": "The Digital Economy Act 2010" },
+      { "id": "b", "text": "The Investigatory Powers Act 2016" },
+      { "id": "c", "text": "The WEEE Regulations 2004" },
+      { "id": "d", "text": "The Equality Act 2010" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Investigatory Powers Act 2016 (nicknamed the Snoopers' Charter) later strengthened and updated the surveillance and data retention framework that the 2001 Act began."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "What does the Anti-Terrorism, Crime and Security Act 2001 say about weapons of mass destruction?",
+    "options": [
+      { "id": "a", "text": "It has no provisions on weapons" },
+      { "id": "b", "text": "It contains provisions to prevent the development and acquisition of biological, chemical, nuclear and radiological weapons" },
+      { "id": "c", "text": "It only covers conventional explosives" },
+      { "id": "d", "text": "It transfers weapons regulation to the EU" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act contains significant provisions to prevent the development, production and acquisition of biological, chemical, nuclear and radiological weapons by terrorist groups."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "How does the Anti-Terrorism, Crime and Security Act 2001 relate to the Human Rights Act 1998?",
+    "options": [
+      { "id": "a", "text": "They are completely unrelated pieces of legislation" },
+      { "id": "b", "text": "Some provisions of the 2001 Act were found to conflict with rights protected by the Human Rights Act" },
+      { "id": "c", "text": "The 2001 Act replaced the Human Rights Act" },
+      { "id": "d", "text": "The Human Rights Act does not apply to terrorism cases" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Some provisions of the Anti-Terrorism Act were found to conflict with rights protected by the Human Rights Act — most notably the indefinite detention powers in Part 4."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "What are 'freezing orders' under the Anti-Terrorism, Crime and Security Act?",
+    "options": [
+      { "id": "a", "text": "Orders to shut down suspected terrorist websites" },
+      { "id": "b", "text": "Powers to freeze the financial assets of terrorist suspects or organisations" },
+      { "id": "c", "text": "Orders to halt communications between suspects" },
+      { "id": "d", "text": "Court orders to suspend internet access" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Freezing orders allow the government to freeze the financial assets of terrorist suspects or organisations, cutting off funding for terrorist activity."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Why might an IT company need to be aware of the Anti-Terrorism, Crime and Security Act?",
+    "options": [
+      { "id": "a", "text": "All IT companies must register with the Home Office" },
+      { "id": "b", "text": "If they provide communications services they may have legal obligations to retain data and cooperate with law enforcement" },
+      { "id": "c", "text": "IT companies must scan all emails for terrorist content" },
+      { "id": "d", "text": "Software developers must get security clearance" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "IT companies providing communications services — such as email, messaging or internet access — may have legal obligations under the Act to retain data and cooperate with law enforcement investigations."
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "What is the broader significance of the Anti-Terrorism, Crime and Security Act 2001 for computing legislation?",
+    "options": [
+      { "id": "a", "text": "It introduced the first UK cybercrime laws" },
+      { "id": "b", "text": "It established the principle that communications data can be lawfully retained and accessed in the interests of national security" },
+      { "id": "c", "text": "It created the National Cyber Security Centre" },
+      { "id": "d", "text": "It banned end-to-end encryption" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act established the significant legal principle that communications data can be lawfully retained and accessed by authorities in the interests of national security — a principle that has shaped subsequent legislation."
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Which government department is primarily responsible for the Anti-Terrorism, Crime and Security Act?",
+    "options": [
+      { "id": "a", "text": "The Department for Digital, Culture, Media and Sport" },
+      { "id": "b", "text": "The Home Office" },
+      { "id": "c", "text": "The Ministry of Defence" },
+      { "id": "d", "text": "The Department for Business, Energy and Industrial Strategy" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Home Office is primarily responsible for counter-terrorism legislation in the UK, including the Anti-Terrorism, Crime and Security Act 2001."
+  }
+]

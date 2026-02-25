@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "In what year was the Health and Safety at Work Act passed?",
+    "options": [
+      { "id": "a", "text": "1970" },
+      { "id": "b", "text": "1974" },
+      { "id": "c", "text": "1980" },
+      { "id": "d", "text": "1987" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Health and Safety at Work Act was passed in 1974 and remains the primary piece of health and safety legislation in the UK."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What is the primary duty placed on employers under the Health and Safety at Work Act 1974?",
+    "options": [
+      { "id": "a", "text": "To provide employees with free health insurance" },
+      { "id": "b", "text": "To ensure the health, safety and welfare of all employees so far as is reasonably practicable" },
+      { "id": "c", "text": "To provide employees with a minimum wage" },
+      { "id": "d", "text": "To install CCTV in all workplaces" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Employers must ensure the health, safety and welfare of all their employees so far as is reasonably practicable — this is the core duty of the Act."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "What does 'so far as is reasonably practicable' mean in the context of the Act?",
+    "options": [
+      { "id": "a", "text": "Employers only need to act if an accident has already occurred" },
+      { "id": "b", "text": "Employers must balance the cost and effort of safety measures against the risk involved" },
+      { "id": "c", "text": "All possible safety measures must be implemented regardless of cost" },
+      { "id": "d", "text": "Employers are only responsible for safety in offices, not factories" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "'So far as is reasonably practicable' means employers must weigh the cost, time and effort of safety measures against the level of risk — they don't need to eliminate all risk, just reduce it to a reasonable level."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Which organisation enforces the Health and Safety at Work Act?",
+    "options": [
+      { "id": "a", "text": "The Environment Agency" },
+      { "id": "b", "text": "The Health and Safety Executive (HSE)" },
+      { "id": "c", "text": "The Information Commissioner's Office (ICO)" },
+      { "id": "d", "text": "Ofcom" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Health and Safety Executive (HSE) is the national regulator responsible for enforcing health and safety law in most workplaces in Great Britain."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "What duty do employees have under the Health and Safety at Work Act?",
+    "options": [
+      { "id": "a", "text": "No duty — only employers have responsibilities" },
+      { "id": "b", "text": "To take reasonable care of their own health and safety and that of others who may be affected by their actions" },
+      { "id": "c", "text": "To report all faults directly to the HSE" },
+      { "id": "d", "text": "To carry out their own risk assessments" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Employees also have a duty under the Act — they must take reasonable care of their own health and safety and that of others who may be affected by their work."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "How does the Health and Safety at Work Act apply to computing professionals?",
+    "options": [
+      { "id": "a", "text": "It does not apply to office-based workers" },
+      { "id": "b", "text": "Employers must ensure safe workstations, adequate lighting, correct seating and regular breaks from screens" },
+      { "id": "c", "text": "IT staff are exempt as their work is not physically dangerous" },
+      { "id": "d", "text": "It only applies to hardware engineers working with electrical equipment" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act applies to all workplaces including offices. For computing professionals this includes safe workstations, proper lighting, ergonomic seating and regular screen breaks to prevent RSI and eye strain."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "What is RSI and how does it relate to the Health and Safety at Work Act?",
+    "options": [
+      { "id": "a", "text": "Remote System Integration — a networking concept" },
+      { "id": "b", "text": "Repetitive Strain Injury — employers must take steps to prevent it in workers who use computers for long periods" },
+      { "id": "c", "text": "Risk and Safety Inspection — a legal requirement under the Act" },
+      { "id": "d", "text": "Regulated Software Installation — part of IT security compliance" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RSI (Repetitive Strain Injury) is a condition caused by repetitive movements such as typing. Employers must take steps to prevent it, for example by providing ergonomic equipment and rest breaks."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "What must employers provide under the Health and Safety at Work Act?",
+    "options": [
+      { "id": "a", "text": "Free meals and transport" },
+      { "id": "b", "text": "Safe equipment, safe systems of work, information, training and supervision" },
+      { "id": "c", "text": "A minimum of 30 days holiday per year" },
+      { "id": "d", "text": "Private healthcare for all staff" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Employers must provide safe equipment, safe systems of work, necessary information, training and supervision to ensure employee health and safety."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Does the Health and Safety at Work Act cover visitors and members of the public as well as employees?",
+    "options": [
+      { "id": "a", "text": "No — it only covers full-time employees" },
+      { "id": "b", "text": "Yes — employers must ensure the safety of anyone who may be affected by their work activities" },
+      { "id": "c", "text": "Only if visitors are on site for more than one hour" },
+      { "id": "d", "text": "Only in manufacturing and construction, not offices" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act extends beyond employees — employers must ensure the safety of anyone who may be affected by their work activities, including visitors, contractors and members of the public."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "What can happen to an employer who breaches the Health and Safety at Work Act?",
+    "options": [
+      { "id": "a", "text": "They receive an informal warning only" },
+      { "id": "b", "text": "They can face improvement notices, prohibition notices, fines or prosecution" },
+      { "id": "c", "text": "They must retrain all staff" },
+      { "id": "d", "text": "Their business licence is automatically revoked" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Breaches can result in improvement notices, prohibition notices (stopping unsafe activities), unlimited fines and even prosecution leading to imprisonment for serious cases."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "What is a risk assessment in the context of health and safety?",
+    "options": [
+      { "id": "a", "text": "A financial review of business costs" },
+      { "id": "b", "text": "A systematic examination of a workplace to identify hazards and evaluate the risk they pose to workers" },
+      { "id": "c", "text": "A software tool used to monitor employee performance" },
+      { "id": "d", "text": "An annual report submitted to the HSE" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A risk assessment systematically examines the workplace to identify hazards and evaluate the risks they pose — employers use them to determine what safety measures are needed."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Which regulations, made under the Health and Safety at Work Act, specifically cover display screen equipment used by computer workers?",
+    "options": [
+      { "id": "a", "text": "The WEEE Regulations" },
+      { "id": "b", "text": "The Display Screen Equipment (DSE) Regulations" },
+      { "id": "c", "text": "The Data Protection Act" },
+      { "id": "d", "text": "The Working Time Regulations" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Display Screen Equipment (DSE) Regulations were made under the Health and Safety at Work Act and specifically require employers to assess workstations and ensure safe use of computer screens."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "A software developer complains of wrist pain after months of typing. What should their employer do under the Health and Safety at Work Act?",
+    "options": [
+      { "id": "a", "text": "Nothing — minor discomfort is not covered by the Act" },
+      { "id": "b", "text": "Carry out a workstation assessment and provide ergonomic equipment and rest breaks to prevent further injury" },
+      { "id": "c", "text": "Ask the employee to work from home instead" },
+      { "id": "d", "text": "Report the incident to the police" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The employer must take action — carrying out a workstation assessment and providing appropriate equipment and breaks. Ignoring the complaint could constitute a breach of the Act."
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "What is the significance of the Health and Safety at Work Act 1974 for the IT industry specifically?",
+    "options": [
+      { "id": "a", "text": "It requires all IT equipment to be CE marked" },
+      { "id": "b", "text": "It ensures IT workers are protected from work-related injuries such as eye strain, back problems and RSI caused by prolonged computer use" },
+      { "id": "c", "text": "It sets data security standards for IT companies" },
+      { "id": "d", "text": "It requires IT companies to maintain fire safety systems" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "For the IT industry the Act is significant because it protects workers from conditions caused by prolonged computer use — including eye strain, back and neck problems, and RSI from keyboard and mouse use."
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Under the Health and Safety at Work Act, can an employee refuse to carry out work they believe is unsafe?",
+    "options": [
+      { "id": "a", "text": "No — employees must follow all instructions from their employer" },
+      { "id": "b", "text": "Yes — employees have the right to stop work they reasonably believe poses serious and imminent danger" },
+      { "id": "c", "text": "Only if they have written permission from a union representative" },
+      { "id": "d", "text": "Only in construction and manufacturing, not in computing" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Employees have the right to stop work they reasonably believe poses serious and imminent danger — they cannot be penalised for doing so under health and safety law."
+  }
+]

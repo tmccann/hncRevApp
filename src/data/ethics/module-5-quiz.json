@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "What does RIPA stand for?",
+    "options": [
+      { "id": "a", "text": "Regulatory Internet Privacy Act" },
+      { "id": "b", "text": "Regulation of Investigatory Powers Act" },
+      { "id": "c", "text": "Rights of Individuals and Privacy Act" },
+      { "id": "d", "text": "Regulation of Information and Public Access" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RIPA stands for the Regulation of Investigatory Powers Act, passed in 2000."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "In what year was RIPA passed?",
+    "options": [
+      { "id": "a", "text": "1998" },
+      { "id": "b", "text": "2000" },
+      { "id": "c", "text": "2003" },
+      { "id": "d", "text": "2010" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RIPA was passed in 2000, updating the legal framework for interception to cover the growth of the internet and electronic communications."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "What is the primary purpose of RIPA 2000?",
+    "options": [
+      { "id": "a", "text": "To protect intellectual property rights online" },
+      { "id": "b", "text": "To regulate the powers of public bodies to carry out surveillance and interception of communications" },
+      { "id": "c", "text": "To control the disposal of electronic waste" },
+      { "id": "d", "text": "To enforce copyright law on digital content" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RIPA regulates the powers of public bodies — such as the police and intelligence services — to carry out surveillance, interception of communications and covert investigations."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Under RIPA, who can lawfully intercept communications?",
+    "options": [
+      { "id": "a", "text": "Any member of the public if they suspect criminal activity" },
+      { "id": "b", "text": "Only authorised public bodies such as police, intelligence services and certain government agencies" },
+      { "id": "c", "text": "Any employer wishing to monitor their staff" },
+      { "id": "d", "text": "Internet service providers without restriction" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Only authorised public bodies — such as police, intelligence services and certain government agencies — can lawfully intercept communications under RIPA."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "What must be demonstrated before interception under RIPA can be authorised?",
+    "options": [
+      { "id": "a", "text": "The person being investigated must have a criminal record" },
+      { "id": "b", "text": "There must be a lawful reason such as national security, prevention of crime or public safety" },
+      { "id": "c", "text": "The investigation must be completed within 30 days" },
+      { "id": "d", "text": "A court must approve every individual instance of monitoring" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Interception under RIPA must be justified by a lawful reason — such as national security, preventing or detecting serious crime, or protecting public safety."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "What is covert surveillance?",
+    "options": [
+      { "id": "a", "text": "Surveillance carried out with the full knowledge of the person being watched" },
+      { "id": "b", "text": "Surveillance carried out without the knowledge of the person being monitored" },
+      { "id": "c", "text": "CCTV footage reviewed after an incident" },
+      { "id": "d", "text": "Publicly posted content monitored by employers" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Covert surveillance means monitoring carried out without the knowledge of the person being watched. RIPA sets the legal framework for when and how this can be done."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Which type of organisations does RIPA primarily apply to?",
+    "options": [
+      { "id": "a", "text": "Private companies and individuals" },
+      { "id": "b", "text": "Public bodies including police, intelligence services and local authorities" },
+      { "id": "c", "text": "Internet service providers only" },
+      { "id": "d", "text": "Social media companies" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RIPA primarily applies to public bodies including the police, intelligence services, HMRC and local authorities — controlling how they use investigatory powers."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Why was RIPA 2000 considered controversial?",
+    "options": [
+      { "id": "a", "text": "It banned the use of encryption entirely" },
+      { "id": "b", "text": "It gave wide-ranging surveillance powers to public bodies including local councils, raising civil liberties concerns" },
+      { "id": "c", "text": "It allowed private companies to intercept all internet traffic" },
+      { "id": "d", "text": "It made it illegal to use a VPN" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RIPA was controversial because it granted wide-ranging surveillance powers to public bodies — including local councils — raising significant concerns about privacy and civil liberties."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Can RIPA powers be used by local councils?",
+    "options": [
+      { "id": "a", "text": "No — only national government agencies can use RIPA powers" },
+      { "id": "b", "text": "Yes — local authorities were given certain surveillance powers under RIPA" },
+      { "id": "c", "text": "Only in Scotland and Wales" },
+      { "id": "d", "text": "Only for cybercrime investigations" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RIPA gave certain surveillance powers to local authorities, which was controversial — councils used these powers for purposes such as checking school catchment area fraud."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "What happens if a public body carries out surveillance without proper RIPA authorisation?",
+    "options": [
+      { "id": "a", "text": "They must pay a small fine" },
+      { "id": "b", "text": "The surveillance is unlawful and evidence gathered may be inadmissible" },
+      { "id": "c", "text": "They must notify the person being surveilled" },
+      { "id": "d", "text": "Nothing — RIPA has no enforcement mechanism" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Surveillance without proper RIPA authorisation is unlawful. Evidence gathered may be inadmissible and those responsible could face legal consequences."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "What area of technology made RIPA particularly relevant when it was passed?",
+    "options": [
+      { "id": "a", "text": "The rise of social media platforms" },
+      { "id": "b", "text": "The growth of the internet and electronic communications" },
+      { "id": "c", "text": "The introduction of smartphones" },
+      { "id": "d", "text": "The development of cloud computing" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RIPA was passed in response to the rapid growth of the internet and electronic communications, updating the legal framework to cover emails and internet traffic."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Which legislation works alongside RIPA to protect individuals' privacy?",
+    "options": [
+      { "id": "a", "text": "The Digital Economy Act 2010" },
+      { "id": "b", "text": "The Data Protection Act" },
+      { "id": "c", "text": "The WEEE Regulations 2004" },
+      { "id": "d", "text": "The Computer Misuse Act 1990" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Data Protection Act works alongside RIPA — RIPA controls surveillance powers while the Data Protection Act governs how personal data is collected and used."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "What does RIPA require organisations to have before carrying out surveillance?",
+    "options": [
+      { "id": "a", "text": "A signed consent form from the subject" },
+      { "id": "b", "text": "Proper authorisation and a lawful reason" },
+      { "id": "c", "text": "Approval from the Prime Minister" },
+      { "id": "d", "text": "A minimum of two officers present" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RIPA requires proper authorisation and a lawful reason before surveillance can be carried out — preventing abuse of investigatory powers."
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Which of the following best describes what RIPA regulates?",
+    "options": [
+      { "id": "a", "text": "How electronic waste must be disposed of" },
+      { "id": "b", "text": "How public bodies can lawfully intercept communications and carry out surveillance" },
+      { "id": "c", "text": "How digital copyright is enforced online" },
+      { "id": "d", "text": "How personal data must be stored and processed" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RIPA regulates how public bodies can lawfully intercept communications and carry out covert surveillance — setting clear legal boundaries."
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "A local council wants to use surveillance to investigate suspected benefit fraud. Under RIPA, what must they do first?",
+    "options": [
+      { "id": "a", "text": "Inform the person being investigated" },
+      { "id": "b", "text": "Obtain proper authorisation and establish a lawful reason for the surveillance" },
+      { "id": "c", "text": "Contact the police and hand the investigation over" },
+      { "id": "d", "text": "Nothing — councils are exempt from RIPA" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Even local councils must obtain proper authorisation and have a lawful reason before carrying out surveillance under RIPA — they are not exempt from its requirements."
+  }
+]

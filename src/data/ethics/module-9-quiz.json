@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "In what year was the Consumer Protection Act passed?",
+    "options": [
+      { "id": "a", "text": "1974" },
+      { "id": "b", "text": "1982" },
+      { "id": "c", "text": "1987" },
+      { "id": "d", "text": "1990" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Consumer Protection Act was passed in 1987, implementing an EU directive on product liability into UK law."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What is the primary purpose of the Consumer Protection Act 1987?",
+    "options": [
+      { "id": "a", "text": "To regulate online shopping and digital downloads" },
+      { "id": "b", "text": "To protect consumers from unsafe products and allow them to claim compensation for damage caused by defective products" },
+      { "id": "c", "text": "To set minimum wage standards for retail workers" },
+      { "id": "d", "text": "To regulate advertising and misleading claims" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Consumer Protection Act protects consumers from unsafe products and gives them the right to claim compensation for damage caused by defective products — without needing to prove negligence."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "What is 'strict liability' under the Consumer Protection Act?",
+    "options": [
+      { "id": "a", "text": "The consumer must prove the producer was negligent" },
+      { "id": "b", "text": "The producer is liable for damage caused by a defective product regardless of whether they were negligent" },
+      { "id": "c", "text": "The retailer is always responsible, not the manufacturer" },
+      { "id": "d", "text": "Liability only applies if the product caused physical injury" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Strict liability means the producer is liable for damage caused by a defective product even if they took all reasonable care — the consumer does not need to prove negligence."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Who can be held liable under the Consumer Protection Act for a defective product?",
+    "options": [
+      { "id": "a", "text": "Only the retailer who sold the product" },
+      { "id": "b", "text": "The producer, importer into the EU, or own-brander of the product" },
+      { "id": "c", "text": "Only the consumer who purchased the product" },
+      { "id": "d", "text": "Only companies with over 50 employees" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Liability under the Act can fall on the producer of the product, the importer who brought it into the EU/UK, or any business that puts their name on the product as an own-brander."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "How does the Consumer Protection Act apply to software and IT products?",
+    "options": [
+      { "id": "a", "text": "It does not apply to software — only physical goods" },
+      { "id": "b", "text": "Defective software or IT systems that cause damage or injury could make the producer liable under the Act" },
+      { "id": "c", "text": "Only hardware is covered, not software" },
+      { "id": "d", "text": "It only applies to consumer electronics sold in shops" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Consumer Protection Act can apply to IT products. Defective software or systems that cause damage — for example a medical system that fails — could expose the producer to liability."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "What must a consumer prove to make a claim under the Consumer Protection Act?",
+    "options": [
+      { "id": "a", "text": "That the producer was negligent" },
+      { "id": "b", "text": "That the product was defective, that damage occurred, and that the defect caused the damage" },
+      { "id": "c", "text": "That they purchased the product in the last 30 days" },
+      { "id": "d", "text": "That the product was sold without a warranty" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "To claim under the Act a consumer must prove: the product was defective, damage occurred, and the defect caused the damage. They do NOT need to prove negligence."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "What is a 'defective product' under the Consumer Protection Act?",
+    "options": [
+      { "id": "a", "text": "Any product that breaks within the first year" },
+      { "id": "b", "text": "A product that does not provide the safety that a person is generally entitled to expect" },
+      { "id": "c", "text": "A product sold without a receipt" },
+      { "id": "d", "text": "Any product that is recalled by the manufacturer" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A product is defective under the Act if it does not provide the safety that a person is generally entitled to expect — taking into account its presentation, purpose and time of supply."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "What types of damage are covered by the Consumer Protection Act?",
+    "options": [
+      { "id": "a", "text": "Only physical injury to a person" },
+      { "id": "b", "text": "Death, personal injury and damage to private property over £275" },
+      { "id": "c", "text": "Only damage to the defective product itself" },
+      { "id": "d", "text": "Financial loss caused by the product" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act covers death, personal injury and damage to private property over £275. It does not cover damage to the defective product itself or purely financial losses."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Why is the Consumer Protection Act relevant to computing professionals who develop safety-critical systems?",
+    "options": [
+      { "id": "a", "text": "It requires all software to be open source" },
+      { "id": "b", "text": "Defects in safety-critical software — such as medical or aviation systems — that cause injury could result in liability under the Act" },
+      { "id": "c", "text": "It sets coding standards for all software developers" },
+      { "id": "d", "text": "It only applies to hardware engineers" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Computing professionals developing safety-critical systems — such as medical devices or aircraft control software — must be aware that defects causing harm could lead to liability under the Consumer Protection Act."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Does the Consumer Protection Act require proof of negligence?",
+    "options": [
+      { "id": "a", "text": "Yes — negligence must always be proven" },
+      { "id": "b", "text": "No — the Act imposes strict liability so negligence does not need to be proven" },
+      { "id": "c", "text": "Only for products over £500 in value" },
+      { "id": "d", "text": "Only if the damage was to property rather than a person" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act imposes strict liability — consumers do not need to prove the producer was negligent, only that the product was defective and caused the damage claimed."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "What EU directive did the Consumer Protection Act 1987 implement?",
+    "options": [
+      { "id": "a", "text": "The EU WEEE Directive" },
+      { "id": "b", "text": "The EU Product Liability Directive" },
+      { "id": "c", "text": "The EU General Data Protection Regulation" },
+      { "id": "d", "text": "The EU Digital Single Market Directive" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Consumer Protection Act 1987 implemented the EU Product Liability Directive into UK law, harmonising product liability rules across EU member states."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "A development company releases software with a bug that causes a medical device to malfunction, injuring a patient. Which Act is most relevant?",
+    "options": [
+      { "id": "a", "text": "The Computer Misuse Act 1990" },
+      { "id": "b", "text": "The Consumer Protection Act 1987" },
+      { "id": "c", "text": "The Health and Safety at Work Act 1974" },
+      { "id": "d", "text": "The Digital Economy Act 2010" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Consumer Protection Act is most relevant here — the defective software caused personal injury, making the producer potentially strictly liable under the Act."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "What time limit applies to claims under the Consumer Protection Act?",
+    "options": [
+      { "id": "a", "text": "1 year from the date of purchase" },
+      { "id": "b", "text": "3 years from when the claimant knew of the damage and defect, with a 10 year longstop" },
+      { "id": "c", "text": "5 years from the date of manufacture" },
+      { "id": "d", "text": "There is no time limit" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Claims must be brought within 3 years of when the claimant knew about the damage and the defect. There is also a 10 year absolute longstop from when the product was first supplied."
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Can a producer avoid liability under the Consumer Protection Act if the defect was caused by following mandatory government regulations?",
+    "options": [
+      { "id": "a", "text": "No — strict liability always applies" },
+      { "id": "b", "text": "Yes — compliance with mandatory regulations is one of the available defences" },
+      { "id": "c", "text": "Only if the regulation was passed after the product was made" },
+      { "id": "d", "text": "Only in the medical industry" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Compliance with mandatory government regulations is one of the defences available under the Act — if the defect was required by law, the producer may not be liable."
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "What is the development risks defence under the Consumer Protection Act?",
+    "options": [
+      { "id": "a", "text": "Producers are not liable if they were a new startup company" },
+      { "id": "b", "text": "Producers may not be liable if the defect could not have been discovered given the state of scientific and technical knowledge at the time" },
+      { "id": "c", "text": "Products under development are exempt from the Act" },
+      { "id": "d", "text": "Open source software is always exempt from liability" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The development risks defence allows producers to avoid liability if they can show the defect could not have been discovered given the state of scientific and technical knowledge at the time the product was supplied."
+  }
+]

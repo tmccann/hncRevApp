@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "In what year was the Human Rights Act passed?",
+    "options": [
+      { "id": "a", "text": "1990" },
+      { "id": "b", "text": "1995" },
+      { "id": "c", "text": "1998" },
+      { "id": "d", "text": "2000" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Human Rights Act was passed in 1998 and came into force in October 2000, incorporating the European Convention on Human Rights into UK law."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What did the Human Rights Act 1998 incorporate into UK law?",
+    "options": [
+      { "id": "a", "text": "The United Nations Charter" },
+      { "id": "b", "text": "The European Convention on Human Rights" },
+      { "id": "c", "text": "The EU General Data Protection Regulation" },
+      { "id": "d", "text": "The Geneva Convention" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Human Rights Act 1998 incorporated the European Convention on Human Rights (ECHR) into UK domestic law, allowing people to enforce their Convention rights in UK courts."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Which Article of the Human Rights Act is most relevant to computing and privacy?",
+    "options": [
+      { "id": "a", "text": "Article 2 — Right to Life" },
+      { "id": "b", "text": "Article 8 — Right to Respect for Private and Family Life" },
+      { "id": "c", "text": "Article 10 — Freedom of Expression" },
+      { "id": "d", "text": "Article 6 — Right to a Fair Trial" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Article 8 — the Right to Respect for Private and Family Life — is most relevant to computing, covering privacy of communications, data and personal information."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "What does Article 8 of the Human Rights Act protect?",
+    "options": [
+      { "id": "a", "text": "The right to vote in elections" },
+      { "id": "b", "text": "The right to respect for private and family life, home and correspondence" },
+      { "id": "c", "text": "Freedom from torture and inhuman treatment" },
+      { "id": "d", "text": "The right to a fair trial" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Article 8 protects the right to respect for private and family life, home and correspondence — relevant to email monitoring, data collection and surveillance."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Which Article protects freedom of expression including online speech?",
+    "options": [
+      { "id": "a", "text": "Article 5" },
+      { "id": "b", "text": "Article 8" },
+      { "id": "c", "text": "Article 10" },
+      { "id": "d", "text": "Article 14" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Article 10 protects freedom of expression — including the right to share opinions online. However this right can be limited to protect the rights of others or for national security."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Are Human Rights Act rights absolute?",
+    "options": [
+      { "id": "a", "text": "Yes — all rights are absolute and cannot be limited under any circumstances" },
+      { "id": "b", "text": "No — some rights can be limited by public authorities in specific circumstances such as national security or public safety" },
+      { "id": "c", "text": "Only Article 8 rights can be limited" },
+      { "id": "d", "text": "Rights are absolute for individuals but not for organisations" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Some rights are qualified rather than absolute — they can be limited by public authorities in specific circumstances such as national security, public safety or the protection of others' rights."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Who is primarily bound by the Human Rights Act?",
+    "options": [
+      { "id": "a", "text": "All private individuals and businesses" },
+      { "id": "b", "text": "Public authorities such as government departments, police and local councils" },
+      { "id": "c", "text": "Only large multinational corporations" },
+      { "id": "d", "text": "Only organisations with over 250 employees" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Human Rights Act primarily binds public authorities — such as government departments, police, courts and local councils — who must act compatibly with Convention rights."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "How does the Human Rights Act interact with employee monitoring in the workplace?",
+    "options": [
+      { "id": "a", "text": "Employers can monitor employees in any way they wish" },
+      { "id": "b", "text": "Article 8 means employees have a reasonable expectation of privacy — excessive monitoring may breach their rights" },
+      { "id": "c", "text": "Monitoring is only allowed with written consent from each employee" },
+      { "id": "d", "text": "The Human Rights Act does not apply to employment situations" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Article 8 gives employees a reasonable expectation of privacy. Excessive or unjustified monitoring of emails, internet use or communications may breach their right to private life."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "How does the Human Rights Act relate to RIPA 2000?",
+    "options": [
+      { "id": "a", "text": "They are entirely separate and have no connection" },
+      { "id": "b", "text": "RIPA provides the legal framework for surveillance that must comply with Article 8 of the Human Rights Act" },
+      { "id": "c", "text": "The Human Rights Act replaced RIPA" },
+      { "id": "d", "text": "RIPA overrides the Human Rights Act in all cases" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "RIPA provides the legal framework for lawful surveillance that must comply with Article 8 of the Human Rights Act — surveillance must be proportionate and necessary to be lawful."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "What does Article 10 freedom of expression mean for IT professionals?",
+    "options": [
+      { "id": "a", "text": "IT professionals can publish any content online without restriction" },
+      { "id": "b", "text": "People have the right to share information and opinions online, but this can be limited to protect others or prevent harm" },
+      { "id": "c", "text": "Software code is not covered by freedom of expression" },
+      { "id": "d", "text": "Companies must allow employees to express any opinion on work systems" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Article 10 protects the right to share information and opinions online, but this is a qualified right — it can be limited to protect others' reputations, prevent harm or for national security."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "What is the significance of the Human Rights Act for data protection in the UK?",
+    "options": [
+      { "id": "a", "text": "It replaced the Data Protection Act entirely" },
+      { "id": "b", "text": "Article 8 underpins the right to privacy that data protection law is built upon" },
+      { "id": "c", "text": "It only applies to government data, not private companies" },
+      { "id": "d", "text": "It has no connection to data protection" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Article 8's right to privacy underpins UK data protection law — the right to have personal data handled with respect and not misused flows from the fundamental right to private life."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Can a UK court award damages for a breach of Human Rights Act rights?",
+    "options": [
+      { "id": "a", "text": "No — the Human Rights Act only allows courts to make declarations" },
+      { "id": "b", "text": "Yes — UK courts can award damages where a public authority has breached Convention rights" },
+      { "id": "c", "text": "Only the European Court of Human Rights can award damages" },
+      { "id": "d", "text": "Only criminal courts can deal with human rights breaches" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Since the Human Rights Act incorporated the ECHR into UK law, domestic courts can award damages where a public authority has acted incompatibly with Convention rights."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "A government agency wants to monitor a citizen's private emails. Which Article of the Human Rights Act is most relevant?",
+    "options": [
+      { "id": "a", "text": "Article 6 — Right to a Fair Trial" },
+      { "id": "b", "text": "Article 8 — Right to Respect for Private and Family Life" },
+      { "id": "c", "text": "Article 2 — Right to Life" },
+      { "id": "d", "text": "Article 5 — Right to Liberty" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Article 8 protects the right to respect for private correspondence — monitoring someone's private emails without justification would engage Article 8 rights."
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "What does proportionality mean in the context of the Human Rights Act?",
+    "options": [
+      { "id": "a", "text": "All citizens must be treated exactly the same" },
+      { "id": "b", "text": "Any interference with a right must be no more than is necessary to achieve the legitimate aim" },
+      { "id": "c", "text": "Punishments must be proportional to the crime committed" },
+      { "id": "d", "text": "Government spending must be proportional to population size" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Proportionality means any interference with a right must be no more than is necessary to achieve a legitimate aim — for example surveillance must be targeted, not blanket monitoring of everyone."
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "What right under the Human Rights Act is relevant to an employee being dismissed for posting on social media?",
+    "options": [
+      { "id": "a", "text": "Article 2 — Right to Life" },
+      { "id": "b", "text": "Article 10 — Freedom of Expression" },
+      { "id": "c", "text": "Article 3 — Freedom from Torture" },
+      { "id": "d", "text": "Article 12 — Right to Marry" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Article 10 Freedom of Expression is relevant — employees have a right to express opinions, though this is balanced against the employer's legitimate interests and reputational concerns."
+  }
+]

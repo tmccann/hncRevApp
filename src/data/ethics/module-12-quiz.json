@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "What year were the Privacy and Electronic Communications Regulations introduced?",
+    "options": [
+      { "id": "a", "text": "2000" },
+      { "id": "b", "text": "2001" },
+      { "id": "c", "text": "2003" },
+      { "id": "d", "text": "2005" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Privacy and Electronic Communications Regulations (PECR) were introduced in 2003, implementing an EU directive on privacy in electronic communications."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What are the Privacy and Electronic Communications Regulations commonly known as?",
+    "options": [
+      { "id": "a", "text": "GDPR" },
+      { "id": "b", "text": "PECR" },
+      { "id": "c", "text": "RIPA" },
+      { "id": "d", "text": "PIPEDA" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Privacy and Electronic Communications Regulations are commonly abbreviated to PECR — they sit alongside GDPR and are enforced by the Information Commissioner's Office."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "What is the primary focus of PECR?",
+    "options": [
+      { "id": "a", "text": "Regulating the physical disposal of electronic devices" },
+      { "id": "b", "text": "Protecting privacy in electronic communications — covering cookies, marketing calls, texts and emails" },
+      { "id": "c", "text": "Setting standards for broadband infrastructure" },
+      { "id": "d", "text": "Controlling surveillance by public bodies" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "PECR focuses on protecting privacy in electronic communications — covering cookies, direct marketing via calls, texts and emails, and the confidentiality of communications."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "What do PECR rules on cookies require?",
+    "options": [
+      { "id": "a", "text": "All cookies must be encrypted" },
+      { "id": "b", "text": "Websites must tell users about cookies, explain what they do and obtain consent before placing non-essential cookies" },
+      { "id": "c", "text": "Cookies can only be used for 24 hours" },
+      { "id": "d", "text": "All cookies must be deleted after each browsing session" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Under PECR, websites must inform users about cookies, explain what they do, and get consent before placing non-essential cookies — this is why websites show cookie consent banners."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "What is an example of a cookie that is exempt from PECR consent requirements?",
+    "options": [
+      { "id": "a", "text": "Advertising and tracking cookies" },
+      { "id": "b", "text": "Strictly necessary cookies — such as those that keep items in a shopping basket" },
+      { "id": "c", "text": "Analytics cookies that track user behaviour" },
+      { "id": "d", "text": "Social media sharing cookies" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Strictly necessary cookies — such as those needed to keep items in a shopping basket or maintain a login session — are exempt from PECR consent requirements as they are essential to the service."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "What does PECR say about unsolicited direct marketing by email?",
+    "options": [
+      { "id": "a", "text": "It is allowed without restriction" },
+      { "id": "b", "text": "You must have prior consent from the recipient before sending marketing emails to individuals" },
+      { "id": "c", "text": "Marketing emails are only allowed on weekdays" },
+      { "id": "d", "text": "Only charities are exempt from the rules" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "PECR requires prior consent before sending marketing emails to individuals — this is why legitimate marketing emails include an unsubscribe option and require opt-in consent."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "What is the 'soft opt-in' rule under PECR?",
+    "options": [
+      { "id": "a", "text": "A relaxed consent rule allowing marketing to anyone who has ever visited your website" },
+      { "id": "b", "text": "An exception allowing marketing to existing customers about similar products if they were given a chance to opt out when their details were collected" },
+      { "id": "c", "text": "A rule that only applies to SMS marketing" },
+      { "id": "d", "text": "Permission to email anyone who has not actively objected" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The soft opt-in allows businesses to market similar products or services to existing customers without explicit consent, provided the customer was given an easy opt-out when their details were first collected."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Which organisation enforces PECR in the UK?",
+    "options": [
+      { "id": "a", "text": "The Health and Safety Executive" },
+      { "id": "b", "text": "The Information Commissioner's Office (ICO)" },
+      { "id": "c", "text": "Ofcom" },
+      { "id": "d", "text": "The Environment Agency" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Information Commissioner's Office (ICO) enforces PECR alongside GDPR — it can issue fines to organisations that breach the regulations."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "What are nuisance calls and how does PECR address them?",
+    "options": [
+      { "id": "a", "text": "Nuisance calls are legal and PECR does not restrict them" },
+      { "id": "b", "text": "PECR restricts unsolicited marketing calls — people can register with the Telephone Preference Service to opt out" },
+      { "id": "c", "text": "PECR only covers email marketing, not phone calls" },
+      { "id": "d", "text": "All marketing calls require a court order" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "PECR restricts unsolicited direct marketing calls. Individuals can register with the Telephone Preference Service (TPS) to opt out, and companies must screen against the TPS before calling."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "How does PECR relate to GDPR?",
+    "options": [
+      { "id": "a", "text": "PECR replaced GDPR in the UK" },
+      { "id": "b", "text": "PECR sits alongside GDPR — GDPR covers personal data broadly while PECR adds specific rules for electronic communications and marketing" },
+      { "id": "c", "text": "GDPR overrides PECR in all cases" },
+      { "id": "d", "text": "They cover completely different areas with no overlap" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "PECR sits alongside GDPR — GDPR provides broad data protection rules while PECR adds specific requirements for cookies, electronic marketing and the confidentiality of communications."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "A company wants to send a promotional text message to a list of mobile numbers they purchased. What does PECR require?",
+    "options": [
+      { "id": "a", "text": "Nothing — purchased data lists can be freely used for marketing" },
+      { "id": "b", "text": "The recipients must have given prior consent to receive marketing messages from this type of company" },
+      { "id": "c", "text": "They must send one free product before any marketing message" },
+      { "id": "d", "text": "They must register the list with the ICO" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Under PECR, recipients must have given prior consent to receive marketing texts. Simply purchasing a list does not give the right to send unsolicited marketing messages."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "What must a website do when a user first visits, under PECR cookie rules?",
+    "options": [
+      { "id": "a", "text": "Block all cookies automatically until the user logs in" },
+      { "id": "b", "text": "Inform the user about non-essential cookies and obtain their consent before setting them" },
+      { "id": "c", "text": "Display a full list of all cookies used in the footer" },
+      { "id": "d", "text": "Email the user a summary of cookies used" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Websites must inform users about non-essential cookies and obtain clear consent before setting them — this is why cookie consent banners are required on almost every website."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "What is the maximum fine the ICO can issue for serious PECR breaches?",
+    "options": [
+      { "id": "a", "text": "£10,000" },
+      { "id": "b", "text": "£500,000" },
+      { "id": "c", "text": "£17.5 million or 4% of global turnover" },
+      { "id": "d", "text": "There is no maximum fine" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Following the UK GDPR alignment, the ICO can issue fines of up to £17.5 million or 4% of global annual turnover for the most serious PECR breaches."
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "What does PECR say about the confidentiality of communications?",
+    "options": [
+      { "id": "a", "text": "All electronic communications can be monitored by service providers" },
+      { "id": "b", "text": "Communications must be kept confidential — service providers must not intercept or monitor them without lawful authority" },
+      { "id": "c", "text": "Confidentiality only applies to phone calls, not emails" },
+      { "id": "d", "text": "Confidentiality rules only apply to government communications" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "PECR requires that communications are kept confidential — service providers must not listen to, store or monitor communications without lawful authority or the user's consent."
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Which EU directive did PECR implement into UK law?",
+    "options": [
+      { "id": "a", "text": "The EU WEEE Directive" },
+      { "id": "b", "text": "The EU ePrivacy Directive" },
+      { "id": "c", "text": "The EU Product Liability Directive" },
+      { "id": "d", "text": "The EU Digital Single Market Directive" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "PECR implemented the EU ePrivacy Directive (2002/58/EC) into UK law, which updated rules on privacy in electronic communications to cover the internet age."
+  }
+]

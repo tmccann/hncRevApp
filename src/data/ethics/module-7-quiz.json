@@ -1,0 +1,205 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "What year was the Digital Economy Act passed?",
+    "options": [
+      { "id": "a", "text": "2000" },
+      { "id": "b", "text": "2005" },
+      { "id": "c", "text": "2010" },
+      { "id": "d", "text": "2012" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Digital Economy Act was passed in 2010, primarily to tackle online copyright infringement and regulate the digital economy."
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "What was the primary focus of the Digital Economy Act 2010?",
+    "options": [
+      { "id": "a", "text": "Regulating surveillance powers of public bodies" },
+      { "id": "b", "text": "Tackling online copyright infringement and illegal file sharing" },
+      { "id": "c", "text": "Controlling the disposal of electronic waste" },
+      { "id": "d", "text": "Setting standards for broadband speeds" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Digital Economy Act 2010 primarily focused on tackling online copyright infringement — particularly illegal file sharing — and protecting the rights of content creators."
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "What obligation did the Digital Economy Act place on Internet Service Providers (ISPs)?",
+    "options": [
+      { "id": "a", "text": "To monitor all customer browsing activity" },
+      { "id": "b", "text": "To notify subscribers accused of illegal file sharing and keep records of infringement" },
+      { "id": "c", "text": "To block all peer-to-peer traffic automatically" },
+      { "id": "d", "text": "To provide free broadband to all customers" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Digital Economy Act required ISPs to notify subscribers accused of copyright infringement and maintain records of those accusations."
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "What could happen to persistent illegal file sharers under the Digital Economy Act?",
+    "options": [
+      { "id": "a", "text": "They would receive a small fixed fine" },
+      { "id": "b", "text": "Their internet connection could be slowed down or suspended" },
+      { "id": "c", "text": "Their computer could be confiscated" },
+      { "id": "d", "text": "They would be placed on a public register" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act included provisions allowing for persistent infringers' connections to be throttled (slowed) or in extreme cases suspended."
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Which industries lobbied strongly for the Digital Economy Act?",
+    "options": [
+      { "id": "a", "text": "The telecommunications and broadband industries" },
+      { "id": "b", "text": "The music and film industries whose content was being illegally shared" },
+      { "id": "c", "text": "The gaming hardware industry" },
+      { "id": "d", "text": "Environmental groups concerned about digital waste" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The music and film industries were strong advocates for the Act as their content was being widely distributed illegally through peer-to-peer file sharing networks."
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "What is online copyright infringement in the context of the Digital Economy Act?",
+    "options": [
+      { "id": "a", "text": "Using a computer to access the internet without permission" },
+      { "id": "b", "text": "Downloading, uploading or sharing copyrighted content without the rights holder's permission" },
+      { "id": "c", "text": "Failing to update software licences on time" },
+      { "id": "d", "text": "Using open source software commercially" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Online copyright infringement means downloading, uploading or sharing copyrighted content — such as music, films or software — without permission from the rights holder."
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "What technology was commonly used to illegally share files that the Digital Economy Act targeted?",
+    "options": [
+      { "id": "a", "text": "Email attachments" },
+      { "id": "b", "text": "Peer-to-peer (P2P) file sharing networks" },
+      { "id": "c", "text": "Cloud storage services" },
+      { "id": "d", "text": "USB drives" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Peer-to-peer (P2P) file sharing networks — such as BitTorrent — were the primary technology used to illegally distribute music, films and software that the Act targeted."
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Why was the Digital Economy Act criticised by civil liberties groups?",
+    "options": [
+      { "id": "a", "text": "It gave too many rights to individual users" },
+      { "id": "b", "text": "It could punish innocent people whose WiFi was used by others to infringe copyright" },
+      { "id": "c", "text": "It did not go far enough in protecting copyright holders" },
+      { "id": "d", "text": "It banned all peer-to-peer networking outright" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Civil liberties groups criticised the Act because innocent people could be accused — for example someone whose unsecured WiFi was used by a neighbour or visitor to download illegally."
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "What role did Ofcom have under the Digital Economy Act?",
+    "options": [
+      { "id": "a", "text": "To prosecute copyright infringers directly" },
+      { "id": "b", "text": "To oversee ISP obligations and produce reports on online infringement" },
+      { "id": "c", "text": "To manage the national broadband infrastructure" },
+      { "id": "d", "text": "To set the price of digital music and film" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Ofcom was given a key oversight role — responsible for producing codes of practice for ISPs and reporting on levels of online copyright infringement."
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "How does the Digital Economy Act relate to the rights of content creators?",
+    "options": [
+      { "id": "a", "text": "It removes copyright protection after 10 years" },
+      { "id": "b", "text": "It aims to protect content creators by reducing illegal distribution of their work online" },
+      { "id": "c", "text": "It requires creators to register their work with the government" },
+      { "id": "d", "text": "It forces creators to make their work freely available online" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Digital Economy Act aims to protect content creators — musicians, filmmakers, authors and software developers — by reducing illegal online distribution of their work."
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "What was the Digital Economy Act 2010 primarily responding to?",
+    "options": [
+      { "id": "a", "text": "A rise in physical piracy of DVDs and CDs in shops" },
+      { "id": "b", "text": "The explosion of illegal online file sharing enabled by widespread broadband internet access" },
+      { "id": "c", "text": "Security vulnerabilities in government computer systems" },
+      { "id": "d", "text": "Concerns about social media misuse by young people" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Act was a direct response to the explosion of illegal online file sharing that became widespread as broadband became common — causing significant financial losses to the creative industries."
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "What is the relationship between the Digital Economy Act and ISPs?",
+    "options": [
+      { "id": "a", "text": "ISPs are exempt from the Act as they only provide connectivity" },
+      { "id": "b", "text": "ISPs were given legal duties to notify infringers and maintain records under the Act" },
+      { "id": "c", "text": "ISPs must block all file sharing websites by default" },
+      { "id": "d", "text": "ISPs must provide free legal downloading services to customers" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Under the Digital Economy Act, ISPs were given specific legal duties — including notifying subscribers accused of infringement and maintaining records — making them active participants in enforcement."
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Which of the following is an example of illegal activity the Digital Economy Act targets?",
+    "options": [
+      { "id": "a", "text": "Streaming a film you have paid to watch" },
+      { "id": "b", "text": "Downloading a music album using BitTorrent without paying for it" },
+      { "id": "c", "text": "Buying a second-hand DVD" },
+      { "id": "d", "text": "Ripping a CD you own for personal use" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Downloading copyrighted music without paying — through P2P networks like BitTorrent — is exactly the type of infringement the Digital Economy Act was designed to address."
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "What financial impact did illegal file sharing have that led to the Digital Economy Act?",
+    "options": [
+      { "id": "a", "text": "It increased broadband costs for consumers" },
+      { "id": "b", "text": "It caused significant revenue losses for the music, film and software industries" },
+      { "id": "c", "text": "It reduced tax revenues for the government" },
+      { "id": "d", "text": "It increased the cost of producing electronic devices" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Widespread illegal file sharing caused significant financial losses for the music, film and software industries — a key motivation behind lobbying for the Digital Economy Act."
+  },
+  {
+    "id": 15,
+    "type": "matching",
+    "text": "Match each piece of legislation to its primary purpose.",
+    "columnA": [
+      { "id": "1", "text": "RIPA 2000" },
+      { "id": "2", "text": "WEEE Regulations 2004" },
+      { "id": "3", "text": "Digital Economy Act 2010" }
+    ],
+    "columnB": [
+      { "id": "a", "text": "Tackle online copyright infringement and protect content creators" },
+      { "id": "b", "text": "Regulate surveillance and interception powers of public bodies" },
+      { "id": "c", "text": "Reduce electrical and electronic waste going to landfill" }
+    ],
+    "correctMatches": {
+      "1": "b",
+      "2": "c",
+      "3": "a"
+    },
+    "explanation": "RIPA = surveillance powers. WEEE = electronic waste disposal. Digital Economy Act = online copyright infringement."
+  }
+]

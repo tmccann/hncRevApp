@@ -35,12 +35,111 @@
   {
     "id": "module-4",
     "number": 4,
-    "title": "BCS Code of Conduct — Code of Conduct",
+    "title": "BCS Code of Conduct",
     "description": "The five elements of BCS Code of Conduct: Public Interest, Integrity, Confidentiality, Competence, and Accountability — applied to real IT scenarios",
     "topics": ["Public Interest", "Integrity", "Confidentiality", "Competence", "Accountability", "BCS", "Professional Conduct"],
     "hasSummary": false,
     "hasQuiz": true,
     "checkpoints": [],
     "color": "from-violet-500 to-purple-600"
+  },
+  {
+    "id": "module-5",
+    "number": 5,
+    "title": "Regulation of Investigatory Powers Act 2000",
+    "description": "How RIPA regulates the surveillance and interception powers of public bodies — lawful authorisation, covert surveillance and civil liberties",
+    "topics": ["Surveillance", "Interception", "Covert Investigation", "Authorisation", "Civil Liberties", "Public Bodies"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-violet-500 to-purple-600"
+  },
+  {
+    "id": "module-6",
+    "number": 6,
+    "title": "WEEE Regulations 2004",
+    "description": "Producer responsibility for electrical and electronic waste — recycling obligations, hazardous materials and the crossed-out wheelie bin symbol",
+    "topics": ["Electronic Waste", "Producer Responsibility", "Recycling", "Hazardous Materials", "Take-back Schemes", "Environment Agency"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-violet-500 to-purple-600"
+  },
+  {
+    "id": "module-7",
+    "number": 7,
+    "title": "Digital Economy Act 2010",
+    "description": "Tackling online copyright infringement — ISP obligations, file sharing, content creator rights and the role of Ofcom",
+    "topics": ["Copyright Infringement", "File Sharing", "ISP Obligations", "Ofcom", "Peer-to-Peer", "Content Creators"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-violet-500 to-purple-600"
+  },
+  {
+    "id": "module-8",
+    "number": 8,
+    "title": "Health and Safety at Work Act 1974",
+    "description": "Employer and employee duties, RSI, workstation safety, the HSE and how health and safety law applies to computing professionals",
+    "topics": ["Employer Duties", "Employee Duties", "HSE", "RSI", "Workstation Safety", "Risk Assessment", "DSE Regulations"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-violet-500 to-red-600"
+  },
+  {
+    "id": "module-9",
+    "number": 9,
+    "title": "Consumer Protection Act 1987",
+    "description": "Strict liability for defective products, producer responsibility, and how the Act applies to software and safety-critical IT systems",
+    "topics": ["Strict Liability", "Defective Products", "Producer Responsibility", "Safety-Critical Systems", "Development Risks Defence"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-violet-500 to-red-600"
+  },
+  {
+    "id": "module-10",
+    "number": 10,
+    "title": "Human Rights Act 1998",
+    "description": "ECHR rights in UK law — Article 8 privacy, Article 10 free expression, and how human rights law affects computing and surveillance",
+    "topics": ["Article 8", "Article 10", "Privacy", "Freedom of Expression", "Proportionality", "Public Authorities", "ECHR"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-violet-500 to-red-600"
+  },
+  {
+    "id": "module-11",
+    "number": 11,
+    "title": "Anti-Terrorism, Crime & Security Act 2001",
+    "description": "Data retention powers, communications metadata, national security vs civil liberties, and the impact on ISPs and IT organisations",
+    "topics": ["Data Retention", "Communications Data", "National Security", "Civil Liberties", "ISP Obligations", "Freezing Orders"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-violet-500 to-red-600"
+  },
+  {
+    "id": "module-12",
+    "number": 12,
+    "title": "Privacy and Electronic Communications Regulations 2003",
+    "description": "Cookies, direct marketing, unsolicited emails and calls — PECR rules and how they protect electronic privacy",
+    "topics": ["Cookies", "Cookie Consent", "Direct Marketing", "Email Marketing", "Soft Opt-in", "ICO", "ePrivacy"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-violet-500 to-red-600"
+  },
+  {
+    "id": "module-13",
+    "number": 13,
+    "title": "Equality Act 2010",
+    "description": "Protected characteristics, types of discrimination, reasonable adjustments and how equality law applies to IT systems and the workplace",
+    "topics": ["Protected Characteristics", "Direct Discrimination", "Indirect Discrimination", "Reasonable Adjustments", "Harassment", "Victimisation", "Accessibility"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-violet-500 to-red-600"
   }
 ]
