@@ -29,8 +29,8 @@ const CourseHome = () => {
       title: "Professional Ethics & Law",
       description:
         "UK legislation, professional bodies, codes of ethics and intellectual property",
-      modules: 4,
-      quizzes: 4,
+      modules: 13,
+      quizzes: 13,
       progress: 0,
       color: "from-violet-500 to-purple-600",
       icon: "⚖️",
