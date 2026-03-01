@@ -1,0 +1,260 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: What is the key factor that distinguishes ethical hacking from criminal hacking?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Ethical hackers use different tools than criminal hackers" },
+      { "id": "b", "text": "Ethical hackers have written authorisation from the owner of the system before testing it" },
+      { "id": "c", "text": "Ethical hackers only test systems on the internet, not internal networks" },
+      { "id": "d", "text": "Ethical hackers never actually gain access to systems — they only scan them" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The single defining factor is authorisation. An ethical hacker (penetration tester) has explicit written permission from the system owner to attempt to compromise the system. Without that authorisation, the exact same actions become criminal offences under the Computer Misuse Act 1990 — regardless of intent."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: Match each hacker type to its correct description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "White Hat" },
+      { "id": "a2", "text": "Black Hat" },
+      { "id": "a3", "text": "Grey Hat" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Hacks without permission for personal gain, to cause damage, or for malicious purposes — criminal activity" },
+      { "id": "b2", "text": "Hacks without explicit permission but typically reports findings rather than exploiting them — ethically ambiguous and legally risky" },
+      { "id": "b3", "text": "An authorised security professional who tests systems with permission to identify and fix vulnerabilities" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b2" }
+    ],
+    "explanation": "White hats are authorised security professionals — penetration testers, security consultants, bug bounty hunters with permission. Black hats are criminal hackers acting without authorisation for malicious purposes. Grey hats occupy the middle ground — often finding and reporting vulnerabilities without permission, which is still technically illegal under the Computer Misuse Act even if well-intentioned."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: Which law primarily governs unauthorised access to computer systems in the UK?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Data Protection Act 2018" },
+      { "id": "b", "text": "Computer Misuse Act 1990" },
+      { "id": "c", "text": "Digital Economy Act 2010" },
+      { "id": "d", "text": "Regulation of Investigatory Powers Act 2000" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Computer Misuse Act 1990 is the primary UK legislation governing computer crime. It created three offences: unauthorised access, unauthorised access with intent to commit further offences, and unauthorised modification. It has been strengthened by the Police and Justice Act 2006 and Serious Crime Act 2015 to cover modern attacks like DDoS and malware creation."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: What is a penetration test?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "An automated scan that lists all vulnerabilities on a system without attempting to exploit them" },
+      { "id": "b", "text": "An authorised simulated attack on a system that actively attempts to exploit vulnerabilities to assess real-world risk" },
+      { "id": "c", "text": "A review of a company's security policies and documentation" },
+      { "id": "d", "text": "A test that only checks for missing software patches" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A penetration test actively attempts to exploit vulnerabilities — it simulates what a real attacker would do. This distinguishes it from a vulnerability assessment, which identifies and lists weaknesses without exploiting them. Penetration testing provides evidence of real-world exploitability and actual business risk, not just theoretical weaknesses."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: What is the difference between a penetration test and a vulnerability assessment?",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Penetration Test" },
+      { "id": "a2", "text": "Vulnerability Assessment" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Identifies and lists weaknesses using automated tools — does not attempt to exploit them" },
+      { "id": "b2", "text": "Actively attempts to exploit vulnerabilities to demonstrate real impact and business risk" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b1" }
+    ],
+    "explanation": "A vulnerability assessment tells you what weaknesses exist. A penetration test tells you which weaknesses can actually be exploited and what the real-world impact would be. Penetration testing is more thorough and provides stronger evidence for remediation priorities — but it is also riskier, as active exploitation could cause service disruption."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: What should be agreed and documented BEFORE a penetration test begins? (Choose three)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "The scope — which systems, networks and applications are in scope for testing" },
+      { "id": "b", "text": "The testing window — when testing may take place to minimise disruption" },
+      { "id": "c", "text": "The client's social media passwords for OSINT testing" },
+      { "id": "d", "text": "Written authorisation signed by the system owner" }
+    ],
+    "correctAnswer": ["a", "b", "d"],
+    "explanation": "Before any penetration test, you must define and document: scope (exactly what is in and out of scope), testing window (to avoid testing during critical business periods), and written authorisation (signed by someone with legal authority to grant permission). Testing outside agreed scope or without authorisation — even accidentally — constitutes a criminal offence."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: What are Rules of Engagement (RoE) in the context of penetration testing?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Legal rules that govern how hackers must behave in court" },
+      { "id": "b", "text": "A formal agreement defining the scope, boundaries, permitted techniques and responsibilities for a penetration test" },
+      { "id": "c", "text": "The list of tools a penetration tester is allowed to use" },
+      { "id": "d", "text": "The method by which the tester communicates findings to the client" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Rules of Engagement are the formal agreement between the tester and the client that defines: what systems are in scope, what techniques are permitted, the testing window, who to contact in an emergency, what to do if critical vulnerabilities are found, and how findings will be reported. They protect both the tester (legally) and the client (operationally)."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: Which of the following could a penetration tester legally do without additional specific permission, even with a general authorisation contract? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Scan the agreed in-scope IP addresses for open ports" },
+      { "id": "b", "text": "Launch a denial-of-service attack against the client's live production servers" },
+      { "id": "c", "text": "Attempt to exploit a vulnerability found on an in-scope web application" },
+      { "id": "d", "text": "Test systems belonging to a third-party cloud provider hosting the client's data" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Port scanning and exploiting vulnerabilities on in-scope systems are standard penetration testing activities covered by general authorisation. DoS attacks against live production systems typically require specific additional permission due to the risk of causing an outage. Third-party systems (cloud providers, ISPs, hosting companies) require separate authorisation from those third parties — testing them without it is illegal regardless of the client contract."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: What does a signed disclaimer or 'get out of jail free' letter provide for a penetration tester?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Automatic immunity from all laws including the Computer Misuse Act" },
+      { "id": "b", "text": "Evidence of authorisation that can be shown to law enforcement if the tester is questioned during a test" },
+      { "id": "c", "text": "Permission to test any system connected to the internet" },
+      { "id": "d", "text": "A guarantee that the client will not sue if the test causes damage" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A signed authorisation letter (sometimes called a 'get out of jail free' letter) is evidence that the tester has permission to conduct their activities. If police or ISPs notice unusual network activity and investigate, the tester can present this document to demonstrate they are acting legally. It does not provide immunity — it provides proof of authorisation, which is the legal defence under the Computer Misuse Act."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: What is bug bounty hunting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A criminal activity where hackers extort companies by threatening to publish vulnerabilities" },
+      { "id": "b", "text": "A programme where organisations publicly invite security researchers to find and report vulnerabilities in exchange for financial rewards" },
+      { "id": "c", "text": "A government scheme to catch black hat hackers" },
+      { "id": "d", "text": "An automated tool that scans for software bugs" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Bug bounty programmes are run by organisations (Google, Microsoft, HackerOne, etc.) who invite security researchers to find and responsibly disclose vulnerabilities in their systems in exchange for monetary rewards. Participants operate within defined scope and rules — making them authorised white-hat researchers. It is a cost-effective way for organisations to leverage the global security community to find vulnerabilities before malicious attackers do."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why is written authorisation essential even if the client verbally agrees to a penetration test?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Verbal authorisation is legally equivalent — written authorisation is just good practice" },
+      { "id": "b", "text": "Because if the test is questioned by law enforcement or the client later disputes the agreement, only written documentation provides a reliable legal defence" },
+      { "id": "c", "text": "Because the Computer Misuse Act specifically requires written contracts for all IT work" },
+      { "id": "d", "text": "Because verbal agreements cannot be signed, so they have no legal standing in any context" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Verbal agreements are difficult to prove. If a test causes an unexpected outage and the client denies giving permission, or if law enforcement investigates suspicious network activity, only written signed documentation provides reliable proof of authorisation. Professional penetration testers always insist on written contracts and signed Rules of Engagement before touching a single system."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: A grey hat hacker finds a critical vulnerability in a bank's website, exploits it to demonstrate it is real, then contacts the bank to report it. Why is this still legally problematic despite good intentions?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is not problematic — good intentions make the activity legal" },
+      { "id": "b", "text": "Because accessing the system and exploiting the vulnerability without authorisation is an offence under the Computer Misuse Act regardless of intent or outcome" },
+      { "id": "c", "text": "It is only problematic if the hacker demands payment for the information" },
+      { "id": "d", "text": "Because banks have special legal protection that other organisations do not" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Intent does not determine legality under the Computer Misuse Act — authorisation does. Accessing a system without permission is an offence whether the hacker intends harm or not. Responsible disclosure (reporting without exploiting) is ethically preferred, but even that can be legally grey. The correct approach is to report through official channels (HackerOne, the organisation's security team) without exploiting the vulnerability."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: Why must the scope of a penetration test be defined very precisely?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "So the tester can charge more for systems outside the scope" },
+      { "id": "b", "text": "Because testing any system not explicitly in scope — even accidentally — could constitute unauthorised access under the Computer Misuse Act, and could harm third-party systems" },
+      { "id": "c", "text": "Because testing all systems would take too long" },
+      { "id": "d", "text": "So that the client can hide vulnerable systems from the tester" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Scope defines exactly what the tester is authorised to test. Straying outside scope — even accidentally following a network path — removes the legal protection of authorisation. In a real attack, a compromised internal system might connect to partner networks or cloud services. The tester must stop at the scope boundary, as those external systems have their own owners who have not given permission."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: Why do organisations conduct penetration tests rather than just relying on firewalls and security software?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because firewalls and security software are ineffective and should be replaced by penetration testing" },
+      { "id": "b", "text": "Because penetration testing validates whether defences actually work in practice — automated tools can miss vulnerabilities that a skilled human tester finds, and they confirm real-world exploitability" },
+      { "id": "c", "text": "Because GDPR legally requires annual penetration tests for all organisations" },
+      { "id": "d", "text": "Because security software is too expensive for most organisations" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Firewalls and security software are essential but imperfect. Penetration testing validates them by attempting to bypass them — finding gaps that automated tools miss, testing human factors (social engineering), and confirming which vulnerabilities are actually exploitable versus theoretical. A vulnerability scanner might list 200 issues; a penetration tester can tell you which three would actually allow an attacker to steal your data."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: Why is it important for a penetration tester to understand the Computer Misuse Act even when working under a valid contract?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is not important — a valid contract overrides all legislation" },
+      { "id": "b", "text": "Because the contract only covers what is explicitly authorised — understanding the Act helps the tester recognise when they are approaching or crossing legal boundaries during a test" },
+      { "id": "c", "text": "Because the tester may need to testify in court about the Act" },
+      { "id": "d", "text": "Because the Computer Misuse Act applies to clients, not penetration testers" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A contract authorises specific activities. During a test, a tester might discover a path that leads outside the agreed scope, or find that exploiting one system automatically affects another that is out of scope. Understanding the Computer Misuse Act helps the tester pause, recognise the legal boundary, and seek clarification from the client rather than inadvertently committing an offence."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each component of a penetration testing engagement to its purpose.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Written authorisation" },
+      { "id": "a2", "text": "Scope definition" },
+      { "id": "a3", "text": "Rules of Engagement" },
+      { "id": "a4", "text": "Disclaimer / 'get out of jail free' letter" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Carried by the tester during the engagement as evidence of permission if questioned by law enforcement" },
+      { "id": "b2", "text": "Specifies exactly which systems, IP ranges and applications may be tested — defines the legal boundary" },
+      { "id": "b3", "text": "The formal permission from the system owner that makes the test legal rather than criminal" },
+      { "id": "b4", "text": "The full agreement covering permitted techniques, testing window, emergency contacts and reporting requirements" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b4" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Each document serves a distinct purpose. Written authorisation is the legal foundation. Scope defines what is covered. Rules of Engagement detail how the test will run. The disclaimer is the portable evidence the tester carries in the field. In practice all of this is usually combined in a single contract document, but understanding each element separately is essential."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: A question asks 'What makes a penetration test legal?' Which answer scores the most marks?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The tester being a qualified professional." },
+      { "id": "b", "text": "A penetration test is legal when it is conducted with explicit written authorisation from the system owner, within an agreed and documented scope, using permitted techniques defined in the Rules of Engagement — making the access 'authorised' under the Computer Misuse Act 1990." },
+      { "id": "c", "text": "The tester having a cybersecurity qualification." },
+      { "id": "d", "text": "The test not causing any damage to systems." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The highest-scoring answer identifies the legal mechanism precisely: written authorisation transforms 'unauthorised access' into 'authorised access', removing the Computer Misuse Act offence. It then adds scope and Rules of Engagement as the boundaries that maintain legality throughout the test. Qualifications and causing no damage are irrelevant to legality — authorisation is the only thing that matters legally."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: Explain why a grey hat hacker who reports a vulnerability without exploiting it is still in a legally ambiguous position.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "They are not — reporting without exploiting is always legal" },
+      { "id": "b", "text": "Because even accessing a system to discover the vulnerability may constitute unauthorised access under the Computer Misuse Act, regardless of whether any data was taken or the vulnerability was exploited" },
+      { "id": "c", "text": "Because they should have exploited the vulnerability to prove it was real before reporting" },
+      { "id": "d", "text": "Because reporting a vulnerability is itself a criminal offence" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Computer Misuse Act's first offence (unauthorised access) does not require intent to harm or any damage to occur — simply accessing a system without permission is the offence. A grey hat who probes a system to find a vulnerability has likely already committed this offence, even if they immediately report it responsibly. The correct path is to report through official channels (e.g. the organisation's security team or a bug bounty platform) without accessing systems beyond what is necessary to identify the issue."
+  }
+]

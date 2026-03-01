@@ -1,0 +1,248 @@
+{
+  "number": 5,
+  "title": "Documentation & Report Writing",
+  "description": "Rules of engagement, evidence gathering, report structure and presenting findings to a client",
+  "glance": [
+    { "number": "4", "label": "Report sections", "detail": "Executive Summary, Methodology, Findings, Recommendations" },
+    { "number": "0–10", "label": "CVSS scale", "detail": "Critical ≥9.0 | High ≥7.0 | Medium ≥4.0 | Low <4.0" },
+    { "number": "90", "label": "Days", "detail": "Typical responsible disclosure window before public release" },
+    { "number": "1", "label": "Rule above all", "detail": "Never test without written authorisation and agreed scope" }
+  ],
+  "sections": [
+    {
+      "id": "roe",
+      "icon": "📜",
+      "title": "Rules of Engagement",
+      "color": "green",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Rules of Engagement (RoE) are the formal agreement between the penetration tester and the client that defines exactly how the engagement will be conducted. They are agreed and signed before a single test is run. Without RoE, the tester has no legal protection."
+        },
+        {
+          "type": "subheading",
+          "content": "What RoE Must Cover"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "🎯",
+              "title": "Scope",
+              "description": "Exact IP ranges, domains, applications and systems that are in scope. Anything not listed is out of scope — testing it is unauthorised.",
+              "badge": "Critical"
+            },
+            {
+              "icon": "🕐",
+              "title": "Testing Window",
+              "description": "When testing may take place. Avoids disrupting critical business periods (month-end, peak trading hours). May specify 'out of hours only' for high-risk tests.",
+              "badge": "Operational"
+            },
+            {
+              "icon": "🛠️",
+              "title": "Permitted Techniques",
+              "description": "What the tester is allowed to do. Social engineering, DoS testing, physical access testing — each requires explicit permission. What is not listed is not permitted.",
+              "badge": "Legal boundary"
+            },
+            {
+              "icon": "📞",
+              "title": "Emergency Contacts",
+              "description": "Who to call if the test causes an unintended outage, or if the tester discovers an active breach by a third party. Includes 24/7 contact numbers.",
+              "badge": "Safety net"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚠️ The Authorisation Letter",
+          "content": "The tester should carry a signed authorisation letter (sometimes called a 'get out of jail free' letter) at all times during the engagement. If law enforcement or the client's IT team detects the testing activity and challenges the tester, this document proves the activity is authorised.",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "icon": "📸",
+      "title": "Evidence Gathering",
+      "color": "emerald",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Throughout the engagement, the tester must systematically document everything. Evidence supports the findings in the report and proves to the client that vulnerabilities were genuinely exploited — not just theorised. Good evidence also protects the tester legally."
+        },
+        {
+          "type": "subheading",
+          "content": "Types of Evidence to Capture"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Screenshots — capture tool output, successful exploitation, and data accessed. Timestamp screenshots where possible.",
+            "Command history — keep a full log of every command run during the test, with timestamps.",
+            "Network captures — Wireshark pcap files showing attack traffic, useful for reproducing findings.",
+            "Tool output logs — save raw Nmap, Nessus, Burp Suite and Metasploit output files.",
+            "Proof of exploitation — e.g. a screenshot showing access to a sensitive file, or the output of 'whoami' showing root/SYSTEM access.",
+            "Notes — keep real-time notes of what was tested, when, and what was found. These become the basis of the report."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "🔒 Handling Evidence Securely",
+          "content": "Evidence gathered during a penetration test — screenshots, data accessed, credentials found — must be handled as sensitive data. It should be encrypted at rest, not stored on personal devices, and deleted securely when the engagement is complete (as agreed in the contract). GDPR applies to any personal data encountered during the test.",
+          "color": "emerald"
+        }
+      ]
+    },
+    {
+      "id": "report-structure",
+      "icon": "📋",
+      "title": "Report Structure",
+      "color": "green",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "The penetration test report is the primary deliverable — it is what the client receives in exchange for the engagement. A good report communicates findings clearly to both technical and non-technical audiences. It must be actionable: the client should know exactly what to fix and in what order."
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "📄",
+              "title": "Executive Summary",
+              "description": "Written for senior management and non-technical stakeholders. Summarises the overall risk posture, number and severity of findings, and the most critical issues in plain language. No technical jargon. Typically 1–2 pages.",
+              "badge": "Non-technical"
+            },
+            {
+              "icon": "🔬",
+              "title": "Methodology",
+              "description": "Describes how the test was conducted — the phases followed, tools used, and approach taken. Allows the findings to be understood in context and provides evidence that the test was thorough and repeatable.",
+              "badge": "Context"
+            },
+            {
+              "icon": "⚠️",
+              "title": "Technical Findings",
+              "description": "Detailed writeup of each vulnerability found. Includes: vulnerability name, CVSS score, affected systems, evidence (screenshots), step-by-step reproduction steps, and business impact.",
+              "badge": "Technical"
+            },
+            {
+              "icon": "✅",
+              "title": "Recommendations",
+              "description": "For each finding, a clear remediation recommendation. Prioritised by severity. Should be specific and actionable — not 'improve security' but 'patch Apache to version 2.4.54' or 'disable SMBv1 on all Windows servers'.",
+              "badge": "Actionable"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Technical Finding Format"
+        },
+        {
+          "type": "definition",
+          "label": "Vulnerability Name",
+          "content": "e.g. 'Apache HTTP Server Path Traversal (CVE-2021-41773)' — name, CVE reference, and affected system."
+        },
+        {
+          "type": "definition",
+          "label": "CVSS Score & Severity",
+          "content": "e.g. 'CVSS 9.8 — Critical' — the standardised severity rating with justification."
+        },
+        {
+          "type": "definition",
+          "label": "Evidence",
+          "content": "Screenshots, command output, and proof of exploitation — shows the finding is real, not theoretical."
+        },
+        {
+          "type": "definition",
+          "label": "Business Impact",
+          "content": "What could an attacker actually achieve? Data breach? Service disruption? This converts technical risk into business risk that management can act on."
+        },
+        {
+          "type": "definition",
+          "label": "Recommendation",
+          "content": "Specific, actionable fix. Include: what to do, how to do it, and a suggested priority/timeline."
+        }
+      ]
+    },
+    {
+      "id": "cvss",
+      "icon": "📊",
+      "title": "CVSS Risk Ratings",
+      "color": "emerald",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "CVSS (Common Vulnerability Scoring System) provides a standardised severity rating for each vulnerability. It allows clients to prioritise remediation by focusing on the highest-risk issues first."
+        },
+        {
+          "type": "table",
+          "headers": ["Severity", "CVSS Score", "Action Required"],
+          "rows": [
+            ["Critical", "9.0 – 10.0", "Immediate remediation — patch or mitigate within 24–48 hours"],
+            ["High", "7.0 – 8.9", "Urgent — remediate within days, not weeks"],
+            ["Medium", "4.0 – 6.9", "Planned remediation — address in next maintenance cycle"],
+            ["Low", "0.1 – 3.9", "Low priority — monitor and remediate opportunistically"],
+            ["Informational", "0.0", "No direct risk — best practice recommendation"]
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "CVSS Scoring Factors"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Attack Vector — how is the vulnerability exploited? Network (highest impact) vs Physical (lowest impact).",
+            "Attack Complexity — how difficult is exploitation? Low complexity = higher score.",
+            "Privileges Required — does the attacker need to be authenticated? No privileges required = higher score.",
+            "User Interaction — does a user need to click something? None required = higher score.",
+            "Impact on Confidentiality, Integrity and Availability — each rated None / Low / High."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "responsible-disclosure",
+      "icon": "🤝",
+      "title": "Responsible Disclosure",
+      "color": "green",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "If a penetration tester or security researcher finds a vulnerability outside a formal engagement, responsible disclosure is the ethical standard for reporting it."
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "📧",
+              "title": "1. Private Notification",
+              "description": "Contact the affected organisation's security team privately — many have a security.txt file or HackerOne page. Do not exploit the vulnerability or access data beyond what is needed to confirm it exists.",
+              "badge": "First step"
+            },
+            {
+              "icon": "⏳",
+              "title": "2. Disclosure Window",
+              "description": "Give the organisation a reasonable time to patch — typically 90 days (Google Project Zero standard). Agree on a timeline and stick to it.",
+              "badge": "90 days"
+            },
+            {
+              "icon": "🔓",
+              "title": "3. Public Disclosure",
+              "description": "After the patch is released (or the window expires), publish the vulnerability details. This creates accountability and helps other organisations assess their risk.",
+              "badge": "After patch"
+            },
+            {
+              "icon": "🚫",
+              "title": "What NOT to Do",
+              "description": "Do not sell the vulnerability, exploit it for personal gain, publish it immediately without notice, or use it to demand payment from the organisation (this is extortion).",
+              "badge": "Avoid"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

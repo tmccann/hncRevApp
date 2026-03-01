@@ -1,0 +1,269 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: What are the five phases of the ethical hacking lifecycle in the correct order?",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Phase 1" },
+      { "id": "a2", "text": "Phase 2" },
+      { "id": "a3", "text": "Phase 3" },
+      { "id": "a4", "text": "Phase 4" },
+      { "id": "a5", "text": "Phase 5" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Exploitation — actively attempting to gain access using discovered vulnerabilities" },
+      { "id": "b2", "text": "Reporting — documenting findings, risk ratings and remediation recommendations" },
+      { "id": "b3", "text": "Reconnaissance — gathering information about the target" },
+      { "id": "b4", "text": "Maintaining Access — testing persistence mechanisms (in authorised tests)" },
+      { "id": "b5", "text": "Scanning — probing the target to identify open ports, services and vulnerabilities" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b5" },
+      { "a": "a3", "b": "b1" },
+      { "a": "a4", "b": "b4" },
+      { "a": "a5", "b": "b2" }
+    ],
+    "explanation": "The ethical hacking lifecycle follows five phases: Reconnaissance (information gathering) → Scanning (active probing) → Exploitation (gaining access) → Maintaining Access (persistence testing) → Reporting (documenting findings). Each phase builds on the previous one. In practice, penetration testers may move between phases iteratively rather than strictly linearly."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: What is the primary goal of the reconnaissance phase?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To scan all open ports on the target network" },
+      { "id": "b", "text": "To gather as much information as possible about the target without directly interacting with their systems" },
+      { "id": "c", "text": "To exploit the first vulnerability found" },
+      { "id": "d", "text": "To install monitoring tools on the target system" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Reconnaissance is the information gathering phase. The goal is to build a detailed picture of the target — their infrastructure, employees, technologies, and potential weaknesses — ideally without triggering any alarms. The more information gathered in this phase, the more targeted and effective the later phases become."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: What happens during the scanning phase?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The tester searches the internet for information about the target organisation" },
+      { "id": "b", "text": "The tester actively probes the target's systems to identify open ports, running services, operating systems and vulnerabilities" },
+      { "id": "c", "text": "The tester attempts to gain administrator access to the target network" },
+      { "id": "d", "text": "The tester writes the final report for the client" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Scanning is the first phase where the tester directly interacts with the target systems. It uses tools like Nmap to discover what ports are open, what services are running, what operating systems are in use, and what vulnerabilities may be present. This is the phase where the tester starts appearing in firewall logs and intrusion detection systems."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: What is the goal of the exploitation phase?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To list all vulnerabilities found during scanning" },
+      { "id": "b", "text": "To actively leverage vulnerabilities to gain unauthorised access — demonstrating their real-world exploitability" },
+      { "id": "c", "text": "To patch the vulnerabilities found during scanning" },
+      { "id": "d", "text": "To set up monitoring on the target's network" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Exploitation is where the tester attempts to actually use the vulnerabilities found in the scanning phase to gain access. This might involve exploiting a software vulnerability, using stolen credentials, bypassing authentication, or using social engineering. The goal is to demonstrate that the vulnerability is genuinely exploitable — not just theoretical — and to understand the potential impact."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: What does the 'maintaining access' phase test in an authorised penetration test?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Whether the tester can stay logged into the VPN for the duration of the test" },
+      { "id": "b", "text": "Whether an attacker could establish persistent access — backdoors, rootkits, or persistent credentials — that survive reboots and security scans" },
+      { "id": "c", "text": "Whether the client's IT team can maintain their normal operations during the test" },
+      { "id": "d", "text": "Whether the tester's tools remain undetected by antivirus software" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Maintaining access tests whether a real attacker could establish a persistent foothold — installing a backdoor, creating hidden admin accounts, or deploying a rootkit that survives system reboots and security scans. This phase determines how long an attacker could maintain access before being detected, which has major implications for the extent of damage they could cause."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: Why is the reporting phase considered the most important deliverable of a penetration test?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because it is the only phase that clients pay for" },
+      { "id": "b", "text": "Because without a clear report, the client cannot understand what was found, the real risk, or how to fix it — the test has no value without actionable findings" },
+      { "id": "c", "text": "Because the report is required by law to be submitted to the ICO" },
+      { "id": "d", "text": "Because writing the report takes the longest time of all phases" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The report transforms technical findings into business value. It tells the client what was found, how it was exploited, what the real risk is (using a rating like CVSS), and — critically — how to fix each issue. A penetration test that finds critical vulnerabilities but produces a poor report leaves the client unable to prioritise remediation. The report is the product the client receives."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: What is responsible disclosure?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Publishing vulnerability details publicly immediately after discovery to force organisations to patch quickly" },
+      { "id": "b", "text": "Privately reporting a vulnerability to the affected organisation and giving them time to patch it before any public disclosure" },
+      { "id": "c", "text": "Selling vulnerability information to the highest bidder" },
+      { "id": "d", "text": "Reporting all vulnerabilities directly to the police" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Responsible disclosure (also called coordinated disclosure) means privately informing the organisation of a vulnerability and giving them a reasonable time window (typically 90 days) to develop and release a patch before any public disclosure. This protects users while still creating accountability. It contrasts with 'full disclosure' (immediate public release) and 'zero-day selling' (selling to criminal or government actors)."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: In which phase would a penetration tester use Nmap?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Reconnaissance" },
+      { "id": "b", "text": "Exploitation" },
+      { "id": "c", "text": "Scanning" },
+      { "id": "d", "text": "Reporting" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Nmap (Network Mapper) is the industry-standard port scanning tool used in the scanning phase. It identifies open ports, running services, service versions, operating systems, and can run vulnerability scripts. The scanning phase is where the tester first actively probes the target's systems — Nmap is typically the first tool deployed in this phase."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: What is a zero-day vulnerability?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A vulnerability that has been patched for zero days — i.e. a very recent patch" },
+      { "id": "b", "text": "A vulnerability that is unknown to the software vendor and has no patch available — attackers can exploit it with no defence" },
+      { "id": "c", "text": "A vulnerability that only works for the first 24 hours after discovery" },
+      { "id": "d", "text": "A vulnerability found during the first day of a penetration test" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A zero-day vulnerability is one that is unknown to the software vendor — 'zero days' refers to the time the vendor has had to fix it (none). Because no patch exists, there is no defence for systems running the affected software. Zero-days are extremely valuable to attackers, nation-states and security researchers alike, and are sold for significant sums on the dark web and through government channels."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: What is the difference between a black box, white box and grey box penetration test?",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Black Box" },
+      { "id": "a2", "text": "White Box" },
+      { "id": "a3", "text": "Grey Box" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "The tester has full knowledge of the environment — network diagrams, source code, credentials. Most thorough, most efficient." },
+      { "id": "b2", "text": "The tester has no prior knowledge — simulates an external attacker with no inside information." },
+      { "id": "b3", "text": "The tester has partial knowledge — simulates an insider threat or authenticated user with limited credentials." }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b3" }
+    ],
+    "explanation": "Black box simulates an external attacker (no knowledge). White box gives the tester full access to documentation and code (most thorough). Grey box simulates an insider or authenticated user. The choice depends on what threat the client wants to simulate — external attacks favour black box; internal threat assessment or code review favours white box."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why do penetration testers follow a structured methodology rather than simply attacking systems at random?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because regulations require a specific order of testing" },
+      { "id": "b", "text": "Because a structured methodology ensures thoroughness, reduces the risk of missing vulnerabilities, and makes findings repeatable and defensible in the final report" },
+      { "id": "c", "text": "Because random testing is illegal under the Computer Misuse Act" },
+      { "id": "d", "text": "Because structured methodology allows testers to finish faster" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A methodology provides a framework that ensures all attack surfaces are considered, findings are traceable to specific test steps, and the test is repeatable. Without methodology, a tester might find critical vulnerabilities by luck but miss others entirely. The structure also makes the report credible — clients and auditors can understand exactly what was tested and how."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: Why does reconnaissance come before scanning in the ethical hacking lifecycle?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because scanning tools require reconnaissance data as input to function" },
+      { "id": "b", "text": "Because gathering information first allows scanning to be targeted and stealthy — scanning every possible IP wastes time and triggers alarms" },
+      { "id": "c", "text": "Because reconnaissance is passive and therefore must be completed before active testing begins" },
+      { "id": "d", "text": "It does not matter — the phases can be done in any order" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Reconnaissance produces intelligence that makes scanning efficient and focused. Without recon, a tester might scan the wrong IP ranges, miss key subdomains, or trigger excessive alerts. A real attacker spends significant time in reconnaissance precisely because it makes subsequent phases far more effective — they know exactly what to look for when they start scanning."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: Why might a penetration tester skip the 'maintaining access' phase in some engagements?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because it is optional in all penetration tests" },
+      { "id": "b", "text": "Because some clients only want to know if systems can be compromised initially, or because installing persistence mechanisms on production systems carries too high a risk of causing disruption" },
+      { "id": "c", "text": "Because maintaining access is only tested in criminal investigations" },
+      { "id": "d", "text": "Because modern systems make it impossible to maintain persistent access" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Scope and risk determine which phases are included. Some clients want 'can you get in?' not 'how long can you stay?'. Installing rootkits or backdoors on production systems risks causing stability issues, triggering security tools, or interfering with normal operations. Clients may explicitly exclude this phase, or the tester may recommend against it in a production environment."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: Why is the exploitation phase conducted even when vulnerabilities are already known from scanning?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because scanning results are always inaccurate and must be verified by exploitation" },
+      { "id": "b", "text": "Because a vulnerability being present does not necessarily mean it is exploitable in practice — compensating controls, misconfigurations, or version differences may prevent exploitation" },
+      { "id": "c", "text": "Because clients require all vulnerabilities to be exploited before they will believe the report" },
+      { "id": "d", "text": "Because scanning cannot detect vulnerabilities — only exploitation can find them" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A scanner might report a vulnerability based on a banner or version number, but whether it can actually be exploited depends on many factors — firewall rules, application-level controls, patching, or configuration. By attempting exploitation, the tester confirms which vulnerabilities represent real risk. This is more valuable than a list of potential vulnerabilities — it shows what an attacker could actually do."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: Why should a penetration tester notify the client immediately if they discover evidence of an active ongoing attack by a third party during a test?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because the tester is legally obliged to report all crimes they witness" },
+      { "id": "b", "text": "Because the client needs to know their systems are being actively compromised so they can respond — continuing the test without disclosure could allow further damage and would be ethically wrong" },
+      { "id": "c", "text": "Because the tester must stop work immediately and will not be paid for the rest of the engagement" },
+      { "id": "d", "text": "Because the active attacker might interfere with the tester's tools" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Discovering an active intrusion during a penetration test creates an ethical obligation to notify the client immediately. Continuing without telling them allows real damage to occur. Most Rules of Engagement include an emergency contact procedure specifically for this scenario. The tester may be required to stop certain activities to avoid contaminating evidence if the client decides to pursue a criminal investigation."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 3 — BUILD THE ANSWER: A question asks you to describe the ethical hacking lifecycle. Which answer is most complete?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Hacking, scanning, and reporting." },
+      { "id": "b", "text": "The lifecycle has five phases: Reconnaissance (gathering information about the target), Scanning (probing systems for open ports and vulnerabilities), Exploitation (actively attempting to gain access), Maintaining Access (testing persistence), and Reporting (documenting findings with risk ratings and remediation advice). Each phase informs the next." },
+      { "id": "c", "text": "You scan for vulnerabilities and write a report." },
+      { "id": "d", "text": "You hack the system and tell the client what you found." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A complete answer names all five phases in order, describes what happens in each, and notes how they connect (each phase informs the next). Simply listing phase names scores partial marks — explaining the purpose of each phase demonstrates understanding and scores full marks."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each phase of the lifecycle to a realistic example of an action taken in that phase.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Reconnaissance" },
+      { "id": "a2", "text": "Scanning" },
+      { "id": "a3", "text": "Exploitation" },
+      { "id": "a4", "text": "Reporting" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Running Nmap to discover that port 22 (SSH) is open on a server and identify the SSH version" },
+      { "id": "b2", "text": "Using a known exploit to leverage an outdated SSH version and gain root access to the server" },
+      { "id": "b3", "text": "Searching LinkedIn to identify the names and roles of the client's IT administrators" },
+      { "id": "b4", "text": "Writing a report that rates the SSH vulnerability as Critical (CVSS 9.8) and recommends immediate patching" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b4" }
+    ],
+    "explanation": "Each action illustrates how the phase works in practice: LinkedIn research is passive reconnaissance; Nmap is active scanning; using a known exploit is exploitation; writing the risk-rated report is the reporting phase. Matching the concept to a real example demonstrates applied understanding, which is what exam mark schemes reward."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: Why is 'Reconnaissance' considered the most important phase of the lifecycle?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because it takes the longest time" },
+      { "id": "b", "text": "Because the quality of information gathered in reconnaissance directly determines how effective all subsequent phases are — poor recon leads to missed attack vectors and wasted effort in later phases" },
+      { "id": "c", "text": "Because it is the only phase that does not risk causing system damage" },
+      { "id": "d", "text": "Because it is the only phase covered by the Rules of Engagement" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Reconnaissance is the foundation everything else builds on. If a tester misses a subdomain in recon, they will never scan it. If they miss a key employee in recon, they will never target their credentials. Real attackers invest heavily in reconnaissance for exactly this reason — thorough information gathering reveals the attack paths that will be most effective. Good recon turns a blunt attack into a surgical one."
+  }
+]

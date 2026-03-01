@@ -67,6 +67,17 @@ const CourseHome = () => {
       color: "from-rose-500 to-pink-600",
       icon: "🔒",
     },
+    {
+      id: "ethical-hacking",
+      title: "Ethical Hacking",
+      description:
+        "Ethical hacking lifecycle, reconnaissance, scanning, exploitation and professional reporting",
+      modules: 5,
+      quizzes: 4,
+      progress: 0,
+      color: "from-green-600 to-emerald-700",
+      icon: "🕵️",
+    },
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">

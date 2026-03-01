@@ -1,0 +1,263 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: What is the difference between passive and active reconnaissance?",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Passive Reconnaissance" },
+      { "id": "a2", "text": "Active Reconnaissance" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Directly interacting with the target's systems — sending packets, making requests, or scanning — which may be detected" },
+      { "id": "b2", "text": "Gathering information without directly contacting the target — using publicly available sources — undetectable by the target" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b1" }
+    ],
+    "explanation": "Passive recon uses publicly available information — search engines, social media, WHOIS databases, job adverts — without sending any traffic to the target. Active recon directly interacts with the target — DNS lookups, port scanning, ping sweeps — and may appear in logs or trigger IDS alerts. Passive recon is always safer and is typically conducted first to maximise intelligence before touching the target."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: What does OSINT stand for and what does it involve?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Online Security Intelligence Network Tool — a commercial product for penetration testing" },
+      { "id": "b", "text": "Open Source Intelligence — gathering information about a target from publicly available sources such as search engines, social media, company websites and public records" },
+      { "id": "c", "text": "Operating System Intelligence — identifying what operating systems a target uses" },
+      { "id": "d", "text": "Offensive Security Intelligence Tool — a Kali Linux scanning utility" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "OSINT (Open Source Intelligence) is the collection and analysis of information from publicly available sources. In penetration testing, this includes search engines, LinkedIn, company websites, job adverts (which reveal technology stacks), Companies House, WHOIS records, Shodan, and social media. It is entirely passive — the target has no way to detect OSINT gathering."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: What does the Google advanced operator 'site:' do?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Searches for websites that link to a specific URL" },
+      { "id": "b", "text": "Restricts search results to a specific domain — e.g. site:example.com returns only pages from that domain" },
+      { "id": "c", "text": "Searches for a specific site's IP address" },
+      { "id": "d", "text": "Shows the cached version of a website" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The 'site:' operator limits Google results to a specific domain. For example, 'site:targetcompany.com filetype:pdf' returns PDF files hosted on that domain. This is useful in reconnaissance to discover subdomains, exposed documents, login portals, and other pages the target may not realise are publicly indexed."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: Match each Google advanced operator to its function.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "site:" },
+      { "id": "a2", "text": "filetype:" },
+      { "id": "a3", "text": "inurl:" },
+      { "id": "a4", "text": "intitle:" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Returns pages where the search term appears in the page title" },
+      { "id": "b2", "text": "Returns pages where the search term appears in the URL" },
+      { "id": "b3", "text": "Returns results of a specific file type (e.g. pdf, xls, doc)" },
+      { "id": "b4", "text": "Restricts results to a specific domain" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "These operators are the core of 'Google Dorking' — using Google's own indexing against a target. 'site:company.com filetype:xls' might find exposed spreadsheets. 'inurl:admin' might reveal admin portals. 'intitle:index.of' can find misconfigured directory listings. These are legitimate OSINT tools — all information found is publicly available and Google-indexed."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: What is WHOIS and what information can it reveal?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A network scanning tool that identifies open ports on a target" },
+      { "id": "b", "text": "A public database that stores registration information for domain names — including registrant name, organisation, email, phone, and name servers" },
+      { "id": "c", "text": "A social engineering technique for gathering employee information" },
+      { "id": "d", "text": "A tool that identifies which CMS a website uses" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "WHOIS is a publicly accessible database containing domain registration records. A query for a target domain can reveal: the registrant's name and organisation, technical and administrative contact details (email, phone), the domain registrar, creation and expiry dates, and name servers. This information is invaluable for reconnaissance — though many organisations now use privacy protection services to mask registrant details."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: What is DNS enumeration and what information can it reveal?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Scanning a DNS server for open ports" },
+      { "id": "b", "text": "Querying DNS records to map an organisation's infrastructure — discovering subdomains, mail servers, IP addresses and name servers" },
+      { "id": "c", "text": "Attacking a DNS server to take it offline" },
+      { "id": "d", "text": "Registering a domain name similar to the target's" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "DNS enumeration queries different record types to build a map of the target's infrastructure. A records reveal IP addresses. MX records reveal mail servers. NS records reveal name servers. CNAME records reveal aliases and subdomains. A DNS zone transfer (if misconfigured to allow it) can dump the entire DNS database, revealing all hosts in the domain — a major reconnaissance goldmine."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: What is Shodan and why is it useful in reconnaissance?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A social media platform used to gather employee information" },
+      { "id": "b", "text": "A search engine that indexes internet-connected devices — servers, cameras, industrial systems — showing open ports, banners and vulnerabilities" },
+      { "id": "c", "text": "A penetration testing tool used for active port scanning" },
+      { "id": "d", "text": "A dark web marketplace for stolen credentials" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Shodan is a search engine for internet-connected devices. Unlike Google which indexes web content, Shodan crawls internet-facing systems and records their open ports, service banners, SSL certificates, and sometimes known vulnerabilities. A search for a company's IP range on Shodan can reveal exposed services, old systems, and devices the organisation may not realise are publicly accessible — all without touching their systems."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: Which of the following are examples of passive reconnaissance? (Choose three)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Searching LinkedIn for the target's IT staff and technology stack" },
+      { "id": "b", "text": "Running an Nmap port scan against the target's IP addresses" },
+      { "id": "c", "text": "Using WHOIS to look up the target's domain registration details" },
+      { "id": "d", "text": "Searching Shodan for the target's IP range to find exposed services" }
+    ],
+    "correctAnswer": ["a", "c", "d"],
+    "explanation": "Passive recon involves querying publicly available sources without directly contacting the target. LinkedIn, WHOIS and Shodan are all passive — they use publicly accessible data and the target sees no unusual traffic. Running Nmap sends packets directly to the target's systems, making it active reconnaissance — it will appear in the target's firewall and IDS logs."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: How can job adverts be useful in reconnaissance?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Job adverts reveal nothing useful — they are only for recruitment purposes" },
+      { "id": "b", "text": "Job adverts often reveal the technologies, software and security tools a company uses — a 'Senior Linux Administrator' advert tells an attacker the organisation runs Linux servers" },
+      { "id": "c", "text": "Job adverts are only useful if they list employee salaries" },
+      { "id": "d", "text": "Job adverts can be used to contact employees directly for social engineering" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Job adverts are a rich OSINT source. An advert for a 'Cisco Network Engineer' reveals the network stack. 'Experience with Salesforce CRM required' reveals the CRM platform. 'Python/Django developer' reveals the web framework. Security job adverts listing specific tools (Splunk, CrowdStrike, Palo Alto) reveal the security stack — allowing an attacker to focus on vulnerabilities in those specific products."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: What is social engineering in the context of reconnaissance?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Writing malware that spreads through social media platforms" },
+      { "id": "b", "text": "Manipulating people psychologically to extract information — such as calling the helpdesk pretending to be an employee to learn about internal systems" },
+      { "id": "c", "text": "Using social media purely for passive OSINT without any interaction" },
+      { "id": "d", "text": "Hacking social media accounts to gain intelligence" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Social engineering as a recon technique involves human interaction to extract information. Pretexting (calling as a supplier or new employee), phishing emails probing for information, or vishing (voice calls) can reveal internal system names, employee names, software used, and security procedures. It crosses from passive to active recon because it involves direct interaction — and in a penetration test, it requires specific authorisation."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why do attackers invest significant time in reconnaissance before attempting to exploit a target?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because regulations require reconnaissance before exploitation" },
+      { "id": "b", "text": "Because targeted attacks based on detailed intelligence are far more likely to succeed and avoid detection than untargeted scanning — reconnaissance turns a noisy blunt attack into a precise surgical one" },
+      { "id": "c", "text": "Because exploitation tools require reconnaissance data as direct input" },
+      { "id": "d", "text": "Because reconnaissance is faster than exploitation" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "An attacker who knows the target's technology stack, employee names, IP ranges, and email format can craft a highly targeted phishing email, exploit a specific version of software they know is deployed, or impersonate a specific employee. This precision dramatically increases success rate and reduces noise in logs. Untargeted attacks trigger more alarms and have lower success rates — reconnaissance is the investment that makes exploitation efficient."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: Why is a DNS zone transfer a significant security misconfiguration?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because it slows down the DNS server and causes network outages" },
+      { "id": "b", "text": "Because it allows an attacker to download the entire DNS database — revealing all hostnames, IP addresses and server roles in the domain in a single query" },
+      { "id": "c", "text": "Because it changes DNS records and redirects traffic to attacker-controlled servers" },
+      { "id": "d", "text": "Because it exposes the domain registrar's login credentials" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A zone transfer (AXFR query) is designed to replicate DNS records between primary and secondary DNS servers. If misconfigured to respond to any requester, an attacker can download the entire DNS zone — a complete inventory of hostnames, IP addresses, mail servers, and internal server names. This dramatically accelerates the scanning phase. Zone transfers should be restricted to authorised secondary DNS servers only."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: Why should a penetration tester document every piece of information gathered during reconnaissance, even details that seem irrelevant?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because clients pay per piece of information gathered" },
+      { "id": "b", "text": "Because information that seems unimportant alone may become significant when combined with other findings — and comprehensive documentation supports the final report" },
+      { "id": "c", "text": "Because all OSINT data must be reported to the ICO" },
+      { "id": "d", "text": "Because reconnaissance data expires after 24 hours and must be recorded immediately" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Intelligence analysis is about combining data points. An employee's name (from LinkedIn) combined with the company's email format (from WHOIS or email headers) plus a password exposed in a previous breach (from HaveIBeenPwned) might give a tester everything needed to attempt credential stuffing. No single piece of information is necessarily decisive — the combination is what matters."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: Why are companies' own websites often a significant source of reconnaissance data?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because companies deliberately post their vulnerabilities on their websites" },
+      { "id": "b", "text": "Because websites reveal technology stack (page source, cookies, headers), employee names and roles, physical locations, partners, and sometimes exposes misconfigured files or directories" },
+      { "id": "c", "text": "Because all websites are required to publish their security policies publicly" },
+      { "id": "d", "text": "Websites contain no useful reconnaissance information for attackers" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A company website inadvertently reveals: the web framework (page source, generator meta tags), the server (HTTP response headers), employee names and email addresses (team pages, press releases), physical office locations, technology partners (logos, integrations), and sometimes exposed directories or admin portals. Even HTML comments left by developers can reveal internal system names and developer notes."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: Why must a penetration tester be careful about what they do with OSINT data gathered about individuals?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because OSINT data is always copyrighted by the platform it was gathered from" },
+      { "id": "b", "text": "Because personal data about employees is protected under GDPR — gathering and storing it must be justified, proportionate, and handled securely as part of the engagement" },
+      { "id": "c", "text": "Because individuals can sue for defamation if their information is used in a report" },
+      { "id": "d", "text": "There are no restrictions — all publicly available data can be used without limitation" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Even publicly available personal data is subject to GDPR. Penetration testers processing personal data about employees (names, emails, social media profiles) during an engagement must do so lawfully — the client contract typically provides the legal basis. Data must be handled securely, used only for the engagement, and not retained longer than necessary. This is particularly important if the test involves social engineering specific named individuals."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 3 — BUILD THE ANSWER: A client asks 'What can an attacker find out about us before they even scan our network?' Which answer is most complete?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Not much — real information only comes from scanning." },
+      { "id": "b", "text": "Using passive OSINT, an attacker could discover your IP ranges and domain registration details via WHOIS, your technology stack from job adverts and website source code, employee names and roles from LinkedIn, exposed services via Shodan, and potentially leaked credentials from breach databases — all without sending a single packet to your network." },
+      { "id": "c", "text": "They can find your company name on Google." },
+      { "id": "d", "text": "Only information you have deliberately made public on your website." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A complete answer demonstrates the breadth of OSINT: WHOIS, Shodan, LinkedIn, job adverts, website analysis, and breach databases are all passive sources. Mentioning that this is achieved 'without sending a single packet' demonstrates understanding of why passive recon is so powerful and undetectable. This answer would score highly because it names specific sources and explains the types of data each reveals."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each OSINT tool or technique to what it specifically reveals.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "WHOIS lookup" },
+      { "id": "a2", "text": "Shodan" },
+      { "id": "a3", "text": "Google Dorking (filetype:pdf site:company.com)" },
+      { "id": "a4", "text": "LinkedIn" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Employee names, job titles, technology skills listed in profiles, and the company's technology stack from job adverts" },
+      { "id": "b2", "text": "Domain registrant details, technical contacts, name servers, and registration dates" },
+      { "id": "b3", "text": "Internet-facing devices, open ports, service banners, and sometimes exposed credentials in device configurations" },
+      { "id": "b4", "text": "Publicly accessible PDF documents hosted on the target domain — potentially including internal reports, proposals or presentations" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a3", "b": "b4" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Each OSINT source has a specific type of intelligence value. In an exam, naming the tool is worth one mark — explaining what it reveals is worth the remaining marks. Understanding the specific output of each source demonstrates applied knowledge rather than just list memorisation."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: Explain why footprinting is described as the 'most critical' phase of ethical hacking.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because it takes the most time" },
+      { "id": "b", "text": "Because the intelligence gathered determines the quality and targeting of every subsequent phase — comprehensive footprinting identifies the precise vulnerabilities, systems and people to target, making exploitation far more likely to succeed while generating less noise" },
+      { "id": "c", "text": "Because it is the only phase that does not break any laws" },
+      { "id": "d", "text": "Because it produces the most data for the final report" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The best answers connect footprinting to its downstream impact on all other phases. It is 'critical' not just because it gathers data, but because the quality of that data directly determines whether later phases succeed. Poor footprinting = wasted effort in scanning = missed attack vectors in exploitation. Good footprinting = targeted scanning = efficient exploitation = a more complete and useful penetration test."
+  }
+]

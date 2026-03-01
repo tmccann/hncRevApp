@@ -1,0 +1,57 @@
+[
+  {
+    "id": "module-1",
+    "number": 1,
+    "title": "Ethical Hacking & the Law",
+    "description": "What makes hacking ethical, the legal framework, authorisation, scope and the difference between white, grey and black hat hackers",
+    "topics": ["Computer Misuse Act", "White/Grey/Black Hat", "Authorisation", "Rules of Engagement", "Scope", "Pen Test vs Vulnerability Assessment"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-green-600 to-emerald-700"
+  },
+  {
+    "id": "module-2",
+    "number": 2,
+    "title": "Ethical Hacking Lifecycle",
+    "description": "The five phases of ethical hacking — reconnaissance, scanning, exploitation, maintaining access, and reporting — and the methodology behind each",
+    "topics": ["Reconnaissance", "Scanning", "Exploitation", "Maintaining Access", "Reporting", "CEH Methodology", "Responsible Disclosure"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-green-600 to-emerald-700"
+  },
+  {
+    "id": "module-3",
+    "number": 3,
+    "title": "Footprinting & Reconnaissance",
+    "description": "Passive and active reconnaissance techniques — OSINT, Google advanced operators, WHOIS, DNS enumeration, Shodan and social engineering",
+    "topics": ["Passive Recon", "Active Recon", "OSINT", "Google Dorks", "WHOIS", "DNS Enumeration", "Shodan", "Social Engineering"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-green-600 to-emerald-700"
+  },
+  {
+    "id": "module-4",
+    "number": 4,
+    "title": "Scanning",
+    "description": "Network and vulnerability scanning — port scanning with Nmap, scan types, open/closed/filtered ports, banner grabbing and CVSS scoring",
+    "topics": ["Port Scanning", "Nmap", "SYN Scan", "TCP Connect", "UDP Scan", "Vulnerability Scanning", "Banner Grabbing", "CVSS", "OS Fingerprinting"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-green-600 to-emerald-700"
+  },
+  {
+    "id": "module-5",
+    "number": 5,
+    "title": "Documentation & Report Writing",
+    "description": "Rules of engagement, scope definition, evidence gathering, report structure, risk ratings and how to present findings to a client",
+    "topics": ["Rules of Engagement", "Scope", "Evidence Gathering", "Executive Summary", "Technical Findings", "Risk Ratings", "CVSS", "Recommendations"],
+    "hasSummary": true,
+    "hasQuiz": false,
+    "checkpoints": [],
+    "color": "from-green-600 to-emerald-700"
+  }
+]

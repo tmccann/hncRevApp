@@ -12,6 +12,7 @@ import CompFundamentals from "./pages/CompFundamentals";
 import EthicsModules from "./pages/EthicsModules";
 import TroubleshootingModules from "./pages/TroubleshootingModules";
 import DataSecurityModules from "./pages/DataSecurityModules";
+import EthicalHackingModules from "./pages/EthicalHackingModules";
 import ModuleSummary from "./components/ModuleSummary";
 import Quiz from "./components/Quiz";
 
@@ -22,6 +23,7 @@ import compModulesData from "./data/comp-fundamentals/modules.json";
 import ethicsModulesData from "./data/ethics/modules.json";
 import troubleshootingModulesData from "./data/troubleshooting/modules.json";
 import dataSecurityModulesData from "./data/data-security/modules.json";
+import ethicalHackingModulesData from "./data/ethical-hacking/modules.json";
 
 // CCNA Vite glob imports
 const ccnaSummaryFiles = import.meta.glob("./data/ccna/*-summary.json", {
@@ -74,6 +76,16 @@ const dataSecuritySummaryFiles = import.meta.glob(
 );
 const dataSecurityQuizFiles = import.meta.glob(
   "./data/data-security/*-quiz.json",
+  { eager: true }
+);
+
+// Ethical Hacking Vite glob imports
+const ethicalHackingSummaryFiles = import.meta.glob(
+  "./data/ethical-hacking/*-summary.json",
+  { eager: true }
+);
+const ethicalHackingQuizFiles = import.meta.glob(
+  "./data/ethical-hacking/*-quiz.json",
   { eager: true }
 );
 
@@ -147,6 +159,18 @@ Object.keys(dataSecuritySummaryFiles).forEach((path) => {
 Object.keys(dataSecurityQuizFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
   dataSecurityQuizMap[filename.replace("-quiz", "")] = dataSecurityQuizFiles[path].default;
+});
+
+// Convert Ethical Hacking glob results to lookup maps
+const ethicalHackingSummaryMap = {};
+const ethicalHackingQuizMap = {};
+Object.keys(ethicalHackingSummaryFiles).forEach((path) => {
+  const filename = path.split("/").pop().replace(".json", "");
+  ethicalHackingSummaryMap[filename.replace("-summary", "")] = ethicalHackingSummaryFiles[path].default;
+});
+Object.keys(ethicalHackingQuizFiles).forEach((path) => {
+  const filename = path.split("/").pop().replace(".json", "");
+  ethicalHackingQuizMap[filename.replace("-quiz", "")] = ethicalHackingQuizFiles[path].default;
 });
 
 // Dynamic CCNA Module Summary Loader
@@ -507,6 +531,49 @@ const DynamicDataSecurityModuleQuiz = () => {
   );
 };
 
+// Dynamic Ethical Hacking Module Summary Loader
+const DynamicEthicalHackingModuleSummary = () => {
+  const { moduleId } = useParams();
+  const summaryData = ethicalHackingSummaryMap[moduleId];
+  if (!summaryData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Summary Not Found</h1>
+          <p className="text-gray-600 mb-8">This module summary hasn't been created yet.</p>
+          <Link to="/ethical-hacking" className="text-green-700 hover:text-green-800 font-semibold">← Back to Modules</Link>
+        </div>
+      </div>
+    );
+  }
+  return <ModuleSummary data={summaryData} backLink="/ethical-hacking" />;
+};
+
+// Dynamic Ethical Hacking Module Quiz Loader
+const DynamicEthicalHackingModuleQuiz = () => {
+  const { moduleId } = useParams();
+  const quizData = ethicalHackingQuizMap[moduleId];
+  const moduleInfo = ethicalHackingModulesData.find((m) => m.id === moduleId);
+  if (!quizData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This module quiz hasn't been created yet.</p>
+          <Link to="/ethical-hacking" className="text-green-700 hover:text-green-800 font-semibold">← Back to Modules</Link>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <Quiz
+      questions={quizData}
+      title={`Module ${moduleInfo?.number}: ${moduleInfo?.title} Quiz`}
+      description={moduleInfo?.description || ""}
+    />
+  );
+};
+
 function App() {
   return (
     <BrowserRouter>
@@ -547,6 +614,11 @@ function App() {
         <Route path="/data-security" element={<DataSecurityModules />} />
         <Route path="/data-security/:moduleId/summary" element={<DynamicDataSecurityModuleSummary />} />
         <Route path="/data-security/:moduleId/quiz" element={<DynamicDataSecurityModuleQuiz />} />
+
+        {/* Ethical Hacking Course */}
+        <Route path="/ethical-hacking" element={<EthicalHackingModules />} />
+        <Route path="/ethical-hacking/:moduleId/summary" element={<DynamicEthicalHackingModuleSummary />} />
+        <Route path="/ethical-hacking/:moduleId/quiz" element={<DynamicEthicalHackingModuleQuiz />} />
       </Routes>
     </BrowserRouter>
   );

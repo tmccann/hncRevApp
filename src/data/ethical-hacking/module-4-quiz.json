@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: What is the purpose of port scanning?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To intercept and read data packets travelling across a network" },
+      { "id": "b", "text": "To probe a target system to discover which ports are open, what services are running on them, and what software versions are in use" },
+      { "id": "c", "text": "To flood a target with traffic to make it unresponsive" },
+      { "id": "d", "text": "To decrypt encrypted network traffic" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Port scanning probes a target's TCP and UDP ports to determine which are open (a service is listening), closed (no service), or filtered (a firewall is blocking the response). Open ports reveal what services are running — a web server, SSH, database, etc. — and the service version, which may have known vulnerabilities. This information drives the exploitation phase."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: What is Nmap and what is it primarily used for?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A password cracking tool used in the exploitation phase" },
+      { "id": "b", "text": "A network mapping and port scanning tool that discovers hosts, open ports, running services, OS versions and vulnerabilities" },
+      { "id": "c", "text": "A web application vulnerability scanner" },
+      { "id": "d", "text": "A tool for capturing and analysing network packets" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Nmap (Network Mapper) is the industry-standard open-source tool for network discovery and security scanning. It can discover live hosts on a network, enumerate open ports and services, identify operating systems and software versions, and run scripted checks for specific vulnerabilities (using the Nmap Scripting Engine). It is typically the first active tool deployed in the scanning phase."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: What are the three possible states of a port as reported by Nmap?",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Open — a service is actively listening on this port" },
+      { "id": "b", "text": "Encrypted — data on this port is encrypted" },
+      { "id": "c", "text": "Closed — no service is listening but the port is reachable" },
+      { "id": "d", "text": "Filtered — a firewall or packet filter is blocking Nmap's probes" }
+    ],
+    "correctAnswer": ["a", "c", "d"],
+    "explanation": "Nmap reports three main port states: Open (a service is actively accepting connections — the most interesting for an attacker), Closed (no service listening, but the port is accessible — the host is up), and Filtered (Nmap cannot determine the state — typically a firewall is dropping or rejecting probes). 'Encrypted' is not a port state — encryption happens at the application layer."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: What is a SYN scan (also called a stealth scan or half-open scan)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A scan that sends complete TCP connections to every port" },
+      { "id": "b", "text": "A scan that sends a SYN packet and waits for a SYN-ACK response — if received, the port is open — but never completes the full TCP handshake, making it faster and harder to detect in logs" },
+      { "id": "c", "text": "A scan that only works on UDP ports" },
+      { "id": "d", "text": "A scan that floods the target with connection requests to cause a denial of service" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A SYN scan (Nmap -sS) sends a TCP SYN packet to each port. If a SYN-ACK is returned, the port is open. The scanner then sends a RST (reset) to tear down the connection before it fully completes — hence 'half-open'. Because no full connection is established, many older logging systems and firewalls do not log it, making it stealthier than a full TCP connect scan. It requires root/administrator privileges to run."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: What is the difference between a SYN scan and a TCP connect scan?",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "SYN Scan (-sS)" },
+      { "id": "a2", "text": "TCP Connect Scan (-sT)" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Completes the full three-way TCP handshake — more easily logged but does not require special privileges" },
+      { "id": "b2", "text": "Sends SYN, receives SYN-ACK, then RST — never completes the connection — stealthier but requires root privileges" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b1" }
+    ],
+    "explanation": "SYN scans are stealthier (half-open, harder to log) but need elevated privileges to craft raw packets. TCP connect scans use the OS's normal connect() system call — no special privileges needed, but the full connection is established and logged. When running Nmap without root access, TCP connect is the default. With root, SYN scan is preferred for its lower visibility."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: Why is UDP scanning slower and less reliable than TCP scanning?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because UDP ports are always closed on properly secured systems" },
+      { "id": "b", "text": "Because UDP is connectionless — there is no handshake response for an open port, so Nmap must wait for a timeout or ICMP 'port unreachable' message to determine port state" },
+      { "id": "c", "text": "Because Nmap does not support UDP scanning" },
+      { "id": "d", "text": "Because UDP traffic is always encrypted" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "TCP has a built-in response mechanism — a SYN-ACK for open, RST for closed. UDP has none — an open UDP port simply receives the packet and may or may not respond depending on the application. An unreachable UDP port usually generates an ICMP 'port unreachable' message. Rate limiting of ICMP messages means UDP scans are slow. Despite this, UDP scanning is essential — many services (DNS on 53, DHCP on 67/68, SNMP on 161) use UDP exclusively."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: What is banner grabbing?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Downloading a website's header graphics for reconnaissance purposes" },
+      { "id": "b", "text": "Connecting to a service and reading the welcome message it sends — which often reveals the software name and version running on that port" },
+      { "id": "c", "text": "Intercepting authentication tokens from network traffic" },
+      { "id": "d", "text": "Retrieving SSL certificate information from HTTPS services" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "When you connect to many network services, they send a banner — a greeting message that often includes the software name and version. For example, connecting to port 21 might return 'vsftpd 3.0.3' or connecting to port 22 might return 'OpenSSH_8.9'. This version information allows an attacker to look up known CVEs for that specific version and target the exploitation phase precisely."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: What is OS fingerprinting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Using biometric fingerprint scanners to authenticate to target systems" },
+      { "id": "b", "text": "Analysing subtle differences in how a target system responds to network probes to identify its operating system and version" },
+      { "id": "c", "text": "Scanning for fingerprint reader hardware on target devices" },
+      { "id": "d", "text": "Copying the target OS to analyse it offline" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Different operating systems implement the TCP/IP stack slightly differently — variations in TTL values, TCP window sizes, response to malformed packets, and other characteristics create a fingerprint. Nmap's OS detection (-O flag) analyses these responses to identify the target OS and version. Knowing the OS (Windows Server 2019, Ubuntu 22.04, etc.) guides the exploitation phase — different vulnerabilities apply to different operating systems."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: What is the difference between a port scanner and a vulnerability scanner?",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Port Scanner (e.g. Nmap)" },
+      { "id": "a2", "text": "Vulnerability Scanner (e.g. Nessus, OpenVAS)" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Checks discovered services against a database of known vulnerabilities, misconfigurations and CVEs — producing a prioritised list of weaknesses" },
+      { "id": "b2", "text": "Discovers which ports are open and what services are running — does not assess whether those services are vulnerable" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b1" }
+    ],
+    "explanation": "Port scanners discover what is there — open ports and services. Vulnerability scanners assess whether what is there is secure — checking service versions against CVE databases, testing for default credentials, misconfigurations, and missing patches. In practice, a penetration tester uses a port scanner first to map the attack surface, then a vulnerability scanner to prioritise targets before manual exploitation."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: What does CVSS stand for and what is it used for?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Common Vulnerability Scoring System — a standardised framework for rating the severity of security vulnerabilities on a 0–10 scale" },
+      { "id": "b", "text": "Cyber Vulnerability Scanning Software — an open-source vulnerability scanner" },
+      { "id": "c", "text": "Common Vulnerability Scanning Standard — the ISO standard for penetration testing" },
+      { "id": "d", "text": "Critical Vulnerability Summary System — a database of all known malware" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "CVSS (Common Vulnerability Scoring System) provides a standardised numerical score (0–10) for vulnerability severity: 0 = None, 0.1–3.9 = Low, 4.0–6.9 = Medium, 7.0–8.9 = High, 9.0–10.0 = Critical. The score considers factors like attack vector (network vs physical), complexity, privileges required, and impact on confidentiality, integrity and availability. It helps organisations prioritise remediation efforts."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why is a SYN scan considered 'stealthier' than a TCP connect scan, and why does this matter in a penetration test?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SYN scans are encrypted, making them invisible to network monitors" },
+      { "id": "b", "text": "Because many logging systems and firewalls only record completed TCP connections — a SYN scan that never completes the handshake may not appear in connection logs, reducing the chance of detection and alerting the blue team" },
+      { "id": "c", "text": "SYN scans are faster, so they complete before logging systems can record them" },
+      { "id": "d", "text": "SYN scans are stealthier because they use UDP instead of TCP" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "In a penetration test, avoiding detection is often part of the assessment — can the organisation's security team (blue team) detect the test? A SYN scan that generates incomplete connections may evade basic connection logging. However, modern IDS/IPS systems and security information and event management (SIEM) platforms specifically look for patterns of incomplete connections — a SYN scan against 65,000 ports will still be visible to a well-configured IDS."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: Why is version detection (banner grabbing and service fingerprinting) so valuable during the scanning phase?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because version numbers are required to be included in the final penetration test report" },
+      { "id": "b", "text": "Because specific software versions have known CVEs — knowing the exact version allows the tester to search for proven exploits rather than trying every possible attack" },
+      { "id": "c", "text": "Because version information is needed to calculate CVSS scores" },
+      { "id": "d", "text": "Because modern systems always display their version numbers by default" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Every version of every piece of software has a specific set of known vulnerabilities (CVEs). If a banner reveals 'Apache 2.4.49', a quick CVE database search shows it has a path traversal vulnerability (CVE-2021-41773) with a CVSS score of 9.8. Without the version number, the tester must try all Apache exploits blindly. With it, they go straight to the proven exploit. Version detection transforms scanning from broad to surgical."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: Why is it important to scan UDP ports as well as TCP ports, despite UDP scanning being slower?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "UDP ports are more secure than TCP ports so scanning them is a formality" },
+      { "id": "b", "text": "Because critical services like DNS, DHCP, SNMP and NTP use UDP — vulnerabilities in these services are commonly exploited and would be missed by a TCP-only scan" },
+      { "id": "c", "text": "Because most firewalls only protect TCP ports" },
+      { "id": "d", "text": "UDP scanning is not necessary in modern penetration testing" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Many high-value services use UDP: DNS (53) is commonly exploited for amplification attacks and zone transfers; SNMP (161) often has community strings set to 'public' exposing device configurations; DHCP (67/68) can be abused with rogue DHCP servers. Skipping UDP scanning means missing an entire category of attack surface. The extra time is worth it — some of the most significant vulnerabilities in any environment are on UDP."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: A CVSS score of 9.8 Critical is found on a server that is not internet-facing and can only be accessed from within the internal network. Should it still be treated as Critical priority?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "No — the network location reduces it to Medium priority and it can be patched in the next maintenance window" },
+      { "id": "b", "text": "Yes — CVSS base score does not account for network location, and once an attacker gains any internal access (via phishing, VPN compromise, or physical access), this vulnerability would be immediately exploitable with Critical impact" },
+      { "id": "c", "text": "No — internal systems are never accessible to external attackers" },
+      { "id": "d", "text": "Yes — but only if the server stores personal data" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "CVSS base scores assume the worst-case access scenario. The Environmental Score can be adjusted for network position, but a Critical vulnerability on an internal server should still be treated with urgency. Attackers routinely use initial access (phishing, stolen VPN credentials, physical access) to reach internal networks — once inside, an unpatched Critical vulnerability on an internal server is trivially exploitable. Defence in depth requires securing internal systems too."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: Why might a penetration tester scan a target network slowly rather than as fast as possible?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because slow scans are more accurate than fast scans" },
+      { "id": "b", "text": "Because aggressive fast scanning generates large volumes of traffic that are easily detected by IDS and may cause performance issues on the target — slow scanning reduces the signature and tests whether the client's detection capabilities notice it" },
+      { "id": "c", "text": "Because Nmap does not support fast scanning" },
+      { "id": "d", "text": "To comply with data protection legislation" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Nmap's timing options (-T0 Paranoid to -T5 Insane) control scan speed. Fast aggressive scans are easily detected by IDS/SIEM systems looking for port sweep patterns. Slow scans spread traffic over time, staying below detection thresholds — mimicking how a sophisticated attacker would operate. In a penetration test designed to assess detection capabilities, scanning slowly tests whether the blue team notices the activity at all."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 3 — BUILD THE ANSWER: A question asks you to describe how a penetration tester uses Nmap in the scanning phase. Which answer is most complete?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Nmap scans ports." },
+      { "id": "b", "text": "Nmap is used to discover live hosts, enumerate open TCP and UDP ports, identify running services and their versions (banner grabbing), detect the operating system, and run vulnerability scripts. A typical test starts with a SYN scan (-sS) for stealth, adds version detection (-sV) to identify exploitable software versions, and OS detection (-O) to guide the exploitation phase." },
+      { "id": "c", "text": "Nmap is a hacking tool that finds vulnerabilities." },
+      { "id": "d", "text": "Nmap connects to each port to see if it is open." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A high-scoring answer explains what Nmap does at each stage, names specific flags and what they achieve, and connects the output to the next phase (exploitation). Simply saying 'Nmap scans ports' demonstrates only surface knowledge. Explaining SYN scan for stealth, version detection to find exploitable versions, and OS detection to guide exploitation demonstrates applied understanding."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each Nmap flag to what it does.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "-sS" },
+      { "id": "a2", "text": "-sV" },
+      { "id": "a3", "text": "-O" },
+      { "id": "a4", "text": "-sU" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Enable OS detection — analyses TCP/IP stack responses to identify the operating system" },
+      { "id": "b2", "text": "UDP scan — probes UDP ports for open services" },
+      { "id": "b3", "text": "SYN/stealth scan — half-open TCP scan, does not complete the handshake" },
+      { "id": "b4", "text": "Version detection — probes open ports to determine service and version" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b1" },
+      { "a": "a4", "b": "b2" }
+    ],
+    "explanation": "Knowing Nmap's key flags demonstrates practical knowledge. In exam answers, naming the specific flag and its function scores more marks than describing Nmap in vague terms. These four flags cover the core capabilities used in the scanning phase of a penetration test: stealth scanning, service identification, OS detection, and UDP coverage."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: Explain why the scanning phase is described as the point where the penetration tester 'becomes visible'.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because the tester must physically visit the client's premises during scanning" },
+      { "id": "b", "text": "Because scanning involves actively sending packets to the target's systems — unlike passive reconnaissance, this traffic appears in firewall logs, IDS alerts and network monitoring tools, giving the target the ability to detect and respond to the tester's activities" },
+      { "id": "c", "text": "Because the tester must identify themselves to the target before scanning" },
+      { "id": "d", "text": "Because scanning is performed during business hours when staff can observe it" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The transition from reconnaissance to scanning is the transition from passive to active. The moment Nmap sends its first probe, packets from the tester's IP appear in the target's firewall logs. A well-configured IDS will flag port sweep patterns within seconds. This is why reconnaissance comes first — by the time you start scanning, you already know exactly what to look for and can minimise the scanning footprint. Understanding this transition is key to explaining why the phases are ordered as they are."
+  }
+]
