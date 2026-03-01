@@ -56,6 +56,17 @@ const CourseHome = () => {
       color: "from-orange-500 to-red-600",
       icon: "🔧",
     },
+    {
+      id: "data-security",
+      title: "Data Security",
+      description:
+        "Protecting digital data at personal and corporate level — threats, tools, strategies and security best practices",
+      modules: 4,
+      quizzes: 3,
+      progress: 0,
+      color: "from-rose-500 to-pink-600",
+      icon: "🔒",
+    },
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">

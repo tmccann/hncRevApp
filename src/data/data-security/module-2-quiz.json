@@ -1,0 +1,266 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: Which of the following is considered a robust password?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "password123" },
+      { "id": "b", "text": "john1990" },
+      { "id": "c", "text": "T7#mK!9qLx@2" },
+      { "id": "d", "text": "qwerty" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "A robust password is long (12+ characters), uses a mix of uppercase, lowercase, numbers and special characters, and is not based on personal information or dictionary words. 'T7#mK!9qLx@2' meets all these criteria. The others are predictable — common words, names, or sequential patterns that can be cracked quickly."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: What is a brute-force attack?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "An attacker physically breaking into a server room to steal hardware" },
+      { "id": "b", "text": "An automated method that systematically tries every possible combination of characters until the correct password is found" },
+      { "id": "c", "text": "A phishing email designed to trick users into revealing their password" },
+      { "id": "d", "text": "An attack that crashes a system with excessive traffic" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A brute-force attack uses software to automatically try every possible combination of characters — starting with 'a', then 'b', then 'aa', and so on — until the correct password is found. Short, simple passwords can be cracked in seconds. Long, complex passwords take exponentially longer, making brute-force attacks impractical."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: What is a dictionary attack?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "An attack that uses a pre-compiled list of common words, phrases and known passwords to guess credentials" },
+      { "id": "b", "text": "An attack that floods a network with meaningless data" },
+      { "id": "c", "text": "An attack that intercepts network traffic to read passwords in transit" },
+      { "id": "d", "text": "An attack that exploits a flaw in how a system stores passwords" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "A dictionary attack uses a pre-built list of likely passwords — common words, 'password', 'admin', names, dates, and known leaked passwords — rather than trying every possible combination like a brute-force attack. It is faster because most people use predictable passwords. This is why 'football', 'iloveyou', or 'Summer2024!' are poor choices."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: Which of the following features should a corporate password policy include? (Choose three)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "A minimum password length (e.g. at least 12 characters)" },
+      { "id": "b", "text": "A requirement that all staff use the same shared password for simplicity" },
+      { "id": "c", "text": "Account lockout after a set number of failed login attempts" },
+      { "id": "d", "text": "A prohibition on reusing recent passwords" }
+    ],
+    "correctAnswer": ["a", "c", "d"],
+    "explanation": "An effective password policy sets a minimum length (longer passwords are harder to crack), enforces account lockout to slow brute-force attacks, and prevents password reuse so that old compromised passwords cannot be recycled. Sharing passwords is the opposite of good practice — it removes individual accountability and spreads exposure."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: What is multi-factor authentication (MFA)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Using multiple different browsers to log in to the same account" },
+      { "id": "b", "text": "Requiring a user to prove their identity using two or more different factors — something they know, have, or are" },
+      { "id": "c", "text": "A system that generates a new password for every login attempt" },
+      { "id": "d", "text": "Having multiple people share one account to reduce the number of logins" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "MFA requires users to verify their identity using two or more factors from different categories: something you know (password or PIN), something you have (a phone or hardware token that receives a code), and something you are (biometrics like a fingerprint). Even if an attacker steals a password, they cannot log in without the second factor."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: Why is password reuse across multiple accounts a significant security risk?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It slows down the login process across all accounts" },
+      { "id": "b", "text": "If one site is breached and the password is exposed, attackers can use it to access all other accounts that share the same password" },
+      { "id": "c", "text": "It is against GDPR to use the same password on more than one account" },
+      { "id": "d", "text": "Password reuse only becomes a risk if the password is shorter than eight characters" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "This is called credential stuffing. Attackers take username and password combinations from one breached site and automatically try them on hundreds of others. If you reuse the same password across your email, bank and social media, a breach on any one service potentially exposes all of them. Each account needs its own unique password."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: What is a password manager?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A member of the IT department whose job is to reset user passwords" },
+      { "id": "b", "text": "Software that securely stores and generates strong, unique passwords for every account" },
+      { "id": "c", "text": "A spreadsheet used to record all company passwords in one place" },
+      { "id": "d", "text": "A browser setting that automatically deletes stored passwords after 30 days" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A password manager is software that securely stores all your passwords in an encrypted vault, accessible via one master password. It can also generate long, random, unique passwords for each account. This solves the reuse problem — you only need to remember one strong master password, and the manager handles the rest."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: Which of the following would make a password harder to crack by a dictionary attack?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Using your pet's name followed by your birth year" },
+      { "id": "b", "text": "Replacing letters with common substitutions, e.g. 'p@ssw0rd'" },
+      { "id": "c", "text": "Using a long random passphrase of unrelated words, e.g. 'Zebra-Lamp-Thunder-47'" },
+      { "id": "d", "text": "Using a word from the dictionary with a capital first letter" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Modern dictionary attacks include common letter substitutions like @ for a and 0 for o — 'p@ssw0rd' is in most attack dictionaries. Personal information like pet names and birth years is also easily guessable. A long passphrase of random unrelated words is both highly secure (long and unpredictable) and memorable."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: What does account lockout after failed login attempts protect against?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Phishing attacks" },
+      { "id": "b", "text": "Physical theft of devices" },
+      { "id": "c", "text": "Brute-force and dictionary attacks by limiting the number of guesses an attacker can make" },
+      { "id": "d", "text": "SQL injection attacks on the login form" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Account lockout stops brute-force and dictionary attacks by limiting attempts. If an account locks after five failed attempts, an attacker cannot run millions of guesses automatically. A typical policy locks the account for a period of time or until an administrator unlocks it, slowing automated attacks to a crawl."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: What are the three categories of authentication factors used in MFA?",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Something you know" },
+      { "id": "a2", "text": "Something you have" },
+      { "id": "a3", "text": "Something you are" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "A fingerprint scan or facial recognition" },
+      { "id": "b2", "text": "A hardware token or authentication app that generates a one-time code" },
+      { "id": "b3", "text": "A password, PIN or security question" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b1" }
+    ],
+    "explanation": "The three MFA factors are: something you know (passwords, PINs — can be guessed or stolen), something you have (a physical device or app that generates codes — an attacker needs the device), and something you are (biometrics — unique to each person). Using two factors from different categories makes accounts far more secure."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why does increasing password length provide significantly more protection than just adding special characters?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because special characters are not included in attack dictionaries" },
+      { "id": "b", "text": "Because each additional character multiplies the number of possible combinations exponentially — making brute-force attacks vastly more time-consuming" },
+      { "id": "c", "text": "Because length determines which encryption algorithm is used to store the password" },
+      { "id": "d", "text": "Because special characters are banned in many systems" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Password strength is exponential in relation to length. A password from a 94-character set (lowercase, uppercase, digits, symbols) that is 8 characters long has 94⁸ possible combinations. Add just two more characters (10 characters total) and it becomes 94¹⁰ — that is about 9,000 times more combinations. Length is the single most effective factor for resisting brute-force attacks."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: Why should a password policy require mandatory password changes only after a suspected compromise, rather than on a fixed schedule (e.g. every 90 days)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because frequent forced changes encourage users to choose weaker, more memorable passwords or make minimal changes like adding a number" },
+      { "id": "b", "text": "Because GDPR prohibits mandatory password changes" },
+      { "id": "c", "text": "Because passwords never need to be changed if they are long enough" },
+      { "id": "d", "text": "Because IT departments cannot technically enforce scheduled changes" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Research and guidance from NCSC shows that frequent mandatory password changes lead to predictable behaviour — users increment a number ('Password1' becomes 'Password2'), choose easier passwords because they know they'll have to change them again, or write them down. Changing passwords on compromise makes more sense than arbitrary schedules — if a password is strong and not compromised, changing it adds little security."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: Why is using biometrics (fingerprints, facial recognition) as a second factor more secure than using a security question?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Biometrics are more secure because they cannot be guessed, phished, or stolen the way answers to security questions can" },
+      { "id": "b", "text": "Security questions are banned under GDPR" },
+      { "id": "c", "text": "Biometrics are faster to use than typing an answer" },
+      { "id": "d", "text": "Security questions are only effective on mobile devices" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Security questions are weak — answers like mother's maiden name, first school, or pet's name are often findable via social media or public records. They fall into the 'something you know' category (same as a password). Biometrics represent 'something you are' — a genuinely different factor. They cannot be phished, guessed, or found online, making them a much stronger second factor."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: A company forces employees to write complex passwords on paper because they are too hard to remember. Why does this undermine the entire purpose of the policy?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It does not undermine security — written passwords are always safer than digital ones" },
+      { "id": "b", "text": "Because a written password is vulnerable to physical theft — anyone who finds the paper has the credentials, defeating the purpose of having a complex password" },
+      { "id": "c", "text": "Because writing is slower than typing, creating a productivity issue" },
+      { "id": "d", "text": "It only undermines security if the paper is left outside the office" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Password complexity means nothing if the password is physically accessible. A sticky note on a monitor, a notebook left on a desk, or a note in a bag creates a physical security vulnerability. The solution is a password manager — not simpler passwords. A well-implemented password manager removes the need to remember or write down complex passwords."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: Why is credential stuffing a growing threat even for organisations with strong password policies?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because attackers can bypass password policies using SQL injection" },
+      { "id": "b", "text": "Because users reuse passwords across work and personal accounts — a breach at any personal site exposes corporate credentials if the same password is used" },
+      { "id": "c", "text": "Because password policies only apply to the company's own systems, not external sites" },
+      { "id": "d", "text": "Credential stuffing does not affect organisations with strong policies" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Even if an organisation enforces complex passwords, employees often use the same password across personal accounts. When a consumer website (a retailer, forum, or streaming service) is breached, those credentials end up in public databases. Attackers then automatically test them against corporate systems. The defence is MFA and educating staff never to reuse work passwords on personal accounts."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each password attack type to its correct definition and primary defence.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Brute-force attack" },
+      { "id": "a2", "text": "Dictionary attack" },
+      { "id": "a3", "text": "Credential stuffing" },
+      { "id": "a4", "text": "Primary defence against all three" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Using breached username/password pairs from other sites to try to access accounts elsewhere" },
+      { "id": "b2", "text": "Long, unique passwords for every account combined with MFA" },
+      { "id": "b3", "text": "Systematically trying every possible character combination until the correct password is found" },
+      { "id": "b4", "text": "Using a pre-compiled list of common words, phrases and known passwords to guess credentials" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b1" },
+      { "a": "a4", "b": "b2" }
+    ],
+    "explanation": "Each attack exploits a different weakness: brute-force exploits short passwords, dictionary attacks exploit predictable passwords, and credential stuffing exploits reused passwords. The universal defence is long unique passwords (defeating brute-force and dictionary) plus MFA (defeating credential stuffing — even correct credentials are useless without the second factor)."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: A question asks you to describe what a corporate password policy should include. Which two points are essential for a high-scoring answer?",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Minimum length of at least 12 characters and complexity requirements (mix of character types)" },
+      { "id": "b", "text": "A requirement that all employees use the same password to simplify IT management" },
+      { "id": "c", "text": "Account lockout after a defined number of failed attempts to limit brute-force attacks" },
+      { "id": "d", "text": "A rule that passwords must include the company name to make them memorable" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Examiners look for specific, accurate policy elements. Minimum length and character complexity directly resist brute-force and dictionary attacks. Account lockout prevents automated guessing. Sharing passwords removes accountability and multiplies breach exposure — and including the company name in every password makes them highly predictable."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: A question asks you to 'explain why robust passwords are important for data security'. Arrange the elements of a complete answer in order.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Step 1: State what a robust password is" },
+      { "id": "a2", "text": "Step 2: Name the threat it defends against" },
+      { "id": "a3", "text": "Step 3: Explain how it defeats the attack" },
+      { "id": "a4", "text": "Step 4: Explain the consequence of not having one" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Without a robust password, accounts can be compromised — leading to data breaches, financial fraud, and reputational damage" },
+      { "id": "b2", "text": "A robust password is long (12+ characters), uses uppercase, lowercase, numbers and symbols, and is unique to each account" },
+      { "id": "b3", "text": "A long, random password makes brute-force attacks computationally infeasible and resists dictionary attacks by avoiding predictable words" },
+      { "id": "b4", "text": "Brute-force attacks try every combination, and dictionary attacks use lists of common passwords" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "A complete exam answer defines the concept, names the threat, explains the mechanism of protection, and states the consequence of failure. This four-part structure works for any 'explain why X is important' question and ensures you cover every angle examiners award marks for."
+  }
+]

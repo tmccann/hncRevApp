@@ -1,0 +1,273 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: What is the primary purpose of a firewall?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To speed up network traffic by caching frequently requested content" },
+      { "id": "b", "text": "To monitor and control incoming and outgoing network traffic based on predefined security rules" },
+      { "id": "c", "text": "To encrypt all data transmitted across the internet" },
+      { "id": "d", "text": "To back up data automatically in case of hardware failure" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A firewall acts as a barrier between a trusted internal network and untrusted external networks (like the internet). It inspects traffic and allows or blocks it based on a set of security rules. It does not encrypt data or back up files — those are separate functions."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: What is the difference between a personal firewall (HIPS) and a corporate firewall (NIPS)?",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Personal firewall (HIPS)" },
+      { "id": "a2", "text": "Corporate firewall (NIPS)" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Protects the entire network at the perimeter — monitors all traffic entering and leaving the organisation" },
+      { "id": "b2", "text": "Installed on a single device — monitors traffic to and from that specific machine" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b1" }
+    ],
+    "explanation": "HIPS (Host-based Intrusion Prevention System) is a firewall on a single device — it protects just that machine. NIPS (Network-based Intrusion Prevention System) sits at the network perimeter and protects all devices on the network. Corporate environments typically use both: a NIPS at the edge and HIPS on individual workstations for layered defence."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: What is an Access Control List (ACL)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A list of approved software applications that may be installed on company devices" },
+      { "id": "b", "text": "A set of rules that defines which users or systems are permitted to access specific resources and what actions they may perform" },
+      { "id": "c", "text": "A log file that records all failed login attempts on a network" },
+      { "id": "d", "text": "A document listing all employees who have physical access to the server room" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "An ACL is a table of rules attached to a resource (a file, folder, or network device) that specifies which users or systems can access it and what they are permitted to do — read, write, execute, delete, etc. ACLs enforce the principle of least privilege: users only get the access they need for their role."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: Which of the following are typical ACL permission levels? (Choose three)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Read" },
+      { "id": "b", "text": "Broadcast" },
+      { "id": "c", "text": "Write" },
+      { "id": "d", "text": "Execute" }
+    ],
+    "correctAnswer": ["a", "c", "d"],
+    "explanation": "Standard ACL permissions are Read (view the file/resource), Write (modify or create content), and Execute (run a program or script). 'Broadcast' is not an ACL permission — it is a network term for sending a packet to all devices on a subnet. ACLs can also include Delete, List (view folder contents), and Full Control."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: What is an Intrusion Detection System (IDS)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A system that automatically blocks all external traffic to a network" },
+      { "id": "b", "text": "Software or hardware that monitors network or system activity for suspicious behaviour and alerts administrators" },
+      { "id": "c", "text": "A tool that encrypts data before it is transmitted over a network" },
+      { "id": "d", "text": "A system that scans email attachments for malware before delivery" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "An IDS monitors traffic or system activity and alerts administrators when it detects suspicious patterns that may indicate an attack. Unlike a firewall (which blocks traffic based on rules), an IDS detects and reports — it does not automatically block. Some systems combine both functions and are called Intrusion Prevention Systems (IPS)."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: What is the key difference between a HIDS and a NIDS?",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "HIDS (Host-based IDS)" },
+      { "id": "a2", "text": "NIDS (Network-based IDS)" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Monitors traffic flowing across the entire network — detects threats at the network level" },
+      { "id": "b2", "text": "Installed on a single device — monitors activity on that specific host, including local files and processes" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b1" }
+    ],
+    "explanation": "A HIDS runs on a single machine and monitors that device's activity — file changes, running processes, login attempts. A NIDS sits on the network and monitors traffic between devices. HIDS can catch insider threats and malware that has already entered the device; NIDS can spot external attacks and anomalies in network traffic. Used together, they provide defence in depth."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: What is a DMZ (Demilitarised Zone) in network security?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A physical area in a data centre where only senior staff are permitted" },
+      { "id": "b", "text": "A segment of the network that sits between the internet and the internal network, hosting public-facing services while keeping the internal network protected" },
+      { "id": "c", "text": "A virtual private network used to connect remote workers securely" },
+      { "id": "d", "text": "An area of the hard drive that stores quarantined malware" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A DMZ is a network segment that contains servers that need to be accessible from the internet — such as web servers, email servers, and DNS servers — while keeping them isolated from the internal corporate network. If a server in the DMZ is compromised, the attacker still cannot directly access internal systems. It adds a critical layer of separation."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: Match each well-known port number to its associated service.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Port 80" },
+      { "id": "a2", "text": "Port 443" },
+      { "id": "a3", "text": "Port 22" },
+      { "id": "a4", "text": "Port 25" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "SMTP — sending email" },
+      { "id": "b2", "text": "SSH — secure remote access" },
+      { "id": "b3", "text": "HTTPS — encrypted web traffic" },
+      { "id": "b4", "text": "HTTP — unencrypted web traffic" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Port 80 is HTTP (unencrypted web), port 443 is HTTPS (encrypted web), port 22 is SSH (secure remote terminal access), and port 25 is SMTP (sending email). Firewall rules use port numbers to allow or block specific types of traffic — for example, blocking port 23 (Telnet) and allowing port 22 (SSH) enforces secure remote access only."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: What is the difference between a whitelist and a blacklist in the context of firewall rules?",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Whitelist" },
+      { "id": "a2", "text": "Blacklist" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "All traffic is blocked by default — only specifically approved addresses or ports are allowed through" },
+      { "id": "b2", "text": "All traffic is allowed by default — only specifically identified bad addresses or ports are blocked" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" }
+    ],
+    "explanation": "A whitelist is a default-deny approach: everything is blocked unless explicitly allowed. It is the more secure option. A blacklist is a default-allow approach: everything is permitted unless explicitly blocked. Blacklists require constantly updating to block new threats, while whitelists only require adding trusted sources — making whitelisting more secure but more labour-intensive to manage."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: What does a firewall rule typically specify? (Choose three)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "The source IP address of the traffic" },
+      { "id": "b", "text": "The destination port number" },
+      { "id": "c", "text": "The content of the data payload" },
+      { "id": "d", "text": "Whether to allow or deny the traffic" }
+    ],
+    "correctAnswer": ["a", "b", "d"],
+    "explanation": "A standard firewall rule specifies the source IP address (or range), the destination port (which service the traffic is heading for), and the action — allow or deny. Basic packet-filtering firewalls do not inspect the content of the data itself (that is done by deep packet inspection or application-layer firewalls). Rules are processed in order, and the first matching rule applies."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why is a DMZ considered essential for organisations that host public-facing web servers?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because web servers must be physically separated from all other IT equipment" },
+      { "id": "b", "text": "Because placing public servers in the DMZ means that if they are compromised, the attacker gains access to an isolated zone — not the entire internal network" },
+      { "id": "c", "text": "Because GDPR requires all web servers to be in a DMZ" },
+      { "id": "d", "text": "Because a DMZ increases website performance by reducing network congestion" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Public-facing servers are the most exposed systems in any organisation — they receive connections from the entire internet. A DMZ isolates them: even if an attacker fully compromises a web server in the DMZ, they cannot move laterally into the corporate network because the internal firewall blocks them. The DMZ limits the blast radius of a successful attack."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: Why is a whitelist approach generally more secure than a blacklist approach for firewall configuration, despite being harder to maintain?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because whitelists automatically update when new threats are discovered" },
+      { "id": "b", "text": "Because a whitelist denies everything by default — an attacker using a brand-new or unknown attack method is still blocked, whereas a blacklist only blocks known threats" },
+      { "id": "c", "text": "Because blacklists are illegal under UK data protection law" },
+      { "id": "d", "text": "Because whitelists allow faster network speeds" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A blacklist only blocks what is known to be bad — any new attack method that is not yet on the list gets through. A whitelist blocks everything by default, so even completely novel attacks are stopped unless they happen to use an already-approved path. The security model is fundamentally stronger, though it requires more work upfront to define all legitimate traffic."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: Why should organisations use both a NIDS and HIDS rather than relying on one or the other?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because using two identical systems provides a backup if one fails" },
+      { "id": "b", "text": "Because NIDS sees network-level threats but cannot detect malware already running on a device, while HIDS detects host-level activity but cannot see traffic between devices — together they provide complete coverage" },
+      { "id": "c", "text": "Because GDPR requires two intrusion detection systems for all organisations" },
+      { "id": "d", "text": "Because HIDS handles incoming traffic and NIDS handles outgoing traffic" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "NIDS and HIDS have different blind spots. A NIDS cannot see what is happening inside an encrypted connection or on a specific device's internal processes. A HIDS cannot see traffic between devices — only what hits the specific host. Used together (defence in depth), they cover each other's gaps: NIDS detects external attacks and lateral movement, HIDS detects malware execution and file tampering on individual machines."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: Why is it important to know which port numbers correspond to which services when configuring a firewall?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because firewall rules target specific port numbers — blocking or allowing a port controls which services can communicate through the firewall" },
+      { "id": "b", "text": "Because port numbers are required by law to be included in all IT security documentation" },
+      { "id": "c", "text": "Because high port numbers are always more secure than low port numbers" },
+      { "id": "d", "text": "Port numbers are irrelevant to firewall rules — firewalls only use IP addresses" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Firewall rules are built around port numbers. If you want to allow HTTPS web traffic but block unsecured HTTP, you allow port 443 and deny port 80. If you want to prevent remote desktop access, you block port 3389. Without knowing which services run on which ports, you cannot write effective rules — you risk either blocking legitimate traffic or leaving dangerous ports open."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: Why is the principle of least privilege important when configuring ACL permissions?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because giving all users full access simplifies IT administration" },
+      { "id": "b", "text": "Because limiting users to only the access they need for their role reduces the damage that can be caused by a compromised account or a malicious insider" },
+      { "id": "c", "text": "Because the principle of least privilege is required by the Computer Misuse Act" },
+      { "id": "d", "text": "Because ACLs are automatically set to least privilege by default in all operating systems" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "If every user has full access to every system, a single compromised account gives an attacker — or a malicious insider — access to everything. Least privilege limits each account to only what is needed for that person's job. This contains breaches: a compromised accounts administrator account should not have access to financial databases, and vice versa."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 3 — BUILD THE ANSWER: A question asks you to explain how a corporate network should be protected using firewalls and a DMZ. Which combination of points makes the strongest answer? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "A perimeter firewall (NIPS) controls all traffic between the internet and the network; public-facing servers are placed in a DMZ, isolated from the internal network by a second internal firewall" },
+      { "id": "b", "text": "All staff should be given the same firewall password to ensure consistency" },
+      { "id": "c", "text": "ACLs are configured on the internal firewall to enforce least privilege — users and servers only communicate with the resources they need" },
+      { "id": "d", "text": "The firewall should be turned off during business hours to avoid blocking legitimate traffic" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "A strong answer describes the layered approach: a perimeter firewall at the edge, a DMZ for public servers (isolating them from the internal network), a second firewall protecting the internal network, and ACLs enforcing least privilege internally. This demonstrates understanding of defence in depth — multiple layers that limit the damage from any single point of compromise."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each security concept to the scenario it best protects against.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "ACL with least privilege" },
+      { "id": "a2", "text": "DMZ" },
+      { "id": "a3", "text": "NIDS" },
+      { "id": "a4", "text": "Whitelist firewall rules" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "An attacker compromises a web server but cannot reach internal databases" },
+      { "id": "b2", "text": "A previously unknown attack method is automatically blocked because it does not match approved traffic" },
+      { "id": "b3", "text": "A user account is hacked but the attacker can only access files relevant to that user's role" },
+      { "id": "b4", "text": "An unusual pattern of outbound traffic is detected, revealing a data exfiltration attempt" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b4" },
+      { "a": "a4", "b": "b2" }
+    ],
+    "explanation": "Each control targets a specific threat: ACLs limit what a compromised account can reach; a DMZ contains compromised public-facing servers; NIDS detects anomalous traffic patterns; whitelisting blocks unknown or novel attacks by default. Understanding which control defends against which threat is essential for designing and explaining a layered security strategy."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: A classmate writes 'a firewall blocks hackers' as their exam answer. What is missing for a high-scoring response?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Nothing — it is a complete and accurate answer" },
+      { "id": "b", "text": "It needs to explain how a firewall works (rule-based traffic filtering using IP addresses and port numbers), distinguish between personal and corporate firewalls, and explain specific protections like whitelisting and DMZ configuration" },
+      { "id": "c", "text": "It should add 'and viruses' to be more complete" },
+      { "id": "d", "text": "It should specify which brand of firewall is used" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Exam marks come from technical depth, not broad statements. A full answer explains the mechanism (rules based on IP addresses and ports), the scope (personal HIPS vs corporate NIPS), specific configurations (whitelist vs blacklist, ACLs, DMZ placement), and the threats each addresses. 'A firewall blocks hackers' shows awareness but earns minimal marks without the how and why."
+  }
+]

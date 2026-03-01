@@ -11,6 +11,7 @@ import ITEssentialsModules from "./pages/ITEssentialsModules";
 import CompFundamentals from "./pages/CompFundamentals";
 import EthicsModules from "./pages/EthicsModules";
 import TroubleshootingModules from "./pages/TroubleshootingModules";
+import DataSecurityModules from "./pages/DataSecurityModules";
 import ModuleSummary from "./components/ModuleSummary";
 import Quiz from "./components/Quiz";
 
@@ -20,6 +21,7 @@ import itEssentialsModulesData from "./data/it-essentials/modules.json";
 import compModulesData from "./data/comp-fundamentals/modules.json";
 import ethicsModulesData from "./data/ethics/modules.json";
 import troubleshootingModulesData from "./data/troubleshooting/modules.json";
+import dataSecurityModulesData from "./data/data-security/modules.json";
 
 // CCNA Vite glob imports
 const ccnaSummaryFiles = import.meta.glob("./data/ccna/*-summary.json", {
@@ -62,6 +64,16 @@ const troubleshootingSummaryFiles = import.meta.glob(
 );
 const troubleshootingQuizFiles = import.meta.glob(
   "./data/troubleshooting/*-quiz.json",
+  { eager: true }
+);
+
+// Data Security Vite glob imports
+const dataSecuritySummaryFiles = import.meta.glob(
+  "./data/data-security/*-summary.json",
+  { eager: true }
+);
+const dataSecurityQuizFiles = import.meta.glob(
+  "./data/data-security/*-quiz.json",
   { eager: true }
 );
 
@@ -123,6 +135,18 @@ Object.keys(troubleshootingSummaryFiles).forEach((path) => {
 Object.keys(troubleshootingQuizFiles).forEach((path) => {
   const filename = path.split("/").pop().replace(".json", "");
   troubleshootingQuizMap[filename.replace("-quiz", "")] = troubleshootingQuizFiles[path].default;
+});
+
+// Convert Data Security glob results to lookup maps
+const dataSecuritySummaryMap = {};
+const dataSecurityQuizMap = {};
+Object.keys(dataSecuritySummaryFiles).forEach((path) => {
+  const filename = path.split("/").pop().replace(".json", "");
+  dataSecuritySummaryMap[filename.replace("-summary", "")] = dataSecuritySummaryFiles[path].default;
+});
+Object.keys(dataSecurityQuizFiles).forEach((path) => {
+  const filename = path.split("/").pop().replace(".json", "");
+  dataSecurityQuizMap[filename.replace("-quiz", "")] = dataSecurityQuizFiles[path].default;
 });
 
 // Dynamic CCNA Module Summary Loader
@@ -440,6 +464,49 @@ const DynamicTroubleshootingModuleQuiz = () => {
   );
 };
 
+// Dynamic Data Security Module Summary Loader
+const DynamicDataSecurityModuleSummary = () => {
+  const { moduleId } = useParams();
+  const summaryData = dataSecuritySummaryMap[moduleId];
+  if (!summaryData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-rose-50 to-pink-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Summary Not Found</h1>
+          <p className="text-gray-600 mb-8">This module summary hasn't been created yet.</p>
+          <Link to="/data-security" className="text-rose-600 hover:text-rose-700 font-semibold">← Back to Modules</Link>
+        </div>
+      </div>
+    );
+  }
+  return <ModuleSummary data={summaryData} backLink="/data-security" />;
+};
+
+// Dynamic Data Security Module Quiz Loader
+const DynamicDataSecurityModuleQuiz = () => {
+  const { moduleId } = useParams();
+  const quizData = dataSecurityQuizMap[moduleId];
+  const moduleInfo = dataSecurityModulesData.find((m) => m.id === moduleId);
+  if (!quizData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-rose-50 to-pink-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Quiz Not Found</h1>
+          <p className="text-gray-600 mb-8">This module quiz hasn't been created yet.</p>
+          <Link to="/data-security" className="text-rose-600 hover:text-rose-700 font-semibold">← Back to Modules</Link>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <Quiz
+      questions={quizData}
+      title={`Module ${moduleInfo?.number}: ${moduleInfo?.title} Quiz`}
+      description={moduleInfo?.description || ""}
+    />
+  );
+};
+
 function App() {
   return (
     <BrowserRouter>
@@ -475,6 +542,11 @@ function App() {
         <Route path="/troubleshooting" element={<TroubleshootingModules />} />
         <Route path="/troubleshooting/:moduleId/summary" element={<DynamicTroubleshootingModuleSummary />} />
         <Route path="/troubleshooting/:moduleId/quiz" element={<DynamicTroubleshootingModuleQuiz />} />
+
+        {/* Data Security Course */}
+        <Route path="/data-security" element={<DataSecurityModules />} />
+        <Route path="/data-security/:moduleId/summary" element={<DynamicDataSecurityModuleSummary />} />
+        <Route path="/data-security/:moduleId/quiz" element={<DynamicDataSecurityModuleQuiz />} />
       </Routes>
     </BrowserRouter>
   );

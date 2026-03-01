@@ -76,15 +76,16 @@
     "checkpoints": [],
     "color": "from-emerald-500 to-teal-600"
   },
+
   {
-    "id": "module-8",
-    "number": 8,
-    "title": "Logic Gates",
-    "description": "AND, OR, NOT, and XOR gates — rules, truth tables and worked examples",
-    "topics": ["AND", "OR", "NOT", "XOR", "Truth Tables", "Logic Operations"],
-    "hasSummary": false,
-    "hasQuiz": true,
-    "checkpoints": [],
-    "color": "from-emerald-500 to-teal-600"
-  }
+  "id": "module-8",
+  "number": 8,
+  "title": "Fetch-Execute Cycle",
+  "description": "Registers, buses and the step-by-step process of how the CPU fetches, decodes and executes instructions",
+  "topics": ["PC", "MAR", "MDR", "IR", "ACC", "Address Bus", "Data Bus", "Control Bus", "Immediate Addressing", "Fetch-Decode-Execute"],
+  "hasSummary": false,
+  "hasQuiz": true,
+  "checkpoints": [],
+  "color": "from-emerald-500 to-teal-600"
+}
 ]

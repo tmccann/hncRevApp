@@ -1,0 +1,46 @@
+[
+  {
+    "id": "module-1",
+    "number": 1,
+    "title": "Data Security Introduction",
+    "description": "What data security means, why it matters, and real-world examples of breaches — causes, effects and implications for individuals and organisations",
+    "topics": ["Data Security Breaches", "Causes of Breaches", "Implications", "GDPR", "Real-world Examples"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-rose-500 to-pink-600"
+  },
+  {
+    "id": "module-2",
+    "number": 2,
+    "title": "Password Policy",
+    "description": "Creating and evaluating robust passwords, understanding common password attacks, and formulating a corporate password policy",
+    "topics": ["Robust Passwords", "Password Testing", "Brute-force Attacks", "Dictionary Attacks", "Password Policies"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-rose-500 to-pink-600"
+  },
+  {
+    "id": "module-3",
+    "number": 3,
+    "title": "Firewalls & Access Control Lists",
+    "description": "Personal and corporate firewalls, ACLs and permissions, common ports, DMZ configuration and firewall rules for protecting networks",
+    "topics": ["Personal Firewalls", "Corporate Firewalls", "Access Control Lists", "ACL Permissions", "Common Ports", "DMZ", "Firewall Rules", "IDS / NIDS / HIDS"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-rose-500 to-pink-600"
+  },
+  {
+    "id": "module-4",
+    "number": 4,
+    "title": "Physical Security",
+    "description": "Defence in depth and the onion model — physical barriers, biometric access, hardware protection and security strategies for premises and devices",
+    "topics": ["Defence in Depth", "Onion Model", "Biometrics", "Physical Barriers", "Cable Locks", "Security Guards", "Mantraps", "Hardware Protection"],
+    "hasSummary": true,
+    "hasQuiz": false,
+    "checkpoints": [],
+    "color": "from-rose-500 to-pink-600"
+  }
+]

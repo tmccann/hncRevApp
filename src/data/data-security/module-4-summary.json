@@ -1,0 +1,256 @@
+{
+  "number": 4,
+  "title": "Physical Security",
+  "description": "Defence in depth, physical protection measures, and delivering a security strategy recommendation",
+  "glance": [
+    { "number": "3", "label": "Security layers", "detail": "Device, Premises, Network" },
+    { "number": "7+", "label": "Onion model rings", "detail": "Each ring adds another layer of protection" },
+    { "number": "4", "label": "Biometric types", "detail": "Fingerprint, Retina, Facial, Voice" },
+    { "number": "1000", "label": "Report word count", "detail": "Recommended length for Outcome 4 report" }
+  ],
+  "sections": [
+    {
+      "id": "defence-in-depth",
+      "icon": "🧅",
+      "title": "Defence in Depth & the Onion Model",
+      "color": "rose",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Defence in depth is the principle that no single security measure is sufficient on its own. By layering multiple controls — physical, technical, and administrative — an attacker must defeat every layer before reaching the target. The onion model visualises this: each ring represents a layer of protection, and peeling one layer still leaves more to penetrate."
+        },
+        {
+          "type": "callout",
+          "title": "🧅 The Onion Model",
+          "content": "Imagine a target (your data) at the centre of an onion. Each ring is a security layer — physical barriers, access control, firewalls, encryption, monitoring. An attacker who breaks through the outer ring still faces all the inner rings. The more layers, the harder the attack.",
+          "color": "rose"
+        },
+        {
+          "type": "subheading",
+          "content": "Why Single Controls Fail"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "A firewall alone can't stop an attacker who walks into the building and physically accesses a server.",
+            "A locked door alone can't stop a remote hacker exploiting an unpatched vulnerability.",
+            "Encryption alone can't stop an insider threat from copying data to a USB drive.",
+            "Defence in depth means each layer compensates for the weaknesses of the others."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "device-security",
+      "icon": "💻",
+      "title": "Hardware & Device Security",
+      "color": "pink",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Physical security of devices is often overlooked in favour of software controls. A stolen or tampered device can bypass every software defence. Protection must be applied at the device level as the first line of defence."
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "🔒",
+              "title": "Cable Locks",
+              "description": "A physical steel cable anchors a laptop or desktop to a desk or fixed point. Cheap, visible deterrent that prevents opportunistic theft. Uses a Kensington security slot — a standard port found on most laptops.",
+              "badge": "Device level"
+            },
+            {
+              "icon": "🔑",
+              "title": "Password / BIOS Protection",
+              "description": "A BIOS password prevents the device from booting without a password, even if the hard drive is removed. Combined with full-disk encryption, a stolen device yields no usable data.",
+              "badge": "Boot level"
+            },
+            {
+              "icon": "🖥️",
+              "title": "Screen Lock",
+              "description": "Automatic screen lock after inactivity prevents unauthorised access when a user steps away. Windows Key + L forces an immediate lock. Policy should enforce this after 5–10 minutes of inactivity.",
+              "badge": "Session level"
+            },
+            {
+              "icon": "🔌",
+              "title": "Security Slots",
+              "description": "Host systems and servers use security slots and chassis locks to prevent internal access — stopping an attacker from inserting rogue hardware (e.g. a keylogger or rogue network card) into the machine.",
+              "badge": "Host level"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Backup & Offsite Storage"
+        },
+        {
+          "type": "definition",
+          "label": "Offsite Backups",
+          "content": "Critical backup media should be stored offsite — in a separate physical location from the primary servers. If a fire, flood, or theft destroys the primary site, offsite backups ensure data can be recovered. Cloud backup is a modern equivalent."
+        },
+        {
+          "type": "definition",
+          "label": "Testing Backups",
+          "content": "Backups must be tested regularly. An untested backup is an unknown backup — it may be corrupted, incomplete, or unrestorable. The 3-2-1 rule: 3 copies, on 2 different media types, with 1 offsite."
+        }
+      ]
+    },
+    {
+      "id": "premises-security",
+      "icon": "🏢",
+      "title": "Physical Access Protection of Premises",
+      "color": "rose",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Beyond individual devices, organisations must control who can physically enter their buildings and sensitive areas. A layered approach applies the onion model to the physical environment."
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "👮",
+              "title": "Security Guards",
+              "description": "Trained personnel at entry points verify identity, check credentials, and monitor for suspicious behaviour. A visible human deterrent that can exercise judgement and respond to incidents in real time.",
+              "badge": "Outer ring"
+            },
+            {
+              "icon": "🚧",
+              "title": "Physical Barriers",
+              "description": "Fences, walls, turnstiles, and bollards create a physical perimeter. They slow down or stop unauthorised entry and funnel people through controlled access points where they can be monitored.",
+              "badge": "Perimeter"
+            },
+            {
+              "icon": "📡",
+              "title": "Motion Detection Sensors",
+              "description": "Passive infrared (PIR) sensors detect movement in restricted areas outside of working hours. Trigger alarms or activate CCTV recording. Effective for detecting intrusion after other barriers have failed.",
+              "badge": "Detection"
+            },
+            {
+              "icon": "🚪",
+              "title": "Mantraps",
+              "description": "A double-door airlock system — the outer door must close and lock before the inner door can open. Prevents tailgating (following an authorised person through a secure door). Used for highly sensitive areas like server rooms and data centres.",
+              "badge": "Inner ring"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biometrics",
+      "icon": "🫆",
+      "title": "Biometric Access Measures",
+      "color": "pink",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Biometric systems identify individuals using unique physical characteristics. Unlike passwords or key cards, biometrics cannot be forgotten, lost, or easily shared. They are used to control access to highly sensitive areas such as server rooms, R&D labs, or secure data centres."
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "👆",
+              "title": "Fingerprint Scan",
+              "description": "Reads the unique ridge pattern of a fingerprint. Fast, low-cost and widely deployed. Used on smartphones, laptops, and door entry systems. Can be fooled by high-quality replicas — better suited to medium-security environments.",
+              "badge": "Common"
+            },
+            {
+              "icon": "👁️",
+              "title": "Retina / Iris Scan",
+              "description": "Photographs the unique pattern of blood vessels in the retina or the iris pattern. Extremely difficult to replicate. High accuracy and very low false-positive rate. Used in high-security facilities — government, military, finance.",
+              "badge": "High security"
+            },
+            {
+              "icon": "😊",
+              "title": "Facial Recognition",
+              "description": "Maps the geometry of a face — distance between eyes, nose shape, jaw line. Contactless and can work at a distance. Accuracy varies with lighting and angle. Increasingly common in building access and device unlock.",
+              "badge": "Contactless"
+            },
+            {
+              "icon": "🎙️",
+              "title": "Voice Recognition",
+              "description": "Analyses the unique characteristics of a person's voice — tone, cadence, accent. Less common for physical access; more used for telephone-based authentication. Vulnerable to recording attacks in poor implementations.",
+              "badge": "Voice"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "⚖️ Biometrics vs Key Cards",
+          "content": "Key cards can be lost, stolen, or cloned. Biometrics are inherent to the individual. However, biometric data is sensitive personal data under GDPR — if a fingerprint database is breached, you cannot issue a new fingerprint. Organisations must weigh security benefit against data protection obligations.",
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "id": "practical-report",
+      "icon": "📋",
+      "title": "Outcome 4 — Practical Reporting",
+      "color": "rose",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Outcome 4 requires you to produce a recommendation report for a client based on a case study. You will evaluate their current security measures, identify shortfalls, and pitch a security strategy. The report is typically around 1,000 words and should be professionally formatted."
+        },
+        {
+          "type": "subheading",
+          "content": "Report Structure"
+        },
+        {
+          "type": "grid",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "🔍",
+              "title": "1. Evaluate Current Measures",
+              "description": "Review the security measures already in place at the organisation. What physical controls, technical controls, and policies do they have? Assess whether they are adequate for the risk level.",
+              "badge": "Analysis"
+            },
+            {
+              "icon": "⚠️",
+              "title": "2. Identify Shortfalls",
+              "description": "What is missing or inadequate? Use the knowledge from Outcomes 1–3 as a checklist: passwords, firewalls, ACLs, physical barriers, backups, biometrics. For each gap, explain the risk it creates.",
+              "badge": "Gap analysis"
+            },
+            {
+              "icon": "💡",
+              "title": "3. Recommend Measures",
+              "description": "For each shortfall, recommend a specific, practical improvement. Be precise — don't just say 'improve security'. Say 'implement MFA on all user accounts' or 'install a mantrap at the server room entrance'.",
+              "badge": "Recommendations"
+            },
+            {
+              "icon": "🎯",
+              "title": "4. Pitch the Strategy",
+              "description": "Present the strategy to the client clearly. Justify each recommendation: what threat does it address, how much does it improve security, and why is it worth the cost? Emphasise the value of a sound security strategy.",
+              "badge": "Presentation"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "content": "Evidence to Include"
+        },
+        {
+          "type": "keypoints",
+          "items": [
+            "Screenshots of practical tasks from Outcomes 2 and 3 — e.g. firewall configuration, ACL settings, password policy setup.",
+            "Reference to real-world examples of breaches to justify your recommendations (Equifax, WannaCry/NHS).",
+            "Explanation of the importance of a security strategy — reactive security (responding to breaches) costs far more than proactive security (preventing them).",
+            "GDPR compliance considerations — especially if the client holds personal data.",
+            "The 3-2-1 backup rule if backup strategy is part of your recommendations."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "📝 Report Tips",
+          "content": "Write for a non-technical client — explain why each measure matters in plain language. Use headings, bullet points and screenshots to make it readable. A report that is well-structured and clearly argued scores higher than one that is technically dense but hard to follow.",
+          "color": "rose"
+        }
+      ]
+    }
+  ]
+}

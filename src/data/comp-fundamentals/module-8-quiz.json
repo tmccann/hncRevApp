@@ -1,0 +1,341 @@
+[
+  {
+    "id": 1,
+    "text": "What does the Program Counter (PC) hold?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The result of the last calculation" },
+      { "id": "b", "text": "The address of the next instruction to be fetched" },
+      { "id": "c", "text": "The current instruction being decoded" },
+      { "id": "d", "text": "The data retrieved from memory" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The PC (Program Counter) always holds the memory address of the next instruction to be fetched. After each fetch, the PC automatically increments to point to the following instruction."
+  },
+  {
+    "id": 2,
+    "text": "What is the correct order of the Fetch-Execute cycle?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Execute → Fetch → Decode" },
+      { "id": "b", "text": "Decode → Fetch → Execute" },
+      { "id": "c", "text": "Fetch → Decode → Execute" },
+      { "id": "d", "text": "Fetch → Execute → Decode" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The CPU always follows Fetch → Decode → Execute in that order, for every single instruction. First it retrieves the instruction from memory, then works out what it means, then carries it out."
+  },
+  {
+    "id": 3,
+    "text": "During the Fetch stage, what is the first thing that happens?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The MDR sends data to the IR" },
+      { "id": "b", "text": "The PC passes its address to the MAR" },
+      { "id": "c", "text": "The Control Unit sends a READ signal" },
+      { "id": "d", "text": "The ACC loads a value" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The very first step in fetch is PC → MAR. The Program Counter passes the address of the next instruction to the Memory Address Register, which will then send it out along the address bus to memory."
+  },
+  {
+    "id": 4,
+    "text": "What does the MAR (Memory Address Register) do?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Stores the result of arithmetic operations" },
+      { "id": "b", "text": "Holds the instruction being decoded" },
+      { "id": "c", "text": "Holds the memory address to be accessed and sends it along the address bus" },
+      { "id": "d", "text": "Stores data received from memory" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The MAR holds the memory address that the CPU wants to access. It sends this address along the address bus to memory — think of it as telling memory 'open this location'."
+  },
+  {
+    "id": 5,
+    "text": "Which bus carries the memory address from the MAR to memory?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Data Bus" },
+      { "id": "b", "text": "Control Bus" },
+      { "id": "c", "text": "Address Bus" },
+      { "id": "d", "text": "System Bus" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Address Bus carries the memory address from the MAR to memory. The address bus is one-way — it only ever travels from CPU to memory. It tells memory which location to open."
+  },
+  {
+    "id": 6,
+    "text": "Which component sends the READ signal to memory during the Fetch stage?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The Accumulator (ACC)" },
+      { "id": "b", "text": "The Memory Data Register (MDR)" },
+      { "id": "c", "text": "The Program Counter (PC)" },
+      { "id": "d", "text": "The Control Unit (CU)" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The Control Unit sends a READ signal along the Control Bus to memory. This authorises memory to send the data back. Without this signal, memory won't respond even if it has received the address."
+  },
+  {
+    "id": 7,
+    "text": "Which bus carries the instruction from memory back to the MDR?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Address Bus" },
+      { "id": "b", "text": "Control Bus" },
+      { "id": "c", "text": "Data Bus" },
+      { "id": "d", "text": "Instruction Bus" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Data Bus carries the instruction or data from memory back to the MDR. Unlike the address bus, the data bus is two-way — data can travel in both directions between CPU and memory."
+  },
+  {
+    "id": 8,
+    "text": "What does the MDR (Memory Data Register) do?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Holds the memory address to be accessed" },
+      { "id": "b", "text": "Holds data or instructions being transferred to or from memory" },
+      { "id": "c", "text": "Counts instructions executed" },
+      { "id": "d", "text": "Decodes the current instruction" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The MDR acts as a buffer — it holds whatever has just been fetched from memory (an instruction or data value) before it is passed on to its next destination such as the IR or ACC."
+  },
+  {
+    "id": 9,
+    "text": "After the instruction arrives in the MDR, where does it go next?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Straight to the ACC" },
+      { "id": "b", "text": "Back to memory" },
+      { "id": "c", "text": "To the IR (Instruction Register)" },
+      { "id": "d", "text": "To the PC" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The instruction travels from MDR → IR (Instruction Register). The IR holds the current instruction while it is being decoded by the Control Unit. The ACC is only involved during execute, not fetch."
+  },
+  {
+    "id": 10,
+    "text": "What happens to the PC after an instruction has been fetched?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It resets to zero" },
+      { "id": "b", "text": "It automatically increments to point to the next instruction" },
+      { "id": "c", "text": "It waits for the execute stage to complete" },
+      { "id": "d", "text": "It copies its value to the ACC" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "After the fetch, the PC automatically increments so it points to the next instruction in sequence. This happens during the fetch stage itself, so the CPU is always ready to fetch the next instruction after execution."
+  },
+  {
+    "id": 11,
+    "text": "What does immediate addressing (using the # symbol) mean?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The CPU must look up the value in a memory address" },
+      { "id": "b", "text": "The value itself is contained within the instruction — no memory lookup needed" },
+      { "id": "c", "text": "The instruction is executed immediately without decoding" },
+      { "id": "d", "text": "The value is stored in a register before use" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Immediate addressing means the actual value is part of the instruction itself. In LD A #42, the # tells the CPU that 42 IS the value — it doesn't need to go back to memory to look it up. This makes it faster than other addressing modes."
+  },
+  {
+    "id": 12,
+    "text": "For the instruction LD A #42, what value ends up in the ACC after execution?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The value stored at memory address 42" },
+      { "id": "b", "text": "150₁₆" },
+      { "id": "c", "text": "42" },
+      { "id": "d", "text": "The value stored at the address in the PC" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Because # indicates immediate addressing, 42 is the actual value — not an address. So the ACC receives 42 directly. If there were no # symbol, the CPU would treat 42 as an address and go to memory to find the value stored there."
+  },
+  {
+    "id": 13,
+    "text": "What is the role of the IR (Instruction Register)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It stores the result of arithmetic operations" },
+      { "id": "b", "text": "It holds the current instruction while it is being decoded" },
+      { "id": "c", "text": "It holds the address of the next instruction" },
+      { "id": "d", "text": "It manages the flow of data on the buses" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The IR (Instruction Register) holds the current instruction during the decode stage. The Control Unit reads from the IR to work out what the instruction is asking the CPU to do."
+  },
+  {
+    "id": 14,
+    "text": "What is the correct order of the full Fetch stage for instruction LD A #42 stored at 150₁₆?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "MAR → PC → Address Bus → Memory → Data Bus → MDR → IR" },
+      { "id": "b", "text": "PC → MAR → Address Bus → Memory → Control Bus (READ) → Data Bus → MDR → IR" },
+      { "id": "c", "text": "PC → IR → Address Bus → Memory → Data Bus → MDR" },
+      { "id": "d", "text": "MAR → Address Bus → Memory → Data Bus → PC → IR" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The full fetch sequence is: PC passes address to MAR, MAR sends it along the address bus to memory, Control Unit sends READ signal along control bus, memory sends instruction back along data bus to MDR, MDR copies to IR, PC increments."
+  },
+  {
+    "id": 15,
+    "text": "Why is immediate addressing faster than direct addressing?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The ACC processes values quicker than the IR" },
+      { "id": "b", "text": "It skips the decode stage entirely" },
+      { "id": "c", "text": "It eliminates the need for a second memory lookup — the value is already in the instruction" },
+      { "id": "d", "text": "The address bus carries data faster than the data bus" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "With immediate addressing the value travels with the instruction, so after the fetch the CPU already has everything it needs. Direct addressing would require a second memory access to retrieve the value from the specified address — an extra trip that takes more time."
+  },
+  {
+    "id": 16,
+    "text": "Which component decodes the instruction after it arrives in the IR?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The ACC (Accumulator)" },
+      { "id": "b", "text": "The MDR (Memory Data Register)" },
+      { "id": "c", "text": "The CU (Control Unit)" },
+      { "id": "d", "text": "The MAR (Memory Address Register)" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The Control Unit (CU) reads the instruction from the IR and decodes it — working out what operation needs to be performed and what addressing mode is being used. It then coordinates the execute stage."
+  },
+  {
+    "id": 17,
+    "text": "The address bus is described as one-way. What does this mean?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It can only carry one address at a time" },
+      { "id": "b", "text": "Addresses only ever travel from memory to CPU" },
+      { "id": "c", "text": "Addresses only ever travel from CPU to memory" },
+      { "id": "d", "text": "It only operates during the fetch stage" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "The address bus only carries addresses in one direction — from the CPU (specifically the MAR) to memory. This is different from the data bus which is two-way and can carry data in either direction."
+  },
+  {
+    "id": 18,
+    "text": "What would happen if two employees shared the same login credentials on a system? (Hint: think about what the audit trail records)",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Nothing — shared credentials are standard practice" },
+      { "id": "b", "text": "It would be impossible to identify which individual accessed or changed data" },
+      { "id": "c", "text": "The system would automatically block access" },
+      { "id": "d", "text": "Only the last person to log in would be recorded" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Shared credentials destroy the audit trail. If two people share a login, logs only show the shared account name — not which individual performed which action. Individual accounts are essential so that any access or breach can be traced to a specific person."
+  },
+  {
+    "id": 19,
+    "text": "Match each register or bus to its correct role in the Fetch-Execute cycle.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "PC" },
+      { "id": "a2", "text": "MAR" },
+      { "id": "a3", "text": "MDR" },
+      { "id": "a4", "text": "IR" },
+      { "id": "a5", "text": "ACC" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Holds the address of the next instruction" },
+      { "id": "b2", "text": "Sends the address along the address bus to memory" },
+      { "id": "b3", "text": "Holds data or instructions transferred to/from memory" },
+      { "id": "b4", "text": "Holds the current instruction during decode" },
+      { "id": "b5", "text": "Holds the result of operations during execute" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" },
+      { "a": "a5", "b": "b5" }
+    ],
+    "explanation": "Each register has a specific job: PC tracks where we are in the program, MAR targets the memory location, MDR carries the payload, IR holds the instruction during decode, and ACC is the worker that holds results during execute."
+  },
+  {
+    "id": 20,
+    "text": "Which of the following correctly describes what the three buses do? Select all that apply.",
+    "type": "multi",
+    "options": [
+      { "id": "a", "text": "The address bus carries memory addresses from CPU to memory (one-way)" },
+      { "id": "b", "text": "The data bus carries instructions and data between CPU and memory (two-way)" },
+      { "id": "c", "text": "The control bus carries signals such as READ and WRITE from the Control Unit" },
+      { "id": "d", "text": "The address bus carries data values back from memory to the MDR" }
+    ],
+    "correctAnswer": ["a", "b", "c"],
+    "explanation": "A, B and C are all correct. D is wrong — data values travel back on the DATA bus, not the address bus. The address bus is strictly one-way and only carries addresses, never data values."
+  },
+  {
+    "id": 21,
+    "text": "The PC has just passed its address to the MAR. What happens next?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The MDR copies the instruction to the IR" },
+      { "id": "b", "text": "The MAR sends the address along the address bus to memory" },
+      { "id": "c", "text": "The Control Unit decodes the instruction" },
+      { "id": "d", "text": "The ACC loads the value" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "After PC → MAR, the next step is MAR sending the address along the address bus to memory. Think of it as: PC tells MAR where to go, then MAR goes there."
+  },
+  {
+    "id": 22,
+    "text": "The MAR has sent the address to memory along the address bus. What happens next?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Memory immediately sends data back along the data bus" },
+      { "id": "b", "text": "The PC increments" },
+      { "id": "c", "text": "The Control Unit sends a READ signal along the control bus" },
+      { "id": "d", "text": "The IR decodes the instruction" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Memory has the address but won't act until it receives authorisation. The Control Unit sends a READ signal along the control bus — this is the green light that tells memory to send the data back."
+  },
+  {
+    "id": 23,
+    "text": "The Control Unit has sent the READ signal. What happens next?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The MAR sends the address again" },
+      { "id": "b", "text": "Memory sends the instruction back along the data bus to the MDR" },
+      { "id": "c", "text": "The ACC receives the value" },
+      { "id": "d", "text": "The PC resets to zero" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "After the READ signal, memory sends the instruction back along the data bus to the MDR. The MDR acts as the receiving buffer — it catches whatever memory sends back."
+  },
+  {
+    "id": 24,
+    "text": "The instruction has arrived in the MDR. What are the TWO things that happen next?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "MDR sends to ACC and PC resets" },
+      { "id": "b", "text": "MDR copies to IR and PC increments" },
+      { "id": "c", "text": "MDR sends to CU and MAR resets" },
+      { "id": "d", "text": "MDR copies to ACC and IR resets" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Two things happen simultaneously: the instruction moves from MDR → IR ready for decoding, and the PC increments to point to the next instruction. The fetch stage is now complete."
+  },
+  {
+    "id": 25,
+    "text": "The instruction is now in the IR. What happens next?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The MAR fetches the next instruction" },
+      { "id": "b", "text": "The ACC stores the result" },
+      { "id": "c", "text": "The Control Unit decodes the instruction" },
+      { "id": "d", "text": "The data bus sends the value to memory" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "With the instruction sitting in the IR, the Control Unit reads and decodes it — working out what operation is needed and what addressing mode is being used. For LD A #42, it sees # and knows the value is immediate — no extra memory trip needed."
+  }
+]

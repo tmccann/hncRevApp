@@ -1,0 +1,258 @@
+[
+  {
+    "id": 1,
+    "text": "LAYER 1 — RECOGNITION: What is a data security breach?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "When a computer system crashes and loses unsaved work" },
+      { "id": "b", "text": "Any incident where data is accessed, disclosed, altered or destroyed without authorisation" },
+      { "id": "c", "text": "When a firewall blocks legitimate traffic" },
+      { "id": "d", "text": "A fault in a hard drive that causes data loss" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A data security breach is any incident where data is accessed, modified, disclosed or destroyed by someone who is not authorised to do so. This includes hacking, accidental disclosure, theft of devices, and insider abuse — regardless of whether the data is actually misused."
+  },
+  {
+    "id": 2,
+    "text": "LAYER 1 — RECOGNITION: Which three factors make up the CIA triad — the core principles of data security?",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Confidentiality" },
+      { "id": "b", "text": "Compression" },
+      { "id": "c", "text": "Integrity" },
+      { "id": "d", "text": "Availability" }
+    ],
+    "correctAnswer": ["a", "c", "d"],
+    "explanation": "The CIA triad stands for Confidentiality (only authorised users can access data), Integrity (data is accurate and has not been tampered with), and Availability (data is accessible when needed). These three principles underpin all data security strategies."
+  },
+  {
+    "id": 3,
+    "text": "LAYER 1 — RECOGNITION: Which of the following is a common cause of a data security breach? (Choose three)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Phishing emails that trick employees into revealing credentials" },
+      { "id": "b", "text": "Unpatched software with known vulnerabilities" },
+      { "id": "c", "text": "Using a strong, unique password on every account" },
+      { "id": "d", "text": "Malware installed on a company device" }
+    ],
+    "correctAnswer": ["a", "b", "d"],
+    "explanation": "Common causes include phishing (social engineering to steal credentials), unpatched software (leaving known vulnerabilities open to exploit), and malware (ransomware, spyware, keyloggers). Strong unique passwords are a countermeasure, not a cause."
+  },
+  {
+    "id": 4,
+    "text": "LAYER 1 — RECOGNITION: In 2017, a ransomware attack called WannaCry hit the NHS and organisations worldwide. What type of breach was this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A physical breach — devices were stolen from hospital premises" },
+      { "id": "b", "text": "An insider threat — a disgruntled NHS employee planted the malware" },
+      { "id": "c", "text": "A malware attack that encrypted files and demanded payment to restore them" },
+      { "id": "d", "text": "A phishing attack targeting individual patient records" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "WannaCry was ransomware — malware that encrypted files on infected systems and demanded a Bitcoin ransom to decrypt them. It spread by exploiting an unpatched Windows vulnerability (EternalBlue). The NHS was particularly badly hit because many systems were running outdated, unpatched software."
+  },
+  {
+    "id": 5,
+    "text": "LAYER 1 — RECOGNITION: In 2017, Equifax suffered a breach exposing 147 million people's personal data. What was the root cause?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "An employee lost a USB drive containing the data" },
+      { "id": "b", "text": "A known software vulnerability that had not been patched" },
+      { "id": "c", "text": "A phishing attack on Equifax's CEO" },
+      { "id": "d", "text": "A physical break-in at Equifax's data centre" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The Equifax breach was caused by a failure to patch Apache Struts, a web application framework with a known critical vulnerability. A patch had been available for months before attackers exploited it. This is a classic example of how failure to apply security updates creates catastrophic risk."
+  },
+  {
+    "id": 6,
+    "text": "LAYER 1 — RECOGNITION: What are the typical implications of a data breach for an individual? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Identity theft — criminals use stolen personal data to open accounts or commit fraud" },
+      { "id": "b", "text": "The individual is fined by the ICO for not protecting their own data" },
+      { "id": "c", "text": "Financial loss — fraudulent transactions made using stolen payment details" },
+      { "id": "d", "text": "The individual must disclose the breach to all their contacts within 72 hours" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Individuals can suffer identity theft (their stolen data used to fraudulently apply for credit, open accounts, or commit crimes in their name) and direct financial loss (unauthorised transactions using stolen card details). The 72-hour notification requirement applies to organisations under GDPR, not individuals."
+  },
+  {
+    "id": 7,
+    "text": "LAYER 1 — RECOGNITION: What are the typical implications of a data breach for a corporation? (Choose two)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "ICO fines — under GDPR, up to €20 million or 4% of global annual turnover" },
+      { "id": "b", "text": "Reputational damage — loss of customer trust and future business" },
+      { "id": "c", "text": "The company's directors are automatically imprisoned" },
+      { "id": "d", "text": "The company must permanently shut down if it holds any personal data" }
+    ],
+    "correctAnswer": ["a", "b"],
+    "explanation": "Corporations face significant ICO fines under GDPR (up to €20 million or 4% of global annual turnover, whichever is higher) and serious reputational damage that erodes customer trust and future revenue. Directors are not automatically imprisoned, and companies are not forced to close — but the financial and reputational consequences can be severe enough to cause collapse."
+  },
+  {
+    "id": 8,
+    "text": "LAYER 1 — RECOGNITION: Under GDPR, how quickly must an organisation report a data breach to the ICO if it is likely to risk individuals' rights and freedoms?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Within 24 hours" },
+      { "id": "b", "text": "Within 72 hours of becoming aware of it" },
+      { "id": "c", "text": "Within 30 days" },
+      { "id": "d", "text": "There is no time limit — notification is optional" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "GDPR requires organisations to report notifiable data breaches to the ICO within 72 hours of becoming aware of them. A breach is notifiable if it is likely to result in a risk to the rights and freedoms of individuals. Failure to report in time is itself a breach of GDPR and can lead to additional fines."
+  },
+  {
+    "id": 9,
+    "text": "LAYER 1 — RECOGNITION: Which of the following is an example of an insider threat causing a data breach?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A hacker in another country exploiting a website vulnerability" },
+      { "id": "b", "text": "A phishing email sent to all staff that one employee clicks" },
+      { "id": "c", "text": "A disgruntled employee copying customer records to a USB drive before resigning" },
+      { "id": "d", "text": "A DDoS attack taking down an online service" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "An insider threat comes from within the organisation — someone with legitimate access who abuses it. A disgruntled employee copying data before leaving is a classic example. Insider threats are particularly dangerous because they bypass many external security controls. They can be malicious (intentional) or accidental (e.g. sending data to the wrong recipient)."
+  },
+  {
+    "id": 10,
+    "text": "LAYER 1 — RECOGNITION: What does 'social engineering' mean in the context of data security breaches?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Using software tools to find weaknesses in a network" },
+      { "id": "b", "text": "Manipulating people psychologically to trick them into revealing information or performing actions that compromise security" },
+      { "id": "c", "text": "Building a social media presence to promote data security awareness" },
+      { "id": "d", "text": "Designing software with social features that improve team collaboration" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Social engineering exploits human psychology rather than technical vulnerabilities. Attackers manipulate people through deception — pretending to be IT support, creating urgency, or exploiting trust. Phishing is the most common form. It is often easier for attackers to trick a person than to break through technical defences."
+  },
+  {
+    "id": 11,
+    "text": "LAYER 2 — REASONING: Why are unpatched systems a particularly serious cause of data breaches?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because patches always introduce new vulnerabilities that attackers can exploit" },
+      { "id": "b", "text": "Because once a vulnerability is publicly known, attackers can immediately exploit any unpatched system — the patch itself reveals the weakness" },
+      { "id": "c", "text": "Because patching is illegal without a software licence" },
+      { "id": "d", "text": "Because unpatched systems run slower and are easier to attack" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "When a patch is released, security researchers and attackers both analyse it to understand what vulnerability it fixed. This means unpatched systems are immediately at higher risk — attackers now know exactly where the weakness is. This is why rapid patch application is critical. The Equifax breach is the defining example: a patch was available months before attackers struck."
+  },
+  {
+    "id": 12,
+    "text": "LAYER 2 — REASONING: Why does reputational damage from a data breach often cause more long-term harm to a business than the ICO fine?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because ICO fines are capped at £100 and have little financial impact" },
+      { "id": "b", "text": "Because reputational damage leads to loss of customers and future revenue — effects that compound over years and cannot be undone by paying a fine" },
+      { "id": "c", "text": "Because the media always exaggerates breaches, making reputation damage seem worse than it is" },
+      { "id": "d", "text": "Fines are always the greater harm — reputation recovers quickly" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "ICO fines, though potentially large, are a one-off payment. Reputational damage is ongoing — customers leave, contracts are lost, and it can take years to rebuild trust. For some companies (e.g. smaller businesses), the public perception of being insecure is enough to cause them to fail entirely. Trust is one of the hardest things to rebuild once lost."
+  },
+  {
+    "id": 13,
+    "text": "LAYER 2 — REASONING: Why are individuals often the weakest link in data security, even when strong technical controls are in place?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because individuals always intend to cause breaches" },
+      { "id": "b", "text": "Because humans can be deceived, pressured or make mistakes in ways that bypass even the best technical security measures" },
+      { "id": "c", "text": "Because GDPR does not require organisations to train staff" },
+      { "id": "d", "text": "Because individuals have administrator access to all systems" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Technology can be configured perfectly, but a single employee clicking a phishing link, using a weak password, or sending data to the wrong address can bypass all of it. This is why security training and awareness are just as important as firewalls and encryption. Attackers know this — social engineering is often far cheaper and more effective than technical hacking."
+  },
+  {
+    "id": 14,
+    "text": "LAYER 2 — REASONING: Why does GDPR require organisations to report breaches to the ICO within 72 hours rather than giving them weeks or months?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "To give the ICO time to fix the breach on the organisation's behalf" },
+      { "id": "b", "text": "So affected individuals can be notified quickly and take protective action before criminals exploit their data" },
+      { "id": "c", "text": "Because GDPR fines double every 24 hours after a breach" },
+      { "id": "d", "text": "To allow the ICO to issue a press release within three days" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The 72-hour window exists to protect individuals. The sooner a breach is reported, the sooner affected people can be told — allowing them to change passwords, cancel cards, and monitor accounts before criminals have the chance to exploit the stolen data. Delay increases the harm to individuals, which is exactly what GDPR aims to prevent."
+  },
+  {
+    "id": 15,
+    "text": "LAYER 2 — REASONING: A small business owner says: 'We're too small to be a target for hackers — we don't need to worry about data breaches.' Why is this reasoning flawed?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is correct — hackers only target large corporations with valuable data" },
+      { "id": "b", "text": "Small businesses are often easier targets precisely because they have weaker security, and they still hold valuable personal and financial data" },
+      { "id": "c", "text": "It is flawed only because small businesses must comply with health and safety law" },
+      { "id": "d", "text": "It is correct — GDPR only applies to businesses with more than 250 employees" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Small businesses are attractive targets because they often have weaker defences — less IT staff, older software, and minimal security training. Automated attack tools don't discriminate by company size. Furthermore, GDPR applies to any organisation that processes personal data, regardless of size. A breach at a small business can be just as devastating for the individuals whose data is exposed."
+  },
+  {
+    "id": 16,
+    "text": "LAYER 3 — BUILD THE ANSWER: A question asks you to 'explain the implications of a data breach for a corporation'. Which answer scores the most marks?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A data breach is bad for a company." },
+      { "id": "b", "text": "A data breach can result in an ICO fine under GDPR of up to €20 million or 4% of global turnover. Beyond the fine, the company faces reputational damage — customers lose trust and take their business elsewhere. There may also be legal costs from civil claims by affected individuals, and operational disruption while investigating and recovering from the breach." },
+      { "id": "c", "text": "The company will be fined by the ICO." },
+      { "id": "d", "text": "The company's directors will go to prison and the business will be shut down." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "The highest-scoring answer covers multiple distinct implications with specific detail: the fine (with the actual GDPR figures), reputational damage, legal costs from civil claims, and operational disruption. Each separate point is worth marks. Vague statements like 'it is bad' or incorrect claims like 'directors go to prison' score nothing."
+  },
+  {
+    "id": 17,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each breach cause to its correct description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Phishing" },
+      { "id": "a2", "text": "Unpatched software" },
+      { "id": "a3", "text": "Insider threat" },
+      { "id": "a4", "text": "Physical theft" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "A laptop containing unencrypted customer data is stolen from an employee's car" },
+      { "id": "b2", "text": "A known vulnerability in a web application is exploited because the security update was never applied" },
+      { "id": "b3", "text": "An employee copies client records to a personal USB drive before leaving the company" },
+      { "id": "b4", "text": "A fraudulent email tricks a staff member into entering their login credentials on a fake website" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Each breach type has a distinct mechanism: phishing uses deception to steal credentials, unpatched software leaves known vulnerabilities open, insider threats come from authorised users abusing access, and physical theft involves devices being taken. A strong exam answer names the cause and describes how it leads to a breach."
+  },
+  {
+    "id": 18,
+    "text": "LAYER 3 — BUILD THE ANSWER: Match each part of a strong exam answer about data breaches to its content.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Part 1: Define the breach" },
+      { "id": "a2", "text": "Part 2: Give the cause" },
+      { "id": "a3", "text": "Part 3: Corporate implication" },
+      { "id": "a4", "text": "Part 4: Individual implication" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Affected customers face identity theft and financial fraud using their stolen personal and payment data" },
+      { "id": "b2", "text": "An incident where personal data is accessed, disclosed or destroyed without authorisation" },
+      { "id": "b3", "text": "The organisation faces an ICO fine under GDPR and long-term reputational damage as customers lose trust" },
+      { "id": "b4", "text": "An unpatched vulnerability in the company's web server was exploited by an external attacker" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "A complete breach answer covers: what a breach is, how it happened, what it means for the organisation, and what it means for individuals. Examiners award marks for each distinct element — covering all four parts maximises your score."
+  }
+]
