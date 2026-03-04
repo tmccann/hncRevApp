@@ -40,7 +40,7 @@
     "topics": ["Subnetting", "CIDR", "Subnet Masks", "VLSM", "ANDing"],
     "hasSummary": true,
     "hasQuiz": true,
-     "checkpoints": ["checkpoint-11-13"],
+    "checkpoints": ["checkpoint-11-13"],
     "color": "from-blue-500 to-cyan-600"
   },
   {
@@ -62,7 +62,7 @@
     "topics": ["Ping", "Traceroute", "Echo Request/Reply", "Time Exceeded", "Error Messages"],
     "hasSummary": true,
     "hasQuiz": true,
-     "checkpoints": ["checkpoint-11-13"],
+    "checkpoints": ["checkpoint-11-13"],
     "color": "from-blue-500 to-cyan-600"
   },
   {
@@ -98,15 +98,26 @@
     "checkpoints": ["checkpoint-16-17"],
     "color": "from-blue-500 to-cyan-600"
   },
-{
-  "id": "module-17",
-  "number": 17,
-  "title": "Building a Small Network",
-  "description": "Network design, device selection, scalability, and best practices",
-  "topics": ["Network Design", "Redundancy", "Modularity", "QoS", "Baseline", "Troubleshooting"],
-  "hasSummary": true,
-  "hasQuiz": true,
-  "checkpoints": ["checkpoint-16-17"],
-  "color": "from-blue-500 to-cyan-600"
-}
+  {
+    "id": "module-17",
+    "number": 17,
+    "title": "Building a Small Network",
+    "description": "Network design, device selection, scalability, and best practices",
+    "topics": ["Network Design", "Redundancy", "Modularity", "QoS", "Baseline", "Troubleshooting"],
+    "hasSummary": true,
+    "hasQuiz": true,
+    "checkpoints": ["checkpoint-16-17"],
+    "color": "from-blue-500 to-cyan-600"
+  },
+  {
+    "id": "module-18",
+    "number": 18,
+    "title": "Practice Exam",
+    "description": "Full practice exam covering all CCNA modules — test your knowledge before the real thing",
+    "topics": ["All Modules", "Mixed Questions", "Exam Practice"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-blue-500 to-cyan-600"
+  }
 ]

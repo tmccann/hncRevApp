@@ -1,0 +1,811 @@
+[
+  {
+    "id": 1,
+    "text": "Which two devices would be described as intermediary devices? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "wireless LAN controller" },
+      { "id": "b", "text": "IPS" },
+      { "id": "c", "text": "server" },
+      { "id": "d", "text": "gaming console" },
+      { "id": "e", "text": "retail scanner" },
+      { "id": "f", "text": "assembly line robots" }
+    ],
+    "correctAnswer": ["a", "b"],
+    "explanation": "Topic 1.2.4: Wireless LAN controllers and Intrusion Prevention Systems (IPS) are intermediary devices that direct data as it travels across the network."
+  },
+  {
+    "id": 2,
+    "text": "What characteristic describes spyware?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "software that is installed on a user device and collects information about the user" },
+      { "id": "b", "text": "an attack that slows or crashes a device or network service" },
+      { "id": "c", "text": "the use of stolen credentials to access private data" },
+      { "id": "d", "text": "a network device that filters access and traffic coming into a network" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 1.8.1: Spyware is malware designed to secretly monitor and collect information about a user and their device."
+  },
+  {
+    "id": 3,
+    "text": "Which statement describes network security?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It ensures sensitive corporate data is available for authorized users." },
+      { "id": "b", "text": "It prioritizes data flows in order to give priority to delay-sensitive traffic." },
+      { "id": "c", "text": "It supports growth over time in accordance with approved network design procedures." },
+      { "id": "d", "text": "It synchronizes traffic flows using timestamps." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 1.6.5: Network security involves the implementation of hardware and software to protect data from unauthorized access and ensure it is available when needed."
+  },
+  {
+    "id": 4,
+    "text": "What is a user trying to determine when issuing a ping 10.1.1.1 command on a PC?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "if the TCP/IP stack is functioning on the PC without putting traffic on the wire" },
+      { "id": "b", "text": "if there is connectivity with the destination device" },
+      { "id": "c", "text": "the path that traffic will take to reach the destination" },
+      { "id": "d", "text": "what type of device is at the destination" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 13.2.1: The ping destination command is used to test basic network connectivity to a specific IP address."
+  },
+  {
+    "id": 5,
+    "text": "What is a characteristic of a switch virtual interface (SVI)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Although it is a virtual interface, it needs to have physical hardware on the device associated with it." },
+      { "id": "b", "text": "An SVI is created in software and requires a configured IP address and a subnet mask in order to provide remote access to the switch." },
+      { "id": "c", "text": "SVIs come preconfigured on Cisco switches." },
+      { "id": "d", "text": "SVIs do not require the no shutdown command to become enabled." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 2.6.2: SVIs are created in software and provide a means to remotely manage a switch over a network using IP."
+  },
+  {
+    "id": 6,
+    "text": "Match the descriptions to the terms. (Not all options are used.)",
+    "type": "matching",
+   
+    "columnA": [
+      { "id": "a1", "text": "interact with the OS by pointing and clicking"},
+      { "id": "a2", "text": "part of the OS that interfaces with applications and usr"},
+      { "id": "a3", "text": "part of the OS that interacts directly with device hardware"},
+      { "id": "a4", "text": "interact with the OS by typing commands"  }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "shell" },
+      { "id": "b2", "text": "CLI" },
+      { "id": "b3", "text": "GUI" },
+      { "id": "b4", "text": "kernel" },
+      { "id": "b5", "text": "shell" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b5" },
+      { "a": "a3", "b": "b4" },
+      { "a": "a4", "b": "b2" }
+    ],
+    "explanation": "Topic 2.1.1: GUI and CLI are the user interfaces; Shell is the user-facing part of the OS; Kernel is the hardware-facing part."
+  },
+  {
+    "id": 7,
+    "text": "Refer to the exhibit. An administrator is trying to configure the switch but receives an error message. What is the problem?",
+    "type": "single",
+    "image": "/images/module-18-quiz/q7.png",
+    "options": [
+      { "id": "a", "text": "The entire command, configure terminal, must be used." },
+      { "id": "b", "text": "The administrator is already in global configuration mode." },
+      { "id": "c", "text": "The administrator must first enter privileged EXEC mode before issuing the command." },
+      { "id": "d", "text": "The administrator must connect via the console port to access global configuration mode." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 2.2.1: The '>' symbol indicates user EXEC mode. Global configuration mode can only be accessed from privileged EXEC mode (#)."
+  },
+  {
+    "id": 8,
+    "text": "Which PDU is processed when a host computer is de-encapsulating a message at the transport layer of the TCP/IP model?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "bits" },
+      { "id": "b", "text": "frame" },
+      { "id": "c", "text": "packet" },
+      { "id": "d", "text": "segment" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 3.6.3: At the transport layer, data is handled in segments during de-encapsulation."
+  },
+  {
+    "id": 9,
+    "text": "Which three layers of the OSI model are comparable in function to the application layer of the TCP/IP model? (Choose three.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "application" },
+      { "id": "b", "text": "presentation" },
+      { "id": "c", "text": "session" },
+      { "id": "d", "text": "transport" },
+      { "id": "e", "text": "data link" },
+      { "id": "f", "text": "physical" },
+      { "id": "g", "text": "network" }
+    ],
+    "correctAnswer": ["a", "b", "c"],
+    "explanation": "Topic 3.5.4: The TCP/IP application layer combines the functions of the OSI Application, Presentation, and Session layers."
+  },
+  {
+    "id": 10,
+    "text": "Which two OSI model layers have the same functionality as two layers of the TCP/IP model? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "data link" },
+      { "id": "b", "text": "network" },
+      { "id": "c", "text": "physical" },
+      { "id": "d", "text": "session" },
+      { "id": "e", "text": "transport" }
+    ],
+    "correctAnswer": ["b", "e"],
+    "explanation": "Topic 3.5.4: OSI Transport matches TCP/IP Transport; OSI Network matches TCP/IP Internet."
+  },
+  {
+    "id": 11,
+    "text": "What OSI physical layer term describes the measure of the transfer of bits across a medium over a given period of time?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "throughput" },
+      { "id": "b", "text": "bandwidth" },
+      { "id": "c", "text": "latency" },
+      { "id": "d", "text": "goodput" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 4.2.6: Throughput is the actual measurement of the transfer of bits over time, whereas bandwidth is the theoretical maximum."
+  },
+  {
+    "id": 12,
+    "text": "Refer to the exhibit. What is the maximum possible throughput between the PC and the server?",
+    "type": "single",
+     "image": "/images/module-18-quiz/q12.png",
+    "options": [
+      { "id": "a", "text": "128 kb/s" },
+      { "id": "b", "text": "10 Mb/s" },
+      { "id": "c", "text": "100 Mb/s" },
+      { "id": "d", "text": "1000 Mb/s" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 4.2.6: Maximum throughput is always determined by the slowest link (the bottleneck) in the path."
+  },
+  {
+    "id": 13,
+    "text": "Which two statements describe the characteristics of fiber-optic cabling? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Fiber-optic cabling does not conduct electricity." },
+      { "id": "b", "text": "Fiber-optic cabling has high signal loss." },
+      { "id": "c", "text": "Fiber-optic cabling is primarily used as backbone cabling." },
+      { "id": "d", "text": "Multimode fiber-optic cabling carries signals from multiple sending devices." },
+      { "id": "e", "text": "Fiber-optic cabling uses LEDs for single-mode and laser for multimode." }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Topic 4.5.6: Fiber-optic uses light pulses (no electricity) and is preferred for high-bandwidth backbones over long distances."
+  },
+  {
+    "id": 14,
+    "text": "Match the description with the media: Wireless, Coaxial, Optical Fiber, STP.  (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "STP" },
+      { "id": "a2", "text": "wireless" },
+      { "id": "a3", "text": "optical fiber" },
+      { "id": "a4", "text": "coaxial" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "This type of copper media is used in industrial or similar environments where there is a lot of interference." },
+      { "id": "b2", "text": "Traditionally used for television but can now be used in a network to connect the customer location to the wiring of the customer premises." },
+      { "id": "b3", "text": "This type of media is used in wired office environments." },
+      { "id": "b4", "text": "This type of media is used for high transmission speed and can also transfer data over long distances." },
+       { "id": "b5", "text": "This type of media provides the most mobility options." }
+
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b5" },
+      { "a": "a3", "b": "b4" },
+      { "a": "a4", "b": "b2" }
+    ],
+    "explanation": "Topic 4.3.2: Each media type has specific properties for different network environments."
+  },
+  {
+    "id": 15,
+    "text": "Which two acronyms represent the data link sublayers that Ethernet relies upon to operate? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "CSMA" },
+      { "id": "b", "text": "FCS" },
+      { "id": "c", "text": "LLC" },
+      { "id": "d", "text": "MAC" },
+      { "id": "e", "text": "SFD" }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "Topic 7.1.2: Ethernet functions at the Data Link layer through the Logical Link Control (LLC) and Media Access Control (MAC) sublayers."
+  },
+  {
+    "id": 16,
+    "text": "A network team is comparing topologies. Which physical topology is an example of a hybrid topology for a LAN?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "bus" },
+      { "id": "b", "text": "extended star" },
+      { "id": "c", "text": "ring" },
+      { "id": "d", "text": "partial mesh" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 6.2.4: An extended star topology connects multiple star topologies, making it a hybrid design. "
+  },
+  {
+    "id": 17,
+    "text": "What does a router do when it receives a Layer 2 frame over the network medium?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "determines the best path" },
+      { "id": "b", "text": "de-encapsulates the frame" },
+      { "id": "c", "text": "re-encapsulates the packet into a new frame" },
+      { "id": "d", "text": "forwards the new frame appropriate to the medium" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 6.1.3: Upon receiving a frame, a router first de-encapsulates it to inspect the Layer 3 destination address."
+  },
+  {
+    "id": 18,
+    "text": "Although CSMA/CD is still a feature of Ethernet, why is it no longer necessary?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "the virtually unlimited availability of IPv6 addresses" },
+      { "id": "b", "text": "the use of CSMA/CA" },
+      { "id": "c", "text": "the use of full-duplex capable Layer 2 switches" },
+      { "id": "d", "text": "the development of half-duplex switch operation" },
+      { "id": "e", "text": "the use of Gigabit Ethernet speeds" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 7.1.3: Full-duplex communication on switches eliminates collisions, making collision detection (CD) unnecessary."
+  },
+  {
+    "id": 19,
+    "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "b", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated" },
+      { "id": "c", "text": "applies source and destination MAC addresses to Ethernet frame" },
+      { "id": "d", "text": "implements CSMA/CD over legacy shared half-duplex media" },
+      { "id": "e", "text": "integrates Layer 2 flows between 10 Gigabit Ethernet and 1 Gigabit Ethernet" }
+    ],
+    "correctAnswer": ["a", "b"],
+    "explanation": "Topic 7.1.2: The LLC sublayer defines software processes to provide services to network layer protocols and identifies the encapsulated protocol."
+  },
+  {
+    "id": 20,
+    "text": "Two network engineers are discussing frame forwarding. What is an important concept related to the cut-through method of switching?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The fragment-free switching offers the lowest level of latency." },
+      { "id": "b", "text": "Fast-forward switching is a compromise between store-and-forward and fragment-free." },
+      { "id": "c", "text": "Fragment-free switching is the typical cut-through method." },
+      { "id": "d", "text": "Packets can be relayed with errors when fast-forward switching is used." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 7.4.2: Fast-forward switching starts forwarding immediately after reading the destination MAC address, meaning errored frames may be forwarded."
+  },
+  {
+    "id": 21,
+    "text": "Which two issues can cause both runts and giants in Ethernet networks? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "a malfunctioning NIC" },
+      { "id": "b", "text": "CRC errors" },
+      { "id": "c", "text": "electrical interference on serial interfaces" },
+      { "id": "d", "text": "half-duplex operations" },
+      { "id": "e", "text": "using the incorrect cable type" }
+    ],
+    "correctAnswer": ["a", "d"],
+    "explanation": "Topic 7.1.4: Runts and giants are commonly caused by collisions in half-duplex operations or by a malfunctioning NIC."
+  },
+  {
+    "id": 22,
+    "text": "What happens when a switch receives a frame and the calculated CRC value is different than the value in the FCS field?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The switch places the new CRC value in the FCS field and forwards the frame." },
+      { "id": "b", "text": "The switch notifies the source of the bad frame." },
+      { "id": "c", "text": "The switch drops the frame." },
+      { "id": "d", "text": "The switch floods the frame to all ports." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 7.1.4: A CRC/FCS mismatch indicates a corrupted frame; the switch drops corrupted frames to prevent bad data from traveling through the network."
+  },
+  {
+    "id": 23,
+    "text": "Which term describes a field in the IPv4 packet header that contains a unicast, multicast, or broadcast address?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "destination IPv4 address" },
+      { "id": "b", "text": "protocol" },
+      { "id": "c", "text": "TTL" },
+      { "id": "d", "text": "header checksum" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 8.2.2: The destination IPv4 address field identifies the recipient host(s)."
+  },
+  {
+    "id": 24,
+    "text": "If the default gateway is configured incorrectly on the host, what is the impact on communications?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The host is unable to communicate on the local network." },
+      { "id": "b", "text": "The host can communicate with other hosts on the local network, but is unable to communicate with remote networks." },
+      { "id": "c", "text": "The host can communicate with other hosts on remote networks, but is unable to communicate with hosts on the local network." },
+      { "id": "d", "text": "There is no impact on communications." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.3.1: A gateway is only needed for traffic leaving the local segment. Local communication uses ARP and MAC addresses directly."
+  },
+  {
+    "id": 25,
+    "text": "Why is NAT not needed in IPv6?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Because IPv6 has integrated security." },
+      { "id": "b", "text": "Any host or user can get a public IPv6 network address because the number of available addresses is extremely large." },
+      { "id": "c", "text": "The problems that are induced by NAT applications are solved by the IPv6 header." },
+      { "id": "d", "text": "The number of routes increases with nodes connected to the Internet." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 12.1.1: The vast address space of IPv6 allows every device to have a globally unique address, eliminating the need for private-to-public translation."
+  },
+  {
+    "id": 26,
+    "text": "What routing table entry has a next hop address associated with a destination network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "directly-connected routes" },
+      { "id": "b", "text": "local routes" },
+      { "id": "c", "text": "remote routes" },
+      { "id": "d", "text": "C and L source routes" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 8.5.2: Remote routes must include the IP address of the next router (next hop) along the path to the destination."
+  },
+  {
+    "id": 27,
+    "text": "Refer to the exhibit. PC1 issues an ARP request because it needs to send a packet to PC3. In this scenario, what will happen next?",
+    "type": "single",
+    "image": "/images/module-18-quiz/q27.png",
+    "options": [
+      { "id": "a", "text": "RT1 will forward the ARP request to PC3." },
+      { "id": "b", "text": "RT1 will send an ARP reply with its own Fa0/0 MAC address." },
+      { "id": "c", "text": "RT1 will send an ARP reply with the PC3 MAC address." },
+      { "id": "d", "text": "SW1 will send an ARP reply with its Fa0/1 MAC address." },
+      { "id": "e", "text": "RT1 will send an ARP reply with its own Fa0/1 MAC address." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 9.2.5: To reach a host on another network, the sender uses the MAC address of its default gateway (RT1) as the Layer 2 destination."
+  },
+  {
+    "id": 28,
+    "text": "Which destination address is used in an ARP request frame?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "0.0.0.0" },
+      { "id": "b", "text": "255.255.255.255" },
+      { "id": "c", "text": "FFFF.FFFF.FFFF" },
+      { "id": "d", "text": "AAAA.AAAA.AAAA" },
+      { "id": "e", "text": "the physical address of the destination host" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 9.2.3: An ARP request is a Layer 2 broadcast sent to all devices on the LAN segment to find a specific MAC address."
+  },
+  {
+    "id": 29,
+    "text": "Refer to the exhibit. The switch receives a frame from PC1 addressed to PC3. PC3 is not in the MAC table. What will the switch do?",
+    "type": "single",
+    "image": "/images/module-18-quiz/q29.png",
+    "options": [
+      { "id": "a", "text": "The switch will discard the frame." },
+      { "id": "b", "text": "The switch will forward the frame only to port 2." },
+      { "id": "c", "text": "The switch will forward the frame to all ports except port 4." },
+      { "id": "d", "text": "The switch will forward the frame to all ports." },
+      { "id": "e", "text": "The switch will forward the frame only to ports 1 and 3." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 7.3.2: When a destination MAC is not in the table (unknown unicast), the switch floods the frame out all ports except the one it arrived on."
+  },
+  {
+    "id": 30,
+    "text": "Refer to the exhibit. A network administrator is connecting a new host to the Registrar LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?",
+    "type": "single",
+     "image": "/images/module-18-quiz/q30.png",
+    "options": [
+      { "id": "a", "text": "192.168.235.234" },
+      { "id": "b", "text": "192.168.235.1" },
+      { "id": "c", "text": "10.234.235.254" },
+      { "id": "d", "text": "203.0.113.3" },
+      { "id": "e", "text": "192.168.234.114" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.1: The gateway is the router interface IP on the host's subnet. Gi0/1 on router Floor is 192.168.235.234."
+  },
+  {
+    "id": 31,
+    "text": "Match the command with the device mode. (Line, Interface, Global Config, User EXEC, Privileged EXEC)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "login" },
+      { "id": "a2", "text": "service password-encrypion" },
+      { "id": "a3", "text": "ip address 192.168.4.4 255.255.255.0" },
+      { "id": "a4", "text": "copy running-config startup-config" },
+      { "id": "a5", "text": "enable" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "R1(config)#" },
+      { "id": "b2", "text": "R1>" },    
+      { "id": "b3", "text": "R1(config-router)#" },
+      { "id": "b4", "text": "R1#" },
+      { "id": "b5", "text": "R1(config-line)#" },
+      { "id": "b6", "text": "R1(config-if)#" }   
+   
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b5" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b6" },
+      { "a": "a4", "b": "b4" },
+      { "a": "a5", "b": "b2" }
+    ],
+    "explanation": "Topic 10.1.1: The enable command is entered in R1> mode. The login command is entered in R1(config-line)# mode. The copy running-config startup-config command is entered in R1# mode. The ip address 192.168.4.4 255.255.255.0 command is entered in R1(config-if)# mode. The service password-encryption command is entered in global configuration mode."
+  },
+  {
+    "id": 32,
+    "text": "A router boots and enters setup mode. What is the reason for this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The IOS image is corrupt." },
+      { "id": "b", "text": "Cisco IOS is missing from flash memory." },
+      { "id": "c", "text": "The configuration file is missing from NVRAM." },
+      { "id": "d", "text": "The POST process has detected hardware failure." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 10.1.1: If the router cannot find the startup-config in NVRAM, it defaults to setup mode to allow manual configuration."
+  },
+  {
+    "id": 33,
+    "text": "What type of address is 198.133.219.162?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "public" },
+      { "id": "b", "text": "link-local" },
+      { "id": "c", "text": "loopback" },
+      { "id": "d", "text": "multicast" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.3.1: This is a globally routable public IPv4 address."
+  },
+  {
+    "id": 34,
+    "text": "Given network 172.18.109.0, which subnet mask would be used if 6 host bits were available?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "255.255.255.192" },
+      { "id": "b", "text": "255.255.255.252" },
+      { "id": "c", "text": "255.255.224.0" },
+      { "id": "d", "text": "255.255.255.248" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.5.2: 6 host bits ($2^6=64$) requires a mask with 26 network bits (/26), which is 255.255.255.192."
+  },
+  {
+    "id": 35,
+    "text": "Match the network/broadcast addresses for: 192.168.10.77/28, 192.168.10.17/30, and 192.168.10.35/29.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Subnet 1 network number" },
+      { "id": "a2", "text": "Subnet 1 broadcast address" },
+      { "id": "a3", "text": "Subnet 2 network number" },
+      { "id": "a4", "text": "Subnet 2 broadcast address" },
+      { "id": "a5", "text": "Subnet 3 network number" },    
+      { "id": "a6", "text": "Subnet 3 broadcast address" }    
+      
+    ],
+    "columnB": [
+      { "id": "b1", "text": "192.168.10.64" },
+      { "id": "b2", "text": "192.168.10.95" },
+      { "id": "b3", "text": "192.168.10.19" },
+      { "id": "b4", "text": "192.168.10.32" },
+      { "id": "b5", "text": "192.168.10.47" },
+      { "id": "b6", "text": "192.168.10.48" },     
+      { "id": "b7", "text": "192.168.10.0" },
+      { "id": "b8", "text": "192.168.10.79" },
+      { "id": "b9", "text": "192.168.10.255" },      
+      { "id": "b10", "text": "192.168.10.16" },  
+      { "id": "b11", "text": "192.168.10.39" }
+    
+      
+    
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b8" },
+      { "a": "a3", "b": "b10" },
+      { "a": "a4", "b": "b3" },
+      { "a": "a5", "b": "b4" },
+      { "a": "a6", "b": "b11" }
+    ],
+    "explanation": "Topic 11.5.2: To calculate any of these addresses, write the device IP address in binary. Draw a line showing where the subnet mask 1s end. For example, with Device 1, the final octet (77) is 01001101. The line would be drawn between the 0100 and the 1101 because the subnet mask is /28. Change all the bits to the right of the line to 0s to determine the network number (01000000 or 64). Change all the bits to the right of the line to 1s to determine the broadcast address (01001111 or 79)."
+  },
+  {
+    "id": 36,
+    "text": "What does the IP address 192.168.1.15/29 represent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "subnetwork address" },
+      { "id": "b", "text": "multicast address" },
+      { "id": "c", "text": "unicast address" },
+      { "id": "d", "text": "broadcast address" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.1.6: In a /29 subnet, addresses are in blocks of 8. For the block starting at .8, the broadcast is .15."
+  },
+  {
+    "id": 37,
+    "text": "What type of IPv6 address is represented by ::1/128?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "loopback" },
+      { "id": "b", "text": "unspecified" },
+      { "id": "c", "text": "global unicast" },
+      { "id": "d", "text": "EUI-64 generated link-local" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.3.3: ::1/128 is the IPv6 loopback address, equivalent to 127.0.0.1."
+  },
+  {
+    "id": 38,
+    "text": "Which is the compressed format of the IPv6 address fe80:0000:0000:0000:0220:0b3f:f0e0:0029?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "fe80::220:b3f:f0e0:29" },
+      { "id": "b", "text": "fe80:9ea:0:2200::fe0:290" },
+      { "id": "c", "text": "fe80:9ea0::2020:0:bf:e0:9290" },
+      { "id": "d", "text": "fe80:9ea0::2020::bf:e0:9290" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.2.3: Compresses all-zero hextets to '::' and removes leading zeros in each hextet."
+  },
+  {
+    "id": 39,
+    "text": "Refer to the exhibit. Which IPv6 address is one of the link-local addresses of the workstation?",
+    "type": "single",
+    "image": "/images/module-18-quiz/q39.png",
+    "options": [
+      { "id": "a", "text": "::1/128" },
+      { "id": "b", "text": "fe80::30d0:115:3f57:fe4c/128" },
+      { "id": "c", "text": "fe80::/64" },
+      { "id": "d", "text": "2001:0:9d38:6ab8:30d0:115:3f57:fe4c/128" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 12.3.7: IPv6 link-local addresses are located within the fe80::/10 range."
+  },
+  {
+    "id": 40,
+    "text": "What task might a user be trying to accomplish by using the ping 2001:db8:FACE:39::10 command?",
+    "image": "/images/module-18-quiz/q40.png",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "verifying that there is connectivity to the internet" },
+      { "id": "b", "text": "verifying that there is connectivity within the local network" },
+      { "id": "c", "text": "creating a network performance benchmark" },
+      { "id": "d", "text": "determining the path to reach the remote server" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 17.4.1: Pinging a public/WAN interface IP (GUA) verifies that the device can reach the Internet."
+  },
+  {
+    "id": 41,
+    "text": "A network technician types the command ping 127.0.0.1. What is the technician trying to accomplish?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "checking the IP address on the network card" },
+      { "id": "b", "text": "testing the integrity of the TCP/IP stack on the local machine" },
+      { "id": "c", "text": "pinging a host computer with IP 127.0.0.1 on the network" },
+      { "id": "d", "text": "tracing the path to a host computer" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 13.2.2: Pinging the loopback address verifies that the internal protocol stack is functional."
+  },
+  {
+    "id": 42,
+    "text": "Which two ICMP messages are used by both IPv4 and IPv6 protocols? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "router solicitation" },
+      { "id": "b", "text": "route redirection" },
+      { "id": "c", "text": "neighbor solicitation" },
+      { "id": "d", "text": "protocol unreachable" },
+      { "id": "e", "text": "router advertisement" }
+    ],
+    "correctAnswer": ["b", "d"],
+    "explanation": "Topic 13.1.1: Common messages to both include unreachable and redirection; others are unique to IPv6 NDP."
+  },
+  {
+    "id": 43,
+    "text": "To which TCP port group does the port 414 belong?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "registered" },
+      { "id": "b", "text": "well-known" },
+      { "id": "c", "text": "private or dynamic" },
+      { "id": "d", "text": "public" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 14.4.3: Well-known ports range from 0 to 1023."
+  },
+  {
+    "id": 44,
+    "text": "A client packet is received with destination port 22. What service is requested?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SSH" },
+      { "id": "b", "text": "DHCP" },
+      { "id": "c", "text": "DNS" },
+      { "id": "d", "text": "TFTP" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 14.4.3: TCP port 22 is reserved for SSH secure remote access."
+  },
+  {
+    "id": 45,
+    "text": "Refer to the exhibit. What does the value of the window size specify?",
+    "type": "single",
+     "image": "/images/module-18-quiz/q45.png",
+    "options": [
+      { "id": "a", "text": "the amount of data that can be sent at one time" },
+      { "id": "b", "text": "the total number of bits received" },
+      { "id": "c", "text": "the amount of data that can be sent before an acknowledgment is required" },
+      { "id": "d", "text": "a random number used in establishing a connection" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 14.6.5: Window size determines the maximum amount of data a sender transmits before waiting for an ACK. "
+  },
+  {
+    "id": 46,
+    "text": "What service is provided by POP3?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Retrieves email from the server by downloading it to the local application." },
+      { "id": "b", "text": "Allows remote access to network devices." },
+      { "id": "c", "text": "Uses encryption to provide secure access." },
+      { "id": "d", "text": "Application for real-time chatting." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 15.3.4: Post Office Protocol v3 (POP3) is used to pull email from a server to a local client application."
+  },
+  {
+    "id": 47,
+    "text": "Two students share a proposal file directly between their computers. Which networking model is being used?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "peer-to-peer" },
+      { "id": "b", "text": "client-based" },
+      { "id": "c", "text": "master-slave" },
+      { "id": "d", "text": "point-to-point" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 1.2.2: P2P models exchange data directly without a central server requirement."
+  },
+  {
+    "id": 48,
+    "text": "Which command is used to manually query a DNS server to resolve a specific host name?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "nslookup" },
+      { "id": "b", "text": "ipconfig /displaydns" },
+      { "id": "c", "text": "tracert" },
+      { "id": "d", "text": "net" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 15.4.4: The nslookup command is the primary utility for manual DNS troubleshooting and queries."
+  },
+  {
+    "id": 49,
+    "text": "Ciscoville firewall is being flooded with traffic, causing a connectivity breakdown. Which attack is this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Trojan horse" },
+      { "id": "b", "text": "reconnaissance" },
+      { "id": "c", "text": "DoS" },
+      { "id": "d", "text": "access" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 16.2.4: A Denial of Service (DoS) attack prevents legitimate usage by overwhelming resources."
+  },
+  {
+    "id": 50,
+    "text": "A network administrator is issuing the login block-for 180 attempts 2 within 30 command on a router. Which threat is the network administrator trying to prevent?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "a user who is trying to guess a password to access the router" },
+      { "id": "b", "text": "a worm that is attempting to access another part of the network" },
+      { "id": "c", "text": "an unidentified individual who is trying to access the network equipment room" },
+      { "id": "d", "text": "a device that is trying to inspect the traccic on a link" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 16.4.3: The login block-for 180 attempts 2 within 30 command will cause the device to block authentication after 2 unsuccessful attempts within 30 seconds for a duration of 180 seconds. A device inspecting the traccic on a link has nothing to do with the router. The router configuration cannot prevent unauthorized access to the equipment room. A worm would not attempt to access the router to propagate to another part of the network."
+  },
+  {
+    "id": 51,
+    "text": "Which statement describes packet-filtering and stateful firewalls as they relate to the OSI model?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Both stateful and packet-filtering firewalls can filter at the application layer." },
+      { "id": "b", "text": "A stateful firewall can filter application layer information, whereas a packet-filtering firewall cannot filter beyond the network layer." },
+      { "id": "c", "text": "A packet-filtering firewall typically can filter up to the transport layer, whereas a stateful firewall can filter up to the session layer." },
+      { "id": "d", "text": "A packet-filtering firewall uses session layer information to track the state of a connection, whereas a stateful firewall uses application layer information to track the state of a connection" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 16.3.6: Packet filtering firewalls inspect up to Layer 4; stateful firewalls track session context at Layer 5."
+  },
+  {
+    "id": 52,
+    "text": "What are two ways to protect a computer from malware? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Use antivirus software." },
+      { "id": "b", "text": "Empty the browser cache." },
+      { "id": "c", "text": "Keep software up to date." },
+      { "id": "d", "text": "Delete unused software." },
+      { "id": "e", "text": "Defragment the hard disk." }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Topic 1.8.2: Antivirus and timely security patching are the primary defenses against malware."
+  },
+  {
+    "id": 53,
+    "text": "The analyst wants to verify that IPv6 routing has been enabled. What is the best command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "show running-config" },
+      { "id": "b", "text": "show interfaces" },
+      { "id": "c", "text": "copy running-config startup-config" },
+      { "id": "d", "text": "show ip nat translations" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.5.1: Verifying global unicast routing requires checking if the command exists in the running config."
+  },
+  {
+    "id": 54,
+    "text": "Which two commands could be used to check if DNS name resolution is working properly on Windows? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "nslookup cisco.com" },
+      { "id": "b", "text": "net cisco.com" },
+      { "id": "c", "text": "ping cisco.com" },
+      { "id": "d", "text": "nbtstat cisco.com" },
+      { "id": "e", "text": "ipconfig /flushdns" }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Topic 17.7.5: ping forces a resolution check, and nslookup queries the DNS server directly."
+  },
+  {
+    "id": 55,
+    "text": "Redundancy for Internet connection via leased line to ISP. Which approach provides cost effective redundancy?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Add a second NIC." },
+      { "id": "b", "text": "Add another web server." },
+      { "id": "c", "text": "Add a connection via DSL line to another ISP." },
+      { "id": "d", "text": "Add multiple connections between switches and edge router." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 17.1.4: A second Internet link through a different provider ensures uptime if the main link fails."
+  }
+]

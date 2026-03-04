@@ -58,7 +58,14 @@ const CCNAModules = () => {
                   <div className="text-sm font-semibold mb-1">
                     Module {module.number}
                   </div>
-                  <h3 className="text-xl font-bold">{module.title}</h3>
+                  <h3 className="text-xl font-bold">
+                    {module.id === "module-18" && (
+                      <span className="inline-block animate-bounce mr-2">
+                        🏆
+                      </span>
+                    )}
+                    {module.title}
+                  </h3>
                 </div>
 
                 {/* Module Body - Flex grow to push buttons down */}
