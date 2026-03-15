@@ -1,7 +1,7 @@
 [
   {
     "id": "module-10",
-    "number": 1,
+    "number": 10,
     "title": "Introduction to the Personal Computer",
     "description": "PC components, peripherals, and system units",
     "topics": ["Hardware", "Components", "Peripherals"],
@@ -9,5 +9,16 @@
     "hasQuiz": true,
     "checkpoints": [],
     "color": "from-blue-600 to-indigo-700"
-  }
+  },
+  {
+  "id": "module-11",
+  "number": 11,
+  "title": "Windows OS Troubleshooting",
+  "description": "Diagnosing and resolving Windows issues — boot errors, driver problems, update failures, CLI commands, registry, file management and network troubleshooting",
+  "topics": ["Boot Errors", "MBR/GPT", "Registry", "CLI Commands", "System Restore", "Driver Management", "RAID", "File Permissions", "Event Viewer", "Windows Update"],
+  "hasSummary": false,
+  "hasQuiz": true,
+  "checkpoints": [],
+  "color": "from-blue-600 to-indigo-700"
+}
 ]

@@ -1,0 +1,698 @@
+[
+  {
+    "id": 1,
+    "text": "A user tries to install an application on a Windows 10 Pro PC but it fails. The user tries to uninstall the application but it fails to uninstall. What option can be used to address this issue without loss of data or applications?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Use Advanced Start-up." },
+      { "id": "b", "text": "Use Restore Point." },
+      { "id": "c", "text": "Uninstall and reinstall the device using device manager." },
+      { "id": "d", "text": "Restart the Windows Update services." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 11.6.2.1: A System Restore Point allows the user to return the system files and registry to a previous state where the system was working correctly, without affecting personal files."
+  },
+  {
+    "id": 2,
+    "text": "A user is troubleshooting a connectivity issue from the PC to a web server and wants to see a list of the traffic stops between the PC and the web server. What is the best Windows command to select to do the job?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "bootrec" },
+      { "id": "b", "text": "diskpart" },
+      { "id": "c", "text": "recover" },
+      { "id": "d", "text": "tracert" },
+      { "id": "e", "text": "tasklist" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.5.3.6: The tracert command is used to trace the route taken by packets across an IP network, showing each 'hop' (traffic stop) along the path."
+  },
+  {
+    "id": 3,
+    "text": "Match the Windows 10 Registry key with its description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "HKEY_LOCAL_MACHINE" }, 
+      { "id": "a2", "text": "HKEY_CURRENT_USER" },
+      { "id": "a3", "text": "HKEY_CLASSES_ROOT" },
+      { "id": "a4", "text": "HKEY_USERS" },
+      { "id": "a5", "text": "HKEY_CURRENT_CONFIG" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "all of the configuration settings for the hardware and software configured on the computer for all users" },
+      { "id": "b2", "text": "settings about the file system, file associations, shortcuts used when you ask Windows to run a file, or view a directory"},
+      { "id": "b3", "text": "data about the preferences of the currently logged on user, including personalization settings, default devices, and programs, etc" },
+      { "id": "b4", "text": "information about the current hardware profile of the machine" }
+    ],
+    "correctMatches": [
+      { "a": "a2", "b": "b3" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b1" },
+      { "a": "a5", "b": "b4" }
+    ],
+    "explanation": "Topic 11.3.2.3: The Windows Registry is organized into hives (keys) that categorize system, hardware, and user information."
+  },
+  {
+    "id": 4,
+    "text": "Match the categories in the Windows 10 Control Panel to the function.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Network and Internet" },
+      { "id": "a2", "text": "Programs" },      
+      { "id": "a3", "text": "Ease of Access" },
+      { "id": "a4", "text": "System and Security" },
+      { "id": "a5", "text": "Hardware and Sound" },
+      { "id": "a6", "text": "User Accounts" }
+     
+    ],
+    "columnB": [
+      { "id": "b1", "text": "provides access to administrative tools for configuring security and a wide range of system functions" },
+      { "id": "b2", "text": "allows configuration of networking, file sharing, the default Microsoft browser, and infrared file exchange settings" },
+      { "id": "b3", "text": "provides access to configuration of devices such as printers, media devices, power, and mobility" },
+      { "id": "b4", "text": "provides access to allow activation or deactivation of a wide range of Windows features" },
+      { "id": "b5", "text": "enables administration of Windows user accounts and management of Web and Windows Credentials including the file encryption certificates" },
+      { "id": "b6", "text": "provides access for configuration of speech recognition and text to speech services" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b6" },
+      { "a": "a4", "b": "b1" },
+      { "a": "a5", "b": "b3" },
+      { "a": "a6", "b": "b5" }
+    ],
+    "explanation": "Topic 11.2.1.4: Control Panel categories group related settings to make system administration more intuitive."
+  },
+  {
+    "id": 5,
+    "text": "Which three levels of RAID are supported by Windows 10 Pro? (Choose three.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "5" },
+      { "id": "b", "text": "0" },
+      { "id": "c", "text": "4" },
+      { "id": "d", "text": "3" },
+      { "id": "e", "text": "1" }
+    ],
+    "correctAnswer": ["a", "b", "e"],
+    "explanation": "Topic 11.3.3.5: Windows 10 Pro supports RAID levels 0 (Spanned/Striped), 1 (Mirrored), and 5 (Striping with Parity)."
+  },
+  {
+    "id": 6,
+    "text": "A user calls the help desk and reports that the workstation, when powering up, displays error messages about an invalid system disk or invalid boot disk. The technician checks the hardware and confirms cables are firmly connected. What is another likely cause of the problem?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A recently installed device driver is incompatible with the boot." },
+      { "id": "b", "text": "The boot service fails to start." },
+      { "id": "c", "text": "Some of the operating system files may be corrupted." },
+      { "id": "d", "text": "The MBR/GPT is corrupted." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.7.2.1: These error messages indicate that the workstation cannot detect the hard drive as a bootable device, often caused by a corrupted Master Boot Record (MBR) or GUID Partition Table (GPT)."
+  },
+  {
+    "id": 7,
+    "text": "A technician is attempting to diagnose and rectify a common boot problem on a Windows 10 installation. Which Windows 10 advanced recovery option should the technician use?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Startup Repair" },
+      { "id": "b", "text": "Reset" },
+      { "id": "c", "text": "System Image Recovery" },
+      { "id": "d", "text": "System Restore" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.7.2.1: The Startup Repair tool fixes common issues like a corrupted MBR, boot sector, or missing entries in the Boot Configuration Database (BCD)."
+  },
+  {
+    "id": 8,
+    "text": "A user of a Windows 10 PC wants to automatically sync the user profile across various Windows 10 devices that the user owns. How can the user accomplish this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Have the user sign into all devices with the Microsoft account of the user." },
+      { "id": "b", "text": "Use gpupdate to propagate the group policy to other devices." },
+      { "id": "c", "text": "Ensure that the user is in the proper group so that the group policy will be applied." },
+      { "id": "d", "text": "Make sure that OneDrive file sync is disabled." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.2.2.1: A Microsoft account syncs desktop settings, browser history, and profiles across all Windows devices signed in with that same account."
+  },
+  {
+    "id": 9,
+    "text": "Which question is an open ended question that could be used when helping a customer troubleshoot a Windows problem?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "What programs have you installed recently?" },
+      { "id": "b", "text": "Have you changed your password recently?" },
+      { "id": "c", "text": "Can you boot the operating system?" },
+      { "id": "d", "text": "Do you get a login prompt when the computer boots?" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.7.1.2: Open-ended questions allow customers to provide detailed information, whereas closed-ended questions typically yield a simple yes/no response."
+  },
+  {
+    "id": 10,
+    "text": "A user is reporting that a file has been shared specifically with another user on the network, but the other user opens the file and is unable to save it once edited. What is the probable cause?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The file has the Archive attribute enabled." },
+      { "id": "b", "text": "The user forgot to share the parent folder." },
+      { "id": "c", "text": "The user shared the document with Read permissions." },
+      { "id": "d", "text": "The file has been deleted." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.5.2.1: Read permissions allow a user to see and open the file, but they do not allow the user to modify or save changes to that file."
+  },
+  {
+    "id": 11,
+    "text": "Which statement is true regarding libraries in Windows 10?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Libraries allow Windows 10 to index files faster." },
+      { "id": "b", "text": "Libraries allow Windows 10 to support file names longer than 20 characters." },
+      { "id": "c", "text": "Libraries allow Windows 10 to link multiple different directories." },
+      { "id": "d", "text": "Libraries allow Windows 10 to enforce the EFS file system." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.1.4.5: Libraries are virtual containers for user content that can display files from multiple different physical folders in a single view."
+  },
+  {
+    "id": 12,
+    "text": "A user notes that the username and password are automatically populated in the Microsoft Edge browser. When the user tries to log into the same site using Google Chrome, the credentials do not save. Why?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Google Chrome does not support that secure site." },
+      { "id": "b", "text": "The certificate for that site has not been authenticated." },
+      { "id": "c", "text": "The Google Chrome browser is corrupt." },
+      { "id": "d", "text": "Google Chrome does not automatically save web credentials." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.2.2.4: Windows stores web credentials for Internet Explorer and Edge. Other browsers, like Chrome, manage their own credential storage independently."
+  },
+  {
+    "id": 13,
+    "text": "A user wishes to view an ISO disk image file on a Windows 10 Pro PC. How can this be done?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Use the built-in Unzip utility to open the ISO file." },
+      { "id": "b", "text": "Convert a Dynamic disk to a Basic disk and open the ISO image." },
+      { "id": "c", "text": "Use File Explorer to locate the ISO file and mount the file using the Disk Image tools." },
+      { "id": "d", "text": "Copy the ISO image to a Dynamic disk and double click it." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.1.4.1: Windows 10 has native support for mounting ISO files. Mounting makes the ISO appear as a new virtual drive in File Explorer."
+  },
+  {
+    "id": 14,
+    "text": "Which feature is included with both macOS and Apple iOS to establish a Wi-Fi direct connection between devices to simplify file transfer?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Nearby sharing" },
+      { "id": "b", "text": "Workgroup" },
+      { "id": "c", "text": "AirDrop" },
+      { "id": "d", "text": "Homegroup" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.5.2.1: AirDrop is an Apple-proprietary feature that uses Wi-Fi and Bluetooth to transfer files between Apple devices."
+  },
+  {
+    "id": 15,
+    "text": "A technician notices that a program that is listed in the registry of a Windows computer is not found on that computer. What is a possible solution to the problem?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Run fdisk /mbr from the command prompt." },
+      { "id": "b", "text": "Restore the ntdetect.com file from the installation media." },
+      { "id": "c", "text": "Reinstall the application. Then, run the uninstall program." },
+      { "id": "d", "text": "Restore the boot.ini file from the installation media." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.3.4.5: Reinstalling the application will recreate the missing files and repair the registry link. Running the uninstall afterwards ensures a clean removal."
+  },
+  {
+    "id": 16,
+    "text": "A computer technician is modifying settings in Network Adapter > Properties > Advanced > Speed and Duplex. What is a possible impact if this is configured incorrectly?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The NIC loses VLAN support." },
+      { "id": "b", "text": "The NIC cannot be set to shutdown while the computer is idle." },
+      { "id": "c", "text": "The network connection may experience issues." },
+      { "id": "d", "text": "The NIC cannot be set to wake up with network activity." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.5.3.2: Incorrect Speed and Duplex settings can lead to a duplex mismatch, causing slow throughput, collisions, and dropped packets."
+  },
+  {
+    "id": 17,
+    "text": "A technician removed malware from a PC but now gets error messages about missing system files. What utility replaces or fixes corrupted system files?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ASR" },
+      { "id": "b", "text": "Fixmbr" },
+      { "id": "c", "text": "SFC" },
+      { "id": "d", "text": "Regedit" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.4.4.1: The System File Checker (SFC) scans for corrupted or missing Windows system files and replaces them with a known good version."
+  },
+  {
+    "id": 18,
+    "text": "What is the purpose of Windows 10 ReadyBoost?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It enables Windows to treat an external flash device as a hard drive cache." },
+      { "id": "b", "text": "It enables the quadruple channels on a 64-bit processor." },
+      { "id": "c", "text": "It enables the UEFI bios to boot faster." },
+      { "id": "d", "text": "It speeds up the Windows 10 start time." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.2.5.7: ReadyBoost uses a fast flash memory device (like a USB drive) to assist with random disk reads, improving overall system performance."
+  },
+  {
+    "id": 19,
+    "text": "Where are 32-bit program files located in a 64-bit version of Windows 10 Pro?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "c:\\Windows\\system32" },
+      { "id": "b", "text": "c:\\users" },
+      { "id": "c", "text": "c:\\Program files" },
+      { "id": "d", "text": "c:\\Program files (x86)" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.1.4.7: To maintain compatibility, 64-bit Windows uses two Program Files folders: one for native 64-bit apps and the (x86) version for legacy 32-bit apps."
+  },
+  {
+    "id": 20,
+    "text": "Match the folders in a 64-bit Windows 10 PC to their description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Program Files (x86)" },
+      { "id": "a2", "text": "System Folder" },
+      { "id": "a3", "text": "Program Files" },      
+      { "id": "a4", "text": "Temporary Files" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "It contains files created by the OS and programs that are needed for a short period of time and are usually automatically deleted when the application or the OS is finished using them." },
+      { "id": "b2", "text": "It is used by application installation programs to install software. All 32-bit programs are installed in this folder." },
+      { "id": "b3", "text": "It contains most of the files that are used to run the computer." }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Topic 11.1.4.7: 64-bit versions of Windows categorize program data into specific directories based on their architecture."
+  },
+  {
+    "id": 21,
+    "text": "A technician troubleshooting a PC sees an 'Invalid Boot Disk' error after POST. What is a probable cause?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The PC does not have a floppy drive." },
+      { "id": "b", "text": "The BIOS date and time are incorrect." },
+      { "id": "c", "text": "A process is using most of the CPU." },
+      { "id": "d", "text": "The MBR is corrupted." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.7.3.1: Corrupted boot records (MBR/GPT) mean the system cannot find the initial instructions to start the operating system."
+  },
+  {
+    "id": 22,
+    "text": "A technician is troubleshooting a frozen Internet Explorer window. Which command terminates the hung process immediately without user notification?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "taskkill /pid iexplorer.exe" },
+      { "id": "b", "text": "taskkill /f /im explorer.exe" },
+      { "id": "c", "text": "taskkill /fi iexplorer.exe" },
+      { "id": "d", "text": "taskkill /f /im iexplorer.exe" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.4.4.1: The /f switch forces the termination, and /im specifies the image name of the process."
+  },
+  {
+    "id": 23,
+    "text": "Match the folders in a 32-bit Windows 10 PC to their description.",
+        "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Program Files (x86)" },
+      { "id": "a2", "text": "System Folder" },
+      { "id": "a3", "text": "Program Files" },      
+      { "id": "a4", "text": "Temporary Files" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "It contains files created by the OS and programs that are needed for a short period of time and are usually automatically deleted when the application or the OS is finished using them." },
+      { "id": "b2", "text": "It is used by application installation programs to install software. All 32-bit programs are installed in this folder." },
+      { "id": "b3", "text": "It contains most of the files that are used to run the computer." }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Topic 11.1.4.7: In a 32-bit OS, there is only one Program Files directory because all apps use the same 32-bit architecture."
+  },
+  {
+    "id": 24,
+    "text": " A user reports that a PC is losing files, not opening some files, and is performing slowly. The technician suspects problems with the hard drive. What should be done to protect the data that is on the PC and to determine the source of the problem, without risking total drive failure?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Run the format command, then replace the drive." },
+      { "id": "b", "text": "Back up all important files, then run chkdsk." },
+      { "id": "c", "text": "Run chkdsk, then run format." },
+      { "id": "d", "text": "Back up all important files, then replace the drive." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 11.7.1.1: Always prioritize data protection by backing up first. Running chkdsk helps identify file system errors or bad sectors."
+  },
+  {
+    "id": 25,
+    "text": "Match the message types in the Windows 10 Event Viewer with their description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "Information" },
+      { "id": "a2", "text": "Warning" },
+      { "id": "a3", "text": "Error" },
+      { "id": "a4", "text": "Critical" },
+      { "id": "a5", "text": "Success Audit" },
+      { "id": "a6", "text": "Failure Audit" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "a successful event is logged." },
+      { "id": "b2", "text": "Immediate attention is required." },
+      { "id": "b3", "text": "A security event has been successful" },
+      { "id": "b4", "text": "A problem exists, but no immediate action is required " },
+      { "id": "b5", "text": "There is an andication of a poontential problem with a software component that is not functioning ideally." }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b5" },
+      { "a": "a3", "b": "b4" },
+      { "a": "a4", "b": "b2" },
+      { "a": "a5", "b": "b3" }
+    ],
+    "explanation": "Topic 11.3.1.3: Event Viewer logs provide clues to help troubleshoot hardware and software performance."
+  },
+  {
+    "id": 26,
+    "text": "A technician is reinstalling an OS from corrupted media. The technician inserts the media into the optical drive. What is the most likely next action?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Change the BIOS password." },
+      { "id": "b", "text": "Flash the BIOS for a firmware upgrade." },
+      { "id": "c", "text": "Change clock speeds in the BIOS." },
+      { "id": "d", "text": "Change the boot sequence in the BIOS." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.7.3.1: To boot from an optical drive or USB instead of the internal hard drive, the boot order must be modified in the BIOS/UEFI settings."
+  },
+  {
+    "id": 27,
+    "text": "A technician is troubleshooting a Windows 7 laptop that takes significantly longer than expected when performing a file search. What is the possible cause?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The file system is corrupt." },
+      { "id": "b", "text": "The disk type is basic." },
+      { "id": "c", "text": "The disk type is dynamic." },
+      { "id": "d", "text": "The index service is not running." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.7.2.1: The Windows indexing service maintains a database of file properties; if it is disabled, searches must scan every file individually, which is much slower."
+  },
+  {
+    "id": 28,
+    "text": "A user wants to move from the Document folder to the Download directory in the command line. What command is used?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "bootrec" },
+      { "id": "b", "text": "ipconfig" },
+      { "id": "c", "text": "diskpart" },
+      { "id": "d", "text": "cd" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.4.2.3: The 'cd' (Change Directory) command is used to navigate between folders in the CLI."
+  },
+  {
+    "id": 29,
+    "text": "Which command displays a list of current processes running on a local or a remote computer?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "diskpart" },
+      { "id": "b", "text": "bootrec" },
+      { "id": "c", "text": "format" },
+      { "id": "d", "text": "tasklist" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.4.4.1: Tasklist provides a snapshot of running processes, including their PIDs and memory usage."
+  },
+  {
+    "id": 30,
+    "text": "A Windows 8 computer locks up with a stop error and reboots automatically too quickly to see error messages. How can the messages be viewed?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Access Advanced Startup options to disable the auto restart function." },
+      { "id": "b", "text": "Use the System Recovery options to restart the operating system." },
+      { "id": "c", "text": "Use the Command Prompt option to research the stop error messages." },
+      { "id": "d", "text": "Use the System Image Recovery tool." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.7.2.1: Disabling the automatic restart on system failure allows the 'Blue Screen of Death' to remain on screen for diagnosis."
+  },
+  {
+    "id": 31,
+    "text": "A Windows 10 PC keeps freezing after a driver update. System restore is off. What can be used without loss of data or applications?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Uninstall and reinstall the device using device manager." },
+      { "id": "b", "text": "Restore using Sysprep." },
+      { "id": "c", "text": "Reset this PC." },
+      { "id": "d", "text": "Restart the Windows Update services." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.7.2.1: Managing drivers via Device Manager (reinstalling or using Roll Back) targets the specific hardware cause without a full system reset."
+  },
+  {
+    "id": 32,
+    "text": "Which command should a technician use to make a workstation synchronize with new Active Directory group policy settings immediately?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "runas" },
+      { "id": "b", "text": "gpupdate" },
+      { "id": "c", "text": "rstrui" },
+      { "id": "d", "text": "gpresult" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 11.4.5.1: The gpupdate command refreshes local and Active Directory-based group policy settings."
+  },
+  {
+    "id": 33,
+    "text": "A technician wants to achieve maximum write performance with data fault tolerance on a PC with two hard drives. What volume type should be created?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "RAID 5 volume" },
+      { "id": "b", "text": "RAID 2 volume" },
+      { "id": "c", "text": "RAID 6 volume" },
+      { "id": "d", "text": "RAID 1 volume" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.3.3.5: RAID 1 (Mirroring) writes data to two disks simultaneously, providing redundancy if one drive fails."
+  },
+  {
+    "id": 34,
+    "text": "Which file sharing mechanism is included with Microsoft Windows 10 to provide simple file sharing via Wi-Fi and Bluetooth?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Nearby Sharing" },
+      { "id": "b", "text": "AirDrop" },
+      { "id": "c", "text": "Homegroup" },
+      { "id": "d", "text": "NFC" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.5.2.1: Nearby Sharing is the Windows 10 equivalent of AirDrop, allowing transfers to other local Windows devices."
+  },
+  {
+    "id": 35,
+    "text": "Which two server-based authentication methods should a company consider in their wireless network design? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "AES" },
+      { "id": "b", "text": "RADIUS" },
+      { "id": "c", "text": "TKIP" },
+      { "id": "d", "text": "TACACS" },
+      { "id": "e", "text": "WPA2-PSK" }
+    ],
+    "correctAnswer": ["b", "d"],
+    "explanation": "Topic 11.5.5.1: RADIUS and TACACS+ are central authentication protocols used to manage access for large groups of users and devices."
+  },
+  {
+    "id": 36,
+    "text": " A Windows 10 computer suddenly started experiencing network connectivity issues after the latest Windows updates completed a week ago. What option can be used to address this issue without loss of data or applications?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Restore using Sysprep." },
+      { "id": "b", "text": "Restart the Windows Update services." },
+      { "id": "c", "text": "Reset this PC." },
+      { "id": "d", "text": "Uninstall and reinstall the device using device manager." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.7.2.1: Reinstalling the network adapter driver often resolves configuration errors introduced by OS updates."
+  },
+  {
+    "id": 37,
+    "text": "A client installed a new driver for a device three weeks ago; however, this driver is causing the system to freeze occasionally and the client wishes to revert back to the old driver. What option can be used to address this issue without loss of data or applications?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Restart the Windows Update services." },
+      { "id": "b", "text": "Restore using Sysprep." },
+      { "id": "c", "text": "Uninstall and reinstall the device using device manager." },
+      { "id": "d", "text": "Reset this PC." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.7.2.1: Uninstalling the current driver allows the technician to install a known stable version of the software."
+  },
+  {
+    "id": 38,
+    "text": "A technician is troubleshooting a Windows 10 PC that will not do any windows updates automatically or manually. What option can be used to address this issue without loss of data or applications?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Use Advanced Start-up." },
+      { "id": "b", "text": "Go back to the initial Windows build." },
+      { "id": "c", "text": "Delete all the files in C:\\Windows\\SoftwareDistribution folder and restart the PC." },
+      { "id": "d", "text": "Perform a repair of Windows using Installation media." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.7.3.1: Clearing the SoftwareDistribution folder removes corrupted update downloads, allowing the Windows Update service to start fresh."
+  },
+  {
+    "id": 39,
+    "text": "Which command is used to create a new Windows directory?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "md" },
+      { "id": "b", "text": "ping" },
+      { "id": "c", "text": "tracert" },
+      { "id": "d", "text": "nslookup" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.4.2.5: The 'md' (Make Directory) command creates a new folder at the specified path."
+  },
+  {
+    "id": 40,
+    "text": " A user has to shutdown several remote computers one at a time. What is the best Windows command to select to do the job?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "nslookup" },
+      { "id": "b", "text": "ping" },
+      { "id": "c", "text": "shutdown" },
+      { "id": "d", "text": "netstat" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.4.4.1: The shutdown command with the /m switch allows a technician to initiate power-down on remote systems."
+  },
+  {
+    "id": 41,
+    "text": "A user has just installed a new hard drive into the PC and needs to prepare it to store Windows files. What is the best Windows command to select to do the job?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "bootrec" },
+      { "id": "b", "text": "ipconfig" },
+      { "id": "c", "text": "diskpart" },
+      { "id": "d", "text": "format" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.4.3.1: The format command applies a file system to a volume, making it ready for data storage."
+  },
+  {
+    "id": 42,
+    "text": " A technician is troubleshooting a Windows 10 PC that will not do any windows updates automatically or manually. What option can be used to address this issue without loss of data or applications?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Restore using Sysprep." },
+      { "id": "b", "text": "Uninstall and reinstall using device manager." },
+      { "id": "c", "text": "Restart the Windows Update services." },
+      { "id": "d", "text": "Delete all the files in C:\\Windows\\SoftwareDistribution folder and restart the PC." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.7.3.1: This is a repeat of the common Windows Update troubleshooting step involving the SoftwareDistribution folder."
+  },
+  {
+    "id": 43,
+    "text": "A user is experiencing issues with system startup and with failing to open some files. The user wants to determine the source of any hard drive issues. What is the best Windows command to select to do the job?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "bootrec" },
+      { "id": "b", "text": "ipconfig" },
+      { "id": "c", "text": "chkdsk" },
+      { "id": "d", "text": "diskpart" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.3.3.7: The chkdsk command checks the integrity of the file system and can repair errors on the disk."
+  },
+{
+  "id": 44,
+  "text": "Match the Internet Options to the descriptions.",
+  "type": "matching",
+  "columnA": [
+    { "id": "a1", "text": "General" },
+    { "id": "a2", "text": "Security" },
+    { "id": "a3", "text": "Connections" },
+    { "id": "a4", "text": "Programs" },
+    { "id": "a5", "text": "Content" },
+    { "id": "a6", "text": "Advanced" }
+  
+  ],
+  "columnB": [
+    { "id": "b1", "text": "allows for Dial-up, VPN, and Proxy Server settings to be configured" },
+    { "id": "b2", "text": "allows IE to be set as the default web browser, enables browser add-ons, allows for the HTML editor to be set for IE, and allows for the selection of programs used for internet services" },
+    { "id": "b3", "text": "allows for IE settings to be reset to their default state" },
+    { "id": "b4", "text": "allows for adjustment of AutoComplete settings, and configuration of the feeds and web slices that can be viewed in IE" },
+    { "id": "b5", "text": "allows for selecting the default home page, viewing and deleting browsing history, adjusting search settings, and customizing the browser appearance" }
+   
+
+  
+  ],
+  "correctMatches": [
+    { "a": "a1", "b": "b5" },
+    { "a": "a3", "b": "b1" },
+    { "a": "a4", "b": "b2" },
+    { "a": "a5", "b": "b4" },
+    { "a": "a6", "b": "b3" }
+  ],
+  "explanation": "Topic 11.2.3.2: Internet Explorer Options allow users to customize security, connectivity, and appearance settings."
+},
+  {
+    "id": 45,
+    "text": "A user suspects someone has hacked into the PC and wants to verify activity on the PC by displaying all active TCP connections to the PC. What is the best Windows command to select to do the job?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "diskpart" },
+      { "id": "b", "text": "bootrec" },
+      { "id": "c", "text": "netstat" },
+      { "id": "d", "text": "format" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.5.3.6: The netstat (Network Statistics) command displays active connections, routing tables, and interface statistics."
+  },
+  {
+    "id": 46,
+    "text": "A user has an important file that is used in many projects and needs to move that file to a different Windows directory while maintaining it in the current location. What is the best Windows command to select to do the job?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "bootrec" },
+      { "id": "b", "text": "ipconfig" },
+      { "id": "c", "text": "diskpart" },
+      { "id": "d", "text": "copy" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.4.2.6: The copy command duplicates a file to a new destination while leaving the source file intact."
+  },
+  {
+    "id": 47,
+    "text": "A user is reorganizing files within different directories to accommodate new projects and needs to relocate a file from one Windows directory to another one. What is the best Windows command to select to do the job?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "tasklist" },
+      { "id": "b", "text": "DISM" },
+      { "id": "c", "text": "move" },
+      { "id": "d", "text": "sfc" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.4.2.6: The move command transfers a file to a new location and deletes it from the original directory."
+  }
+]
