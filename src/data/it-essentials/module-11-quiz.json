@@ -378,7 +378,7 @@
       { "id": "b2", "text": "Immediate attention is required." },
       { "id": "b3", "text": "A security event has been successful" },
       { "id": "b4", "text": "A problem exists, but no immediate action is required " },
-      { "id": "b5", "text": "There is an andication of a poontential problem with a software component that is not functioning ideally." }
+      { "id": "b5", "text": "There is an indication of a pontential problem with a software component that is not functioning ideally." }
     ],
     "correctMatches": [
       { "a": "a1", "b": "b1" },
