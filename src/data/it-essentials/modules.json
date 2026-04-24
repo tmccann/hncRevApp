@@ -20,5 +20,16 @@
   "hasQuiz": true,
   "checkpoints": [],
   "color": "from-blue-600 to-indigo-700"
+},
+{
+  "id": "module-12",
+  "number": 12,
+  "title": "Mobile, Linux and macOS Operating Systems",
+  "description": "Mobile OS comparison, security features, Linux and macOS file systems, CLI commands, and troubleshooting mobile and desktop systems",
+  "topics": ["iOS vs Android", "App Sandboxing", "Mobile Security", "Passcodes & Biometrics", "Remote Lock & Wipe", "Linux File Systems", "Linux CLI Commands", "macOS Tools", "Cloud Backup & Sync", "Wi-Fi Calling & GPS"],
+  "hasSummary": false,
+  "hasQuiz": true,
+  "checkpoints": [],
+  "color": "from-blue-600 to-indigo-700"
 }
 ]

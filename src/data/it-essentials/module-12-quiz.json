@@ -1,0 +1,510 @@
+[
+  {
+    "id": 1,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “When the device roams out of the range of any Wi-Fi networks, it can connect to the cellular data network if this feature is enabled.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "iOS" },
+      { "id": "b", "text": "Android" },
+      { "id": "c", "text": "both" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.1.4: Both Android and iOS devices have the capability to automatically switch to a cellular data network when a Wi-Fi connection is lost, provided the feature is enabled in the settings."
+  },
+  {
+    "id": 2,
+    "text": "An administrator is re-imaging a large number of Mac OS X machines. What built-in tool or command can be used to remotely boot the computers?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "mstsc" },
+      { "id": "b", "text": "Finder" },
+      { "id": "c", "text": "Netboot" },
+      { "id": "d", "text": "Time Machine" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.3.1.3: Netboot is a built-in tool on the Mac OS that allows for remotely booting the computers. Finder is used to navigate the file system, MSTSC is for Windows Remote Desktop, and Time Machine is a backup utility."
+  },
+  {
+    "id": 3,
+    "text": "Which Linux file system introduced the journaled file system, which can be used to minimize the risk of file system corruption in the event of a sudden power loss?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ext2" },
+      { "id": "b", "text": "NFS" },
+      { "id": "c", "text": "CDFS" },
+      { "id": "d", "text": "ext3" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 12.3.1.7: The ext3 file system is considered a journaled file system. The journal is a technique used to minimize the risk of file system corruption in the event of sudden power loss."
+  },
+  {
+    "id": 4,
+    "text": "A file called new_resume has the following file permissions: rw-r-x--x. What two facts can be determined from these permissions? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Group members are able to modify the file." },
+      { "id": "b", "text": "The user has full access to the file." },
+      { "id": "c", "text": "The user is able to read and modify the file." },
+      { "id": "d", "text": "Members of the group have read and execute access to the file." },
+      { "id": "e", "text": "Other people have no access to the file." },
+      { "id": "f", "text": "Other people have read and execute access to the file." }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "Topic 12.3.3.4: Permissions are grouped in threes (User-Group-Other). 'rw-' means the user can read and write/modify. 'r-x' means the group can read and execute. '--x' means others can only execute."
+  },
+  {
+    "id": 5,
+    "text": "What is the most commonly used method to close an application that appears to be frozen on an OS X-based computer?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Use Force Quit." },
+      { "id": "b", "text": "Access the Status menu." },
+      { "id": "c", "text": "Use Task Manager." },
+      { "id": "d", "text": "Access the Notification Center." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.3.1.3: To use Force Quit, right-click on the application icon that is not responding from the Dock and close the application."
+  },
+  {
+    "id": 6,
+    "text": "What is the result of doing a factory reset on a mobile device?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A complete backup of the device is done and all viruses and malware are removed." },
+      { "id": "b", "text": "The operating system will be updated with the most recent updates and patches." },
+      { "id": "c", "text": "All user data and settings will be deleted." },
+      { "id": "d", "text": "The operating system will be deleted and all user data is transferred to the Cloud." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.2.2.3: After a factory reset, the device is returned to its original state. The OS remains, but all user data, settings, and third-party apps are deleted."
+  },
+  {
+    "id": 7,
+    "text": "Android apps run primarily based on privileges enabled by the user. Sometimes an Android app requires extra privileges to access system components. How do Android apps run to accomplish both situations?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Android apps run through a proxy service." },
+      { "id": "b", "text": "Android apps run in a walled garden." },
+      { "id": "c", "text": "Android apps run in a guest mode." },
+      { "id": "d", "text": "Android apps run in a sandbox." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 12.1.1.2: Android apps run in a sandbox and have only the privileges enabled by the user. Users grant permissions through prompts or settings."
+  },
+  {
+    "id": 8,
+    "text": "A Linux administrator wants to backup current files in a data directory and store them in a new directory on another disk. Which two commands would be needed? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "cd" },
+      { "id": "b", "text": "mkdir" },
+      { "id": "c", "text": "mv" },
+      { "id": "d", "text": "rm" },
+      { "id": "e", "text": "cp" }
+    ],
+    "correctAnswer": ["b", "e"],
+    "explanation": "Topic 12.3.3: The mkdir command is used to create the new directory and the cp command is used to copy files from one directory to another."
+  },
+  {
+    "id": 9,
+    "text": "What represents apps in the Windows Phone interface?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "widgets" },
+      { "id": "b", "text": "buttons" },
+      { "id": "c", "text": "tiles" },
+      { "id": "d", "text": "icons" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.1.1.2: The Windows Phone OS uses tiles to represent apps. Tiles are rectangles that can display active content and be resized."
+  },
+  {
+    "id": 10,
+    "text": "A Linux PC user notices that the PC freezes on startup and exhibits kernel panic where there is a stop screen. What is a possible cause for the issue?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A driver has become corrupted." },
+      { "id": "b", "text": "Deja Dup has been turned off in the system." },
+      { "id": "c", "text": "LILO has been deleted." },
+      { "id": "d", "text": "GRUB has been corrupted." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.4.2.3: When a driver is corrupted or hardware fails, the Linux system may freeze on startup and exhibit a kernel panic."
+  },
+  {
+    "id": 11,
+    "text": "Which cloud-based storage service does Microsoft provide for backups?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Dropbox" },
+      { "id": "b", "text": "Google Sync" },
+      { "id": "c", "text": "OneDrive" },
+      { "id": "d", "text": "iCloud" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.2.2.1: Most mobile OS vendors link user accounts to cloud services: iCloud for iOS, Google Sync for Android, and OneDrive for Microsoft."
+  },
+  {
+    "id": 12,
+    "text": "What is a good source for safely downloading Android apps?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "the Apple App Store" },
+      { "id": "b", "text": "freeware sites" },
+      { "id": "c", "text": "iTunes" },
+      { "id": "d", "text": "Google Play" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 12.1.1.2: Google Play is a trusted source that ensures apps are compatible and safe for Android devices."
+  },
+  {
+    "id": 13,
+    "text": "What tool or command is used in the Mac OS X to navigate the file system?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "mstsc" },
+      { "id": "b", "text": "Finder" },
+      { "id": "c", "text": "Task Manager" },
+      { "id": "d", "text": "File Explorer" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 12.3.1.3: Finder is the default tool for navigating the Mac OS file system, similar to File Explorer in Windows."
+  },
+  {
+    "id": 14,
+    "text": "Which statement describes the iOS app icons on a mobile device screen?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Each icon is a shortcut of the app." },
+      { "id": "b", "text": "Each icon represents the actual app." },
+      { "id": "c", "text": "Each icon links to multiple instances of the actual app." },
+      { "id": "d", "text": "Each icon represents an instance of the actual app." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 12.1.3.1: On the iOS interface, each app icon on the screen is the actual app, not a shortcut."
+  },
+  {
+    "id": 15,
+    "text": "What is a purpose of the boot manager program?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It checks the validity of hardware and software on the device after a factory reset." },
+      { "id": "b", "text": "It allows the user to select the OS to use to boot the device." },
+      { "id": "c", "text": "It allows the user to determine which apps are automatically opened during the boot process." },
+      { "id": "d", "text": "It automates the POST and checks the disk for bad sectors during a boot." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.2: When multiple operating systems are installed, the boot manager allows the user to select which OS to use, then directs the BIOS to the correct partition."
+  },
+  {
+    "id": 16,
+    "text": "What is Wi-Fi calling?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "a convenient way to securely and digitally make payments with mobile devices" },
+      { "id": "b", "text": "a government emergency alert service for smartphones" },
+      { "id": "c", "text": "a method for sharing data between two mobile devices" },
+      { "id": "d", "text": "a way to make mobile phone calls over a wireless data network" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 12.1.4.5: Wi-Fi calling allows a mobile phone to use a wireless data network to make calls, which is useful when cellular coverage is inadequate."
+  },
+  {
+    "id": 17,
+    "text": "What command is used to open a text editor in a Linux system?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ifconfig" },
+      { "id": "b", "text": "ls" },
+      { "id": "c", "text": "grep" },
+      { "id": "d", "text": "vim" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 12.3.3: The vim command opens a text editor. ls lists files, grep searches for strings, and ifconfig displays NIC information."
+  },
+  {
+    "id": 18,
+    "text": "What are two purposes of the passcode lock feature on mobile devices? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "to erase all personal data from the device" },
+      { "id": "b", "text": "to remotely lock the device if it is stolen" },
+      { "id": "c", "text": "to prevent unauthorized use of the device" },
+      { "id": "d", "text": "to help prevent theft of private information" },
+      { "id": "e", "text": "to restore and re-synchronize the device" },
+      { "id": "f", "text": "to return the device to the default factory state" }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "Topic 12.2.1.1: Passcode locks prevent unauthorized access and help protect private information."
+  },
+  {
+    "id": 19,
+    "text": "Which two location data sources can locator apps use to determine the position of a mobile device? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "cellular towers" },
+      { "id": "b", "text": "the sandbox" },
+      { "id": "c", "text": "remote lock" },
+      { "id": "d", "text": "an app source" },
+      { "id": "e", "text": "WiFi hotspots" }
+    ],
+    "correctAnswer": ["a", "e"],
+    "explanation": "Topic 12.2.2.2: In addition to GPS, locator apps can use cellular tower signals and Wi-Fi hotspot locations to determine position."
+  },
+  {
+    "id": 20,
+    "text": "Refer to the exhibit. What two statements are true about the mobile operating system screen shown? (Choose two.)",
+    "type": "multiple",
+     "image": "/images/ItEssentials/module-12/q20.png",
+    "options": [
+      { "id": "a", "text": "The area enclosed by the red rectangle contains navigation icons." },
+      { "id": "b", "text": "This is an iOS screen." },
+      { "id": "c", "text": "This is an Android screen." },
+      { "id": "d", "text": "The area that is highlighted displays background processes and indicators." },
+      { "id": "e", "text": "This is a Windows Phone screen." }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Topic 12.1.2.1: The image shows the Android navigation bar (Back, Home, and Recent Apps icons) at the bottom of the screen."
+  },
+  {
+    "id": 21,
+    "text": "Which model does Apple use to provide iOS apps to customers?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "walled garden" },
+      { "id": "b", "text": "Xcode" },
+      { "id": "c", "text": "iCloud" },
+      { "id": "d", "text": "sandbox" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.1.1.2: Apple approved apps are released in a 'walled garden' model, meaning they are strictly vetted and approved before release."
+  },
+  {
+    "id": 22,
+    "text": "What is the purpose of using the auto-brightness feature on a mobile device with an LCD screen?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to conserve battery power" },
+      { "id": "b", "text": "to prevent the burn-in effect on the screen" },
+      { "id": "c", "text": "to display text messages with better contrast" },
+      { "id": "d", "text": "to reduce the interference from sunlight" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.1.4: LCD screens consume the most battery power on mobile devices. Lowering brightness via auto-brightness helps conserve power."
+  },
+  {
+    "id": 23,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “This OS uses the system bar, displayed at the bottom of every screen, to navigate apps and screens.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "iOS" },
+      { "id": "b", "text": "Android" },
+      { "id": "c", "text": "both" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 12.1.2.1: Android traditionally uses a software system bar at the bottom for navigation, whereas iOS traditionally used a physical button or gestures."
+  },
+  {
+    "id": 24,
+    "text": "Which two methods are commonly used to remove the default restrictions and protections added to mobile operating systems? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "rooting" },
+      { "id": "b", "text": "rootkit execution" },
+      { "id": "c", "text": "device update" },
+      { "id": "d", "text": "jailbreaking" },
+      { "id": "e", "text": "system backup" }
+    ],
+    "correctAnswer": ["a", "d"],
+    "explanation": "Topic 12.1.2.1: Rooting (Android) and Jailbreaking (iOS) are methods to circumvent OS restrictions and gain root-level permissions."
+  },
+  {
+    "id": 25,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “GPS signals are used to enable geocaching, geotagging and device tracking on these mobile devices.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "iOS" },
+      { "id": "b", "text": "Android" },
+      { "id": "c", "text": "both" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.1.4.3: GPS-based location services like geotagging and tracking are standard features in both iOS and Android."
+  },
+  {
+    "id": 26,
+    "text": "Which file system is the primary file system used by Apple in current Macintosh computers?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ext2" },
+      { "id": "b", "text": "ext3" },
+      { "id": "c", "text": "APFS" },
+      { "id": "d", "text": "CDFS" },
+      { "id": "e", "text": "HFS+" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.3.1.7: APFS (Apple File System) is the current primary file system for macOS, replacing the older HFS+."
+  },
+  {
+    "id": 27,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “Remote backups are a cloud-enabled service for mobile devices.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "iOS" },
+      { "id": "b", "text": "Android" },
+      { "id": "c", "text": "both" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.2.2.1: Both iOS (via iCloud) and Android (via Google Drive/Sync) provide cloud-based remote backup services."
+  },
+  {
+    "id": 28,
+    "text": "What is the purpose of signature files used to secure mobile devices and operating systems?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "They contain a record of historical and pending firmware and software updates." },
+      { "id": "b", "text": "They contain a list of all user passwords." },
+      { "id": "c", "text": "They contain sample code from known viruses and malware that is used by security software to identify malicious software." },
+      { "id": "d", "text": "They contain a log of digital certificates and encryption keys associated with the user." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.2.3.1: Security software uses signature files (containing code samples of known threats) to identify and isolate malware on a disk."
+  },
+  {
+    "id": 29,
+    "text": "Which navigation icon on the system bar of an Android device is used to return to the previous screen?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Back" },
+      { "id": "b", "text": "Home" },
+      { "id": "c", "text": "Menu" },
+      { "id": "d", "text": "Recent Apps" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.1.2.1: In the Android navigation bar, the 'Back' icon returns the user to the previous screen or action."
+  },
+  {
+    "id": 30,
+    "text": "Which statement describes the Touch ID in iOS devices?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is used as the passcode." },
+      { "id": "b", "text": "It is the encryption key set by the user." },
+      { "id": "c", "text": "It is the hash value of the user fingerprint." },
+      { "id": "d", "text": "It is used to set the touch screen sensitivity." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.2.1.2: Touch ID converts a fingerprint scan into a unique hash value stored in a secure cache for authentication."
+  },
+  {
+    "id": 31,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “To synchronize a mobile device to a PC, iTunes must be installed on the PC.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "iOS" },
+      { "id": "b", "text": "Android" },
+      { "id": "c", "text": "both" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.1.1.2: iTunes is required on a PC to perform local wired synchronization for Apple iOS devices."
+  },
+  {
+    "id": 32,
+    "text": "A mobile device user notices that the system update includes an update of the Primary Rate ISDN (PRI). What is the function of the PRI?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "It is the configuration of radio frequencies used on the device." },
+      { "id": "b", "text": "It is the configuration of the data rates between the device and the cell tower." },
+      { "id": "c", "text": "It is the data rate setting of the user account with the carrier service." },
+      { "id": "d", "text": "It is the configuration information that the device needs to communicate on networks other than the carrier network." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 12.2.3.3: The PRI (Primary Rate ISDN) configures the data rates between the mobile device and the cell tower to ensure correct communication speeds."
+  },
+  {
+    "id": 33,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “The mobile devices have a feature called Spotlight that is a search tool that provides information from many sources.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "iOS" },
+      { "id": "b", "text": "Android" },
+      { "id": "c", "text": "both" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.1.3.1: Spotlight is a native search feature found in Apple's iOS and macOS."
+  },
+  {
+    "id": 34,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “The icon on the Home screen is a shortcut to the app.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Android" },
+      { "id": "b", "text": "iOS" },
+      { "id": "c", "text": "both" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.1.2.1: In Android, home screen icons are shortcuts; in iOS, the icon is the actual app, and deleting it uninstalls the app."
+  },
+  {
+    "id": 35,
+    "text": "What are two ways that iOS differs from Android? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "iOS uses an All Apps button whereas Android uses a Home button." },
+      { "id": "b", "text": "iOS has a physical Home button, but Android uses navigation icons." },
+      { "id": "c", "text": "In iOS, the icon for an app represents the app itself. Deleting the icon in iOS deletes the app. In Android, the icon on the Home screen is a shortcut to the app." },
+      { "id": "d", "text": "In iOS, apps can only appear on screens, whereas in Android, apps can appear on screens and in folders." },
+      { "id": "e", "text": "In iOS, folders are created by dragging one app on top of another app, but in Android folders must be created from the home screen menu." }
+    ],
+    "correctAnswer": ["b", "c"],
+    "explanation": "Topic 12.1.2.1: iOS traditionally used a physical button and icons that represent the app itself. Android uses software navigation icons and home screen shortcuts."
+  },
+  {
+    "id": 36,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “WIFI hotspots are a location data source that can be used by locator apps to determine the position of a mobile device.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "iOS" },
+      { "id": "b", "text": "Android" },
+      { "id": "c", "text": "both" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.2.2.2: Both major mobile operating systems use Wi-Fi hotspot databases to assist in locating the device."
+  },
+  {
+    "id": 37,
+    "text": "What is the name of the Windows Phone 8.1 digital, or virtual, assistant?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Bing" },
+      { "id": "b", "text": "Nova Launcher" },
+      { "id": "c", "text": "Spotlight" },
+      { "id": "d", "text": "Cortana" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 12.1.4.8: Cortana was the digital assistant introduced by Microsoft for Windows Phone 8.1."
+  },
+  {
+    "id": 38,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “The start voice control function can be performed with the home button.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Android" },
+      { "id": "b", "text": "iOS" },
+      { "id": "c", "text": "both" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 12.1.3.1: In older iOS versions, holding the physical Home button was the primary way to trigger Siri (voice control)."
+  },
+  {
+    "id": 39,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “This OS can be used by programmers to operate devices like laptops, smart TVs, and e-book readers.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "iOS" },
+      { "id": "b", "text": "both" },
+      { "id": "c", "text": "Android" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 12.1.1.1: Because Android is open-source, it is adapted for a wide variety of hardware beyond smartphones, including TVs and readers."
+  }
+]
