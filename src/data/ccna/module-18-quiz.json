@@ -78,7 +78,7 @@
       { "id": "a4", "text": "interact with the OS by typing commands"  }
     ],
     "columnB": [
-      { "id": "b1", "text": "shell" },
+      { "id": "b1", "text": "Telnet" },
       { "id": "b2", "text": "CLI" },
       { "id": "b3", "text": "GUI" },
       { "id": "b4", "text": "kernel" },
@@ -275,8 +275,8 @@
     "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
     "type": "multiple",
     "options": [
-      { "id": "a", "text": "adds Ethernet control information to network protocol data" },
-      { "id": "b", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated" },
+      { "id": "a", "text": "enables IPv4 and IPv6 to utilize the same physical medium" },
+      { "id": "b", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" },
       { "id": "c", "text": "applies source and destination MAC addresses to Ethernet frame" },
       { "id": "d", "text": "implements CSMA/CD over legacy shared half-duplex media" },
       { "id": "e", "text": "integrates Layer 2 flows between 10 Gigabit Ethernet and 1 Gigabit Ethernet" }
