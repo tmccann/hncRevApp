@@ -59,7 +59,8 @@ const CCNAModules = () => {
                     Module {module.number}
                   </div>
                   <h3 className="text-xl font-bold">
-                    {module.id === "module-18" && (
+                    {(module.id === "module-18" ||
+                      module.id === "module-19") && (
                       <span className="inline-block animate-bounce mr-2">
                         🏆
                       </span>

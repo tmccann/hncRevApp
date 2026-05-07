@@ -119,5 +119,16 @@
     "hasQuiz": true,
     "checkpoints": [],
     "color": "from-blue-500 to-cyan-600"
+  },
+   {
+    "id": "module-19",
+    "number": 19,
+    "title": "Final Exam",
+    "description": "Full practice exam covering all CCNA modules — test your knowledge before the real thing",
+    "topics": ["All Modules", "Mixed Questions", "Exam Practice"],
+    "hasSummary": false,
+    "hasQuiz": true,
+    "checkpoints": [],
+    "color": "from-blue-500 to-cyan-600"
   }
 ]
