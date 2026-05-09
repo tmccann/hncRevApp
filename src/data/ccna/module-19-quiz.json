@@ -797,6 +797,62 @@
     "correctAnswer": ["b", "e"],
     "explanation": "Topic 6.1.2. The data link layer is actually divided into two sublayers: + Logical Link Control (LLC): This upper sublayer defines the software processes that provide services to the network layer protocols. It places information in the frame that identifies which network layer protocol is being used for the frame. This information allows multiple Layer 3 protocols, such as IPv4 and IPv6, to utilize the same network interface and media. + Media Access Control (MAC): This lower sublayer defines the media access processes performed by the hardware. It provides data link layer addressing and delimiting of data according to the physical signaling requirements of the medium and the type of data link layer protocol in use."
   },
+    {
+    "id": 55.1,
+    "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "responsible for internal structure of Ethernet frame" },
+      { "id": "b", "text": "applies source and destination MAC addresses to Ethernet frame" },
+      { "id": "c", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" },
+      { "id": "d", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "e", "text": "implements trailer with frame check sequence for error detection" }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "Topic 6.1.2. The data link layer is actually divided into two sublayers: + Logical Link Control (LLC): This upper sublayer defines the software processes that provide services to the network layer protocols. It places information in the frame that identifies which network layer protocol is being used for the frame. This information allows multiple Layer 3 protocols, such as IPv4 and IPv6, to utilize the same network interface and media. + Media Access Control (MAC): This lower sublayer defines the media access processes performed by the hardware. It provides data link layer addressing and delimiting of data according to the physical signaling requirements of the medium and the type of data link layer protocol in use."
+  },
+  {
+    "id": 55.2,
+    "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "integrates Layer 2 flows between 10 Gigabit Ethernet over fiber and 1 Gigabit Ethernet over copper" },
+      { "id": "b", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" },
+      { "id": "c", "text": "implements CSMA/CD over legacy shared half-duplex media" },
+      { "id": "d", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "e", "text": "applies source and destination MAC addresses to Ethernet frame" }
+    ],
+    "correctAnswer": ["b", "d"],
+    "explanation": "Topic 6.1.2. The data link layer is actually divided into two sublayers: + Logical Link Control (LLC): This upper sublayer defines the software processes that provide services to the network layer protocols. It places information in the frame that identifies which network layer protocol is being used for the frame. This information allows multiple Layer 3 protocols, such as IPv4 and IPv6, to utilize the same network interface and media. + Media Access Control (MAC): This lower sublayer defines the media access processes performed by the hardware. It provides data link layer addressing and delimiting of data according to the physical signaling requirements of the medium and the type of data link layer protocol in use."
+  },
+  {
+    "id": 55.3,
+    "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "enables IPv4 and IPv6 to utilize the same physical medium" },
+      { "id": "b", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "c", "text": "applies source and destination MAC addresses to Ethernet frame" },
+      { "id": "d", "text": "responsible for the internal structure of Ethernet frame" },
+      { "id": "e", "text": "implements trailer with frame check sequence for error detection" }
+    ],
+    "correctAnswer": ["a", "b"],
+    "explanation": "Topic 6.1.2. The data link layer is actually divided into two sublayers: + Logical Link Control (LLC): This upper sublayer defines the software processes that provide services to the network layer protocols. It places information in the frame that identifies which network layer protocol is being used for the frame. This information allows multiple Layer 3 protocols, such as IPv4 and IPv6, to utilize the same network interface and media. + Media Access Control (MAC): This lower sublayer defines the media access processes performed by the hardware. It provides data link layer addressing and delimiting of data according to the physical signaling requirements of the medium and the type of data link layer protocol in use."
+  },
+  {
+    "id": 55.4,
+    "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "enables IPv4 and IPv6 to utilize the same physical medium" },
+      { "id": "b", "text": "applies source and destination MAC addresses to Ethernet frame" },
+      { "id": "c", "text": "integrates Layer 2 flows between 10 Gigabit Ethernet over fiber and 1 Gigabit Ethernet over copper" },
+      { "id": "d", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" },
+      { "id": "e", "text": "responsible for internal structure of Ethernet frame" }
+    ],
+    "correctAnswer": ["a", "d"],
+    "explanation": "Topic 6.1.2. The data link layer is actually divided into two sublayers: + Logical Link Control (LLC): This upper sublayer defines the software processes that provide services to the network layer protocols. It places information in the frame that identifies which network layer protocol is being used for the frame. This information allows multiple Layer 3 protocols, such as IPv4 and IPv6, to utilize the same network interface and media. + Media Access Control (MAC): This lower sublayer defines the media access processes performed by the hardware. It provides data link layer addressing and delimiting of data according to the physical signaling requirements of the medium and the type of data link layer protocol in use."
+  },
   {
     "id": 56,
     "text": "The global configuration command ip default-gateway 172.16.100.1 is applied to a switch. What is the effect of this command?",
@@ -1106,6 +1162,63 @@
       { "id": "e", "text": "adds Ethernet control information to network protocol data" }
     ],
     "correctAnswer": ["b", "d"],
+    "explanation": "Topic 6.1.2. The OSI data link layer is divided into two sublayers: LLC and MAC. The MAC (Media Access Control) sublayer is responsible for data encapsulation and media access control. Its data encapsulation functions include frame delimiting, which uses bits to identify and synchronize fields within a frame, and error detection, which involves adding a trailer with a frame check sequence (FCS) to identify transmission errors. Other functions, such as identifying the network layer protocol or handling communication between upper-layer software and hardware, are performed by the LLC sublayer."
+  },
+  {
+      "id": 77.2,
+    "text": "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" },
+      { "id": "b", "text": "adds Ethernet control information to network protocol data" },    
+      { "id": "c", "text":  "responsible for internal structure of Ethernet frame"},
+      { "id": "d", "text": "enables IPv4 and IPv6 to utilize the same physical medium" },
+      { "id": "e", "text": "implements trailer with frame check sequence for error detection" }
+  
+    ],
+    "correctAnswer": ["c", "e"],
+    "explanation": "Topic 6.1.2. The OSI data link layer is divided into two sublayers: LLC and MAC. The MAC (Media Access Control) sublayer is responsible for data encapsulation and media access control. Its data encapsulation functions include frame delimiting, which uses bits to identify and synchronize fields within a frame, and error detection, which involves adding a trailer with a frame check sequence (FCS) to identify transmission errors. Other functions, such as identifying the network layer protocol or handling communication between upper-layer software and hardware, are performed by the LLC sublayer."
+  },
+   {
+      "id": 77.3,
+    "text": "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "integrates Layer 2 flows between 10 Gigabit Ethernet over fiber and 1 Gigabit Ethernet over copper" },
+      { "id": "b", "text": "enables IPv4 and IPv6 to utilize the same physical medium" },
+      { "id": "c", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" },
+      { "id": "d", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "e", "text": "implements CSMA/CD over legacy shared half-duplex media" }
+    ],
+    "correctAnswer": ["a", "e"],
+    "explanation": "Topic 6.1.2. The OSI data link layer is divided into two sublayers: LLC and MAC. The MAC (Media Access Control) sublayer is responsible for data encapsulation and media access control. Its data encapsulation functions include frame delimiting, which uses bits to identify and synchronize fields within a frame, and error detection, which involves adding a trailer with a frame check sequence (FCS) to identify transmission errors. Other functions, such as identifying the network layer protocol or handling communication between upper-layer software and hardware, are performed by the LLC sublayer."
+  },
+   {
+      "id": 77.4,
+    "text": "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "applies delimiting of Ethernet frame fields to synchronize communication between nodes" },
+      { "id": "b", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" },
+      { "id": "c", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "d", "text": "implements trailer with frame check sequence for error detection" },
+      { "id": "e", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" }
+    ],
+    "correctAnswer": ["a", "d"],
+    "explanation": "Topic 6.1.2. The OSI data link layer is divided into two sublayers: LLC and MAC. The MAC (Media Access Control) sublayer is responsible for data encapsulation and media access control. Its data encapsulation functions include frame delimiting, which uses bits to identify and synchronize fields within a frame, and error detection, which involves adding a trailer with a frame check sequence (FCS) to identify transmission errors. Other functions, such as identifying the network layer protocol or handling communication between upper-layer software and hardware, are performed by the LLC sublayer."
+  },
+   {
+      "id": 77.5,
+    "text": "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "applies delimiting of Ethernet frame fields to synchronize communication between nodes" },
+      { "id": "b", "text": "applies source and destination MAC addresses to Ethernet frame" },
+      { "id": "c", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" },
+      { "id": "d", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" },
+      { "id": "e", "text": "adds Ethernet control information to network protocol data" }
+    ],
+    "correctAnswer": ["a", "b"],
     "explanation": "Topic 6.1.2. The OSI data link layer is divided into two sublayers: LLC and MAC. The MAC (Media Access Control) sublayer is responsible for data encapsulation and media access control. Its data encapsulation functions include frame delimiting, which uses bits to identify and synchronize fields within a frame, and error detection, which involves adding a trailer with a frame check sequence (FCS) to identify transmission errors. Other functions, such as identifying the network layer protocol or handling communication between upper-layer software and hardware, are performed by the LLC sublayer."
   },
   {
