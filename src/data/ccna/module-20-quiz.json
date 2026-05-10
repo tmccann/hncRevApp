@@ -1,0 +1,400 @@
+[
+  {
+    "id": 14,
+    "text": "Match the characteristic to the forwarding method. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "has low latency" },
+      { "id": "a2", "text": "may forward runt frames" },
+      { "id": "a3", "text": "begins forwarding when the destination address is received" },
+      { "id": "a4", "text": "always stores the entire frame" },
+      { "id": "a5", "text": "checks the CRC before forwarding" },
+      { "id": "a6", "text": "checks the frame length before forwarding" },
+      { "id": "a7", "text": "does not forward broadcasts" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Store-and-forward" },
+      { "id": "b2", "text": "Cut-through" },
+      { "id": "b3", "text": "Store-and-forward" },
+      { "id": "b4", "text": "Cut-through" },
+      { "id": "b5", "text": "Cut-through" },
+      { "id": "b6", "text": "Store-and-forward" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b5" },
+      { "a": "a4", "b": "b1" },
+      { "a": "a5", "b": "b3" },
+      { "a": "a6", "b": "b6" }
+    ],
+    "explanation": "Think of it like a parcel depot. Cut-through: as soon as the delivery label is readable it goes — fast, but no quality check, so a damaged parcel might still get sent (runt frames). Store-and-forward: holds the whole parcel, checks it top to bottom (CRC and length), then sends — slower but nothing broken gets through."
+  },
+  {
+    "id": 39,
+    "text": "An employee of a large corporation remotely logs into the company using the appropriate username and password. The employee is attending an important video conference with a customer concerning a large sale. It is important for the video quality to be excellent during the meeting. The employee is unaware that after a successful login, the connection to the company ISP failed. The secondary connection, however, activated within seconds. The disruption was not noticed by the employee or other employees. What three network characteristics are described in this scenario? (Choose three.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "security" },
+      { "id": "b", "text": "quality of service" },
+      { "id": "c", "text": "scalability" },
+      { "id": "d", "text": "powerline networking" },
+      { "id": "e", "text": "integrity" },
+      { "id": "f", "text": "fault tolerance" }
+    ],
+    "correctAnswer": ["a", "b", "f"],
+    "explanation": "Read the scenario in three chunks. Username and password = security. Excellent video quality = QoS. ISP failed but nobody noticed = fault tolerance. Scalability, integrity and powerline are all red herrings here."
+  },
+  {
+    "id": 46,
+    "text": "Refer to the exhibit. If PC1 is sending a packet to PC2 and routing has been configured between the two routers, what will R1 do with the Ethernet frame header attached by PC1?",
+    "type": "single",
+    "image": "/images/module-19-quiz/q47.png",
+    "options": [
+      { "id": "a", "text": "nothing, because the router has a route to the destination network" },
+      { "id": "b", "text": "open the header and use it to determine whether the data is to be sent out S0/0/0" },
+      { "id": "c", "text": "open the header and replace the destination MAC address with a new one" },
+      { "id": "d", "text": "remove the Ethernet header and configure a new Layer 2 header before sending it out S0/0/0" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Every time a packet crosses a router, the L2 header gets stripped and rebuilt from scratch for whatever medium comes next. PC1 built an Ethernet header — but the link out of R1 is serial, not Ethernet, so R1 bins the old header and builds a brand new one to suit the serial link. The IP packet inside stays untouched."
+  },
+  {
+    "id": 48,
+    "text": "What are two features of ARP? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "When a host is encapsulating a packet into a frame, it refers to the MAC address table to determine the mapping of IP addresses to MAC addresses." },
+      { "id": "b", "text": "An ARP request is sent to all devices on the Ethernet LAN and contains the IP address of the destination host and its multicast MAC address." },
+      { "id": "c", "text": "If a host is ready to send a packet to a local destination device and it has the IP address but not the MAC address of the destination, it generates an ARP broadcast." },
+      { "id": "d", "text": "If no device responds to the ARP request, then the originating node will broadcast the data packet to all devices on the network segment." },
+      { "id": "e", "text": "If a device receiving an ARP request has the destination IPv4 address, it responds with an ARP reply." }
+    ],
+    "correctAnswer": ["c", "e"],
+    "explanation": "ARP is just a device shouting 'who has this IP address?' to everyone on the local network (broadcast), and the device that owns that IP quietly replies with its MAC address. The two facts to remember: no MAC = send a broadcast, and the device that owns the IP replies directly. Watch out for the distractors — it checks the ARP table not the MAC table, and if nobody replies the packet gets dropped, not broadcast."
+  },
+  {
+    "id": 54,
+    "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "implements CSMA/CD over legacy shared half-duplex media" },
+      { "id": "b", "text": "enables IPv4 and IPv6 to utilize the same physical medium" },
+      { "id": "c", "text": "integrates Layer 2 flows between 10 Gigabit Ethernet over fiber and 1 Gigabit Ethernet over copper" },
+      { "id": "d", "text": "implements a process to delimit fields within an Ethernet 2 frame" },
+      { "id": "e", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" }
+    ],
+    "correctAnswer": ["b", "e"],
+    "explanation": "LLC faces upward toward Layer 3. Its job is to identify which Layer 3 protocol is riding inside the frame — that is exactly why IPv4 and IPv6 can both use the same physical medium. LLC stamps the frame with a label saying what is inside. Anything about the physical wire, error checking or media access is MAC not LLC."
+  },
+  {
+    "id": 55,
+    "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "responsible for internal structure of Ethernet frame" },
+      { "id": "b", "text": "applies source and destination MAC addresses to Ethernet frame" },
+      { "id": "c", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" },
+      { "id": "d", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "e", "text": "implements trailer with frame check sequence for error detection" }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "LLC is the software bridge between the NIC hardware below and the network layer software above. Handling that communication between upper layer software and the NIC hardware is LLC. Adding control information to the protocol data is also LLC. FCS and frame structure are MAC territory."
+  },
+  {
+    "id": 56,
+    "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "integrates Layer 2 flows between 10 Gigabit Ethernet over fiber and 1 Gigabit Ethernet over copper" },
+      { "id": "b", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" },
+      { "id": "c", "text": "implements CSMA/CD over legacy shared half-duplex media" },
+      { "id": "d", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "e", "text": "applies source and destination MAC addresses to Ethernet frame" }
+    ],
+    "correctAnswer": ["b", "d"],
+    "explanation": "Same rule every time — LLC identifies the Layer 3 protocol in the frame and adds control information. CSMA/CD and MAC addresses are both MAC sublayer jobs. The integrates Layer 2 flows option is a distractor that sounds plausible but is not an LLC function."
+  },
+  {
+    "id": 57,
+    "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "enables IPv4 and IPv6 to utilize the same physical medium" },
+      { "id": "b", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "c", "text": "applies source and destination MAC addresses to Ethernet frame" },
+      { "id": "d", "text": "responsible for the internal structure of Ethernet frame" },
+      { "id": "e", "text": "implements trailer with frame check sequence for error detection" }
+    ],
+    "correctAnswer": ["a", "b"],
+    "explanation": "LLC lets IPv4 and IPv6 share the same wire by labelling what is inside each frame. Adding Ethernet control information to the protocol data is also LLC. MAC addresses, frame structure and FCS are all MAC sublayer jobs — they deal with the physical side, not the protocol identification side."
+  },
+  {
+    "id": 58,
+    "text": "Which two functions are performed at the LLC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "enables IPv4 and IPv6 to utilize the same physical medium" },
+      { "id": "b", "text": "applies source and destination MAC addresses to Ethernet frame" },
+      { "id": "c", "text": "integrates Layer 2 flows between 10 Gigabit Ethernet over fiber and 1 Gigabit Ethernet over copper" },
+      { "id": "d", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" },
+      { "id": "e", "text": "responsible for internal structure of Ethernet frame" }
+    ],
+    "correctAnswer": ["a", "d"],
+    "explanation": "LLC faces upward — it enables multiple Layer 3 protocols on the same medium and handles the communication between upper layer software and the NIC hardware below. MAC addresses and frame structure are MAC sublayer responsibilities. The integrates Layer 2 flows option is a distractor."
+  },
+  {
+    "id": 59,
+    "text": "The global configuration command ip default-gateway 172.16.100.1 is applied to a switch. What is the effect of this command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The switch can communicate with other hosts on the 172.16.100.0 network." },
+      { "id": "b", "text": "The switch can be remotely managed from a host on another network." },
+      { "id": "c", "text": "The switch is limited to sending and receiving frames to and from the gateway 172.16.100.1." },
+      { "id": "d", "text": "The switch will have a management interface with the address 172.16.100.1." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "A switch is a Layer 2 device — it does not route. Without a default gateway configured it cannot send management traffic off its own network, so you cannot Telnet or SSH into it from another network. Setting ip default-gateway fixes that. It does not change how the switch forwards frames or give it a new IP address."
+  },
+  {
+    "id": 80,
+    "text": "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" },
+      { "id": "b", "text": "implements trailer with frame check sequence for error detection" },
+      { "id": "c", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" },
+      { "id": "d", "text": "implements a process to delimit fields within an Ethernet 2 frame" },
+      { "id": "e", "text": "adds Ethernet control information to network protocol data" }
+    ],
+    "correctAnswer": ["b", "d"],
+    "explanation": "MAC faces downward toward the wire. It deals with the physical frame structure (delimiting) and checks the frame arrived intact using FCS. Handling upper layer software communication and identifying the Layer 3 protocol are both LLC jobs, not MAC."
+  },
+  {
+    "id": 81,
+    "text": "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" },
+      { "id": "b", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "c", "text": "responsible for internal structure of Ethernet frame" },
+      { "id": "d", "text": "enables IPv4 and IPv6 to utilize the same physical medium" },
+      { "id": "e", "text": "implements trailer with frame check sequence for error detection" }
+    ],
+    "correctAnswer": ["c", "e"],
+    "explanation": "MAC owns the physical frame — its internal structure and the FCS trailer that checks for errors. Identifying the Layer 3 protocol and enabling IPv4 and IPv6 on the same medium are LLC jobs. Adding control information is also LLC."
+  },
+  {
+    "id": 82,
+    "text": "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "integrates Layer 2 flows between 10 Gigabit Ethernet over fiber and 1 Gigabit Ethernet over copper" },
+      { "id": "b", "text": "enables IPv4 and IPv6 to utilize the same physical medium" },
+      { "id": "c", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" },
+      { "id": "d", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "e", "text": "implements CSMA/CD over legacy shared half-duplex media" }
+    ],
+    "correctAnswer": ["a", "e"],
+    "explanation": "CSMA/CD is a MAC function — it controls access to the physical wire. Integrating Layer 2 flows between different Ethernet speeds is also MAC as it deals with the physical medium side. Enabling IPv4 and IPv6 on the same medium and adding control information are LLC jobs."
+  },
+  {
+    "id": 83,
+    "text": "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "applies delimiting of Ethernet frame fields to synchronize communication between nodes" },
+      { "id": "b", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" },
+      { "id": "c", "text": "adds Ethernet control information to network protocol data" },
+      { "id": "d", "text": "implements trailer with frame check sequence for error detection" },
+      { "id": "e", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" }
+    ],
+    "correctAnswer": ["a", "d"],
+    "explanation": "Frame delimiting (marking where frames start and end) and FCS error detection are both MAC jobs — they are about the physical frame on the wire. Identifying the Layer 3 protocol, adding control information, and handling upper layer software communication are all LLC."
+  },
+  {
+    "id": 84,
+    "text": "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "applies delimiting of Ethernet frame fields to synchronize communication between nodes" },
+      { "id": "b", "text": "applies source and destination MAC addresses to Ethernet frame" },
+      { "id": "c", "text": "places information in the Ethernet frame that identifies which network layer protocol is being encapsulated by the frame" },
+      { "id": "d", "text": "handles communication between upper layer networking software and Ethernet NIC hardware" },
+      { "id": "e", "text": "adds Ethernet control information to network protocol data" }
+    ],
+    "correctAnswer": ["a", "b"],
+    "explanation": "MAC addresses live in the MAC sublayer — that is literally where the name comes from. Frame delimiting is also MAC. Identifying the Layer 3 protocol, handling upper layer software and adding control information are all LLC jobs."
+  },
+  {
+    "id": 85,
+    "text": "An IPv6 enabled device sends a data packet with the destination address of FF02::2. What is the target of this packet?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "all IPv6 enabled devices on the local link" },
+      { "id": "b", "text": "all IPv6 DHCP servers" },
+      { "id": "c", "text": "all IPv6 enabled devices across the network" },
+      { "id": "d", "text": "all IPv6 configured routers on the local link" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Just remember two addresses. FF02::1 = all IPv6 devices on the link. FF02::2 = all IPv6 routers on the link. The 2 in FF02::2 means routers only. Both are link-local multicast so they never leave the local network."
+  },
+  {
+    "id": 89,
+    "text": "What method is used to manage contention-based access on a wireless network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "token passing" },
+      { "id": "b", "text": "CSMA/CA" },
+      { "id": "c", "text": "priority ordering" },
+      { "id": "d", "text": "CSMA/CD" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "CD = Collision Detection, used on wired Ethernet. CA = Collision Avoidance, used on wireless. Wireless cannot detect collisions the same way wired can so it tries to avoid them instead. Token passing is a completely different old technology. Priority ordering is not a real media access method."
+  },
+  {
+    "id": 90,
+    "text": "What is a function of the data link layer?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "provides the formatting of data" },
+      { "id": "b", "text": "provides end-to-end delivery of data between hosts" },
+      { "id": "c", "text": "provides delivery of data between two applications" },
+      { "id": "d", "text": "provides for the exchange of frames over a common local media" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The data link layer only cares about getting frames from one device to the next on the same local network — node to node, not end to end. End-to-end delivery is the network layer's job. Applications are handled by the transport and application layers. Data link is just the local hop."
+  },
+  {
+    "id": 104,
+    "text": "What are two primary responsibilities of the Ethernet MAC sublayer? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "error detection" },
+      { "id": "b", "text": "frame delimiting" },
+      { "id": "c", "text": "accessing the media" },
+      { "id": "d", "text": "data encapsulation" },
+      { "id": "e", "text": "logical addressing" }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "The two primary MAC responsibilities are accessing the media (controlling the NIC and the wire) and data encapsulation (wrapping the data into a frame). Error detection and frame delimiting are part of what encapsulation involves, but the two headline jobs are media access and encapsulation. Logical addressing belongs to the network layer."
+  },
+  {
+    "id": 111,
+    "text": "Which two statements are correct in a comparison of IPv4 and IPv6 packet headers? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "The Source Address field name from IPv4 is kept in IPv6." },
+      { "id": "b", "text": "The Version field from IPv4 is not kept in IPv6." },
+      { "id": "c", "text": "The Destination Address field is new in IPv6." },
+      { "id": "d", "text": "The Header Checksum field name from IPv4 is kept in IPv6." },
+      { "id": "e", "text": "The Time-to-Live field from IPv4 has been replaced by the Hop Limit field in IPv6." }
+    ],
+    "correctAnswer": ["a", "e"],
+    "explanation": "IPv6 kept the Source Address and Destination Address fields — same names, just bigger. TTL became Hop Limit in IPv6 — same job, different name. The Version field is still there in IPv6 (it just says 6 instead of 4). Header Checksum was dropped in IPv6 entirely. Destination Address is not new, it existed in IPv4 too."
+  },
+  {
+    "id": 133,
+    "text": "Match the header field with the appropriate layer of the OSI model. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "source IP address" },
+      { "id": "a2", "text": "destination MAC address" },
+      { "id": "a3", "text": "destination port number" },
+      { "id": "a4", "text": "FCS (frame check sequence)" },
+      { "id": "a5", "text": "802.2 header" },
+      { "id": "a6", "text": "TTL" },
+      { "id": "a7", "text": "Acknowledgement number" },
+      { "id": "a8", "text": "destination options" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Layer 2" },
+      { "id": "b2", "text": "Layer 2" },
+      { "id": "b3", "text": "Layer 2" },
+      { "id": "b4", "text": "Layer 3" },
+      { "id": "b5", "text": "Layer 3" },
+      { "id": "b6", "text": "Layer 4" },
+      { "id": "b7", "text": "Layer 4" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b5" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a3", "b": "b7" },
+      { "a": "a4", "b": "b2" },
+      { "a": "a5", "b": "b1" },
+      { "a": "a6", "b": "b4" },
+      { "a": "a7", "b": "b6" }
+    ],
+    "explanation": "Group them by what they do. Layer 2 is the local frame — MAC address, FCS trailer, and 802.2 header all live here. Layer 3 is the IP packet — source IP and TTL live here. Layer 4 is transport — port numbers and acknowledgement numbers live here. If you know which layer owns what job the matches follow naturally."
+  },
+  {
+    "id": 148,
+    "text": "What are two functions that are provided by the network layer? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "directing data packets to destination hosts on other networks" },
+      { "id": "b", "text": "placing data on the network medium" },
+      { "id": "c", "text": "carrying data between processes that are running on source and destination hosts" },
+      { "id": "d", "text": "providing dedicated end-to-end connections" },
+      { "id": "e", "text": "providing end devices with a unique network identifier" }
+    ],
+    "correctAnswer": ["a", "e"],
+    "explanation": "The network layer does two things — it routes packets to other networks and it gives every device a unique address (IP address). Placing data on the medium is Layer 2. Carrying data between processes is Layer 4. Dedicated end-to-end connections are TCP which is also Layer 4."
+  },
+  {
+    "id": 149,
+    "text": "Which two statements describe features of an IPv4 routing table on a router? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Directly connected interfaces will have two route source codes in the routing table: C and S." },
+      { "id": "b", "text": "If there are two or more possible routes to the same destination, the route associated with the higher metric value is included in the routing table." },
+      { "id": "c", "text": "The netstat -r command can be used to display the routing table of a router." },
+      { "id": "d", "text": "The routing table lists the MAC addresses of each active interface." },
+      { "id": "e", "text": "It stores information about routes derived from the active router interfaces." },
+      { "id": "f", "text": "If a default static route is configured in the router, an entry will be included in the routing table with source code S." }
+    ],
+    "correctAnswer": ["e", "f"],
+    "explanation": "The routing table stores routes learned from active interfaces and any static routes you configure show up with code S. Directly connected interfaces use code C not S. The router prefers lower metric not higher. netstat -r works on a Windows host not a router. Routing tables deal in IP addresses not MAC addresses."
+  },
+  {
+    "id": 153,
+    "text": "A user sends an HTTP request to a web server on a remote network. During encapsulation for this request, what information is added to the address field of a frame to indicate the destination?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "the network domain of the destination host" },
+      { "id": "b", "text": "the IP address of the default gateway" },
+      { "id": "c", "text": "the MAC address of the destination host" },
+      { "id": "d", "text": "the MAC address of the default gateway" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "The frame only travels as far as the next hop — the default gateway. The L2 destination address in the frame is always the MAC of whoever is receiving it next, which for a remote network is the router interface (default gateway). The IP packet inside still has the final destination IP, but the frame wrapper is addressed to the gateway MAC."
+  },
+  {
+    "id": 155,
+    "text": "Data is being sent from a source PC to a destination server. Which three statements correctly describe the function of TCP or UDP in this situation? (Choose three.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "The source port field identifies the running application or service that will handle data returning to the PC." },
+      { "id": "b", "text": "The TCP process running on the PC randomly selects the destination port when establishing a session with the server." },
+      { "id": "c", "text": "UDP segments are encapsulated within IP packets for transport across the network." },
+      { "id": "d", "text": "The UDP destination port number identifies the application or service on the server which will handle the data." },
+      { "id": "e", "text": "TCP is the preferred protocol when a function requires lower network overhead." },
+      { "id": "f", "text": "The TCP source port number identifies the sending host on the network." }
+    ],
+    "correctAnswer": ["a", "c", "d"],
+    "explanation": "Source port = identifies the app on your PC waiting for the reply. Destination port = tells the server which service to hand the data to. UDP segments ride inside IP packets just like TCP segments do. The destination port is not randomly selected — it is a well-known port like 80 for HTTP. UDP is preferred for low overhead not TCP. Source port identifies the application not the host — IP address identifies the host."
+  },
+  {
+    "id": 161,
+    "text": "A user is complaining that an external web page is taking longer than normal to load. Which tool should the technician use in order to locate where the issue is in the network?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "ping" },
+      { "id": "b", "text": "nslookup" },
+      { "id": "c", "text": "tracert" },
+      { "id": "d", "text": "ipconfig /displaydns" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Tracert maps every hop between you and the destination and shows the delay at each one — so you can pinpoint exactly where the slowdown is. Ping just tells you if something is reachable. Nslookup checks DNS name resolution. ipconfig /displaydns shows your local DNS cache. Only tracert shows you the path."
+  }
+]

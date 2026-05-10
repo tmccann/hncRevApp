@@ -130,5 +130,15 @@
     "hasQuiz": true,
     "checkpoints": [],
     "color": "from-blue-500 to-cyan-600"
-  }
+  },{
+  "id": "module-20",
+  "number": 20,
+  "title": "Weak Areas",
+  "description": "Targeted questions on LLC vs MAC, ARP, IPv6, routing tables and switching methods",
+  "topics": ["All Modules", "Mixed Questions", "Exam Practice"],
+  "hasSummary": false,
+  "hasQuiz": true,
+  "checkpoints": [],
+  "color": "from-blue-500 to-cyan-600"
+}
 ]
