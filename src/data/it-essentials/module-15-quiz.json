@@ -1,0 +1,116 @@
+[
+    {
+    "id": 46,
+    "text": "A user calls the help desk reporting that a laptop with Linux freezes on startup and displays kernel panic. What could cause this problem?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A driver has become corrupted." },
+      { "id": "b", "text": "GRUB or LILO has been deleted." },
+      { "id": "c", "text": "GRUB or LILO has been corrupted." },
+      { "id": "d", "text": "An application is using a resource that has become unavailable." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 1.4.2.3"
+  }, {
+    "id": 62,
+    "text": "A user has submitted a trouble ticket stating that their computer is showing the error “BOOTMGR is missing”. The IT technician replicates the error and finds that it occurs after the POST of this Windows 10 machine. What are two possible solutions for this problem? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Run the bootrec /fixboot command." },
+      { "id": "b", "text": "Run chkdsk /F /R from the recovery console." },
+      { "id": "c", "text": "Restore BOOTMGR using the Windows Recovery Environment." },
+      { "id": "d", "text": "Run virus removal software." },
+      { "id": "e", "text": "Use the last known good configuration to boot the computer." }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Topic 11.7.3.1. The message “BOOTMGR is missing” could be a symptom of a missing or damaged BOOTMGR, a Boot Configuration Data file missing or damaged, a boot order not set correctly in BIOS, a corrupted MBR, or a failing hard drive. Because the OS cannot be located to start, the fix cannot be done using a regular command."
+  },  {
+    "id": 66,
+    "text": "Which two statements are correct about level one and level two technicians? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "Level two technicians prepare a work order and escalate it to a level one technician if a problem cannot be resolved within ten minutes." },
+      { "id": "b", "text": "Level two technicians are often referred to as “incident screeners,” and level one technicians are often referred to as “product specialists.”" },
+      { "id": "c", "text": "Level two technicians are usually more knowledgeable about technology than the level one technicians are." },
+      { "id": "d", "text": "Level two technicians usually respond to the “down calls” as they may be able to resolve them faster." },
+      { "id": "e", "text": "Level one technicians usually work on the problems that require opening up the computer case." }
+    ],
+    "correctAnswer": ["c", "d"],
+    "explanation": "Topic 14.4.1.3. The level two technician is usually more knowledgeable than the level one technician is about technology, or has been working for the company for a longer period of time. When a problem cannot be resolved within a predetermined amount of time, the level one technician prepares an escalated work order."
+  },
+  {
+    "id": 103,
+    "text": "A Windows 10 computer suddenly started experiencing network connectivity issues after the latest Windows updates completed a week ago. What option can be used to address this issue without loss of data or applications?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Use Advanced Start-up." },
+      { "id": "b", "text": "Reset this PC." },
+      { "id": "c", "text": "Restore using Sysprep." },
+      { "id": "d", "text": "Go back to the initial Windows build." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.7.2.1"
+  },
+  {
+    "id": 112,
+    "text": "A technician wants to create customized system image files that will be installed on computers in the network. Which administrative command-line tool or command can be used to address this?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "dism" },
+      { "id": "b", "text": "robocopy" },
+      { "id": "c", "text": "type" },
+      { "id": "d", "text": "chkdsk" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.4.4.1"
+  },
+  {
+    "id": 126,
+    "text": "True or False? DirectX is a collection of APIs related to multimedia tasks for Microsoft Windows.",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "True" },
+      { "id": "b", "text": "False" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.1.1.2"
+  },
+  {
+    "id": 130,
+    "text": "An instructor is discussing facts about different mobile device operating software. The instructor states: “The mobile devices have a feature called Spotlight that is a search tool that provides information from many sources.” To which OS does this relate: iOS, Android, or both?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "iOS" },
+      { "id": "b", "text": "both" },
+      { "id": "c", "text": "Android" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 12.1.3.1"
+  },
+  {
+    "id": 138,
+    "text": "Which statement is true regarding mobile devices using the Wireless Wide Area Network (WWAN)?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The bandwidth available over WWAN connections is fixed and is independent of the technologies supported by the adapter and the transmitter." },
+      { "id": "b", "text": "They require a 64-bit operating system." },
+      { "id": "c", "text": "They can only be connected through external WWAN USB adapters." },
+      { "id": "d", "text": "They require an adapter to link to a cellular provider’s network through the nearest base station or transmitter." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 11.2.3.1. Mobile devices use Wireless Wide Area Network (WWAN) or cellular Internet access technology. WWAN requires using an adapter to link to a cellular provider network through the nearest base station or transmitter."
+  },
+  {
+    "id": 139,
+    "text": "A user is trying to execute a file using elevated permission. The user right-clicks the file, chooses Run as Administrator, and chooses Yes in the User Account Control (UAC) window. The operation fails. What is the reason?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The UAC does not have the elevated privileges option." },
+      { "id": "b", "text": "The directory housing the file is read-only." },
+      { "id": "c", "text": "The user is not a member of the administrator group." },
+      { "id": "d", "text": "The login password of the user is invalid." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 11.1.4.4. An administrator password is required to open or execute a file using elevated permission, or the current user must belong to the Administrator group."
+  }
+]
