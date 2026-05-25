@@ -162,6 +162,7 @@
     "id": 13,
     "text": "Refer to the exhibit. A technician has been asked to install a video card. Which section of the motherboard will the technician use to install the card?",
     "type": "single",
+    "image": "/images/ItEssentials/module-16/q13.png",
     "options": [
       { "id": "a", "text": "section A" },
       { "id": "b", "text": "section B" },
@@ -445,29 +446,31 @@
     "id": 34,
     "text": "Place the six stages of the troubleshooting process in the correct order.",
     "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "Step 1" },
-      { "id": "a2", "text": "Step 2" },
-      { "id": "a3", "text": "Step 3" },
-      { "id": "a4", "text": "Step 4" },
-      { "id": "a5", "text": "Step 5" },
-      { "id": "a6", "text": "Step 6" }
+     "columnA": [
+      { "id": "a1", "text": "Test the theory to determine the cause." },
+      { "id": "a2", "text": "Verify full system functionality and if applicable, implement preventive measures." },
+      { "id": "a3", "text": "Identify the problem." },
+      { "id": "a4", "text": "Document findings, actions, and outcomes." },
+      { "id": "a5", "text": "Establish a theory of probable cause." },
+      { "id": "a6", "text": "Establish a plan of action to resolve the problem and implement the solution." }     
+      
     ],
     "columnB": [
-      { "id": "b1", "text": "Identify the problem." },
-      { "id": "b2", "text": "Establish a theory of probable cause." },
-      { "id": "b3", "text": "Test the theory to determine the cause." },
-      { "id": "b4", "text": "Establish a plan of action to resolve the problem and implement the solution." },
-      { "id": "b5", "text": "Verify full system functionality and if applicable, implement preventive measures." },
-      { "id": "b6", "text": "Document findings, actions, and outcomes." }
+      { "id": "b1", "text": "Step 1" },
+      { "id": "b2", "text": "Step 2" },
+      { "id": "b3", "text": "Step 3" },
+      { "id": "b4", "text": "Step 4" },
+      { "id": "b5", "text": "Step 5" },
+      { "id": "b6", "text": "Step 6" }
     ],
+   
     "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" },
-      { "a": "a4", "b": "b4" },
-      { "a": "a5", "b": "b5" },
-      { "a": "a6", "b": "b6" }
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b5" },
+      { "a": "a3", "b": "b1" },
+      { "a": "a4", "b": "b6" },
+      { "a": "a5", "b": "b2" },
+      { "a": "a6", "b": "b4" }
     ],
     "explanation": "Topic 4.2.1.2"
   },
@@ -703,17 +706,23 @@
     "text": "Match the memory type to the feature. (Not all options are used.)",
     "type": "matching",
     "columnA": [
-      { "id": "a1", "text": "Processes overlapping instructions in parallel" },
-      { "id": "a2", "text": "Transfers data twice per clock cycle" }
+      { "id": "a1", "text": "DDR SDRAM" },
+      { "id": "a2", "text": "DDR3 SDRAM" },
+      { "id": "a3", "text": "GDDR SDRAM" },
+      { "id": "a4", "text": "DDR2 SDRAM" },
+      { "id": "a5", "text": "DDR4 SDRAM" }
     ],
     "columnB": [
-      { "id": "b1", "text": "SDRAM" },
-      { "id": "b2", "text": "DDR SDRAM" },
-      { "id": "b3", "text": "SRAM" }
+      { "id": "b1", "text": "It's connector has 288 pins and has advanced error correction features available." },
+      { "id": "b2", "text": "It's connector has 184 pins and is able to support two writes and two reads per CPU clock cycle." },
+      { "id": "b3", "text": "It's connector has 240 pins and consumes 1.5 Volts of power." },
+      { "id": "b4", "text": "It's connector has 240 pins and consumes 1.8 Volts of power." }
     ],
     "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" }
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a4", "b": "b4" },
+      { "a": "a5", "b": "b1" }
     ],
     "explanation": "Topic 1.2.4.3"
   },
@@ -740,7 +749,7 @@
       { "id": "c", "text": "The digitizer is faulty." },
       { "id": "d", "text": "Too many apps are open." }
     ],
-    "correctAnswer": ["c"],
+    "correctAnswer": ["d"],
     "explanation": "Topic 7.1.3.2\nA touch screen that is unresponsive or inaccurate can be caused by dirt or grease on the screen, the screen protector, or apps consuming too many resources."
   },
   {
@@ -775,17 +784,23 @@
     "text": "Match the problem to the possible solution. (Not all options are used.)",
     "type": "matching",
     "columnA": [
-      { "id": "a1", "text": "Website return certificate not valid error" },
-      { "id": "a2", "text": "BIOS rediscovers hardware at every boot" }
+      { "id": "a1", "text": "The PCI NIC adapter card has stopped working." },
+      { "id": "a2", "text":"The computer does not display any video after installing a new PCIe video card." },
+      { "id": "a3", "text": "The user can hear the fans spinning but the PC will not start and there are no beeps from the speaker." },
+      { "id": "a4", "text": "The motherboard capacitors are distended, swollen, emitting residue, or bulging." },     
+      { "id": "a5", "text": "After upgrading the single core CPU to a dual core CPU only one CPU graph is seen in the task manager." }
     ],
     "columnB": [
-      { "id": "b1", "text": "Replace the CMOS battery." },
-      { "id": "b2", "text": "Reinstall the OS." },
-      { "id": "b3", "text": "Upgrade the BIOS." }
+      { "id": "b1", "text": "Replace the motherboard." },
+      { "id": "b2", "text": "Check fo faulting cable, damaged or mis-seated CPU or other motherbard component prior to replacing the motherboard if required." },
+      { "id": "b3", "text": "Upgrade the BIOS firmware" },
+      { "id": "b4", "text":"Connect the auxillary power cable for the adapter card." }
     ],
     "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b1" }
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b1" },
+      { "a": "a5", "b": "b3" }
     ],
     "explanation": "Topic 4.2.2.3"
   },
@@ -1317,7 +1332,7 @@
       { "id": "d", "text": "Install a USB hub." },
       { "id": "e", "text": "Update the BIOS." }
     ],
-    "correctAnswer": ["b"],
+    "correctAnswer": ["a"],
     "explanation": "Topic 8.5.8.3"
   },
   {
@@ -1415,7 +1430,7 @@
       { "id": "d", "text": "The paper tray is flimsy." },
       { "id": "e", "text": "The printer has a loose connection." }
     ],
-    "correctAnswer": ["a", "c"],
+    "correctAnswer": ["a", "e"],
     "explanation": "Topic 8.5.8.3"
   },
   {
@@ -1737,10 +1752,7 @@
       { "id": "a", "text": "Verify that airplane mode is not activated." },
       { "id": "b", "text": "Ensure that Wi-Fi is turned off." },
       { "id": "c", "text": "Check the screen refresh rate." },
-      { "id": "d", "text": "Check the display settings." },
-      { "id": "e", "text": "Verify the status of service." },
-      { "id": "f", "text": "Ensure that only one app is open at a time." },
-      { "id": "g", "text": "Recharge the battery." }
+      { "id": "d", "text": "Check the display settings." }
     ],
     "correctAnswer": ["a"],
     "explanation": "Topic 7.5.1.4"
@@ -1755,7 +1767,7 @@
       { "id": "c", "text": "the size of the CPU cache memory" },
       { "id": "d", "text": "the amount of RAM memory installed" }
     ],
-    "correctAnswer": ["b"],
+    "correctAnswer": ["c"],
     "explanation": "Topic 3.3.1.2"
   },
   {
@@ -1959,10 +1971,10 @@
       { "id": "b4", "text": "displays and manages menus and icons" }
     ],
     "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" },
-      { "a": "a4", "b": "b4" }
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b1" },
+      { "a": "a4", "b": "b3" }
     ],
     "explanation": "Topic 10.1.1.2"
   },
@@ -2021,20 +2033,20 @@
       { "id": "a6", "text": "rooting and jailbreaking" }
     ],
     "columnB": [
-      { "id": "b1", "text": "prevents the spread of malware through Apple App Store" },
-      { "id": "b2", "text": "used to create iOS third-party apps" },
-      { "id": "b3", "text": "term for directly installing an apk file into Android" },
+      { "id": "b1", "text": "used to create iOS third-party apps" },
+      { "id": "b2", "text": "term for directly installing an apk file into Android" },
+      { "id": "b3", "text": "area that isolates Android apps from interacting with each other" },
       { "id": "b4", "text": "apps displaying dynamic information in Android" },
-      { "id": "b5", "text": "area that isolates Android apps from interacting with each other" },
-      { "id": "b6", "text": "used on iOS to remove Apple user access restrictions" }
+      { "id": "b5", "text": "used on iOS to remove Apple user access restrictions" },
+      { "id": "b6", "text": "prevents the spread of malware through Apple App Store" }
     ],
     "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" },
+      { "a": "a1", "b": "b6" },
+      { "a": "a2", "b": "b1" },
+      { "a": "a3", "b": "b2" },
       { "a": "a4", "b": "b4" },
-      { "a": "a5", "b": "b5" },
-      { "a": "a6", "b": "b6" }
+      { "a": "a5", "b": "b3" },
+      { "a": "a6", "b": "b5" }
     ],
     "explanation": "Topic 12.1.1.2"
   },
@@ -2077,18 +2089,18 @@
       { "id": "a5", "text": "The CMOS battery may be loose or drained." }
     ],
     "columnB": [
-      { "id": "b1", "text": "The monitor is blank after installing a PCle video card." },
-      { "id": "b2", "text": "The computer runs more slowly after installing a dual-core CPU." },
-      { "id": "b3", "text": "Network shared drives are no longer accessible." },
-      { "id": "b4", "text": "The computer does not start and no beeps are heard." },
-      { "id": "b5", "text": "The computer time must be reset after each reboot." }
+      { "id": "b1", "text": "The computer does not start and no beeps are heard." },
+      { "id": "b2", "text": "Network shared drives are no longer accessible." },
+      { "id": "b3", "text": "The monitor is blank after installing a PCle video card." },
+      { "id": "b4", "text": "The computer time must be reset after each reboot." },
+      { "id": "b5", "text": "The computer runs more slowly after installing a dual-core CPU." }   
     ],
     "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" },
-      { "a": "a4", "b": "b4" },
-      { "a": "a5", "b": "b5" }
+      { "a": "a1", "b": "b3" },
+      { "a": "a2", "b": "b5" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b1" },
+      { "a": "a5", "b": "b4" }
     ],
     "explanation": "Topic 4.2.2.3"
   },
@@ -2124,6 +2136,7 @@
     "id": 154,
     "text": "Refer to the exhibit. A computer technician creates a bootable USB hard drive and loads a Linux operating system on it. When the technician reboots the computer, it does not boot to the Linux OS. Instead, the light on the optical drive flashes and then the computer loads Windows. What needs to be done to ensure that the computer automatically boots from the USB hard drive if it is connected?",
     "type": "single",
+     "image": "/images/ItEssentials/module-16/q154.png",
     "options": [
       { "id": "a", "text": "Move the USB Key option to the top of boot order." },
       { "id": "b", "text": "Move the CD/DVD drive to the bottom of the boot order." },
@@ -2156,7 +2169,7 @@
       { "id": "c", "text": "public cloud" },
       { "id": "d", "text": "private cloud" }
     ],
-    "correctAnswer": ["a"],
+    "correctAnswer": ["d"],
     "explanation": "Topic 9.2.2.2"
   },
   {
@@ -2215,6 +2228,7 @@
     "id": 161,
     "text": "Refer to the exhibit. A payroll department employee has shared a locally attached HP Officejet Pro 8110 printer over the network in Windows 10. What do the other Windows 10 users in the payroll department have to do in order to print to the shared printer?",
     "type": "single",
+     "image": "/images/ItEssentials/module-16/q161.png",
     "options": [
       { "id": "a", "text": "Enable File and printer sharing in the Network and Sharing Center > Advanced sharing settings screen." },
       { "id": "b", "text": "Nothing. The shared printer will automatically appear in the Devices and Printers listing when someone logs in." },
@@ -2241,6 +2255,7 @@
     "id": 163,
     "text": "Refer to the exhibit. A user calls the help desk to report a printer issue. The user explains that when selecting the print option from the menu bar, a dialog box pops up requesting a file name. After entering the filename, nothing prints on the attached HP printer. What is the cause of the issue that the user is experiencing?",
     "type": "single",
+    "image": "/images/ItEssentials/module-16/q161.png",
     "options": [
       { "id": "a", "text": "The HP printer is off-line or disconnected." },
       { "id": "b", "text": "The HP printer is not reachable over the network." },
@@ -2324,6 +2339,7 @@
     "id": 169,
     "text": "Refer to the exhibit. Which two hypervisor software products are suitable for the virtualization environment shown in the exhibit? (Choose two.)",
     "type": "multiple",
+    "image": "/images/ItEssentials/module-16/q169.png",
     "options": [
       { "id": "a", "text": "Oracle VirtualBox" },
       { "id": "b", "text": "Virtual PC" },
@@ -2338,6 +2354,7 @@
     "id": 170,
     "text": "Refer to the exhibit. The help desk is receiving numerous calls from employees in the payroll department. It appears that their computers can print to the local network printer, but cannot access the cloud-based payroll service. One employee sends a screen print showing the result of issuing an ipconfig /all command. What is the cause of the issue being experienced by the users?",
     "type": "single",
+    "image": "/images/ItEssentials/module-16/q170.png",
     "options": [
       { "id": "a", "text": "The DHCP server is configured with the wrong default gateway address." },
       { "id": "b", "text": "The DHCP server is down or unreachable over the network." },
@@ -2345,7 +2362,7 @@
       { "id": "d", "text": "The static IP configuration on the payroll department PCs is incorrect." },
       { "id": "e", "text": "The PCs are using IPv6 as the preferred communication protocol." }
     ],
-    "correctAnswer": ["c"],
+    "correctAnswer": ["a"],
     "explanation": "Topic 6.2.2.1"
   },
   {
@@ -2378,6 +2395,7 @@
     "id": 173,
     "text": "Refer to the exhibit. What is one function that a technician can accomplish using this graphical interface?",
     "type": "single",
+    "image": "/images/ItEssentials/module-16/q173.png",
     "options": [
       { "id": "a", "text": "configure a wireless SSID and password" },
       { "id": "b", "text": "set passwords to allow for access to the BIOS" },
@@ -2477,16 +2495,16 @@
       { "id": "a4", "text": "disaster recovery policies" }
     ],
     "columnB": [
-      { "id": "b1", "text": "outlines how technology and applications can be used within the organization" },
-      { "id": "b2", "text": "includes password complexity requirements and incident response methods" },
-      { "id": "b3", "text": "describes all government and industry statutes that apply to the company" },
-      { "id": "b4", "text": "provides detailed plans of what must be done to restore IT services quickly" }
+      { "id": "b1", "text": "provides detailed plans of what must be done to restore IT services quickly" },
+      { "id": "b2", "text": "describes all government and industry statutes that apply to the company" },
+      { "id": "b3", "text": "includes password complexity requirements and incident response methods" },
+      { "id": "b4", "text": "outlines how technology and applications can be used within the organization" }
     ],
     "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" },
-      { "a": "a4", "b": "b4" }
+      { "a": "a1", "b": "b4" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b1" }
     ],
     "explanation": "Topic "
   },
@@ -2494,6 +2512,7 @@
     "id": 181,
     "text": "Refer to the exhibit. Examine both the output and the source code of the Linux shell script sample.sh. Which two statements describe the variables contained in the sample.sh script? (Choose two.)",
     "type": "multiple",
+    "image": "/images/ItEssentials/module-16/q181.png",
     "options": [
       { "id": "a", "text": "The $HOSTNAME variable is defined within the script." },
       { "id": "b", "text": "The $uname variable is an input variable defined within the script." },
@@ -2548,6 +2567,7 @@
     "id": 185,
     "text": "Refer to the exhibit. What can be determined about the contents of the ite_user home directory?",
     "type": "single",
+    "image": "/images/ItEssentials/module-16/q185.png",
     "options": [
       { "id": "a", "text": "The octal representation of the permissions for January is 755." },
       { "id": "b", "text": "All users have read, write, and execute permissions to files within the directories." },
@@ -2561,6 +2581,7 @@
     "id": 186,
     "text": "Refer to the exhibit. What is true of this mobile device screen?",
     "type": "single",
+    "image": "/images/ItEssentials/module-16/q186.png",
     "options": [
       { "id": "a", "text": "Tapping and holding the arrow at the bottom left will display the Home screen." },
       { "id": "b", "text": "Text messages, news, photos and other content can be displayed in the different tiles." },
@@ -2831,13 +2852,14 @@
     "id": 206,
     "text": "Refer to the exhibit. What can be determined from the output of this command?",
     "type": "single",
+    "image": "/images/ItEssentials/module-16/q185.png",
     "options": [
       { "id": "a", "text": "The owner, group, and others have read permissions to January." },
       { "id": "b", "text": "All users have read, write, and execute permissions to files within the directories." },
       { "id": "c", "text": "The data files in this directory contain no data." },
       { "id": "d", "text": "There are three data files and two directories contained in this directory." }
     ],
-    "correctAnswer": ["d"],
+    "correctAnswer": ["a"],
     "explanation": "Topic 12.3.3.3"
   },
   {
@@ -2857,6 +2879,7 @@
     "id": 208,
     "text": "Refer to the exhibit. Which type of adapter card may require the width of two slots in order to accommodate additional cooling, even though it only has one PCIe x16 connector?",
     "type": "single",
+    "image": "/images/ItEssentials/module-16/q208.png",
     "options": [
       { "id": "a", "text": "USB-C controller" },
       { "id": "b", "text": "video capture card" },
@@ -2980,7 +3003,7 @@
       { "id": "c", "text": "Check the display settings." },
       { "id": "d", "text": "Check the screen refresh rate." }
     ],
-    "correctAnswer": ["b"],
+    "correctAnswer": ["a"],
     "explanation": "Topic 7.7.2.3"
   },
   {
@@ -3006,48 +3029,60 @@
       { "id": "c", "text": "to copy a group of files from one Windows directory to another" },
       { "id": "d", "text": "to relocate a file from one Windows directory to another one" }
     ],
-    "correctAnswer": ["c"],
+    "correctAnswer": ["a"],
     "explanation": "Topic 11.4.2.6"
   },
   {
-    "id": 220,
-    "text": "Match the Windows 10 boot sequence after the boot manager (bootmgr.exe) loads.",
-    "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "First phase after boot manager" },
-      { "id": "a2", "text": "Second phase after boot manager" },
-      { "id": "a3", "text": "Third phase after boot manager" }
-    ],
-    "columnB": [
-      { "id": "b1", "text": "WinLoad loads NTOSKRNL.EXE and HAL.DLL." },
-      { "id": "b2", "text": "The Windows kernel takes over and reads registry settings." },
-      { "id": "b3", "text": "WINLOGON.EXE displays the Windows Welcome screen." }
-    ],
-    "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" }
-    ],
-    "explanation": "Topic 10.3.3.1"
-  },
-  {
-    "id": 221,
-    "text": "Match the correct API with its function within the Windows 10 environment.",
-    "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "DirectX" },
-      { "id": "a2", "text": "OpenGL" }
-    ],
-    "columnB": [
-      { "id": "b1", "text": "Collection of APIs related to multimedia tasks for Microsoft Windows" },
-      { "id": "b2", "text": "Cross-language, multi-platform API for rendering 2D and 3D vector graphics" }
-    ],
-    "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" }
-    ],
-    "explanation": "Topic 10.1.1.2"
-  },
+  "id": 220,
+  "text": "Match the Windows 10 boot sequence after the boot manager (bootmgr.exe) loads.",
+  "type": "matching",
+  "columnA": [
+    { "id": "a1", "text": "The Windows boot loader Winload.exe loads." },
+    { "id": "a2", "text": "Ntoskrnl.exe and hal.dll are loaded." },
+    { "id": "a3", "text": "Winload.exe reads the Registry, chooses a hardware profile, and loads the device drivers." },
+    { "id": "a4", "text": "Ntoskrnl.exe takes over the process." },
+    { "id": "a5", "text": "Winlogon.exe is loaded and executes the logon process." }
+  ],
+  "columnB": [
+    { "id": "b1", "text": "Step one" },
+    { "id": "b2", "text": "Step two" },
+    { "id": "b3", "text": "Step three" },
+    { "id": "b4", "text": "Step four" },
+    { "id": "b5", "text": "Step five" }
+  ],
+  "correctMatches": [
+    { "a": "a1", "b": "b1" },
+    { "a": "a2", "b": "b2" },
+    { "a": "a3", "b": "b3" },
+    { "a": "a4", "b": "b4" },
+    { "a": "a5", "b": "b5" }
+  ],
+  "explanation": "Topic 10.3.3.1"
+},
+{
+  "id": 221,
+  "text": "Match the correct API with its function within the Windows 10 environment. (Not all options are used.)",
+  "type": "matching",
+  "columnA": [
+    { "id": "a1", "text": "Open Graphics Library (OpenGL)" },
+    { "id": "a2", "text": "DirectX" },
+    { "id": "a3", "text": "Windows APIs" },
+    { "id": "a4", "text": "Java APIs" }
+  ],
+  "columnB": [
+    { "id": "b1", "text": "This is a cross-platform standard specification for multimedia graphics." },
+    { "id": "b2", "text": "This is a collection of APIs related to multimedia tasks for Microsoft Windows." },
+    { "id": "b3", "text": "This allows applications from older versions of Windows to operate on newer versions." },
+    { "id": "b4", "text": "This is a collection of APIs related to the development of Java programming." }
+  ],
+  "correctMatches": [
+    { "a": "a1", "b": "b1" },
+    { "a": "a2", "b": "b2" },
+    { "a": "a3", "b": "b3" },
+    { "a": "a4", "b": "b4" }
+  ],
+  "explanation": "Topic 10.1.1.2"
+},
   {
     "id": 222,
     "text": "Which two tools are available to transfer user data and settings from an old Windows computer to a Windows operating system on a new computer? (Choose two.)",
@@ -3153,66 +3188,83 @@
     "correctAnswer": ["c"],
     "explanation": "Topic 10.1.3.2\nA 32-bit OS cannot be upgraded to a 64-bit OS. In this case a clean install of Windows 64-bit would be the only option because the application requires a 64-bit Windows environment to work."
   },
+{
+  "id": 230,
+  "text": "Match the tabs of the Windows 10 Task Manager to their functions. (Not all options are used.)",
+  "type": "matching",
+  "columnA": [
+    { "id": "a1", "text": "Performance" },
+    { "id": "a2", "text": "Startup" },
+    { "id": "a3", "text": "Services" },    
+    { "id": "a4", "text": "Users" },
+    { "id": "a5", "text": "Details" } 
+  ],
+  "columnB": [
+    { "id": "b1", "text": "Allows for a process to have its affinity set." },
+    { "id": "b2", "text": "Displays resource utilization information for CPU, memory, network, disk, and others." },
+    { "id": "b3", "text": "Allows programs that are running on system startup to be disabled." },
+    { "id": "b4", "text": "Allows for a start, stop or restart of a particular service." }
+  ],
+  "correctMatches": [
+    { "a": "a1", "b": "b2" },
+    { "a": "a2", "b": "b3" },
+    { "a": "a3", "b": "b4" },
+    { "a": "a5", "b": "b1" }
+  ],
+  "explanation": "Topic 11.1.3.2"
+},
   {
-    "id": 230,
-    "text": "Match the tabs of the Windows 10 Task Manager to their functions. (Not all options are used.)",
-    "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "Processes" },
-      { "id": "a2", "text": "Performance" },
-      { "id": "a3", "text": "Startup" }
-    ],
-    "columnB": [
-      { "id": "b1", "text": "Shows apps currently using system resources" },
-      { "id": "b2", "text": "Displays real-time charts of CPU, memory, and disk usage" },
-      { "id": "b3", "text": "Allows users to enable or disable apps that run on system boot" }
-    ],
-    "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" }
-    ],
-    "explanation": "Topic 11.1.3.2"
-  },
+  "id": 231,
+  "text": "Match the drive status indicators in the Disk Management utility with their description. (Not all options are used.)",
+  "type": "matching",
+  "columnA": [
+    { "id": "a1", "text": "Offline" },
+    { "id": "a2", "text": "Healthy" },
+    { "id": "a3", "text": "Initializing" },
+    { "id": "a4", "text": "Missing" },
+    { "id": "a5", "text": "Not Initialized" },
+    { "id": "a6", "text": "Online" }
+  ],
+  "columnB": [
+    { "id": "b1", "text": "a volume that is functioning properly" },
+    { "id": "b2", "text": "a basic disk that is being converted into a dynamic disk" },
+    { "id": "b3", "text": "a disk that does not contain a valid signature" },
+    { "id": "b4", "text": "a basic or dynamic disk that is accessible and shows no problems" },
+    { "id": "b5", "text": "a dynamic disk that is corrupted or unavailable" }
+  ],
+  "correctMatches": [
+    { "a": "a1", "b": "b5" },
+    { "a": "a2", "b": "b1" },
+    { "a": "a3", "b": "b2" },
+    { "a": "a5", "b": "b3" },
+    { "a": "a6", "b": "b4" }
+   
+  ],
+  "explanation": "Topic 11.3.3.3"
+},
   {
-    "id": 231,
-    "text": "Match the drive status indicators in the Disk Management utility with their description. (Not all options are used.)",
-    "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "Online" },
-      { "id": "a2", "text": "Unallocated" },
-      { "id": "a3", "text": "Failed" }
-    ],
-    "columnB": [
-      { "id": "b1", "text": "The drive is accessible and functioning properly." },
-      { "id": "b2", "text": "The disk space has not been partitioned or assigned a drive letter." },
-      { "id": "b3", "text": "The dynamic disk cannot be started or has corrupted data." }
-    ],
-    "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" }
-    ],
-    "explanation": "Topic 11.3.3.3"
-  },
-  {
-    "id": 232,
-    "text": "Match the wireless security settings to the description. (Not all options are used.)",
-    "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "WEP" },
-      { "id": "a2", "text": "WPA2" }
-    ],
-    "columnB": [
-      { "id": "b1", "text": "Legacy, vulnerable encryption protocol using static keys" },
-      { "id": "b2", "text": "Secure open standard-based wireless encryption mode using AES" }
-    ],
-    "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" }
-    ],
-    "explanation": "Topic 13.4.1.5"
-  },
+  "id": 232,
+  "text": "Match the wireless security settings to the description. (Not all options are used.)",
+  "type": "matching",
+  "columnA": [
+    { "id": "a1", "text": "Open" },
+    { "id": "a2", "text": "WEP" },
+    { "id": "a3", "text": "WPA2-Personal" },
+    { "id": "a4", "text": "WPA2-Enterprise" }
+  ],
+  "columnB": [
+    { "id": "b1", "text": "The Advanced Encryption Standard (AES) cipher and preshared keys (PSKs) are used to encrypt communications." },
+    { "id": "b2", "text": "Authentication is passed from the access point to a centralized authentication RADIUS server." },
+    { "id": "b3", "text": "Data is sent unencrypted with no authentication." }
+  ],
+  "correctMatches": [
+    { "a": "a1", "b": "b3" },
+    { "a": "a3", "b": "b1" },
+    { "a": "a4", "b": "b2" }
+  
+  ],
+  "explanation": "Topic 13.4.1.5"
+},
   {
     "id": 233,
     "text": "What are two possible solutions to any Windows computer restarting continuously and never displaying the desktop? (Choose two.)",
@@ -3346,32 +3398,36 @@
     "correctAnswer": ["a"],
     "explanation": "Topic 14.2.1.2\nThere are four broad categories of IT documentation: Policies, Operations, Projects, and User documentation. Operations is concerned with inventory management."
   },
-  {
-    "id": 243,
-    "text": "Match the individual languages with their corresponding classification.",
-    "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "Windows batch files" },
-      { "id": "a2", "text": "PowerShell" },
-      { "id": "a3", "text": "Linux shell script" },
-      { "id": "a4", "text": "C" },
-      { "id": "a5", "text": "C++" },
-      { "id": "a6", "text": "C#" }
-    ],
-    "columnB": [
-      { "id": "b1", "text": "Scripting language" },
-      { "id": "b2", "text": "Compiled language" }
-    ],
-    "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b1" },
-      { "a": "a3", "b": "b1" },
-      { "a": "a4", "b": "b2" },
-      { "a": "a5", "b": "b2" },
-      { "a": "a6", "b": "b2" }
-    ],
-    "explanation": "Topic 14.4.2.2\nScripting languages include Windows batch files, PowerShell, Linux shell script, VBScript, JavaScript, and Python. Compiled languages include C, C++, C#, and Java."
-  },
+ {
+  "id": 243,
+  "text": "Match the individual languages with their corresponding classification.",
+  "type": "matching",
+  "columnA": [
+    { "id": "a1", "text": "C++" },
+    { "id": "a2", "text": "VBScript" },
+    { "id": "a3", "text": "Java" },
+    { "id": "a4", "text": "C#" },
+    { "id": "a5", "text": "Python" },
+    { "id": "a6", "text": "JavaScript" }
+  ],
+  "columnB": [
+    { "id": "b1", "text": "Scripting Language" },
+    { "id": "b2", "text": "Scripting Language" },
+    { "id": "b3", "text": "Scripting Language" },
+    { "id": "b4", "text": "Compiled Language" },
+    { "id": "b5", "text": "Compiled Language" },
+    { "id": "b6", "text": "Compiled Language" }
+  ],
+  "correctMatches": [
+    { "a": "a2", "b": "b1" },
+    { "a": "a5", "b": "b2" },
+    { "a": "a6", "b": "b3" },
+    { "a": "a1", "b": "b4" },
+    { "a": "a3", "b": "b5" },
+    { "a": "a4", "b": "b6" }
+  ],
+  "explanation": "Topic 14.4.2.2"
+},
   {
     "id": 244,
     "text": "Which two actions should a technician take if illegal content, such as child pornography, is discovered on the hard drive of a customer computer? (Choose two.)",
@@ -3454,7 +3510,7 @@
       { "id": "d", "text": "The IT technician should have asked the customer if the customer was interested in receiving information regarding other new services and products." },
       { "id": "e", "text": "The IT technician should have requested permission from a supervisor to send the customer emails." }
     ],
-    "correctAnswer": ["d", "e"],
+    "correctAnswer": ["a", "d"],
     "explanation": "Topic 14.1.3.4\nWhile working with customers both briefly and over an extended period of time, it is possible to form friendly relationships. It is important to always follow company policy and never send unsolicited messages to a customer. Also do not send unsolicited mass mailings or chain letters to customers from a company email address. Any personal relationships should be kept via personal email accounts and should not reflect the IT organization of the employer."
   },
   {
@@ -3501,6 +3557,7 @@
     "id": 253,
     "text": "Refer to the exhibit. During the troubleshooting of software that is installed on a computer system, a level one technician requires help from a level two technician. The file shown in the exhibit must be sent to the level two technician. How should the level one technician deliver this file?",
     "type": "single",
+    "image": "/images/ItEssentials/module-16/q253.png",
     "options": [
       { "id": "a", "text": "This file should not be shared with the level two technician." },
       { "id": "b", "text": "Replace all passwords in the file with <password omitted> before emailing the file and then supply the passwords by secure means, if required." },
@@ -3656,7 +3713,7 @@
       { "id": "d", "text": "virus" },
       { "id": "e", "text": "grayware" }
     ],
-    "correctAnswer": ["b"],
+    "correctAnswer": ["d"],
     "explanation": "Topic 13.1.1.3\nAdware does not record keystrokes. A worm self-replicates across the network. A Trojan appears to be a legitimate program while carrying malware, and grayware is a general term for software that may be malware."
   },
   {
@@ -3890,12 +3947,12 @@
     "text": "Which term describes a type of partition that would only exist on a hard disk that has an MBR?",
     "type": "single",
     "options": [
-      { "id": "a", "text": "extended partition" },
+      { "id": "a", "text": "FAT32" },
       { "id": "b", "text": "logical drive" },
       { "id": "c", "text": "basic disk" },
       { "id": "d", "text": "active partition" }
     ],
-    "correctAnswer": ["a"],
+    "correctAnswer": ["b"],
     "explanation": "Topic 10.2.1.3"
   },
   {
@@ -4733,65 +4790,81 @@
     "explanation": "Topic 11.1.4.5\nLibraries in Windows 10 allow multiple different directories to be linked together in one location."
   },
   {
-    "id": 347,
-    "text": "Match the steps that will lead to the loading of bootmgr.exe in a 32 bit Windows 10 environment.",
-    "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "Step 1" },
-      { "id": "a2", "text": "Step 2" },
-      { "id": "a3", "text": "Step 3" }
-    ],
-    "columnB": [
-      { "id": "b1", "text": "POST executes and tests essential hardware components." },
-      { "id": "b2", "text": "BIOS configuration settings are loaded from CMOS memory." },
-      { "id": "b3", "text": "The master boot record is read from the boot sector of the active drive." }
-    ],
-    "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" }
-    ],
-    "explanation": "Topic 10.3.3.1"
-  },
+  "id": 347,
+  "text": "Match the steps that will lead to the loading of bootmgr.exe in a 32 bit Windows 10 environment.",
+  "type": "matching",
+  "columnA": [
+    { "id": "a1", "text": "CMOS configuration settings loaded" },
+    { "id": "a2", "text": "MBR" },
+    { "id": "a3", "text": "VBR" },
+    { "id": "a4", "text": "POST executed" }
+
+  ],
+  "columnB": [
+    { "id": "b1", "text": "Step 1" },
+    { "id": "b2", "text": "Step 2" },
+    { "id": "b3", "text": "Step 3" },
+    { "id": "b4", "text": "Step 4" }
+  ],
+  "correctMatches": [
+    { "a": "a1", "b": "b2" },
+    { "a": "a2", "b": "b3" },
+    { "a": "a3", "b": "b4" },
+    { "a": "a4", "b": "b1" }
+  ],
+  "explanation": "Topic 10.3.3.1"
+},
+ {
+  "id": 348,
+  "text": "Select the Windows 10 version that best meets the described use.",
+  "type": "matching",
+  "columnA": [
+    { "id": "a1", "text": "Windows 10 Home" },
+    { "id": "a2", "text": "Windows 10 Education" },
+    { "id": "a3", "text": "Windows 10 Pro" },
+    { "id": "a4", "text": "Windows 10 Enterprise" }
+  ],
+  "columnB": [
+    { "id": "b1", "text": "Used for personal computing and gaming with built-in features like family safety and parental control." },
+    { "id": "b2", "text": "Used in an academic environment with volume licensing options." },
+    { "id": "b3", "text": "Used in small business environments with built-in security, productivity, and management features." },
+    { "id": "b4", "text": "Used in large to mid-size business environments requiring advanced security and management features." }
+  ],
+  "correctMatches": [
+    { "a": "a1", "b": "b1" },
+    { "a": "a2", "b": "b2" },
+    { "a": "a3", "b": "b3" },
+    { "a": "a4", "b": "b4" }
+  ],
+  "explanation": "Topic 10.1.2.4"
+},
   {
-    "id": 348,
-    "text": "Select the Windows 10 version that best meets the described use.",
-    "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "Best suited for personal home computing with basic needs" },
-      { "id": "a2", "text": "Includes specialized network domain features for business computing environments" }
-    ],
-    "columnB": [
-      { "id": "b1", "text": "Windows 10 Home" },
-      { "id": "b2", "text": "Windows 10 Pro" }
-    ],
-    "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" }
-    ],
-    "explanation": "Topic 10.1.2.4"
-  },
-  {
-    "id": 349,
-    "text": "Match the file system with the respective description.",
-    "type": "matching",
-    "columnA": [
-      { "id": "a1", "text": "NTFS" },
-      { "id": "a2", "text": "FAT32" },
-      { "id": "a3", "text": "exFAT" }
-    ],
-    "columnB": [
-      { "id": "b1", "text": "Default modern system supporting encryption, file permissions, and large partitions" },
-      { "id": "b2", "text": "Older architecture supporting partition limits up to 2TB" },
-      { "id": "b3", "text": "Designed for flash storage allowing files larger than 4GB" }
-    ],
-    "correctMatches": [
-      { "a": "a1", "b": "b1" },
-      { "a": "a2", "b": "b2" },
-      { "a": "a3", "b": "b3" }
-    ],
-    "explanation": "Topic 10.2.1.5"
-  },
+  "id": 349,
+  "text": "Match the file system with the respective description.",
+  "type": "matching",
+  "columnA": [
+    { "id": "a1", "text": "NTFS" },
+    { "id": "a2", "text": "ExFAT" },
+    { "id": "a3", "text": "FAT32" },
+    { "id": "a4", "text": "CDFS" },
+    { "id": "a5", "text": "NFS" }
+  ],
+  "columnB": [
+    { "id": "b1", "text": "Supports partition sizes up to 16 exabytes and incorporates file system security features and extended attributes." },
+    { "id": "b2", "text": "Usually used on flash drives as it can support files larger than 4GB." },
+    { "id": "b3", "text": "Supports partition sizes up to 2TB or 2,048GB." },
+    { "id": "b4", "text": "Created specifically for optical disk media." },
+    { "id": "b5", "text": "A network-based file system that allows file access over the network." }
+  ],
+  "correctMatches": [
+    { "a": "a1", "b": "b1" },
+    { "a": "a2", "b": "b2" },
+    { "a": "a3", "b": "b3" },
+    { "a": "a4", "b": "b4" },
+    { "a": "a5", "b": "b5" }
+  ],
+  "explanation": "Topic 10.2.1.5"
+},
   {
     "id": 350,
     "text": "A corporation would like to use three or more factors for the password authentication policy. How can this be achieved?",
@@ -4817,5 +4890,17 @@
     ],
     "correctAnswer": ["c"],
     "explanation": "Topic 1.1.2.2"
+  }, {
+    "id": 128,
+    "text": "A technician is working on a laptop and GPS is not functioning. What is a possible solution for this situation?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Verify the status of service" },
+      { "id": "b", "text": "Ensure that only one app is open at a time." },
+      { "id": "c", "text": "Recharge the battery." },
+      { "id": "d", "text": "Check the display settings." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 7.5.1.4"
   }
 ]
