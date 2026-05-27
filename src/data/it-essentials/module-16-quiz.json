@@ -1965,10 +1965,10 @@
       { "id": "a4", "text": "user interface" }
     ],
     "columnB": [
-      { "id": "b1", "text": "loads device drivers and updates" },
-      { "id": "b2", "text": "organizes storage media into a logical structure" },
-      { "id": "b3", "text": "locates and loads software programs" },
-      { "id": "b4", "text": "displays and manages menus and icons" }
+      { "id": "b1", "text": "locates and loads software programs" },
+      { "id": "b2", "text": "loads device drivers and updates" },
+      { "id": "b3", "text": "displays and manages menus and icons" },
+      { "id": "b4", "text": "organizes storage media into a logical structure" }
     ],
     "correctMatches": [
       { "a": "a1", "b": "b2" },
