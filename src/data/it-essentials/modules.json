@@ -77,5 +77,31 @@
   "hasQuiz": true,
   "checkpoints": [],
   "color": "from-blue-600 to-indigo-700"
+},
+{
+  "id": "module-16",
+  "number": 16,
+  "title": "CCNA and IT Essentials tergeted practice",
+  "description": "Comprehensive review covering network protocols, physical media, device security, operating system boot sequences, virtualization, and advanced hardware troubleshooting.",
+  "topics": [
+    "Electrostatic Discharge (ESD) Protection",
+    "Motherboard Components & Chipsets (Northbridge/Southbridge)",
+    "RAM Architecture (DDR SDRAM & SDRAM)",
+    "Laser & Inkjet Printer Maintenance & Troubleshooting",
+    "RAID Configurations (0, 1, 5, 6, 10)",
+    "IPv4 Addressing & APIPA (169.254.0.0/16)",
+    "IPv6 Addressing Syntax & Compression",
+    "TCP/IP Transport Layer Ports & Protocols (TCP vs. UDP)",
+    "ACPI Power Management States (S0 - S5)",
+    "Windows 10 Boot Sequence & CLI Diagnostic Tools (SFC, DISM, Bootrec)",
+    "Cloud Computing Service Models (IaaS, PaaS, SaaS, ITaaS)",
+    "Network Security Threats & Mitigation (DoS, SYN Flood, Spoofing)",
+    "Mobile OS Security, Sandboxing, & Biometrics",
+    "Professionalism, Help Desk Procedures, & Computer Forensics"
+  ],
+  "hasSummary": false,
+  "hasQuiz": true,
+  "checkpoints": [],
+  "color": "from-blue-600 to-indigo-700"
 }
 ]

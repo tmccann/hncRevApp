@@ -1,0 +1,944 @@
+[
+  {
+    "id": 57,
+    "text": "Match the problem to the possible solution. (Not all options are used.)",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "The PCI NIC adapter card has stopped working." },
+      { "id": "a2", "text": "The computer does not display any video after installing a new PCIe video card." },
+      { "id": "a3", "text": "The user can hear the fans spinning but the PC will not start and there are no beeps from the speaker." },
+      { "id": "a4", "text": "The motherboard capacitors are distended, swollen, emitting residue, or bulging." },
+      { "id": "a5", "text": "After upgrading the single core CPU to a dual core CPU only one CPU graph is seen in the task manager." }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Replace the motherboard." },
+      { "id": "b2", "text": "Check fo faulting cable, damaged or mis-seated CPU or other motherbard component prior to replacing the motherboard if required." },
+      { "id": "b3", "text": "Upgrade the BIOS firmware" },
+      { "id": "b4", "text": "Connect the auxillary power cable for the adapter card." }
+    ],
+    "correctMatches": [
+      { "a": "a2", "b": "b4" },
+      { "a": "a3", "b": "b2" },
+      { "a": "a4", "b": "b1" },
+      { "a": "a5", "b": "b3" }
+    ],
+    "explanation": "Topic 4.2.2.3"
+  },
+  {
+    "id": 58,
+    "text": "A computer technician is installing a RAID. If the RAID uses mirroring and striping, which RAID level is the technician using?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "10" },
+      { "id": "b", "text": "5" },
+      { "id": "c", "text": "1" },
+      { "id": "d", "text": "8" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 3.3.2.3\nRAID 10 combines mirroring and striping."
+  },
+  {
+    "id": 59,
+    "text": "A computer technician is installing a RAID. If the RAID uses mirroring, which RAID level is the technician using?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "1" },
+      { "id": "b", "text": "6" },
+      { "id": "c", "text": "5" },
+      { "id": "d", "text": "3" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 3.3.2.3\nRAID 1 provides mirroring."
+  },
+  {
+    "id": 60,
+    "text": "A computer technician is installing a RAID. If the RAID uses striping with parity, which RAID level is the technician using?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "5" },
+      { "id": "b", "text": "6" },
+      { "id": "c", "text": "1" },
+      { "id": "d", "text": "4" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 3.3.2.3\nRAID 5 provides striping with parity."
+  },
+  {
+    "id": 61,
+    "text": "A computer technician is installing a RAID. If the RAID uses striping, which RAID level is the technician using?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "0" },
+      { "id": "b", "text": "6" },
+      { "id": "c", "text": "5" },
+      { "id": "d", "text": "2" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 3.3.2.3\nRAID 0 provides striping."
+  },
+  {
+    "id": 62,
+    "text": "A computer technician is installing a RAID. If the RAID uses striping with double parity, which RAID level is the technician using?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "6" },
+      { "id": "b", "text": "1" },
+      { "id": "c", "text": "5" },
+      { "id": "d", "text": "7" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 3.3.2.3\nRAID 6 provides striping with double parity."
+  },
+  {
+    "id": 73,
+    "text": "A client packet is received by a server. The packet has a destination port number of 137. What service application is the client requesting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "NetBIOS (NetBT)" },
+      { "id": "b", "text": "SMB/CIFS" },
+      { "id": "c", "text": "HTTPS" },
+      { "id": "d", "text": "SLP" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 5.2.2.2"
+  },
+  {
+    "id": 74,
+    "text": "A client packet is received by a server. The packet has a destination port number of 22. What service application is the client requesting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SMB/CIFS" },
+      { "id": "b", "text": "HTTPS" },
+      { "id": "c", "text": "SLP" },
+      { "id": "d", "text": "SSH" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 5.2.2.2"
+  },
+  {
+    "id": 75,
+    "text": "A client packet is received by a server. The packet has a destination port number of 143. What service application is the client requesting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "IMAP" },
+      { "id": "b", "text": "SMB/CIFS" },
+      { "id": "c", "text": "HTTPS" },
+      { "id": "d", "text": "SLP" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 5.2.2.2"
+  },
+  {
+    "id": 76,
+    "text": "A client packet is received by a server. The packet has a destination port number of 23. What service application is the client requesting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SMB/CIFS" },
+      { "id": "b", "text": "Telnet" },
+      { "id": "c", "text": "HTTPS" },
+      { "id": "d", "text": "SLP" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 5.2.2.2"
+  },
+  {
+    "id": 77,
+    "text": "A client packet is received by a server. The packet has a destination port number of 161. What service application is the client requesting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SNMP" },
+      { "id": "b", "text": "SMB/CIFS" },
+      { "id": "c", "text": "HTTPS" },
+      { "id": "d", "text": "SLP" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 5.2.2.2"
+  },
+  {
+    "id": 78,
+    "text": "A client packet is received by a server. The packet has a destination port number of 389. What service application is the client requesting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SMB/CIFS" },
+      { "id": "b", "text": "HTTPS" },
+      { "id": "c", "text": "SLP" },
+      { "id": "d", "text": "LDAP" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 5.2.2.2"
+  },
+  {
+    "id": 79,
+    "text": "A client packet is received by a server. The packet has a destination port number of 25. What service application is the client requesting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SMB/CIFS" },
+      { "id": "b", "text": "HTTPS" },
+      { "id": "c", "text": "SMTP" },
+      { "id": "d", "text": "SLP" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 5.2.2.2"
+  },
+  {
+    "id": 80,
+    "text": "A client packet is received by a server. The packet has a destination port number of 427. What service application is the client requesting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SLP" },
+      { "id": "b", "text": "SMB/CIFS" },
+      { "id": "c", "text": "SMTP" },
+      { "id": "d", "text": "DNS" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 5.2.2.2"
+  },
+  {
+    "id": 81,
+    "text": "A client packet is received by a server. The packet has a destination port number of 53. What service application is the client requesting?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "SMTP" },
+      { "id": "b", "text": "DHCP" },
+      { "id": "c", "text": "TFTP" },
+      { "id": "d", "text": "DNS" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 5.2.2.2"
+  },
+  {
+    "id": 89,
+    "text": "What ACPI power state describes when the CPU and RAM are off and the contents of RAM have been saved to a temporary file on the hard drive?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "S4" },
+      { "id": "b", "text": "S1" },
+      { "id": "c", "text": "S2" },
+      { "id": "d", "text": "S3" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 7.2.1.1"
+  },
+  {
+    "id": 90,
+    "text": "What ACPI power state describes when the CPU and RAM are still receiving power but unused devices are powered down?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "S1" },
+      { "id": "b", "text": "S2" },
+      { "id": "c", "text": "S3" },
+      { "id": "d", "text": "S4" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 7.2.1.1"
+  },
+  {
+    "id": 91,
+    "text": "What ACPI power state describes when the CPU is off, but the RAM is refreshed?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "S1" },
+      { "id": "b", "text": "S2" },
+      { "id": "c", "text": "S3" },
+      { "id": "d", "text": "S4" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 7.2.1.1"
+  },
+  {
+    "id": 92,
+    "text": "What ACPI power state describes when the computer is off?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "S1" },
+      { "id": "b", "text": "S2" },
+      { "id": "c", "text": "S3" },
+      { "id": "d", "text": "S5" }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 7.2.1.1"
+  },
+  {
+    "id": 93,
+    "text": "What ACPI power state describes when the CPU is off and the RAM is set to a slow refresh rate, often called suspend mode?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "S4" },
+      { "id": "b", "text": "S2" },
+      { "id": "c", "text": "S3" },
+      { "id": "d", "text": "S5" }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 7.2.1.1"
+  },
+  {
+    "id": 94,
+    "text": "What ACPI power state describes when the computer is on and the CPU is running?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "S0" },
+      { "id": "b", "text": "S4" },
+      { "id": "c", "text": "S3" },
+      { "id": "d", "text": "S5" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 7.2.1.1"
+  },
+  {
+    "id": 120,
+    "text": "A gamer is booting a desktop that has Windows 10 installed on dynamic drives. The boot process is currently working on the following step: WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The Windows kernel takes over the boot process." },
+      { "id": "b", "text": "WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers." },
+      { "id": "c", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." },
+      { "id": "d", "text": "Winload uses the path specified in BOOTMGR to find the boot partition." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1\nBoot Sequence for Windows:\n– Power on Self Test (POST)\n– POST for each adapter card that has a BIOS\n– BIOS reads the MBR\n– MBR takes over control of the boot process and starts BOOTMGR\n– BOOTMGR reads the Boot Configuration Data file to know which OS to load and where to find the OS on the boot partition\n– BOOTMGR invokes WINLOAD.EXE in order to load the NTOSKRNL.EXE file and HAL.DLL\n– BOOTMGR reads the registry files and loads device drivers\n– NTOSKRNL.EXE starts the WINLOGON.EXE program and displays the Windows login screen\nAt this point, the NT kernel takes over. The NT kernel is the heart of all Windows operating systems. The name of this file is NTOSKRNL.EXE. It starts the login file called WINLOGON.EXE and displays the Windows Welcome screen."
+  },
+  {
+    "id": 169,
+    "text": "Refer to the exhibit. Which two hypervisor software products are suitable for the virtualization environment shown in the exhibit? (Choose two.)",
+    "type": "multiple",
+    "image": "/images/ItEssentials/module-16/q169.png",
+    "options": [
+      { "id": "a", "text": "Oracle VirtualBox" },
+      { "id": "b", "text": "Virtual PC" },
+      { "id": "c", "text": "VMware Workstation" },
+      { "id": "d", "text": "VMware vSphere" },
+      { "id": "e", "text": "Oracle VM Server" }
+    ],
+    "correctAnswer": ["d", "e"],
+    "explanation": "Topic 9.1.2.2"
+  },
+  {
+    "id": 177,
+    "text": "Which term describes a partition scheme that supports storing a backup of a partition table?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "basic disk" },
+      { "id": "b", "text": "GPT" },
+      { "id": "c", "text": "logical drive" },
+      { "id": "d", "text": "dynamic disk" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.2"
+  },
+  {
+    "id": 178,
+    "text": "How can a hard drive that is using an MBR be partitioned in order to support additional logical drives?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Expand the size of the active partition into unallocated space available on the drive." },
+      { "id": "b", "text": "Make one primary partition an extended partition to contain the logical drives." },
+      { "id": "c", "text": "Create multiple logical partitions within the active partition." },
+      { "id": "d", "text": "Create a large dynamic volume that spans more than one disk." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.3"
+  },
+  {
+    "id": 183,
+    "text": "A network analyst is booting a laptop that has Windows 7 installed with cellular SIM slot. The boot process is currently working on the following step: The Windows kernel takes over the boot process. What is thenext step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers." },
+      { "id": "b", "text": "NTOSKRNL.EXE starts the login file called WINLOGON.EXE." },
+      { "id": "c", "text": "The Windows kernel takes over the boot process." },
+      { "id": "d", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.3.3.1\nBoot Sequence for Windows:\n– Power on Self Test (POST)\n– POST for each adapter card that has a BIOS\n– BIOS reads the MBR\n– MBR takes over control of the boot process and starts BOOTMGR\n– BOOTMGR reads the Boot Configuration Data file to know which OS to load and where to find the OS on the boot partition\n– BOOTMGR invokes WINLOAD.EXE in order to load the NTOSKRNL.EXE file and HAL.DLL\n– BOOTMGR reads the registry files and loads device drivers\n– NTOSKRNL.EXE starts the WINLOGON.EXE program and displays the Windows login screen\nAt this point, the NT kernel takes over. The NT kernel is the heart of all Windows operating systems. The name of this file is NTOSKRNL.EXE. It starts the login file called WINLOGON.EXE and displays the Windows Welcome screen."
+  },
+  {
+    "id": 191,
+    "text": "An IT technician attempts to copy a large file to a USB flash drive that contains other data but the copy fails. The technician checks the properties of the flash drive and finds that it was formatted using FAT32. Which method can the technician use to easily change the file system to NTFS without losing the data files currently stored on the disk?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Open the Command Prompt (Admin) window and use the convert command." },
+      { "id": "b", "text": "Back up the data on the flash drive, reformat the drive as NTFS, and restore the data." },
+      { "id": "c", "text": "Use the Disk Management utility on Windows 10 to change the formatting." },
+      { "id": "d", "text": "Create a new partition on the flash drive and format it as NTFS." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.2.1.8"
+  },
+  {
+    "id": 195,
+    "text": "A technician is booting a PC that has Windows 10 installed on dynamic drives. The boot process is currently working on the following step: POST. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "There are no more steps, the boot process is complete." },
+      { "id": "b", "text": "NTOSKRNL.EXE starts the login file called WINLOGON.EXE." },
+      { "id": "c", "text": "WINLOGON.EXE displays the Windows Welcome screen" },
+      { "id": "d", "text": "BIOS locates and reads the configuration settings that are stored in the CMOS memory." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 10.3.3.1\nBoot Sequence for Windows:\n– Power on Self Test (POST)\n– POST for each adapter card that has a BIOS\n– BIOS reads the MBR\n– MBR takes over control of the boot process and starts BOOTMGR\n– BOOTMGR reads the Boot Configuration Data file to know which OS to load and where to find the OS on the boot partition\n– BOOTMGR invokes WINLOAD.EXE in order to load the NTOSKRNL.EXE file and HAL.DLL\n– BOOTMGR reads the registry files and loads device drivers\n– NTOSKRNL.EXE starts the WINLOGON.EXE program and displays the Windows login screen\nAt this point, the NT kernel takes over. The NT kernel is the heart of all Windows operating systems. The name of this file is NTOSKRNL.EXE. It starts the login file called WINLOGON.EXE and displays the Windows Welcome screen."
+  },
+  {
+    "id": 210,
+    "text": "A technician is booting a PC that has Windows 10 installed on dynamic drives. The boot process is currently working on the following step: BIOS locates and reads the configuration settings that are stored in the CMOS memory. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The code in the boot sector is executed and the control of the boot process is given to Windows Boot Manager." },
+      { "id": "b", "text": "The BIOS boots the computer using the first drive that contains a valid boot sector." },
+      { "id": "c", "text": "POST." },
+      { "id": "d", "text": "BIOS locates and reads the configuration settings that are stored in the CMOS memory." }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.3.3.1\nAfter POST, the BIOS locates and reads the configuration settings that are stored in the CMOS memory. The boot device priority, the boot device priority is set in the BIOS and can be arranged in any order. The BIOS boots the computer using the first drive that contains an operating system."
+  },
+  {
+    "id": 215,
+    "text": "An accountant is booting a desktop that has Windows 8 installed. The boot process is currently working on the following step: WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers." },
+      { "id": "b", "text": "Winload uses the path specified in BOOTMGR to find the boot partition." },
+      { "id": "c", "text": "The code in the boot sector is executed and the control of the boot process is given to Windows Boot Manager." },
+      { "id": "d", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1"
+  },
+  {
+    "id": 216,
+    "text": "A user is booting a desktop that has Windows 10 installed that also uses an extended partition. The boot process is currently working on the following step: The code in the boot sector is executed and the control of the boot process is given to Windows Boot Manager. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." },
+      { "id": "b", "text": "The BIOS boots the computer using the first drive that contains a valid boot sector." },
+      { "id": "c", "text": "The code in the boot sector is executed and the control of the boot process is given to Windows Boot Manager." },
+      { "id": "d", "text": "Winload uses the path specified in BOOTMGR to find the boot partition." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 10.3.3.1"
+  },
+  {
+    "id": 219,
+    "text": "Why would a technician need to use the copy command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to copy files, directories, and subdirectories from one location to another" },
+      { "id": "b", "text": "to move that file to a different Windows directory while also leaving the file in the current location" },
+      { "id": "c", "text": "to copy a group of files from one Windows directory to another" },
+      { "id": "d", "text": "to relocate a file from one Windows directory to another one" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.4.2.6"
+  },
+  {
+    "id": 220,
+    "text": "Match the Windows 10 boot sequence after the boot manager (bootmgr.exe) loads.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "The Windows boot loader Winload.exe loads." },
+      { "id": "a2", "text": "Ntoskrnl.exe and hal.dll are loaded." },
+      { "id": "a3", "text": "Winload.exe reads the Registry, chooses a hardware profile, and loads the device drivers." },
+      { "id": "a4", "text": "Ntoskrnl.exe takes over the process." },
+      { "id": "a5", "text": "Winlogon.exe is loaded and executes the logon process." }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Step one" },
+      { "id": "b2", "text": "Step two" },
+      { "id": "b3", "text": "Step three" },
+      { "id": "b4", "text": "Step four" },
+      { "id": "b5", "text": "Step five" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" },
+      { "a": "a5", "b": "b5" }
+    ],
+    "explanation": "Topic 10.3.3.1"
+  },
+  {
+    "id": 227,
+    "text": "Which condition is required when planning to install Windows on a GPT disk?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The computer must be UEFI-based." },
+      { "id": "b", "text": "Only one primary partition can contain an OS." },
+      { "id": "c", "text": "The maximum partition size cannot exceed 2 TB." },
+      { "id": "d", "text": "The maximum number of primary partitions that can co-exist is 4." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.2.1.2\nThe globally unique identifier (GUID) partition table (GPT) makes use of a number of modern techniques to expand on the older MBR partitioning scheme. GPT is commonly used in computers with UEFI firmware. For Windows 10 to be installed on, and boot, from a GPT disk UEFI must be used."
+  },
+  {
+    "id": 228,
+    "text": "A technician wishes to perform a customized unattended network installation of Windows 10 on a PC. The requirements include the installation of specific applications and device drivers through the use of an answer file. What would the technician use to create the answer file?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Recovery partition" },
+      { "id": "b", "text": "Windows SIM" },
+      { "id": "c", "text": "disk cloning" },
+      { "id": "d", "text": "System Restore" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.3.2.4\nTo perform a custom Windows Unattended installation, setup.exe must be run with the user options found in the answer file. Additional packages, such as applications or drivers, can be added to the answer file. The Windows System Image Manager (SIM) is used to create the setup answer file."
+  },
+  {
+    "id": 239,
+    "text": "A user reports that a Windows 10 PC displays the error message “Invalid Boot Disk” during the boot process. The IT technician attempts to boot the computer and finds that the error message occurs immediately after the POST. What could be the possible cause?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "A recently installed device driver is incompatible with the boot controller." },
+      { "id": "b", "text": "BOOTMGR is corrupted." },
+      { "id": "c", "text": "The MBR/GPT is corrupted." },
+      { "id": "d", "text": "A service failed to start during the booting process." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 10.3.3.1\nThe message “invalid Boot Disk” could be a symptom of a missing or damaged MBR/GPT, a missing or damaged Boot Configuration Data file, a boot sector virus, a boot order not set correctly in BIOS, media without an operating system being in a drive, a hard drive not detected or damaged, or the absence of an installed operating system."
+  },
+  {
+    "id": 262,
+    "text": "The CIO wants to secure data on company laptops by implementing file encryption. The technician determines the best method is to encrypt each hard drive using Windows BitLocker. Which two things are needed to implement this solution? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "at least two volumes" },
+      { "id": "b", "text": "USB stick" },
+      { "id": "c", "text": "password management" },
+      { "id": "d", "text": "TPM" },
+      { "id": "e", "text": "EFS" },
+      { "id": "f", "text": "backup" }
+    ],
+    "correctAnswer": ["a", "d"],
+    "explanation": "Topic 13.2.3.5\nWindows provides a method to encrypt files, folders, or entire hard drives depending on need. However, certain BIOS settings and configurations are necessary to implement encryption on an entire hard disk."
+  },
+  {
+    "id": 271,
+    "text": "Which three components are used to assign file and directory permissions in Linux systems? (Choose three.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "root" },
+      { "id": "b", "text": "group" },
+      { "id": "c", "text": "owner" },
+      { "id": "d", "text": "all users" },
+      { "id": "e", "text": "super group" },
+      { "id": "f", "text": "admin group" }
+    ],
+    "correctAnswer": ["b", "c", "d"],
+    "explanation": "Topic 12.3.3.4\nIn Linux, file and directory permissions are assigned as follows:\nOwner – the owner user of the file or directory\nGroup – the user group that has been assigned to the file or directory\nAll users – all other users on the system"
+  },
+  {
+    "id": 278,
+    "text": "Which term describes a file system that supports a partition size up to 16 exabytes?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "extended partition" },
+      { "id": "b", "text": "NTFS" },
+      { "id": "c", "text": "logical drive" },
+      { "id": "d", "text": "active partition" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.5"
+  },
+  {
+    "id": 279,
+    "text": "Which term describes a file system for USB flash drives that supports files larger than 4 GB?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "extended partition" },
+      { "id": "b", "text": "exFAT" },
+      { "id": "c", "text": "logical drive" },
+      { "id": "d", "text": "active partition" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.5"
+  },
+  {
+    "id": 280,
+    "text": "Which term describes a partition that supports up to 23 logical drives?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "logical drive" },
+      { "id": "b", "text": "extended partition" },
+      { "id": "c", "text": "basic disk" },
+      { "id": "d", "text": "active partition" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.3"
+  },
+  {
+    "id": 281,
+    "text": "Which term describes a file system for optical disk media?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "extended partition" },
+      { "id": "b", "text": "CDFS" },
+      { "id": "c", "text": "logical drive" },
+      { "id": "d", "text": "active partition" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.5"
+  },
+  {
+    "id": 282,
+    "text": "Which term describes a type of partition that would only exist on a hard disk that has an MBR?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "FAT32" },
+      { "id": "b", "text": "logical drive" },
+      { "id": "c", "text": "basic disk" },
+      { "id": "d", "text": "active partition" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.3"
+  },
+  {
+    "id": 283,
+    "text": "Which term describes a type of storage device that supports a partition to be extended into adjacent unallocated space as long as it is contiguous?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "NTFS" },
+      { "id": "b", "text": "basic disk" },
+      { "id": "c", "text": "FAT32" },
+      { "id": "d", "text": "formatting" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.3"
+  },
+  {
+    "id": 284,
+    "text": "Which term describes a general name for physical areas on a hard drive?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "NTFS" },
+      { "id": "b", "text": "partition" },
+      { "id": "c", "text": "FAT32" },
+      { "id": "d", "text": "formatting" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.2"
+  },
+  {
+    "id": 285,
+    "text": "Which term describes a partition scheme that takes a portion of disk space of 512 bytes long and that contains the boot loader?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "NTFS" },
+      { "id": "b", "text": "MBR" },
+      { "id": "c", "text": "FAT32" },
+      { "id": "d", "text": "formatting" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.2"
+  },
+  {
+    "id": 286,
+    "text": "Which term describes a type of storage device that supports a volume that can span across more than one disk?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "NTFS" },
+      { "id": "b", "text": "dynamic disk" },
+      { "id": "c", "text": "FAT32" },
+      { "id": "d", "text": "formatting" }
+    ],
+    "correctAnswer": ["b"],
+    "explanation": "Topic 10.2.1.3"
+  },
+  {
+    "id": 287,
+    "text": "A technician is booting a laptop that has Windows 10 installed with 2 GB RAM. The boot process is currently working on the following step: NTOSKRNL.EXE starts the login file called WINLOGON.EXE. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "WINLOGON.EXE displays the Windows Welcome screen." },
+      { "id": "b", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." },
+      { "id": "c", "text": "WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers." },
+      { "id": "d", "text": "Winload uses the path specified in BOOTMGR to find the boot partition." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1"
+  },
+  {
+    "id": 288,
+    "text": "A user is booting a tablet that has Windows 10 installed. The boot process is currently working on the following step: WINLOGON.EXE displays the Windows Welcome screen What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "There are no more steps, the boot process is complete." },
+      { "id": "b", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." },
+      { "id": "c", "text": "WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers." },
+      { "id": "d", "text": "Winload uses the path specified in BOOTMGR to find the boot partition." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1\nThe Windows 10 boot process is as follows:\n1 . PreBoot: POST or Power-On Self-Test loads firmware settings. It checks for a valid disk system, and if the system is good to go for the next phase. If the computer has a valid MBR, i.e. Master Boot Record, the boot process moves further and loads Windows Boot Manager.\n2 . Windows Boot Manager: This step determines if you have multiple OS installed on your computer. If yes, then it offers a menu with the names of the OSs. When you select the OS, it will load the right program, i.e. Winload.exe to boot you into the correct OS.\n3 . Windows OS Loader: WinLoad.exe loads important drivers to kick start the Windows Kernel. The kernel uses the drivers to talk to the hardware and do rest of the things required for the boot process to continue.\n4 . Windows NT OS Kernel: This is the last stage which picks up the Registry settings, additional drivers, etc. Once that has been read, the control is taken by the system manager process. It loads up the UI, the rest of the hardware and software. That’s when you finally get to see your Windows 10 Login screen"
+  },
+  {
+    "id": 289,
+    "text": "A manager is booting a tablet that has Windows 8 installed. The boot process is currently working on the following step: POST. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "BIOS locates and reads the configuration settings that are stored in the CMOS memory." },
+      { "id": "b", "text": "WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers." },
+      { "id": "c", "text": "The Windows kernel takes over the boot process." },
+      { "id": "d", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1\nBoot Sequence for Windows:\n– Power on Self Test (POST)\n– POST for each adapter card that has a BIOS\n– BIOS reads the MBR\n– MBR takes over control of the boot process and starts BOOTMGR\n– BOOTMGR reads the Boot Configuration Data file to know which OS to load and where to find the OS on the boot partition\n– BOOTMGR invokes WINLOAD.EXE in order to load the NTOSKRNL.EXE file and HAL.DLL\n– BOOTMGR reads the registry files and loads device drivers\n– NTOSKRNL.EXE starts the WINLOGON.EXE program and displays the Windows login screen."
+  },
+  {
+    "id": 290,
+    "text": "An accountant is booting a PC that has Windows 8 installed. The boot process is currently working on the following step: BIOS locates and reads the configuration settings that are stored in the CMOS memory. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The BIOS boots the computer using the first drive that contains a valid boot sector." },
+      { "id": "b", "text": "WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers." },
+      { "id": "c", "text": "The Windows kernel takes over the boot process." },
+      { "id": "d", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1\nThe Windows 10 boot process is as follows:\n1 . PreBoot: POST or Power-On Self-Test loads firmware settings. It checks for a valid disk system, and if the system is good to go for the next phase. If the computer has a valid MBR, i.e. Master Boot Record, the boot process moves further and loads Windows Boot Manager.\n2 . Windows Boot Manager: This step determines if you have multiple OS installed on your computer. If yes, then it offers a menu with the names of the OSs. When you select the OS, it will load the right program, i.e. Winload.exe to boot you into the correct OS.\n3 . Windows OS Loader: WinLoad.exe loads important drivers to kick start the Windows Kernel. The kernel uses the drivers to talk to the hardware and do rest of the things required for the boot process to continue.\n4 . Windows NT OS Kernel: This is the last stage which picks up the Registry settings, additional drivers, etc. Once that has been read, the control is taken by the system manager process. It loads up the UI, the rest of the hardware and software. That’s when you finally get to see your Windows 10 Login screen."
+  },
+  {
+    "id": 291,
+    "text": "A network analyst is booting a PC that has Windows 7 installed with 2 GB RAM. The boot process is currently working on the following step: The code in the boot sector is executed and the control of the boot process is given to Windows Boot Manager. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Winload uses the path specified in BOOTMGR to find the boot partition." },
+      { "id": "b", "text": "WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers." },
+      { "id": "c", "text": "The Windows kernel takes over the boot process." },
+      { "id": "d", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1"
+  },
+  {
+    "id": 292,
+    "text": "An analyst is booting a desktop that has Windows 7 installed with 4 GB RAM. The boot process is currently working on the following step: Winload uses the path specified in BOOTMGR to find the boot partition. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." },
+      { "id": "b", "text": "There are no more steps, the boot process is complete." },
+      { "id": "c", "text": "WINLOGON.EXE displays the Windows Welcome screen" },
+      { "id": "d", "text": "NTOSKRNL.EXE starts the login file called WINLOGON.EXE." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1\nThe Windows 10 boot process is as follows:\n1. PreBoot: POST or Power-On Self-Test loads firmware settings. It checks for a valid disk system, and if the system is good to go for the next phase. If the computer has a valid MBR, i.e. Master Boot Record, the boot process moves further and loads Windows Boot Manager.\n2. Windows Boot Manager: This step determines if you have multiple OS installed on your computer. If yes, then it offers a menu with the names of the OSs. When you select the OS, it will load the right program, i.e. Winload.exe to boot you into the correct OS.\n3. Windows OS Loader: WinLoad.exe loads important drivers to kick start the Windows Kernel. The kernel uses the drivers to talk to the hardware and do rest of the things required for the boot process to continue.\n4. Windows NT OS Kernel: This is the last stage which picks up the Registry settings, additional drivers, etc. Once that has been read, the control is taken by the system manager process. It loads up the UI, the rest of the hardware and software. That’s when you finally get to see your Windows 10 Login screen"
+  },
+  {
+    "id": 293,
+    "text": "A gamer is booting a desktop that has Windows 7 installed on dynamic drives. The boot process is currently working on the following step: WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The Windows kernel takes over the boot process." },
+      { "id": "b", "text": "There are no more steps, the boot process is complete." },
+      { "id": "c", "text": "WINLOGON.EXE displays the Windows Welcome screen" },
+      { "id": "d", "text": "NTOSKRNL.EXE starts the login file called WINLOGON.EXE." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1"
+  },
+  {
+    "id": 294,
+    "text": "A technician is booting a laptop that has Windows 10 installed with 2 GB RAM. The boot process is currently working on the following step: The Windows kernel takes over the boot process. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "NTOSKRNL.EXE starts the login file called WINLOGON.EXE." },
+      { "id": "b", "text": "There are no more steps, the boot process is complete." },
+      { "id": "c", "text": "WINLOGON.EXE displays the Windows Welcome screen" },
+      { "id": "d", "text": "The Windows kernel takes over the boot process." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1"
+  },
+  {
+    "id": 295,
+    "text": "A user is booting a laptop that has Windows 10 installed. The boot process is currently working on the following step: WINLOGON.EXE displays the Windows Welcome screen What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "WINLOGON.EXE displays the Windows Welcome screen" },
+      { "id": "b", "text": "NTOSKRNL.EXE starts the login file called WINLOGON.EXE." },
+      { "id": "c", "text": "There are no more steps, the boot process is complete." },
+      { "id": "d", "text": "The Windows kernel takes over the boot process." }
+    ],
+    "correctAnswer": ["c"],
+    "explanation": "Topic 10.3.3.1\nThe Windows 10 boot process is as follows:\n1 . PreBoot: POST or Power-On Self-Test loads firmware settings. It checks for a valid disk system, and if the system is good to go for the next phase. If the computer has a valid MBR, i.e. Master Boot Record, the boot process moves further and loads Windows Boot Manager.\n2 . Windows Boot Manager: This step determines if you have multiple OS installed on your computer. If yes, then it offers a menu with the names of the OSs. When you select the OS, it will load the right program, i.e. Winload.exe to boot you into the correct OS.\n3 . Windows OS Loader: WinLoad.exe loads important drivers to kick start the Windows Kernel. The kernel uses the drivers to talk to the hardware and do rest of the things required for the boot process to continue.\n4 . Windows NT OS Kernel: This is the last stage which picks up the Registry settings, additional drivers, etc. Once that has been read, the control is taken by the system manager process. It loads up the UI, the rest of the hardware and software. That’s when you finally get to see your Windows 10 Login screen"
+  },
+  {
+    "id": 296,
+    "text": "A manager is booting a tablet that has Windows 8 installed. The boot process is currently working on the following step: The Windows kernel takes over the boot process. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "The Windows kernel takes over the boot process." },
+      { "id": "b", "text": "WinLoad reads the registry files, chooses a hardware profile, and loads the device drivers." },
+      { "id": "c", "text": "WINLOGON.EXE displays the Windows Welcome screen" },
+      { "id": "d", "text": "NTOSKRNL.EXE starts the login file called WINLOGON.EXE." }
+    ],
+    "correctAnswer": ["d"],
+    "explanation": "Topic 10.3.3.1\nThe Windows 10 boot process is as follows:\n1. PreBoot: POST or Power-On Self-Test loads firmware settings. It checks for a valid disk system, and if the system is good to go for the next phase. If the computer has a valid MBR, i.e. Master Boot Record, the boot process moves further and loads Windows Boot Manager.\n2. Windows Boot Manager: This step determines if you have multiple OS installed on your computer. If yes, then it offers a menu with the names of the OSs. When you select the OS, it will load the right program, i.e. Winload.exe to boot you into the correct OS.\n3. Windows OS Loader: WinLoad.exe loads important drivers to kick start the Windows Kernel. The kernel uses the drivers to talk to the hardware and do rest of the things required for the boot process to continue.\n4. Windows NT OS Kernel: This is the last stage which picks up the Registry settings, additional drivers, etc. Once that has been read, the control is taken by the system manager process. It loads up the UI, the rest of the hardware and software. That’s when you finally get to see your Windows 10 Login screen."
+  },
+  {
+    "id": 314,
+    "text": "Why would a gamer need to use the move command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to relocate a file from one Windows directory to another one" },
+      { "id": "b", "text": "to prepare a hard drive to accept Windows files" },
+      { "id": "c", "text": "to manage a PCs drives, disks, partitions, volumes, and virtual drives" },
+      { "id": "d", "text": "to copy files, directories, and subdirectories from one location to another" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.4.2.6"
+  },
+  {
+    "id": 315,
+    "text": "Why would a gamer need to use the copy command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to move that file to a different Windows directory while also leaving the file in the current location" },
+      { "id": "b", "text": "to prepare a hard drive to accept Windows files" },
+      { "id": "c", "text": "to manage a PCs drives, disks, partitions, volumes, and virtual drives" },
+      { "id": "d", "text": "to copy files, directories, and subdirectories from one location to another" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.4.2.6"
+  },
+  {
+    "id": 316,
+    "text": "Why would a university student need to use the robocopy command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to copy a group of files from one Windows directory to another" },
+      { "id": "b", "text": "to scan and verify the integrity of all protected system files and replace incorrect versions with correct versions" },
+      { "id": "c", "text": "to shutdown several remote computers one at a time" },
+      { "id": "d", "text": "to repair, prepare, and fix Windows images and the recovery image within an installation of the operating system" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.4.2.6"
+  },
+  {
+    "id": 317,
+    "text": "Why would a university student need to use the xcopy command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to copy files, directories, and subdirectories from one location to another" },
+      { "id": "b", "text": "to scan and verify the integrity of all protected system files and replace incorrect versions with correct versions" },
+      { "id": "c", "text": "to shutdown several remote computers one at a time" },
+      { "id": "d", "text": "to repair, prepare, and fix Windows images and the recovery image within an installation of the operating system" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.4.2.6"
+  },
+  {
+    "id": 318,
+    "text": "Why would a technical support representative need to use the format command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to prepare a hard drive to accept Windows files" },
+      { "id": "b", "text": "to scan and verify the integrity of all protected system files and replace incorrect versions with correct versions" },
+      { "id": "c", "text": "to shutdown several remote computers one at a time" },
+      { "id": "d", "text": "to repair, prepare, and fix Windows images and the recovery image within an installation of the operating system" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.4.3.1"
+  },
+  {
+    "id": 319,
+    "text": "Why would a technical support representative need to use the bootrec command?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "to help to repair the MBR that is suspected of having issues" },
+      { "id": "b", "text": "to scan and verify the integrity of all protected system files and replace incorrect versions with correct versions" },
+      { "id": "c", "text": "to shutdown several remote computers one at a time" },
+      { "id": "d", "text": "to repair, prepare, and fix Windows images and the recovery image within an installation of the operating system" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 11.4.3.1"
+  },
+  {
+    "id": 337,
+    "text": "Which laptop LCD technology uses tilting crystals to provide a much higher contrast ratio than other types?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "Vertical alignment (VA)" },
+      { "id": "b", "text": "In-Plane switching (IPS)" },
+      { "id": "c", "text": "Twisted Nematic (TN)" },
+      { "id": "d", "text": "Organic light-emitting diode (OLED)" }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 7.1.3.1\nVertical alignment (VA) laptop display technology uses tilting crystals to provide a much higher contrast ratio than other types. In-Plane switching (IPS) and Twisted Nematic (TN) do not have this feature. Organic light-emitting diode (OLED) displays are not used in laptops."
+  },
+  {
+    "id": 338,
+    "text": "Which two statements are true regarding GPT partitions? (Choose two.)",
+    "type": "multiple",
+    "options": [
+      { "id": "a", "text": "They are commonly used in computers with UEFI firmware." },
+      { "id": "b", "text": "They are commonly used in computers with BIOS based firmware." },
+      { "id": "c", "text": "They store a backup of the partition table." },
+      { "id": "d", "text": "They have a maximum partition size of 2TB." },
+      { "id": "e", "text": "They store the partition and boot data in one place." }
+    ],
+    "correctAnswer": ["a", "c"],
+    "explanation": "Topic 10.2.1.2\nGPT partitions are commonly used in computers with UEFI firmware. They store a backup of the partition table and can support up to 128 partitions. The maximum partition size is 9.4ZB."
+  },
+  {
+    "id": 344,
+    "text": "An analyst is booting a desktop that has Windows 10 installed with 4 GB RAM. The boot process is currently working on the following step: Winload uses the path specified in BOOTMGR to find the boot partition. What is the next step that will happen in the boot process?",
+    "type": "single",
+    "options": [
+      { "id": "a", "text": "WinLoad loads two files that make up the core of Windows: NTOSKRNL.EXE and HAL.DLL." },
+      { "id": "b", "text": "The BIOS boots the computer using the first drive that contains a valid boot sector." },
+      { "id": "c", "text": "The code in the boot sector is executed and the control of the boot process is given to Windows Boot Manager." },
+      { "id": "d", "text": "The Windows kernel takes over the boot process." }
+    ],
+    "correctAnswer": ["a"],
+    "explanation": "Topic 10.3.3.1\nThe Windows 10 boot process is as follows:\n1. PreBoot: POST or Power-On Self-Test loads firmware settings. It checks for a valid disk system, and if the system is good to go for the next phase. If the computer has a valid MBR, i.e. Master Boot Record, the boot process moves further and loads Windows Boot Manager.\n2. Windows Boot Manager: This step determines if you have multiple OS installed on your computer. If yes, then it offers a menu with the names of the OSs. When you select the OS, it will load the right program, i.e. Winload.exe to boot you into the correct OS.\n3. Windows OS Loader: WinLoad.exe loads important drivers to kick start the Windows Kernel. The kernel uses the drivers to talk to the hardware and do rest of the things required for the boot process to continue.\n4. Windows NT OS Kernel: This is the last stage which picks up the Registry settings, additional drivers, etc. Once that has been read, the control is taken by the system manager process. It loads up the UI, the rest of the hardware and software. That’s when you finally get to see your Windows 10 Login screen"
+  },
+  {
+    "id": 347,
+    "text": "Match the steps that will lead to the loading of bootmgr.exe in a 32 bit Windows 10 environment.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "CMOS configuration settings loaded" },
+      { "id": "a2", "text": "MBR" },
+      { "id": "a3", "text": "VBR" },
+      { "id": "a4", "text": "POST executed" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Step 1" },
+      { "id": "b2", "text": "Step 2" },
+      { "id": "b3", "text": "Step 3" },
+      { "id": "b4", "text": "Step 4" }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b2" },
+      { "a": "a2", "b": "b3" },
+      { "a": "a3", "b": "b4" },
+      { "a": "a4", "b": "b1" }
+    ],
+    "explanation": "Topic 10.3.3.1"
+  },
+  {
+    "id": 349,
+    "text": "Match the file system with the respective description.",
+    "type": "matching",
+    "columnA": [
+      { "id": "a1", "text": "NTFS" },
+      { "id": "a2", "text": "ExFAT" },
+      { "id": "a3", "text": "FAT32" },
+      { "id": "a4", "text": "CDFS" },
+      { "id": "a5", "text": "NFS" }
+    ],
+    "columnB": [
+      { "id": "b1", "text": "Supports partition sizes up to 16 exabytes and incorporates file system security features and extended attributes." },
+      { "id": "b2", "text": "Usually used on flash drives as it can support files larger than 4GB." },
+      { "id": "b3", "text": "Supports partition sizes up to 2TB or 2,048GB." },
+      { "id": "b4", "text": "Created specifically for optical disk media." },
+      { "id": "b5", "text": "A network-based file system that allows file access over the network." }
+    ],
+    "correctMatches": [
+      { "a": "a1", "b": "b1" },
+      { "a": "a2", "b": "b2" },
+      { "a": "a3", "b": "b3" },
+      { "a": "a4", "b": "b4" },
+      { "a": "a5", "b": "b5" }
+    ],
+    "explanation": "Topic 10.2.1.5"
+  }
+]
